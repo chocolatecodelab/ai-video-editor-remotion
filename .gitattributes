@@ -1,0 +1,17 @@
+# Akhir baris seragam LF di repo (Python, Node/Remotion, ffmpeg di Windows membaca LF tanpa masalah).
+# Tanpa ini, penyunting/skrip berbeda menulis CRLF/LF bercampur → diff penuh perubahan palsu.
+* text=auto eol=lf
+
+# biner: tidak pernah dinormalisasi
+*.png binary
+*.jpg binary
+*.gif binary
+*.webp binary
+*.ttf binary
+*.otf binary
+*.wav binary
+*.mp3 binary
+*.mp4 binary
+*.mov binary
+*.pdf binary
+*.geojson text
