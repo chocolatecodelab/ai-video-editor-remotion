@@ -19,6 +19,30 @@ def _genap(x: float) -> int:
     return int(round(x / 2)) * 2
 
 
+# Rekaman HDR (bawaan iPhone: HLG / Dolby Vision 8.4 berbasis HLG, BT.2020) yang hanya diberi label BT.709 tampak pucat &
+# kusam. Konversi HDR → SDR: linearisasi dengan transfer masukan eksplisit → primaries BT.709 → tone mapping → BT.709 TV.
+TRANSFER_HDR = {"arib-std-b67": "HLG", "smpte2084": "PQ"}
+TONEMAP = "hable"   # operator tone mapping (lembut di highlight, umum untuk konten sosial)
+NPL = 100           # nits puncak acuan SDR untuk linearisasi
+
+
+def jenis_hdr(vs: dict) -> str | None:
+    """'HLG' / 'PQ' bila stream video HDR (dari tag color_transfer), selain itu None."""
+    return TRANSFER_HDR.get(str(vs.get("color_transfer") or ""))
+
+
+def filter_tonemap(vs: dict) -> str:
+    """Rantai zscale/tonemap HDR → SDR BT.709 (kosong bila sumber bukan HDR). Tag masukan ditulis eksplisit agar
+    tidak bergantung pada metadata frame yang kadang hilang setelah decode."""
+    if not jenis_hdr(vs):
+        return ""
+    tin = vs["color_transfer"]
+    pin = vs.get("color_primaries") or "bt2020"
+    min_ = vs.get("color_space") or "bt2020nc"
+    return (f"zscale=tin={tin}:pin={pin}:min={min_}:t=linear:npl={NPL},format=gbrpf32le,zscale=p=bt709,"
+            f"tonemap=tonemap={TONEMAP}:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p10le,")
+
+
 def _rotasi(vs: dict) -> int:
     for sd in vs.get("side_data_list", []) or []:
         if "rotation" in sd:
@@ -47,13 +71,21 @@ def ingest(p: Proyek, paksa: bool = False) -> dict:
         raise GagalPipeline(f"Resolusi sumber {w}x{h} terlalu kecil (min sisi pendek {tinggi_min}). Pakai --paksa untuk lanjut.")
     if not any(abs(fps_src - f) < 0.05 for f in p.t("ingest.fps-diterima")):
         peringatan.append(f"fps sumber {fps_src:.3f} tidak standar; dikonversi ke {p.fps}.")
+    hdr = jenis_hdr(vs)
+    if hdr:
+        peringatan.append(f"Rekaman HDR ({hdr}, {vs.get('color_primaries') or 'bt2020'}) dikonversi ke SDR BT.709 "
+                          f"(tone mapping {TONEMAP}); periksa warna kulit di storyboard.")
+    elif vs.get("color_primaries") == "bt2020":
+        peringatan.append("Rekaman berprimaries BT.2020 tanpa tag transfer HDR; diperlakukan sebagai SDR — "
+                          "bila tampak pucat, ekspor ulang dari ponsel sebagai SDR.")
 
     potong = aset.get("potong") or []
     crop = aset.get("crop") or {}
     filter_warna = (p.manifest.get("warna") or {}).get("filter", "")
     a = p.tokens["audio"]
     kunci = {"src": sha_file(src), "potong": potong, "crop": crop, "warna": filter_warna,
-             "format": [p.W, p.H, p.fps], "audio": a, "versi": VERSI_SCRIPTS}
+             "format": [p.W, p.H, p.fps], "audio": a, "versi": VERSI_SCRIPTS,
+             "hdr": [hdr, TONEMAP, NPL] if hdr else None}
     meta_path = p.cache / "ingest.meta.json"
     if not paksa and cache_valid(meta_path, kunci) and p.ingest_video.exists() and p.ingest_audio.exists():
         log("ingest", "cache valid, dilewati.")
@@ -67,7 +99,7 @@ def ingest(p: Proyek, paksa: bool = False) -> dict:
     else:
         cw, ch = w, _genap(w / target)
         cx, cy = 0, _genap((h - ch) * float(crop.get("y", 0.5)))
-    v_chain = (f"crop={cw}:{ch}:{cx}:{cy},scale={p.W}:{p.H}:flags=lanczos:out_color_matrix=bt709,"
+    v_chain = (f"{filter_tonemap(vs)}crop={cw}:{ch}:{cx}:{cy},scale={p.W}:{p.H}:flags=lanczos:out_color_matrix=bt709,"
                f"fps={p.fps},setsar=1" + (f",{filter_warna}" if filter_warna else "") + f",format=yuv420p,{SETPARAMS_BT709}")
     a_chain = f"highpass=f={a['highpass-hz']}" + (f",{a['denoise']}" if a.get("denoise") else "")
 
