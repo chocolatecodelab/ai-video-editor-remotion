@@ -1,0 +1,263 @@
+{
+  "proyek": "2026-10_demo-fase1",
+  "waktu": "2026-10-26T17:11:38",
+  "beat_sheet_sha": "1855f9b17d26bdeb5c29d2c626940a64ae7c5926f8b8ab5e3027b4d26cebd4f7",
+  "durasi": 46.5,
+  "pra_qa": "GAGAL",
+  "ringkas": {
+    "LULUS": 21,
+    "GAGAL": 2,
+    "PERINGATAN": 1,
+    "LEWAT": 8,
+    "BELUM DIIMPLEMENTASI": 0
+  },
+  "elemen": [
+    {
+      "id": "hook/0-remotion",
+      "tipe": "remotion",
+      "beat": "hook",
+      "mulai": 0.15,
+      "selesai": 4.742,
+      "teks": "1 Lesson a Day · #1 The hardest lesson in life: control.",
+      "efek": "prompt-ui@0.1",
+      "komposisi": "PromptUI",
+      "anchor": null,
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 4.469
+    },
+    {
+      "id": "problem/0-chip",
+      "tipe": "chip",
+      "beat": "problem",
+      "mulai": 4.892,
+      "selesai": 9.613,
+      "teks": "Not everything is in your *control*",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "realizing"
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 7.3225
+    },
+    {
+      "id": "problem/1-info",
+      "tipe": "info",
+      "beat": "problem",
+      "mulai": 10.993,
+      "selesai": 13.214,
+      "teks": "What people *think* not yours to decide",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "people"
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 12.173500000000002
+    },
+    {
+      "id": "problem/2-info",
+      "tipe": "info",
+      "beat": "problem",
+      "mulai": 13.314,
+      "selesai": 15.454,
+      "teks": "How they *treat* you their call",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "how",
+        "ke": 1
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 14.454000000000002
+    },
+    {
+      "id": "problem/3-info",
+      "tipe": "info",
+      "beat": "problem",
+      "mulai": 15.554,
+      "selesai": 17.625,
+      "teks": "What *tomorrow* brings no one knows",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "or"
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 16.659499999999998
+    },
+    {
+      "id": "agitasi/0-chip",
+      "tipe": "chip",
+      "beat": "agitasi",
+      "mulai": 18.215,
+      "selesai": 22.185,
+      "teks": "Change the *past*",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "change"
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 20.27
+    },
+    {
+      "id": "agitasi/1-push",
+      "tipe": "push",
+      "beat": "agitasi",
+      "mulai": 18.815,
+      "selesai": 22.185,
+      "teks": "push ×1.06, gerak 1.00s, standar",
+      "efek": null,
+      "anchor": null,
+      "t": 19.815
+    },
+    {
+      "id": "solution/0-chip",
+      "tipe": "chip",
+      "beat": "solution",
+      "mulai": 22.615,
+      "selesai": 36.966,
+      "teks": "How you *respond*",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "can",
+        "ke": 1
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 29.8605
+    },
+    {
+      "id": "solution/1-chip",
+      "tipe": "chip",
+      "beat": "solution",
+      "mulai": 26.341,
+      "selesai": 36.966,
+      "teks": "Your *efforts* & choices",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "can",
+        "ke": 2
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 31.723499999999998
+    },
+    {
+      "id": "solution/2-chip",
+      "tipe": "chip",
+      "beat": "solution",
+      "mulai": 31.164,
+      "selesai": 36.966,
+      "teks": "How you treat *yourself*",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "way",
+        "offset": -0.2
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 34.135000000000005
+    },
+    {
+      "id": "cta/0-info",
+      "tipe": "info",
+      "beat": "cta",
+      "mulai": 40.608,
+      "selesai": 46.5,
+      "teks": "Let go of what you *can't* control",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "trying"
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 43.624
+    }
+  ],
+  "thumbnail": [
+    {
+      "frame": 15,
+      "t": 0.5,
+      "label": "beat hook",
+      "file": "storyboard/t00015.jpg"
+    },
+    {
+      "frame": 134,
+      "t": 4.466666666666667,
+      "label": "hook/0-remotion",
+      "file": "storyboard/t00134.jpg"
+    },
+    {
+      "frame": 220,
+      "t": 7.333333333333333,
+      "label": "problem/0-chip",
+      "file": "storyboard/t00220.jpg"
+    },
+    {
+      "frame": 365,
+      "t": 12.166666666666666,
+      "label": "problem/1-info",
+      "file": "storyboard/t00365.jpg"
+    },
+    {
+      "frame": 434,
+      "t": 14.466666666666667,
+      "label": "problem/2-info",
+      "file": "storyboard/t00434.jpg"
+    },
+    {
+      "frame": 500,
+      "t": 16.666666666666668,
+      "label": "problem/3-info",
+      "file": "storyboard/t00500.jpg"
+    },
+    {
+      "frame": 594,
+      "t": 19.8,
+      "label": "agitasi/1-push",
+      "file": "storyboard/t00594.jpg"
+    },
+    {
+      "frame": 608,
+      "t": 20.266666666666666,
+      "label": "agitasi/0-chip",
+      "file": "storyboard/t00608.jpg"
+    },
+    {
+      "frame": 896,
+      "t": 29.866666666666667,
+      "label": "solution/0-chip",
+      "file": "storyboard/t00896.jpg"
+    },
+    {
+      "frame": 952,
+      "t": 31.733333333333334,
+      "label": "solution/1-chip",
+      "file": "storyboard/t00952.jpg"
+    },
+    {
+      "frame": 1024,
+      "t": 34.13333333333333,
+      "label": "solution/2-chip",
+      "file": "storyboard/t01024.jpg"
+    },
+    {
+      "frame": 1309,
+      "t": 43.63333333333333,
+      "label": "cta/0-info",
+      "file": "storyboard/t01309.jpg"
+    }
+  ]
+}

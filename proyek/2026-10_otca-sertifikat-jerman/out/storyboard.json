@@ -1,6 +1,6 @@
 {
   "proyek": "2026-10_otca-sertifikat-jerman",
-  "waktu": "2026-10-25T23:44:40",
+  "waktu": "2026-10-26T17:12:20",
   "beat_sheet_sha": "c56ec4d27bcd40aba43588b361986ede59cbb9880a7db001b1a4ad6d62f3d955",
   "durasi": 58.667,
   "pra_qa": "LULUS",
@@ -20,6 +20,7 @@
       "selesai": 58.6,
       "teks": "aset/grafis/logo-otca.png",
       "efek": null,
+      "komposisi": null,
       "anchor": null,
       "masuk": "fade",
       "keluar": "fade",
@@ -44,6 +45,7 @@
       "selesai": 3.247,
       "teks": "STUDI JERMAN",
       "efek": null,
+      "komposisi": null,
       "anchor": {
         "kata": "Halo",
         "ke": 1,
@@ -61,6 +63,7 @@
       "selesai": 7.799,
       "teks": "Sertifikat *Bahasa Jerman* bukti level bahasa",
       "efek": null,
+      "komposisi": null,
       "anchor": {
         "kata": "sertifikat",
         "ke": 1,
@@ -79,6 +82,7 @@
       "selesai": 7.799,
       "teks": "",
       "efek": "digital-zoom@0.2",
+      "komposisi": null,
       "anchor": {
         "kata": "belum",
         "ke": 1,
@@ -96,6 +100,7 @@
       "selesai": 10.121,
       "teks": "Belum tentu *siap studi*",
       "efek": null,
+      "komposisi": null,
       "anchor": {
         "kata": "siap",
         "ke": 1,
@@ -113,6 +118,7 @@
       "selesai": 19.907,
       "teks": "Level di sertifikat Kemampuan nyata",
       "efek": "sebelum-sesudah@0.1",
+      "komposisi": "SebelumSesudah",
       "anchor": {
         "kata": "sertifikat",
         "ke": 2,
@@ -131,6 +137,7 @@
       "selesai": 23.24,
       "teks": "",
       "efek": "pull-back-reveal@0.2",
+      "komposisi": null,
       "anchor": {
         "kata": "dalam",
         "ke": 1,
@@ -148,6 +155,7 @@
       "selesai": 23.24,
       "teks": "Akademik · *sehari-hari*",
       "efek": null,
+      "komposisi": null,
       "anchor": {
         "kata": "akademik",
         "ke": 1,
@@ -166,6 +174,7 @@
       "selesai": 25.831,
       "teks": "KULIAH",
       "efek": null,
+      "komposisi": null,
       "anchor": {
         "kata": "perkuliahan",
         "ke": 1,
@@ -183,6 +192,7 @@
       "selesai": 34.348,
       "teks": "Paham dosen Paham materi Diskusi Berpendapat",
       "efek": "langkah@0.1",
+      "komposisi": "Langkah",
       "anchor": {
         "kata": "dosen",
         "ke": 1,
@@ -201,6 +211,7 @@
       "selesai": 38.421,
       "teks": "fokus.txt level sertifikat",
       "efek": "coret@0.1",
+      "komposisi": "Coret",
       "anchor": {
         "kata": "Jadi",
         "ke": 1,
@@ -219,6 +230,7 @@
       "selesai": 45.827,
       "teks": "Mendengar Berbicara Menulis Membaca",
       "efek": "checklist@0.3",
+      "komposisi": "Checklist",
       "anchor": {
         "kata": "kemampuan",
         "ke": 2,
@@ -237,6 +249,7 @@
       "selesai": 50.031,
       "teks": "FAKTA: skill *terpakai*",
       "efek": null,
+      "komposisi": null,
       "anchor": {
         "kata": "bukan",
         "ke": 1,
@@ -254,6 +267,7 @@
       "selesai": 52.724,
       "teks": "SIAP PAKAI",
       "efek": null,
+      "komposisi": null,
       "anchor": {
         "kata": "kemampuan",
         "ke": 3,
@@ -271,6 +285,7 @@
       "selesai": 58.667,
       "teks": "Klik link di bio",
       "efek": null,
+      "komposisi": null,
       "anchor": {
         "kata": "Klik",
         "ke": 1,
@@ -288,6 +303,7 @@
       "selesai": 53.624,
       "teks": "Partikel",
       "efek": "partikel@0.1",
+      "komposisi": "Partikel",
       "anchor": {
         "kata": "Klik",
         "ke": 1,
@@ -305,6 +321,7 @@
       "selesai": 58.667,
       "teks": "www.otca.co.id",
       "efek": null,
+      "komposisi": null,
       "anchor": {
         "kata": "Klik",
         "ke": 1,

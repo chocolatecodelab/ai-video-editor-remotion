@@ -33,3 +33,5 @@ efek/pratinjau/*.gif
 efek/pratinjau/*.png
 # gambar laporan/pratinjau proyek bisa dibuat ulang (video.py laporan / storyboard)
 proyek/*/out/*.png
+proyek/*/out/storyboard/
+proyek/*/out/storyboard.html

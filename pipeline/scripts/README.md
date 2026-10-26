@@ -21,7 +21,7 @@ Satu pintu: `python pipeline/scripts/video.py <perintah> <proyek>` — `<proyek>
 | `wajah <p>` | cache/ingest.mp4 | cache/wajah.json (kotak wajah 5 fps, MediaPipe BlazeFace) | K00.3 |
 | `pasang <p> [--kering]` | beat-sheet berdetik (preset) + words.json (+ wajah.json) | beat-sheet.json ber-anchor kata, posisi menghindari wajah, `_ucapan`/`_kata_kunci` per beat (salinan: beat-sheet.sebelum-pasang.json) | — |
 | `still <p> 1.5,8` | semua di atas | out/still_*.png | — |
-| `storyboard <p> [--buka]` | beat-sheet + cache | out/storyboard.html (timeline, thumbnail, transkrip, pra-QA), storyboard.json | semua kecuali K02.1, K06.1–2, K07.1–2 |
+| `storyboard <p> [--buka]` | beat-sheet + cache | out/storyboard.html — lembar kontak per bagian (frame, ucapan + kata pemicu, elemen dalam bahasa pengguna, pra-QA per elemen), catatan revisi → permintaan revisi siap salin, tombol setujui, linimasa lengkap; storyboard.json | semua kecuali K02.1, K06.1–2, K07.1–2 |
 | `setuju <p>` | storyboard.json | manifest.persetujuan (sha beat-sheet) | — |
 | `render <p> [--pekerja N]` | beat-sheet + token + cache | out/master.mov, out/layout.json — komposit paralel per rentang frame (default ½ inti maks 4, env `VIDEO_PEKERJA`; `--pekerja 1` = berurutan, hasil identik) | K00–K06 |
 | `ekspor <p>` | out/master.mov | out/<proyek>_<platform>.mp4 | K07 |
