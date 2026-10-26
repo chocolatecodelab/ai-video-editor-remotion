@@ -65,7 +65,7 @@ Font dicari di `pipeline/fonts/`, lalu folder font sistem.
 | aset.rekaman | path video talking-head (kosong = video grafis saja, latar warna) |
 | aset.potong | rough cut: `[[mulai, selesai], …]` bagian sumber yang DISIMPAN |
 | aset.crop | `{"x": 0.5}` posisi crop horizontal 0–1 (sumber landscape) / `{"y": …}` |
-| aset.musik | `"path"`, `"bawaan:pulsa"`/`"bawaan:lembut"`/`"bawaan:lofi"` (sintesis `musik.py`), atau `{"file": …, "db": -22}` — di-loop & di-duck terhadap suara |
+| aset.musik | `"path"`, `"bawaan:pulsa"`/`"bawaan:lembut"`/`"bawaan:lofi"` (sintesis `musik.py`), atau `{"file": …, "db": -22, "fade_masuk": 0.3, "fade_keluar": 1.5}` — di-loop, di-duck terhadap suara, fade masuk/keluar (selesai tepat di akhir video) |
 | koreografi | `nama@versi` koreografi asal preset (QA K09 memakai `variasi_min`-nya) |
 | warna.filter | filter ffmpeg color correction, mis. `"eq=brightness=0.02:saturation=1.05,colortemperature=5600"` |
 | transkrip | `{"bahasa": "id", "model": "large-v3", "backend": opsional}` |

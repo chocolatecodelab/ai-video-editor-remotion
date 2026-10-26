@@ -11,6 +11,22 @@ from sistem import GagalPipeline, jalankan, loudnorm_2pass, sha_file, ukur_loudn
 
 
 MARGIN_TP_LOSSY = 0.5  # K06.2: headroom dB di master untuk overshoot encoder AAC saat ekspor (terukur ±0,1 dB)
+FADE_MASUK_MUSIK = 0.3   # s — tanpa klik di awal
+FADE_KELUAR_MUSIK = 1.5  # s — musik berakhir lembut tepat di akhir video, bukan terpotong
+
+
+def filter_musik(sr: int, db: float, durasi: float, fade_masuk: float = FADE_MASUK_MUSIK,
+                 fade_keluar: float = FADE_KELUAR_MUSIK) -> str:
+    """Rantai filter musik latar (sebelum ducking): resample, volume, fade masuk & fade keluar yang selesai tepat di
+    `durasi`. Fade dipendekkan untuk video sangat singkat (≤ ⅓ durasi masing-masing)."""
+    fi = max(0.0, min(fade_masuk, durasi / 3))
+    fo = max(0.0, min(fade_keluar, durasi / 3))
+    rantai = [f"aresample={sr}", f"volume={db}dB"]
+    if fi > 0:
+        rantai.append(f"afade=t=in:st=0:d={fi:.3f}:curve=tri")
+    if fo > 0:
+        rantai.append(f"afade=t=out:st={durasi - fo:.3f}:d={fo:.3f}:curve=qsin")
+    return ",".join(rantai)
 
 
 class AudioMixin:
@@ -92,7 +108,9 @@ class AudioMixin:
                 raise GagalPipeline(f"musik {musik['file']!r} tidak ada.")
             cmd += ["-stream_loop", "-1", "-i", mp]
             fc.append("[0:a]asplit=2[suara][kunci]")
-            fc.append(f"[1:a]aresample={a['sample-rate']},volume={musik.get('db', -22)}dB[m0]")
+            fc.append("[1:a]" + filter_musik(a["sample-rate"], musik.get("db", -22), self.dur,
+                                              float(musik.get("fade_masuk", FADE_MASUK_MUSIK)),
+                                              float(musik.get("fade_keluar", FADE_KELUAR_MUSIK))) + "[m0]")
             fc.append("[m0][kunci]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=350[musik]")
             label += ["[suara]", "[musik]"]
             n = 2
