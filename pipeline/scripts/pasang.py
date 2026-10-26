@@ -179,7 +179,7 @@ def pasang(p: Proyek, kering: bool = False) -> dict:
             if wajah and not ada_latar and e.get("posisi") in ("atas", "tengah") and e.get("tipe") in TINGGI_KIRA and "y" not in e:
                 fk = _wajah_median(wajah, a1, z1)
                 if fk:
-                    def tutup(pos):
+                    def tutup(pos, e=e, fk=fk):
                         pa, pz = _pita(p, e, pos)
                         return max(0.0, min(pz, fk[3]) - max(pa, fk[1])) / max(1e-3, fk[3] - fk[1])
                     pilihan = sorted(("atas", "tengah"), key=tutup)

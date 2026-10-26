@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from functools import lru_cache
 
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -101,9 +100,16 @@ class Penata:
     def __init__(self, p: Proyek):
         self.p = p
         self.spasi = p.t("spasi.baris")
+        # cache per objek (bukan lru_cache di method: cache kelas menahan `self` → Penata lama tak pernah dibebaskan
+        # di batch multi-proyek seperti video.py pratinjau)
+        self._font: dict[tuple[str, int], ImageFont.FreeTypeFont] = {}
 
-    @lru_cache(maxsize=64)
     def font(self, peran: str, ukuran: int) -> ImageFont.FreeTypeFont:
+        if (peran, ukuran) not in self._font:
+            self._font[(peran, ukuran)] = self._muat_font(peran, ukuran)
+        return self._font[(peran, ukuran)]
+
+    def _muat_font(self, peran: str, ukuran: int) -> ImageFont.FreeTypeFont:
         f = ImageFont.truetype(str(cari_font(self.p.t(f"font.{peran}.file"))), ukuran)
         wght = self.p.t(f"font.{peran}.wght", 0)
         if wght:  # variable font (Inter, Baloo 2, Playfair Display): sumbu berat dari token, optical size ikut ukuran

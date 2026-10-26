@@ -84,7 +84,7 @@ def muat(p: Proyek, durasi_video: float | None = None) -> dict:
                 try:
                     e["_efek"] = resolve("efek", e["efek"]).ref
                 except GagalPipeline as ex:
-                    raise GagalPipeline(f"{k}: {ex}")
+                    raise GagalPipeline(f"{k}: {ex}") from ex
             e["_id"] = f"{b['id']}/{j}-{tipe}"
             e["_beat"] = b["id"]
             e["_anchor"] = isinstance(e.get("mulai"), dict)

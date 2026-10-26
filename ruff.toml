@@ -1,0 +1,12 @@
+# Linter Python pipeline (perkakas: pipeline/requirements-dev.txt).
+# Jalankan: .venv\Scripts\python -m ruff check pipeline
+target-version = "py310"
+line-length = 140
+
+[lint]
+select = ["E", "F", "W", "B"]
+# E501: panjang baris mengikuti gaya kode ini (tabel & rumus satu baris) — tidak memaksa format ulang.
+# E731: lambda bernama dipakai sengaja untuk rumus pendek.
+# B905: zip tanpa strict= hanya pada pasangan yang panjangnya dijamin sama.
+# B007: variabel loop tak terpakai = gaya, bukan bug.
+ignore = ["E501", "E731", "B905", "B007"]

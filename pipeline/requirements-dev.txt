@@ -1,0 +1,2 @@
+# Perkakas pengembangan (bukan dependensi runtime): .venv\Scripts\python -m pip install -r pipeline/requirements-dev.txt
+ruff>=0.17,<1

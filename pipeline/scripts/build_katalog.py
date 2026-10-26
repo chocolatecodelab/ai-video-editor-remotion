@@ -232,7 +232,7 @@ def bangun(keluar: Path, paksa: bool = False) -> dict:
             if item[j] not in nama[j]:
                 masalah.append(f"preset {m.nama}: {j} '{item[j]}' tidak ada")
         mp4 = ROOT / "preset" / "pratinjau" / f"{m.nama}.mp4"
-        png = media.png("preset", m.nama, mp4, lambda: detik_preset(mp4))
+        png = media.png("preset", m.nama, mp4, lambda mp4=mp4: detik_preset(mp4))
         gif = media.gif("preset", m.nama, mp4, PRESET_GIF_SUMBER, PRESET_GIF_CEPAT)
         media.pasang(item, "preset", png, gif)
         preset.append(item)
