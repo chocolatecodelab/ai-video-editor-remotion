@@ -4,13 +4,15 @@ from __future__ import annotations
 
 import subprocess
 from dataclasses import dataclass
+from functools import lru_cache
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 import cv2
 import numpy as np
 from PIL import Image
 
-from sistem import GagalPipeline, Proyek
+from sistem import GagalPipeline, Proyek, ffprobe, stream
 
 if TYPE_CHECKING:
     from render_panel import Panel
@@ -176,17 +178,42 @@ class Animator:
 # ============================================================== pembaca video
 
 
+# nama matriks ffprobe (color_space) → nama opsi in_color_matrix filter scale
+MATRIKS_SCALE = {"bt709": "bt709", "smpte170m": "smpte170m", "bt470bg": "bt470", "bt2020nc": "bt2020", "bt2020c": "bt2020",
+                 "fcc": "fcc", "smpte240m": "smpte240m"}
+
+
+@lru_cache(maxsize=64)
+def matriks_masuk(path: str) -> tuple[str, str]:
+    """(in_color_matrix, in_range) untuk konversi YUV → RGB. Ditulis eksplisit: tanpa itu ffmpeg menganggap video tanpa
+    tag sebagai BT.601 (video SD lama), padahal klip HD hampir selalu BT.709 → warna bergeser (merah bata 200,50,50
+    terbaca 184,30,48). Tanpa tag: BT.709 untuk tinggi ≥ 720 px, BT.601 untuk SD; range TV."""
+    try:
+        vs = stream(ffprobe(Path(path)), "video") or {}
+    except GagalPipeline:
+        return "bt709", "tv"
+    m = MATRIKS_SCALE.get(str(vs.get("color_space") or ""))
+    if not m:
+        m = "bt709" if int(vs.get("height") or 0) >= 720 else "smpte170m"
+    r = vs.get("color_range") if vs.get("color_range") in ("tv", "pc") else "tv"
+    return m, r
+
+
 class Pembaca:
     """Baca frame RGB berurutan via ffmpeg pipe, di-scale 'cover' ke W×H."""
 
     def __init__(self, path, mulai: float, W: int, H: int, fps: int, cover: bool = False, rgba: bool = False):
-        vf = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}," if cover else ""
+        m, r = matriks_masuk(str(path))
+        warna = f"in_color_matrix={m}:in_range={r}"
+        # resize tetap di YUV dengan matriks yang sama (tanpa out_color_matrix, scale mengonversi ke BT.601)
+        vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase:{warna}:out_color_matrix={m}:out_range={r},"
+              f"crop={W}:{H},") if cover else ""
         ch, fmt = (4, "rgba") if rgba else (3, "rgb24")
         # seek ¼ frame lebih awal: frame k (pts k/fps) tidak terbuang karena pembulatan waktu seek, dan filter fps
         # memetakan keluaran 0 ke frame k (terdekat) → seek ke frame mana pun = hasil baca berurutan dari 0
         ss = max(0.0, mulai - 0.25 / fps)
         cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-ss", f"{ss:.6f}", "-i", str(path),
-               "-vf", f"{vf}fps={fps},format={fmt}", "-f", "rawvideo", "-"]
+               "-vf", f"{vf}fps={fps},scale={warna},format={fmt}", "-f", "rawvideo", "-"]
         self.proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stdin=subprocess.DEVNULL)
         self.n, self.shape, self.akhir = W * H * ch, (H, W, ch), None
 
