@@ -54,5 +54,28 @@ class UjiMatriksMasuk(unittest.TestCase):
                 self.assertLessEqual(np.abs(self._baca(self.tanpa, **kw) - acuan).max(), 1)
 
 
+class UjiDither(unittest.TestCase):
+    """ke_uint8: gradien halus tidak berpita, tidak ada bias gelap, deterministik per frame (render paralel identik)."""
+
+    def setUp(self):
+        from render_dasar import ke_uint8
+        self.ke_uint8 = ke_uint8
+        # gradien sangat landai: 4 tingkat di 1080 px (vignette/panel kaca) → tanpa dither jadi 5 pita lebar
+        self.grad = np.tile(np.linspace(100.0, 104.0, 1080, dtype=np.float32)[None, :, None], (400, 1, 3))
+
+    def test_rata_rata_kolom_mengikuti_gradien(self):
+        hasil = self.ke_uint8(self.grad, 7).astype(np.float32)
+        galat_dither = np.abs(hasil.mean(axis=0) - self.grad[0]).max()
+        galat_potong = np.abs(np.clip(self.grad, 0, 255).astype(np.uint8)[0] - self.grad[0]).max()
+        self.assertLess(galat_dither, 0.2)   # pita hilang: rata-rata lokal mengikuti nilai asli
+        self.assertGreater(galat_potong, 0.9)  # cara lama: pita setebal 1 tingkat + bias ke bawah
+
+    def test_tanpa_bias_dan_deterministik(self):
+        a, b = self.ke_uint8(self.grad, 3), self.ke_uint8(self.grad, 3)
+        self.assertTrue(np.array_equal(a, b))
+        self.assertLess(abs(a.astype(np.float32).mean() - self.grad.mean()), 0.05)
+        self.assertFalse(np.array_equal(a, self.ke_uint8(self.grad, 4)))  # derau berganti tiap frame
+
+
 if __name__ == "__main__":
     unittest.main()

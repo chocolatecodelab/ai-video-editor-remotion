@@ -34,7 +34,7 @@ from PIL import Image
 import beat
 from render_audio import MARGIN_TP_LOSSY, AudioMixin  # noqa: F401  (re-export)
 from render_dasar import (Animator, Easing, Lapisan, Overlay, Pembaca, Transform, bbox_transform,  # noqa: F401
-                          ke_premult, tempel, warp_penuh)
+                          ke_premult, ke_uint8, tempel, warp_penuh)
 from render_depth import DepthMixin
 from render_elemen import ElemenMixin
 from render_kamera import JENIS_TRANSISI, KAMERA, KAMERA_MASK, KameraMixin  # noqa: F401
@@ -418,7 +418,7 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
                 tempel(frame, L.sprite.img, trs)
         self._gambar_caption(frame, t, self._sampel)
         frame = self._terapkan_transisi(frame, t, i)
-        return np.clip(frame, 0, 255).astype(np.uint8)
+        return ke_uint8(frame, i)
 
     _sampel = True
     mb_dipakai = 0

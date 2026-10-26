@@ -47,6 +47,16 @@ def ke_premult(img: Image.Image) -> np.ndarray:
     return a
 
 
+def ke_uint8(frame: np.ndarray, i: int) -> np.ndarray:
+    """Frame komposit (float 0–255) → uint8 untuk encoder master: dither TPDF ±1 LSB lalu dibulatkan.
+    Tanpa dither, gradien halus (panel kaca, vignette, cahaya) berpita (banding) setelah kompresi platform; astype saja
+    juga memotong ke bawah (rata-rata 0,5 LSB lebih gelap). Derau ditentukan nomor frame → render berurutan & paralel
+    tetap identik per frame."""
+    rng = np.random.default_rng(i)
+    derau = rng.random(frame.shape, dtype=np.float32) - rng.random(frame.shape, dtype=np.float32)
+    return np.clip(frame + derau + 0.5, 0, 255).astype(np.uint8)
+
+
 @dataclass
 class Transform:
     cx: float
