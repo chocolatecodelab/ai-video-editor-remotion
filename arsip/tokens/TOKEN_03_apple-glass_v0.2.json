@@ -1,0 +1,139 @@
+{
+  "_meta": {
+    "id": "apple-glass",
+    "versi": "0.2",
+    "status": "draft",
+    "catatan": "Gaya Apple Glass. Font dari folder font Windows/pengguna; ganti di sini bila memakai font lain."
+  },
+  "warna": {
+    "latar": "#E9EDF3",
+    "teks-utama": "#111114",
+    "teks-sekunder": "#3A3A40",
+    "aksen": "#0064C9",
+    "aksen-2": "#BF5AF2",
+    "peringatan": "#FF3B30",
+    "panel": "#FFFFFF",
+    "panel-opasitas": 0.8,
+    "garis-panel": "#FFFFFF",
+    "garis-opasitas": 0.7,
+    "stroke": "#FFFFFF",
+    "bayangan": "#000000",
+    "bayangan-opasitas": 0.18
+  },
+  "font": {
+    "judul": {
+      "file": "segoeuib.ttf",
+      "family": "Segoe UI",
+      "weight": 700
+    },
+    "subjudul": {
+      "file": "seguisb.ttf",
+      "family": "Segoe UI Semibold",
+      "weight": 600
+    },
+    "isi": {
+      "file": "seguisb.ttf",
+      "family": "Segoe UI Semibold",
+      "weight": 600
+    },
+    "caption": {
+      "file": "segoeuib.ttf",
+      "family": "Segoe UI",
+      "weight": 700
+    },
+    "depth": {
+      "file": "seguibl.ttf",
+      "family": "Segoe UI Black",
+      "weight": 900
+    }
+  },
+  "ukuran": {
+    "judul": 92,
+    "subjudul": 62,
+    "isi": 46,
+    "caption": 58,
+    "depth": 230
+  },
+  "spasi": {
+    "baris": 1.1,
+    "padding-kartu": 48,
+    "jarak-item": 22
+  },
+  "radius": {
+    "kartu": 44,
+    "chip": 999
+  },
+  "blur": {
+    "panel": 36
+  },
+  "bayangan": {
+    "offset": [
+      0,
+      18
+    ],
+    "blur": 40
+  },
+  "durasi": {
+    "masuk": 0.45,
+    "keluar": 0.25,
+    "tahan-min": 1.2,
+    "stagger": 0.09
+  },
+  "easing": {
+    "standar": [
+      0.25,
+      0.1,
+      0.25,
+      1.0
+    ],
+    "tegas": [
+      0.6,
+      0.0,
+      0.2,
+      1.0
+    ],
+    "keluar": [
+      0.4,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "naik",
+    "keluar-default": "fade",
+    "jarak-naik": 40,
+    "skala-pop": 0.92,
+    "push-in": 1.04
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 12
+  },
+  "caption": {
+    "kata-maks": 4,
+    "karakter-maks-baris": 18,
+    "stroke": 6,
+    "huruf-besar": false,
+    "baris-maks": 2,
+    "jeda-pecah": 0.35,
+    "warna-aktif": "aksen",
+    "mode": "karaoke",
+    "redup": 0.4
+  },
+  "sfx": {
+    "transisi": "pop",
+    "level-db": -22,
+    "level": {
+      "aksen": -22,
+      "status": -22,
+      "transisi": -23,
+      "ui": -27,
+      "ketik": -32
+    }
+  },
+  "mask": {
+    "feather-px": 1.5
+  }
+}

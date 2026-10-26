@@ -1,0 +1,579 @@
+{
+ "_meta": {
+  "id": "wa-motion-graphic-draf",
+  "versi": "0.1",
+  "status": "draft",
+  "catatan": "Draf otomatis dari referensi.py — pindahkan ke koreografi/KOREO_NN_<nama>_v0.1.json setelah ditinjau."
+ },
+ "label": "Dari referensi wa-motion-graphic",
+ "template": "hook-problem-solution",
+ "variasi_min": 4,
+ "butuh": {
+  "rekaman": true,
+  "remotion": true
+ },
+ "beat_sheet": {
+  "caption": {
+   "aktif": true
+  },
+  "beats": [
+   {
+    "id": "b1",
+    "beat": "hook",
+    "mulai": 0.0,
+    "selesai": 4.3,
+    "elemen": [
+     {
+      "slot": "hook",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 0.2,
+      "selesai": 4.3,
+      "_ref": "shot 1: hook"
+     }
+    ]
+   },
+   {
+    "id": "b2",
+    "beat": "transisi",
+    "mulai": 4.3,
+    "selesai": 4.6,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 4.3
+     }
+    ]
+   },
+   {
+    "id": "b3",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 4.6,
+    "selesai": 8.1,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 4.8,
+      "selesai": 8.1,
+      "_ref": "shot 3: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b4",
+    "beat": "transisi",
+    "mulai": 8.1,
+    "selesai": 8.5,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 8.1
+     }
+    ]
+   },
+   {
+    "id": "b5",
+    "beat": "transisi",
+    "mulai": 8.5,
+    "selesai": 8.7,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 8.5
+     }
+    ]
+   },
+   {
+    "id": "b6",
+    "beat": "transisi",
+    "mulai": 8.7,
+    "selesai": 8.9,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 8.7
+     }
+    ]
+   },
+   {
+    "id": "b7",
+    "beat": "cutaway diam (couch-wall / paper-cut / gambar)",
+    "mulai": 8.9,
+    "selesai": 9.6,
+    "elemen": [
+     {
+      "slot": "konteks",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 9.1,
+      "selesai": 9.6,
+      "_ref": "shot 7: cutaway diam (couch-wall / paper-cut / gambar)"
+     }
+    ]
+   },
+   {
+    "id": "b8",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 9.6,
+    "selesai": 12.3,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 9.8,
+      "selesai": 12.3,
+      "_ref": "shot 8: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b9",
+    "beat": "transisi",
+    "mulai": 12.3,
+    "selesai": 12.7,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 12.3
+     }
+    ]
+   },
+   {
+    "id": "b10",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 12.7,
+    "selesai": 16.8,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 12.9,
+      "selesai": 16.8,
+      "_ref": "shot 10: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b11",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 16.8,
+    "selesai": 19.8,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 17.0,
+      "selesai": 19.8,
+      "_ref": "shot 11: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b12",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 19.8,
+    "selesai": 23.6,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 20.0,
+      "selesai": 23.6,
+      "_ref": "shot 12: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b13",
+    "beat": "transisi",
+    "mulai": 23.6,
+    "selesai": 23.8,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 23.6
+     }
+    ]
+   },
+   {
+    "id": "b14",
+    "beat": "cutaway diam (couch-wall / paper-cut / gambar)",
+    "mulai": 23.8,
+    "selesai": 24.0,
+    "elemen": [
+     {
+      "slot": "konteks",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 24.0,
+      "selesai": 24.0,
+      "_ref": "shot 14: cutaway diam (couch-wall / paper-cut / gambar)"
+     }
+    ]
+   },
+   {
+    "id": "b15",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 24.0,
+    "selesai": 29.7,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 24.2,
+      "selesai": 29.7,
+      "_ref": "shot 15: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b16",
+    "beat": "transisi",
+    "mulai": 29.7,
+    "selesai": 29.9,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 29.7
+     }
+    ]
+   },
+   {
+    "id": "b17",
+    "beat": "transisi",
+    "mulai": 29.9,
+    "selesai": 30.1,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 29.9
+     }
+    ]
+   },
+   {
+    "id": "b18",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 30.1,
+    "selesai": 32.1,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 30.3,
+      "selesai": 32.1,
+      "_ref": "shot 18: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b19",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 32.1,
+    "selesai": 33.3,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 32.3,
+      "selesai": 33.3,
+      "_ref": "shot 19: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b20",
+    "beat": "transisi",
+    "mulai": 33.3,
+    "selesai": 33.6,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 33.3
+     }
+    ]
+   },
+   {
+    "id": "b21",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 33.6,
+    "selesai": 37.2,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 33.8,
+      "selesai": 37.2,
+      "_ref": "shot 21: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b22",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 37.2,
+    "selesai": 37.4,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 37.4,
+      "selesai": 37.4,
+      "_ref": "shot 22: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b23",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 37.4,
+    "selesai": 39.8,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 37.6,
+      "selesai": 39.8,
+      "_ref": "shot 23: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b24",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 39.8,
+    "selesai": 41.4,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 40.0,
+      "selesai": 41.4,
+      "_ref": "shot 24: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b25",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 41.4,
+    "selesai": 42.4,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 41.6,
+      "selesai": 42.4,
+      "_ref": "shot 25: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b26",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 42.4,
+    "selesai": 45.7,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 42.6,
+      "selesai": 45.7,
+      "_ref": "shot 26: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b27",
+    "beat": "transisi",
+    "mulai": 45.7,
+    "selesai": 45.9,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 45.7
+     }
+    ]
+   },
+   {
+    "id": "b28",
+    "beat": "cutaway diam (couch-wall / paper-cut / gambar)",
+    "mulai": 45.9,
+    "selesai": 46.8,
+    "elemen": [
+     {
+      "slot": "konteks",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 46.1,
+      "selesai": 46.8,
+      "_ref": "shot 28: cutaway diam (couch-wall / paper-cut / gambar)"
+     }
+    ]
+   },
+   {
+    "id": "b29",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 46.8,
+    "selesai": 51.1,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 47.0,
+      "selesai": 51.1,
+      "_ref": "shot 29: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b30",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 51.1,
+    "selesai": 51.8,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 51.3,
+      "selesai": 51.8,
+      "_ref": "shot 30: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b31",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 51.8,
+    "selesai": 52.7,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 52.0,
+      "selesai": 52.7,
+      "_ref": "shot 31: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b32",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 52.7,
+    "selesai": 55.3,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 52.9,
+      "selesai": 55.3,
+      "_ref": "shot 32: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b33",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 55.3,
+    "selesai": 56.4,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 55.5,
+      "selesai": 56.4,
+      "_ref": "shot 33: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b34",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 56.4,
+    "selesai": 58.9,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 56.6,
+      "selesai": 58.9,
+      "_ref": "shot 34: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   },
+   {
+    "id": "b35",
+    "beat": "transisi",
+    "mulai": 58.9,
+    "selesai": 59.1,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 58.9
+     }
+    ]
+   },
+   {
+    "id": "b36",
+    "beat": "perangkat cutaway (bukti/langkah)",
+    "mulai": 59.1,
+    "selesai": 64.2,
+    "elemen": [
+     {
+      "slot": "bukti",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 59.3,
+      "selesai": 64.2,
+      "_ref": "shot 36: perangkat cutaway (bukti/langkah)"
+     }
+    ]
+   }
+  ]
+ }
+}

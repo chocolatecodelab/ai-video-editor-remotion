@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "bold-kinetic-bukti-sosial",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Preset fase 3 = gaya × koreografi. Beat-sheet awal dari koreografi; gaya & koreografi tanpa pin versi."
+  },
+  "label": "Bold Kinetic · Bukti Sosial · Motion Graphics 35–40 s",
+  "format": "bukti-sosial",
+  "deskripsi": "Bold Kinetic (teks menghentak, kuning, cepat) + Tanpa footage: headline 2 baris + jendela UI yang berganti tiap bagian — angka naik, kata dicoret, timeline, terminal, form, grid variasi, CTA berpartikel.",
+  "kapan": "Promosi tool/repo/produk digital, pengumuman pencapaian, konten tanpa wajah.",
+  "gaya": "bold-kinetic",
+  "koreografi": "bukti-sosial",
+  "manifest": {}
+}

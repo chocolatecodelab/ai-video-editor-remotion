@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "kolase-kertas-kata-prompt",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Preset fase 3 = gaya × koreografi. Beat-sheet awal dari koreografi; gaya & koreografi tanpa pin versi."
+  },
+  "label": "Kolase Kertas · Kata Prompt · Talking Head 30–40 s",
+  "format": "kata-prompt",
+  "deskripsi": "Kolase Kertas (kolase zine, slab serif, jatuh) + Gaya 1-hari-1-istilah: kotak prompt mengetik, kartu info di samping kepala, cutaway kata dicoret, kuis salah/benar, CTA.",
+  "kapan": "Menjelaskan satu istilah/teknik/prompt; seri edukasi pendek dengan wajah.",
+  "gaya": "kolase-kertas",
+  "koreografi": "kata-prompt",
+  "manifest": {
+    "warna": {
+      "filter": "eq=contrast=1.04:saturation=1.08"
+    }
+  }
+}

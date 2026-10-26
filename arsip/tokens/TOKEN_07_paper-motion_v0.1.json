@@ -1,0 +1,130 @@
+{
+  "_meta": {
+    "id": "paper-motion",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Gaya Paper Motion. Font dari folder font Windows/pengguna; ganti di sini bila memakai font lain."
+  },
+  "warna": {
+    "latar": "#F4EFE6",
+    "teks-utama": "#232323",
+    "teks-sekunder": "#4A4744",
+    "aksen": "#C43017",
+    "aksen-2": "#2F6FDB",
+    "peringatan": "#D62828",
+    "panel": "#FFFDF8",
+    "panel-opasitas": 1.0,
+    "garis-panel": "#E5DED2",
+    "garis-opasitas": 1.0,
+    "stroke": "#FFFDF8",
+    "bayangan": "#5A4632",
+    "bayangan-opasitas": 0.28
+  },
+  "font": {
+    "judul": {
+      "file": "Gliker Bold.ttf",
+      "family": "Gliker",
+      "weight": 700
+    },
+    "subjudul": {
+      "file": "Nunito-Bold.ttf",
+      "family": "Nunito",
+      "weight": 700
+    },
+    "isi": {
+      "file": "Nunito-Bold.ttf",
+      "family": "Nunito",
+      "weight": 700
+    },
+    "caption": {
+      "file": "Gliker Bold.ttf",
+      "family": "Gliker",
+      "weight": 700
+    },
+    "depth": {
+      "file": "Gliker Black.ttf",
+      "family": "Gliker",
+      "weight": 900
+    }
+  },
+  "ukuran": {
+    "judul": 96,
+    "subjudul": 64,
+    "isi": 48,
+    "caption": 64,
+    "depth": 240
+  },
+  "spasi": {
+    "baris": 1.08,
+    "padding-kartu": 44,
+    "jarak-item": 20
+  },
+  "radius": {
+    "kartu": 8,
+    "chip": 999
+  },
+  "blur": {
+    "panel": 0
+  },
+  "bayangan": {
+    "offset": [
+      0,
+      14
+    ],
+    "blur": 16
+  },
+  "durasi": {
+    "masuk": 0.42,
+    "keluar": 0.22,
+    "tahan-min": 1.2,
+    "stagger": 0.1
+  },
+  "easing": {
+    "standar": [
+      0.34,
+      1.56,
+      0.64,
+      1.0
+    ],
+    "tegas": [
+      0.7,
+      0.0,
+      0.3,
+      1.0
+    ],
+    "keluar": [
+      0.4,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "pop",
+    "keluar-default": "pop",
+    "jarak-naik": 70,
+    "skala-pop": 0.7,
+    "push-in": 1.05
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 12
+  },
+  "caption": {
+    "kata-maks": 3,
+    "karakter-maks-baris": 16,
+    "stroke": 9,
+    "huruf-besar": false,
+    "baris-maks": 2,
+    "jeda-pecah": 0.35,
+    "warna-aktif": "aksen"
+  },
+  "sfx": {
+    "transisi": "pop",
+    "level-db": -18
+  },
+  "mask": {
+    "feather-px": 1.5
+  }
+}

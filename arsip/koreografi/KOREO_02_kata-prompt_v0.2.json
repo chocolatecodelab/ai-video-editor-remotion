@@ -1,0 +1,180 @@
+{
+ "_meta": {
+  "id": "kata-prompt",
+  "versi": "0.2",
+  "status": "draft",
+  "catatan": "Koreografi v0.2 berisi CONTOH isi (ganti dengan isi videomu), lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4)."
+ },
+ "label": "Kata Prompt · Talking Head 30–40 s",
+ "deskripsi": "Gaya 1-hari-1-istilah: kotak prompt mengetik, kartu info di samping kepala, cutaway kata dicoret, kata raksasa bergradien di belakang subjek (rotoscope) + kuis salah/benar, CTA.",
+ "kapan": "Menjelaskan satu istilah/teknik/prompt; seri edukasi pendek dengan wajah.",
+ "template": "hook-problem-solution",
+ "variasi_min": 5,
+ "efek": [
+  "prompt-ui@0.1",
+  "blur-zoom@0.1",
+  "coret@0.1",
+  "partikel@0.1"
+ ],
+ "butuh": {
+  "rekaman": true,
+  "roto": true,
+  "remotion": true
+ },
+ "manifest": {},
+ "konteks_tambahan": [
+  "depth-typography@0.1"
+ ],
+ "beat_sheet": {
+  "_catatan": "Koreografi v0.2 berisi CONTOH isi (ganti dengan isi videomu), lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4).",
+  "caption": {
+   "aktif": true,
+   "posisi": "bawah",
+   "kecuali": []
+  },
+  "beats": [
+   {
+    "id": "hook",
+    "beat": "Hook",
+    "mulai": 0,
+    "selesai": 3.5,
+    "elemen": [
+     {
+      "tipe": "remotion",
+      "efek": "prompt-ui",
+      "fungsi": "hook",
+      "mulai": 0.15,
+      "selesai": 5.5,
+      "label": "1 Hari 1 Istilah · #4",
+      "teks": "Editkan, pakai *rotoscope*.",
+      "lampiran": "video-kamu.mp4",
+      "kata_ciut": "rotoscope",
+      "cps": 26,
+      "opasitas": 0.8,
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "problem",
+    "beat": "Problem",
+    "mulai": 3.5,
+    "selesai": 12.0,
+    "elemen": [
+     {
+      "tipe": "chip",
+      "status": "info",
+      "teks": "Apa itu *rotoscope*?",
+      "fungsi": "masalah",
+      "mulai": 5.6,
+      "selesai": 8.5,
+      "posisi": "atas"
+     },
+     {
+      "tipe": "info",
+      "ikon": "lapisan",
+      "judul": "Memisahkan *subjek*",
+      "sub": "dari latar, per frame",
+      "fungsi": "masalah",
+      "mulai": 8.6,
+      "selesai": 12.0,
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "agitasi",
+    "beat": "Agitasi",
+    "mulai": 12.0,
+    "selesai": 18.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 12.0
+     },
+     {
+      "tipe": "latar",
+      "mulai": 12.0,
+      "selesai": 18.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "coret",
+      "fungsi": "membantah",
+      "mulai": 12.2,
+      "selesai": 18.0,
+      "judul": "anggapan.txt",
+      "teks": "cuma efek green screen",
+      "posisi": "tengah"
+     }
+    ]
+   },
+   {
+    "id": "solution",
+    "beat": "Solution",
+    "mulai": 18.0,
+    "selesai": 28.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 18.0
+     },
+     {
+      "tipe": "depth",
+      "teks": "ROTOSCOPE",
+      "gradien": true,
+      "fungsi": "reveal",
+      "y": 0.36,
+      "mulai": 18.2,
+      "selesai": 28.0
+     },
+     {
+      "tipe": "chip",
+      "status": "salah",
+      "teks": "Cuma untuk film",
+      "fungsi": "membantah",
+      "mulai": 18.6,
+      "selesai": 22.5,
+      "y": 0.15
+     },
+     {
+      "tipe": "chip",
+      "status": "benar",
+      "teks": "Teks di *belakang* kepala",
+      "fungsi": "hasil",
+      "mulai": 22.6,
+      "selesai": 28.0,
+      "y": 0.15
+     }
+    ]
+   },
+   {
+    "id": "cta",
+    "beat": "CTA",
+    "mulai": 28.0,
+    "selesai": 33.0,
+    "elemen": [
+     {
+      "tipe": "cta",
+      "teks": "Ikuti seri berikutnya",
+      "fungsi": "ajakan",
+      "mulai": 28.4,
+      "selesai": 33.0,
+      "posisi": "atas"
+     },
+     {
+      "tipe": "remotion",
+      "efek": "partikel",
+      "fungsi": "reveal",
+      "mulai": 28.4,
+      "selesai": 29.6,
+      "x": 0.5,
+      "y": 0.16
+     }
+    ]
+   }
+  ]
+ }
+}

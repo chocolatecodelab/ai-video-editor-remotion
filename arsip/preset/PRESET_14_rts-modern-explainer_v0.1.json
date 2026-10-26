@@ -1,0 +1,162 @@
+{
+  "_meta": {
+    "id": "rts-modern-explainer",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Titik awal. Setelah transkrip, ganti angka detik dengan anchor {\"kata\": …}."
+  },
+  "label": "RTS Modern · Explainer 60–90 s",
+  "format": "explainer",
+  "deskripsi": "RTS Modern (HUD taktis, mono, neon hijau) — explainer 60–90 s talking head.",
+  "kapan": "Gaming, teknologi, strategi, 'breakdown' taktis langkah demi langkah.",
+  "gaya": "rts-modern@0.1",
+  "template": "explainer@0.2",
+  "efek": [],
+  "butuh": {
+    "rekaman": true,
+    "roto": false,
+    "remotion": false
+  },
+  "manifest": {
+    "platform": [
+      "reels",
+      "tiktok",
+      "shorts"
+    ],
+    "warna": {
+      "filter": "eq=contrast=1.06:saturation=0.85,colortemperature=7000"
+    },
+    "transkrip": {
+      "bahasa": "id",
+      "model": "large-v3"
+    }
+  },
+  "beat_sheet": {
+    "_catatan": "Dibuat dari preset rts-modern-explainer@0.1. Waktu = detik; ganti dengan anchor {\"kata\": …} setelah transkrip. Teks di atas video memakai panel (ciri gaya rts-modern).",
+    "caption": {
+      "aktif": true,
+      "posisi": "bawah",
+      "kecuali": [
+        "hook"
+      ]
+    },
+    "beats": [
+      {
+        "id": "hook",
+        "beat": "Hook",
+        "mulai": 0,
+        "selesai": 3.0,
+        "elemen": [
+          {
+            "tipe": "judul",
+            "teks": "TODO pertanyaan *kunci*?",
+            "posisi": "atas",
+            "latar": "panel",
+            "sfx": true
+          },
+          {
+            "tipe": "push",
+            "mulai": 0.3,
+            "gerak": 1.2
+          }
+        ]
+      },
+      {
+        "id": "konteks",
+        "beat": "Konteks",
+        "mulai": 3.0,
+        "selesai": 15.0,
+        "elemen": [
+          {
+            "tipe": "teks",
+            "teks": "TODO kenapa *penting*",
+            "posisi": "atas",
+            "latar": "panel",
+            "durasi": 3.0
+          }
+        ]
+      },
+      {
+        "id": "poin-1",
+        "beat": "Poin 1",
+        "mulai": 15.0,
+        "selesai": 30.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO poin *1*",
+            "teks": "TODO contoh singkat",
+            "posisi": "atas",
+            "durasi": 5.0,
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "poin-2",
+        "beat": "Poin 2",
+        "mulai": 30.0,
+        "selesai": 45.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO poin *2*",
+            "teks": "TODO contoh singkat",
+            "posisi": "atas",
+            "durasi": 5.0,
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "poin-3",
+        "beat": "Poin 3",
+        "mulai": 45.0,
+        "selesai": 60.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO poin *3*",
+            "teks": "TODO contoh singkat",
+            "posisi": "atas",
+            "durasi": 5.0,
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "ringkasan",
+        "beat": "Ringkasan",
+        "mulai": 60.0,
+        "selesai": 67.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "Ringkasnya",
+            "item": [
+              "TODO poin 1",
+              "TODO poin *2*",
+              "TODO poin 3"
+            ],
+            "penanda": ">",
+            "stagger": 0.8,
+            "posisi": "tengah",
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "beat": "CTA",
+        "mulai": 67.0,
+        "elemen": [
+          {
+            "tipe": "cta",
+            "teks": "TODO ajakan",
+            "posisi": "tengah"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "proyek": "2026-10_skill-vs-sertifikat",
+  "judul": "Skill vs Sertifikat",
+  "status": "brief",
+  "skill": "video-editor@0.1",
+  "gaya": "bold-kinetic@0.1",
+  "template": "hook-problem-solution@0.1",
+  "konteks": [
+    "zona-aman@0.1",
+    "caption@0.1",
+    "parallax-push@0.1",
+    "ingest@0.1",
+    "gerak@0.1",
+    "audio@0.1",
+    "ekspor@0.1"
+  ],
+  "platform": [
+    "reels",
+    "tiktok",
+    "shorts"
+  ],
+  "aset": {
+    "rekaman": "aset/rekaman/take1.mp4",
+    "potong": [],
+    "crop": {
+      "x": 0.5
+    },
+    "musik": null
+  },
+  "warna": {
+    "filter": ""
+  },
+  "transkrip": {
+    "bahasa": "id",
+    "model": "large-v3"
+  },
+  "roto": {
+    "backend": "mediapipe",
+    "halus": 0.3
+  },
+  "token_override": {},
+  "terpakai": null,
+  "riwayat": []
+}

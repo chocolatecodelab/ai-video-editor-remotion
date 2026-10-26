@@ -1,0 +1,162 @@
+{
+  "_meta": {
+    "id": "bold-kinetic",
+    "versi": "0.3",
+    "status": "draft",
+    "catatan": "Nilai default sementara. Revisi lalu naikkan versi. Font: Anton + Montserrat ExtraBold (Google Fonts di pipeline/fonts/ bila tidak terpasang)."
+  },
+  "warna": {
+    "latar": "#000000",
+    "teks-utama": "#FFFFFF",
+    "teks-sekunder": "#E6E6E6",
+    "aksen": "#FFE14D",
+    "aksen-2": "#FF4D8D",
+    "peringatan": "#FF3B3B",
+    "panel": "#111111",
+    "panel-opasitas": 0.92,
+    "garis-panel": "#FFE14D",
+    "garis-opasitas": 0.0,
+    "stroke": "#000000",
+    "bayangan": "#000000",
+    "bayangan-opasitas": 0.6
+  },
+  "font": {
+    "judul": {
+      "file": "Anton-Regular.ttf",
+      "family": "Anton",
+      "weight": 400
+    },
+    "subjudul": {
+      "file": "Anton-Regular.ttf",
+      "family": "Anton",
+      "weight": 400
+    },
+    "isi": {
+      "file": "Montserrat-Bold.ttf",
+      "family": "Montserrat",
+      "weight": 700
+    },
+    "caption": {
+      "file": "Montserrat-ExtraBold.ttf",
+      "family": "Montserrat",
+      "weight": 800
+    },
+    "depth": {
+      "file": "Anton-Regular.ttf",
+      "family": "Anton",
+      "weight": 400
+    }
+  },
+  "ukuran": {
+    "judul": 112,
+    "subjudul": 72,
+    "isi": 52,
+    "caption": 72,
+    "depth": 260
+  },
+  "spasi": {
+    "baris": 1.05,
+    "padding-kartu": 36,
+    "jarak-item": 18
+  },
+  "radius": {
+    "kartu": 14,
+    "chip": 14
+  },
+  "blur": {
+    "panel": 0
+  },
+  "bayangan": {
+    "offset": [
+      0,
+      8
+    ],
+    "blur": 0
+  },
+  "durasi": {
+    "masuk": 0.22,
+    "keluar": 0.16,
+    "tahan-min": 1.0,
+    "stagger": 0.06
+  },
+  "easing": {
+    "standar": [
+      0.16,
+      1.0,
+      0.3,
+      1.0
+    ],
+    "tegas": [
+      0.8,
+      0.0,
+      0.2,
+      1.0
+    ],
+    "keluar": [
+      0.5,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "pop",
+    "keluar-default": "fade",
+    "jarak-naik": 90,
+    "skala-pop": 0.6,
+    "push-in": 1.12
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 10
+  },
+  "caption": {
+    "kata-maks": 3,
+    "karakter-maks-baris": 14,
+    "baris-maks": 2,
+    "jeda-pecah": 0.3,
+    "stroke": 9,
+    "warna-aktif": "aksen",
+    "huruf-besar": true,
+    "mode": "aktif",
+    "redup": 0.4
+  },
+  "sfx": {
+    "transisi": "whoosh-pendek",
+    "level-db": -16,
+    "peta": {
+      "judul": {
+        "bunyi": "hit",
+        "kelas": "aksen"
+      },
+      "cta": {
+        "bunyi": "hit",
+        "kelas": "aksen"
+      }
+    },
+    "level": {
+      "aksen": -16,
+      "status": -16,
+      "transisi": -17,
+      "ui": -21,
+      "ketik": -26
+    }
+  },
+  "mask": {
+    "feather-px": 1.5
+  },
+  "motif": {
+    "bingkai": "kinetik",
+    "aksen": "kotak",
+    "tekstur": null,
+    "transisi": "zoom-tembus",
+    "reveal": "stempel",
+    "boil": 0,
+    "depth": "padat",
+    "judul": {
+      "masuk": "pop",
+      "hiasan": "none"
+    }
+  }
+}

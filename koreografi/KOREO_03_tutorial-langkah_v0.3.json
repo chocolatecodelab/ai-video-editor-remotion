@@ -1,0 +1,329 @@
+{
+ "_meta": {
+  "id": "tutorial-langkah",
+  "versi": "0.3",
+  "status": "draft",
+  "catatan": "Koreografi v0.3 ber-SLOT: tiap bagian menulis fungsi + isi generik; generator (slot.py) memilih perangkat yang cocok dengan gaya (gaya_cocok efek) dan seed (varian). Isi = CONTOH — ganti dengan isi videomu. Dengan rekaman: video.py pasang <proyek> mengganti detik dengan anchor kata & menghindari wajah."
+ },
+ "label": "Tutorial Langkah · Talking Head 60–75 s",
+ "deskripsi": "Pembuka bernomor, alasan + bukti angka, 3 langkah (perangkat bergantian sesuai gaya: terminal, timeline, checklist, kartu), gerak kamera di sela, ringkasan, CTA. Rotoscope: kata kunci raksasa di belakang kepala setelah langkah 1.",
+ "kapan": "How-to, tutorial alat, langkah kerja berurutan.",
+ "template": "explainer",
+ "variasi_min": 6,
+ "butuh": {
+  "rekaman": true,
+  "remotion": true
+ },
+ "manifest": {},
+ "beat_sheet": {
+  "_catatan": "Koreografi v0.3 ber-SLOT: tiap bagian menulis fungsi + isi generik; generator (slot.py) memilih perangkat yang cocok dengan gaya (gaya_cocok efek) dan seed (varian). Isi = CONTOH — ganti dengan isi videomu. Dengan rekaman: video.py pasang <proyek> mengganti detik dengan anchor kata & menghindari wajah.",
+  "caption": {
+   "aktif": true,
+   "posisi": "bawah",
+   "kecuali": [
+    "ringkasan"
+   ]
+  },
+  "beats": [
+   {
+    "id": "hook",
+    "beat": "Hook",
+    "mulai": 0,
+    "selesai": 3.0,
+    "elemen": [
+     {
+      "tipe": "push",
+      "mulai": 0.3,
+      "gerak": 1.0
+     },
+     {
+      "slot": "hook",
+      "mulai": 0.2,
+      "selesai": 3.0,
+      "isi": {
+       "chip": "*3 langkah* audio jernih",
+       "nomor": 3,
+       "kata": "3 LANGKAH",
+       "judul": "3 langkah *audio jernih*",
+       "nama": "Tips *audio* jernih",
+       "peran": "Tutorial · 3 langkah"
+      },
+      "kandidat": [
+       "chip",
+       "glass-type",
+       "doodle-boil",
+       "info",
+       "lower-third"
+      ],
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "konteks",
+    "beat": "Konteks",
+    "mulai": 3.0,
+    "selesai": 14.0,
+    "elemen": [
+     {
+      "slot": "konteks",
+      "mulai": 3.4,
+      "selesai": 9.0,
+      "isi": {
+       "judul": "Kenapa *penting*",
+       "sub": "suara buruk = penonton pergi",
+       "ikon": "ide",
+       "item": [
+        "Penonton pergi",
+        "Pesan hilang",
+        "Jangkauan turun"
+       ]
+      },
+      "posisi": "atas"
+     },
+     {
+      "slot": "bukti",
+      "mulai": 9.3,
+      "selesai": 14.0,
+      "isi": {
+       "judul": "Bertahan *2× lebih lama*",
+       "sumber": "retensi rata-rata",
+       "angka": {
+        "ke": 2,
+        "akhiran": "×",
+        "label": "lebih lama"
+       },
+       "seri": [
+        1,
+        1.3,
+        1.6,
+        2
+       ],
+       "label_seri": [
+        "buruk",
+        "lumayan",
+        "baik",
+        "jernih"
+       ]
+      },
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "poin-1",
+    "beat": "Poin 1",
+    "mulai": 14.0,
+    "selesai": 28.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 14.0
+     },
+     {
+      "tipe": "latar",
+      "mulai": 14.0,
+      "selesai": 21.0
+     },
+     {
+      "slot": "langkah",
+      "mulai": 14.2,
+      "selesai": 21.0,
+      "isi": {
+       "judul": "Langkah *1*: normalisasi",
+       "app": "terminal",
+       "perintah": "normalisasi audio.wav",
+       "item": [
+        "Target *−14 LUFS*",
+        "Highpass 80 Hz",
+        "Limiter −1 dB"
+       ],
+       "hasil": "audio siap",
+       "nomor": 1,
+       "chip": "Normalisasi *−14 LUFS*"
+      },
+      "posisi": "tengah"
+     },
+     {
+      "slot": "hasil",
+      "mulai": 21.3,
+      "selesai": 28.0,
+      "isi": {
+       "chip": "Audio *rata* & jelas",
+       "judul": "Audio *rata* & jelas",
+       "kata": "JERNIH"
+      },
+      "posisi": "atas",
+      "kandidat": [
+       "chip-benar",
+       "info"
+      ]
+     },
+     {
+      "tipe": "depth",
+      "teks": "JERNIH",
+      "fungsi": "reveal",
+      "y": 0.34,
+      "mulai": 21.3,
+      "selesai": 28.0
+     }
+    ]
+   },
+   {
+    "id": "poin-2",
+    "beat": "Poin 2",
+    "mulai": 28.0,
+    "selesai": 42.0,
+    "elemen": [
+     {
+      "tipe": "kartu",
+      "judul": "Langkah *2*",
+      "teks": "Potong jeda yang panjang",
+      "fungsi": "langkah",
+      "posisi": "atas",
+      "mulai": 28.3,
+      "selesai": 35.5
+     },
+     {
+      "slot": "kamera",
+      "mulai": 30.0,
+      "selesai": 33.5
+     },
+     {
+      "slot": "langkah",
+      "mulai": 35.7,
+      "selesai": 42.0,
+      "isi": {
+       "judul": "Jeda > *0,6 detik*",
+       "sub": "potong tanpa ragu",
+       "ikon": "jam",
+       "nomor": 2,
+       "chip": "Potong jeda > *0,6 s*",
+       "item": [
+        "Deteksi jeda",
+        "Potong",
+        "Rapikan"
+       ]
+      },
+      "posisi": "atas",
+      "kandidat": [
+       "info",
+       "chip",
+       "timeline"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "poin-3",
+    "beat": "Poin 3",
+    "mulai": 42.0,
+    "selesai": 56.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 42.0
+     },
+     {
+      "tipe": "latar",
+      "mulai": 42.0,
+      "selesai": 48.5
+     },
+     {
+      "slot": "proses",
+      "mulai": 42.2,
+      "selesai": 48.5,
+      "isi": {
+       "judul": "Satu alur",
+       "item": [
+        "Potong",
+        "Rapikan",
+        "*Ekspor*"
+       ],
+       "sub": "satu alur, tanpa ulang",
+       "perintah": "ekspor --lufs -14",
+       "hasil": "siap unggah"
+      },
+      "posisi": "tengah"
+     },
+     {
+      "slot": "langkah",
+      "mulai": 48.8,
+      "selesai": 56.0,
+      "isi": {
+       "chip": "Ekspor *−14 LUFS*",
+       "nomor": 3,
+       "judul": "Ekspor *−14 LUFS*",
+       "sub": "standar Reels & TikTok"
+      },
+      "posisi": "atas",
+      "kandidat": [
+       "chip",
+       "info"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ringkasan",
+    "beat": "Ringkasan",
+    "mulai": 56.0,
+    "selesai": 63.0,
+    "elemen": [
+     {
+      "slot": "ringkasan",
+      "mulai": 56.2,
+      "selesai": 63.0,
+      "isi": {
+       "judul": "Ringkasnya",
+       "item": [
+        "Normalisasi",
+        "Potong *jeda*",
+        "Ekspor rapi"
+       ],
+       "sub": "3 langkah",
+       "langkah": [
+        "Normalisasi",
+        "Potong *jeda*",
+        "Ekspor"
+       ]
+      },
+      "posisi": "tengah"
+     },
+     {
+      "slot": "kamera",
+      "mulai": 56.4,
+      "selesai": 58.4
+     }
+    ]
+   },
+   {
+    "id": "cta",
+    "beat": "Cta",
+    "mulai": 63.0,
+    "selesai": 68.0,
+    "elemen": [
+     {
+      "tipe": "cta",
+      "teks": "Ikuti untuk part 2",
+      "fungsi": "ajakan",
+      "mulai": 63.4,
+      "selesai": 68.0,
+      "posisi": "atas"
+     },
+     {
+      "slot": "reveal",
+      "mulai": 63.9,
+      "x": 0.84,
+      "y": 0.27,
+      "fungsi": "reveal",
+      "ukuran": 100
+     }
+    ]
+   }
+  ]
+ },
+ "konteks_tambahan": [
+  "depth-typography@0.2"
+ ]
+}

@@ -1,0 +1,370 @@
+{
+  "aksen-gaya": {
+    "efek": "aksen-gaya@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "blur-zoom": {
+    "efek": "blur-zoom@0.2",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      1.5,
+      4.5
+    ]
+  },
+  "broll-overlay": {
+    "efek": "broll-overlay@0.1",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "callout": {
+    "efek": "callout@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "celup": {
+    "efek": "celup@0.1",
+    "gaya": "kaca-gelap@0.4",
+    "jendela": [
+      1.5,
+      4.5
+    ]
+  },
+  "chart-grow": {
+    "efek": "chart-grow@0.2",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "checklist": {
+    "efek": "checklist@0.3",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "checklist-pop": {
+    "efek": "checklist-pop@0.1",
+    "gaya": "paper-motion@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "coret": {
+    "efek": "coret@0.1",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "couch-wall": {
+    "efek": "couch-wall@0.2",
+    "gaya": "coffee-lofi@0.4",
+    "jendela": [
+      0.3,
+      6.7
+    ]
+  },
+  "cover-story": {
+    "efek": "cover-story@0.2",
+    "gaya": "kertas-tipografi@0.4",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "digital-zoom": {
+    "efek": "digital-zoom@0.2",
+    "gaya": "bold-kinetic@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "doodle-boil": {
+    "efek": "doodle-boil@0.2",
+    "gaya": "doodle-art@0.4",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "form-ganti": {
+    "efek": "form-ganti@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "frame-break": {
+    "efek": "frame-break@0.2",
+    "gaya": "bold-kinetic@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "frame-escape": {
+    "efek": "frame-escape@0.1",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "glass-type": {
+    "efek": "glass-type@0.2",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "glitch": {
+    "efek": "glitch@0.1",
+    "gaya": "rts-modern@0.4",
+    "jendela": [
+      1.5,
+      4.5
+    ]
+  },
+  "green-screen": {
+    "efek": "green-screen@0.2",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      6.7
+    ]
+  },
+  "grid-variasi": {
+    "efek": "grid-variasi@0.1",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "growth-curve": {
+    "efek": "growth-curve@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      5.4
+    ]
+  },
+  "headline-storm": {
+    "efek": "headline-storm@0.1",
+    "gaya": "bold-kinetic@0.6",
+    "jendela": [
+      0.3,
+      5.4
+    ]
+  },
+  "headline-wall": {
+    "efek": "headline-wall@0.2",
+    "gaya": "bold-kinetic@0.5",
+    "jendela": [
+      0.3,
+      5.4
+    ]
+  },
+  "judul-gaya": {
+    "efek": "judul-gaya@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "langkah": {
+    "efek": "langkah@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "linimasa": {
+    "efek": "linimasa@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "liquid-glass": {
+    "efek": "liquid-glass@0.1",
+    "gaya": "apple-glass@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "lower-third": {
+    "efek": "lower-third@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "orbit": {
+    "efek": "orbit@0.2",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "paper-cut": {
+    "efek": "paper-cut@0.2",
+    "gaya": "paper-motion@0.4",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "paper-cutout": {
+    "efek": "paper-cutout@0.1",
+    "gaya": "kolase-kertas@0.4",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "partikel": {
+    "efek": "partikel@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "penghitung": {
+    "efek": "penghitung@0.1",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "phone-mockup": {
+    "efek": "phone-mockup@0.2",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "prompt-ui": {
+    "efek": "prompt-ui@0.1",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      6.7
+    ]
+  },
+  "pull-back-reveal": {
+    "efek": "pull-back-reveal@0.2",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "sebelum-sesudah": {
+    "efek": "sebelum-sesudah@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "snap-zoom": {
+    "efek": "snap-zoom@0.1",
+    "gaya": "bold-kinetic@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "studio-reveal": {
+    "efek": "studio-reveal@0.1",
+    "gaya": "apple-glass@0.5",
+    "jendela": [
+      0.3,
+      5.1
+    ]
+  },
+  "terminal": {
+    "efek": "terminal@0.1",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      5.4
+    ]
+  },
+  "timeline": {
+    "efek": "timeline@0.1",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      6.4
+    ]
+  },
+  "ui-world": {
+    "efek": "ui-world@0.2",
+    "gaya": "glass-tech@0.5",
+    "jendela": [
+      0.3,
+      5.9
+    ]
+  },
+  "vertigo": {
+    "efek": "vertigo@0.2",
+    "gaya": "bold-kinetic@0.5",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "whip": {
+    "efek": "whip@0.1",
+    "gaya": "arang-lime@0.4",
+    "jendela": [
+      1.5,
+      4.5
+    ]
+  },
+  "zoom-portal": {
+    "efek": "zoom-portal@0.1",
+    "gaya": "apple-glass@0.4",
+    "jendela": [
+      1.5,
+      4.5
+    ]
+  },
+  "zoom-through-cut": {
+    "efek": "zoom-through-cut@0.2",
+    "gaya": "bold-kinetic@0.5",
+    "jendela": [
+      1.5,
+      4.5
+    ]
+  }
+}

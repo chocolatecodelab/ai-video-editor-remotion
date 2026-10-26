@@ -1,0 +1,168 @@
+{
+  "_meta": {
+    "id": "glass-tech-depth",
+    "versi": "0.2",
+    "status": "draft",
+    "catatan": "v0.2: nama baru (dulu explainer-depth); gaya & template v0.2. Varian explainer-glass dengan teks depth di belakang subjek pada hook. Butuh roto (lebih lambat)."
+  },
+  "label": "Glass Tech · Explainer + Depth (roto)",
+  "format": "depth",
+  "deskripsi": "Explainer 60–90 s glass-tech dengan hook sinematik: 1–2 kata raksasa di belakang pembicara + push-in.",
+  "kapan": "Video unggulan / topik besar yang butuh pembuka kuat; latar rekaman tidak terlalu ramai.",
+  "gaya": "glass-tech@0.2",
+  "template": "explainer@0.2",
+  "efek": [
+    "digital-zoom@0.1"
+  ],
+  "butuh": {
+    "rekaman": true,
+    "roto": true,
+    "remotion": false
+  },
+  "manifest": {
+    "platform": [
+      "reels",
+      "tiktok",
+      "shorts"
+    ],
+    "warna": {
+      "filter": "eq=contrast=1.04:saturation=0.95,colortemperature=6200"
+    },
+    "transkrip": {
+      "bahasa": "id",
+      "model": "large-v3"
+    },
+    "roto": {
+      "backend": "mediapipe",
+      "halus": 0.3
+    }
+  },
+  "beat_sheet": {
+    "_catatan": "Dibuat dari preset glass-tech-depth@0.2. Waktu = detik; ganti dengan anchor {\"kata\": …} setelah transkrip. Teks depth ≤ 2 kata (K02).",
+    "caption": {
+      "aktif": true,
+      "posisi": "bawah",
+      "kecuali": [
+        "hook"
+      ]
+    },
+    "beats": [
+      {
+        "id": "hook",
+        "beat": "Hook",
+        "mulai": 0,
+        "selesai": 3.0,
+        "elemen": [
+          {
+            "tipe": "depth",
+            "teks": "TODO KATA",
+            "y": 0.3
+          },
+          {
+            "tipe": "push",
+            "mulai": 0.2,
+            "gerak": 1.5
+          }
+        ]
+      },
+      {
+        "id": "konteks",
+        "beat": "Konteks",
+        "mulai": 3.0,
+        "selesai": 15.0,
+        "elemen": [
+          {
+            "tipe": "judul",
+            "teks": "TODO kenapa ini *penting*",
+            "posisi": "atas",
+            "latar": "panel",
+            "durasi": 3.0
+          }
+        ]
+      },
+      {
+        "id": "poin-1",
+        "beat": "Poin 1",
+        "mulai": 15.0,
+        "selesai": 30.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO poin *1*",
+            "teks": "TODO contoh singkat",
+            "posisi": "atas",
+            "durasi": 5.0,
+            "sfx": true
+          },
+          {
+            "tipe": "push",
+            "efek": "digital-zoom",
+            "mulai": {
+              "beat": "poin-1",
+              "ujung": "selesai",
+              "offset": -1.5
+            },
+            "selesai": {
+              "beat": "poin-1",
+              "ujung": "selesai"
+            },
+            "gerak": 1.2,
+            "fokus": [
+              0.5,
+              0.35
+            ],
+            "easing": "tegas",
+            "sfx": "whoosh"
+          }
+        ]
+      },
+      {
+        "id": "poin-2",
+        "beat": "Poin 2",
+        "mulai": 30.0,
+        "selesai": 45.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO poin *2*",
+            "teks": "TODO contoh singkat",
+            "posisi": "atas",
+            "durasi": 5.0,
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "ringkasan",
+        "beat": "Ringkasan",
+        "mulai": 45.0,
+        "selesai": 52.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "Ringkasnya",
+            "item": [
+              "TODO poin 1",
+              "TODO poin *2*"
+            ],
+            "penanda": "•",
+            "stagger": 0.8,
+            "posisi": "tengah"
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "beat": "CTA",
+        "mulai": 52.0,
+        "elemen": [
+          {
+            "tipe": "cta",
+            "teks": "TODO ajakan",
+            "posisi": "tengah"
+          }
+        ]
+      }
+    ]
+  }
+}

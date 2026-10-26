@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "<gaya>-<koreografi>",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": ""
+  },
+  "label": "TODO Nama Gaya · Label Koreografi",
+  "format": "<koreografi>",
+  "deskripsi": "TODO",
+  "kapan": "TODO",
+  "gaya": "TODO-gaya",
+  "koreografi": "TODO-koreografi",
+  "manifest": {
+    "warna": {
+      "filter": ""
+    }
+  }
+}

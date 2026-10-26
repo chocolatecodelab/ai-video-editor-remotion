@@ -1,0 +1,35 @@
+# media & cache tidak di-commit (pakai Git LFS bila ingin menyimpan master)
+proyek/*/cache/
+proyek/*/aset/**/*.mp4
+proyek/*/aset/**/*.mov
+proyek/*/aset/**/*.wav
+proyek/*/aset/**/*.mp3
+proyek/*/out/*.mov
+proyek/*/out/*.mp4
+proyek/*/out/still_*.png
+pipeline/aset-bawaan/
+__pycache__/
+*.pyc
+.venv/
+pipeline/models/
+remotion/node_modules/
+remotion/out/
+# bundle Remotion ber-cache (render-server.mjs) & Chrome headless unduhan Remotion
+remotion/.bundle/
+.remotion/
+
+# keluaran yang bisa dibuat ulang (video.py pratinjau) — .json ringkasannya tetap di-commit
+preset/pratinjau/*.mp4
+preset/pratinjau/*.gif
+preset/pratinjau/*.png
+proyek/_pratinjau/
+
+# font token disalin otomatis untuk Remotion (remotion_jembatan.siapkan_font)
+remotion/public/fonts/
+# analisis referensi (video.py referensi)
+referensi/*/kontak.png
+referensi/*/ritme.png
+efek/pratinjau/*.gif
+efek/pratinjau/*.png
+# gambar laporan/pratinjau proyek bisa dibuat ulang (video.py laporan / storyboard)
+proyek/*/out/*.png

@@ -1,0 +1,54 @@
+{
+  "_meta": {
+    "id": "platform",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Nilai platform (bukan gaya). Dimuat lebih dulu; token gaya boleh menimpa. Semua px mengacu ke resolusi referensi."
+  },
+  "format": {
+    "rasio": "9:16",
+    "resolusi": [1080, 1920],
+    "fps": 30,
+    "resolusi-referensi": [1080, 1920]
+  },
+  "zona-aman": {
+    "atas": 250,
+    "bawah": 400,
+    "kiri": 60,
+    "kanan": 120,
+    "_catatan": "px @1080x1920. Atas = status bar + tab, bawah = caption/username/musik, kanan = tombol like/komen/share (Reels/TikTok/Shorts)."
+  },
+  "ingest": {
+    "fps-diterima": [24, 25, 29.97, 30, 50, 59.94, 60],
+    "tinggi-min": 1080,
+    "crf-antara": 12
+  },
+  "audio": {
+    "lufs": -14,
+    "lufs-toleransi": 1.0,
+    "true-peak": -1.0,
+    "lra": 11,
+    "sample-rate": 48000,
+    "highpass-hz": 80,
+    "denoise": "afftdn=nf=-25"
+  },
+  "ekspor": {
+    "master": { "codec": "prores_ks", "profil": 3, "pix_fmt": "yuv422p10le", "ext": "mov" },
+    "platform": {
+      "reels":  { "vcodec": "libx264", "profile": "high", "level": "4.1", "crf": 18, "maxrate": "12M", "bufsize": "24M", "acodec": "aac", "abitrate": "192k" },
+      "tiktok": { "vcodec": "libx264", "profile": "high", "level": "4.1", "crf": 18, "maxrate": "12M", "bufsize": "24M", "acodec": "aac", "abitrate": "192k" },
+      "shorts": { "vcodec": "libx264", "profile": "high", "level": "4.2", "crf": 17, "maxrate": "16M", "bufsize": "32M", "acodec": "aac", "abitrate": "192k" }
+    },
+    "warna": "bt709",
+    "pix_fmt": "yuv420p"
+  },
+  "qa": {
+    "kontras-min": 4.5,
+    "kontras-min-besar": 3.0,
+    "ukuran-besar-px": 72,
+    "ukuran-min-px": 40,
+    "karakter-per-detik-maks": 17,
+    "tahan-min": 1.2,
+    "durasi-toleransi-s": 3
+  }
+}

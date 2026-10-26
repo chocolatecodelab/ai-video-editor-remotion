@@ -1,0 +1,661 @@
+{
+  "proyek": "2026-10_demo-fase3",
+  "waktu": "2026-10-25T08:56:08",
+  "status": "GAGAL",
+  "ringkas": {
+    "LULUS": 29,
+    "GAGAL": 1,
+    "PERINGATAN": 1,
+    "LEWAT": 6,
+    "BELUM DIIMPLEMENTASI": 0
+  },
+  "modul": {
+    "gaya": {
+      "id": "G04",
+      "ref": "kaca-gelap@0.3",
+      "file": "gaya/GAYA_04_kaca-gelap_v0.3.md",
+      "sha256": "bff046f076ddf299"
+    },
+    "template": {
+      "id": "T02",
+      "ref": "hook-problem-solution@0.2",
+      "file": "template/TEMPLATE_02_hook-problem-solution_v0.2.md",
+      "sha256": "1051b0d67dafe623"
+    },
+    "konteks": [
+      {
+        "id": "K00",
+        "ref": "zona-aman@0.1",
+        "file": "konteks/KONTEKS_00_zona-aman_v0.1.md",
+        "sha256": "042565fd2bfeab9f"
+      },
+      {
+        "id": "K01",
+        "ref": "caption@0.2",
+        "file": "konteks/KONTEKS_01_caption_v0.2.md",
+        "sha256": "fa3cbc1e893dbeb0"
+      },
+      {
+        "id": "K03",
+        "ref": "parallax-push@0.1",
+        "file": "konteks/KONTEKS_03_parallax-push_v0.1.md",
+        "sha256": "9fa0b56a5ed38af4"
+      },
+      {
+        "id": "K04",
+        "ref": "ingest@0.1",
+        "file": "konteks/KONTEKS_04_ingest_v0.1.md",
+        "sha256": "dd31740ea9fcf8e7"
+      },
+      {
+        "id": "K05",
+        "ref": "gerak@0.1",
+        "file": "konteks/KONTEKS_05_gerak_v0.1.md",
+        "sha256": "65c5d43dc6ca3575"
+      },
+      {
+        "id": "K06",
+        "ref": "audio@0.1",
+        "file": "konteks/KONTEKS_06_audio_v0.1.md",
+        "sha256": "507472702bb9cf67"
+      },
+      {
+        "id": "K07",
+        "ref": "ekspor@0.1",
+        "file": "konteks/KONTEKS_07_ekspor_v0.1.md",
+        "sha256": "8b6be915c9c65009"
+      },
+      {
+        "id": "K08",
+        "ref": "sound-design@0.1",
+        "file": "konteks/KONTEKS_08_sound-design_v0.1.md",
+        "sha256": "17125ffd70cde749"
+      },
+      {
+        "id": "K09",
+        "ref": "koreografi@0.1",
+        "file": "konteks/KONTEKS_09_koreografi_v0.1.md",
+        "sha256": "c6668d80a1b4f56a"
+      }
+    ],
+    "tokens": [
+      {
+        "id": "TK00",
+        "ref": "platform@0.3",
+        "file": "tokens/TOKEN_00_platform_v0.3.json",
+        "sha256": "e960b90feb41cc5d"
+      },
+      {
+        "id": "TK04",
+        "ref": "kaca-gelap@0.2",
+        "file": "tokens/TOKEN_04_kaca-gelap_v0.2.json",
+        "sha256": "32ab9e32722d2193"
+      }
+    ],
+    "efek": [
+      {
+        "id": "E26",
+        "ref": "blur-zoom@0.1",
+        "file": "efek/EFEK_26_blur-zoom_v0.1.md",
+        "sha256": "6cfbb43dbbd95077"
+      },
+      {
+        "id": "E21",
+        "ref": "coret@0.1",
+        "file": "efek/EFEK_21_coret_v0.1.md",
+        "sha256": "7ba1f665f64010f2"
+      },
+      {
+        "id": "E19",
+        "ref": "penghitung@0.1",
+        "file": "efek/EFEK_19_penghitung_v0.1.md",
+        "sha256": "91943ea4f6223cc1"
+      },
+      {
+        "id": "E25",
+        "ref": "partikel@0.1",
+        "file": "efek/EFEK_25_partikel_v0.1.md",
+        "sha256": "cc09e3359d9c93b3"
+      }
+    ],
+    "skill": {
+      "ref": "video-editor@0.1",
+      "file": "pipeline/skill/SKILL.md",
+      "sha256": "d5afbb3de9de9eb1"
+    },
+    "scripts": {
+      "ref": "scripts@0.4"
+    },
+    "preset": {
+      "id": "PR28",
+      "ref": "kaca-gelap-mitos-fakta@0.1",
+      "file": "preset/PRESET_28_kaca-gelap-mitos-fakta_v0.1.json",
+      "sha256": "fed0a3b5c228e6db"
+    }
+  },
+  "hasil": [
+    {
+      "id": "K00.1",
+      "aturan": "Kotak pembatas setiap elemen teks/grafis berada di dalam zona aman pada setiap frame saat ia tampil, termasuk saat animasi masuk/keluar selesai.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_00_zona-aman_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "40 elemen di dalam zona aman [60, 250, 960, 1520]"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K00.2",
+      "aturan": "Dua elemen teks tidak tumpang tindih pada waktu yang sama (kecuali caption di atas teks depth).",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_00_zona-aman_v0.1.md",
+      "status": "LULUS",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K00.3",
+      "aturan": "Wajah subjek (mata) berada di sepertiga atas area aman, tidak tertutup elemen.",
+      "cek": "manual",
+      "sumber": "konteks/KONTEKS_00_zona-aman_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "K01.1",
+      "aturan": "Timing caption berasal dari transkrip ber-timestamp per kata (`cache/words.json`, WhisperX / forced alignment), bukan perkiraan.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_01_caption_v0.2.md",
+      "status": "LULUS",
+      "detail": [
+        "backend whisperx, 25 potongan"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K01.2",
+      "aturan": "`words.json` sudah dikoreksi manual (`\"dikoreksi\": true`): ejaan, nama, istilah.",
+      "cek": "otomatis (peringatan)",
+      "sumber": "konteks/KONTEKS_01_caption_v0.2.md",
+      "status": "PERINGATAN",
+      "detail": [
+        "words.json belum dikoreksi manual (_meta.dikoreksi=false)"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K01.3",
+      "aturan": "Satu potongan caption ≤ `caption.baris-maks` baris dan ≤ `caption.karakter-maks-baris` karakter per baris.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_01_caption_v0.2.md",
+      "status": "LULUS",
+      "detail": [
+        "25 potongan ≤ 2 baris × 18 karakter"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K01.4",
+      "aturan": "Kontras setiap teks (caption, judul, kartu, CTA) terhadap latar efektifnya (panel, stroke, atau video di belakangnya, persentil terburuk) ≥ `qa.kontras-min` (≥ `qa.kontras-min-besar` untuk teks ≥ `qa.ukuran-besar-px`). Teks depth dikecualikan.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_01_caption_v0.2.md",
+      "status": "LULUS",
+      "detail": [
+        "32 teks ≥ ambang kontras"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K01.5",
+      "aturan": "Setiap potongan tampil ≥ 0,3 detik; kecepatan baca ≤ `qa.karakter-per-detik-maks`.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_01_caption_v0.2.md",
+      "status": "LULUS",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K01.6",
+      "aturan": "Kata yang sedang diucapkan terlihat: mode `aktif` → disorot `caption.warna-aktif`; mode `karaoke` → kata yang belum diucapkan diredupkan (`caption.redup`).",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_01_caption_v0.2.md",
+      "status": "LULUS",
+      "detail": [
+        "karaoke: kata berikutnya diredupkan 40%"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K01.7",
+      "aturan": "Caption tidak dipecah di tengah frasa nama/angka (mis. \"Rp 5 juta\").",
+      "cek": "manual",
+      "sumber": "konteks/KONTEKS_01_caption_v0.2.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "K01.8",
+      "aturan": "Ukuran font setiap teks ≥ `qa.ukuran-min-px`.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_01_caption_v0.2.md",
+      "status": "LULUS",
+      "detail": [
+        "semua teks ≥ 40 px"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K03.1",
+      "aturan": "Skala push ≤ `gerak.push-in` dan ≤ 1,15.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_03_parallax-push_v0.1.md",
+      "status": "LEWAT",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K03.2",
+      "aturan": "Durasi push ≥ 0,6 detik dan memakai easing (bukan linear).",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_03_parallax-push_v0.1.md",
+      "status": "LEWAT",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K03.3",
+      "aturan": "Push dimulai pada kata kunci atau beat audio (`mulai: {\"kata\": …}`).",
+      "cek": "otomatis (peringatan)",
+      "sumber": "konteks/KONTEKS_03_parallax-push_v0.1.md",
+      "status": "LEWAT",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K03.4",
+      "aturan": "Lapisan teks bergerak lebih lambat dari latar (parallax), bukan ikut terskala sama.",
+      "cek": "otomatis (render)",
+      "sumber": "konteks/KONTEKS_03_parallax-push_v0.1.md",
+      "status": "LEWAT",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K03.5",
+      "aturan": "Push tidak membuat elemen keluar zona aman (lihat K00.1).",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_03_parallax-push_v0.1.md",
+      "status": "LEWAT",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K04.1",
+      "aturan": "Rekaman hasil ingest: resolusi = `format.resolusi`, fps = `format.fps`, tinggi sumber ≥ `ingest.tinggi-min`.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_04_ingest_v0.1.md",
+      "status": "GAGAL",
+      "detail": [
+        "sumber 478x850 di bawah minimum (di-ingest dengan --paksa)"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K04.2",
+      "aturan": "Rough cut (potong jeda & kesalahan) selesai sebelum beat-sheet dikunci; potongan dicatat di `manifest.aset.potong`.",
+      "cek": "manual",
+      "sumber": "konteks/KONTEKS_04_ingest_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "K04.3",
+      "aturan": "Exposure & white balance disamakan sebelum compositing (`manifest.warna.filter`).",
+      "cek": "manual",
+      "sumber": "konteks/KONTEKS_04_ingest_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "K04.4",
+      "aturan": "Audio dibersihkan (highpass + denoise) dan dinormalisasi ke `audio.lufs` saat ingest.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_04_ingest_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "audio.wav -14.3 LUFS (sumber -30.71)"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K05.1",
+      "aturan": "Tidak ada gerak linear; setiap animasi memakai kurva dari `easing.*`.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_05_gerak_v0.1.md",
+      "status": "LULUS",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K05.2",
+      "aturan": "Elemen berisi beberapa item muncul dengan stagger ≥ `durasi.stagger`.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_05_gerak_v0.1.md",
+      "status": "LEWAT",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K05.3",
+      "aturan": "Teks tampil penuh (di luar animasi masuk/keluar) ≥ `durasi.tahan-min`.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_05_gerak_v0.1.md",
+      "status": "LULUS",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K05.4",
+      "aturan": "Gerak cepat (> `motion-blur.ambang-px` per frame) diberi motion blur.",
+      "cek": "otomatis (render)",
+      "sumber": "konteks/KONTEKS_05_gerak_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "dipakai di 0 lapisan-frame"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K05.5",
+      "aturan": "Gerak besar (judul, kartu, push) dimulai dalam ±0,15 detik dari awal kata atau beat.",
+      "cek": "otomatis (peringatan)",
+      "sumber": "konteks/KONTEKS_05_gerak_v0.1.md",
+      "status": "LULUS",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K06.1",
+      "aturan": "Loudness terintegrasi hasil akhir = `audio.lufs` ± `audio.lufs-toleransi` (−14 LUFS untuk media sosial).",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_06_audio_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "2026-10_demo-fase3_reels.mp4: -14.2 LUFS, TP -1.4 dBTP",
+        "2026-10_demo-fase3_tiktok.mp4: -14.2 LUFS, TP -1.4 dBTP",
+        "2026-10_demo-fase3_shorts.mp4: -14.2 LUFS, TP -1.4 dBTP"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K06.2",
+      "aturan": "True peak ≤ `audio.true-peak` dBTP.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_06_audio_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "2026-10_demo-fase3_reels.mp4: -14.2 LUFS, TP -1.4 dBTP",
+        "2026-10_demo-fase3_tiktok.mp4: -14.2 LUFS, TP -1.4 dBTP",
+        "2026-10_demo-fase3_shorts.mp4: -14.2 LUFS, TP -1.4 dBTP"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K06.3",
+      "aturan": "Whoosh/riser pada transisi di level `sfx.level-db` (rendah); musik di-duck terhadap suara (sidechain).",
+      "cek": "otomatis (render)",
+      "sumber": "konteks/KONTEKS_06_audio_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "14 sfx ≤ -24 dB"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K06.4",
+      "aturan": "Tidak ada clipping, napas keras, atau noise yang terdengar di HP.",
+      "cek": "manual",
+      "sumber": "konteks/KONTEKS_06_audio_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "K07.1",
+      "aturan": "Master tersimpan (`out/master.mov`, ProRes 422 HQ).",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_07_ekspor_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "prores HQ"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K07.2",
+      "aturan": "Versi platform: H.264, `format.resolusi`, `ekspor.pix_fmt`, tag warna bt709 (primaries/trc/matrix), AAC.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_07_ekspor_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "2026-10_demo-fase3_reels.mp4: h264 1080x1920 bt709 aac ✓",
+        "2026-10_demo-fase3_tiktok.mp4: h264 1080x1920 bt709 aac ✓",
+        "2026-10_demo-fase3_shorts.mp4: h264 1080x1920 bt709 aac ✓"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K07.3",
+      "aturan": "Ditonton di HP pada resolusi penuh sebelum diunggah (zona aman, keterbacaan, sinkron bibir).",
+      "cek": "manual",
+      "sumber": "konteks/KONTEKS_07_ekspor_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "K08.1",
+      "aturan": "Setiap elemen visual yang masuk dengan gerak punya bunyi (otomatis dari `sfx.peta` atau eksplisit). Diam hanya bila disengaja (`\"sfx\": false`).",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_08_sound-design_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "14 bunyi"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K08.2",
+      "aturan": "Dua bunyi (selain klik ketik) berjarak ≥ `sfx.jarak-min` detik — tidak menumpuk.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_08_sound-design_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "jarak ≥ 0.06s"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K08.3",
+      "aturan": "Level tiap bunyi ≤ −16 dB terhadap suara (kelas `sfx.level`); bus SFX tidak clipping.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_08_sound-design_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "bus SFX puncak -24.3 dBFS"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K08.4",
+      "aturan": "Bunyi berulang memakai varian bergilir (tidak identik berturut-turut).",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_08_sound-design_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "varian bergilir"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K08.5",
+      "aturan": "Karakter bunyi cocok dengan gaya & gerak (lembut untuk kaca/kertas/lofi, tajam untuk brutal/HUD/kinetik).",
+      "cek": "manual",
+      "sumber": "konteks/KONTEKS_08_sound-design_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "K08.6",
+      "aturan": "Didengar dengan headphone: tidak ada bunyi yang terasa murahan, terlambat, atau mengganggu kalimat penting.",
+      "cek": "manual",
+      "sumber": "konteks/KONTEKS_08_sound-design_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "K09.1",
+      "aturan": "Perangkat yang sama (efek remotion / info / chip-<status> / kartu / …) tidak dipakai di dua beat berurutan.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_09_koreografi_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "5 beat tanpa perangkat berulang berurutan"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K09.2",
+      "aturan": "Jumlah perangkat berbeda per video ≥ `koreografi.variasi-min` (atau `variasi_min` koreografi yang dipakai).",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_09_koreografi_v0.1.md",
+      "status": "LULUS",
+      "detail": [
+        "7 perangkat berbeda (min 5): chip-benar, chip-salah, coret, cta, info, partikel, penghitung"
+      ],
+      "manual": false
+    },
+    {
+      "id": "K09.3",
+      "aturan": "Transisi (blur-zoom) tidak di beat hook dan maksimal 1 per beat.",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_09_koreografi_v0.1.md",
+      "status": "LULUS",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K09.4",
+      "aturan": "Tiap perangkat mencantumkan `fungsi` dari daftar `koreografi.fungsi` (alasan perangkat ini dipakai).",
+      "cek": "otomatis",
+      "sumber": "konteks/KONTEKS_09_koreografi_v0.1.md",
+      "status": "LULUS",
+      "detail": [],
+      "manual": false
+    },
+    {
+      "id": "K09.5",
+      "aturan": "Ditonton tanpa suara: tiap bagian terasa berbeda secara visual, dan perangkatnya menjelaskan isi kalimat.",
+      "cek": "manual",
+      "sumber": "konteks/KONTEKS_09_koreografi_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "G04.1",
+      "aturan": "Tampilan terbaca sebagai Kaca Gelap (kaca berasap, amber, pelan) tanpa melihat nama preset.",
+      "cek": "manual",
+      "sumber": "gaya/GAYA_04_kaca-gelap_v0.3.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "G04.2",
+      "aturan": "Tidak ada pelanggaran bagian \"Larangan\" di atas.",
+      "cek": "manual",
+      "sumber": "gaya/GAYA_04_kaca-gelap_v0.3.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "T02.1",
+      "aturan": "Semua `beat_wajib` ada di beat-sheet.",
+      "cek": "otomatis",
+      "sumber": "template/TEMPLATE_02_hook-problem-solution_v0.2.md",
+      "status": "LULUS",
+      "detail": [
+        "5 beat"
+      ],
+      "manual": false
+    },
+    {
+      "id": "T02.2",
+      "aturan": "Durasi akhir 30–45 s (± `qa.durasi-toleransi-s`).",
+      "cek": "otomatis",
+      "sumber": "template/TEMPLATE_02_hook-problem-solution_v0.2.md",
+      "status": "LULUS",
+      "detail": [
+        "46.5s (template 30–45s ±3)"
+      ],
+      "manual": false
+    },
+    {
+      "id": "T02.3",
+      "aturan": "Beat hook berakhir ≤ `hook_maks` detik.",
+      "cek": "otomatis",
+      "sumber": "template/TEMPLATE_02_hook-problem-solution_v0.2.md",
+      "status": "LULUS",
+      "detail": [
+        "hook selesai 3.50s (maks 3.5)"
+      ],
+      "manual": false
+    },
+    {
+      "id": "E26.4",
+      "aturan": "Transisi menandai pergantian bagian, maksimal 1 per bagian; tidak memotong kalimat penting.",
+      "cek": "manual",
+      "sumber": "efek/EFEK_26_blur-zoom_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "E21.4",
+      "aturan": "Perangkat dipakai karena isi kalimat (bukan hiasan berulang); tidak dipakai di dua beat berurutan.",
+      "cek": "manual",
+      "sumber": "efek/EFEK_21_coret_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "E19.4",
+      "aturan": "Perangkat dipakai karena isi kalimat (bukan hiasan berulang); tidak dipakai di dua beat berurutan.",
+      "cek": "manual",
+      "sumber": "efek/EFEK_19_penghitung_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "E25.4",
+      "aturan": "Perangkat dipakai karena isi kalimat (bukan hiasan berulang); tidak dipakai di dua beat berurutan.",
+      "cek": "manual",
+      "sumber": "efek/EFEK_25_partikel_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    }
+  ],
+  "peringatan_render": []
+}

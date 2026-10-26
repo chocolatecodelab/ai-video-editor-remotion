@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "glass-tech-tutorial-langkah",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Preset fase 3 = gaya × koreografi. Beat-sheet awal dari koreografi; gaya & koreografi tanpa pin versi."
+  },
+  "label": "Glass Tech · Tutorial Langkah · Talking Head 60–75 s",
+  "format": "tutorial-langkah",
+  "deskripsi": "Glass Tech (kaca gelap biru, cyan, presisi) + Tutorial 3 langkah: chip penanda langkah, kartu info, cutaway terminal & timeline, kartu langkah, ringkasan checklist, CTA.",
+  "kapan": "Cara/tutorial/workflow bertahap dengan wajah; tiap langkah mendapat perangkat berbeda.",
+  "gaya": "glass-tech",
+  "koreografi": "tutorial-langkah",
+  "manifest": {
+    "warna": {
+      "filter": "eq=contrast=1.03:saturation=0.96,colortemperature=6200"
+    }
+  }
+}

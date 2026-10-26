@@ -1,0 +1,257 @@
+{
+ "_meta": {
+  "id": "mitos-fakta",
+  "versi": "0.3",
+  "status": "draft",
+  "catatan": "Koreografi v0.3 ber-SLOT: tiap bagian menulis fungsi + isi generik; generator (slot.py) memilih perangkat yang cocok dengan gaya (gaya_cocok efek) dan seed (varian). Isi = CONTOH — ganti dengan isi videomu. Dengan rekaman: video.py pasang <proyek> mengganti detik dengan anchor kata & menghindari wajah."
+ },
+ "label": "Mitos vs Fakta · Talking Head 35–40 s",
+ "deskripsi": "Label MITOS, anggapan dibantah (coret / form), akibat + gerak kamera khas gaya, bukti data (angka / grafik / dinding berita), FAKTA, CTA. Rotoscope: kata FAKTA raksasa di belakang kepala.",
+ "kapan": "Meluruskan salah kaprah, opini berbasis data, konten edukasi kontra-intuitif.",
+ "template": "hook-problem-solution",
+ "variasi_min": 5,
+ "butuh": {
+  "rekaman": true,
+  "remotion": true
+ },
+ "manifest": {},
+ "beat_sheet": {
+  "_catatan": "Koreografi v0.3 ber-SLOT: tiap bagian menulis fungsi + isi generik; generator (slot.py) memilih perangkat yang cocok dengan gaya (gaya_cocok efek) dan seed (varian). Isi = CONTOH — ganti dengan isi videomu. Dengan rekaman: video.py pasang <proyek> mengganti detik dengan anchor kata & menghindari wajah.",
+  "caption": {
+   "aktif": true,
+   "posisi": "bawah",
+   "kecuali": []
+  },
+  "beats": [
+   {
+    "id": "hook",
+    "beat": "Hook",
+    "mulai": 0,
+    "selesai": 3.5,
+    "elemen": [
+     {
+      "tipe": "judul",
+      "teks": "Posting *setiap hari*?",
+      "posisi": "atas",
+      "mulai": 0.1,
+      "selesai": 3.5,
+      "latar": "panel",
+      "geser_y": 72,
+      "ukuran": 84
+     },
+     {
+      "slot": "hook",
+      "mulai": 0.2,
+      "selesai": 3.5,
+      "isi": {
+       "chip": "MITOS",
+       "status": "salah",
+       "kata": "MITOS?"
+      },
+      "kandidat": [
+       "chip",
+       "doodle-boil"
+      ],
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "problem",
+    "beat": "Problem",
+    "mulai": 3.5,
+    "selesai": 11.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 3.5
+     },
+     {
+      "tipe": "latar",
+      "mulai": 3.5,
+      "selesai": 9.5
+     },
+     {
+      "slot": "membantah",
+      "mulai": 3.7,
+      "selesai": 9.5,
+      "isi": {
+       "anggapan": "makin sering, makin viral",
+       "file": "mitos.txt",
+       "chip": "Sering ≠ *viral*",
+       "ganti": [
+        {
+         "label": "frekuensi",
+         "lama": "tiap hari",
+         "baru": "3× seminggu"
+        },
+        {
+         "label": "fokus",
+         "lama": "jumlah",
+         "baru": "kualitas"
+        }
+       ],
+       "sebelum_sesudah": {
+        "sebelum": "Posting setiap hari",
+        "sesudah": "Konsisten *3× seminggu*"
+       }
+      },
+      "posisi": "tengah"
+     },
+     {
+      "slot": "kamera",
+      "mulai": 9.6,
+      "selesai": 11.0
+     }
+    ]
+   },
+   {
+    "id": "agitasi",
+    "beat": "Agitasi",
+    "mulai": 11.0,
+    "selesai": 18.0,
+    "elemen": [
+     {
+      "slot": "masalah",
+      "mulai": 11.3,
+      "selesai": 18.0,
+      "isi": {
+       "judul": "Kualitas *turun*",
+       "sub": "penonton cepat bosan",
+       "ikon": "petir",
+       "chip": "Kualitas *turun*",
+       "kata": "BOSAN"
+      },
+      "kandidat": [
+       "info",
+       "chip-salah",
+       "doodle-boil"
+      ],
+      "posisi": "atas"
+     },
+     {
+      "slot": "kamera",
+      "mulai": 12.5,
+      "selesai": 15.5
+     }
+    ]
+   },
+   {
+    "id": "solution",
+    "beat": "Solution",
+    "mulai": 18.0,
+    "selesai": 31.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 18.0
+     },
+     {
+      "tipe": "latar",
+      "mulai": 18.0,
+      "selesai": 24.0
+     },
+     {
+      "slot": "bukti",
+      "mulai": 18.2,
+      "selesai": 24.0,
+      "isi": {
+       "judul": "Data 120 video",
+       "sumber": "data 120 video",
+       "angka": {
+        "ke": 73,
+        "akhiran": "%",
+        "label": "retensi naik"
+       },
+       "seri": [
+        38,
+        45,
+        52,
+        61,
+        73
+       ],
+       "label_seri": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5"
+       ],
+       "berita": [
+        "Kreator konsisten *tumbuh 3×*",
+        "Retensi > jumlah posting",
+        "Algoritma suka konsistensi",
+        "Kualitas menang"
+       ],
+       "linimasa": [
+        {
+         "tahun": "Bulan 1",
+         "label": "retensi 38%"
+        },
+        {
+         "tahun": "Bulan 3",
+         "label": "retensi 52%"
+        },
+        {
+         "tahun": "Bulan 6",
+         "label": "retensi 73%"
+        }
+       ]
+      },
+      "posisi": "tengah"
+     },
+     {
+      "slot": "hasil",
+      "mulai": 24.3,
+      "selesai": 27.6,
+      "isi": {
+       "chip": "FAKTA: konsisten > *sering*",
+       "kata": "KONSISTEN",
+       "judul": "Konsisten > *sering*"
+      },
+      "kandidat": [
+       "chip-benar",
+       "info"
+      ],
+      "posisi": "atas"
+     },
+     {
+      "tipe": "depth",
+      "teks": "KONSISTEN",
+      "fungsi": "reveal",
+      "y": 0.34,
+      "mulai": 27.7,
+      "selesai": 31.0
+     }
+    ]
+   },
+   {
+    "id": "cta",
+    "beat": "Cta",
+    "mulai": 31.0,
+    "selesai": 36.0,
+    "elemen": [
+     {
+      "tipe": "cta",
+      "teks": "Ikuti untuk mitos berikutnya",
+      "fungsi": "ajakan",
+      "mulai": 31.4,
+      "selesai": 36.0,
+      "posisi": "atas"
+     },
+     {
+      "slot": "reveal",
+      "mulai": 31.9,
+      "x": 0.84,
+      "y": 0.27,
+      "fungsi": "reveal",
+      "ukuran": 100
+     }
+    ]
+   }
+  ]
+ },
+ "konteks_tambahan": [
+  "depth-typography@0.2"
+ ]
+}

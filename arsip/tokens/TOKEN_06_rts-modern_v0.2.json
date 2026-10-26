@@ -1,0 +1,157 @@
+{
+  "_meta": {
+    "id": "rts-modern",
+    "versi": "0.2",
+    "status": "draft",
+    "catatan": "Gaya RTS Modern. Font dari folder font Windows/pengguna; ganti di sini bila memakai font lain."
+  },
+  "warna": {
+    "latar": "#070B0A",
+    "teks-utama": "#E6FFF5",
+    "teks-sekunder": "#9CC4B6",
+    "aksen": "#3DFFB0",
+    "aksen-2": "#FF8A3D",
+    "peringatan": "#FF4040",
+    "panel": "#0B1512",
+    "panel-opasitas": 0.84,
+    "garis-panel": "#3DFFB0",
+    "garis-opasitas": 0.75,
+    "stroke": "#020403",
+    "bayangan": "#000000",
+    "bayangan-opasitas": 0.4
+  },
+  "font": {
+    "judul": {
+      "file": "OCRAEXT.TTF",
+      "family": "OCR A Extended",
+      "weight": 400
+    },
+    "subjudul": {
+      "file": "consolab.ttf",
+      "family": "Consolas",
+      "weight": 700
+    },
+    "isi": {
+      "file": "consolab.ttf",
+      "family": "Consolas",
+      "weight": 700
+    },
+    "caption": {
+      "file": "consolab.ttf",
+      "family": "Consolas",
+      "weight": 700
+    },
+    "depth": {
+      "file": "OCRAEXT.TTF",
+      "family": "OCR A Extended",
+      "weight": 400
+    }
+  },
+  "ukuran": {
+    "judul": 84,
+    "subjudul": 56,
+    "isi": 44,
+    "caption": 56,
+    "depth": 210
+  },
+  "spasi": {
+    "baris": 1.15,
+    "padding-kartu": 36,
+    "jarak-item": 16
+  },
+  "radius": {
+    "kartu": 2,
+    "chip": 2
+  },
+  "blur": {
+    "panel": 10
+  },
+  "bayangan": {
+    "offset": [
+      0,
+      0
+    ],
+    "blur": 24
+  },
+  "durasi": {
+    "masuk": 0.16,
+    "keluar": 0.12,
+    "tahan-min": 1.0,
+    "stagger": 0.05
+  },
+  "easing": {
+    "standar": [
+      0.1,
+      0.9,
+      0.2,
+      1.0
+    ],
+    "tegas": [
+      1.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "keluar": [
+      0.5,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "geser",
+    "keluar-default": "fade",
+    "jarak-naik": 40,
+    "skala-pop": 0.98,
+    "push-in": 1.06
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 30
+  },
+  "caption": {
+    "kata-maks": 3,
+    "karakter-maks-baris": 16,
+    "stroke": 6,
+    "huruf-besar": true,
+    "baris-maks": 2,
+    "jeda-pecah": 0.35,
+    "warna-aktif": "aksen",
+    "mode": "aktif",
+    "redup": 0.4
+  },
+  "sfx": {
+    "transisi": "pop",
+    "level-db": -20,
+    "peta": {
+      "judul": {
+        "bunyi": "glitch",
+        "kelas": "aksen"
+      },
+      "kartu": {
+        "bunyi": "glitch",
+        "kelas": "ui"
+      },
+      "chip": {
+        "bunyi": "glitch",
+        "kelas": "ui"
+      },
+      "info": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      }
+    },
+    "level": {
+      "aksen": -20,
+      "status": -20,
+      "transisi": -21,
+      "ui": -25,
+      "ketik": -30
+    }
+  },
+  "mask": {
+    "feather-px": 1.5
+  }
+}

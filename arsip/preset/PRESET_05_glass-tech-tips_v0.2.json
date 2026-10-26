@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "id": "glass-tech-tips",
+    "versi": "0.2",
+    "status": "draft",
+    "catatan": "v0.2: nama baru (dulu tips-glass); gaya & template v0.2. Titik awal, bukan hasil jadi. Setelah transkrip, ganti angka detik dengan anchor {\"kata\": …}."
+  },
+  "label": "Glass Tech · Tips 30–45 s",
+  "format": "tips",
+  "deskripsi": "Tips 30–45 s bernada tenang: judul panel kaca, tanpa agitasi, solusi sebagai checklist tergambar.",
+  "kapan": "Satu masalah + satu jawaban untuk topik teknologi/produktivitas, nada kalem dan meyakinkan.",
+  "gaya": "glass-tech@0.2",
+  "template": "hook-problem-solution@0.2",
+  "efek": [
+    "glass-type@0.1",
+    "checklist@0.2"
+  ],
+  "butuh": {
+    "rekaman": true,
+    "roto": false,
+    "remotion": true
+  },
+  "manifest": {
+    "platform": [
+      "reels",
+      "tiktok",
+      "shorts"
+    ],
+    "warna": {
+      "filter": "eq=contrast=1.03:saturation=0.96,colortemperature=6200"
+    },
+    "transkrip": {
+      "bahasa": "id",
+      "model": "large-v3"
+    }
+  },
+  "beat_sheet": {
+    "_catatan": "Dibuat dari preset glass-tech-tips@0.2. Waktu = detik; ganti dengan anchor {\"kata\": …} setelah transkrip. Solusi memakai Remotion; tanpa Node ganti dengan {\"tipe\": \"kartu\", \"item\": [...], \"stagger\": 0.8}.",
+    "caption": {
+      "aktif": true,
+      "posisi": "bawah",
+      "kecuali": [
+        "hook",
+        "solution"
+      ]
+    },
+    "beats": [
+      {
+        "id": "hook",
+        "beat": "Hook",
+        "mulai": 0,
+        "selesai": 3.0,
+        "elemen": [
+          {
+            "tipe": "judul",
+            "efek": "glass-type",
+            "teks": "TODO klaim *kunci*",
+            "posisi": "atas",
+            "latar": "panel",
+            "masuk": "naik",
+            "sfx": true
+          },
+          {
+            "tipe": "push",
+            "mulai": 0.3,
+            "gerak": 1.2
+          }
+        ]
+      },
+      {
+        "id": "problem",
+        "beat": "Problem",
+        "mulai": 3.0,
+        "selesai": 14.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO masalah *kamu*",
+            "posisi": "atas",
+            "durasi": 4.0,
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "solution",
+        "beat": "Solution",
+        "mulai": 14.0,
+        "selesai": 32.0,
+        "elemen": [
+          {
+            "tipe": "remotion",
+            "efek": "checklist",
+            "judul": "TODO caranya",
+            "item": [
+              "TODO langkah *1*",
+              "TODO langkah 2",
+              "TODO langkah 3"
+            ],
+            "stagger": 0.8,
+            "posisi": "tengah",
+            "sfx": true,
+            "sfx_item": "pop"
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "beat": "CTA",
+        "mulai": 32.0,
+        "elemen": [
+          {
+            "tipe": "cta",
+            "teks": "TODO ajakan",
+            "posisi": "tengah"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "_meta": {
+    "id": "minimalism",
+    "versi": "0.2",
+    "status": "draft",
+    "catatan": "Gaya Minimalism. Font dari folder font Windows/pengguna; ganti di sini bila memakai font lain."
+  },
+  "warna": {
+    "latar": "#FAFAFA",
+    "teks-utama": "#111111",
+    "teks-sekunder": "#4D4D4D",
+    "aksen": "#0047FF",
+    "aksen-2": "#111111",
+    "peringatan": "#E10000",
+    "panel": "#FFFFFF",
+    "panel-opasitas": 0.92,
+    "garis-panel": "#111111",
+    "garis-opasitas": 0.0,
+    "stroke": "#FFFFFF",
+    "bayangan": "#000000",
+    "bayangan-opasitas": 0.0
+  },
+  "font": {
+    "judul": {
+      "file": "Montserrat-Medium.ttf",
+      "family": "Montserrat",
+      "weight": 500
+    },
+    "subjudul": {
+      "file": "Montserrat-Medium.ttf",
+      "family": "Montserrat",
+      "weight": 500
+    },
+    "isi": {
+      "file": "Montserrat-Regular.ttf",
+      "family": "Montserrat",
+      "weight": 400
+    },
+    "caption": {
+      "file": "Montserrat-SemiBold.ttf",
+      "family": "Montserrat",
+      "weight": 600
+    },
+    "depth": {
+      "file": "Montserrat-Light.ttf",
+      "family": "Montserrat",
+      "weight": 300
+    }
+  },
+  "ukuran": {
+    "judul": 80,
+    "subjudul": 56,
+    "isi": 44,
+    "caption": 54,
+    "depth": 220
+  },
+  "spasi": {
+    "baris": 1.25,
+    "padding-kartu": 56,
+    "jarak-item": 28
+  },
+  "radius": {
+    "kartu": 0,
+    "chip": 0
+  },
+  "blur": {
+    "panel": 0
+  },
+  "bayangan": {
+    "offset": [
+      0,
+      0
+    ],
+    "blur": 0
+  },
+  "durasi": {
+    "masuk": 0.6,
+    "keluar": 0.4,
+    "tahan-min": 1.5,
+    "stagger": 0.12
+  },
+  "easing": {
+    "standar": [
+      0.4,
+      0.0,
+      0.2,
+      1.0
+    ],
+    "tegas": [
+      0.4,
+      0.0,
+      0.2,
+      1.0
+    ],
+    "keluar": [
+      0.4,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "fade",
+    "keluar-default": "fade",
+    "jarak-naik": 20,
+    "skala-pop": 0.98,
+    "push-in": 1.02
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 30
+  },
+  "caption": {
+    "kata-maks": 3,
+    "karakter-maks-baris": 18,
+    "stroke": 5,
+    "huruf-besar": false,
+    "baris-maks": 2,
+    "jeda-pecah": 0.35,
+    "warna-aktif": "aksen",
+    "mode": "karaoke",
+    "redup": 0.4
+  },
+  "sfx": {
+    "transisi": "pop",
+    "level-db": -28,
+    "level": {
+      "aksen": -28,
+      "status": -28,
+      "transisi": -29,
+      "ui": -33,
+      "ketik": -38
+    }
+  },
+  "mask": {
+    "feather-px": 1.5
+  }
+}

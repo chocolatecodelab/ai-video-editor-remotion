@@ -1,0 +1,174 @@
+{
+ "_meta": {
+  "id": "minimal-quote",
+  "versi": "0.3",
+  "status": "draft",
+  "catatan": "Koreografi v0.3 ber-SLOT: tiap bagian menulis fungsi + isi generik; generator (slot.py) memilih perangkat yang cocok dengan gaya (gaya_cocok efek) dan seed (varian). Isi = CONTOH — ganti dengan isi videomu. Dengan rekaman: video.py pasang <proyek> mengganti detik dengan anchor kata & menghindari wajah."
+ },
+ "label": "Minimal Quote · Talking Head 30–40 s",
+ "deskripsi": "Satu pikiran, ruang lapang: kartu pembuka, gerak kamera pelan khas gaya, ilustrasi/kutipan, kartu inti, CTA. Transisi tenang (celup). Rotoscope: satu kata inti di belakang kepala.",
+ "kapan": "Refleksi, motivasi, opini singkat, kutipan.",
+ "template": "hook-problem-solution",
+ "variasi_min": 4,
+ "butuh": {
+  "rekaman": true,
+  "remotion": true
+ },
+ "manifest": {},
+ "beat_sheet": {
+  "_catatan": "Koreografi v0.3 ber-SLOT: tiap bagian menulis fungsi + isi generik; generator (slot.py) memilih perangkat yang cocok dengan gaya (gaya_cocok efek) dan seed (varian). Isi = CONTOH — ganti dengan isi videomu. Dengan rekaman: video.py pasang <proyek> mengganti detik dengan anchor kata & menghindari wajah.",
+  "caption": {
+   "aktif": true,
+   "posisi": "bawah",
+   "kecuali": []
+  },
+  "beats": [
+   {
+    "id": "hook",
+    "beat": "Hook",
+    "mulai": 0,
+    "selesai": 3.5,
+    "elemen": [
+     {
+      "slot": "hook",
+      "mulai": 0.3,
+      "selesai": 3.5,
+      "isi": {
+       "judul": "Pelan-pelan *saja*",
+       "ikon": "pesan",
+       "chip": "Pelan-pelan *saja*",
+       "kata": "PELAN"
+      },
+      "kandidat": [
+       "info",
+       "chip",
+       "glass-type"
+      ],
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "problem",
+    "beat": "Problem",
+    "mulai": 3.5,
+    "selesai": 14.0,
+    "elemen": [
+     {
+      "slot": "kamera",
+      "mulai": 5.0,
+      "selesai": 9.5
+     },
+     {
+      "slot": "konteks",
+      "mulai": 10.0,
+      "selesai": 14.0,
+      "isi": {
+       "judul": "Satu langkah *kecil*",
+       "item": [
+        "Satu langkah *kecil*",
+        "Setiap hari",
+        "Tanpa terburu"
+       ],
+       "sub": "setiap hari"
+      },
+      "kandidat": [
+       "couch-wall",
+       "paper-cut",
+       "info"
+      ],
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "agitasi",
+    "beat": "Agitasi",
+    "mulai": 14.0,
+    "selesai": 20.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 14.0
+     },
+     {
+      "slot": "masalah",
+      "mulai": 14.3,
+      "selesai": 20.0,
+      "isi": {
+       "chip": "Satu hal *setiap hari*",
+       "status": "info",
+       "judul": "Satu hal *setiap hari*"
+      },
+      "kandidat": [
+       "chip",
+       "info"
+      ],
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "solution",
+    "beat": "Solution",
+    "mulai": 20.0,
+    "selesai": 30.0,
+    "elemen": [
+     {
+      "tipe": "kartu",
+      "judul": "Yang penting *mulai*",
+      "teks": "bukan sempurna",
+      "fungsi": "ringkasan",
+      "posisi": "atas",
+      "mulai": 20.5,
+      "selesai": 24.4
+     },
+     {
+      "slot": "kamera",
+      "mulai": 27.3,
+      "selesai": 29.8
+     },
+     {
+      "tipe": "depth",
+      "teks": "MULAI",
+      "fungsi": "reveal",
+      "y": 0.36,
+      "mulai": 24.6,
+      "selesai": 27.2
+     }
+    ]
+   },
+   {
+    "id": "cta",
+    "beat": "Cta",
+    "mulai": 30.0,
+    "selesai": 34.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 30.0
+     },
+     {
+      "tipe": "cta",
+      "teks": "Ikuti untuk refleksi harian",
+      "fungsi": "ajakan",
+      "mulai": 30.4,
+      "selesai": 34.0,
+      "posisi": "atas"
+     },
+     {
+      "slot": "reveal",
+      "mulai": 30.9,
+      "x": 0.84,
+      "y": 0.27,
+      "fungsi": "reveal",
+      "ukuran": 100
+     }
+    ]
+   }
+  ]
+ },
+ "konteks_tambahan": [
+  "depth-typography@0.2"
+ ]
+}

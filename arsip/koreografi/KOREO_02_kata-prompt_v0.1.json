@@ -1,0 +1,168 @@
+{
+ "_meta": {
+  "id": "kata-prompt",
+  "versi": "0.1",
+  "status": "draft",
+  "catatan": "Kerangka koreografi: ganti TODO, lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4)."
+ },
+ "label": "Kata Prompt · Talking Head 30–40 s",
+ "deskripsi": "Gaya 1-hari-1-istilah: kotak prompt mengetik, kartu info di samping kepala, cutaway kata dicoret, kuis salah/benar, CTA.",
+ "kapan": "Menjelaskan satu istilah/teknik/prompt; seri edukasi pendek dengan wajah.",
+ "template": "hook-problem-solution",
+ "variasi_min": 5,
+ "efek": [
+  "prompt-ui@0.1",
+  "blur-zoom@0.1",
+  "coret@0.1",
+  "partikel@0.1"
+ ],
+ "butuh": {
+  "rekaman": true,
+  "roto": false,
+  "remotion": true
+ },
+ "manifest": {},
+ "beat_sheet": {
+  "_catatan": "Kerangka koreografi: ganti TODO, lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4).",
+  "caption": {
+   "aktif": true,
+   "posisi": "bawah",
+   "kecuali": []
+  },
+  "beats": [
+   {
+    "id": "hook",
+    "beat": "Hook",
+    "mulai": 0,
+    "selesai": 3.5,
+    "elemen": [
+     {
+      "tipe": "remotion",
+      "efek": "prompt-ui",
+      "fungsi": "hook",
+      "mulai": 0.15,
+      "selesai": 5.5,
+      "label": "TODO Seri · #1",
+      "teks": "TODO pakai *istilah*.",
+      "lampiran": "video-kamu.mp4",
+      "kata_ciut": "istilah",
+      "cps": 26,
+      "opasitas": 0.8,
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "problem",
+    "beat": "Problem",
+    "mulai": 3.5,
+    "selesai": 12.0,
+    "elemen": [
+     {
+      "tipe": "chip",
+      "status": "info",
+      "teks": "Apa itu *TODO istilah*?",
+      "fungsi": "masalah",
+      "mulai": 5.6,
+      "selesai": 8.5,
+      "posisi": "atas"
+     },
+     {
+      "tipe": "info",
+      "ikon": "lapisan",
+      "judul": "TODO poin *satu*",
+      "sub": "TODO penjelas",
+      "fungsi": "masalah",
+      "mulai": 8.6,
+      "selesai": 12.0,
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "agitasi",
+    "beat": "Agitasi",
+    "mulai": 12.0,
+    "selesai": 18.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 12.0
+     },
+     {
+      "tipe": "latar",
+      "mulai": 12.0,
+      "selesai": 18.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "coret",
+      "fungsi": "membantah",
+      "mulai": 12.2,
+      "selesai": 18.0,
+      "judul": "TODO.txt",
+      "teks": "TODO anggapan salah",
+      "posisi": "tengah"
+     }
+    ]
+   },
+   {
+    "id": "solution",
+    "beat": "Solution",
+    "mulai": 18.0,
+    "selesai": 28.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 18.0
+     },
+     {
+      "tipe": "chip",
+      "status": "salah",
+      "teks": "TODO jawaban keliru",
+      "fungsi": "membantah",
+      "mulai": 18.3,
+      "selesai": 22.5,
+      "posisi": "atas"
+     },
+     {
+      "tipe": "chip",
+      "status": "benar",
+      "teks": "TODO jawaban *benar*",
+      "fungsi": "hasil",
+      "mulai": 22.6,
+      "selesai": 28.0,
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "cta",
+    "beat": "CTA",
+    "mulai": 28.0,
+    "selesai": 33.0,
+    "elemen": [
+     {
+      "tipe": "cta",
+      "teks": "TODO ajakan",
+      "fungsi": "ajakan",
+      "mulai": 28.4,
+      "selesai": 33.0,
+      "posisi": "bawah"
+     },
+     {
+      "tipe": "remotion",
+      "efek": "partikel",
+      "fungsi": "reveal",
+      "mulai": 28.4,
+      "selesai": 29.6,
+      "x": 0.5,
+      "y": 0.82
+     }
+    ]
+   }
+  ]
+ }
+}

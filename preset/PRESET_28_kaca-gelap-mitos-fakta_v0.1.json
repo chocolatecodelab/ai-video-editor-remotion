@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "kaca-gelap-mitos-fakta",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Preset fase 3 = gaya × koreografi. Beat-sheet awal dari koreografi; gaya & koreografi tanpa pin versi."
+  },
+  "label": "Kaca Gelap · Mitos vs Fakta · Talking Head 35–40 s",
+  "format": "mitos-fakta",
+  "deskripsi": "Kaca Gelap (kaca berasap, amber, pelan) + Label MITOS, cutaway anggapan dicoret, kartu info akibat, cutaway angka bukti + chip FAKTA, CTA.",
+  "kapan": "Meluruskan salah kaprah, opini berbasis data, konten edukasi kontra-intuitif.",
+  "gaya": "kaca-gelap",
+  "koreografi": "mitos-fakta",
+  "manifest": {
+    "warna": {
+      "filter": "eq=contrast=1.05:saturation=0.9"
+    }
+  }
+}

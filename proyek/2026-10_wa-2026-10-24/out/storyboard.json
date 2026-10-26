@@ -1,0 +1,287 @@
+{
+  "proyek": "2026-10_wa-2026-10-24",
+  "waktu": "2026-10-24T23:11:47",
+  "beat_sheet_sha": "25e3746600dba61f7da91dc7d1768f84ccac66495bcde96b1309a2d4c8def5c1",
+  "durasi": 46.5,
+  "pra_qa": "GAGAL",
+  "ringkas": {
+    "LULUS": 19,
+    "GAGAL": 1,
+    "PERINGATAN": 1,
+    "LEWAT": 7,
+    "BELUM DIIMPLEMENTASI": 0
+  },
+  "elemen": [
+    {
+      "id": "hook/0-judul",
+      "tipe": "judul",
+      "beat": "hook",
+      "mulai": 0.211,
+      "selesai": 3.211,
+      "teks": "The hardest *lesson*",
+      "efek": "glass-type@0.1",
+      "anchor": {
+        "kata": "you"
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 1.7809999999999997
+    },
+    {
+      "id": "hook/1-push",
+      "tipe": "push",
+      "beat": "hook",
+      "mulai": 1.951,
+      "selesai": 3.5,
+      "teks": "push ×1.06, gerak 1.20s, standar",
+      "efek": null,
+      "anchor": null,
+      "t": 3.151
+    },
+    {
+      "id": "problem/0-teks",
+      "tipe": "teks",
+      "beat": "problem",
+      "mulai": 4.892,
+      "selesai": 9.613,
+      "teks": "Not everything is in *your control*",
+      "efek": null,
+      "anchor": {
+        "kata": "realizing"
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 7.3225
+    },
+    {
+      "id": "problem/1-teks",
+      "tipe": "teks",
+      "beat": "problem",
+      "mulai": 10.993,
+      "selesai": 13.214,
+      "teks": "What people *think*",
+      "efek": null,
+      "anchor": {
+        "kata": "people"
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 12.173500000000002
+    },
+    {
+      "id": "problem/2-teks",
+      "tipe": "teks",
+      "beat": "problem",
+      "mulai": 13.314,
+      "selesai": 15.454,
+      "teks": "How they *treat* you",
+      "efek": null,
+      "anchor": {
+        "kata": "how",
+        "ke": 1
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 14.454000000000002
+    },
+    {
+      "id": "problem/3-teks",
+      "tipe": "teks",
+      "beat": "problem",
+      "mulai": 15.554,
+      "selesai": 17.625,
+      "teks": "What *tomorrow* brings",
+      "efek": null,
+      "anchor": {
+        "kata": "or"
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 16.659499999999998
+    },
+    {
+      "id": "agitasi/0-judul",
+      "tipe": "judul",
+      "beat": "agitasi",
+      "mulai": 18.215,
+      "selesai": 22.185,
+      "teks": "Can't change the *past*",
+      "efek": null,
+      "anchor": {
+        "kata": "change"
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 20.27
+    },
+    {
+      "id": "agitasi/1-push",
+      "tipe": "push",
+      "beat": "agitasi",
+      "mulai": 18.815,
+      "selesai": 22.185,
+      "teks": "push ×1.06, gerak 1.00s, standar",
+      "efek": null,
+      "anchor": null,
+      "t": 19.815
+    },
+    {
+      "id": "solution/0-teks",
+      "tipe": "teks",
+      "beat": "solution",
+      "mulai": 22.615,
+      "selesai": 26.241,
+      "teks": "How you *respond*",
+      "efek": null,
+      "anchor": {
+        "kata": "can",
+        "ke": 1
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 24.497999999999998
+    },
+    {
+      "id": "solution/1-teks",
+      "tipe": "teks",
+      "beat": "solution",
+      "mulai": 26.341,
+      "selesai": 31.064,
+      "teks": "Your *efforts* & choices",
+      "efek": null,
+      "anchor": {
+        "kata": "can",
+        "ke": 2
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 28.772499999999997
+    },
+    {
+      "id": "solution/2-teks",
+      "tipe": "teks",
+      "beat": "solution",
+      "mulai": 31.164,
+      "selesai": 36.406,
+      "teks": "How you treat *yourself*",
+      "efek": null,
+      "anchor": {
+        "kata": "way",
+        "offset": -0.2
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 33.855000000000004
+    },
+    {
+      "id": "cta/0-teks",
+      "tipe": "teks",
+      "beat": "cta",
+      "mulai": 40.608,
+      "selesai": 46.5,
+      "teks": "Let go of what you *can't* control",
+      "efek": null,
+      "anchor": {
+        "kata": "trying"
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 43.624
+    },
+    {
+      "id": "cta/1-cta",
+      "tipe": "cta",
+      "beat": "cta",
+      "mulai": 43.95,
+      "selesai": 46.5,
+      "teks": "Save this for later",
+      "efek": null,
+      "anchor": {
+        "kata": "never"
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 45.29500000000001
+    }
+  ],
+  "thumbnail": [
+    {
+      "frame": 53,
+      "t": 1.7666666666666666,
+      "label": "hook/0-judul",
+      "file": "storyboard/t00053.jpg"
+    },
+    {
+      "frame": 95,
+      "t": 3.1666666666666665,
+      "label": "hook/1-push",
+      "file": "storyboard/t00095.jpg"
+    },
+    {
+      "frame": 220,
+      "t": 7.333333333333333,
+      "label": "problem/0-teks",
+      "file": "storyboard/t00220.jpg"
+    },
+    {
+      "frame": 365,
+      "t": 12.166666666666666,
+      "label": "problem/1-teks",
+      "file": "storyboard/t00365.jpg"
+    },
+    {
+      "frame": 434,
+      "t": 14.466666666666667,
+      "label": "problem/2-teks",
+      "file": "storyboard/t00434.jpg"
+    },
+    {
+      "frame": 500,
+      "t": 16.666666666666668,
+      "label": "problem/3-teks",
+      "file": "storyboard/t00500.jpg"
+    },
+    {
+      "frame": 594,
+      "t": 19.8,
+      "label": "agitasi/1-push",
+      "file": "storyboard/t00594.jpg"
+    },
+    {
+      "frame": 608,
+      "t": 20.266666666666666,
+      "label": "agitasi/0-judul",
+      "file": "storyboard/t00608.jpg"
+    },
+    {
+      "frame": 735,
+      "t": 24.5,
+      "label": "solution/0-teks",
+      "file": "storyboard/t00735.jpg"
+    },
+    {
+      "frame": 863,
+      "t": 28.766666666666666,
+      "label": "solution/1-teks",
+      "file": "storyboard/t00863.jpg"
+    },
+    {
+      "frame": 1016,
+      "t": 33.86666666666667,
+      "label": "solution/2-teks",
+      "file": "storyboard/t01016.jpg"
+    },
+    {
+      "frame": 1309,
+      "t": 43.63333333333333,
+      "label": "cta/0-teks",
+      "file": "storyboard/t01309.jpg"
+    },
+    {
+      "frame": 1359,
+      "t": 45.3,
+      "label": "cta/1-cta",
+      "file": "storyboard/t01359.jpg"
+    }
+  ]
+}

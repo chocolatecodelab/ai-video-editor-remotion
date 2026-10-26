@@ -1,0 +1,182 @@
+{
+  "_catatan": "Koreografi v0.3 ber-SLOT: tiap bagian menulis fungsi + isi generik; generator (slot.py) memilih perangkat yang cocok dengan gaya (gaya_cocok efek) dan seed (varian). Isi = CONTOH — ganti dengan isi videomu. Dengan rekaman: video.py pasang <proyek> mengganti detik dengan anchor kata & menghindari wajah.",
+  "caption": {
+    "aktif": true,
+    "posisi": "bawah",
+    "kecuali": []
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "beat": "Hook",
+      "mulai": 0,
+      "selesai": 3.5,
+      "elemen": [
+        {
+          "tipe": "judul",
+          "teks": "Posting *setiap hari*?",
+          "posisi": "atas",
+          "mulai": 0.1,
+          "selesai": 3.5,
+          "latar": "panel",
+          "geser_y": 72,
+          "ukuran": 84
+        },
+        {
+          "tipe": "chip",
+          "status": "salah",
+          "teks": "MITOS",
+          "mulai": 0.2,
+          "selesai": 3.5,
+          "posisi": "atas",
+          "fungsi": "hook"
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "beat": "Problem",
+      "mulai": 3.5,
+      "selesai": 11.0,
+      "elemen": [
+        {
+          "tipe": "transisi",
+          "efek": "blur-zoom",
+          "jenis": "blur-zoom",
+          "mulai": 3.5
+        },
+        {
+          "tipe": "latar",
+          "mulai": 3.5,
+          "selesai": 9.5
+        },
+        {
+          "tipe": "remotion",
+          "efek": "coret",
+          "judul": "mitos.txt",
+          "teks": "makin sering, makin viral",
+          "mulai": 3.7,
+          "selesai": 9.5,
+          "posisi": "tengah",
+          "fungsi": "membantah"
+        },
+        {
+          "tipe": "kamera",
+          "efek": "digital-zoom",
+          "mulai": 9.6,
+          "selesai": 11.0,
+          "fungsi": "hasil"
+        }
+      ]
+    },
+    {
+      "id": "agitasi",
+      "beat": "Agitasi",
+      "mulai": 11.0,
+      "selesai": 18.0,
+      "elemen": [
+        {
+          "tipe": "info",
+          "ikon": "petir",
+          "judul": "Kualitas *turun*",
+          "sub": "penonton cepat bosan",
+          "mulai": 11.3,
+          "selesai": 18.0,
+          "posisi": "atas",
+          "fungsi": "masalah"
+        },
+        {
+          "tipe": "kamera",
+          "efek": "vertigo",
+          "mulai": 12.5,
+          "selesai": 15.5,
+          "fungsi": "hasil"
+        }
+      ]
+    },
+    {
+      "id": "solution",
+      "beat": "Solution",
+      "mulai": 18.0,
+      "selesai": 31.0,
+      "elemen": [
+        {
+          "tipe": "transisi",
+          "efek": "blur-zoom",
+          "jenis": "blur-zoom",
+          "mulai": 18.0
+        },
+        {
+          "tipe": "latar",
+          "mulai": 18.0,
+          "selesai": 24.0
+        },
+        {
+          "tipe": "remotion",
+          "efek": "linimasa",
+          "titik": [
+            {
+              "tahun": "Bulan 1",
+              "label": "retensi 38%"
+            },
+            {
+              "tahun": "Bulan 3",
+              "label": "retensi 52%"
+            },
+            {
+              "tahun": "Bulan 6",
+              "label": "retensi 73%"
+            }
+          ],
+          "mulai": 18.2,
+          "selesai": 24.0,
+          "posisi": "tengah",
+          "fungsi": "bukti"
+        },
+        {
+          "tipe": "chip",
+          "status": "benar",
+          "teks": "FAKTA: konsisten > *sering*",
+          "mulai": 24.3,
+          "selesai": 27.6,
+          "posisi": "atas",
+          "fungsi": "hasil"
+        },
+        {
+          "tipe": "depth",
+          "teks": "KONSISTEN",
+          "fungsi": "reveal",
+          "y": 0.34,
+          "mulai": 27.7,
+          "selesai": 31.0
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "beat": "Cta",
+      "mulai": 31.0,
+      "selesai": 36.0,
+      "elemen": [
+        {
+          "tipe": "cta",
+          "teks": "Ikuti untuk mitos berikutnya",
+          "fungsi": "ajakan",
+          "mulai": 31.4,
+          "selesai": 36.0,
+          "posisi": "atas"
+        },
+        {
+          "tipe": "remotion",
+          "efek": "partikel",
+          "mulai": 31.9,
+          "selesai": 33.1,
+          "x": 0.84,
+          "y": 0.27,
+          "fungsi": "reveal",
+          "ukuran": 100
+        }
+      ]
+    }
+  ]
+}

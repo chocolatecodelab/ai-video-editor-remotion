@@ -1,0 +1,335 @@
+{
+ "_meta": {
+  "id": "bukti-sosial",
+  "versi": "0.3",
+  "status": "draft",
+  "catatan": "Koreografi v0.3 ber-SLOT: tiap bagian menulis fungsi + isi generik; generator (slot.py) memilih perangkat yang cocok dengan gaya (gaya_cocok efek) dan seed (varian). Isi = CONTOH — ganti dengan isi videomu. Dengan rekaman: video.py pasang <proyek> mengganti detik dengan anchor kata & menghindari wajah."
+ },
+ "label": "Bukti Sosial · Motion Graphics 35–40 s",
+ "deskripsi": "Angka bukti menghitung, anggapan dibantah, format dipetakan (cutaway khas gaya), alur kerja, kustomisasi, hasil berlipat, CTA — tanpa rekaman, musik bawaan.",
+ "kapan": "Pamer repo/produk/tool, studi kasus, hasil angka — tanpa wajah.",
+ "template": "hook-problem-solution",
+ "variasi_min": 6,
+ "butuh": {
+  "rekaman": false,
+  "remotion": true
+ },
+ "manifest": {
+  "aset": {
+   "rekaman": null,
+   "musik": {
+    "file": "bawaan:pulsa",
+    "db": -16
+   }
+  }
+ },
+ "beat_sheet": {
+  "_catatan": "Koreografi v0.3 ber-SLOT: tiap bagian menulis fungsi + isi generik; generator (slot.py) memilih perangkat yang cocok dengan gaya (gaya_cocok efek) dan seed (varian). Isi = CONTOH — ganti dengan isi videomu. Dengan rekaman: video.py pasang <proyek> mengganti detik dengan anchor kata & menghindari wajah.",
+  "caption": {
+   "aktif": false
+  },
+  "beats": [
+   {
+    "id": "hook",
+    "beat": "Hook",
+    "mulai": 0,
+    "selesai": 3.5,
+    "elemen": [
+     {
+      "tipe": "judul",
+      "teks": "Repo GitHub ini\n*TEMBUS 23 RIBU*",
+      "posisi": "atas",
+      "mulai": 0.1,
+      "selesai": 3.5
+     },
+     {
+      "slot": "bukti",
+      "mulai": 0.2,
+      "selesai": 3.5,
+      "isi": {
+       "judul": "studio-ai / reel-kit",
+       "sumber": "studio-ai / reel-kit",
+       "sub": "AI video cloner",
+       "angka": {
+        "ke": 23877,
+        "label": "bintang"
+       },
+       "bintang": true,
+       "durasi_hitung": 1.3
+      },
+      "fungsi": "hook",
+      "posisi": "tengah",
+      "geser_y": 150,
+      "kandidat": [
+       "penghitung",
+       "info"
+      ]
+     },
+     {
+      "slot": "reveal",
+      "mulai": 1.85,
+      "x": 0.5,
+      "y": 0.46,
+      "fungsi": "reveal"
+     }
+    ]
+   },
+   {
+    "id": "problem",
+    "beat": "Problem",
+    "mulai": 3.5,
+    "selesai": 9.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 3.5
+     },
+     {
+      "tipe": "judul",
+      "teks": "Bukan cuma\n*naskahnya*",
+      "posisi": "atas",
+      "mulai": 3.7,
+      "selesai": 9.0
+     },
+     {
+      "slot": "membantah",
+      "mulai": 3.9,
+      "selesai": 9.0,
+      "isi": {
+       "anggapan": "cuma naskahnya",
+       "file": "naskah.txt",
+       "chip": "Bukan cuma *naskah*",
+       "ganti": [
+        {
+         "label": "naskah",
+         "lama": "disalin",
+         "baru": "dipahami"
+        },
+        {
+         "label": "format",
+         "lama": "manual",
+         "baru": "otomatis"
+        }
+       ]
+      },
+      "posisi": "tengah",
+      "geser_y": 150
+     }
+    ]
+   },
+   {
+    "id": "konteks",
+    "beat": "Konteks",
+    "mulai": 9.0,
+    "selesai": 15.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 9.0
+     },
+     {
+      "slot": "konteks",
+      "mulai": 9.2,
+      "selesai": 15.0,
+      "isi": {
+       "judul": "Seluruh *FORMAT* video",
+       "sub": "ritme · teks · suara · potongan",
+       "ikon": "lapisan",
+       "item": [
+        "Ritme",
+        "Teks",
+        "Suara",
+        "Potongan"
+       ],
+       "linimasa": [
+        {
+         "tahun": "2024",
+         "label": "rilis pertama"
+        },
+        {
+         "tahun": "2025",
+         "label": "10 ribu bintang"
+        },
+        {
+         "tahun": "2026",
+         "label": "23 ribu bintang"
+        }
+       ]
+      },
+      "posisi": "tengah"
+     }
+    ]
+   },
+   {
+    "id": "solution",
+    "beat": "Solution",
+    "mulai": 15.0,
+    "selesai": 21.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 15.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "Kasih ke\n*AI agent kamu*",
+      "posisi": "atas",
+      "mulai": 15.2,
+      "selesai": 21.0
+     },
+     {
+      "slot": "proses",
+      "mulai": 15.4,
+      "selesai": 21.0,
+      "isi": {
+       "judul": "Klon jadi workflow",
+       "app": "Claude Code",
+       "perintah": "klon reel ini jadi workflow",
+       "item": [
+        "membaca reel.mp4",
+        "memetakan potongan",
+        "menyusun ritme"
+       ],
+       "hasil": "workflow siap"
+      },
+      "posisi": "tengah",
+      "geser_y": 150
+     }
+    ]
+   },
+   {
+    "id": "kustomisasi",
+    "beat": "Kustomisasi",
+    "mulai": 21.0,
+    "selesai": 27.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 21.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "Ganti apa pun\n*yang kamu mau*",
+      "posisi": "atas",
+      "mulai": 21.2,
+      "selesai": 27.0
+     },
+     {
+      "slot": "kustomisasi",
+      "mulai": 21.4,
+      "selesai": 27.0,
+      "isi": {
+       "file": "variant.config",
+       "angka": {
+        "ke": 24,
+        "label": "versi"
+       },
+       "ganti": [
+        {
+         "label": "host",
+         "lama": "Host asli",
+         "baru": "Host kamu"
+        },
+        {
+         "label": "hook",
+         "lama": "“Tunggu dulu…”",
+         "baru": "“Stop scroll!”"
+        },
+        {
+         "label": "bahasa",
+         "lama": "English",
+         "baru": "Indonesia"
+        }
+       ]
+      },
+      "posisi": "tengah",
+      "geser_y": 150
+     }
+    ]
+   },
+   {
+    "id": "hasil",
+    "beat": "Hasil",
+    "mulai": 27.0,
+    "selesai": 33.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 27.0
+     },
+     {
+      "slot": "bukti",
+      "mulai": 27.2,
+      "selesai": 33.0,
+      "isi": {
+       "judul": "Satu alur, *banyak variasi*",
+       "sumber": "ship",
+       "angka": {
+        "ke": 60,
+        "label": "variasi"
+       },
+       "seri": [
+        4,
+        12,
+        26,
+        41,
+        60
+       ],
+       "label_seri": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5"
+       ],
+       "sub": "60 variasi dari *1 alur*",
+       "berita": [
+        "Kreator kecil *tumbuh 3×*",
+        "Satu alur, 60 video",
+        "AI agent kuasai editing",
+        "Format > naskah"
+       ]
+      },
+      "fungsi": "hasil",
+      "posisi": "tengah"
+     }
+    ]
+   },
+   {
+    "id": "cta",
+    "beat": "Cta",
+    "mulai": 33.0,
+    "selesai": 37.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 33.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "Mau link-nya?\n*Komen WORKFLOW*",
+      "posisi": "atas",
+      "mulai": 33.2,
+      "selesai": 37.0
+     },
+     {
+      "tipe": "cta",
+      "teks": "Kami kirim lewat DM",
+      "fungsi": "ajakan",
+      "mulai": 33.6,
+      "selesai": 37.0,
+      "posisi": "tengah",
+      "geser_y": 60
+     },
+     {
+      "slot": "reveal",
+      "mulai": 34.7,
+      "x": 0.5,
+      "y": 0.46,
+      "fungsi": "reveal"
+     }
+    ]
+   }
+  ]
+ }
+}

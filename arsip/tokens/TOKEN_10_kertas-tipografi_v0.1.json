@@ -1,0 +1,130 @@
+{
+  "_meta": {
+    "id": "kertas-tipografi",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Gaya Kertas & Tipografi. Font dari folder font Windows/pengguna; ganti di sini bila memakai font lain."
+  },
+  "warna": {
+    "latar": "#EFE8DA",
+    "teks-utama": "#1A1A1A",
+    "teks-sekunder": "#3B3732",
+    "aksen": "#B3261E",
+    "aksen-2": "#1F3A5F",
+    "peringatan": "#B3261E",
+    "panel": "#F8F3E8",
+    "panel-opasitas": 0.97,
+    "garis-panel": "#1A1A1A",
+    "garis-opasitas": 0.25,
+    "stroke": "#F8F3E8",
+    "bayangan": "#3B2F20",
+    "bayangan-opasitas": 0.2
+  },
+  "font": {
+    "judul": {
+      "file": "BOD_B.TTF",
+      "family": "Bodoni MT",
+      "weight": 700
+    },
+    "subjudul": {
+      "file": "BOD_B.TTF",
+      "family": "Bodoni MT",
+      "weight": 700
+    },
+    "isi": {
+      "file": "GARA.TTF",
+      "family": "Garamond",
+      "weight": 400
+    },
+    "caption": {
+      "file": "GARABD.TTF",
+      "family": "Garamond",
+      "weight": 700
+    },
+    "depth": {
+      "file": "BOD_BLAR.TTF",
+      "family": "Bodoni MT Black",
+      "weight": 900
+    }
+  },
+  "ukuran": {
+    "judul": 100,
+    "subjudul": 64,
+    "isi": 50,
+    "caption": 62,
+    "depth": 250
+  },
+  "spasi": {
+    "baris": 1.15,
+    "padding-kartu": 52,
+    "jarak-item": 22
+  },
+  "radius": {
+    "kartu": 0,
+    "chip": 0
+  },
+  "blur": {
+    "panel": 0
+  },
+  "bayangan": {
+    "offset": [
+      0,
+      6
+    ],
+    "blur": 14
+  },
+  "durasi": {
+    "masuk": 0.5,
+    "keluar": 0.3,
+    "tahan-min": 1.4,
+    "stagger": 0.1
+  },
+  "easing": {
+    "standar": [
+      0.22,
+      1.0,
+      0.36,
+      1.0
+    ],
+    "tegas": [
+      0.65,
+      0.0,
+      0.35,
+      1.0
+    ],
+    "keluar": [
+      0.4,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "naik",
+    "keluar-default": "fade",
+    "jarak-naik": 30,
+    "skala-pop": 0.96,
+    "push-in": 1.03
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 12
+  },
+  "caption": {
+    "kata-maks": 4,
+    "karakter-maks-baris": 20,
+    "stroke": 7,
+    "huruf-besar": false,
+    "baris-maks": 2,
+    "jeda-pecah": 0.35,
+    "warna-aktif": "aksen"
+  },
+  "sfx": {
+    "transisi": "whoosh",
+    "level-db": -24
+  },
+  "mask": {
+    "feather-px": 1.5
+  }
+}

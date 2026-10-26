@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "sketch-art-tutorial-langkah",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Preset fase 3 = gaya × koreografi. Beat-sheet awal dari koreografi; gaya & koreografi tanpa pin versi."
+  },
+  "label": "Sketch Art · Tutorial Langkah · Talking Head 60–75 s",
+  "format": "tutorial-langkah",
+  "deskripsi": "Sketch Art (pensil grafit, garis tipis, biru pensil) + Tutorial 3 langkah: chip penanda langkah, kartu info, cutaway terminal & timeline, kartu langkah, ringkasan checklist, CTA.",
+  "kapan": "Cara/tutorial/workflow bertahap dengan wajah; tiap langkah mendapat perangkat berbeda.",
+  "gaya": "sketch-art",
+  "koreografi": "tutorial-langkah",
+  "manifest": {
+    "warna": {
+      "filter": "eq=saturation=0.7"
+    }
+  }
+}

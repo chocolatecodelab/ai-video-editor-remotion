@@ -1,0 +1,102 @@
+{
+  "_catatan": "Draft dari struktur T02. Ganti TODO setelah naskah final; ganti waktu angka dengan anchor {\"kata\": …} setelah transkrip.",
+  "caption": {
+    "aktif": true,
+    "posisi": "bawah",
+    "kecuali": [
+      "hook"
+    ]
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "beat": "Hook",
+      "mulai": 0,
+      "selesai": 3.0,
+      "elemen": [
+        {
+          "tipe": "judul",
+          "teks": "SKILL ATAU *SERTIFIKAT*?",
+          "posisi": "atas",
+          "sfx": true
+        },
+        {
+          "tipe": "push",
+          "mulai": 0.3,
+          "gerak": 1.2
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "beat": "Problem",
+      "selesai": 12.0,
+      "elemen": [
+        {
+          "tipe": "kartu",
+          "judul": "TODO masalah",
+          "item": [
+            "TODO poin 1",
+            "TODO poin 2"
+          ],
+          "posisi": "atas",
+          "mulai": 4.0,
+          "selesai": 10.5,
+          "sfx": true
+        }
+      ]
+    },
+    {
+      "id": "agitasi",
+      "beat": "Agitasi",
+      "selesai": 18.0,
+      "elemen": [
+        {
+          "tipe": "push",
+          "mulai": 12.2,
+          "gerak": 1.0
+        },
+        {
+          "tipe": "judul",
+          "teks": "TODO *akibat*",
+          "posisi": "atas",
+          "mulai": 12.4,
+          "selesai": 17.5
+        }
+      ]
+    },
+    {
+      "id": "solution",
+      "beat": "Solution",
+      "selesai": 35.0,
+      "elemen": [
+        {
+          "tipe": "kartu",
+          "judul": "TODO solusi",
+          "item": [
+            "TODO langkah 1",
+            "TODO langkah 2",
+            "TODO langkah 3"
+          ],
+          "posisi": "atas",
+          "mulai": 19.0,
+          "selesai": 33.5,
+          "sfx": true
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "beat": "CTA",
+      "elemen": [
+        {
+          "tipe": "cta",
+          "teks": "TODO ajakan",
+          "posisi": "tengah",
+          "sfx": "pop"
+        }
+      ],
+      "selesai": 38.0
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "proyek": "2026-10_demo-fase3",
+  "judul": "Demo Fase 3 — Mitos vs Fakta",
+  "status": "brief",
+  "skill": "video-editor@0.1",
+  "preset": "kaca-gelap-mitos-fakta@0.1",
+  "gaya": "kaca-gelap@0.3",
+  "template": "hook-problem-solution@0.2",
+  "konteks": [
+    "zona-aman@0.1",
+    "caption@0.2",
+    "parallax-push@0.1",
+    "ingest@0.1",
+    "gerak@0.1",
+    "audio@0.1",
+    "ekspor@0.1",
+    "sound-design@0.1",
+    "koreografi@0.1"
+  ],
+  "platform": [
+    "reels",
+    "tiktok",
+    "shorts"
+  ],
+  "aset": {
+    "rekaman": "aset/rekaman/take1.mp4",
+    "potong": [
+      [
+        0.3,
+        9.6
+      ],
+      [
+        10.85,
+        19.1
+      ],
+      [
+        20.75,
+        25.5
+      ],
+      [
+        27.3,
+        51.45
+      ]
+    ],
+    "crop": {
+      "x": 0.5
+    },
+    "musik": null
+  },
+  "warna": {
+    "filter": "eq=contrast=1.05:saturation=0.9"
+  },
+  "transkrip": {
+    "bahasa": "en",
+    "model": "large-v3"
+  },
+  "roto": {
+    "backend": "mediapipe",
+    "halus": 0.3
+  },
+  "token_override": {},
+  "terpakai": null,
+  "riwayat": [],
+  "koreografi": "mitos-fakta@0.1"
+}

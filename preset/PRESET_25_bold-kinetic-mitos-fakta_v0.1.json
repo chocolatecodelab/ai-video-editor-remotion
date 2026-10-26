@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "bold-kinetic-mitos-fakta",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Preset fase 3 = gaya × koreografi. Beat-sheet awal dari koreografi; gaya & koreografi tanpa pin versi."
+  },
+  "label": "Bold Kinetic · Mitos vs Fakta · Talking Head 35–40 s",
+  "format": "mitos-fakta",
+  "deskripsi": "Bold Kinetic (teks menghentak, kuning, cepat) + Label MITOS, cutaway anggapan dicoret, kartu info akibat, cutaway angka bukti + chip FAKTA, CTA.",
+  "kapan": "Meluruskan salah kaprah, opini berbasis data, konten edukasi kontra-intuitif.",
+  "gaya": "bold-kinetic",
+  "koreografi": "mitos-fakta",
+  "manifest": {
+    "warna": {
+      "filter": "eq=contrast=1.06:saturation=1.12"
+    }
+  }
+}

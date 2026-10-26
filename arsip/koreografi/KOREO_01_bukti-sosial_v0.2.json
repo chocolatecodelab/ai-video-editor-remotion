@@ -1,0 +1,303 @@
+{
+ "_meta": {
+  "id": "bukti-sosial",
+  "versi": "0.2",
+  "status": "draft",
+  "catatan": "Koreografi v0.2 berisi CONTOH isi (ganti dengan isi videomu), lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4)."
+ },
+ "label": "Bukti Sosial · Motion Graphics 35–40 s",
+ "deskripsi": "Tanpa footage: headline 2 baris + jendela UI yang berganti tiap bagian — angka naik, kata dicoret, timeline, terminal, form, grid variasi, CTA berpartikel.",
+ "kapan": "Promosi tool/repo/produk digital, pengumuman pencapaian, konten tanpa wajah.",
+ "template": "hook-problem-solution",
+ "variasi_min": 6,
+ "efek": [
+  "penghitung@0.1",
+  "partikel@0.1",
+  "blur-zoom@0.1",
+  "coret@0.1",
+  "timeline@0.1",
+  "terminal@0.1",
+  "form-ganti@0.1",
+  "grid-variasi@0.1"
+ ],
+ "butuh": {
+  "rekaman": false,
+  "roto": false,
+  "remotion": true
+ },
+ "manifest": {
+  "aset": {
+   "rekaman": null,
+   "musik": {
+    "file": "bawaan:pulsa",
+    "db": -16
+   }
+  }
+ },
+ "beat_sheet": {
+  "_catatan": "Koreografi v0.2 berisi CONTOH isi (ganti dengan isi videomu), lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4).",
+  "caption": {
+   "aktif": false
+  },
+  "beats": [
+   {
+    "id": "hook",
+    "beat": "Hook",
+    "mulai": 0,
+    "selesai": 3.5,
+    "elemen": [
+     {
+      "tipe": "judul",
+      "teks": "Repo GitHub ini\n*TEMBUS 23 RIBU*",
+      "posisi": "atas",
+      "mulai": 0.1,
+      "selesai": 3.5
+     },
+     {
+      "tipe": "remotion",
+      "efek": "penghitung",
+      "fungsi": "hook",
+      "mulai": 0.2,
+      "selesai": 3.5,
+      "judul": "studio-ai / reel-kit",
+      "sub": "AI video cloner",
+      "ke": 23877,
+      "label": "bintang",
+      "durasi_hitung": 1.3,
+      "posisi": "tengah",
+      "geser_y": 150
+     },
+     {
+      "tipe": "remotion",
+      "efek": "partikel",
+      "fungsi": "reveal",
+      "mulai": 1.85,
+      "selesai": 3.05,
+      "x": 0.5,
+      "y": 0.46
+     }
+    ]
+   },
+   {
+    "id": "problem",
+    "beat": "Problem",
+    "mulai": 3.5,
+    "selesai": 9.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 3.5
+     },
+     {
+      "tipe": "judul",
+      "teks": "Bukan cuma\n*naskahnya*",
+      "posisi": "atas",
+      "mulai": 3.7,
+      "selesai": 9.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "coret",
+      "fungsi": "membantah",
+      "mulai": 3.9,
+      "selesai": 9.0,
+      "judul": "naskah.txt",
+      "teks": "naskahnya",
+      "tunda": 1.2,
+      "posisi": "tengah",
+      "geser_y": 150
+     }
+    ]
+   },
+   {
+    "id": "agitasi",
+    "beat": "Agitasi",
+    "mulai": 9.0,
+    "selesai": 15.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 9.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "Tapi seluruh\n*FORMATNYA*",
+      "posisi": "atas",
+      "mulai": 9.2,
+      "selesai": 15.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "timeline",
+      "fungsi": "proses",
+      "mulai": 9.4,
+      "selesai": 15.0,
+      "chip": [
+       "semua",
+       "pas",
+       "dengan",
+       "*kata*"
+      ],
+      "catatan": "ditambatkan ke kata",
+      "posisi": "tengah",
+      "geser_y": 150
+     }
+    ]
+   },
+   {
+    "id": "solution",
+    "beat": "Solution",
+    "mulai": 15.0,
+    "selesai": 21.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 15.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "Kasih ke\n*AI agent kamu*",
+      "posisi": "atas",
+      "mulai": 15.2,
+      "selesai": 21.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "terminal",
+      "fungsi": "langkah",
+      "mulai": 15.4,
+      "selesai": 21.0,
+      "judul": "Claude Code",
+      "perintah": "klon reel ini jadi workflow",
+      "keluaran": [
+       "membaca reel.mp4",
+       "memetakan potongan",
+       "✓ workflow siap"
+      ],
+      "posisi": "tengah",
+      "geser_y": 150
+     }
+    ]
+   },
+   {
+    "id": "kustomisasi",
+    "beat": "Kustomisasi",
+    "mulai": 21.0,
+    "selesai": 27.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 21.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "Ganti apa pun\n*yang kamu mau*",
+      "posisi": "atas",
+      "mulai": 21.2,
+      "selesai": 27.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "form-ganti",
+      "fungsi": "kustomisasi",
+      "mulai": 21.4,
+      "selesai": 27.0,
+      "posisi": "tengah",
+      "baris": [
+       {
+        "label": "host",
+        "lama": "Host asli",
+        "baru": "Host kamu"
+       },
+       {
+        "label": "hook",
+        "lama": "“Tunggu dulu…”",
+        "baru": "“Stop scroll!”"
+       },
+       {
+        "label": "bahasa",
+        "lama": "English",
+        "baru": "Indonesia"
+       }
+      ],
+      "geser_y": 150
+     }
+    ]
+   },
+   {
+    "id": "hasil",
+    "beat": "Hasil",
+    "mulai": 27.0,
+    "selesai": 33.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 27.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "Satu alur kerja,\n*BANYAK VARIASI*",
+      "posisi": "atas",
+      "mulai": 27.2,
+      "selesai": 33.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "grid-variasi",
+      "fungsi": "hasil",
+      "mulai": 27.4,
+      "selesai": 33.0,
+      "judul": "ship",
+      "ke": 60,
+      "label": "variasi",
+      "posisi": "tengah",
+      "geser_y": 150
+     }
+    ]
+   },
+   {
+    "id": "cta",
+    "beat": "CTA",
+    "mulai": 33.0,
+    "selesai": 37.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 33.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "Mau link-nya?\n*Komen WORKFLOW*",
+      "posisi": "atas",
+      "mulai": 33.2,
+      "selesai": 37.0
+     },
+     {
+      "tipe": "cta",
+      "teks": "Kami kirim lewat DM",
+      "fungsi": "ajakan",
+      "mulai": 33.6,
+      "selesai": 37.0,
+      "posisi": "tengah",
+      "geser_y": 60
+     },
+     {
+      "tipe": "remotion",
+      "efek": "partikel",
+      "fungsi": "reveal",
+      "mulai": 34.2,
+      "selesai": 35.4,
+      "x": 0.5,
+      "y": 0.46
+     }
+    ]
+   }
+  ]
+ }
+}

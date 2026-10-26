@@ -1,0 +1,319 @@
+{
+  "preset": "sketch-art-tutorial-langkah@0.1",
+  "seed": 0,
+  "variasi": 14,
+  "efek": [
+    "doodle-boil@0.2",
+    "couch-wall@0.2",
+    "timeline@0.1",
+    "frame-break@0.2",
+    "terminal@0.1",
+    "checklist@0.3",
+    "green-screen@0.2",
+    "aksen-gaya@0.1"
+  ],
+  "pilihan": [
+    {
+      "beat": "hook",
+      "slot": "hook",
+      "dipilih": "doodle-boil",
+      "lolos": [
+        "chip",
+        "doodle-boil",
+        "info",
+        "lower-third"
+      ]
+    },
+    {
+      "beat": "konteks",
+      "slot": "konteks",
+      "dipilih": "couch-wall",
+      "lolos": [
+        "info",
+        "couch-wall"
+      ]
+    },
+    {
+      "beat": "konteks",
+      "slot": "bukti",
+      "dipilih": "info",
+      "lolos": [
+        "penghitung",
+        "chart-grow",
+        "info"
+      ]
+    },
+    {
+      "beat": "poin-1",
+      "slot": "transisi",
+      "dipilih": "transisi:coretan",
+      "lolos": [
+        "coretan"
+      ]
+    },
+    {
+      "beat": "poin-1",
+      "slot": "langkah",
+      "dipilih": "timeline",
+      "lolos": [
+        "checklist",
+        "terminal",
+        "timeline",
+        "chip"
+      ]
+    },
+    {
+      "beat": "poin-1",
+      "slot": "hasil",
+      "dipilih": "chip-benar",
+      "lolos": [
+        "chip-benar"
+      ]
+    },
+    {
+      "beat": "poin-2",
+      "slot": "kamera",
+      "dipilih": "frame-break",
+      "lolos": [
+        "frame-break",
+        "green-screen"
+      ]
+    },
+    {
+      "beat": "poin-2",
+      "slot": "langkah",
+      "dipilih": "chip",
+      "lolos": [
+        "info",
+        "chip"
+      ]
+    },
+    {
+      "beat": "poin-3",
+      "slot": "transisi",
+      "dipilih": "transisi:coretan",
+      "lolos": [
+        "coretan"
+      ]
+    },
+    {
+      "beat": "poin-3",
+      "slot": "proses",
+      "dipilih": "terminal",
+      "lolos": [
+        "langkah",
+        "terminal",
+        "timeline",
+        "checklist"
+      ]
+    },
+    {
+      "beat": "poin-3",
+      "slot": "langkah",
+      "dipilih": "info",
+      "lolos": [
+        "info"
+      ]
+    },
+    {
+      "beat": "ringkasan",
+      "slot": "ringkasan",
+      "dipilih": "checklist",
+      "lolos": [
+        "checklist",
+        "langkah",
+        "timeline"
+      ]
+    },
+    {
+      "beat": "ringkasan",
+      "slot": "kamera",
+      "dipilih": "green-screen",
+      "lolos": [
+        "frame-break",
+        "green-screen"
+      ]
+    },
+    {
+      "beat": "cta",
+      "slot": "reveal",
+      "dipilih": "aksen-gaya",
+      "lolos": [
+        "aksen-gaya"
+      ]
+    }
+  ],
+  "perangkat": [
+    {
+      "beat": "hook",
+      "perangkat": "doodle-boil",
+      "efek": "doodle-boil@0.2",
+      "fungsi": "hook",
+      "mulai": 0.2,
+      "selesai": 3.0,
+      "luas_layar": 0.233
+    },
+    {
+      "beat": "konteks",
+      "perangkat": "couch-wall",
+      "efek": "couch-wall@0.2",
+      "fungsi": "konteks",
+      "mulai": 3.4,
+      "selesai": 9.0,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": "konteks",
+      "perangkat": "info",
+      "efek": null,
+      "fungsi": "bukti",
+      "mulai": 9.3,
+      "selesai": 14.0,
+      "luas_layar": 0.047
+    },
+    {
+      "beat": null,
+      "perangkat": "transisi:coretan",
+      "efek": "doodle-boil@0.2",
+      "fungsi": null,
+      "mulai": 13.55,
+      "selesai": 14.45,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": "poin-1",
+      "perangkat": "latar",
+      "efek": null,
+      "fungsi": null,
+      "mulai": 14.0,
+      "selesai": 21.0,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": "poin-1",
+      "perangkat": "timeline",
+      "efek": "timeline@0.1",
+      "fungsi": "langkah",
+      "mulai": 14.2,
+      "selesai": 21.0,
+      "luas_layar": 0.231
+    },
+    {
+      "beat": "poin-1",
+      "perangkat": "chip-benar",
+      "efek": null,
+      "fungsi": "hasil",
+      "mulai": 21.3,
+      "selesai": 28.0,
+      "luas_layar": 0.023
+    },
+    {
+      "beat": "poin-1",
+      "perangkat": "depth",
+      "efek": null,
+      "fungsi": "reveal",
+      "mulai": 21.3,
+      "selesai": 28.0,
+      "luas_layar": 0.089
+    },
+    {
+      "beat": "poin-2",
+      "perangkat": "kartu",
+      "efek": null,
+      "fungsi": "langkah",
+      "mulai": 28.3,
+      "selesai": 35.5,
+      "luas_layar": 0.128
+    },
+    {
+      "beat": "poin-2",
+      "perangkat": "frame-break",
+      "efek": "frame-break@0.2",
+      "fungsi": "hasil",
+      "mulai": 30.0,
+      "selesai": 33.0,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": "poin-2",
+      "perangkat": "chip-nomor",
+      "efek": null,
+      "fungsi": "langkah",
+      "mulai": 35.7,
+      "selesai": 42.0,
+      "luas_layar": 0.026
+    },
+    {
+      "beat": null,
+      "perangkat": "transisi:coretan",
+      "efek": "doodle-boil@0.2",
+      "fungsi": null,
+      "mulai": 41.55,
+      "selesai": 42.45,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": "poin-3",
+      "perangkat": "latar",
+      "efek": null,
+      "fungsi": null,
+      "mulai": 42.0,
+      "selesai": 48.5,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": "poin-3",
+      "perangkat": "terminal",
+      "efek": "terminal@0.1",
+      "fungsi": "proses",
+      "mulai": 42.2,
+      "selesai": 48.5,
+      "luas_layar": 0.17
+    },
+    {
+      "beat": "poin-3",
+      "perangkat": "info",
+      "efek": null,
+      "fungsi": "langkah",
+      "mulai": 48.8,
+      "selesai": 56.0,
+      "luas_layar": 0.049
+    },
+    {
+      "beat": "ringkasan",
+      "perangkat": "checklist",
+      "efek": "checklist@0.3",
+      "fungsi": "ringkasan",
+      "mulai": 56.2,
+      "selesai": 63.0,
+      "luas_layar": 0.155
+    },
+    {
+      "beat": "ringkasan",
+      "perangkat": "green-screen",
+      "efek": "green-screen@0.2",
+      "fungsi": "hasil",
+      "mulai": 56.4,
+      "selesai": 58.4,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": "cta",
+      "perangkat": "cta",
+      "efek": null,
+      "fungsi": "ajakan",
+      "mulai": 63.4,
+      "selesai": 68.0,
+      "luas_layar": 0.048
+    },
+    {
+      "beat": "cta",
+      "perangkat": "aksen-gaya",
+      "efek": "aksen-gaya@0.1",
+      "fungsi": "reveal",
+      "mulai": 63.9,
+      "selesai": 65.7,
+      "luas_layar": 0.021
+    }
+  ]
+}

@@ -1,0 +1,1869 @@
+{
+  "proyek": "2026-10_demo-fase2",
+  "resolusi": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "durasi": 37.0,
+  "zona_aman": [
+    60,
+    250,
+    960,
+    1520
+  ],
+  "elemen": [
+    {
+      "id": "hook/0-judul",
+      "tipe": "judul",
+      "beat": "hook",
+      "teks": "Repo GitHub ini\n*TEMBUS 23 RIBU*",
+      "mulai": 0.1,
+      "selesai": 3.5,
+      "delay": 0.0,
+      "bbox": [
+        9.5,
+        250.0,
+        1010.5,
+        624.0
+      ],
+      "bbox_animasi": [
+        9.5,
+        250.0,
+        1010.5,
+        662.9
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 1.867,
+        "l_p10": 0.0047,
+        "l_p90": 0.0047
+      },
+      "efek": null,
+      "anchor": null,
+      "bbox_teks": [
+        83.5,
+        324.0,
+        936.5,
+        550.0
+      ],
+      "ukuran": 96,
+      "baris": 2,
+      "karakter_baris_maks": 15,
+      "kata": 6,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "judul"
+    },
+    {
+      "id": "hook/1-remotion",
+      "tipe": "remotion",
+      "komposisi": "Penghitung",
+      "beat": "hook",
+      "teks": "hypit-ai / hypit AI video cloner 23877 bintang",
+      "mulai": 0.2,
+      "selesai": 3.5,
+      "delay": 0.0,
+      "bbox": [
+        60.0,
+        725.0,
+        960.0,
+        1045.0
+      ],
+      "bbox_teks": [
+        60.0,
+        725.0,
+        960.0,
+        1045.0
+      ],
+      "bbox_animasi": [
+        60.0,
+        725.0,
+        960.0,
+        1067.0
+      ],
+      "t_ukur": 3.227,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 3.233,
+        "l_p10": 0.0077,
+        "l_p90": 0.0077,
+        "sumber": "panel+latar"
+      },
+      "efek": "penghitung@0.1",
+      "overlay": "Penghitung-6f896f4d69b81290.mov",
+      "kaca": true,
+      "anchor": null,
+      "panel_opasitas": 0.9,
+      "dekoratif": false,
+      "ukuran": 48,
+      "warna": [
+        "#5EE6FF",
+        "#C9D3E6",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "item": null,
+      "stagger": null
+    },
+    {
+      "id": "hook/2-remotion",
+      "tipe": "remotion",
+      "komposisi": "Partikel",
+      "beat": "hook",
+      "teks": "",
+      "mulai": 1.85,
+      "selesai": 3.05,
+      "delay": 0.0,
+      "bbox": [
+        389.0,
+        694.0,
+        701.0,
+        1071.0
+      ],
+      "bbox_teks": [
+        389.0,
+        694.0,
+        701.0,
+        1071.0
+      ],
+      "bbox_animasi": [
+        389.0,
+        694.0,
+        701.0,
+        1071.0
+      ],
+      "t_ukur": 2.777,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": null,
+      "efek": "partikel@0.1",
+      "overlay": "Partikel-94edc09d581f0dff.mov",
+      "kaca": true,
+      "anchor": null,
+      "panel_opasitas": 0.62,
+      "dekoratif": true,
+      "ukuran": null,
+      "warna": [],
+      "stroke": 0,
+      "item": null,
+      "stagger": null
+    },
+    {
+      "id": "problem/1-judul",
+      "tipe": "judul",
+      "beat": "problem",
+      "teks": "Bukan cuma\n*naskahnya*",
+      "mulai": 3.7,
+      "selesai": 9.0,
+      "delay": 0.0,
+      "bbox": [
+        111.0,
+        250.0,
+        909.0,
+        624.0
+      ],
+      "bbox_animasi": [
+        111.0,
+        250.0,
+        909.0,
+        662.9
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 6.433,
+        "l_p10": 0.0047,
+        "l_p90": 0.0047
+      },
+      "efek": null,
+      "anchor": null,
+      "bbox_teks": [
+        185.0,
+        324.0,
+        835.0,
+        550.0
+      ],
+      "ukuran": 96,
+      "baris": 2,
+      "karakter_baris_maks": 10,
+      "kata": 3,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "judul"
+    },
+    {
+      "id": "problem/2-remotion",
+      "tipe": "remotion",
+      "komposisi": "Coret",
+      "beat": "problem",
+      "teks": "naskah.txt naskahnya",
+      "mulai": 3.9,
+      "selesai": 9.0,
+      "delay": 0.0,
+      "bbox": [
+        259.0,
+        808.0,
+        761.0,
+        963.0
+      ],
+      "bbox_teks": [
+        259.0,
+        808.0,
+        761.0,
+        963.0
+      ],
+      "bbox_animasi": [
+        259.0,
+        808.0,
+        761.0,
+        985.0
+      ],
+      "t_ukur": 8.727,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 8.733,
+        "l_p10": 0.0077,
+        "l_p90": 0.0077,
+        "sumber": "panel+latar"
+      },
+      "efek": "coret@0.1",
+      "overlay": "Coret-2bb8099c69c74cf6.mov",
+      "kaca": true,
+      "anchor": null,
+      "panel_opasitas": 0.9,
+      "dekoratif": false,
+      "ukuran": 48,
+      "warna": [
+        "#C9D3E6",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "item": null,
+      "stagger": null
+    },
+    {
+      "id": "agitasi/1-judul",
+      "tipe": "judul",
+      "beat": "agitasi",
+      "teks": "Tapi seluruh\n*FORMATNYA*",
+      "mulai": 9.2,
+      "selesai": 15.0,
+      "delay": 0.0,
+      "bbox": [
+        105.0,
+        250.0,
+        915.0,
+        624.0
+      ],
+      "bbox_animasi": [
+        105.0,
+        250.0,
+        915.0,
+        662.9
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 12.167,
+        "l_p10": 0.0047,
+        "l_p90": 0.0047
+      },
+      "efek": null,
+      "anchor": null,
+      "bbox_teks": [
+        179.0,
+        324.0,
+        841.0,
+        550.0
+      ],
+      "ukuran": 96,
+      "baris": 2,
+      "karakter_baris_maks": 12,
+      "kata": 3,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "judul"
+    },
+    {
+      "id": "agitasi/2-remotion",
+      "tipe": "remotion",
+      "komposisi": "Timeline",
+      "beat": "agitasi",
+      "teks": "TEKS B-ROLL EFEK semua pas dengan tiap kata ditambatkan ke kata",
+      "mulai": 9.4,
+      "selesai": 15.0,
+      "delay": 0.0,
+      "bbox": [
+        60.0,
+        644.0,
+        960.0,
+        1117.0
+      ],
+      "bbox_teks": [
+        60.0,
+        644.0,
+        960.0,
+        1117.0
+      ],
+      "bbox_animasi": [
+        60.0,
+        644.0,
+        960.0,
+        1117.0
+      ],
+      "t_ukur": 14.727,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 14.733,
+        "l_p10": 0.0077,
+        "l_p90": 0.0077,
+        "sumber": "panel+latar"
+      },
+      "efek": "timeline@0.1",
+      "overlay": "Timeline-cdfe0e33d8bf1e14.mov",
+      "kaca": true,
+      "anchor": null,
+      "panel_opasitas": 0.9,
+      "dekoratif": false,
+      "ukuran": 48,
+      "warna": [
+        "#5EE6FF",
+        "#C9D3E6",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "item": null,
+      "stagger": null
+    },
+    {
+      "id": "solution/1-judul",
+      "tipe": "judul",
+      "beat": "solution",
+      "teks": "Kasih ke\n*AI agent kamu*",
+      "mulai": 15.2,
+      "selesai": 21.0,
+      "delay": 0.0,
+      "bbox": [
+        56.5,
+        250.0,
+        963.5,
+        624.0
+      ],
+      "bbox_animasi": [
+        56.5,
+        250.0,
+        963.5,
+        662.9
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 18.167,
+        "l_p10": 0.0047,
+        "l_p90": 0.0047
+      },
+      "efek": null,
+      "anchor": null,
+      "bbox_teks": [
+        130.5,
+        324.0,
+        889.5,
+        550.0
+      ],
+      "ukuran": 96,
+      "baris": 2,
+      "karakter_baris_maks": 13,
+      "kata": 5,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "judul"
+    },
+    {
+      "id": "solution/2-remotion",
+      "tipe": "remotion",
+      "komposisi": "Terminal",
+      "beat": "solution",
+      "teks": "Claude Code klon reel ini jadi workflow membaca reel.mp4 memetakan potongan ✓ workflow siap",
+      "mulai": 15.4,
+      "selesai": 21.0,
+      "delay": 0.0,
+      "bbox": [
+        60.0,
+        696.0,
+        960.0,
+        1074.0
+      ],
+      "bbox_teks": [
+        60.0,
+        696.0,
+        960.0,
+        1074.0
+      ],
+      "bbox_animasi": [
+        60.0,
+        696.0,
+        960.0,
+        1096.0
+      ],
+      "t_ukur": 20.727,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 20.733,
+        "l_p10": 0.0077,
+        "l_p90": 0.0077,
+        "sumber": "panel+latar"
+      },
+      "efek": "terminal@0.1",
+      "overlay": "Terminal-4aaafcd8849324c0.mov",
+      "kaca": true,
+      "anchor": null,
+      "panel_opasitas": 0.9,
+      "dekoratif": false,
+      "ukuran": 48,
+      "warna": [
+        "#5EE6FF",
+        "#C9D3E6",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "item": null,
+      "stagger": null
+    },
+    {
+      "id": "solution/4-judul",
+      "tipe": "judul",
+      "beat": "solution",
+      "teks": "Ganti apa pun\n*yang kamu mau*",
+      "mulai": 21.2,
+      "selesai": 27.0,
+      "delay": 0.0,
+      "bbox": [
+        18.0,
+        250.0,
+        1002.0,
+        624.0
+      ],
+      "bbox_animasi": [
+        18.0,
+        250.0,
+        1002.0,
+        662.9
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 24.167,
+        "l_p10": 0.0047,
+        "l_p90": 0.0047
+      },
+      "efek": null,
+      "anchor": null,
+      "bbox_teks": [
+        92.0,
+        324.0,
+        928.0,
+        550.0
+      ],
+      "ukuran": 96,
+      "baris": 2,
+      "karakter_baris_maks": 13,
+      "kata": 6,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "judul"
+    },
+    {
+      "id": "solution/5-remotion",
+      "tipe": "remotion",
+      "komposisi": "FormGanti",
+      "beat": "solution",
+      "teks": "host Host kamu hook “Stop scroll!” produk Produk kamu bahasa Indonesia",
+      "mulai": 21.4,
+      "selesai": 27.0,
+      "delay": 0.0,
+      "bbox": [
+        60.0,
+        645.0,
+        960.0,
+        1125.0
+      ],
+      "bbox_teks": [
+        60.0,
+        645.0,
+        960.0,
+        1125.0
+      ],
+      "bbox_animasi": [
+        60.0,
+        645.0,
+        960.0,
+        1147.0
+      ],
+      "t_ukur": 26.727,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 26.733,
+        "l_p10": 0.0077,
+        "l_p90": 0.0077,
+        "sumber": "panel+latar"
+      },
+      "efek": "form-ganti@0.1",
+      "overlay": "FormGanti-6534c5f59e7cd084.mov",
+      "kaca": true,
+      "anchor": null,
+      "panel_opasitas": 0.9,
+      "dekoratif": false,
+      "ukuran": 48,
+      "warna": [
+        "#5EE6FF",
+        "#C9D3E6",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "item": null,
+      "stagger": null
+    },
+    {
+      "id": "solution/7-judul",
+      "tipe": "judul",
+      "beat": "solution",
+      "teks": "Satu alur kerja,\n*BANYAK VARIASI*",
+      "mulai": 27.2,
+      "selesai": 33.0,
+      "delay": 0.0,
+      "bbox": [
+        -8.5,
+        250.0,
+        1028.5,
+        624.0
+      ],
+      "bbox_animasi": [
+        -8.5,
+        250.0,
+        1028.5,
+        662.9
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 30.167,
+        "l_p10": 0.0047,
+        "l_p90": 0.0047
+      },
+      "efek": null,
+      "anchor": null,
+      "bbox_teks": [
+        65.5,
+        324.0,
+        954.5,
+        550.0
+      ],
+      "ukuran": 96,
+      "baris": 2,
+      "karakter_baris_maks": 16,
+      "kata": 5,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "judul"
+    },
+    {
+      "id": "solution/8-remotion",
+      "tipe": "remotion",
+      "komposisi": "GridVariasi",
+      "beat": "solution",
+      "teks": "ship 60 variasi",
+      "mulai": 27.4,
+      "selesai": 33.0,
+      "delay": 0.0,
+      "bbox": [
+        60.0,
+        594.0,
+        960.0,
+        1176.0
+      ],
+      "bbox_teks": [
+        60.0,
+        594.0,
+        960.0,
+        1176.0
+      ],
+      "bbox_animasi": [
+        60.0,
+        594.0,
+        960.0,
+        1198.0
+      ],
+      "t_ukur": 32.727,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 32.733,
+        "l_p10": 0.0077,
+        "l_p90": 0.0077,
+        "sumber": "panel+latar"
+      },
+      "efek": "grid-variasi@0.1",
+      "overlay": "GridVariasi-26b027319fd3d187.mov",
+      "kaca": true,
+      "anchor": null,
+      "panel_opasitas": 0.9,
+      "dekoratif": false,
+      "ukuran": 48,
+      "warna": [
+        "#5EE6FF",
+        "#C9D3E6",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "item": null,
+      "stagger": null
+    },
+    {
+      "id": "cta/1-judul",
+      "tipe": "judul",
+      "beat": "cta",
+      "teks": "Konsultasi\n*GRATIS*",
+      "mulai": 33.2,
+      "selesai": 37.0,
+      "delay": 0.0,
+      "bbox": [
+        165.5,
+        250.0,
+        854.5,
+        624.0
+      ],
+      "bbox_animasi": [
+        165.5,
+        250.0,
+        854.5,
+        662.9
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": {
+        "t": 35.167,
+        "l_p10": 0.0047,
+        "l_p90": 0.0047
+      },
+      "efek": null,
+      "anchor": null,
+      "bbox_teks": [
+        239.5,
+        324.0,
+        780.5,
+        550.0
+      ],
+      "ukuran": 96,
+      "baris": 2,
+      "karakter_baris_maks": 10,
+      "kata": 2,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "judul"
+    },
+    {
+      "id": "cta/2-cta",
+      "tipe": "cta",
+      "beat": "cta",
+      "teks": "Komen “HYPIT”",
+      "mulai": 33.6,
+      "selesai": 37.0,
+      "delay": 0.0,
+      "bbox": [
+        204.5,
+        819.5,
+        815.5,
+        950.5
+      ],
+      "bbox_animasi": [
+        204.5,
+        819.5,
+        815.5,
+        950.5
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": null
+    },
+    {
+      "id": "cta/2-cta/teks",
+      "tipe": "teks-cta",
+      "beat": "cta",
+      "teks": "Komen “HYPIT”",
+      "mulai": 33.6,
+      "selesai": 37.0,
+      "delay": 0.0,
+      "bbox": [
+        244.5,
+        841.5,
+        775.5,
+        928.5
+      ],
+      "bbox_animasi": [
+        244.5,
+        841.5,
+        775.5,
+        928.5
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": "cta/2-cta",
+      "kontras": {
+        "t": 35.367,
+        "l_p10": 0.6619,
+        "l_p90": 0.6619
+      },
+      "efek": null,
+      "anchor": null,
+      "bbox_teks": [
+        248.5,
+        845.5,
+        771.5,
+        924.5
+      ],
+      "ukuran": 64,
+      "baris": 1,
+      "karakter_baris_maks": 13,
+      "kata": 2,
+      "warna": [
+        "#0B0F17"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "subjudul"
+    },
+    {
+      "id": "cta/3-remotion",
+      "tipe": "remotion",
+      "komposisi": "Partikel",
+      "beat": "cta",
+      "teks": "",
+      "mulai": 33.6,
+      "selesai": 34.8,
+      "delay": 0.0,
+      "bbox": [
+        389.0,
+        694.0,
+        701.0,
+        1071.0
+      ],
+      "bbox_teks": [
+        389.0,
+        694.0,
+        701.0,
+        1071.0
+      ],
+      "bbox_animasi": [
+        389.0,
+        694.0,
+        701.0,
+        1071.0
+      ],
+      "t_ukur": 34.527,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": null,
+      "efek": "partikel@0.1",
+      "overlay": "Partikel-94edc09d581f0dff.mov",
+      "kaca": true,
+      "anchor": null,
+      "panel_opasitas": 0.62,
+      "dekoratif": true,
+      "ukuran": null,
+      "warna": [],
+      "stroke": 0,
+      "item": null,
+      "stagger": null,
+      "sfx_gabung": true
+    }
+  ],
+  "push": [],
+  "broll": [],
+  "transisi": [
+    {
+      "id": "problem/0-transisi",
+      "jenis": "blur-zoom",
+      "mulai": 3.25,
+      "selesai": 3.75,
+      "skala": 1.06,
+      "blur": 22
+    },
+    {
+      "id": "agitasi/0-transisi",
+      "jenis": "blur-zoom",
+      "mulai": 8.75,
+      "selesai": 9.25,
+      "skala": 1.06,
+      "blur": 22
+    },
+    {
+      "id": "solution/0-transisi",
+      "jenis": "blur-zoom",
+      "mulai": 14.75,
+      "selesai": 15.25,
+      "skala": 1.06,
+      "blur": 22
+    },
+    {
+      "id": "solution/3-transisi",
+      "jenis": "blur-zoom",
+      "mulai": 20.75,
+      "selesai": 21.25,
+      "skala": 1.06,
+      "blur": 22
+    },
+    {
+      "id": "solution/6-transisi",
+      "jenis": "blur-zoom",
+      "mulai": 26.75,
+      "selesai": 27.25,
+      "skala": 1.06,
+      "blur": 22
+    },
+    {
+      "id": "cta/0-transisi",
+      "jenis": "blur-zoom",
+      "mulai": 32.75,
+      "selesai": 33.25,
+      "skala": 1.06,
+      "blur": 22
+    }
+  ],
+  "sfx": [
+    {
+      "sumber": "hook/0-judul",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-1.wav",
+      "t": 0.0,
+      "db": -19.0,
+      "bunyi": "whoosh-pendek",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/masuk",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ketuk-1.wav",
+      "t": 0.2,
+      "db": -23.0,
+      "bunyi": "ketuk",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 0.762,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick1",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 0.795,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick2",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-3.wav",
+      "t": 0.83,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick3",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 0.868,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick4",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 0.908,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick5",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-3.wav",
+      "t": 0.951,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick6",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 0.998,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick7",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 1.05,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick8",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-3.wav",
+      "t": 1.108,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick9",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 1.174,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick10",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 1.252,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick11",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-3.wav",
+      "t": 1.35,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/tick12",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 1.491,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/1-remotion/selesai",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-1.wav",
+      "t": 2.03,
+      "db": -18.0,
+      "bunyi": "pop",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "hook/2-remotion/ledak",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\kilau-1.wav",
+      "t": 1.85,
+      "db": -18.0,
+      "bunyi": "kilau",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "problem/0-transisi",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-1.wav",
+      "t": 2.96,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "problem/1-judul",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-2.wav",
+      "t": 3.469,
+      "db": -19.0,
+      "bunyi": "whoosh-pendek",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "problem/2-remotion/masuk",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ketuk-2.wav",
+      "t": 3.9,
+      "db": -23.0,
+      "bunyi": "ketuk",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "problem/2-remotion/gores",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\gores-1.wav",
+      "t": 5.1,
+      "db": -18.0,
+      "bunyi": "gores",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "problem/2-remotion/silang",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ding-salah-1.wav",
+      "t": 5.45,
+      "db": -18.0,
+      "bunyi": "ding-salah",
+      "kelas": "status",
+      "otomatis": true
+    },
+    {
+      "sumber": "agitasi/0-transisi",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-2.wav",
+      "t": 8.46,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "agitasi/1-judul",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-3.wav",
+      "t": 8.969,
+      "db": -19.0,
+      "bunyi": "whoosh-pendek",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "agitasi/2-remotion/trek0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 9.98,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "agitasi/2-remotion/trek1",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-3.wav",
+      "t": 10.48,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "agitasi/2-remotion/trek2",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 10.98,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "agitasi/2-remotion/chip0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-2.wav",
+      "t": 11.58,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "agitasi/2-remotion/chip1",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-3.wav",
+      "t": 11.88,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "agitasi/2-remotion/chip2",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-1.wav",
+      "t": 12.18,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "agitasi/2-remotion/chip3",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-2.wav",
+      "t": 12.48,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "agitasi/2-remotion/chip4",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-3.wav",
+      "t": 12.78,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/0-transisi",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-1.wav",
+      "t": 14.46,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/1-judul",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-1.wav",
+      "t": 14.969,
+      "db": -19.0,
+      "bunyi": "whoosh-pendek",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/masuk",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ketuk-3.wav",
+      "t": 15.4,
+      "db": -23.0,
+      "bunyi": "ketuk",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-1.wav",
+      "t": 15.98,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf1",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-2.wav",
+      "t": 16.025,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf2",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-3.wav",
+      "t": 16.071,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf3",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-4.wav",
+      "t": 16.116,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf5",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-1.wav",
+      "t": 16.207,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf6",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-2.wav",
+      "t": 16.253,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf7",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-3.wav",
+      "t": 16.298,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf8",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-4.wav",
+      "t": 16.344,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf10",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-1.wav",
+      "t": 16.435,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf11",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-2.wav",
+      "t": 16.48,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf12",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-3.wav",
+      "t": 16.525,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf14",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-4.wav",
+      "t": 16.616,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf15",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-1.wav",
+      "t": 16.662,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf16",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-2.wav",
+      "t": 16.707,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf17",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-3.wav",
+      "t": 16.753,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf19",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-4.wav",
+      "t": 16.844,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf20",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-1.wav",
+      "t": 16.889,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf21",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-2.wav",
+      "t": 16.935,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf22",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-3.wav",
+      "t": 16.98,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf23",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-4.wav",
+      "t": 17.025,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf24",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-1.wav",
+      "t": 17.071,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf25",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-2.wav",
+      "t": 17.116,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/huruf26",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\klik-ketik-3.wav",
+      "t": 17.162,
+      "db": -28.0,
+      "bunyi": "klik-ketik",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/enter",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 17.462,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/baris0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-3.wav",
+      "t": 17.612,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/baris1",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 17.962,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/2-remotion/baris2",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ding-benar-1.wav",
+      "t": 18.312,
+      "db": -18.0,
+      "bunyi": "ding-benar",
+      "kelas": "status",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/3-transisi",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-2.wav",
+      "t": 20.46,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/4-judul",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-2.wav",
+      "t": 20.969,
+      "db": -19.0,
+      "bunyi": "whoosh-pendek",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/5-remotion/masuk",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ketuk-1.wav",
+      "t": 21.4,
+      "db": -23.0,
+      "bunyi": "ketuk",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/5-remotion/ganti0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 22.18,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/5-remotion/lencana0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-1.wav",
+      "t": 22.38,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/5-remotion/ganti1",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-3.wav",
+      "t": 22.88,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/5-remotion/lencana1",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-2.wav",
+      "t": 23.08,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/5-remotion/ganti2",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 23.58,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/5-remotion/lencana2",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-3.wav",
+      "t": 23.78,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/5-remotion/ganti3",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 24.28,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/5-remotion/lencana3",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-1.wav",
+      "t": 24.48,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/6-transisi",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-1.wav",
+      "t": 26.46,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/7-judul",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-3.wav",
+      "t": 26.969,
+      "db": -19.0,
+      "bunyi": "whoosh-pendek",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/masuk",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ketuk-2.wav",
+      "t": 27.4,
+      "db": -23.0,
+      "bunyi": "ketuk",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/ubin0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-3.wav",
+      "t": 28.218,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/ubin5",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 28.432,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/ubin10",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 28.572,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/ubin15",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-3.wav",
+      "t": 28.69,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/ubin20",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 28.797,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/ubin25",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 28.9,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/ubin30",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-3.wav",
+      "t": 29.0,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/ubin35",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 29.101,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/ubin40",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 29.205,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/ubin45",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-3.wav",
+      "t": 29.316,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/ubin50",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 29.44,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/ubin55",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 29.596,
+      "db": -28.0,
+      "bunyi": "tick",
+      "kelas": "ketik",
+      "otomatis": true
+    },
+    {
+      "sumber": "solution/8-remotion/selesai",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-2.wav",
+      "t": 29.88,
+      "db": -18.0,
+      "bunyi": "pop",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "cta/0-transisi",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-2.wav",
+      "t": 32.46,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "cta/1-judul",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-1.wav",
+      "t": 32.969,
+      "db": -19.0,
+      "bunyi": "whoosh-pendek",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "cta/2-cta",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-3.wav",
+      "t": 33.6,
+      "db": -18.0,
+      "bunyi": "pop",
+      "kelas": "aksen",
+      "otomatis": true
+    }
+  ],
+  "audio": {
+    "musik": true,
+    "ducking": true,
+    "loudnorm_ukur": {
+      "input_i": "-33.28",
+      "input_tp": "-18.26",
+      "input_lra": "1.80",
+      "input_thresh": "-43.28",
+      "output_i": "-14.38",
+      "output_tp": "-1.50",
+      "output_lra": "1.10",
+      "output_thresh": "-24.38",
+      "normalization_type": "dynamic",
+      "target_offset": "0.38"
+    },
+    "sfx_bus": {
+      "jumlah": 92,
+      "puncak_db": -20.1
+    },
+    "akhir": {
+      "lufs": -14.0,
+      "true_peak": -1.5,
+      "koreksi": 0
+    }
+  },
+  "mask": {},
+  "motion_blur": {
+    "aktif": true,
+    "frame_terpakai": 15
+  },
+  "caption": {
+    "aktif": false,
+    "potongan": 0,
+    "sumber": null
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "mulai": 0,
+      "selesai": 3.5,
+      "anchor_kata": false
+    },
+    {
+      "id": "problem",
+      "mulai": 3.5,
+      "selesai": 9.0,
+      "anchor_kata": false
+    },
+    {
+      "id": "agitasi",
+      "mulai": 9.0,
+      "selesai": 15.0,
+      "anchor_kata": false
+    },
+    {
+      "id": "solution",
+      "mulai": 15.0,
+      "selesai": 33.0,
+      "anchor_kata": false
+    },
+    {
+      "id": "cta",
+      "mulai": 33.0,
+      "selesai": 37.0,
+      "anchor_kata": false
+    }
+  ],
+  "kata_mulai": [],
+  "peringatan": []
+}

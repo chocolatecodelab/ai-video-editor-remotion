@@ -1,0 +1,769 @@
+{
+  "ringkas": {
+    "video": "C:\\Users\\Nazar\\Downloads\\WhatsApp Video 2026-10-25 at 00.52.42.mp4",
+    "fps_analisis": 10.0,
+    "durasi": 64.2,
+    "segmen": 36,
+    "potongan_keras": 26,
+    "peristiwa": 9,
+    "shot": 36,
+    "rata_durasi_shot": 1.78,
+    "potong_per_menit": 33.6,
+    "ganti_visual_per_detik": 0.56,
+    "persen_wajah": 0.0,
+    "persen_berteks": 0.88
+  },
+  "gerak_per_detik": [
+    1.75,
+    1.47,
+    1.19,
+    0.65,
+    10.75,
+    1.25,
+    1.31,
+    0.23,
+    34.38,
+    8.26,
+    1.42,
+    0.68,
+    10.3,
+    0.63,
+    0.35,
+    0.72,
+    6.18,
+    2.46,
+    0.92,
+    5.97,
+    1.28,
+    0.47,
+    0.89,
+    5.4,
+    7.84,
+    0.27,
+    0.35,
+    0.29,
+    0.41,
+    6.71,
+    10.05,
+    1.83,
+    1.55,
+    12.66,
+    0.77,
+    0.35,
+    0.22,
+    11.81,
+    0.8,
+    4.9,
+    1.8,
+    1.32,
+    5.76,
+    2.31,
+    0.67,
+    19.57,
+    2.15,
+    0.45,
+    1.22,
+    0.26,
+    1.53,
+    2.39,
+    3.27,
+    1.22,
+    0.82,
+    3.0,
+    2.91,
+    0.58,
+    11.78,
+    12.15,
+    1.48,
+    0.44,
+    0.54,
+    0.34,
+    0.25
+  ],
+  "shot": [
+    {
+      "no": 1,
+      "mulai": 0.0,
+      "selesai": 4.3,
+      "durasi": 4.3,
+      "gerak": 1.29,
+      "puncak_gerak": 0,
+      "teks": 0.1079,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#06183B",
+        "#F8F9FA",
+        "#D1AA57"
+      ],
+      "awal": "potong",
+      "slot": "hook",
+      "alasan": "shot pertama"
+    },
+    {
+      "no": 2,
+      "mulai": 4.3,
+      "selesai": 4.6,
+      "durasi": 0.3,
+      "gerak": 7.53,
+      "puncak_gerak": 0,
+      "teks": 0.0343,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#041637",
+        "#0D234C",
+        "#D9DFE6"
+      ],
+      "awal": "potong",
+      "slot": "transisi",
+      "alasan": "segmen sangat pendek di antara potongan (perangkat masuk/keluar)"
+    },
+    {
+      "no": 3,
+      "mulai": 4.6,
+      "selesai": 8.1,
+      "durasi": 3.5,
+      "gerak": 1.85,
+      "puncak_gerak": 0,
+      "teks": 0.0398,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#06183B",
+        "#F3F2F0",
+        "#4A70E3"
+      ],
+      "awal": "potong",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 4,
+      "mulai": 8.1,
+      "selesai": 8.5,
+      "durasi": 0.4,
+      "gerak": 9.32,
+      "puncak_gerak": 0,
+      "teks": 0.0289,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#041738",
+        "#0C2961",
+        "#EAEEF1"
+      ],
+      "awal": "potong",
+      "slot": "transisi",
+      "alasan": "segmen sangat pendek di antara potongan (perangkat masuk/keluar)"
+    },
+    {
+      "no": 5,
+      "mulai": 8.5,
+      "selesai": 8.7,
+      "durasi": 0.2,
+      "gerak": 15.28,
+      "puncak_gerak": 0,
+      "teks": 0.0135,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#9DA6B3",
+        "#F5CCCC",
+        "#F8F9FB"
+      ],
+      "awal": "potong",
+      "slot": "transisi",
+      "alasan": "segmen sangat pendek di antara potongan (perangkat masuk/keluar)"
+    },
+    {
+      "no": 6,
+      "mulai": 8.7,
+      "selesai": 8.9,
+      "durasi": 0.2,
+      "gerak": 64.8,
+      "puncak_gerak": 0,
+      "teks": 0.0222,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#102245",
+        "#CE8185",
+        "#F3F2F5"
+      ],
+      "awal": "potong",
+      "slot": "transisi",
+      "alasan": "shot sangat pendek + gerak tinggi"
+    },
+    {
+      "no": 7,
+      "mulai": 8.9,
+      "selesai": 9.6,
+      "durasi": 0.7,
+      "gerak": 3.13,
+      "puncak_gerak": 0,
+      "teks": 0.0202,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#041637",
+        "#0E285D",
+        "#7D6C80"
+      ],
+      "awal": "potong",
+      "slot": "cutaway diam (couch-wall / paper-cut / gambar)",
+      "alasan": "tanpa wajah, gerak rendah"
+    },
+    {
+      "no": 8,
+      "mulai": 9.6,
+      "selesai": 12.3,
+      "durasi": 2.7,
+      "gerak": 2.74,
+      "puncak_gerak": 0,
+      "teks": 0.0432,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#06193C",
+        "#EBEAF7",
+        "#B58485"
+      ],
+      "awal": "potong",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 9,
+      "mulai": 12.3,
+      "selesai": 12.7,
+      "durasi": 0.4,
+      "gerak": 11.19,
+      "puncak_gerak": 0,
+      "teks": 0.0135,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#041638",
+        "#0C2A63",
+        "#EE9C9A"
+      ],
+      "awal": "potong",
+      "slot": "transisi",
+      "alasan": "segmen sangat pendek di antara potongan (perangkat masuk/keluar)"
+    },
+    {
+      "no": 10,
+      "mulai": 12.7,
+      "selesai": 16.8,
+      "durasi": 4.1,
+      "gerak": 0.88,
+      "puncak_gerak": 0,
+      "teks": 0.0507,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#06183C",
+        "#F7F8F9",
+        "#807C9A"
+      ],
+      "awal": "potong",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 11,
+      "mulai": 16.8,
+      "selesai": 19.8,
+      "durasi": 3.0,
+      "gerak": 2.63,
+      "puncak_gerak": 1,
+      "teks": 0.03,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#05183B",
+        "#F6F7F9",
+        "#B77D7D"
+      ],
+      "awal": "potong",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 12,
+      "mulai": 19.8,
+      "selesai": 23.6,
+      "durasi": 3.8,
+      "gerak": 0.99,
+      "puncak_gerak": 0,
+      "teks": 0.0454,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#05183B",
+        "#F4F3F0",
+        "#7083CE"
+      ],
+      "awal": "potong",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 13,
+      "mulai": 23.6,
+      "selesai": 23.8,
+      "durasi": 0.2,
+      "gerak": 21.93,
+      "puncak_gerak": 0,
+      "teks": 0.0563,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#041739",
+        "#26385D",
+        "#C5666B"
+      ],
+      "awal": "potong",
+      "slot": "transisi",
+      "alasan": "shot sangat pendek + gerak tinggi"
+    },
+    {
+      "no": 14,
+      "mulai": 23.8,
+      "selesai": 24.0,
+      "durasi": 0.2,
+      "gerak": 3.09,
+      "puncak_gerak": 0,
+      "teks": 0.0231,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#04173A",
+        "#E06766",
+        "#EEECEF"
+      ],
+      "awal": "potong",
+      "slot": "cutaway diam (couch-wall / paper-cut / gambar)",
+      "alasan": "tanpa wajah, gerak rendah"
+    },
+    {
+      "no": 15,
+      "mulai": 24.0,
+      "selesai": 29.7,
+      "durasi": 5.7,
+      "gerak": 1.21,
+      "puncak_gerak": 0,
+      "teks": 0.0679,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#05183B",
+        "#F3F6FA",
+        "#78809E"
+      ],
+      "awal": "potong",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 16,
+      "mulai": 29.7,
+      "selesai": 29.9,
+      "durasi": 0.2,
+      "gerak": 24.64,
+      "puncak_gerak": 0,
+      "teks": 0.0636,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#051638",
+        "#192D55",
+        "#D4D8E2"
+      ],
+      "awal": "potong",
+      "slot": "transisi",
+      "alasan": "shot sangat pendek + gerak tinggi"
+    },
+    {
+      "no": 17,
+      "mulai": 29.9,
+      "selesai": 30.1,
+      "durasi": 0.2,
+      "gerak": 41.57,
+      "puncak_gerak": 0,
+      "teks": 0.0265,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#061637",
+        "#7C899C",
+        "#0E2D66"
+      ],
+      "awal": "potong",
+      "slot": "transisi",
+      "alasan": "shot sangat pendek + gerak tinggi"
+    },
+    {
+      "no": 18,
+      "mulai": 30.1,
+      "selesai": 32.1,
+      "durasi": 2.0,
+      "gerak": 1.79,
+      "puncak_gerak": 0,
+      "teks": 0.027,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#07193D",
+        "#F3F2F2",
+        "#347DD8"
+      ],
+      "awal": "potong",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 19,
+      "mulai": 32.1,
+      "selesai": 33.3,
+      "durasi": 1.2,
+      "gerak": 2.44,
+      "puncak_gerak": 0,
+      "teks": 0.054,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#081E3E",
+        "#F4D6C2",
+        "#3E7EE9"
+      ],
+      "awal": "peristiwa",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 20,
+      "mulai": 33.3,
+      "selesai": 33.6,
+      "durasi": 0.3,
+      "gerak": 7.97,
+      "puncak_gerak": 0,
+      "teks": 0.0199,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#07183A",
+        "#0C2B68",
+        "#DDE2E8"
+      ],
+      "awal": "potong",
+      "slot": "transisi",
+      "alasan": "segmen sangat pendek di antara potongan (perangkat masuk/keluar)"
+    },
+    {
+      "no": 21,
+      "mulai": 33.6,
+      "selesai": 37.2,
+      "durasi": 3.6,
+      "gerak": 1.4,
+      "puncak_gerak": 0,
+      "teks": 0.0544,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#051738",
+        "#F5F6F8",
+        "#123F69"
+      ],
+      "awal": "potong",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 22,
+      "mulai": 37.2,
+      "selesai": 37.4,
+      "durasi": 0.2,
+      "gerak": 3.04,
+      "puncak_gerak": 0,
+      "teks": 0.0255,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#041638",
+        "#0D2A62",
+        "#E5EAEE"
+      ],
+      "awal": "potong",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 23,
+      "mulai": 37.4,
+      "selesai": 39.8,
+      "durasi": 2.4,
+      "gerak": 2.36,
+      "puncak_gerak": 0,
+      "teks": 0.0715,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#05183A",
+        "#F6F8F9",
+        "#B1A072"
+      ],
+      "awal": "potong",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 24,
+      "mulai": 39.8,
+      "selesai": 41.4,
+      "durasi": 1.6,
+      "gerak": 3.03,
+      "puncak_gerak": 0,
+      "teks": 0.0486,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#041637",
+        "#102B60",
+        "#DFE3E7"
+      ],
+      "awal": "potong",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 25,
+      "mulai": 41.4,
+      "selesai": 42.4,
+      "durasi": 1.0,
+      "gerak": 4.15,
+      "puncak_gerak": 0,
+      "teks": 0.0274,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#031638",
+        "#0D2961",
+        "#E4E8ED"
+      ],
+      "awal": "peristiwa",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 26,
+      "mulai": 42.4,
+      "selesai": 45.7,
+      "durasi": 3.3,
+      "gerak": 1.46,
+      "puncak_gerak": 1,
+      "teks": 0.0546,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#081A3D",
+        "#F8F9FA",
+        "#CEAB5D"
+      ],
+      "awal": "peristiwa",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 27,
+      "mulai": 45.7,
+      "selesai": 45.9,
+      "durasi": 0.2,
+      "gerak": 114.28,
+      "puncak_gerak": 0,
+      "teks": 0.0612,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#BCC3CE",
+        "#F9F8F5",
+        "#C14C41"
+      ],
+      "awal": "potong",
+      "slot": "transisi",
+      "alasan": "shot sangat pendek + gerak tinggi"
+    },
+    {
+      "no": 28,
+      "mulai": 45.9,
+      "selesai": 46.8,
+      "durasi": 0.9,
+      "gerak": 1.53,
+      "puncak_gerak": 0,
+      "teks": 0.0096,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#FBFBFC",
+        "#E7F1FC",
+        "#F25236"
+      ],
+      "awal": "potong",
+      "slot": "cutaway diam (couch-wall / paper-cut / gambar)",
+      "alasan": "tanpa wajah, gerak rendah"
+    },
+    {
+      "no": 29,
+      "mulai": 46.8,
+      "selesai": 51.1,
+      "durasi": 4.3,
+      "gerak": 1.0,
+      "puncak_gerak": 0,
+      "teks": 0.0669,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#F7F9FA",
+        "#174A69",
+        "#F05236"
+      ],
+      "awal": "peristiwa",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 30,
+      "mulai": 51.1,
+      "selesai": 51.8,
+      "durasi": 0.7,
+      "gerak": 0.98,
+      "puncak_gerak": 0,
+      "teks": 0.1093,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#F6F8FA",
+        "#1A5386",
+        "#F34F32"
+      ],
+      "awal": "peristiwa",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 31,
+      "mulai": 51.8,
+      "selesai": 52.7,
+      "durasi": 0.9,
+      "gerak": 1.95,
+      "puncak_gerak": 0,
+      "teks": 0.0252,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#FBFBFC",
+        "#E7F1FB",
+        "#5593BC"
+      ],
+      "awal": "peristiwa",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 32,
+      "mulai": 52.7,
+      "selesai": 55.3,
+      "durasi": 2.6,
+      "gerak": 1.64,
+      "puncak_gerak": 0,
+      "teks": 0.0347,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#F5F7FA",
+        "#6D91B5",
+        "#0B1D3A"
+      ],
+      "awal": "peristiwa",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 33,
+      "mulai": 55.3,
+      "selesai": 56.4,
+      "durasi": 1.1,
+      "gerak": 0.13,
+      "puncak_gerak": 0,
+      "teks": 0.0727,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#F5F8FA",
+        "#20222A",
+        "#637A94"
+      ],
+      "awal": "peristiwa",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 34,
+      "mulai": 56.4,
+      "selesai": 58.9,
+      "durasi": 2.5,
+      "gerak": 1.48,
+      "puncak_gerak": 1,
+      "teks": 0.0553,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#F4F7FA",
+        "#3B80D4",
+        "#112040"
+      ],
+      "awal": "peristiwa",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    },
+    {
+      "no": 35,
+      "mulai": 58.9,
+      "selesai": 59.1,
+      "durasi": 0.2,
+      "gerak": 78.6,
+      "puncak_gerak": 0,
+      "teks": 0.0269,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#1C2C4B",
+        "#213E73",
+        "#E1E8EE"
+      ],
+      "awal": "potong",
+      "slot": "transisi",
+      "alasan": "shot sangat pendek + gerak tinggi"
+    },
+    {
+      "no": 36,
+      "mulai": 59.1,
+      "selesai": 64.2,
+      "durasi": 5.1,
+      "gerak": 0.95,
+      "puncak_gerak": 0,
+      "teks": 0.0417,
+      "wajah": false,
+      "kotak_wajah": null,
+      "warna": [
+        "#05193B",
+        "#098666",
+        "#E7F1F0"
+      ],
+      "awal": "potong",
+      "slot": "perangkat cutaway (bukti/langkah)",
+      "alasan": "tanpa wajah, ada blok teks/UI"
+    }
+  ]
+}

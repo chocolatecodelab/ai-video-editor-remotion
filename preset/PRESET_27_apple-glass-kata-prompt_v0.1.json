@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "apple-glass-kata-prompt",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Preset fase 3 = gaya × koreografi. Beat-sheet awal dari koreografi; gaya & koreografi tanpa pin versi."
+  },
+  "label": "Apple Glass · Kata Prompt · Talking Head 30–40 s",
+  "format": "kata-prompt",
+  "deskripsi": "Apple Glass (kaca terang, biru sistem, halus) + Gaya 1-hari-1-istilah: kotak prompt mengetik, kartu info di samping kepala, cutaway kata dicoret, kuis salah/benar, CTA.",
+  "kapan": "Menjelaskan satu istilah/teknik/prompt; seri edukasi pendek dengan wajah.",
+  "gaya": "apple-glass",
+  "koreografi": "kata-prompt",
+  "manifest": {
+    "warna": {
+      "filter": "eq=brightness=0.02:saturation=1.02"
+    }
+  }
+}

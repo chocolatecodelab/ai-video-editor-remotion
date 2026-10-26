@@ -1,0 +1,208 @@
+{
+  "_meta": {
+    "id": "glass-tech-produk",
+    "versi": "0.3",
+    "status": "draft",
+    "catatan": "v0.3: gaya & template tanpa pin versi (selalu versi aktif; proyek tetap mengunci versi saat dibuat). v0.2: nama baru (dulu produk-glass); gaya & template v0.2. Kombinasi efek untuk showcase produk/aplikasi. Klip eksternal dibuat dulu (lihat aset/PERLU.md di proyek)."
+  },
+  "label": "Glass Tech · Showcase Produk",
+  "format": "produk",
+  "deskripsi": "Showcase produk/aplikasi 60–90 s: orbit produk + judul kaca, dunia UI, mockup ponsel, zoom detail, ringkasan checklist.",
+  "kapan": "Promosi aplikasi/SaaS/gadget, demo fitur, peluncuran produk.",
+  "gaya": "glass-tech",
+  "template": "explainer",
+  "efek": [
+    "orbit@0.1",
+    "glass-type@0.1",
+    "ui-world@0.1",
+    "phone-mockup@0.1",
+    "digital-zoom@0.1",
+    "checklist@0.2"
+  ],
+  "butuh": {
+    "rekaman": true,
+    "roto": false,
+    "remotion": true
+  },
+  "aset": [
+    {
+      "file": "aset/broll/orbit.mp4",
+      "efek": "orbit",
+      "keterangan": "Produk/logo berputar di tengah, 3,5 s."
+    },
+    {
+      "file": "aset/broll/ui-world.mp4",
+      "efek": "ui-world",
+      "keterangan": "Antarmuka produk melayang dalam ruang 3D, 5 s."
+    },
+    {
+      "file": "aset/grafis/mockup.png",
+      "efek": "phone-mockup",
+      "rasio": "1:2",
+      "keterangan": "Screenshot aplikasi di dalam bingkai ponsel, latar transparan."
+    }
+  ],
+  "manifest": {
+    "platform": [
+      "reels",
+      "tiktok",
+      "shorts"
+    ],
+    "warna": {
+      "filter": "eq=contrast=1.03:saturation=0.96,colortemperature=6200"
+    },
+    "transkrip": {
+      "bahasa": "id",
+      "model": "large-v3"
+    }
+  },
+  "beat_sheet": {
+    "_catatan": "Dibuat dari preset glass-tech-produk@0.3. Waktu = detik; ganti dengan anchor {\"kata\": …} setelah transkrip. Durasi elemen ber-efek harus tetap dalam rentang modul efeknya (dicek QA).",
+    "caption": {
+      "aktif": true,
+      "posisi": "bawah",
+      "kecuali": [
+        "hook",
+        "ringkasan"
+      ]
+    },
+    "beats": [
+      {
+        "id": "hook",
+        "beat": "Hook",
+        "mulai": 0,
+        "selesai": 3.5,
+        "elemen": [
+          {
+            "tipe": "broll",
+            "efek": "orbit",
+            "file": "aset/broll/orbit.mp4",
+            "sfx": true
+          },
+          {
+            "tipe": "judul",
+            "efek": "glass-type",
+            "teks": "TODO nama *produk*",
+            "posisi": "atas",
+            "latar": "panel",
+            "masuk": "naik",
+            "mulai": 0.3,
+            "durasi": 3.0
+          }
+        ]
+      },
+      {
+        "id": "konteks",
+        "beat": "Konteks",
+        "mulai": 3.5,
+        "selesai": 15.0,
+        "elemen": [
+          {
+            "tipe": "broll",
+            "efek": "ui-world",
+            "file": "aset/broll/ui-world.mp4",
+            "mulai": 4.0,
+            "durasi": 5.0,
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "poin-1",
+        "beat": "Poin 1",
+        "mulai": 15.0,
+        "selesai": 30.0,
+        "elemen": [
+          {
+            "tipe": "gambar",
+            "efek": "phone-mockup",
+            "file": "aset/grafis/mockup.png",
+            "lebar": 0.5,
+            "posisi": "tengah",
+            "masuk": "naik",
+            "durasi": 5.0,
+            "sfx": true
+          },
+          {
+            "tipe": "teks",
+            "teks": "TODO fitur *utama*",
+            "posisi": "atas",
+            "latar": "panel",
+            "mulai": 15.5,
+            "durasi": 4.0
+          }
+        ]
+      },
+      {
+        "id": "poin-2",
+        "beat": "Poin 2",
+        "mulai": 30.0,
+        "selesai": 45.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO poin *2*",
+            "teks": "TODO manfaat singkat",
+            "posisi": "atas",
+            "durasi": 5.0,
+            "sfx": true
+          },
+          {
+            "tipe": "push",
+            "efek": "digital-zoom",
+            "mulai": {
+              "beat": "poin-2",
+              "ujung": "selesai",
+              "offset": -1.5
+            },
+            "selesai": {
+              "beat": "poin-2",
+              "ujung": "selesai"
+            },
+            "gerak": 1.2,
+            "fokus": [
+              0.5,
+              0.35
+            ],
+            "easing": "tegas",
+            "sfx": "whoosh"
+          }
+        ]
+      },
+      {
+        "id": "ringkasan",
+        "beat": "Ringkasan",
+        "mulai": 45.0,
+        "selesai": 52.0,
+        "elemen": [
+          {
+            "tipe": "remotion",
+            "efek": "checklist",
+            "judul": "Kenapa *TODO produk*",
+            "item": [
+              "TODO manfaat 1",
+              "TODO manfaat 2",
+              "TODO manfaat 3"
+            ],
+            "stagger": 0.8,
+            "posisi": "tengah",
+            "sfx": true,
+            "sfx_item": "pop"
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "beat": "CTA",
+        "mulai": 52.0,
+        "elemen": [
+          {
+            "tipe": "cta",
+            "teks": "TODO coba sekarang",
+            "posisi": "tengah"
+          }
+        ]
+      }
+    ]
+  }
+}

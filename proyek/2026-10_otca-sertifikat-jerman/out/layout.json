@@ -1,0 +1,4136 @@
+{
+  "proyek": "2026-10_otca-sertifikat-jerman",
+  "resolusi": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "durasi": 58.667,
+  "zona_aman": [
+    108,
+    250,
+    960,
+    1520
+  ],
+  "elemen": [
+    {
+      "id": "hook/0-gambar",
+      "tipe": "gambar",
+      "beat": "hook",
+      "teks": null,
+      "mulai": 0.0,
+      "selesai": 58.6,
+      "delay": 0.0,
+      "bbox": [
+        422.5,
+        250.3,
+        657.5,
+        312.3
+      ],
+      "bbox_animasi": [
+        422.5,
+        250.3,
+        657.5,
+        312.3
+      ],
+      "masuk": "fade",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": null,
+      "fungsi": "konteks",
+      "bbox_teks": [
+        422.5,
+        250.3,
+        657.5,
+        312.3
+      ],
+      "file": "aset/grafis/logo-otca.png",
+      "sfx_mati": true
+    },
+    {
+      "id": "hook/2-depth",
+      "tipe": "depth",
+      "beat": "hook",
+      "teks": "STUDI JERMAN",
+      "mulai": 0.875,
+      "selesai": 3.247,
+      "delay": 0.0,
+      "bbox": [
+        112.5,
+        452.5,
+        955.5,
+        894.5
+      ],
+      "bbox_animasi": [
+        103.9,
+        446.2,
+        963.8,
+        941.4
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "Halo",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "fungsi": "hook",
+      "bbox_teks": [
+        116.5,
+        456.5,
+        951.5,
+        890.5
+      ],
+      "ukuran": 185,
+      "baris": 2,
+      "karakter_baris_maks": 6,
+      "kata": 2,
+      "warna": [
+        "#CB9D31",
+        "#FDF1A4",
+        "#B3822C"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "depth",
+      "depth_tata": {
+        "skala": 1.0,
+        "kepala_y": 761,
+        "tutup_rencana": 0.25
+      },
+      "tertutup": {
+        "n": 71,
+        "jumlah": 2.315,
+        "maks": 0.087
+      }
+    },
+    {
+      "id": "konteks/1-info",
+      "tipe": "info",
+      "beat": "konteks",
+      "teks": "Sertifikat *Bahasa Jerman* bukti level bahasa",
+      "mulai": 4.207,
+      "selesai": 7.799,
+      "delay": 0.0,
+      "bbox": [
+        276.0,
+        345.0,
+        792.0,
+        629.0
+      ],
+      "bbox_animasi": [
+        276.0,
+        345.0,
+        792.0,
+        629.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "sertifikat",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": -0.15
+      },
+      "fungsi": "konteks",
+      "latar": "panel"
+    },
+    {
+      "id": "konteks/1-info/teks",
+      "tipe": "teks-info",
+      "beat": "konteks",
+      "teks": "Sertifikat *Bahasa Jerman* bukti level bahasa",
+      "mulai": 4.207,
+      "selesai": 7.799,
+      "delay": 0.0,
+      "bbox": [
+        305.0,
+        374.0,
+        763.0,
+        600.0
+      ],
+      "bbox_animasi": [
+        305.0,
+        374.0,
+        763.0,
+        600.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "konteks/1-info",
+      "kontras": {
+        "t": 6.067,
+        "l_p10": 0.0034,
+        "l_p90": 0.0055
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "sertifikat",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": -0.15
+      },
+      "fungsi": "konteks",
+      "bbox_teks": [
+        305.0,
+        374.0,
+        763.0,
+        600.0
+      ],
+      "ukuran": 40,
+      "baris": 3,
+      "karakter_baris_maks": 18,
+      "kata": 6,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null
+    },
+    {
+      "id": "konteks/2-kamera",
+      "tipe": "kamera",
+      "beat": "konteks",
+      "efek": "digital-zoom@0.2",
+      "mulai": 5.958,
+      "selesai": 7.799,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_animasi": null,
+      "induk": null,
+      "dekoratif": true,
+      "fungsi": "hasil",
+      "anchor": {
+        "kata": "belum",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "anchor_kata": true,
+      "butuh_mask": false,
+      "masuk": "digital-zoom",
+      "keluar": "digital-zoom"
+    },
+    {
+      "id": "konteks/3-chip",
+      "tipe": "chip",
+      "beat": "konteks",
+      "teks": "Belum tentu *siap studi*",
+      "mulai": 8.28,
+      "selesai": 10.121,
+      "delay": 0.0,
+      "bbox": [
+        181.5,
+        345.0,
+        886.5,
+        435.0
+      ],
+      "bbox_animasi": [
+        181.5,
+        345.0,
+        886.5,
+        435.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "siap",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "fungsi": "masalah",
+      "latar": "panel",
+      "status": "salah"
+    },
+    {
+      "id": "konteks/3-chip/teks",
+      "tipe": "teks-chip",
+      "beat": "konteks",
+      "teks": "Belum tentu *siap studi*",
+      "mulai": 8.28,
+      "selesai": 10.121,
+      "delay": 0.0,
+      "bbox": [
+        209.5,
+        359.0,
+        858.5,
+        421.0
+      ],
+      "bbox_animasi": [
+        209.5,
+        359.0,
+        858.5,
+        421.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "konteks/3-chip",
+      "kontras": {
+        "t": 9.267,
+        "l_p10": 0.0042,
+        "l_p90": 0.007
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "siap",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "fungsi": "masalah",
+      "bbox_teks": [
+        209.5,
+        359.0,
+        858.5,
+        421.0
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 22,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null
+    },
+    {
+      "id": "poin-1/0-remotion",
+      "tipe": "remotion",
+      "komposisi": "SebelumSesudah",
+      "beat": "poin-1",
+      "teks": "Level di sertifikat Kemampuan nyata",
+      "mulai": 10.681,
+      "selesai": 19.907,
+      "delay": 0.0,
+      "bbox": [
+        108.0,
+        345.0,
+        960.0,
+        703.0
+      ],
+      "bbox_teks": [
+        108.0,
+        345.0,
+        960.0,
+        703.0
+      ],
+      "bbox_animasi": [
+        108.0,
+        345.0,
+        960.0,
+        725.0
+      ],
+      "t_ukur": 19.634,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": {
+        "t": 19.633,
+        "l_p10": 0.0016,
+        "l_p90": 0.0028,
+        "sumber": "panel+latar"
+      },
+      "efek": "sebelum-sesudah@0.1",
+      "overlay": "SebelumSesudah-717e8168c3231b3e.mov",
+      "kaca": true,
+      "anchor": {
+        "kata": "sertifikat",
+        "ke": 2,
+        "ujung": "mulai",
+        "offset": -0.2
+      },
+      "panel_opasitas": 0.9,
+      "panel_warna": null,
+      "dekoratif": false,
+      "ukuran": 48,
+      "warna": [
+        "#CB9D31",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "item": null,
+      "stagger": null,
+      "fungsi": "membantah",
+      "posisi": "atas",
+      "tutup_wajah_px": 0.0
+    },
+    {
+      "id": "poin-1/1-kamera",
+      "tipe": "kamera",
+      "beat": "poin-1",
+      "efek": "pull-back-reveal@0.2",
+      "mulai": 20.107,
+      "selesai": 23.24,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_animasi": null,
+      "induk": null,
+      "dekoratif": true,
+      "fungsi": "hasil",
+      "anchor": {
+        "kata": "dalam",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "anchor_kata": true,
+      "butuh_mask": false,
+      "masuk": "pull-back-reveal",
+      "keluar": "pull-back-reveal"
+    },
+    {
+      "id": "poin-1/2-chip",
+      "tipe": "chip",
+      "beat": "poin-1",
+      "teks": "Akademik · *sehari-hari*",
+      "mulai": 20.908,
+      "selesai": 23.24,
+      "delay": 0.0,
+      "bbox": [
+        214.0,
+        345.0,
+        854.0,
+        435.0
+      ],
+      "bbox_animasi": [
+        214.0,
+        345.0,
+        854.0,
+        435.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "akademik",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": -0.1
+      },
+      "fungsi": "konteks",
+      "latar": "panel",
+      "status": "info"
+    },
+    {
+      "id": "poin-1/2-chip/teks",
+      "tipe": "teks-chip",
+      "beat": "poin-1",
+      "teks": "Akademik · *sehari-hari*",
+      "mulai": 20.908,
+      "selesai": 23.24,
+      "delay": 0.0,
+      "bbox": [
+        242.0,
+        359.0,
+        826.0,
+        421.0
+      ],
+      "bbox_animasi": [
+        242.0,
+        359.0,
+        826.0,
+        421.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "poin-1/2-chip",
+      "kontras": {
+        "t": 22.133,
+        "l_p10": 0.0052,
+        "l_p90": 0.0089
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "akademik",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": -0.1
+      },
+      "fungsi": "konteks",
+      "bbox_teks": [
+        242.0,
+        359.0,
+        826.0,
+        421.0
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 22,
+      "kata": 3,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null
+    },
+    {
+      "id": "poin-2/1-depth",
+      "tipe": "depth",
+      "beat": "poin-2",
+      "teks": "KULIAH",
+      "mulai": 23.53,
+      "selesai": 25.831,
+      "delay": 0.0,
+      "bbox": [
+        118.0,
+        546.0,
+        950.0,
+        801.0
+      ],
+      "bbox_animasi": [
+        118.0,
+        546.0,
+        950.0,
+        838.0
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "perkuliahan",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "fungsi": "konteks",
+      "bbox_teks": [
+        122.0,
+        550.0,
+        946.0,
+        797.0
+      ],
+      "ukuran": 202,
+      "baris": 1,
+      "karakter_baris_maks": 6,
+      "kata": 1,
+      "warna": [
+        "#CB9D31",
+        "#FDF1A4",
+        "#B3822C"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "depth",
+      "depth_tata": {
+        "skala": 1.0,
+        "kepala_y": 713,
+        "tutup_rencana": 0.25
+      },
+      "tertutup": {
+        "n": 69,
+        "jumlah": 1.8574,
+        "maks": 0.05
+      }
+    },
+    {
+      "id": "poin-2/2-remotion",
+      "tipe": "remotion",
+      "komposisi": "Langkah",
+      "beat": "poin-2",
+      "teks": "Paham dosen Paham materi Diskusi Berpendapat",
+      "mulai": 25.931,
+      "selesai": 34.348,
+      "delay": 0.0,
+      "bbox": [
+        108.0,
+        345.0,
+        960.0,
+        573.0
+      ],
+      "bbox_teks": [
+        108.0,
+        345.0,
+        960.0,
+        573.0
+      ],
+      "bbox_animasi": [
+        108.0,
+        345.0,
+        960.0,
+        595.0
+      ],
+      "t_ukur": 34.075,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": {
+        "t": 34.067,
+        "l_p10": 0.0016,
+        "l_p90": 0.0028,
+        "sumber": "panel+latar"
+      },
+      "efek": "langkah@0.1",
+      "overlay": "Langkah-163247fd8d3033e8.mov",
+      "kaca": true,
+      "anchor": {
+        "kata": "dosen",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": -0.3
+      },
+      "panel_opasitas": 0.9,
+      "panel_warna": null,
+      "dekoratif": false,
+      "ukuran": 48,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "item": 4,
+      "stagger": 0.08,
+      "fungsi": "proses",
+      "posisi": "atas",
+      "tutup_wajah_px": 0.0
+    },
+    {
+      "id": "poin-3/0-remotion",
+      "tipe": "remotion",
+      "komposisi": "Coret",
+      "beat": "poin-3",
+      "teks": "fokus.txt level sertifikat",
+      "mulai": 34.598,
+      "selesai": 38.421,
+      "delay": 0.0,
+      "bbox": [
+        240.0,
+        345.0,
+        828.0,
+        500.0
+      ],
+      "bbox_teks": [
+        240.0,
+        345.0,
+        828.0,
+        500.0
+      ],
+      "bbox_animasi": [
+        240.0,
+        345.0,
+        828.0,
+        522.0
+      ],
+      "t_ukur": 38.148,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": {
+        "t": 38.133,
+        "l_p10": 0.0017,
+        "l_p90": 0.0027,
+        "sumber": "panel+latar"
+      },
+      "efek": "coret@0.1",
+      "overlay": "Coret-61571d830774850b.mov",
+      "kaca": true,
+      "anchor": {
+        "kata": "Jadi",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": 0.1
+      },
+      "panel_opasitas": 0.9,
+      "panel_warna": null,
+      "dekoratif": false,
+      "ukuran": 48,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "item": null,
+      "stagger": null,
+      "fungsi": "membantah",
+      "posisi": "atas",
+      "tutup_wajah_px": 0.0
+    },
+    {
+      "id": "poin-3/1-remotion",
+      "tipe": "remotion",
+      "komposisi": "Checklist",
+      "beat": "poin-3",
+      "teks": "Mendengar Berbicara Menulis Membaca",
+      "mulai": 39.201,
+      "selesai": 45.827,
+      "delay": 0.0,
+      "bbox": [
+        108.0,
+        322.0,
+        960.0,
+        701.0
+      ],
+      "bbox_teks": [
+        108.0,
+        322.0,
+        960.0,
+        701.0
+      ],
+      "bbox_animasi": [
+        108.0,
+        322.0,
+        960.0,
+        723.0
+      ],
+      "t_ukur": 45.554,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": {
+        "t": 45.567,
+        "l_p10": 0.0076,
+        "l_p90": 0.0176,
+        "sumber": "panel+latar"
+      },
+      "efek": "checklist@0.3",
+      "overlay": "Checklist-1ad1da38f3882606.mov",
+      "kaca": true,
+      "anchor": {
+        "kata": "kemampuan",
+        "ke": 2,
+        "ujung": "mulai",
+        "offset": 0.3
+      },
+      "panel_opasitas": 0.62,
+      "panel_warna": null,
+      "dekoratif": false,
+      "ukuran": 48,
+      "warna": [
+        "#CB9D31",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "item": 4,
+      "stagger": 0.95,
+      "fungsi": "ringkasan",
+      "posisi": "atas",
+      "tutup_wajah_px": 0.0
+    },
+    {
+      "id": "ringkasan/0-chip",
+      "tipe": "chip",
+      "beat": "ringkasan",
+      "teks": "FAKTA: skill *terpakai*",
+      "mulai": 48.189,
+      "selesai": 50.031,
+      "delay": 0.0,
+      "bbox": [
+        210.0,
+        345.0,
+        858.0,
+        435.0
+      ],
+      "bbox_animasi": [
+        210.0,
+        345.0,
+        858.0,
+        435.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "bukan",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "fungsi": "hasil",
+      "latar": "panel",
+      "status": "benar"
+    },
+    {
+      "id": "ringkasan/0-chip/teks",
+      "tipe": "teks-chip",
+      "beat": "ringkasan",
+      "teks": "FAKTA: skill *terpakai*",
+      "mulai": 48.189,
+      "selesai": 50.031,
+      "delay": 0.0,
+      "bbox": [
+        238.0,
+        359.0,
+        830.0,
+        421.0
+      ],
+      "bbox_animasi": [
+        238.0,
+        359.0,
+        830.0,
+        421.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "ringkasan/0-chip",
+      "kontras": {
+        "t": 49.167,
+        "l_p10": 0.0044,
+        "l_p90": 0.0074
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "bukan",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "fungsi": "hasil",
+      "bbox_teks": [
+        238.0,
+        359.0,
+        830.0,
+        421.0
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 21,
+      "kata": 3,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null
+    },
+    {
+      "id": "ringkasan/1-depth",
+      "tipe": "depth",
+      "beat": "ringkasan",
+      "teks": "SIAP PAKAI",
+      "mulai": 50.432,
+      "selesai": 52.724,
+      "delay": 0.0,
+      "bbox": [
+        121.0,
+        348.0,
+        947.0,
+        919.0
+      ],
+      "bbox_animasi": [
+        121.0,
+        348.0,
+        947.0,
+        957.1
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "kemampuan",
+        "ke": 3,
+        "ujung": "mulai"
+      },
+      "fungsi": "reveal",
+      "bbox_teks": [
+        125.0,
+        352.0,
+        943.0,
+        915.0
+      ],
+      "ukuran": 240,
+      "baris": 2,
+      "karakter_baris_maks": 5,
+      "kata": 2,
+      "warna": [
+        "#CB9D31",
+        "#FDF1A4",
+        "#B3822C"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "depth",
+      "depth_tata": {
+        "skala": 1.0,
+        "kepala_y": 744,
+        "tutup_rencana": 0.25
+      },
+      "tertutup": {
+        "n": 69,
+        "jumlah": 6.4175,
+        "maks": 0.105
+      }
+    },
+    {
+      "id": "cta/0-cta",
+      "tipe": "cta",
+      "beat": "cta",
+      "teks": "Klik link di bio",
+      "mulai": 52.774,
+      "selesai": 58.667,
+      "delay": 0.0,
+      "bbox": [
+        252.5,
+        1214.0,
+        815.5,
+        1345.0
+      ],
+      "bbox_animasi": [
+        252.5,
+        1214.0,
+        815.5,
+        1345.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "Klik",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "fungsi": "ajakan"
+    },
+    {
+      "id": "cta/0-cta/teks",
+      "tipe": "teks-cta",
+      "beat": "cta",
+      "teks": "Klik link di bio",
+      "mulai": 52.774,
+      "selesai": 58.667,
+      "delay": 0.0,
+      "bbox": [
+        292.5,
+        1236.0,
+        775.5,
+        1323.0
+      ],
+      "bbox_animasi": [
+        292.5,
+        1236.0,
+        775.5,
+        1323.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "cta/0-cta",
+      "kontras": {
+        "t": 55.8,
+        "l_p10": 0.3703,
+        "l_p90": 0.3703
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "Klik",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "fungsi": "ajakan",
+      "bbox_teks": [
+        296.5,
+        1240.0,
+        771.5,
+        1319.0
+      ],
+      "ukuran": 64,
+      "baris": 1,
+      "karakter_baris_maks": 16,
+      "kata": 4,
+      "warna": [
+        "#000000"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "subjudul"
+    },
+    {
+      "id": "cta/1-teks",
+      "tipe": "teks",
+      "beat": "cta",
+      "teks": "www.otca.co.id",
+      "mulai": 53.174,
+      "selesai": 58.667,
+      "delay": 0.0,
+      "bbox": [
+        326.5,
+        1409.0,
+        741.5,
+        1520.0
+      ],
+      "bbox_animasi": [
+        326.5,
+        1409.0,
+        741.5,
+        1563.4
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "Klik",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": 0.4
+      },
+      "fungsi": null,
+      "peran": "isi",
+      "latar": "panel"
+    },
+    {
+      "id": "cta/1-teks/teks",
+      "tipe": "teks-panel",
+      "beat": "cta",
+      "teks": "www.otca.co.id",
+      "mulai": 53.174,
+      "selesai": 58.667,
+      "delay": 0.0,
+      "bbox": [
+        354.5,
+        1423.5,
+        713.5,
+        1505.5
+      ],
+      "bbox_animasi": [
+        354.5,
+        1423.5,
+        713.5,
+        1548.9
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "cta/1-teks",
+      "kontras": {
+        "t": 56.0,
+        "l_p10": 0.0184,
+        "l_p90": 0.0249
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "Klik",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": 0.4
+      },
+      "fungsi": null,
+      "bbox_teks": [
+        370.5,
+        1439.5,
+        697.5,
+        1489.5
+      ],
+      "ukuran": 40,
+      "baris": 1,
+      "karakter_baris_maks": 14,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "isi"
+    },
+    {
+      "id": "cta/2-remotion",
+      "tipe": "remotion",
+      "komposisi": "Partikel",
+      "beat": "cta",
+      "teks": "",
+      "mulai": 52.774,
+      "selesai": 53.624,
+      "delay": 0.0,
+      "bbox": [
+        393.0,
+        1235.0,
+        705.0,
+        1519.0
+      ],
+      "bbox_teks": [
+        393.0,
+        1235.0,
+        705.0,
+        1519.0
+      ],
+      "bbox_animasi": [
+        393.0,
+        1235.0,
+        705.0,
+        1519.0
+      ],
+      "t_ukur": 53.351,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": "partikel@0.1",
+      "overlay": "Partikel-133429f39154573b.mov",
+      "kaca": true,
+      "anchor": {
+        "kata": "Klik",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "panel_opasitas": 0.62,
+      "panel_warna": null,
+      "dekoratif": true,
+      "ukuran": null,
+      "warna": [],
+      "stroke": 0,
+      "item": null,
+      "stagger": null,
+      "fungsi": "reveal",
+      "posisi": "tengah",
+      "sfx_gabung": true,
+      "tutup_wajah_px": 0.0
+    },
+    {
+      "id": "caption/000",
+      "tipe": "caption",
+      "teks": "Halo parents,",
+      "mulai": 0.875,
+      "selesai": 1.996,
+      "bbox": [
+        239.0,
+        1281.0,
+        829.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        320.0,
+        1362.0,
+        748.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        239.0,
+        1281.0,
+        829.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 1.433,
+        "l_p10": 0.1194,
+        "l_p90": 0.4044
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 13,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/001",
+      "tipe": "caption",
+      "teks": "hati-hati ya.",
+      "mulai": 1.996,
+      "selesai": 3.297,
+      "bbox": [
+        261.5,
+        1281.0,
+        806.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        342.5,
+        1362.0,
+        725.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        261.5,
+        1281.0,
+        806.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 2.633,
+        "l_p10": 0.2391,
+        "l_p90": 0.8946
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 13,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/002",
+      "tipe": "caption",
+      "teks": "Anak sudah",
+      "mulai": 3.297,
+      "selesai": 4.117,
+      "bbox": [
+        261.0,
+        1281.0,
+        807.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        342.0,
+        1362.0,
+        726.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        261.0,
+        1281.0,
+        807.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 3.7,
+        "l_p10": 0.2915,
+        "l_p90": 0.9426
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/003",
+      "tipe": "caption",
+      "teks": "punya sertifikat",
+      "mulai": 4.117,
+      "selesai": 4.958,
+      "bbox": [
+        197.5,
+        1281.0,
+        870.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        278.5,
+        1362.0,
+        789.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        197.5,
+        1281.0,
+        870.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 4.533,
+        "l_p10": 0.2603,
+        "l_p90": 0.906
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 16,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/004",
+      "tipe": "caption",
+      "teks": "bahasa Jerman,",
+      "mulai": 4.958,
+      "selesai": 5.958,
+      "bbox": [
+        198.5,
+        1281.0,
+        869.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        279.5,
+        1362.0,
+        788.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        198.5,
+        1281.0,
+        869.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 5.467,
+        "l_p10": 0.2817,
+        "l_p90": 0.9487
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 14,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/005",
+      "tipe": "caption",
+      "teks": "belum tentu",
+      "mulai": 5.958,
+      "selesai": 6.759,
+      "bbox": [
+        252.5,
+        1281.0,
+        815.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        333.5,
+        1362.0,
+        734.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        252.5,
+        1281.0,
+        815.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 6.367,
+        "l_p10": 0.1768,
+        "l_p90": 0.555
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/006",
+      "tipe": "caption",
+      "teks": "kemampuan bahasanya",
+      "mulai": 6.759,
+      "selesai": 7.96,
+      "bbox": [
+        247.0,
+        1212.0,
+        821.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        328.0,
+        1293.0,
+        740.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        247.0,
+        1212.0,
+        821.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 7.367,
+        "l_p10": 0.1893,
+        "l_p90": 0.6459
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 9,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/007",
+      "tipe": "caption",
+      "teks": "sudah siap",
+      "mulai": 7.96,
+      "selesai": 8.62,
+      "bbox": [
+        279.5,
+        1281.0,
+        788.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        360.5,
+        1362.0,
+        707.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        279.5,
+        1281.0,
+        788.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 8.3,
+        "l_p10": 0.1453,
+        "l_p90": 0.8397
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/008",
+      "tipe": "caption",
+      "teks": "untuk studi",
+      "mulai": 8.62,
+      "selesai": 9.14,
+      "bbox": [
+        265.5,
+        1281.0,
+        802.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        346.5,
+        1362.0,
+        721.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        265.5,
+        1281.0,
+        802.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 8.867,
+        "l_p10": 0.307,
+        "l_p90": 0.9672
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/009",
+      "tipe": "caption",
+      "teks": "di Jerman.",
+      "mulai": 9.14,
+      "selesai": 10.221,
+      "bbox": [
+        283.5,
+        1281.0,
+        784.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        364.5,
+        1362.0,
+        703.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        283.5,
+        1281.0,
+        784.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 9.667,
+        "l_p10": 0.3012,
+        "l_p90": 0.95
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/010",
+      "tipe": "caption",
+      "teks": "Karena sertifikat",
+      "mulai": 10.221,
+      "selesai": 11.622,
+      "bbox": [
+        183.5,
+        1281.0,
+        884.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        264.5,
+        1362.0,
+        803.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        183.5,
+        1281.0,
+        884.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 10.933,
+        "l_p10": 0.2871,
+        "l_p90": 0.9312
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 17,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/011",
+      "tipe": "caption",
+      "teks": "menunjukkan level",
+      "mulai": 11.622,
+      "selesai": 12.583,
+      "bbox": [
+        142.0,
+        1281.0,
+        926.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        223.0,
+        1362.0,
+        845.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        142.0,
+        1281.0,
+        926.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 12.1,
+        "l_p10": 0.197,
+        "l_p90": 0.8437
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 17,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/012",
+      "tipe": "caption",
+      "teks": "bahasa yang",
+      "mulai": 12.583,
+      "selesai": 13.343,
+      "bbox": [
+        248.0,
+        1281.0,
+        820.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        329.0,
+        1362.0,
+        739.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        248.0,
+        1281.0,
+        820.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 12.967,
+        "l_p10": 0.3108,
+        "l_p90": 0.9487
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/013",
+      "tipe": "caption",
+      "teks": "berhasil dicapai.",
+      "mulai": 13.343,
+      "selesai": 14.704,
+      "bbox": [
+        191.0,
+        1281.0,
+        877.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        272.0,
+        1362.0,
+        796.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        191.0,
+        1281.0,
+        877.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 14.033,
+        "l_p10": 0.2709,
+        "l_p90": 0.9186
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 17,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/014",
+      "tipe": "caption",
+      "teks": "Tapi belum",
+      "mulai": 14.704,
+      "selesai": 15.725,
+      "bbox": [
+        272.0,
+        1281.0,
+        796.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        353.0,
+        1362.0,
+        715.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        272.0,
+        1281.0,
+        796.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 15.2,
+        "l_p10": 0.1756,
+        "l_p90": 0.8441
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/015",
+      "tipe": "caption",
+      "teks": "tentu menggambarkan",
+      "mulai": 15.725,
+      "selesai": 16.945,
+      "bbox": [
+        171.0,
+        1212.0,
+        897.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        252.0,
+        1293.0,
+        816.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        171.0,
+        1212.0,
+        897.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 16.333,
+        "l_p10": 0.2192,
+        "l_p90": 0.8715
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 13,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/016",
+      "tipe": "caption",
+      "teks": "seberapa siap",
+      "mulai": 16.945,
+      "selesai": 17.866,
+      "bbox": [
+        230.0,
+        1281.0,
+        838.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        311.0,
+        1362.0,
+        757.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        230.0,
+        1281.0,
+        838.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 17.4,
+        "l_p10": 0.2738,
+        "l_p90": 0.9065
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 13,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/017",
+      "tipe": "caption",
+      "teks": "sih anak",
+      "mulai": 17.866,
+      "selesai": 18.466,
+      "bbox": [
+        318.0,
+        1281.0,
+        750.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        399.0,
+        1362.0,
+        669.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        318.0,
+        1281.0,
+        750.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 18.167,
+        "l_p10": 0.2185,
+        "l_p90": 0.9032
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 8,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/018",
+      "tipe": "caption",
+      "teks": "menggunakan bahasa",
+      "mulai": 18.466,
+      "selesai": 19.307,
+      "bbox": [
+        90.0,
+        1281.0,
+        978.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        171.0,
+        1362.0,
+        897.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        90.0,
+        1281.0,
+        978.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 18.9,
+        "l_p10": 0.2483,
+        "l_p90": 0.9104
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 18,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/019",
+      "tipe": "caption",
+      "teks": "Jerman",
+      "mulai": 19.307,
+      "selesai": 20.107,
+      "bbox": [
+        331.0,
+        1281.0,
+        737.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        412.0,
+        1362.0,
+        656.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        331.0,
+        1281.0,
+        737.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 19.7,
+        "l_p10": 0.2447,
+        "l_p90": 0.9366
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 6,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/020",
+      "tipe": "caption",
+      "teks": "dalam situasi",
+      "mulai": 20.107,
+      "selesai": 21.008,
+      "bbox": [
+        238.5,
+        1281.0,
+        829.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        319.5,
+        1362.0,
+        748.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        238.5,
+        1281.0,
+        829.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 20.567,
+        "l_p10": 0.1032,
+        "l_p90": 0.4592
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 13,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/021",
+      "tipe": "caption",
+      "teks": "akademik dan",
+      "mulai": 21.008,
+      "selesai": 21.829,
+      "bbox": [
+        221.0,
+        1281.0,
+        847.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        302.0,
+        1362.0,
+        766.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        221.0,
+        1281.0,
+        847.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 21.433,
+        "l_p10": 0.0807,
+        "l_p90": 0.4661
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 12,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/022",
+      "tipe": "caption",
+      "teks": "juga sehari-harinya.",
+      "mulai": 21.829,
+      "selesai": 23.39,
+      "bbox": [
+        214.5,
+        1212.0,
+        853.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        295.5,
+        1293.0,
+        772.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        214.5,
+        1212.0,
+        853.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 22.6,
+        "l_p10": 0.0824,
+        "l_p90": 0.5619
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 15,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/023",
+      "tipe": "caption",
+      "teks": "Di perkuliahan,",
+      "mulai": 23.39,
+      "selesai": 24.51,
+      "bbox": [
+        208.5,
+        1281.0,
+        859.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        289.5,
+        1362.0,
+        778.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        208.5,
+        1281.0,
+        859.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 23.967,
+        "l_p10": 0.2969,
+        "l_p90": 0.9407
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 15,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/024",
+      "tipe": "caption",
+      "teks": "anak perlu",
+      "mulai": 24.51,
+      "selesai": 25.191,
+      "bbox": [
+        281.0,
+        1281.0,
+        787.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        362.0,
+        1362.0,
+        706.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        281.0,
+        1281.0,
+        787.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 24.867,
+        "l_p10": 0.286,
+        "l_p90": 0.9322
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/025",
+      "tipe": "caption",
+      "teks": "memahami penjelasan",
+      "mulai": 25.191,
+      "selesai": 26.231,
+      "bbox": [
+        268.0,
+        1212.0,
+        800.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        349.0,
+        1293.0,
+        719.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        268.0,
+        1212.0,
+        800.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 25.7,
+        "l_p10": 0.1393,
+        "l_p90": 0.632
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 10,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/026",
+      "tipe": "caption",
+      "teks": "dosen.",
+      "mulai": 26.231,
+      "selesai": 27.252,
+      "bbox": [
+        346.0,
+        1281.0,
+        722.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        427.0,
+        1362.0,
+        641.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        346.0,
+        1281.0,
+        722.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 26.733,
+        "l_p10": 0.256,
+        "l_p90": 0.938
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 6,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/027",
+      "tipe": "caption",
+      "teks": "memahami materi,",
+      "mulai": 27.252,
+      "selesai": 28.653,
+      "bbox": [
+        144.5,
+        1281.0,
+        923.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        225.5,
+        1362.0,
+        842.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        144.5,
+        1281.0,
+        923.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 27.967,
+        "l_p10": 0.2773,
+        "l_p90": 0.9353
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 16,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/028",
+      "tipe": "caption",
+      "teks": "berdiskusi,",
+      "mulai": 28.993,
+      "selesai": 30.415,
+      "bbox": [
+        277.5,
+        1281.0,
+        790.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        358.5,
+        1362.0,
+        709.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        277.5,
+        1281.0,
+        790.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 29.7,
+        "l_p10": 0.2528,
+        "l_p90": 0.9322
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/029",
+      "tipe": "caption",
+      "teks": "bertanya,",
+      "mulai": 30.415,
+      "selesai": 31.656,
+      "bbox": [
+        300.5,
+        1281.0,
+        767.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        381.5,
+        1362.0,
+        686.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        300.5,
+        1281.0,
+        767.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 31.033,
+        "l_p10": 0.2402,
+        "l_p90": 0.8883
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 9,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/030",
+      "tipe": "caption",
+      "teks": "sampai menyampaikan",
+      "mulai": 31.656,
+      "selesai": 32.796,
+      "bbox": [
+        200.5,
+        1212.0,
+        867.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        281.5,
+        1293.0,
+        786.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        200.5,
+        1212.0,
+        867.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 32.233,
+        "l_p10": 0.2245,
+        "l_p90": 0.8887
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 12,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/031",
+      "tipe": "caption",
+      "teks": "pendapat dengan",
+      "mulai": 32.796,
+      "selesai": 33.617,
+      "bbox": [
+        164.5,
+        1281.0,
+        903.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        245.5,
+        1362.0,
+        822.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        164.5,
+        1281.0,
+        903.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 33.2,
+        "l_p10": 0.2702,
+        "l_p90": 0.9032
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 15,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/032",
+      "tipe": "caption",
+      "teks": "jelas.",
+      "mulai": 33.617,
+      "selesai": 34.177,
+      "bbox": [
+        371.5,
+        1281.0,
+        696.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        452.5,
+        1362.0,
+        615.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        371.5,
+        1281.0,
+        696.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 33.9,
+        "l_p10": 0.2529,
+        "l_p90": 0.8967
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 6,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/033",
+      "tipe": "caption",
+      "teks": "Jadi jangan",
+      "mulai": 34.498,
+      "selesai": 35.258,
+      "bbox": [
+        266.0,
+        1281.0,
+        802.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        347.0,
+        1362.0,
+        721.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        266.0,
+        1281.0,
+        802.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 34.867,
+        "l_p10": 0.3134,
+        "l_p90": 0.9299
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/034",
+      "tipe": "caption",
+      "teks": "hanya fokus",
+      "mulai": 35.258,
+      "selesai": 35.879,
+      "bbox": [
+        254.5,
+        1281.0,
+        813.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        335.5,
+        1362.0,
+        732.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        254.5,
+        1281.0,
+        813.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 35.567,
+        "l_p10": 0.2742,
+        "l_p90": 0.9014
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/035",
+      "tipe": "caption",
+      "teks": "pada level",
+      "mulai": 35.879,
+      "selesai": 36.479,
+      "bbox": [
+        288.0,
+        1281.0,
+        780.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        369.0,
+        1362.0,
+        699.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        288.0,
+        1281.0,
+        780.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 36.167,
+        "l_p10": 0.1108,
+        "l_p90": 0.777
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/036",
+      "tipe": "caption",
+      "teks": "sertifikat.",
+      "mulai": 36.479,
+      "selesai": 37.5,
+      "bbox": [
+        299.0,
+        1281.0,
+        769.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        380.0,
+        1362.0,
+        688.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        299.0,
+        1281.0,
+        769.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 37.0,
+        "l_p10": 0.2547,
+        "l_p90": 0.9116
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/037",
+      "tipe": "caption",
+      "teks": "Perhatikan juga",
+      "mulai": 37.5,
+      "selesai": 38.521,
+      "bbox": [
+        194.0,
+        1281.0,
+        874.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        275.0,
+        1362.0,
+        793.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        194.0,
+        1281.0,
+        874.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 38.0,
+        "l_p10": 0.3009,
+        "l_p90": 0.9433
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 15,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/038",
+      "tipe": "caption",
+      "teks": "apakah kemampuan",
+      "mulai": 38.521,
+      "selesai": 39.442,
+      "bbox": [
+        118.5,
+        1281.0,
+        949.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        199.5,
+        1362.0,
+        868.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        118.5,
+        1281.0,
+        949.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 38.967,
+        "l_p10": 0.2702,
+        "l_p90": 0.9014
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 16,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/039",
+      "tipe": "caption",
+      "teks": "mendengar,",
+      "mulai": 39.442,
+      "selesai": 40.402,
+      "bbox": [
+        256.0,
+        1281.0,
+        812.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        337.0,
+        1362.0,
+        731.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        256.0,
+        1281.0,
+        812.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 39.933,
+        "l_p10": 0.2026,
+        "l_p90": 0.8582
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/040",
+      "tipe": "caption",
+      "teks": "berbicara,",
+      "mulai": 40.402,
+      "selesai": 41.463,
+      "bbox": [
+        292.0,
+        1281.0,
+        776.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        373.0,
+        1362.0,
+        695.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        292.0,
+        1281.0,
+        776.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 40.933,
+        "l_p10": 0.2817,
+        "l_p90": 0.9425
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/041",
+      "tipe": "caption",
+      "teks": "menulis,",
+      "mulai": 41.463,
+      "selesai": 42.144,
+      "bbox": [
+        316.5,
+        1281.0,
+        751.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        397.5,
+        1362.0,
+        670.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        316.5,
+        1281.0,
+        751.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 41.8,
+        "l_p10": 0.2733,
+        "l_p90": 0.9286
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 8,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/042",
+      "tipe": "caption",
+      "teks": "dan membaca",
+      "mulai": 42.144,
+      "selesai": 42.964,
+      "bbox": [
+        220.5,
+        1281.0,
+        847.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        301.5,
+        1362.0,
+        766.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        220.5,
+        1281.0,
+        847.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 42.567,
+        "l_p10": 0.2691,
+        "l_p90": 0.897
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/043",
+      "tipe": "caption",
+      "teks": "sudah cukup",
+      "mulai": 42.964,
+      "selesai": 43.485,
+      "bbox": [
+        243.0,
+        1281.0,
+        825.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        324.0,
+        1362.0,
+        744.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        243.0,
+        1281.0,
+        825.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 43.233,
+        "l_p10": 0.2746,
+        "l_p90": 0.8945
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/044",
+      "tipe": "caption",
+      "teks": "seimbang dan",
+      "mulai": 43.485,
+      "selesai": 44.245,
+      "bbox": [
+        222.0,
+        1281.0,
+        846.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        303.0,
+        1362.0,
+        765.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        222.0,
+        1281.0,
+        846.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 43.867,
+        "l_p10": 0.2597,
+        "l_p90": 0.8992
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 12,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/045",
+      "tipe": "caption",
+      "teks": "benar-benar bisa",
+      "mulai": 44.245,
+      "selesai": 45.306,
+      "bbox": [
+        179.5,
+        1281.0,
+        888.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        260.5,
+        1362.0,
+        807.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        179.5,
+        1281.0,
+        888.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 44.767,
+        "l_p10": 0.2268,
+        "l_p90": 0.8794
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 16,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/046",
+      "tipe": "caption",
+      "teks": "digunakan.",
+      "mulai": 45.306,
+      "selesai": 46.387,
+      "bbox": [
+        271.0,
+        1281.0,
+        797.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        352.0,
+        1362.0,
+        716.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        271.0,
+        1281.0,
+        797.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 45.833,
+        "l_p10": 0.207,
+        "l_p90": 0.8548
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/047",
+      "tipe": "caption",
+      "teks": "Karena yang",
+      "mulai": 46.387,
+      "selesai": 46.908,
+      "bbox": [
+        249.0,
+        1281.0,
+        819.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        330.0,
+        1362.0,
+        738.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        249.0,
+        1281.0,
+        819.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 46.633,
+        "l_p10": 0.2483,
+        "l_p90": 0.8979
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/048",
+      "tipe": "caption",
+      "teks": "dibutuhkan saat",
+      "mulai": 46.908,
+      "selesai": 47.729,
+      "bbox": [
+        187.5,
+        1281.0,
+        880.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        268.5,
+        1362.0,
+        799.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        187.5,
+        1281.0,
+        880.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 47.333,
+        "l_p10": 0.2431,
+        "l_p90": 0.906
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 15,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/049",
+      "tipe": "caption",
+      "teks": "studi bukan",
+      "mulai": 47.729,
+      "selesai": 48.429,
+      "bbox": [
+        260.0,
+        1281.0,
+        808.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        341.0,
+        1362.0,
+        727.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        260.0,
+        1281.0,
+        808.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 48.067,
+        "l_p10": 0.2425,
+        "l_p90": 0.8948
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/050",
+      "tipe": "caption",
+      "teks": "hanya bukti",
+      "mulai": 48.429,
+      "selesai": 49.21,
+      "bbox": [
+        260.5,
+        1281.0,
+        807.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        341.5,
+        1362.0,
+        726.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        260.5,
+        1281.0,
+        807.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 48.833,
+        "l_p10": 0.2053,
+        "l_p90": 0.8578
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/051",
+      "tipe": "caption",
+      "teks": "level bahasa,",
+      "mulai": 49.21,
+      "selesai": 50.131,
+      "bbox": [
+        245.0,
+        1281.0,
+        823.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        326.0,
+        1362.0,
+        742.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        245.0,
+        1281.0,
+        823.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 49.667,
+        "l_p10": 0.2063,
+        "l_p90": 0.8557
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 13,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/052",
+      "tipe": "caption",
+      "teks": "tapi kemampuan",
+      "mulai": 50.131,
+      "selesai": 51.032,
+      "bbox": [
+        175.5,
+        1281.0,
+        892.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        256.5,
+        1362.0,
+        811.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        175.5,
+        1281.0,
+        892.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 50.567,
+        "l_p10": 0.2063,
+        "l_p90": 0.8398
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 14,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/053",
+      "tipe": "caption",
+      "teks": "yang benar-benar",
+      "mulai": 51.032,
+      "selesai": 51.793,
+      "bbox": [
+        164.5,
+        1281.0,
+        903.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        245.5,
+        1362.0,
+        822.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        164.5,
+        1281.0,
+        903.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 51.4,
+        "l_p10": 0.2035,
+        "l_p90": 0.8214
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 16,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/054",
+      "tipe": "caption",
+      "teks": "terpakai.",
+      "mulai": 51.793,
+      "selesai": 52.774,
+      "bbox": [
+        310.5,
+        1281.0,
+        757.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        391.5,
+        1362.0,
+        676.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        310.5,
+        1281.0,
+        757.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 52.3,
+        "l_p10": 0.1965,
+        "l_p90": 0.8373
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 9,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#000000",
+      "mode": "karaoke"
+    }
+  ],
+  "push": [
+    {
+      "id": "hook/1-push",
+      "mulai": 0,
+      "selesai": 3.297,
+      "skala": 1.04,
+      "gerak": 3.0,
+      "fokus": [
+        0.5,
+        0.4
+      ],
+      "easing": "standar",
+      "anchor_kata": false,
+      "efek": null,
+      "anchor": null
+    }
+  ],
+  "broll": [],
+  "transisi": [
+    {
+      "id": "konteks/0-transisi",
+      "jenis": "blur-zoom",
+      "mulai": 3.047,
+      "selesai": 3.547,
+      "skala": 1.06,
+      "skala_masuk": 1.0,
+      "blur": 22,
+      "geser": 0.0,
+      "geser_px": 0,
+      "efek": "blur-zoom@0.2"
+    },
+    {
+      "id": "poin-2/0-transisi",
+      "jenis": "blur-zoom",
+      "mulai": 23.14,
+      "selesai": 23.64,
+      "skala": 1.06,
+      "skala_masuk": 1.0,
+      "blur": 22,
+      "geser": 0.0,
+      "geser_px": 0,
+      "efek": "blur-zoom@0.2"
+    }
+  ],
+  "kamera": [
+    {
+      "id": "konteks/2-kamera",
+      "jenis": "digital-zoom",
+      "mulai": 5.958,
+      "selesai": 7.799,
+      "d_in": 0.45,
+      "d_out": 0.25,
+      "ketukan": [
+        0.0,
+        0.32
+      ],
+      "cfg": {
+        "skala": [
+          1.12,
+          1.24
+        ],
+        "durasi-pukul": 0.12,
+        "guncang-px": 10,
+        "durasi-keluar": 0.25,
+        "ketukan": [
+          0.0,
+          0.32
+        ],
+        "fungsi": "hasil"
+      }
+    },
+    {
+      "id": "poin-1/1-kamera",
+      "jenis": "pull-back-reveal",
+      "mulai": 20.107,
+      "selesai": 23.24,
+      "d_in": 1.0443333333333331,
+      "d_out": 0.35,
+      "cfg": {
+        "skala": 0.6,
+        "radius": 48,
+        "pusat-y": 0.45,
+        "durasi-masuk": 1.1,
+        "fungsi": "hasil"
+      }
+    }
+  ],
+  "mask_kamera": {
+    "konteks/2-kamera": {
+      "butuh": 0,
+      "ada": 0
+    },
+    "poin-1/1-kamera": {
+      "butuh": 0,
+      "ada": 0
+    }
+  },
+  "sfx": [
+    {
+      "sumber": "hook/2-depth",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\hit-1.wav",
+      "t": 0.875,
+      "db": -18.0,
+      "bunyi": "hit",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "konteks/0-transisi",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-1.wav",
+      "t": 2.757,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "konteks/1-info",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-1.wav",
+      "t": 4.207,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "konteks/2-kamera/k0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\hit-2.wav",
+      "t": 5.958,
+      "db": -18.0,
+      "bunyi": "hit",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "konteks/2-kamera/k1",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\hit-1.wav",
+      "t": 6.278,
+      "db": -18.0,
+      "bunyi": "hit",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "konteks/3-chip",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ding-salah-1.wav",
+      "t": 8.28,
+      "db": -18.0,
+      "bunyi": "ding-salah",
+      "kelas": "status",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-1/0-remotion/masuk",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ketuk-1.wav",
+      "t": 10.681,
+      "db": -23.0,
+      "bunyi": "ketuk",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-1/0-remotion/wipe",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\swoosh-balik-1.wav",
+      "t": 11.686,
+      "db": -19.0,
+      "bunyi": "swoosh-balik",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-1/1-kamera/k0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-2.wav",
+      "t": 19.567,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-1/2-chip",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 20.908,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-2/0-transisi",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-1.wav",
+      "t": 22.85,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-2/1-depth",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\hit-2.wav",
+      "t": 23.53,
+      "db": -18.0,
+      "bunyi": "hit",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-2/2-remotion/l0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-2.wav",
+      "t": 26.461,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-2/2-remotion/l1",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-3.wav",
+      "t": 27.061,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-2/2-remotion/l2",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-1.wav",
+      "t": 27.661,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-2/2-remotion/l3",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-2.wav",
+      "t": 28.261,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-3/0-remotion/masuk",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ketuk-2.wav",
+      "t": 34.598,
+      "db": -23.0,
+      "bunyi": "ketuk",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-3/0-remotion/gores",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\gores-1.wav",
+      "t": 35.378,
+      "db": -18.0,
+      "bunyi": "gores",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-3/0-remotion/silang",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ding-salah-1.wav",
+      "t": 35.728,
+      "db": -18.0,
+      "bunyi": "ding-salah",
+      "kelas": "status",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-3/1-remotion/item0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-3.wav",
+      "t": 39.841,
+      "db": -18.0,
+      "bunyi": "pop",
+      "kelas": null,
+      "otomatis": false
+    },
+    {
+      "sumber": "poin-3/1-remotion/item1",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-1.wav",
+      "t": 40.791,
+      "db": -18.0,
+      "bunyi": "pop",
+      "kelas": null,
+      "otomatis": false
+    },
+    {
+      "sumber": "poin-3/1-remotion/item2",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-2.wav",
+      "t": 41.741,
+      "db": -18.0,
+      "bunyi": "pop",
+      "kelas": null,
+      "otomatis": false
+    },
+    {
+      "sumber": "poin-3/1-remotion/item3",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-3.wav",
+      "t": 42.691,
+      "db": -18.0,
+      "bunyi": "pop",
+      "kelas": null,
+      "otomatis": false
+    },
+    {
+      "sumber": "poin-3/1-remotion",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ketuk-3.wav",
+      "t": 39.201,
+      "db": -23.0,
+      "bunyi": "ketuk",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "ringkasan/0-chip",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ding-benar-1.wav",
+      "t": 48.189,
+      "db": -18.0,
+      "bunyi": "ding-benar",
+      "kelas": "status",
+      "otomatis": true
+    },
+    {
+      "sumber": "ringkasan/1-depth",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\hit-1.wav",
+      "t": 50.432,
+      "db": -18.0,
+      "bunyi": "hit",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "cta/0-cta",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-1.wav",
+      "t": 52.774,
+      "db": -18.0,
+      "bunyi": "pop",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "cta/1-teks",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 53.174,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    }
+  ],
+  "audio": {
+    "musik": false,
+    "ducking": false,
+    "loudnorm_ukur": {
+      "input_i": "-14.40",
+      "input_tp": "-0.83",
+      "input_lra": "7.40",
+      "input_thresh": "-24.83",
+      "output_i": "-14.10",
+      "output_tp": "-1.50",
+      "output_lra": "6.30",
+      "output_thresh": "-24.52",
+      "normalization_type": "dynamic",
+      "target_offset": "0.10"
+    },
+    "sfx_bus": {
+      "jumlah": 28,
+      "puncak_db": -19.2
+    },
+    "akhir": {
+      "lufs": -14.0,
+      "true_peak": -1.5,
+      "koreksi": 0
+    }
+  },
+  "mask": {
+    "hook/2-depth": {
+      "butuh": 71,
+      "ada": 71
+    },
+    "poin-2/1-depth": {
+      "butuh": 69,
+      "ada": 69
+    },
+    "ringkasan/1-depth": {
+      "butuh": 69,
+      "ada": 69
+    }
+  },
+  "motion_blur": {
+    "aktif": true,
+    "frame_terpakai": 11
+  },
+  "caption": {
+    "aktif": true,
+    "potongan": 55,
+    "sumber": {
+      "audio_sha": "a32f4eb378e4c83ccd5baca4d19f7345cd54eaefb6085d41ef7a0bbec24be5ec",
+      "backend": "whisperx",
+      "model": "large-v3",
+      "bahasa": "id",
+      "timestamp_per_kata": true,
+      "dikoreksi": true,
+      "dikoreksi_oleh": "pengguna (konfirmasi: transkrip sudah sesuai), 2026-10-25"
+    }
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "mulai": 0,
+      "selesai": 3.297,
+      "anchor_kata": false
+    },
+    {
+      "id": "konteks",
+      "mulai": 3.297,
+      "selesai": 10.221,
+      "anchor_kata": true
+    },
+    {
+      "id": "poin-1",
+      "mulai": 10.221,
+      "selesai": 23.39,
+      "anchor_kata": true
+    },
+    {
+      "id": "poin-2",
+      "mulai": 23.39,
+      "selesai": 34.498,
+      "anchor_kata": true
+    },
+    {
+      "id": "poin-3",
+      "mulai": 34.498,
+      "selesai": 46.387,
+      "anchor_kata": true
+    },
+    {
+      "id": "ringkasan",
+      "mulai": 46.387,
+      "selesai": 52.774,
+      "anchor_kata": true
+    },
+    {
+      "id": "cta",
+      "mulai": 52.774,
+      "selesai": 58.666667,
+      "anchor_kata": true
+    }
+  ],
+  "kata_mulai": [
+    0.875,
+    1.175,
+    1.996,
+    2.636,
+    3.297,
+    3.857,
+    4.117,
+    4.357,
+    4.958,
+    5.298,
+    5.958,
+    6.278,
+    6.759,
+    7.259,
+    7.96,
+    8.28,
+    8.62,
+    8.84,
+    9.14,
+    9.28,
+    10.221,
+    10.881,
+    11.622,
+    12.142,
+    12.583,
+    13.183,
+    13.343,
+    13.683,
+    14.704,
+    15.404,
+    15.725,
+    16.185,
+    16.945,
+    17.406,
+    17.866,
+    18.206,
+    18.466,
+    19.007,
+    19.307,
+    20.107,
+    20.468,
+    21.008,
+    21.608,
+    21.829,
+    22.109,
+    23.39,
+    23.53,
+    24.51,
+    24.79,
+    25.191,
+    25.731,
+    26.231,
+    27.252,
+    27.853,
+    28.993,
+    30.415,
+    31.656,
+    32.136,
+    32.796,
+    33.317,
+    33.617,
+    34.498,
+    34.998,
+    35.258,
+    35.559,
+    35.879,
+    36.159,
+    36.479,
+    37.5,
+    37.981,
+    38.521,
+    38.901,
+    39.442,
+    40.402,
+    41.463,
+    42.144,
+    42.304,
+    42.964,
+    43.225,
+    43.485,
+    44.025,
+    44.245,
+    44.946,
+    45.306,
+    46.387,
+    46.748,
+    46.908,
+    47.508,
+    47.729,
+    48.189,
+    48.429,
+    48.79,
+    49.21,
+    49.551,
+    50.131,
+    50.432,
+    51.032,
+    51.213,
+    51.793,
+    52.774,
+    53.055,
+    53.215,
+    53.375,
+    53.916,
+    54.136,
+    54.516,
+    54.837,
+    55.157,
+    55.457,
+    55.758,
+    56.298,
+    56.578,
+    56.979,
+    57.339,
+    57.459
+  ],
+  "peringatan": []
+}

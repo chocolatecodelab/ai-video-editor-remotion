@@ -1,0 +1,371 @@
+{
+  "_meta": {
+    "id": "platform",
+    "versi": "0.3",
+    "status": "draft",
+    "catatan": "Nilai platform (bukan gaya). Dimuat lebih dulu; token gaya boleh menimpa. Semua px mengacu ke resolusi referensi. v0.2: sfx otomatis (peta bunyi per tipe elemen, level per kelas), ketik (prompt-ui), caption.mode. + perangkat UI (E19–E25), transisi blur-zoom (E26). v0.3: koreografi (ritme perangkat, K09). v0.4: slot (generator koreografi), kamera (efek pada rekaman), transisi khas gaya, peta bunyi perangkat E01–E17 native."
+  },
+  "format": {
+    "rasio": "9:16",
+    "resolusi": [
+      1080,
+      1920
+    ],
+    "fps": 30,
+    "resolusi-referensi": [
+      1080,
+      1920
+    ]
+  },
+  "zona-aman": {
+    "atas": 250,
+    "bawah": 400,
+    "kiri": 60,
+    "kanan": 120,
+    "_catatan": "px @1080x1920. Atas = status bar + tab, bawah = caption/username/musik, kanan = tombol like/komen/share (Reels/TikTok/Shorts)."
+  },
+  "ingest": {
+    "fps-diterima": [
+      24,
+      25,
+      29.97,
+      30,
+      50,
+      59.94,
+      60
+    ],
+    "tinggi-min": 1080,
+    "crf-antara": 12
+  },
+  "audio": {
+    "lufs": -14,
+    "lufs-toleransi": 1.0,
+    "true-peak": -1.0,
+    "lra": 11,
+    "sample-rate": 48000,
+    "highpass-hz": 80,
+    "denoise": "afftdn=nf=-25"
+  },
+  "ekspor": {
+    "master": {
+      "codec": "prores_ks",
+      "profil": 3,
+      "pix_fmt": "yuv422p10le",
+      "ext": "mov"
+    },
+    "platform": {
+      "reels": {
+        "vcodec": "libx264",
+        "profile": "high",
+        "level": "4.1",
+        "crf": 18,
+        "maxrate": "12M",
+        "bufsize": "24M",
+        "acodec": "aac",
+        "abitrate": "192k"
+      },
+      "tiktok": {
+        "vcodec": "libx264",
+        "profile": "high",
+        "level": "4.1",
+        "crf": 18,
+        "maxrate": "12M",
+        "bufsize": "24M",
+        "acodec": "aac",
+        "abitrate": "192k"
+      },
+      "shorts": {
+        "vcodec": "libx264",
+        "profile": "high",
+        "level": "4.2",
+        "crf": 17,
+        "maxrate": "16M",
+        "bufsize": "32M",
+        "acodec": "aac",
+        "abitrate": "192k"
+      }
+    },
+    "warna": "bt709",
+    "pix_fmt": "yuv420p"
+  },
+  "qa": {
+    "kontras-min": 4.5,
+    "kontras-min-besar": 3.0,
+    "ukuran-besar-px": 72,
+    "ukuran-min-px": 40,
+    "karakter-per-detik-maks": 17,
+    "tahan-min": 1.2,
+    "durasi-toleransi-s": 3
+  },
+  "caption": {
+    "mode": "aktif",
+    "redup": 0.4
+  },
+  "ketik": {
+    "cps": 22,
+    "jeda-awal": 0.2,
+    "jeda-kirim": 0.3,
+    "durasi-ciut": 0.45
+  },
+  "sfx": {
+    "transisi": "whoosh-pendek",
+    "level-db": -20,
+    "otomatis": true,
+    "jarak-min": 0.06,
+    "push-gerak-maks": 1.2,
+    "level": {
+      "ui": -26,
+      "transisi": -21,
+      "aksen": -19,
+      "status": -19,
+      "ketik": -30
+    },
+    "peta": {
+      "judul": {
+        "bunyi": "whoosh-pendek",
+        "kelas": "transisi"
+      },
+      "teks": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "kartu": {
+        "bunyi": "ketuk",
+        "kelas": "ui"
+      },
+      "item": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "cta": {
+        "bunyi": "pop",
+        "kelas": "aksen"
+      },
+      "gambar": {
+        "bunyi": "ketuk",
+        "kelas": "ui"
+      },
+      "broll": {
+        "bunyi": "whoosh-pendek",
+        "kelas": "transisi"
+      },
+      "push": {
+        "bunyi": "whoosh-panjang",
+        "kelas": "transisi"
+      },
+      "depth": {
+        "bunyi": "hit",
+        "kelas": "aksen"
+      },
+      "info": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      },
+      "chip": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "chip-benar": {
+        "bunyi": "ding-benar",
+        "kelas": "status"
+      },
+      "chip-salah": {
+        "bunyi": "ding-salah",
+        "kelas": "status"
+      },
+      "chip-nomor": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      },
+      "remotion": {
+        "bunyi": "ketuk",
+        "kelas": "ui"
+      },
+      "prompt-masuk": {
+        "bunyi": "whoosh-pendek",
+        "kelas": "transisi"
+      },
+      "prompt-lampiran": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      },
+      "prompt-ketik": {
+        "bunyi": "klik-ketik",
+        "kelas": "ketik"
+      },
+      "prompt-kirim": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "prompt-ciut": {
+        "bunyi": "swoosh-balik",
+        "kelas": "transisi"
+      },
+      "hitung-tick": {
+        "bunyi": "tick",
+        "kelas": "ketik"
+      },
+      "hitung-selesai": {
+        "bunyi": "pop",
+        "kelas": "aksen"
+      },
+      "terminal-ketik": {
+        "bunyi": "klik-ketik",
+        "kelas": "ketik"
+      },
+      "terminal-baris": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "terminal-selesai": {
+        "bunyi": "ding-benar",
+        "kelas": "status"
+      },
+      "coret-gores": {
+        "bunyi": "gores",
+        "kelas": "aksen"
+      },
+      "coret-silang": {
+        "bunyi": "ding-salah",
+        "kelas": "status"
+      },
+      "timeline-blok": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "timeline-chip": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      },
+      "grid-isi": {
+        "bunyi": "tick",
+        "kelas": "ketik"
+      },
+      "grid-selesai": {
+        "bunyi": "pop",
+        "kelas": "aksen"
+      },
+      "form-ganti": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "form-lencana": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      },
+      "partikel": {
+        "bunyi": "kilau",
+        "kelas": "aksen"
+      },
+      "transisi": {
+        "bunyi": "whoosh-panjang",
+        "kelas": "transisi"
+      },
+      "chart-batang": {"bunyi": "tick", "kelas": "ketik"},
+      "chart-selesai": {"bunyi": "pop", "kelas": "aksen"},
+      "kaca-masuk": {"bunyi": "whoosh-pendek", "kelas": "transisi"},
+      "cover-masthead": {"bunyi": "hit", "kelas": "aksen"},
+      "cover-baris": {"bunyi": "tick", "kelas": "ui"},
+      "cover-judul": {"bunyi": "whoosh-pendek", "kelas": "transisi"},
+      "doodle-gores": {"bunyi": "gores", "kelas": "aksen"},
+      "aksen-kilau": {"bunyi": "kilau", "kelas": "aksen"},
+      "aksen-target": {"bunyi": "glitch", "kelas": "aksen"},
+      "aksen-stempel": {"bunyi": "hit", "kelas": "aksen"},
+      "aksen-selotip": {"bunyi": "gores", "kelas": "aksen"},
+      "aksen-doodle": {"bunyi": "gores", "kelas": "aksen"},
+      "aksen-uap": {"bunyi": "kilau", "kelas": "ui"},
+      "aksen-garis": {"bunyi": "swoosh-balik", "kelas": "ui"},
+      "headline-jatuh": {"bunyi": "ketuk", "kelas": "ui"},
+      "headline-sorot": {"bunyi": "whoosh-pendek", "kelas": "transisi"},
+      "orbit": {"bunyi": "whoosh-panjang", "kelas": "transisi"},
+      "dinding-ganti": {"bunyi": "swoosh-balik", "kelas": "transisi"},
+      "ui-dolly": {"bunyi": "riser", "kelas": "transisi"},
+      "ui-tiba": {"bunyi": "hit", "kelas": "aksen"},
+      "paper-lapis": {"bunyi": "gores", "kelas": "ui"},
+      "paper-kartu": {"bunyi": "ketuk", "kelas": "ui"},
+      "kamera-pukul": {"bunyi": "hit", "kelas": "aksen"},
+      "kamera-masuk": {"bunyi": "whoosh-panjang", "kelas": "transisi"}
+    },
+    "_catatan": "Bunyi pustaka: pipeline/scripts/sfx.py (RESEP). Elemen tanpa field 'sfx' memakai peta ini; 'sfx': false = diam."
+  },
+  "perangkat": {
+    "durasi-hitung": 1.6,
+    "tick-maks": 14,
+    "stagger-baris": 0.35,
+    "stagger-form": 0.7,
+    "stagger-chip": 0.3,
+    "durasi-coret": 0.35,
+    "durasi-grid": 1.8,
+    "opasitas-min": 0.9,
+    "durasi-partikel": 1.2,
+    "_catatan": "Waktu perangkat UI (E19–E25); opasitas-min = panel jendela mock UI minimal (keterbacaan).",
+    "latar-opasitas": 0.82,
+    "latar-blur": 40
+  },
+  "transisi": {
+    "blur-zoom": {
+      "durasi": 0.5,
+      "skala": 1.06,
+      "blur-px": 22,
+      "bunyi": "whoosh-panjang"
+    },
+    "zoom-tembus": {"durasi": 0.6, "skala": 2.2, "skala-masuk": 1.5, "blur-px": 26, "bunyi": "whoosh-panjang"},
+    "whip": {"durasi": 0.4, "geser": 0.18, "blur-px": 90, "bunyi": "whoosh-pendek"},
+    "glitch": {"durasi": 0.35, "geser-px": 28, "bunyi": "glitch"},
+    "celup": {"durasi": 0.6, "bunyi": "swoosh-balik"},
+    "kertas": {"durasi": 0.9, "bunyi": "gores"},
+    "coretan": {"durasi": 0.9, "bunyi": "gores"},
+    "_catatan": "Jenis transisi (E09, E13, E14, E26, E28–E30). Default per gaya = token motif.transisi."
+  },
+  "kamera": {
+    "digital-zoom": {"skala": [1.12, 1.24], "durasi-pukul": 0.12, "guncang-px": 10, "durasi-keluar": 0.25},
+    "phone-mockup": {"skala": 0.66, "radius": 64, "bezel": 24, "pusat-y": 0.46, "durasi-masuk": 0.5},
+    "pull-back-reveal": {"skala": 0.6, "radius": 48, "pusat-y": 0.45, "durasi-masuk": 1.1},
+    "frame-break": {"skala": 0.8, "lebar": 0.76, "tinggi": 0.5, "tebal": 14, "pusat-y": 0.47, "durasi-masuk": 0.4},
+    "vertigo": {"skala-latar": 1.3},
+    "green-screen": {"durasi-masuk": 0.4},
+    "_catatan": "Efek kamera pada rekaman (tipe kamera; E04 E05 E06 E11 E12 E15). frame-break/vertigo/green-screen butuh roto."
+  },
+  "slot": {
+    "hook": ["chip", "glass-type", "cover-story", "prompt-ui", "doodle-boil", "info"],
+    "konteks": ["info", "couch-wall", "ui-world", "orbit", "paper-cut", "headline-wall"],
+    "masalah": ["info", "chip-salah", "coret", "doodle-boil"],
+    "membantah": ["coret", "form-ganti", "chip-salah"],
+    "bukti": ["penghitung", "chart-grow", "grid-variasi", "headline-wall", "info"],
+    "proses": ["terminal", "timeline", "ui-world", "checklist"],
+    "langkah": ["checklist", "terminal", "timeline", "info", "chip"],
+    "kustomisasi": ["form-ganti", "grid-variasi"],
+    "hasil": ["chip-benar", "glass-type", "checklist", "info", "depth"],
+    "ringkasan": ["checklist", "timeline", "info"],
+    "ajakan": ["cta"],
+    "kamera": ["digital-zoom", "vertigo", "phone-mockup", "pull-back-reveal", "frame-break", "green-screen"],
+    "_catatan": "Kandidat per fungsi untuk generator koreografi (slot.py). Urutan tidak berarti prioritas; bobot = kecocokan gaya (gaya_cocok efek) + variasi. reveal & transisi dari token motif gaya."
+  },
+  "koreografi": {
+    "variasi-min": 4,
+    "fungsi": [
+      "hook",
+      "konteks",
+      "bukti",
+      "masalah",
+      "membantah",
+      "proses",
+      "langkah",
+      "kustomisasi",
+      "hasil",
+      "reveal",
+      "ringkasan",
+      "ajakan"
+    ],
+    "bukan-perangkat": [
+      "judul",
+      "teks",
+      "push",
+      "transisi",
+      "latar",
+      "sfx"
+    ],
+    "tutup-wajah-maks": 0.1,
+    "_catatan": "Perangkat = elemen visual utama (remotion efek, info, chip-<status>, kartu, cta, gambar, broll, depth)."
+  }
+}

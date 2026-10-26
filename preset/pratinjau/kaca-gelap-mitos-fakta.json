@@ -1,0 +1,244 @@
+{
+  "preset": "kaca-gelap-mitos-fakta@0.1",
+  "seed": 0,
+  "variasi": 9,
+  "efek": [
+    "celup@0.1",
+    "sebelum-sesudah@0.1",
+    "digital-zoom@0.2",
+    "vertigo@0.2",
+    "penghitung@0.1",
+    "aksen-gaya@0.1"
+  ],
+  "pilihan": [
+    {
+      "beat": "hook",
+      "slot": "hook",
+      "dipilih": "chip",
+      "lolos": [
+        "chip"
+      ]
+    },
+    {
+      "beat": "problem",
+      "slot": "transisi",
+      "dipilih": "transisi:celup",
+      "lolos": [
+        "celup"
+      ]
+    },
+    {
+      "beat": "problem",
+      "slot": "membantah",
+      "dipilih": "sebelum-sesudah",
+      "lolos": [
+        "sebelum-sesudah",
+        "coret",
+        "form-ganti"
+      ]
+    },
+    {
+      "beat": "problem",
+      "slot": "kamera",
+      "dipilih": "digital-zoom",
+      "lolos": [
+        "digital-zoom"
+      ]
+    },
+    {
+      "beat": "agitasi",
+      "slot": "masalah",
+      "dipilih": "chip-salah",
+      "lolos": [
+        "info",
+        "chip-salah"
+      ]
+    },
+    {
+      "beat": "agitasi",
+      "slot": "kamera",
+      "dipilih": "vertigo",
+      "lolos": [
+        "vertigo",
+        "phone-mockup",
+        "pull-back-reveal",
+        "green-screen"
+      ]
+    },
+    {
+      "beat": "solution",
+      "slot": "transisi",
+      "dipilih": "transisi:celup",
+      "lolos": [
+        "celup"
+      ]
+    },
+    {
+      "beat": "solution",
+      "slot": "bukti",
+      "dipilih": "penghitung",
+      "lolos": [
+        "penghitung",
+        "chart-grow",
+        "grid-variasi",
+        "headline-wall",
+        "info",
+        "linimasa"
+      ]
+    },
+    {
+      "beat": "solution",
+      "slot": "hasil",
+      "dipilih": "info",
+      "lolos": [
+        "chip-benar",
+        "info"
+      ]
+    },
+    {
+      "beat": "cta",
+      "slot": "reveal",
+      "dipilih": "aksen-gaya",
+      "lolos": [
+        "aksen-gaya"
+      ]
+    }
+  ],
+  "perangkat": [
+    {
+      "beat": "hook",
+      "perangkat": "remotion",
+      "efek": "judul-gaya@0.1",
+      "fungsi": null,
+      "mulai": 0.1,
+      "selesai": 3.5,
+      "luas_layar": 0.072
+    },
+    {
+      "beat": "hook",
+      "perangkat": "chip-salah",
+      "efek": null,
+      "fungsi": "hook",
+      "mulai": 0.2,
+      "selesai": 3.5,
+      "luas_layar": 0.009
+    },
+    {
+      "beat": null,
+      "perangkat": "transisi:celup",
+      "efek": "celup@0.1",
+      "fungsi": null,
+      "mulai": 3.2,
+      "selesai": 3.8,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": "problem",
+      "perangkat": "latar",
+      "efek": null,
+      "fungsi": null,
+      "mulai": 3.5,
+      "selesai": 9.5,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": "problem",
+      "perangkat": "sebelum-sesudah",
+      "efek": "sebelum-sesudah@0.1",
+      "fungsi": "membantah",
+      "mulai": 3.7,
+      "selesai": 9.5,
+      "luas_layar": 0.156
+    },
+    {
+      "beat": "problem",
+      "perangkat": "digital-zoom",
+      "efek": "digital-zoom@0.2",
+      "fungsi": "hasil",
+      "mulai": 9.6,
+      "selesai": 11.0,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": "agitasi",
+      "perangkat": "chip-salah",
+      "efek": null,
+      "fungsi": "masalah",
+      "mulai": 11.3,
+      "selesai": 18.0,
+      "luas_layar": 0.016
+    },
+    {
+      "beat": "agitasi",
+      "perangkat": "vertigo",
+      "efek": "vertigo@0.2",
+      "fungsi": "hasil",
+      "mulai": 12.5,
+      "selesai": 15.5,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": null,
+      "perangkat": "transisi:celup",
+      "efek": "celup@0.1",
+      "fungsi": null,
+      "mulai": 17.7,
+      "selesai": 18.3,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": "solution",
+      "perangkat": "latar",
+      "efek": null,
+      "fungsi": null,
+      "mulai": 18.0,
+      "selesai": 24.0,
+      "luas_layar": 1.0
+    },
+    {
+      "beat": "solution",
+      "perangkat": "penghitung",
+      "efek": "penghitung@0.1",
+      "fungsi": "bukti",
+      "mulai": 18.2,
+      "selesai": 24.0,
+      "luas_layar": 0.12
+    },
+    {
+      "beat": "solution",
+      "perangkat": "info",
+      "efek": null,
+      "fungsi": "hasil",
+      "mulai": 24.3,
+      "selesai": 27.6,
+      "luas_layar": 0.037
+    },
+    {
+      "beat": "solution",
+      "perangkat": "depth",
+      "efek": null,
+      "fungsi": "reveal",
+      "mulai": 27.7,
+      "selesai": 31.0,
+      "luas_layar": 0.108
+    },
+    {
+      "beat": "cta",
+      "perangkat": "cta",
+      "efek": null,
+      "fungsi": "ajakan",
+      "mulai": 31.4,
+      "selesai": 36.0,
+      "luas_layar": 0.058
+    },
+    {
+      "beat": "cta",
+      "perangkat": "aksen-gaya",
+      "efek": "aksen-gaya@0.1",
+      "fungsi": "reveal",
+      "mulai": 31.9,
+      "selesai": 33.7,
+      "luas_layar": 0.034
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "arang-lime-tutorial-langkah",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Preset fase 3 = gaya × koreografi. Beat-sheet awal dari koreografi; gaya & koreografi tanpa pin versi."
+  },
+  "label": "Arang Lime · Tutorial Langkah · Talking Head 60–75 s",
+  "format": "tutorial-langkah",
+  "deskripsi": "Arang Lime (arang, lime, geser cepat) + Tutorial 3 langkah: chip penanda langkah, kartu info, cutaway terminal & timeline, kartu langkah, ringkasan checklist, CTA.",
+  "kapan": "Cara/tutorial/workflow bertahap dengan wajah; tiap langkah mendapat perangkat berbeda.",
+  "gaya": "arang-lime",
+  "koreografi": "tutorial-langkah",
+  "manifest": {
+    "warna": {
+      "filter": "eq=contrast=1.08:saturation=1.05"
+    }
+  }
+}

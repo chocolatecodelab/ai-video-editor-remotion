@@ -1,0 +1,242 @@
+{
+ "_catatan": "Demo fase 2: perangkat UI (E19–E25) + transisi blur-zoom (E26), tanpa footage. Pola referensi: headline 2 baris + jendela UI.",
+ "caption": {
+  "aktif": false
+ },
+ "beats": [
+  {
+   "id": "hook",
+   "beat": "Hook",
+   "mulai": 0,
+   "selesai": 3.5,
+   "elemen": [
+    {
+     "tipe": "judul",
+     "teks": "Repo GitHub ini\n*TEMBUS 23 RIBU*",
+     "posisi": "atas",
+     "mulai": 0.1,
+     "selesai": 3.5
+    },
+    {
+     "tipe": "remotion",
+     "efek": "penghitung",
+     "posisi": "tengah",
+     "mulai": 0.2,
+     "selesai": 3.5,
+     "judul": "hypit-ai / hypit",
+     "sub": "AI video cloner",
+     "ke": 23877,
+     "label": "bintang",
+     "durasi_hitung": 1.3
+    },
+    {
+     "tipe": "remotion",
+     "efek": "partikel",
+     "posisi": "tengah",
+     "mulai": 1.85,
+     "selesai": 3.05,
+     "x": 0.5,
+     "y": 0.46
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "beat": "Problem",
+   "mulai": 3.5,
+   "selesai": 9.0,
+   "elemen": [
+    {
+     "tipe": "transisi",
+     "efek": "blur-zoom",
+     "mulai": 3.5
+    },
+    {
+     "tipe": "judul",
+     "teks": "Bukan cuma\n*naskahnya*",
+     "posisi": "atas",
+     "mulai": 3.7,
+     "selesai": 9.0
+    },
+    {
+     "tipe": "remotion",
+     "efek": "coret",
+     "posisi": "tengah",
+     "mulai": 3.9,
+     "selesai": 9.0,
+     "judul": "naskah.txt",
+     "teks": "naskahnya",
+     "tunda": 1.2
+    }
+   ]
+  },
+  {
+   "id": "agitasi",
+   "beat": "Agitasi",
+   "mulai": 9.0,
+   "selesai": 15.0,
+   "elemen": [
+    {
+     "tipe": "transisi",
+     "efek": "blur-zoom",
+     "mulai": 9.0
+    },
+    {
+     "tipe": "judul",
+     "teks": "Tapi seluruh\n*FORMATNYA*",
+     "posisi": "atas",
+     "mulai": 9.2,
+     "selesai": 15.0
+    },
+    {
+     "tipe": "remotion",
+     "efek": "timeline",
+     "posisi": "tengah",
+     "mulai": 9.4,
+     "selesai": 15.0,
+     "chip": [
+      "semua",
+      "pas",
+      "dengan",
+      "tiap",
+      "kata"
+     ],
+     "catatan": "ditambatkan ke kata"
+    }
+   ]
+  },
+  {
+   "id": "solution",
+   "beat": "Solution",
+   "mulai": 15.0,
+   "selesai": 33.0,
+   "elemen": [
+    {
+     "tipe": "transisi",
+     "efek": "blur-zoom",
+     "mulai": 15.0
+    },
+    {
+     "tipe": "judul",
+     "teks": "Kasih ke\n*AI agent kamu*",
+     "posisi": "atas",
+     "mulai": 15.2,
+     "selesai": 21.0
+    },
+    {
+     "tipe": "remotion",
+     "efek": "terminal",
+     "posisi": "tengah",
+     "mulai": 15.4,
+     "selesai": 21.0,
+     "judul": "Claude Code",
+     "perintah": "klon reel ini jadi workflow",
+     "keluaran": [
+      "membaca reel.mp4",
+      "memetakan potongan",
+      "✓ workflow siap"
+     ]
+    },
+    {
+     "tipe": "transisi",
+     "efek": "blur-zoom",
+     "mulai": 21.0
+    },
+    {
+     "tipe": "judul",
+     "teks": "Ganti apa pun\n*yang kamu mau*",
+     "posisi": "atas",
+     "mulai": 21.2,
+     "selesai": 27.0
+    },
+    {
+     "tipe": "remotion",
+     "efek": "form-ganti",
+     "posisi": "tengah",
+     "mulai": 21.4,
+     "selesai": 27.0,
+     "baris": [
+      {
+       "label": "host",
+       "lama": "Host asli",
+       "baru": "Host kamu"
+      },
+      {
+       "label": "hook",
+       "lama": "“Tunggu dulu…”",
+       "baru": "“Stop scroll!”"
+      },
+      {
+       "label": "produk",
+       "lama": "Aplikasi mereka",
+       "baru": "Produk kamu"
+      },
+      {
+       "label": "bahasa",
+       "lama": "English",
+       "baru": "Indonesia"
+      }
+     ]
+    },
+    {
+     "tipe": "transisi",
+     "efek": "blur-zoom",
+     "mulai": 27.0
+    },
+    {
+     "tipe": "judul",
+     "teks": "Satu alur kerja,\n*BANYAK VARIASI*",
+     "posisi": "atas",
+     "mulai": 27.2,
+     "selesai": 33.0
+    },
+    {
+     "tipe": "remotion",
+     "efek": "grid-variasi",
+     "posisi": "tengah",
+     "mulai": 27.4,
+     "selesai": 33.0,
+     "judul": "ship",
+     "ke": 60,
+     "label": "variasi"
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "beat": "CTA",
+   "mulai": 33.0,
+   "selesai": 37.0,
+   "elemen": [
+    {
+     "tipe": "transisi",
+     "efek": "blur-zoom",
+     "mulai": 33.0
+    },
+    {
+     "tipe": "judul",
+     "teks": "Konsultasi\n*GRATIS*",
+     "posisi": "atas",
+     "mulai": 33.2,
+     "selesai": 37.0
+    },
+    {
+     "tipe": "cta",
+     "teks": "Komen “HYPIT”",
+     "posisi": "tengah",
+     "mulai": 33.6,
+     "selesai": 37.0
+    },
+    {
+     "tipe": "remotion",
+     "efek": "partikel",
+     "posisi": "tengah",
+     "mulai": 33.6,
+     "selesai": 34.8,
+     "x": 0.5,
+     "y": 0.46
+    }
+   ]
+  }
+ ]
+}

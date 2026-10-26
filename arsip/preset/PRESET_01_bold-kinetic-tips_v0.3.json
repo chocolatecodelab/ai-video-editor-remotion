@@ -1,0 +1,154 @@
+{
+  "_meta": {
+    "id": "bold-kinetic-tips",
+    "versi": "0.3",
+    "status": "draft",
+    "catatan": "v0.3: gaya & template tanpa pin versi (selalu versi aktif; proyek tetap mengunci versi saat dibuat). v0.2: nama baru (dulu tips-kinetic); gaya & template v0.2. Titik awal, bukan hasil jadi. Setelah transkrip, ganti angka detik dengan anchor {\"kata\": …}."
+  },
+  "label": "Bold Kinetic · Tips 30–45 s",
+  "format": "tips",
+  "deskripsi": "Tips/opini cepat 30–45 s: judul menghentak, caption KAPITAL, push tegas, whoosh tiap beat.",
+  "kapan": "Satu masalah + satu jawaban, talking head, energi tinggi.",
+  "gaya": "bold-kinetic",
+  "template": "hook-problem-solution",
+  "efek": [
+    "zoom-through-cut@0.1"
+  ],
+  "butuh": {
+    "rekaman": true,
+    "roto": false,
+    "remotion": false
+  },
+  "manifest": {
+    "platform": [
+      "reels",
+      "tiktok",
+      "shorts"
+    ],
+    "warna": {
+      "filter": "eq=contrast=1.06:saturation=1.12"
+    },
+    "transkrip": {
+      "bahasa": "id",
+      "model": "large-v3"
+    }
+  },
+  "beat_sheet": {
+    "_catatan": "Dibuat dari preset bold-kinetic-tips@0.3. Waktu = detik; ganti dengan anchor {\"kata\": …} setelah transkrip. Field lengkap: pipeline/scripts/README.md",
+    "caption": {
+      "aktif": true,
+      "posisi": "bawah",
+      "kecuali": [
+        "hook"
+      ]
+    },
+    "beats": [
+      {
+        "id": "hook",
+        "beat": "Hook",
+        "mulai": 0,
+        "selesai": 3.0,
+        "elemen": [
+          {
+            "tipe": "judul",
+            "teks": "TODO KLAIM *KONTRAS*",
+            "posisi": "tengah",
+            "stroke": true,
+            "sfx": true
+          },
+          {
+            "tipe": "push",
+            "mulai": 0.2,
+            "gerak": 1.0
+          }
+        ]
+      },
+      {
+        "id": "problem",
+        "beat": "Problem",
+        "mulai": 3.0,
+        "selesai": 12.0,
+        "elemen": [
+          {
+            "tipe": "teks",
+            "teks": "TODO masalah *kamu*",
+            "posisi": "atas",
+            "stroke": true,
+            "durasi": 2.5
+          },
+          {
+            "tipe": "push",
+            "efek": "zoom-through-cut",
+            "mulai": {
+              "beat": "problem",
+              "ujung": "selesai",
+              "offset": -0.8
+            },
+            "selesai": {
+              "beat": "problem",
+              "ujung": "selesai"
+            },
+            "gerak": 0.8,
+            "easing": "tegas",
+            "sfx": "whoosh"
+          }
+        ]
+      },
+      {
+        "id": "agitasi",
+        "beat": "Agitasi",
+        "mulai": 12.0,
+        "selesai": 18.0,
+        "elemen": [
+          {
+            "tipe": "judul",
+            "teks": "TODO AKIBAT *FATAL*",
+            "posisi": "atas",
+            "stroke": true,
+            "durasi": 2.5,
+            "sfx": true
+          },
+          {
+            "tipe": "push",
+            "gerak": 1.2,
+            "easing": "tegas"
+          }
+        ]
+      },
+      {
+        "id": "solution",
+        "beat": "Solution",
+        "mulai": 18.0,
+        "selesai": 35.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO jawabannya",
+            "item": [
+              "TODO langkah *1*",
+              "TODO langkah 2",
+              "TODO langkah 3"
+            ],
+            "penanda": "→",
+            "stagger": 0.8,
+            "posisi": "tengah",
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "beat": "CTA",
+        "mulai": 35.0,
+        "elemen": [
+          {
+            "tipe": "cta",
+            "teks": "TODO ajakan",
+            "posisi": "tengah",
+            "sfx": "pop"
+          }
+        ]
+      }
+    ]
+  }
+}

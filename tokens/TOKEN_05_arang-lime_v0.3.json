@@ -1,0 +1,160 @@
+{
+  "_meta": {
+    "id": "arang-lime",
+    "versi": "0.3",
+    "status": "draft",
+    "catatan": "Gaya Arang Lime. Font dari folder font Windows/pengguna; ganti di sini bila memakai font lain. Font: Bebas Neue + Inter ExtraBold (Google Fonts di pipeline/fonts/ bila tidak terpasang)."
+  },
+  "warna": {
+    "latar": "#1C1D1A",
+    "teks-utama": "#F2F2EE",
+    "teks-sekunder": "#C4C5BD",
+    "aksen": "#C6FF3D",
+    "aksen-2": "#FF6A3D",
+    "peringatan": "#FF4D4D",
+    "panel": "#262724",
+    "panel-opasitas": 0.96,
+    "garis-panel": "#C6FF3D",
+    "garis-opasitas": 0.0,
+    "stroke": "#0E0F0C",
+    "bayangan": "#000000",
+    "bayangan-opasitas": 0.5
+  },
+  "font": {
+    "judul": {
+      "file": "BebasNeue-Regular.ttf",
+      "family": "Bebas Neue",
+      "weight": 400
+    },
+    "subjudul": {
+      "file": "BebasNeue-Regular.ttf",
+      "family": "Bebas Neue",
+      "weight": 400
+    },
+    "isi": {
+      "file": "Inter-Variable.ttf",
+      "family": "Inter",
+      "weight": 700,
+      "wght": 700
+    },
+    "caption": {
+      "file": "Inter-Variable.ttf",
+      "family": "Inter",
+      "weight": 800,
+      "wght": 800
+    },
+    "depth": {
+      "file": "BebasNeue-Regular.ttf",
+      "family": "Bebas Neue",
+      "weight": 400
+    }
+  },
+  "ukuran": {
+    "judul": 104,
+    "subjudul": 68,
+    "isi": 50,
+    "caption": 66,
+    "depth": 250
+  },
+  "spasi": {
+    "baris": 1.02,
+    "padding-kartu": 38,
+    "jarak-item": 18
+  },
+  "radius": {
+    "kartu": 10,
+    "chip": 10
+  },
+  "blur": {
+    "panel": 0
+  },
+  "bayangan": {
+    "offset": [
+      0,
+      6
+    ],
+    "blur": 0
+  },
+  "durasi": {
+    "masuk": 0.24,
+    "keluar": 0.16,
+    "tahan-min": 1.0,
+    "stagger": 0.06
+  },
+  "easing": {
+    "standar": [
+      0.2,
+      0.9,
+      0.2,
+      1.0
+    ],
+    "tegas": [
+      0.85,
+      0.0,
+      0.15,
+      1.0
+    ],
+    "keluar": [
+      0.6,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "geser",
+    "keluar-default": "fade",
+    "jarak-naik": 120,
+    "skala-pop": 0.8,
+    "push-in": 1.1
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 12
+  },
+  "caption": {
+    "kata-maks": 3,
+    "karakter-maks-baris": 15,
+    "stroke": 8,
+    "huruf-besar": true,
+    "baris-maks": 2,
+    "jeda-pecah": 0.35,
+    "warna-aktif": "aksen",
+    "mode": "aktif",
+    "redup": 0.4
+  },
+  "sfx": {
+    "transisi": "whoosh-pendek",
+    "level-db": -17,
+    "peta": {
+      "teks": {
+        "bunyi": "whoosh-pendek",
+        "kelas": "transisi"
+      }
+    },
+    "level": {
+      "aksen": -17,
+      "status": -17,
+      "transisi": -18,
+      "ui": -22,
+      "ketik": -27
+    }
+  },
+  "mask": {
+    "feather-px": 1.5
+  },
+  "motif": {
+    "bingkai": "kinetik",
+    "aksen": "kotak",
+    "tekstur": null,
+    "transisi": "whip",
+    "reveal": "partikel",
+    "boil": 0,
+    "depth": "padat",
+    "judul": {
+      "masuk": "slam",
+      "hiasan": "none"
+    }
+  }
+}

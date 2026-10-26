@@ -1,0 +1,165 @@
+{
+ "_meta": {
+  "id": "rotoscope-draf",
+  "versi": "0.1",
+  "status": "draft",
+  "catatan": "Draf otomatis dari referensi.py — pindahkan ke koreografi/KOREO_NN_<nama>_v0.1.json setelah ditinjau."
+ },
+ "label": "Dari referensi rotoscope",
+ "template": "hook-problem-solution",
+ "variasi_min": 4,
+ "butuh": {
+  "rekaman": true,
+  "remotion": true
+ },
+ "beat_sheet": {
+  "caption": {
+   "aktif": true
+  },
+  "beats": [
+   {
+    "id": "b1",
+    "beat": "hook",
+    "mulai": 0.0,
+    "selesai": 0.5,
+    "elemen": [
+     {
+      "slot": "hook",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 0.2,
+      "selesai": 0.5,
+      "_ref": "shot 1: hook"
+     }
+    ]
+   },
+   {
+    "id": "b2",
+    "beat": "info/chip di atas talking head",
+    "mulai": 0.5,
+    "selesai": 6.4,
+    "elemen": [
+     {
+      "slot": "masalah",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 0.7,
+      "selesai": 6.4,
+      "_ref": "shot 2: info/chip di atas talking head"
+     }
+    ]
+   },
+   {
+    "id": "b3",
+    "beat": "info/chip di atas talking head",
+    "mulai": 6.4,
+    "selesai": 7.6,
+    "elemen": [
+     {
+      "slot": "masalah",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 6.6,
+      "selesai": 7.6,
+      "_ref": "shot 3: info/chip di atas talking head"
+     }
+    ]
+   },
+   {
+    "id": "b4",
+    "beat": "info/chip di atas talking head",
+    "mulai": 7.6,
+    "selesai": 8.3,
+    "elemen": [
+     {
+      "slot": "masalah",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 7.8,
+      "selesai": 8.3,
+      "_ref": "shot 4: info/chip di atas talking head"
+     }
+    ]
+   },
+   {
+    "id": "b5",
+    "beat": "info/chip di atas talking head",
+    "mulai": 8.3,
+    "selesai": 10.0,
+    "elemen": [
+     {
+      "slot": "masalah",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 8.5,
+      "selesai": 10.0,
+      "_ref": "shot 5: info/chip di atas talking head"
+     }
+    ]
+   },
+   {
+    "id": "b6",
+    "beat": "cutaway diam (couch-wall / paper-cut / gambar)",
+    "mulai": 10.0,
+    "selesai": 13.9,
+    "elemen": [
+     {
+      "slot": "konteks",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 10.2,
+      "selesai": 13.9,
+      "_ref": "shot 6: cutaway diam (couch-wall / paper-cut / gambar)"
+     }
+    ]
+   },
+   {
+    "id": "b7",
+    "beat": "info/chip di atas talking head",
+    "mulai": 13.9,
+    "selesai": 20.0,
+    "elemen": [
+     {
+      "slot": "masalah",
+      "isi": {
+       "judul": "ISI DARI REFERENSI"
+      },
+      "mulai": 14.1,
+      "selesai": 20.0,
+      "_ref": "shot 7: info/chip di atas talking head"
+     }
+    ]
+   },
+   {
+    "id": "b8",
+    "beat": "transisi",
+    "mulai": 20.0,
+    "selesai": 20.2,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 20.0
+     }
+    ]
+   },
+   {
+    "id": "b9",
+    "beat": "transisi",
+    "mulai": 20.2,
+    "selesai": 20.4,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 20.2
+     }
+    ]
+   }
+  ]
+ }
+}

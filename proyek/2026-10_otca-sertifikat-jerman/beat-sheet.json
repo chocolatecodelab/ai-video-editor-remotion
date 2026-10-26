@@ -1,0 +1,449 @@
+{
+  "_catatan": "Proyek OTCA — brand via manifest.token_override (hanya proyek ini). Struktur explainer (58,7 s utuh) dengan alur mitos→fakta dari koreografi mitos-fakta@0.3 seed 1 (asli: beat-sheet.preset.json). Brief: D:/KERJAAN/OTCA/MOTION_GRAPHIC.md.",
+  "caption": {
+    "aktif": true,
+    "posisi": "bawah",
+    "kecuali": [
+      "cta"
+    ]
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "beat": "Hook",
+      "mulai": 0,
+      "selesai": {
+        "kata": "Anak",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "elemen": [
+        {
+          "tipe": "gambar",
+          "file": "aset/grafis/logo-otca.png",
+          "lebar": 0.276,
+          "x": 0.5,
+          "y": 0.1465,
+          "mulai": 0.0,
+          "selesai": 58.6,
+          "masuk": "fade",
+          "keluar": "fade",
+          "sfx": false,
+          "fungsi": "konteks"
+        },
+        {
+          "tipe": "push",
+          "skala": 1.04,
+          "gerak": 3.0
+        },
+        {
+          "tipe": "depth",
+          "teks": "STUDI JERMAN",
+          "mulai": {
+            "kata": "Halo",
+            "ke": 1,
+            "ujung": "mulai"
+          },
+          "selesai": {
+            "kata": "Anak",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": -0.05
+          },
+          "fungsi": "hook"
+        }
+      ]
+    },
+    {
+      "id": "konteks",
+      "beat": "Konteks",
+      "mulai": {
+        "kata": "Anak",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "selesai": {
+        "kata": "Karena",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "elemen": [
+        {
+          "tipe": "transisi",
+          "efek": "blur-zoom",
+          "mulai": {
+            "kata": "Anak",
+            "ke": 1,
+            "ujung": "mulai"
+          }
+        },
+        {
+          "tipe": "info",
+          "ikon": "dokumen",
+          "judul": "Sertifikat *Bahasa Jerman*",
+          "sub": "bukti level bahasa",
+          "posisi": "atas",
+          "geser_y": 95,
+          "mulai": {
+            "kata": "sertifikat",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": -0.15
+          },
+          "selesai": {
+            "kata": "bahasanya",
+            "ke": 1,
+            "ujung": "selesai"
+          },
+          "fungsi": "konteks"
+        },
+        {
+          "tipe": "kamera",
+          "efek": "digital-zoom",
+          "mulai": {
+            "kata": "belum",
+            "ke": 1,
+            "ujung": "mulai"
+          },
+          "selesai": {
+            "kata": "bahasanya",
+            "ke": 1,
+            "ujung": "selesai"
+          },
+          "ketukan": [
+            0.0,
+            0.32
+          ],
+          "fungsi": "hasil"
+        },
+        {
+          "tipe": "chip",
+          "status": "salah",
+          "teks": "Belum tentu *siap studi*",
+          "posisi": "atas",
+          "geser_y": 95,
+          "mulai": {
+            "kata": "siap",
+            "ke": 1,
+            "ujung": "mulai"
+          },
+          "selesai": {
+            "kata": "Karena",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": -0.1
+          },
+          "fungsi": "masalah"
+        }
+      ]
+    },
+    {
+      "id": "poin-1",
+      "beat": "Level vs kemampuan",
+      "mulai": {
+        "kata": "Karena",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "selesai": {
+        "kata": "Di",
+        "ke": 2,
+        "ujung": "mulai"
+      },
+      "elemen": [
+        {
+          "tipe": "remotion",
+          "efek": "sebelum-sesudah",
+          "sebelum": "Level di *sertifikat*",
+          "sesudah": "Kemampuan *nyata*",
+          "posisi": "atas",
+          "mulai": {
+            "kata": "sertifikat",
+            "ke": 2,
+            "ujung": "mulai",
+            "offset": -0.2
+          },
+          "selesai": {
+            "kata": "dalam",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": -0.2
+          },
+          "fungsi": "membantah",
+          "geser_y": 95
+        },
+        {
+          "tipe": "kamera",
+          "efek": "pull-back-reveal",
+          "mulai": {
+            "kata": "dalam",
+            "ke": 1,
+            "ujung": "mulai"
+          },
+          "selesai": {
+            "kata": "Di",
+            "ke": 2,
+            "ujung": "mulai",
+            "offset": -0.15
+          },
+          "fungsi": "hasil"
+        },
+        {
+          "tipe": "chip",
+          "status": "info",
+          "teks": "Akademik · *sehari-hari*",
+          "posisi": "atas",
+          "geser_y": 95,
+          "mulai": {
+            "kata": "akademik",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": -0.1
+          },
+          "selesai": {
+            "kata": "Di",
+            "ke": 2,
+            "ujung": "mulai",
+            "offset": -0.15
+          },
+          "fungsi": "konteks"
+        }
+      ]
+    },
+    {
+      "id": "poin-2",
+      "beat": "Di perkuliahan",
+      "mulai": {
+        "kata": "Di",
+        "ke": 2,
+        "ujung": "mulai"
+      },
+      "selesai": {
+        "kata": "Jadi",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "elemen": [
+        {
+          "tipe": "transisi",
+          "efek": "blur-zoom",
+          "mulai": {
+            "kata": "Di",
+            "ke": 2,
+            "ujung": "mulai"
+          }
+        },
+        {
+          "tipe": "depth",
+          "teks": "KULIAH",
+          "mulai": {
+            "kata": "perkuliahan",
+            "ke": 1,
+            "ujung": "mulai"
+          },
+          "selesai": {
+            "kata": "dosen",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": -0.4
+          },
+          "fungsi": "konteks"
+        },
+        {
+          "tipe": "remotion",
+          "efek": "langkah",
+          "item": [
+            "Paham dosen",
+            "Paham materi",
+            "Diskusi",
+            "*Berpendapat*"
+          ],
+          "posisi": "atas",
+          "mulai": {
+            "kata": "dosen",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": -0.3
+          },
+          "selesai": {
+            "kata": "Jadi",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": -0.15
+          },
+          "fungsi": "proses",
+          "geser_y": 95
+        }
+      ]
+    },
+    {
+      "id": "poin-3",
+      "beat": "Kemampuan seimbang",
+      "mulai": {
+        "kata": "Jadi",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "selesai": {
+        "kata": "Karena",
+        "ke": 2,
+        "ujung": "mulai"
+      },
+      "elemen": [
+        {
+          "tipe": "remotion",
+          "efek": "coret",
+          "judul": "fokus.txt",
+          "teks": "level sertifikat",
+          "posisi": "atas",
+          "mulai": {
+            "kata": "Jadi",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": 0.1
+          },
+          "selesai": {
+            "kata": "apakah",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": -0.1
+          },
+          "fungsi": "membantah",
+          "geser_y": 95
+        },
+        {
+          "tipe": "remotion",
+          "efek": "checklist",
+          "item": [
+            "Mendengar",
+            "Berbicara",
+            "Menulis",
+            "Membaca"
+          ],
+          "stagger": 0.95,
+          "sfx_item": true,
+          "posisi": "atas",
+          "mulai": {
+            "kata": "kemampuan",
+            "ke": 2,
+            "ujung": "mulai",
+            "offset": 0.3
+          },
+          "selesai": {
+            "kata": "digunakan",
+            "ke": 1,
+            "ujung": "selesai"
+          },
+          "fungsi": "ringkasan",
+          "geser_y": 72
+        }
+      ]
+    },
+    {
+      "id": "ringkasan",
+      "beat": "Ringkasan",
+      "mulai": {
+        "kata": "Karena",
+        "ke": 2,
+        "ujung": "mulai"
+      },
+      "selesai": {
+        "kata": "Klik",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "elemen": [
+        {
+          "tipe": "chip",
+          "status": "benar",
+          "teks": "FAKTA: skill *terpakai*",
+          "posisi": "atas",
+          "geser_y": 95,
+          "mulai": {
+            "kata": "bukan",
+            "ke": 1,
+            "ujung": "mulai"
+          },
+          "selesai": {
+            "kata": "tapi",
+            "ke": 2,
+            "ujung": "mulai",
+            "offset": -0.1
+          },
+          "fungsi": "hasil"
+        },
+        {
+          "tipe": "depth",
+          "teks": "SIAP PAKAI",
+          "mulai": {
+            "kata": "kemampuan",
+            "ke": 3,
+            "ujung": "mulai"
+          },
+          "selesai": {
+            "kata": "Klik",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": -0.05
+          },
+          "fungsi": "reveal"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "beat": "CTA",
+      "mulai": {
+        "kata": "Klik",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "elemen": [
+        {
+          "tipe": "cta",
+          "teks": "Klik link di bio",
+          "posisi": "bawah",
+          "geser_y": -175,
+          "mulai": {
+            "kata": "Klik",
+            "ke": 1,
+            "ujung": "mulai"
+          },
+          "fungsi": "ajakan"
+        },
+        {
+          "tipe": "teks",
+          "teks": "www.otca.co.id",
+          "peran": "isi",
+          "posisi": "bawah",
+          "latar": "panel",
+          "ukuran": 40,
+          "mulai": {
+            "kata": "Klik",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": 0.4
+          }
+        },
+        {
+          "tipe": "remotion",
+          "efek": "partikel",
+          "x": 0.5,
+          "y": 0.74,
+          "mulai": {
+            "kata": "Klik",
+            "ke": 1,
+            "ujung": "mulai"
+          },
+          "selesai": {
+            "kata": "Klik",
+            "ke": 1,
+            "ujung": "mulai",
+            "offset": 0.85
+          },
+          "fungsi": "reveal"
+        }
+      ]
+    }
+  ]
+}

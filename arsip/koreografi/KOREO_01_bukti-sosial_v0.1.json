@@ -1,0 +1,296 @@
+{
+ "_meta": {
+  "id": "bukti-sosial",
+  "versi": "0.1",
+  "status": "draft",
+  "catatan": "Kerangka koreografi: ganti TODO, lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4)."
+ },
+ "label": "Bukti Sosial · Motion Graphics 35–40 s",
+ "deskripsi": "Tanpa footage: headline 2 baris + jendela UI yang berganti tiap bagian — angka naik, kata dicoret, timeline, terminal, form, grid variasi, CTA berpartikel.",
+ "kapan": "Promosi tool/repo/produk digital, pengumuman pencapaian, konten tanpa wajah.",
+ "template": "hook-problem-solution",
+ "variasi_min": 6,
+ "efek": [
+  "penghitung@0.1",
+  "partikel@0.1",
+  "blur-zoom@0.1",
+  "coret@0.1",
+  "timeline@0.1",
+  "terminal@0.1",
+  "form-ganti@0.1",
+  "grid-variasi@0.1"
+ ],
+ "butuh": {
+  "rekaman": false,
+  "roto": false,
+  "remotion": true
+ },
+ "manifest": {
+  "aset": {
+   "rekaman": null,
+   "musik": {
+    "file": "bawaan:pulsa",
+    "db": -16
+   }
+  }
+ },
+ "beat_sheet": {
+  "_catatan": "Kerangka koreografi: ganti TODO, lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4).",
+  "caption": {
+   "aktif": false
+  },
+  "beats": [
+   {
+    "id": "hook",
+    "beat": "Hook",
+    "mulai": 0,
+    "selesai": 3.5,
+    "elemen": [
+     {
+      "tipe": "judul",
+      "teks": "TODO subjek ini\n*TEMBUS TODO*",
+      "posisi": "atas",
+      "mulai": 0.1,
+      "selesai": 3.5
+     },
+     {
+      "tipe": "remotion",
+      "efek": "penghitung",
+      "fungsi": "hook",
+      "mulai": 0.2,
+      "selesai": 3.5,
+      "judul": "TODO akun / repo",
+      "sub": "TODO satu baris",
+      "ke": 23877,
+      "label": "bintang",
+      "durasi_hitung": 1.3,
+      "posisi": "tengah"
+     },
+     {
+      "tipe": "remotion",
+      "efek": "partikel",
+      "fungsi": "reveal",
+      "mulai": 1.85,
+      "selesai": 3.05,
+      "x": 0.5,
+      "y": 0.46
+     }
+    ]
+   },
+   {
+    "id": "problem",
+    "beat": "Problem",
+    "mulai": 3.5,
+    "selesai": 9.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 3.5
+     },
+     {
+      "tipe": "judul",
+      "teks": "Bukan cuma\n*TODO*",
+      "posisi": "atas",
+      "mulai": 3.7,
+      "selesai": 9.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "coret",
+      "fungsi": "membantah",
+      "mulai": 3.9,
+      "selesai": 9.0,
+      "judul": "TODO.txt",
+      "teks": "TODO",
+      "tunda": 1.2,
+      "posisi": "tengah"
+     }
+    ]
+   },
+   {
+    "id": "agitasi",
+    "beat": "Agitasi",
+    "mulai": 9.0,
+    "selesai": 15.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 9.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "Tapi seluruh\n*TODO*",
+      "posisi": "atas",
+      "mulai": 9.2,
+      "selesai": 15.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "timeline",
+      "fungsi": "proses",
+      "mulai": 9.4,
+      "selesai": 15.0,
+      "chip": [
+       "TODO",
+       "TODO",
+       "TODO",
+       "*kata*"
+      ],
+      "catatan": "TODO catatan",
+      "posisi": "tengah"
+     }
+    ]
+   },
+   {
+    "id": "solution",
+    "beat": "Solution",
+    "mulai": 15.0,
+    "selesai": 21.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 15.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "Kasih ke\n*TODO*",
+      "posisi": "atas",
+      "mulai": 15.2,
+      "selesai": 21.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "terminal",
+      "fungsi": "langkah",
+      "mulai": 15.4,
+      "selesai": 21.0,
+      "judul": "TODO",
+      "perintah": "TODO perintah singkat",
+      "keluaran": [
+       "TODO langkah 1",
+       "TODO langkah 2",
+       "✓ TODO selesai"
+      ],
+      "posisi": "tengah"
+     }
+    ]
+   },
+   {
+    "id": "kustomisasi",
+    "beat": "Kustomisasi",
+    "mulai": 21.0,
+    "selesai": 27.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 21.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "Ganti apa pun\n*yang kamu mau*",
+      "posisi": "atas",
+      "mulai": 21.2,
+      "selesai": 27.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "form-ganti",
+      "fungsi": "kustomisasi",
+      "mulai": 21.4,
+      "selesai": 27.0,
+      "posisi": "tengah",
+      "baris": [
+       {
+        "label": "TODO",
+        "lama": "TODO lama",
+        "baru": "TODO baru"
+       },
+       {
+        "label": "TODO",
+        "lama": "TODO lama",
+        "baru": "TODO baru"
+       },
+       {
+        "label": "TODO",
+        "lama": "TODO lama",
+        "baru": "TODO baru"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "hasil",
+    "beat": "Hasil",
+    "mulai": 27.0,
+    "selesai": 33.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 27.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "Satu alur kerja,\n*BANYAK VARIASI*",
+      "posisi": "atas",
+      "mulai": 27.2,
+      "selesai": 33.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "grid-variasi",
+      "fungsi": "hasil",
+      "mulai": 27.4,
+      "selesai": 33.0,
+      "judul": "TODO",
+      "ke": 60,
+      "label": "variasi",
+      "posisi": "tengah"
+     }
+    ]
+   },
+   {
+    "id": "cta",
+    "beat": "CTA",
+    "mulai": 33.0,
+    "selesai": 37.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 33.0
+     },
+     {
+      "tipe": "judul",
+      "teks": "TODO ajakan\n*TODO*",
+      "posisi": "atas",
+      "mulai": 33.2,
+      "selesai": 37.0
+     },
+     {
+      "tipe": "cta",
+      "teks": "TODO komen “KATA”",
+      "fungsi": "ajakan",
+      "mulai": 33.6,
+      "selesai": 37.0,
+      "posisi": "tengah"
+     },
+     {
+      "tipe": "remotion",
+      "efek": "partikel",
+      "fungsi": "reveal",
+      "mulai": 34.2,
+      "selesai": 35.4,
+      "x": 0.5,
+      "y": 0.46
+     }
+    ]
+   }
+  ]
+ }
+}

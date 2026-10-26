@@ -1,0 +1,212 @@
+{
+ "_catatan": "Demo fase 1: prompt-ui (E18) di hook, kartu info berikon per poin, chip salah/benar, caption karaoke, SFX otomatis (K08). Footage & transkrip dari 2026-10_wa-2026-10-24. Wajah y≈450–1250 → semua elemen di pita atas.",
+ "caption": {
+  "aktif": true,
+  "posisi": "bawah",
+  "kecuali": [
+   [
+    {
+     "kata": "cannot",
+     "ke": 2,
+     "offset": -0.25
+    },
+    {
+     "kata": "past",
+     "ujung": "selesai",
+     "offset": 0.1
+    }
+   ]
+  ]
+ },
+ "beats": [
+  {
+   "id": "hook",
+   "beat": "Hook",
+   "mulai": 0,
+   "selesai": 3.5,
+   "elemen": [
+    {
+     "tipe": "remotion",
+     "efek": "prompt-ui",
+     "label": "1 Lesson a Day · #1",
+     "teks": "The hardest lesson in life: *control*.",
+     "lampiran": "life.mp4",
+     "kata_ciut": "control",
+     "cps": 26,
+     "opasitas": 0.8,
+     "posisi": "atas",
+     "mulai": 0.15,
+     "selesai": {
+      "kata": "realizing",
+      "offset": -0.15
+     }
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "beat": "Problem",
+   "mulai": 3.5,
+   "selesai": {
+    "kata": "cannot",
+    "ke": 2,
+    "offset": -0.25
+   },
+   "elemen": [
+    {
+     "tipe": "chip",
+     "status": "info",
+     "teks": "Not everything is in your *control*",
+     "posisi": "atas",
+     "mulai": {
+      "kata": "realizing"
+     },
+     "selesai": {
+      "kata": "control",
+      "ke": 1,
+      "ujung": "selesai",
+      "offset": 0.5
+     }
+    },
+    {
+     "tipe": "info",
+     "ikon": "orang",
+     "judul": "What people *think*",
+     "sub": "not yours to decide",
+     "posisi": "atas",
+     "mulai": {
+      "kata": "people"
+     },
+     "selesai": {
+      "kata": "how",
+      "ke": 1,
+      "offset": -0.1
+     }
+    },
+    {
+     "tipe": "info",
+     "ikon": "hati",
+     "judul": "How they *treat* you",
+     "sub": "their call",
+     "posisi": "atas",
+     "mulai": {
+      "kata": "how",
+      "ke": 1
+     },
+     "selesai": {
+      "kata": "or",
+      "offset": -0.1
+     }
+    },
+    {
+     "tipe": "info",
+     "ikon": "kalender",
+     "judul": "What *tomorrow* brings",
+     "sub": "no one knows",
+     "posisi": "atas",
+     "mulai": {
+      "kata": "or"
+     },
+     "selesai": {
+      "beat": "problem",
+      "ujung": "selesai"
+     }
+    }
+   ]
+  },
+  {
+   "id": "agitasi",
+   "beat": "Agitasi",
+   "mulai": {
+    "kata": "cannot",
+    "ke": 2,
+    "offset": -0.25
+   },
+   "selesai": {
+    "kata": "but",
+    "offset": -0.15
+   },
+   "elemen": [
+    {
+     "tipe": "chip",
+     "status": "salah",
+     "teks": "Change the *past*",
+     "posisi": "atas",
+     "mulai": {
+      "kata": "change"
+     }
+    },
+    {
+     "tipe": "push",
+     "mulai": {
+      "kata": "past"
+     },
+     "gerak": 1.0
+    }
+   ]
+  },
+  {
+   "id": "solution",
+   "beat": "Solution",
+   "mulai": {
+    "kata": "but",
+    "offset": -0.15
+   },
+   "selesai": {
+    "kata": "sometimes",
+    "offset": -0.3
+   },
+   "elemen": [
+    {
+     "tipe": "chip",
+     "status": "benar",
+     "teks": "How you *respond*",
+     "y": 0.152,
+     "mulai": {
+      "kata": "can",
+      "ke": 1
+     }
+    },
+    {
+     "tipe": "chip",
+     "status": "benar",
+     "teks": "Your *efforts* & choices",
+     "y": 0.196,
+     "mulai": {
+      "kata": "can",
+      "ke": 2
+     }
+    },
+    {
+     "tipe": "chip",
+     "status": "benar",
+     "teks": "How you treat *yourself*",
+     "y": 0.24,
+     "mulai": {
+      "kata": "way",
+      "offset": -0.2
+     }
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "beat": "CTA",
+   "mulai": {
+    "kata": "sometimes",
+    "offset": -0.3
+   },
+   "elemen": [
+    {
+     "tipe": "info",
+     "ikon": "ide",
+     "judul": "Let go of what you *can't* control",
+     "posisi": "atas",
+     "mulai": {
+      "kata": "trying"
+     }
+    }
+   ]
+  }
+ ]
+}

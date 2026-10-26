@@ -1,0 +1,222 @@
+{
+ "_meta": {
+  "id": "kata-prompt",
+  "versi": "0.3",
+  "status": "draft",
+  "catatan": "Koreografi v0.3 ber-SLOT: tiap bagian menulis fungsi + isi generik; generator (slot.py) memilih perangkat yang cocok dengan gaya (gaya_cocok efek) dan seed (varian). Isi = CONTOH — ganti dengan isi videomu. Dengan rekaman: video.py pasang <proyek> mengganti detik dengan anchor kata & menghindari wajah."
+ },
+ "label": "Kata Prompt · Talking Head 30–40 s",
+ "deskripsi": "Satu istilah per video: pembuka khas gaya (prompt mengetik / huruf kaca / sampul), pertanyaan, penjelasan (kartu atau cutaway), anggapan dibantah, kata raksasa di belakang kepala (rotoscope) + kuis, CTA.",
+ "kapan": "Seri edukasi istilah (1 hari 1 istilah), glosarium, tips alat.",
+ "template": "hook-problem-solution",
+ "variasi_min": 5,
+ "butuh": {
+  "rekaman": true,
+  "remotion": true
+ },
+ "manifest": {},
+ "konteks_tambahan": [
+  "depth-typography@0.2"
+ ],
+ "beat_sheet": {
+  "_catatan": "Koreografi v0.3 ber-SLOT: tiap bagian menulis fungsi + isi generik; generator (slot.py) memilih perangkat yang cocok dengan gaya (gaya_cocok efek) dan seed (varian). Isi = CONTOH — ganti dengan isi videomu. Dengan rekaman: video.py pasang <proyek> mengganti detik dengan anchor kata & menghindari wajah.",
+  "caption": {
+   "aktif": true,
+   "posisi": "bawah",
+   "kecuali": []
+  },
+  "beats": [
+   {
+    "id": "hook",
+    "beat": "Hook",
+    "mulai": 0,
+    "selesai": 3.5,
+    "elemen": [
+     {
+      "slot": "hook",
+      "mulai": 0.15,
+      "selesai": 5.5,
+      "isi": {
+       "teks": "Editkan, pakai *rotoscope*.",
+       "label": "1 Hari 1 Istilah · #4",
+       "lampiran": "video-kamu.mp4",
+       "cps": 26,
+       "opasitas": 0.8,
+       "kata": "rotoscope",
+       "chip": "Istilah #4: *rotoscope*",
+       "judul": "Rotoscope",
+       "masthead": "ISTILAH",
+       "item": [
+        "Apa itu?",
+        "Kapan dipakai"
+       ]
+      },
+      "kandidat": [
+       "prompt-ui",
+       "glass-type",
+       "cover-story",
+       "doodle-boil"
+      ],
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "problem",
+    "beat": "Problem",
+    "mulai": 3.5,
+    "selesai": 12.0,
+    "elemen": [
+     {
+      "slot": "masalah",
+      "mulai": 5.6,
+      "selesai": 8.4,
+      "isi": {
+       "chip": "Apa itu *rotoscope*?",
+       "status": "info",
+       "kata": "rotoscope?",
+       "judul": "Apa itu *rotoscope*?"
+      },
+      "kandidat": [
+       "chip",
+       "doodle-boil",
+       "info"
+      ],
+      "posisi": "atas"
+     },
+     {
+      "slot": "kamera",
+      "mulai": 5.8,
+      "selesai": 7.8
+     },
+     {
+      "slot": "konteks",
+      "mulai": 8.6,
+      "selesai": 12.0,
+      "isi": {
+       "judul": "Memisahkan *subjek*",
+       "sub": "dari latar, per frame",
+       "ikon": "lapisan",
+       "item": [
+        "Subjek",
+        "Latar",
+        "Per frame"
+       ],
+       "nama": "Rotoscope",
+       "peran": "Istilah #4 · 1 hari 1 istilah"
+      },
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "agitasi",
+    "beat": "Agitasi",
+    "mulai": 12.0,
+    "selesai": 18.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 12.0
+     },
+     {
+      "tipe": "latar",
+      "mulai": 12.0,
+      "selesai": 18.0
+     },
+     {
+      "slot": "membantah",
+      "mulai": 12.2,
+      "selesai": 18.0,
+      "isi": {
+       "anggapan": "cuma efek green screen",
+       "file": "anggapan.txt",
+       "chip": "Bukan *green screen*",
+       "ganti": [
+        {
+         "label": "efek",
+         "lama": "green screen",
+         "baru": "rotoscope"
+        },
+        {
+         "label": "alat",
+         "lama": "studio",
+         "baru": "HP saja"
+        }
+       ]
+      },
+      "posisi": "tengah"
+     }
+    ]
+   },
+   {
+    "id": "solution",
+    "beat": "Solution",
+    "mulai": 18.0,
+    "selesai": 28.0,
+    "elemen": [
+     {
+      "slot": "transisi",
+      "mulai": 18.0
+     },
+     {
+      "tipe": "depth",
+      "teks": "ROTOSCOPE",
+      "fungsi": "reveal",
+      "y": 0.36,
+      "mulai": 18.2,
+      "selesai": 28.0
+     },
+     {
+      "tipe": "chip",
+      "status": "salah",
+      "teks": "Cuma untuk film",
+      "fungsi": "membantah",
+      "mulai": 18.6,
+      "selesai": 22.5,
+      "posisi": "atas"
+     },
+     {
+      "slot": "hasil",
+      "mulai": 22.6,
+      "selesai": 28.0,
+      "isi": {
+       "chip": "Teks di *belakang* kepala",
+       "judul": "Teks di *belakang* kepala",
+       "ikon": "lapisan"
+      },
+      "kandidat": [
+       "chip-benar",
+       "info"
+      ],
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "cta",
+    "beat": "Cta",
+    "mulai": 28.0,
+    "selesai": 33.0,
+    "elemen": [
+     {
+      "tipe": "cta",
+      "teks": "Ikuti seri berikutnya",
+      "fungsi": "ajakan",
+      "mulai": 28.4,
+      "selesai": 33.0,
+      "posisi": "atas"
+     },
+     {
+      "slot": "reveal",
+      "mulai": 28.9,
+      "x": 0.84,
+      "y": 0.27,
+      "fungsi": "reveal",
+      "ukuran": 100
+     }
+    ]
+   }
+  ]
+ }
+}

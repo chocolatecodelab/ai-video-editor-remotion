@@ -1,0 +1,288 @@
+{
+  "_meta": {
+    "id": "platform",
+    "versi": "0.2",
+    "status": "draft",
+    "catatan": "Nilai platform (bukan gaya). Dimuat lebih dulu; token gaya boleh menimpa. Semua px mengacu ke resolusi referensi. v0.2: sfx otomatis (peta bunyi per tipe elemen, level per kelas), ketik (prompt-ui), caption.mode. + perangkat UI (E19–E25), transisi blur-zoom (E26)."
+  },
+  "format": {
+    "rasio": "9:16",
+    "resolusi": [
+      1080,
+      1920
+    ],
+    "fps": 30,
+    "resolusi-referensi": [
+      1080,
+      1920
+    ]
+  },
+  "zona-aman": {
+    "atas": 250,
+    "bawah": 400,
+    "kiri": 60,
+    "kanan": 120,
+    "_catatan": "px @1080x1920. Atas = status bar + tab, bawah = caption/username/musik, kanan = tombol like/komen/share (Reels/TikTok/Shorts)."
+  },
+  "ingest": {
+    "fps-diterima": [
+      24,
+      25,
+      29.97,
+      30,
+      50,
+      59.94,
+      60
+    ],
+    "tinggi-min": 1080,
+    "crf-antara": 12
+  },
+  "audio": {
+    "lufs": -14,
+    "lufs-toleransi": 1.0,
+    "true-peak": -1.0,
+    "lra": 11,
+    "sample-rate": 48000,
+    "highpass-hz": 80,
+    "denoise": "afftdn=nf=-25"
+  },
+  "ekspor": {
+    "master": {
+      "codec": "prores_ks",
+      "profil": 3,
+      "pix_fmt": "yuv422p10le",
+      "ext": "mov"
+    },
+    "platform": {
+      "reels": {
+        "vcodec": "libx264",
+        "profile": "high",
+        "level": "4.1",
+        "crf": 18,
+        "maxrate": "12M",
+        "bufsize": "24M",
+        "acodec": "aac",
+        "abitrate": "192k"
+      },
+      "tiktok": {
+        "vcodec": "libx264",
+        "profile": "high",
+        "level": "4.1",
+        "crf": 18,
+        "maxrate": "12M",
+        "bufsize": "24M",
+        "acodec": "aac",
+        "abitrate": "192k"
+      },
+      "shorts": {
+        "vcodec": "libx264",
+        "profile": "high",
+        "level": "4.2",
+        "crf": 17,
+        "maxrate": "16M",
+        "bufsize": "32M",
+        "acodec": "aac",
+        "abitrate": "192k"
+      }
+    },
+    "warna": "bt709",
+    "pix_fmt": "yuv420p"
+  },
+  "qa": {
+    "kontras-min": 4.5,
+    "kontras-min-besar": 3.0,
+    "ukuran-besar-px": 72,
+    "ukuran-min-px": 40,
+    "karakter-per-detik-maks": 17,
+    "tahan-min": 1.2,
+    "durasi-toleransi-s": 3
+  },
+  "caption": {
+    "mode": "aktif",
+    "redup": 0.4
+  },
+  "ketik": {
+    "cps": 22,
+    "jeda-awal": 0.2,
+    "jeda-kirim": 0.3,
+    "durasi-ciut": 0.45
+  },
+  "sfx": {
+    "transisi": "whoosh-pendek",
+    "level-db": -20,
+    "otomatis": true,
+    "jarak-min": 0.06,
+    "push-gerak-maks": 1.2,
+    "level": {
+      "ui": -26,
+      "transisi": -21,
+      "aksen": -19,
+      "status": -19,
+      "ketik": -30
+    },
+    "peta": {
+      "judul": {
+        "bunyi": "whoosh-pendek",
+        "kelas": "transisi"
+      },
+      "teks": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "kartu": {
+        "bunyi": "ketuk",
+        "kelas": "ui"
+      },
+      "item": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "cta": {
+        "bunyi": "pop",
+        "kelas": "aksen"
+      },
+      "gambar": {
+        "bunyi": "ketuk",
+        "kelas": "ui"
+      },
+      "broll": {
+        "bunyi": "whoosh-pendek",
+        "kelas": "transisi"
+      },
+      "push": {
+        "bunyi": "whoosh-panjang",
+        "kelas": "transisi"
+      },
+      "depth": {
+        "bunyi": "hit",
+        "kelas": "aksen"
+      },
+      "info": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      },
+      "chip": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "chip-benar": {
+        "bunyi": "ding-benar",
+        "kelas": "status"
+      },
+      "chip-salah": {
+        "bunyi": "ding-salah",
+        "kelas": "status"
+      },
+      "chip-nomor": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      },
+      "remotion": {
+        "bunyi": "ketuk",
+        "kelas": "ui"
+      },
+      "prompt-masuk": {
+        "bunyi": "whoosh-pendek",
+        "kelas": "transisi"
+      },
+      "prompt-lampiran": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      },
+      "prompt-ketik": {
+        "bunyi": "klik-ketik",
+        "kelas": "ketik"
+      },
+      "prompt-kirim": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "prompt-ciut": {
+        "bunyi": "swoosh-balik",
+        "kelas": "transisi"
+      },
+      "hitung-tick": {
+        "bunyi": "tick",
+        "kelas": "ketik"
+      },
+      "hitung-selesai": {
+        "bunyi": "pop",
+        "kelas": "aksen"
+      },
+      "terminal-ketik": {
+        "bunyi": "klik-ketik",
+        "kelas": "ketik"
+      },
+      "terminal-baris": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "terminal-selesai": {
+        "bunyi": "ding-benar",
+        "kelas": "status"
+      },
+      "coret-gores": {
+        "bunyi": "gores",
+        "kelas": "aksen"
+      },
+      "coret-silang": {
+        "bunyi": "ding-salah",
+        "kelas": "status"
+      },
+      "timeline-blok": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "timeline-chip": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      },
+      "grid-isi": {
+        "bunyi": "tick",
+        "kelas": "ketik"
+      },
+      "grid-selesai": {
+        "bunyi": "pop",
+        "kelas": "aksen"
+      },
+      "form-ganti": {
+        "bunyi": "tick",
+        "kelas": "ui"
+      },
+      "form-lencana": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      },
+      "partikel": {
+        "bunyi": "kilau",
+        "kelas": "aksen"
+      },
+      "transisi": {
+        "bunyi": "whoosh-panjang",
+        "kelas": "transisi"
+      }
+    },
+    "_catatan": "Bunyi pustaka: pipeline/scripts/sfx.py (RESEP). Elemen tanpa field 'sfx' memakai peta ini; 'sfx': false = diam."
+  },
+  "perangkat": {
+    "durasi-hitung": 1.6,
+    "tick-maks": 14,
+    "stagger-baris": 0.35,
+    "stagger-form": 0.7,
+    "stagger-chip": 0.3,
+    "durasi-coret": 0.35,
+    "durasi-grid": 1.8,
+    "opasitas-min": 0.9,
+    "durasi-partikel": 1.2,
+    "_catatan": "Waktu perangkat UI (E19–E25); opasitas-min = panel jendela mock UI minimal (keterbacaan).",
+    "latar-opasitas": 0.82,
+    "latar-blur": 40
+  },
+  "transisi": {
+    "blur-zoom": {
+      "durasi": 0.5,
+      "skala": 1.06,
+      "blur-px": 22
+    }
+  }
+}

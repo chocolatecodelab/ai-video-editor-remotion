@@ -1,0 +1,2353 @@
+{
+  "proyek": "2026-10_wa-2026-10-24",
+  "resolusi": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "durasi": 46.5,
+  "zona_aman": [
+    60,
+    250,
+    960,
+    1520
+  ],
+  "elemen": [
+    {
+      "id": "hook/0-judul",
+      "tipe": "judul",
+      "beat": "hook",
+      "teks": "The hardest *lesson*",
+      "mulai": 0.211,
+      "selesai": 3.211,
+      "delay": 0.0,
+      "bbox": [
+        158.5,
+        250.0,
+        861.5,
+        537.0
+      ],
+      "bbox_animasi": [
+        158.5,
+        250.0,
+        861.5,
+        582.7
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": "glass-type@0.1",
+      "anchor": {
+        "kata": "you"
+      },
+      "fungsi": null,
+      "peran": "judul",
+      "latar": "panel"
+    },
+    {
+      "id": "hook/0-judul/teks",
+      "tipe": "teks-panel",
+      "beat": "hook",
+      "teks": "The hardest *lesson*",
+      "mulai": 0.211,
+      "selesai": 3.211,
+      "delay": 0.0,
+      "bbox": [
+        198.5,
+        276.5,
+        821.5,
+        510.5
+      ],
+      "bbox_animasi": [
+        198.5,
+        276.5,
+        821.5,
+        556.2
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "hook/0-judul",
+      "kontras": {
+        "t": 1.767,
+        "l_p10": 0.0372,
+        "l_p90": 0.0535
+      },
+      "efek": "glass-type@0.1",
+      "anchor": {
+        "kata": "you"
+      },
+      "fungsi": null,
+      "bbox_teks": [
+        202.5,
+        280.5,
+        817.5,
+        506.5
+      ],
+      "ukuran": 96,
+      "baris": 2,
+      "karakter_baris_maks": 11,
+      "kata": 3,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "judul"
+    },
+    {
+      "id": "problem/0-teks",
+      "tipe": "teks",
+      "beat": "problem",
+      "teks": "Not everything is in your *control*",
+      "mulai": 4.892,
+      "selesai": 9.613,
+      "delay": 0.0,
+      "bbox": [
+        64.0,
+        250.0,
+        956.0,
+        371.0
+      ],
+      "bbox_animasi": [
+        64.0,
+        250.0,
+        956.0,
+        405.3
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "realizing"
+      },
+      "fungsi": null,
+      "peran": "isi",
+      "latar": "panel"
+    },
+    {
+      "id": "problem/0-teks/teks",
+      "tipe": "teks-panel",
+      "beat": "problem",
+      "teks": "Not everything is in your *control*",
+      "mulai": 4.892,
+      "selesai": 9.613,
+      "delay": 0.0,
+      "bbox": [
+        104.0,
+        276.5,
+        916.0,
+        344.5
+      ],
+      "bbox_animasi": [
+        104.0,
+        276.5,
+        916.0,
+        378.8
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "problem/0-teks",
+      "kontras": {
+        "t": 7.333,
+        "l_p10": 0.0344,
+        "l_p90": 0.0477
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "realizing"
+      },
+      "fungsi": null,
+      "bbox_teks": [
+        108.0,
+        280.5,
+        912.0,
+        340.5
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 33,
+      "kata": 6,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "isi"
+    },
+    {
+      "id": "problem/1-teks",
+      "tipe": "teks",
+      "beat": "problem",
+      "teks": "What people *think*",
+      "mulai": 10.993,
+      "selesai": 13.214,
+      "delay": 0.0,
+      "bbox": [
+        232.5,
+        250.0,
+        787.5,
+        371.0
+      ],
+      "bbox_animasi": [
+        232.5,
+        250.0,
+        787.5,
+        405.9
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "people"
+      },
+      "fungsi": null,
+      "peran": "isi",
+      "latar": "panel"
+    },
+    {
+      "id": "problem/1-teks/teks",
+      "tipe": "teks-panel",
+      "beat": "problem",
+      "teks": "What people *think*",
+      "mulai": 10.993,
+      "selesai": 13.214,
+      "delay": 0.0,
+      "bbox": [
+        272.5,
+        276.5,
+        747.5,
+        344.5
+      ],
+      "bbox_animasi": [
+        272.5,
+        276.5,
+        747.5,
+        379.4
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "problem/1-teks",
+      "kontras": {
+        "t": 12.167,
+        "l_p10": 0.0372,
+        "l_p90": 0.0467
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "people"
+      },
+      "fungsi": null,
+      "bbox_teks": [
+        276.5,
+        280.5,
+        743.5,
+        340.5
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 17,
+      "kata": 3,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "isi"
+    },
+    {
+      "id": "problem/2-teks",
+      "tipe": "teks",
+      "beat": "problem",
+      "teks": "How they *treat* you",
+      "mulai": 13.314,
+      "selesai": 15.454,
+      "delay": 0.0,
+      "bbox": [
+        226.5,
+        250.0,
+        793.5,
+        371.0
+      ],
+      "bbox_animasi": [
+        226.5,
+        250.0,
+        793.5,
+        418.7
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "how",
+        "ke": 1
+      },
+      "fungsi": null,
+      "peran": "isi",
+      "latar": "panel"
+    },
+    {
+      "id": "problem/2-teks/teks",
+      "tipe": "teks-panel",
+      "beat": "problem",
+      "teks": "How they *treat* you",
+      "mulai": 13.314,
+      "selesai": 15.454,
+      "delay": 0.0,
+      "bbox": [
+        266.5,
+        276.5,
+        753.5,
+        344.5
+      ],
+      "bbox_animasi": [
+        266.5,
+        276.5,
+        753.5,
+        392.2
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "problem/2-teks",
+      "kontras": {
+        "t": 14.467,
+        "l_p10": 0.0372,
+        "l_p90": 0.0467
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "how",
+        "ke": 1
+      },
+      "fungsi": null,
+      "bbox_teks": [
+        270.5,
+        280.5,
+        749.5,
+        340.5
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 18,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "isi"
+    },
+    {
+      "id": "problem/3-teks",
+      "tipe": "teks",
+      "beat": "problem",
+      "teks": "What *tomorrow* brings",
+      "mulai": 15.554,
+      "selesai": 17.625,
+      "delay": 0.0,
+      "bbox": [
+        180.0,
+        250.0,
+        840.0,
+        371.0
+      ],
+      "bbox_animasi": [
+        180.0,
+        250.0,
+        840.0,
+        422.9
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "or"
+      },
+      "fungsi": null,
+      "peran": "isi",
+      "latar": "panel"
+    },
+    {
+      "id": "problem/3-teks/teks",
+      "tipe": "teks-panel",
+      "beat": "problem",
+      "teks": "What *tomorrow* brings",
+      "mulai": 15.554,
+      "selesai": 17.625,
+      "delay": 0.0,
+      "bbox": [
+        220.0,
+        276.5,
+        800.0,
+        344.5
+      ],
+      "bbox_animasi": [
+        220.0,
+        276.5,
+        800.0,
+        396.4
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "problem/3-teks",
+      "kontras": {
+        "t": 16.667,
+        "l_p10": 0.0364,
+        "l_p90": 0.0471
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "or"
+      },
+      "fungsi": null,
+      "bbox_teks": [
+        224.0,
+        280.5,
+        796.0,
+        340.5
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 20,
+      "kata": 3,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "isi"
+    },
+    {
+      "id": "agitasi/0-judul",
+      "tipe": "judul",
+      "beat": "agitasi",
+      "teks": "Can't change the *past*",
+      "mulai": 18.215,
+      "selesai": 22.185,
+      "delay": 0.0,
+      "bbox": [
+        128.5,
+        250.0,
+        891.5,
+        537.0
+      ],
+      "bbox_animasi": [
+        128.5,
+        250.0,
+        891.5,
+        585.3
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "change"
+      },
+      "fungsi": null,
+      "peran": "judul",
+      "latar": "panel"
+    },
+    {
+      "id": "agitasi/0-judul/teks",
+      "tipe": "teks-panel",
+      "beat": "agitasi",
+      "teks": "Can't change the *past*",
+      "mulai": 18.215,
+      "selesai": 22.185,
+      "delay": 0.0,
+      "bbox": [
+        168.5,
+        276.5,
+        851.5,
+        510.5
+      ],
+      "bbox_animasi": [
+        168.5,
+        276.5,
+        851.5,
+        558.8
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "agitasi/0-judul",
+      "kontras": {
+        "t": 20.267,
+        "l_p10": 0.0387,
+        "l_p90": 0.0537
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "change"
+      },
+      "fungsi": null,
+      "bbox_teks": [
+        172.5,
+        280.5,
+        847.5,
+        506.5
+      ],
+      "ukuran": 96,
+      "baris": 2,
+      "karakter_baris_maks": 12,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "judul"
+    },
+    {
+      "id": "solution/0-teks",
+      "tipe": "teks",
+      "beat": "solution",
+      "teks": "How you *respond*",
+      "mulai": 22.615,
+      "selesai": 26.241,
+      "delay": 0.0,
+      "bbox": [
+        247.0,
+        250.0,
+        773.0,
+        371.0
+      ],
+      "bbox_animasi": [
+        247.0,
+        250.0,
+        773.0,
+        419.3
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "can",
+        "ke": 1
+      },
+      "fungsi": null,
+      "peran": "isi",
+      "latar": "panel"
+    },
+    {
+      "id": "solution/0-teks/teks",
+      "tipe": "teks-panel",
+      "beat": "solution",
+      "teks": "How you *respond*",
+      "mulai": 22.615,
+      "selesai": 26.241,
+      "delay": 0.0,
+      "bbox": [
+        287.0,
+        276.5,
+        733.0,
+        344.5
+      ],
+      "bbox_animasi": [
+        287.0,
+        276.5,
+        733.0,
+        392.8
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "solution/0-teks",
+      "kontras": {
+        "t": 24.5,
+        "l_p10": 0.0377,
+        "l_p90": 0.0463
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "can",
+        "ke": 1
+      },
+      "fungsi": null,
+      "bbox_teks": [
+        291.0,
+        280.5,
+        729.0,
+        340.5
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 15,
+      "kata": 3,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "isi"
+    },
+    {
+      "id": "solution/1-teks",
+      "tipe": "teks",
+      "beat": "solution",
+      "teks": "Your *efforts* & choices",
+      "mulai": 26.341,
+      "selesai": 31.064,
+      "delay": 0.0,
+      "bbox": [
+        194.5,
+        250.0,
+        825.5,
+        371.0
+      ],
+      "bbox_animasi": [
+        194.5,
+        250.0,
+        825.5,
+        414.6
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "can",
+        "ke": 2
+      },
+      "fungsi": null,
+      "peran": "isi",
+      "latar": "panel"
+    },
+    {
+      "id": "solution/1-teks/teks",
+      "tipe": "teks-panel",
+      "beat": "solution",
+      "teks": "Your *efforts* & choices",
+      "mulai": 26.341,
+      "selesai": 31.064,
+      "delay": 0.0,
+      "bbox": [
+        234.5,
+        276.5,
+        785.5,
+        344.5
+      ],
+      "bbox_animasi": [
+        234.5,
+        276.5,
+        785.5,
+        388.1
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "solution/1-teks",
+      "kontras": {
+        "t": 28.767,
+        "l_p10": 0.0365,
+        "l_p90": 0.047
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "can",
+        "ke": 2
+      },
+      "fungsi": null,
+      "bbox_teks": [
+        238.5,
+        280.5,
+        781.5,
+        340.5
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 22,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "isi"
+    },
+    {
+      "id": "solution/2-teks",
+      "tipe": "teks",
+      "beat": "solution",
+      "teks": "How you treat *yourself*",
+      "mulai": 31.164,
+      "selesai": 36.406,
+      "delay": 0.0,
+      "bbox": [
+        182.5,
+        250.0,
+        837.5,
+        371.0
+      ],
+      "bbox_animasi": [
+        182.5,
+        250.0,
+        837.5,
+        408.4
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "way",
+        "offset": -0.2
+      },
+      "fungsi": null,
+      "peran": "isi",
+      "latar": "panel"
+    },
+    {
+      "id": "solution/2-teks/teks",
+      "tipe": "teks-panel",
+      "beat": "solution",
+      "teks": "How you treat *yourself*",
+      "mulai": 31.164,
+      "selesai": 36.406,
+      "delay": 0.0,
+      "bbox": [
+        222.5,
+        276.5,
+        797.5,
+        344.5
+      ],
+      "bbox_animasi": [
+        222.5,
+        276.5,
+        797.5,
+        381.9
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "solution/2-teks",
+      "kontras": {
+        "t": 33.867,
+        "l_p10": 0.0363,
+        "l_p90": 0.0471
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "way",
+        "offset": -0.2
+      },
+      "fungsi": null,
+      "bbox_teks": [
+        226.5,
+        280.5,
+        793.5,
+        340.5
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 22,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "isi"
+    },
+    {
+      "id": "cta/0-teks",
+      "tipe": "teks",
+      "beat": "cta",
+      "teks": "Let go of what you *can't* control",
+      "mulai": 40.608,
+      "selesai": 46.5,
+      "delay": 0.0,
+      "bbox": [
+        69.5,
+        250.0,
+        950.5,
+        371.0
+      ],
+      "bbox_animasi": [
+        69.5,
+        250.0,
+        950.5,
+        414.9
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "trying"
+      },
+      "fungsi": null,
+      "peran": "isi",
+      "latar": "panel"
+    },
+    {
+      "id": "cta/0-teks/teks",
+      "tipe": "teks-panel",
+      "beat": "cta",
+      "teks": "Let go of what you *can't* control",
+      "mulai": 40.608,
+      "selesai": 46.5,
+      "delay": 0.0,
+      "bbox": [
+        109.5,
+        276.5,
+        910.5,
+        344.5
+      ],
+      "bbox_animasi": [
+        109.5,
+        276.5,
+        910.5,
+        388.4
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "cta/0-teks",
+      "kontras": {
+        "t": 43.633,
+        "l_p10": 0.0344,
+        "l_p90": 0.0475
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "trying"
+      },
+      "fungsi": null,
+      "bbox_teks": [
+        113.5,
+        280.5,
+        906.5,
+        340.5
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 32,
+      "kata": 7,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "isi"
+    },
+    {
+      "id": "caption/000",
+      "tipe": "caption",
+      "teks": "you know one of",
+      "mulai": 0.211,
+      "selesai": 1.831,
+      "bbox": [
+        149.0,
+        1281.0,
+        871.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        230.0,
+        1362.0,
+        790.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        149.0,
+        1281.0,
+        871.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 1.033,
+        "l_p10": 0.001,
+        "l_p90": 0.0338
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 15,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/001",
+      "tipe": "caption",
+      "teks": "the hardest lessons in",
+      "mulai": 1.831,
+      "selesai": 3.392,
+      "bbox": [
+        234.0,
+        1212.0,
+        786.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        315.0,
+        1293.0,
+        705.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        234.0,
+        1212.0,
+        786.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 2.6,
+        "l_p10": 0.0089,
+        "l_p90": 0.0583
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 11,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/002",
+      "tipe": "caption",
+      "teks": "life is",
+      "mulai": 3.392,
+      "selesai": 4.332,
+      "bbox": [
+        341.0,
+        1281.0,
+        679.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        422.0,
+        1362.0,
+        598.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        341.0,
+        1281.0,
+        679.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 3.867,
+        "l_p10": 0.001,
+        "l_p90": 0.0428
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 7,
+      "kata": 2,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/003",
+      "tipe": "caption",
+      "teks": "realizing that not",
+      "mulai": 4.892,
+      "selesai": 6.252,
+      "bbox": [
+        138.0,
+        1281.0,
+        882.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        219.0,
+        1362.0,
+        801.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        138.0,
+        1281.0,
+        882.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 5.567,
+        "l_p10": 0.0009,
+        "l_p90": 0.0332
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 18,
+      "kata": 3,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/004",
+      "tipe": "caption",
+      "teks": "everything is within our",
+      "mulai": 7.092,
+      "selesai": 8.593,
+      "bbox": [
+        211.0,
+        1212.0,
+        809.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        292.0,
+        1293.0,
+        728.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        211.0,
+        1212.0,
+        809.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 7.833,
+        "l_p10": 0.0022,
+        "l_p90": 0.0551
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 13,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/005",
+      "tipe": "caption",
+      "teks": "control",
+      "mulai": 8.593,
+      "selesai": 9.473,
+      "bbox": [
+        307.5,
+        1281.0,
+        712.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        388.5,
+        1362.0,
+        631.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        307.5,
+        1281.0,
+        712.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 9.033,
+        "l_p10": 0.0011,
+        "l_p90": 0.0439
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 7,
+      "kata": 1,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/006",
+      "tipe": "caption",
+      "teks": "we cannot control what",
+      "mulai": 9.473,
+      "selesai": 10.993,
+      "bbox": [
+        121.5,
+        1212.0,
+        898.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        202.5,
+        1293.0,
+        817.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        121.5,
+        1212.0,
+        898.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 10.233,
+        "l_p10": 0.0011,
+        "l_p90": 0.0499
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 17,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/007",
+      "tipe": "caption",
+      "teks": "people think of us",
+      "mulai": 10.993,
+      "selesai": 12.633,
+      "bbox": [
+        124.5,
+        1281.0,
+        895.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        205.5,
+        1362.0,
+        814.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        124.5,
+        1281.0,
+        895.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 11.8,
+        "l_p10": 0.0009,
+        "l_p90": 0.0491
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 18,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/008",
+      "tipe": "caption",
+      "teks": "how they treat us",
+      "mulai": 13.314,
+      "selesai": 14.974,
+      "bbox": [
+        132.0,
+        1281.0,
+        888.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        213.0,
+        1362.0,
+        807.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        132.0,
+        1281.0,
+        888.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 14.133,
+        "l_p10": 0.0009,
+        "l_p90": 0.036
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 17,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/009",
+      "tipe": "caption",
+      "teks": "or what tomorrow will",
+      "mulai": 15.554,
+      "selesai": 16.994,
+      "bbox": [
+        122.5,
+        1212.0,
+        897.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        203.5,
+        1293.0,
+        816.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        122.5,
+        1212.0,
+        897.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 16.267,
+        "l_p10": 0.0009,
+        "l_p90": 0.0488
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 16,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/010",
+      "tipe": "caption",
+      "teks": "bring",
+      "mulai": 16.994,
+      "selesai": 17.735,
+      "bbox": [
+        339.0,
+        1281.0,
+        681.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        420.0,
+        1362.0,
+        600.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        339.0,
+        1281.0,
+        681.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 17.367,
+        "l_p10": 0.001,
+        "l_p90": 0.0529
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 5,
+      "kata": 1,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/013",
+      "tipe": "caption",
+      "teks": "no matter how much",
+      "mulai": 19.815,
+      "selesai": 20.935,
+      "bbox": [
+        75.5,
+        1281.0,
+        944.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        156.5,
+        1362.0,
+        863.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        75.5,
+        1281.0,
+        944.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 20.367,
+        "l_p10": 0.002,
+        "l_p90": 0.0573
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 18,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/014",
+      "tipe": "caption",
+      "teks": "we regret it but",
+      "mulai": 20.935,
+      "selesai": 22.495,
+      "bbox": [
+        165.0,
+        1281.0,
+        855.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        246.0,
+        1362.0,
+        774.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        165.0,
+        1281.0,
+        855.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 21.7,
+        "l_p10": 0.0018,
+        "l_p90": 0.0421
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 16,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/015",
+      "tipe": "caption",
+      "teks": "we can control how",
+      "mulai": 22.495,
+      "selesai": 24.136,
+      "bbox": [
+        97.5,
+        1281.0,
+        922.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        178.5,
+        1362.0,
+        841.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        97.5,
+        1281.0,
+        922.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 23.3,
+        "l_p10": 0.0006,
+        "l_p90": 0.0408
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 18,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/016",
+      "tipe": "caption",
+      "teks": "we respond",
+      "mulai": 24.136,
+      "selesai": 25.256,
+      "bbox": [
+        232.5,
+        1281.0,
+        787.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        313.5,
+        1362.0,
+        706.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        232.5,
+        1281.0,
+        787.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 24.7,
+        "l_p10": 0.0008,
+        "l_p90": 0.0331
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 2,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/017",
+      "tipe": "caption",
+      "teks": "We can control our",
+      "mulai": 26.281,
+      "selesai": 27.762,
+      "bbox": [
+        106.0,
+        1281.0,
+        914.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        187.0,
+        1362.0,
+        833.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        106.0,
+        1281.0,
+        914.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 27.033,
+        "l_p10": 0.0008,
+        "l_p90": 0.084
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 18,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/018",
+      "tipe": "caption",
+      "teks": "efforts,",
+      "mulai": 27.762,
+      "selesai": 28.662,
+      "bbox": [
+        307.5,
+        1281.0,
+        712.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        388.5,
+        1362.0,
+        631.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        307.5,
+        1281.0,
+        712.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 28.2,
+        "l_p10": 0.001,
+        "l_p90": 0.0436
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 8,
+      "kata": 1,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/019",
+      "tipe": "caption",
+      "teks": "our choices and",
+      "mulai": 29.623,
+      "selesai": 31.203,
+      "bbox": [
+        162.5,
+        1281.0,
+        857.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        243.5,
+        1362.0,
+        776.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        162.5,
+        1281.0,
+        857.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 30.4,
+        "l_p10": 0.0008,
+        "l_p90": 0.0416
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 15,
+      "kata": 3,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/020",
+      "tipe": "caption",
+      "teks": "the way we treat",
+      "mulai": 31.203,
+      "selesai": 32.284,
+      "bbox": [
+        144.5,
+        1281.0,
+        875.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        225.5,
+        1362.0,
+        794.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        144.5,
+        1281.0,
+        875.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 31.733,
+        "l_p10": 0.0012,
+        "l_p90": 0.0333
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 16,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/021",
+      "tipe": "caption",
+      "teks": "ourselves",
+      "mulai": 32.284,
+      "selesai": 33.104,
+      "bbox": [
+        269.0,
+        1281.0,
+        751.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        350.0,
+        1362.0,
+        670.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        269.0,
+        1281.0,
+        751.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 32.7,
+        "l_p10": 0.0015,
+        "l_p90": 0.0432
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 9,
+      "kata": 1,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/022",
+      "tipe": "caption",
+      "teks": "when things don't go",
+      "mulai": 33.605,
+      "selesai": 35.245,
+      "bbox": [
+        123.0,
+        1212.0,
+        897.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        204.0,
+        1293.0,
+        816.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        123.0,
+        1212.0,
+        897.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 34.433,
+        "l_p10": 0.0008,
+        "l_p90": 0.1965
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 17,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/023",
+      "tipe": "caption",
+      "teks": "as planned.",
+      "mulai": 35.245,
+      "selesai": 36.106,
+      "bbox": [
+        236.0,
+        1281.0,
+        784.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        317.0,
+        1362.0,
+        703.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        236.0,
+        1281.0,
+        784.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 35.667,
+        "l_p10": 0.0006,
+        "l_p90": 0.0261
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 2,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/024",
+      "tipe": "caption",
+      "teks": "Sometimes,",
+      "mulai": 37.266,
+      "selesai": 38.247,
+      "bbox": [
+        233.0,
+        1281.0,
+        787.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        314.0,
+        1362.0,
+        706.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        233.0,
+        1281.0,
+        787.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 37.767,
+        "l_p10": 0.001,
+        "l_p90": 0.0385
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 1,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/025",
+      "tipe": "caption",
+      "teks": "we spend so much",
+      "mulai": 38.887,
+      "selesai": 40.168,
+      "bbox": [
+        116.0,
+        1281.0,
+        904.0,
+        1520.0
+      ],
+      "bbox_teks": [
+        197.0,
+        1362.0,
+        823.0,
+        1439.0
+      ],
+      "bbox_animasi": [
+        116.0,
+        1281.0,
+        904.0,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 39.533,
+        "l_p10": 0.0007,
+        "l_p90": 0.2349
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 16,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/026",
+      "tipe": "caption",
+      "teks": "energy trying to control",
+      "mulai": 40.168,
+      "selesai": 41.849,
+      "bbox": [
+        156.5,
+        1212.0,
+        863.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        237.5,
+        1293.0,
+        782.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        156.5,
+        1212.0,
+        863.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 41.0,
+        "l_p10": 0.0009,
+        "l_p90": 0.0368
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 16,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    },
+    {
+      "id": "caption/027",
+      "tipe": "caption",
+      "teks": "that we never are",
+      "mulai": 41.849,
+      "selesai": 44.61,
+      "bbox": [
+        132.5,
+        1281.0,
+        887.5,
+        1520.0
+      ],
+      "bbox_teks": [
+        213.5,
+        1362.0,
+        806.5,
+        1439.0
+      ],
+      "bbox_animasi": [
+        132.5,
+        1281.0,
+        887.5,
+        1520.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 43.233,
+        "l_p10": 0.0006,
+        "l_p90": 0.0187
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 17,
+      "kata": 4,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "aktif"
+    }
+  ],
+  "push": [
+    {
+      "id": "hook/1-push",
+      "mulai": 1.951,
+      "selesai": 3.5,
+      "skala": 1.06,
+      "gerak": 1.2,
+      "fokus": [
+        0.5,
+        0.4
+      ],
+      "easing": "standar",
+      "anchor_kata": true,
+      "efek": null,
+      "anchor": {
+        "kata": "hardest"
+      }
+    },
+    {
+      "id": "agitasi/1-push",
+      "mulai": 18.815,
+      "selesai": 22.185,
+      "skala": 1.06,
+      "gerak": 1.0,
+      "fokus": [
+        0.5,
+        0.4
+      ],
+      "easing": "standar",
+      "anchor_kata": true,
+      "efek": null,
+      "anchor": {
+        "kata": "past"
+      }
+    }
+  ],
+  "broll": [],
+  "transisi": [],
+  "sfx": [
+    {
+      "sumber": "hook/0-judul",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-1.wav",
+      "t": 0.0,
+      "db": -18.0,
+      "bunyi": "whoosh",
+      "kelas": null,
+      "otomatis": false
+    },
+    {
+      "sumber": "agitasi/0-judul",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-2.wav",
+      "t": 17.984,
+      "db": -18.0,
+      "bunyi": "whoosh",
+      "kelas": null,
+      "otomatis": false
+    },
+    {
+      "sumber": "solution/0-teks",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-3.wav",
+      "t": 22.384,
+      "db": -18.0,
+      "bunyi": "whoosh",
+      "kelas": null,
+      "otomatis": false
+    },
+    {
+      "sumber": "solution/1-teks",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-1.wav",
+      "t": 26.11,
+      "db": -18.0,
+      "bunyi": "whoosh",
+      "kelas": null,
+      "otomatis": false
+    },
+    {
+      "sumber": "solution/2-teks",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-2.wav",
+      "t": 30.933,
+      "db": -18.0,
+      "bunyi": "whoosh",
+      "kelas": null,
+      "otomatis": false
+    }
+  ],
+  "audio": {
+    "musik": false,
+    "ducking": false,
+    "loudnorm_ukur": {
+      "input_i": "-14.42",
+      "input_tp": "-0.79",
+      "input_lra": "4.80",
+      "input_thresh": "-25.56",
+      "output_i": "-14.43",
+      "output_tp": "-1.50",
+      "output_lra": "5.30",
+      "output_thresh": "-25.59",
+      "normalization_type": "dynamic",
+      "target_offset": "0.43"
+    },
+    "sfx_bus": {
+      "jumlah": 5,
+      "puncak_db": -20.6
+    },
+    "akhir": {
+      "lufs": -14.2,
+      "true_peak": -1.5,
+      "koreksi": 0
+    }
+  },
+  "mask": {},
+  "motion_blur": {
+    "aktif": true,
+    "frame_terpakai": 26
+  },
+  "caption": {
+    "aktif": true,
+    "potongan": 26,
+    "sumber": {
+      "audio_sha": "93f6f138cfc8e320e6f1d44f5e8d7a5e3e293112a2e96c0580e88bcd76a37597",
+      "backend": "whisperx",
+      "model": "large-v3",
+      "bahasa": "en",
+      "timestamp_per_kata": true,
+      "dikoreksi": false
+    }
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "mulai": 0,
+      "selesai": 3.5,
+      "anchor_kata": false
+    },
+    {
+      "id": "problem",
+      "mulai": 3.5,
+      "selesai": 17.625,
+      "anchor_kata": false
+    },
+    {
+      "id": "agitasi",
+      "mulai": 17.625,
+      "selesai": 22.185,
+      "anchor_kata": true
+    },
+    {
+      "id": "solution",
+      "mulai": 22.185,
+      "selesai": 36.966,
+      "anchor_kata": true
+    },
+    {
+      "id": "cta",
+      "mulai": 36.966,
+      "selesai": 46.5,
+      "anchor_kata": true
+    }
+  ],
+  "kata_mulai": [
+    0.211,
+    0.351,
+    0.631,
+    1.731,
+    1.831,
+    1.951,
+    2.692,
+    3.232,
+    3.392,
+    3.872,
+    4.892,
+    5.572,
+    5.892,
+    7.092,
+    7.693,
+    7.893,
+    8.333,
+    8.593,
+    9.473,
+    9.593,
+    9.973,
+    10.793,
+    10.993,
+    11.373,
+    11.833,
+    12.193,
+    13.314,
+    13.714,
+    14.034,
+    14.534,
+    15.554,
+    16.034,
+    16.274,
+    16.714,
+    16.994,
+    17.735,
+    17.875,
+    18.215,
+    18.515,
+    18.815,
+    19.815,
+    19.935,
+    20.355,
+    20.675,
+    20.935,
+    21.315,
+    22.035,
+    22.335,
+    22.495,
+    22.615,
+    22.856,
+    23.476,
+    24.136,
+    24.336,
+    26.281,
+    26.341,
+    26.501,
+    27.282,
+    27.762,
+    29.623,
+    29.923,
+    30.583,
+    31.203,
+    31.364,
+    31.684,
+    31.884,
+    32.284,
+    33.605,
+    33.925,
+    34.465,
+    34.805,
+    35.245,
+    35.406,
+    37.266,
+    38.887,
+    39.027,
+    39.508,
+    39.768,
+    40.168,
+    40.608,
+    41.128,
+    41.308,
+    41.849,
+    43.71,
+    43.95,
+    44.35,
+    44.61,
+    44.75,
+    45.25,
+    45.37,
+    45.511,
+    45.831
+  ],
+  "peringatan": []
+}

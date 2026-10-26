@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "coffee-lofi-minimal-quote",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Preset fase 3 = gaya × koreografi. Beat-sheet awal dari koreografi; gaya & koreografi tanpa pin versi."
+  },
+  "label": "Coffee Lofi · Minimal Quote · Talking Head 30–40 s",
+  "format": "minimal-quote",
+  "deskripsi": "Coffee Lofi (cokelat kopi, karamel, santai) + Tenang & lapang: caption karaoke jadi bintang utama, hanya 3 perangkat lembut — kartu info pembuka, chip pemikiran, kartu ringkasan, CTA.",
+  "kapan": "Refleksi, quote, filosofi, cerita personal; gaya minimalism / kertas-tipografi / coffee-lofi.",
+  "gaya": "coffee-lofi",
+  "koreografi": "minimal-quote",
+  "manifest": {
+    "warna": {
+      "filter": "eq=contrast=1.03:saturation=0.9,colortemperature=4800"
+    }
+  }
+}

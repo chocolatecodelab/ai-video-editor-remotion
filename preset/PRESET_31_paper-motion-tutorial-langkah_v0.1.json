@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "paper-motion-tutorial-langkah",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Preset fase 3 = gaya × koreografi. Beat-sheet awal dari koreografi; gaya & koreografi tanpa pin versi."
+  },
+  "label": "Paper Motion · Tutorial Langkah · Talking Head 60–75 s",
+  "format": "tutorial-langkah",
+  "deskripsi": "Paper Motion (kertas krem, memantul, ramah) + Tutorial 3 langkah: chip penanda langkah, kartu info, cutaway terminal & timeline, kartu langkah, ringkasan checklist, CTA.",
+  "kapan": "Cara/tutorial/workflow bertahap dengan wajah; tiap langkah mendapat perangkat berbeda.",
+  "gaya": "paper-motion",
+  "koreografi": "tutorial-langkah",
+  "manifest": {
+    "warna": {
+      "filter": "colortemperature=5200"
+    }
+  }
+}

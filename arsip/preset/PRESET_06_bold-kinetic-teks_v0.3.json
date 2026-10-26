@@ -1,0 +1,123 @@
+{
+  "_meta": {
+    "id": "bold-kinetic-teks",
+    "versi": "0.3",
+    "status": "draft",
+    "catatan": "v0.3: gaya & template tanpa pin versi (selalu versi aktif; proyek tetap mengunci versi saat dibuat). v0.2: nama baru (dulu teks-kinetic); gaya & template v0.2. Video grafis tanpa rekaman: latar warna token, tanpa caption/transkrip, semua waktu wajib angka detik."
+  },
+  "label": "Bold Kinetic · Teks Saja (tanpa footage)",
+  "format": "teks",
+  "deskripsi": "Video teks-saja 30–40 s bold-kinetic: judul pop per beat di atas latar warna, musik sebagai penggerak.",
+  "kapan": "Tidak ada footage (kutipan, fakta cepat, pengumuman) atau sebagai teaser.",
+  "gaya": "bold-kinetic",
+  "template": "hook-problem-solution",
+  "efek": [],
+  "butuh": {
+    "rekaman": false,
+    "roto": false,
+    "remotion": false
+  },
+  "manifest": {
+    "platform": [
+      "reels",
+      "tiktok",
+      "shorts"
+    ],
+    "aset": {
+      "rekaman": null
+    }
+  },
+  "beat_sheet": {
+    "_catatan": "Dibuat dari preset bold-kinetic-teks@0.3. Tanpa rekaman: anchor kata tidak tersedia, beat terakhir wajib punya selesai. Tambahkan musik di manifest aset.musik.",
+    "caption": {
+      "aktif": false
+    },
+    "beats": [
+      {
+        "id": "hook",
+        "beat": "Hook",
+        "mulai": 0,
+        "selesai": 3.0,
+        "elemen": [
+          {
+            "tipe": "judul",
+            "teks": "TODO KLAIM *KONTRAS*",
+            "posisi": "tengah",
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "problem",
+        "beat": "Problem",
+        "mulai": 3.0,
+        "selesai": 11.0,
+        "elemen": [
+          {
+            "tipe": "judul",
+            "teks": "TODO MASALAH *KAMU*",
+            "posisi": "atas",
+            "durasi": 3.5,
+            "sfx": true
+          },
+          {
+            "tipe": "teks",
+            "teks": "TODO penjelasan singkat",
+            "posisi": "tengah",
+            "mulai": 4.0,
+            "selesai": 11.0
+          }
+        ]
+      },
+      {
+        "id": "agitasi",
+        "beat": "Agitasi",
+        "mulai": 11.0,
+        "selesai": 16.0,
+        "elemen": [
+          {
+            "tipe": "judul",
+            "teks": "TODO AKIBAT *FATAL*",
+            "posisi": "tengah",
+            "sfx": "riser"
+          }
+        ]
+      },
+      {
+        "id": "solution",
+        "beat": "Solution",
+        "mulai": 16.0,
+        "selesai": 28.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO JAWABANNYA",
+            "item": [
+              "TODO langkah *1*",
+              "TODO langkah 2",
+              "TODO langkah 3"
+            ],
+            "penanda": "→",
+            "stagger": 0.8,
+            "posisi": "tengah",
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "beat": "CTA",
+        "mulai": 28.0,
+        "selesai": 32.0,
+        "elemen": [
+          {
+            "tipe": "cta",
+            "teks": "TODO ajakan",
+            "posisi": "tengah",
+            "sfx": "pop"
+          }
+        ]
+      }
+    ]
+  }
+}

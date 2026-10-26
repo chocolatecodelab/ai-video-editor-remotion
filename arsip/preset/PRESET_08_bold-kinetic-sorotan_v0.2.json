@@ -1,0 +1,214 @@
+{
+  "_meta": {
+    "id": "bold-kinetic-sorotan",
+    "versi": "0.2",
+    "status": "draft",
+    "catatan": "v0.2: nama baru (dulu sorotan-kinetic); gaya & template v0.2. Kombinasi efek untuk konten berita/tren. Grafis & klip disiapkan dulu (lihat aset/PERLU.md di proyek)."
+  },
+  "label": "Bold Kinetic · Sorotan Berita/Tren",
+  "format": "sorotan",
+  "deskripsi": "Sorotan berita/tren 30–45 s: pembuka gaya sampul majalah, dinding headline, zoom tembus, momen vertigo, solusi kartu.",
+  "kapan": "Membahas isu viral, tren, kabar industri, atau bukti sosial ('semua orang membicarakan …').",
+  "gaya": "bold-kinetic@0.2",
+  "template": "hook-problem-solution@0.2",
+  "efek": [
+    "cover-story@0.1",
+    "headline-wall@0.1",
+    "zoom-through-cut@0.1",
+    "vertigo@0.1"
+  ],
+  "butuh": {
+    "rekaman": true,
+    "roto": false,
+    "remotion": false
+  },
+  "aset": [
+    {
+      "file": "aset/grafis/foto.png",
+      "efek": "cover-story",
+      "rasio": "4:5",
+      "keterangan": "Foto utama sampul (subjek/topik)."
+    },
+    {
+      "file": "aset/grafis/headlines.png",
+      "efek": "headline-wall",
+      "rasio": "1:1",
+      "keterangan": "Kolase 6–12 tangkapan headline."
+    },
+    {
+      "file": "aset/broll/vertigo.mp4",
+      "efek": "vertigo",
+      "keterangan": "Dolly zoom pada subjek/objek terkait masalah, 3 s."
+    }
+  ],
+  "manifest": {
+    "platform": [
+      "reels",
+      "tiktok",
+      "shorts"
+    ],
+    "warna": {
+      "filter": "eq=contrast=1.06:saturation=1.12"
+    },
+    "transkrip": {
+      "bahasa": "id",
+      "model": "large-v3"
+    }
+  },
+  "beat_sheet": {
+    "_catatan": "Dibuat dari preset bold-kinetic-sorotan@0.2. Waktu = detik; ganti dengan anchor {\"kata\": …} setelah transkrip. Durasi elemen ber-efek harus tetap dalam rentang modul efeknya (dicek QA).",
+    "caption": {
+      "aktif": true,
+      "posisi": "bawah",
+      "kecuali": [
+        "hook"
+      ]
+    },
+    "beats": [
+      {
+        "id": "hook",
+        "beat": "Hook",
+        "mulai": 0,
+        "selesai": 3.5,
+        "elemen": [
+          {
+            "tipe": "gambar",
+            "efek": "cover-story",
+            "file": "aset/grafis/foto.png",
+            "lebar": 0.7,
+            "y": 0.51,
+            "masuk": "fade"
+          },
+          {
+            "tipe": "judul",
+            "efek": "cover-story",
+            "teks": "TODO JUDUL *UTAMA*",
+            "posisi": "atas",
+            "stroke": true,
+            "mulai": 0.3,
+            "sfx": true
+          },
+          {
+            "tipe": "teks",
+            "efek": "cover-story",
+            "teks": "TODO sumber / edisi",
+            "posisi": "bawah",
+            "stroke": true,
+            "mulai": 0.5
+          }
+        ]
+      },
+      {
+        "id": "problem",
+        "beat": "Problem",
+        "mulai": 3.5,
+        "selesai": 12.0,
+        "elemen": [
+          {
+            "tipe": "gambar",
+            "efek": "headline-wall",
+            "file": "aset/grafis/headlines.png",
+            "lebar": 0.65,
+            "posisi": "tengah",
+            "durasi": 4.5,
+            "sfx": true
+          },
+          {
+            "tipe": "push",
+            "efek": "headline-wall",
+            "mulai": 5.0,
+            "selesai": 8.0,
+            "gerak": 1.5,
+            "fokus": [
+              0.5,
+              0.45
+            ]
+          },
+          {
+            "tipe": "teks",
+            "teks": "TODO masalah *kamu*",
+            "posisi": "atas",
+            "stroke": true,
+            "mulai": 8.5,
+            "durasi": 2.5
+          },
+          {
+            "tipe": "push",
+            "efek": "zoom-through-cut",
+            "mulai": {
+              "beat": "problem",
+              "ujung": "selesai",
+              "offset": -0.8
+            },
+            "selesai": {
+              "beat": "problem",
+              "ujung": "selesai"
+            },
+            "gerak": 0.8,
+            "easing": "tegas",
+            "sfx": "whoosh"
+          }
+        ]
+      },
+      {
+        "id": "agitasi",
+        "beat": "Agitasi",
+        "mulai": 12.0,
+        "selesai": 18.0,
+        "elemen": [
+          {
+            "tipe": "broll",
+            "efek": "vertigo",
+            "file": "aset/broll/vertigo.mp4",
+            "mulai": 12.3,
+            "durasi": 3.0,
+            "sfx": "riser"
+          },
+          {
+            "tipe": "judul",
+            "teks": "TODO AKIBAT *FATAL*",
+            "posisi": "atas",
+            "stroke": true,
+            "mulai": 15.5,
+            "durasi": 2.5,
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "solution",
+        "beat": "Solution",
+        "mulai": 18.0,
+        "selesai": 35.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO yang harus kamu lakukan",
+            "item": [
+              "TODO langkah *1*",
+              "TODO langkah 2",
+              "TODO langkah 3"
+            ],
+            "penanda": "→",
+            "stagger": 0.8,
+            "posisi": "tengah",
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "beat": "CTA",
+        "mulai": 35.0,
+        "elemen": [
+          {
+            "tipe": "cta",
+            "teks": "TODO ajakan",
+            "posisi": "tengah",
+            "sfx": "pop"
+          }
+        ]
+      }
+    ]
+  }
+}

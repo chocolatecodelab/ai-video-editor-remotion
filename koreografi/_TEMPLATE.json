@@ -1,0 +1,26 @@
+{
+ "_meta": {
+  "id": "TODO-nama",
+  "versi": "0.1",
+  "status": "draft",
+  "catatan": ""
+ },
+ "label": "TODO Nama · Format Durasi",
+ "deskripsi": "TODO",
+ "kapan": "TODO",
+ "template": "hook-problem-solution",
+ "variasi_min": 4,
+ "efek": [],
+ "butuh": {
+  "rekaman": true,
+  "roto": false,
+  "remotion": false
+ },
+ "manifest": {},
+ "beat_sheet": {
+  "caption": {
+   "aktif": true
+  },
+  "beats": []
+ }
+}

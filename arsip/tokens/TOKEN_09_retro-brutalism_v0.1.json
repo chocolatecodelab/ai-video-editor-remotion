@@ -1,0 +1,130 @@
+{
+  "_meta": {
+    "id": "retro-brutalism",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Gaya Retro Brutalism. Font dari folder font Windows/pengguna; ganti di sini bila memakai font lain."
+  },
+  "warna": {
+    "latar": "#F2EBDD",
+    "teks-utama": "#000000",
+    "teks-sekunder": "#1A1A1A",
+    "aksen": "#B83900",
+    "aksen-2": "#2D5BFF",
+    "peringatan": "#FF0033",
+    "panel": "#FFFFFF",
+    "panel-opasitas": 1.0,
+    "garis-panel": "#000000",
+    "garis-opasitas": 1.0,
+    "stroke": "#FFFFFF",
+    "bayangan": "#000000",
+    "bayangan-opasitas": 1.0
+  },
+  "font": {
+    "judul": {
+      "file": "ariblk.ttf",
+      "family": "Arial Black",
+      "weight": 900
+    },
+    "subjudul": {
+      "file": "ariblk.ttf",
+      "family": "Arial Black",
+      "weight": 900
+    },
+    "isi": {
+      "file": "courbd.ttf",
+      "family": "Courier New",
+      "weight": 700
+    },
+    "caption": {
+      "file": "ariblk.ttf",
+      "family": "Arial Black",
+      "weight": 900
+    },
+    "depth": {
+      "file": "impact.ttf",
+      "family": "Impact",
+      "weight": 400
+    }
+  },
+  "ukuran": {
+    "judul": 100,
+    "subjudul": 60,
+    "isi": 46,
+    "caption": 64,
+    "depth": 260
+  },
+  "spasi": {
+    "baris": 1.0,
+    "padding-kartu": 40,
+    "jarak-item": 18
+  },
+  "radius": {
+    "kartu": 0,
+    "chip": 0
+  },
+  "blur": {
+    "panel": 0
+  },
+  "bayangan": {
+    "offset": [
+      14,
+      14
+    ],
+    "blur": 0
+  },
+  "durasi": {
+    "masuk": 0.12,
+    "keluar": 0.1,
+    "tahan-min": 1.0,
+    "stagger": 0.05
+  },
+  "easing": {
+    "standar": [
+      0.9,
+      0.0,
+      0.1,
+      1.0
+    ],
+    "tegas": [
+      1.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "keluar": [
+      1.0,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "pop",
+    "keluar-default": "tidak",
+    "jarak-naik": 0,
+    "skala-pop": 0.9,
+    "push-in": 1.12
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 30
+  },
+  "caption": {
+    "kata-maks": 2,
+    "karakter-maks-baris": 12,
+    "stroke": 10,
+    "huruf-besar": true,
+    "baris-maks": 2,
+    "jeda-pecah": 0.35,
+    "warna-aktif": "aksen"
+  },
+  "sfx": {
+    "transisi": "pop",
+    "level-db": -16
+  },
+  "mask": {
+    "feather-px": 1.5
+  }
+}

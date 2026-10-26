@@ -1,0 +1,228 @@
+{
+ "_catatan": "Dari preset kaca-gelap-mitos-fakta (koreografi mitos-fakta@0.1), isi disesuaikan dengan ucapan (anchor kata).",
+ "caption": {
+  "aktif": true,
+  "posisi": "bawah",
+  "kecuali": [
+   [
+    {
+     "kata": "cannot",
+     "ke": 2,
+     "offset": -0.25
+    },
+    {
+     "kata": "past",
+     "ke": 1,
+     "ujung": "selesai",
+     "offset": 0.1
+    }
+   ]
+  ]
+ },
+ "beats": [
+  {
+   "id": "hook",
+   "beat": "Hook",
+   "mulai": 0,
+   "selesai": 3.5,
+   "elemen": [
+    {
+     "tipe": "judul",
+     "teks": "Control *everything*?",
+     "posisi": "atas",
+     "latar": "panel",
+     "mulai": {
+      "kata": "you",
+      "ke": 1
+     },
+     "selesai": 3.5,
+     "geser_y": 90
+    },
+    {
+     "tipe": "chip",
+     "status": "salah",
+     "teks": "MYTH",
+     "fungsi": "hook",
+     "mulai": {
+      "kata": "you",
+      "ke": 1
+     },
+     "selesai": 3.5,
+     "posisi": "atas"
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "beat": "Problem",
+   "mulai": 3.5,
+   "selesai": {
+    "kata": "cannot",
+    "ke": 2,
+    "offset": -0.25
+   },
+   "elemen": [
+    {
+     "tipe": "transisi",
+     "efek": "blur-zoom",
+     "mulai": 3.5
+    },
+    {
+     "tipe": "latar",
+     "mulai": 3.5,
+     "selesai": {
+      "kata": "how",
+      "ke": 1,
+      "offset": -0.1
+     }
+    },
+    {
+     "tipe": "remotion",
+     "efek": "coret",
+     "fungsi": "membantah",
+     "judul": "belief.txt",
+     "teks": "I control everything",
+     "posisi": "tengah",
+     "mulai": 3.6,
+     "selesai": {
+      "kata": "how",
+      "ke": 1,
+      "offset": -0.1
+     },
+     "tunda": 2.2
+    }
+   ]
+  },
+  {
+   "id": "agitasi",
+   "beat": "Agitasi",
+   "mulai": {
+    "kata": "cannot",
+    "ke": 2,
+    "offset": -0.25
+   },
+   "selesai": {
+    "kata": "but",
+    "ke": 1,
+    "offset": -0.15
+   },
+   "elemen": [
+    {
+     "tipe": "info",
+     "ikon": "petir",
+     "judul": "Can't change the *past*",
+     "sub": "however much we regret",
+     "fungsi": "masalah",
+     "posisi": "atas",
+     "mulai": {
+      "kata": "change",
+      "ke": 1
+     },
+     "selesai": {
+      "kata": "but",
+      "ke": 1,
+      "offset": -0.15
+     },
+     "opasitas": 0.8
+    }
+   ]
+  },
+  {
+   "id": "solution",
+   "beat": "Solution",
+   "mulai": {
+    "kata": "but",
+    "ke": 1,
+    "offset": -0.15
+   },
+   "selesai": {
+    "kata": "sometimes",
+    "ke": 1,
+    "offset": -0.3
+   },
+   "elemen": [
+    {
+     "tipe": "transisi",
+     "efek": "blur-zoom",
+     "mulai": {
+      "kata": "but",
+      "ke": 1,
+      "offset": -0.15
+     }
+    },
+    {
+     "tipe": "latar",
+     "mulai": {
+      "kata": "but",
+      "ke": 1,
+      "offset": -0.15
+     },
+     "selesai": {
+      "kata": "can",
+      "ke": 2,
+      "offset": -0.1
+     }
+    },
+    {
+     "tipe": "remotion",
+     "efek": "penghitung",
+     "fungsi": "bukti",
+     "judul": "what you control",
+     "ke": 3,
+     "label": "things",
+     "bintang": false,
+     "durasi_hitung": 1.0,
+     "posisi": "tengah",
+     "mulai": {
+      "kata": "but",
+      "ke": 1
+     },
+     "selesai": {
+      "kata": "can",
+      "ke": 2,
+      "offset": -0.1
+     }
+    },
+    {
+     "tipe": "chip",
+     "status": "benar",
+     "teks": "FACT: your *response*",
+     "fungsi": "hasil",
+     "posisi": "atas",
+     "mulai": {
+      "kata": "can",
+      "ke": 2
+     },
+     "selesai": {
+      "kata": "sometimes",
+      "ke": 1,
+      "offset": -0.3
+     }
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "beat": "CTA",
+   "mulai": {
+    "kata": "sometimes",
+    "ke": 1,
+    "offset": -0.3
+   },
+   "elemen": [
+    {
+     "tipe": "remotion",
+     "efek": "partikel",
+     "fungsi": "reveal",
+     "x": 0.5,
+     "y": 0.82,
+     "mulai": {
+      "kata": "never",
+      "ke": 1
+     },
+     "durasi": 1.2
+    }
+   ]
+  }
+ ]
+}

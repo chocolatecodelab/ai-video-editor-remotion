@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "id": "kaca-gelap-tips",
+    "versi": "0.2",
+    "status": "draft",
+    "catatan": "v0.2: gaya & template tanpa pin versi (selalu versi aktif; proyek tetap mengunci versi saat dibuat). Titik awal. Setelah transkrip, ganti angka detik dengan anchor {\"kata\": …}."
+  },
+  "label": "Kaca Gelap · Tips 30–45 s",
+  "format": "tips",
+  "deskripsi": "Kaca Gelap (kaca berasap, amber, pelan) — tips 30–45 s talking head.",
+  "kapan": "Tips/opini bernada serius-elegan: finansial, karier, bisnis.",
+  "gaya": "kaca-gelap",
+  "template": "hook-problem-solution",
+  "efek": [],
+  "butuh": {
+    "rekaman": true,
+    "roto": false,
+    "remotion": false
+  },
+  "manifest": {
+    "platform": [
+      "reels",
+      "tiktok",
+      "shorts"
+    ],
+    "warna": {
+      "filter": "eq=contrast=1.05:saturation=0.9"
+    },
+    "transkrip": {
+      "bahasa": "id",
+      "model": "large-v3"
+    }
+  },
+  "beat_sheet": {
+    "_catatan": "Dibuat dari preset kaca-gelap-tips@0.2. Waktu = detik; ganti dengan anchor {\"kata\": …} setelah transkrip. Teks di atas video memakai panel (ciri gaya kaca-gelap).",
+    "caption": {
+      "aktif": true,
+      "posisi": "bawah",
+      "kecuali": [
+        "hook"
+      ]
+    },
+    "beats": [
+      {
+        "id": "hook",
+        "beat": "Hook",
+        "mulai": 0,
+        "selesai": 3.0,
+        "elemen": [
+          {
+            "tipe": "judul",
+            "teks": "TODO klaim *kunci*",
+            "posisi": "atas",
+            "latar": "panel",
+            "sfx": true
+          },
+          {
+            "tipe": "push",
+            "mulai": 0.2,
+            "gerak": 1.0
+          }
+        ]
+      },
+      {
+        "id": "problem",
+        "beat": "Problem",
+        "mulai": 3.0,
+        "selesai": 12.0,
+        "elemen": [
+          {
+            "tipe": "teks",
+            "teks": "TODO masalah *kamu*",
+            "posisi": "atas",
+            "latar": "panel",
+            "durasi": 2.5
+          },
+          {
+            "tipe": "push",
+            "mulai": {
+              "beat": "problem",
+              "ujung": "selesai",
+              "offset": -0.8
+            },
+            "selesai": {
+              "beat": "problem",
+              "ujung": "selesai"
+            },
+            "gerak": 0.8,
+            "easing": "tegas",
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "agitasi",
+        "beat": "Agitasi",
+        "mulai": 12.0,
+        "selesai": 18.0,
+        "elemen": [
+          {
+            "tipe": "judul",
+            "teks": "TODO akibatnya",
+            "posisi": "atas",
+            "latar": "panel",
+            "durasi": 2.5,
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "solution",
+        "beat": "Solution",
+        "mulai": 18.0,
+        "selesai": 35.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO caranya",
+            "item": [
+              "TODO langkah *1*",
+              "TODO langkah 2",
+              "TODO langkah 3"
+            ],
+            "penanda": "—",
+            "stagger": 0.8,
+            "posisi": "tengah",
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "beat": "CTA",
+        "mulai": 35.0,
+        "elemen": [
+          {
+            "tipe": "cta",
+            "teks": "TODO ajakan",
+            "posisi": "tengah"
+          }
+        ]
+      }
+    ]
+  }
+}

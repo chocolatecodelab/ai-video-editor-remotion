@@ -1,0 +1,172 @@
+{
+ "_meta": {
+  "id": "mitos-fakta",
+  "versi": "0.2",
+  "status": "draft",
+  "catatan": "Koreografi v0.2 berisi CONTOH isi (ganti dengan isi videomu), lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4)."
+ },
+ "label": "Mitos vs Fakta · Talking Head 35–40 s",
+ "deskripsi": "Label MITOS, cutaway anggapan dicoret, kartu info akibat, cutaway angka bukti + chip FAKTA, CTA.",
+ "kapan": "Meluruskan salah kaprah, opini berbasis data, konten edukasi kontra-intuitif.",
+ "template": "hook-problem-solution",
+ "variasi_min": 5,
+ "efek": [
+  "blur-zoom@0.1",
+  "coret@0.1",
+  "penghitung@0.1",
+  "partikel@0.1"
+ ],
+ "butuh": {
+  "rekaman": true,
+  "roto": false,
+  "remotion": true
+ },
+ "manifest": {},
+ "beat_sheet": {
+  "_catatan": "Koreografi v0.2 berisi CONTOH isi (ganti dengan isi videomu), lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4).",
+  "caption": {
+   "aktif": true,
+   "posisi": "bawah",
+   "kecuali": []
+  },
+  "beats": [
+   {
+    "id": "hook",
+    "beat": "Hook",
+    "mulai": 0,
+    "selesai": 3.5,
+    "elemen": [
+     {
+      "tipe": "judul",
+      "teks": "Posting *setiap hari*?",
+      "posisi": "atas",
+      "mulai": 0.1,
+      "selesai": 3.5,
+      "latar": "panel",
+      "geser_y": 90
+     },
+     {
+      "tipe": "chip",
+      "status": "salah",
+      "teks": "MITOS",
+      "fungsi": "hook",
+      "mulai": 0.2,
+      "selesai": 3.5,
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "problem",
+    "beat": "Problem",
+    "mulai": 3.5,
+    "selesai": 11.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 3.5
+     },
+     {
+      "tipe": "latar",
+      "mulai": 3.5,
+      "selesai": 9.5
+     },
+     {
+      "tipe": "remotion",
+      "efek": "coret",
+      "fungsi": "membantah",
+      "mulai": 3.7,
+      "selesai": 9.5,
+      "judul": "mitos.txt",
+      "teks": "makin sering, makin viral",
+      "posisi": "tengah"
+     }
+    ]
+   },
+   {
+    "id": "agitasi",
+    "beat": "Agitasi",
+    "mulai": 11.0,
+    "selesai": 18.0,
+    "elemen": [
+     {
+      "tipe": "info",
+      "ikon": "petir",
+      "judul": "Kualitas *turun*",
+      "sub": "penonton cepat bosan",
+      "fungsi": "masalah",
+      "mulai": 11.3,
+      "selesai": 18.0,
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "solution",
+    "beat": "Solution",
+    "mulai": 18.0,
+    "selesai": 31.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 18.0
+     },
+     {
+      "tipe": "latar",
+      "mulai": 18.0,
+      "selesai": 24.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "penghitung",
+      "fungsi": "bukti",
+      "mulai": 18.2,
+      "selesai": 24.0,
+      "judul": "data 120 video",
+      "ke": 73,
+      "akhiran": "%",
+      "label": "retensi naik",
+      "bintang": false,
+      "posisi": "tengah"
+     },
+     {
+      "tipe": "chip",
+      "status": "benar",
+      "teks": "FAKTA: konsisten > *sering*",
+      "fungsi": "hasil",
+      "mulai": 24.3,
+      "selesai": 31.0,
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "cta",
+    "beat": "CTA",
+    "mulai": 31.0,
+    "selesai": 36.0,
+    "elemen": [
+     {
+      "tipe": "cta",
+      "teks": "Ikuti untuk mitos berikutnya",
+      "fungsi": "ajakan",
+      "mulai": 31.4,
+      "selesai": 36.0,
+      "posisi": "atas"
+     },
+     {
+      "tipe": "remotion",
+      "efek": "partikel",
+      "fungsi": "reveal",
+      "mulai": 31.4,
+      "selesai": 32.6,
+      "x": 0.5,
+      "y": 0.16
+     }
+    ]
+   }
+  ]
+ }
+}

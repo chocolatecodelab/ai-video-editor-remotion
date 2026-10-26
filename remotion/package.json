@@ -1,0 +1,28 @@
+{
+  "name": "video-system-remotion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mesin render motion graphics (React) untuk video-system. Dipanggil dari pipeline Python dengan props JSON.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts",
+    "still": "remotion still src/index.ts",
+    "cek-tipe": "tsc --noEmit",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.538",
+    "@remotion/cli": "4.0.538",
+    "@remotion/renderer": "4.0.538",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.538"
+  },
+  "devDependencies": {
+    "@remotion/eslint-plugin": "4.0.538",
+    "@types/react": "^18.3.12",
+    "eslint": "9.39.5",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "8.72.0"
+  }
+}

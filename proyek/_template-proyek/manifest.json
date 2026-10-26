@@ -1,0 +1,23 @@
+{
+  "proyek": "YYYY-MM_nama-proyek",
+  "judul": "TODO",
+  "status": "brief",
+  "skill": "video-editor@0.1",
+  "preset": null,
+  "gaya": "glass-tech@0.1",
+  "template": "explainer@0.1",
+  "konteks": [],
+  "platform": ["reels", "tiktok", "shorts"],
+  "aset": {
+    "rekaman": "aset/rekaman/take1.mp4",
+    "potong": [],
+    "crop": { "x": 0.5 },
+    "musik": null
+  },
+  "warna": { "filter": "" },
+  "transkrip": { "bahasa": "id", "model": "large-v3" },
+  "roto": { "backend": "mediapipe", "halus": 0.3 },
+  "token_override": {},
+  "terpakai": null,
+  "riwayat": []
+}

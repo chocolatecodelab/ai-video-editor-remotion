@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "id": "glass-tech-data",
+    "versi": "0.3",
+    "status": "draft",
+    "catatan": "v0.3: gaya & template tanpa pin versi (selalu versi aktif; proyek tetap mengunci versi saat dibuat). v0.2: nama baru (dulu data-glass); gaya & template v0.2. Kombinasi efek untuk konten berbasis data. Klip eksternal dibuat dulu (lihat aset/PERLU.md di proyek)."
+  },
+  "label": "Glass Tech · Insight Data",
+  "format": "data",
+  "deskripsi": "Insight data 30–45 s: pull-back reveal + angka kaca di hook, grafik tumbuh sebagai bukti, solusi checklist tergambar.",
+  "kapan": "Statistik, riset, laporan pertumbuhan, 'ternyata angkanya …'.",
+  "gaya": "glass-tech",
+  "template": "hook-problem-solution",
+  "efek": [
+    "pull-back-reveal@0.1",
+    "glass-type@0.1",
+    "chart-grow@0.1",
+    "checklist@0.2"
+  ],
+  "butuh": {
+    "rekaman": true,
+    "roto": false,
+    "remotion": true
+  },
+  "aset": [
+    {
+      "file": "aset/broll/pull-back-reveal.mp4",
+      "efek": "pull-back-reveal",
+      "keterangan": "Mulai dari detail (angka/objek), mundur memperlihatkan skala, 3,5 s."
+    },
+    {
+      "file": "aset/broll/chart-grow.mp4",
+      "efek": "chart-grow",
+      "keterangan": "Grafik batang/garis tumbuh + angka count-up, warna aksen cyan, 3,5 s."
+    }
+  ],
+  "manifest": {
+    "platform": [
+      "reels",
+      "tiktok",
+      "shorts"
+    ],
+    "warna": {
+      "filter": "eq=contrast=1.03:saturation=0.96,colortemperature=6200"
+    },
+    "transkrip": {
+      "bahasa": "id",
+      "model": "large-v3"
+    }
+  },
+  "beat_sheet": {
+    "_catatan": "Dibuat dari preset glass-tech-data@0.3. Waktu = detik; ganti dengan anchor {\"kata\": …} setelah transkrip. Durasi elemen ber-efek harus tetap dalam rentang modul efeknya (dicek QA).",
+    "caption": {
+      "aktif": true,
+      "posisi": "bawah",
+      "kecuali": [
+        "hook",
+        "solution"
+      ]
+    },
+    "beats": [
+      {
+        "id": "hook",
+        "beat": "Hook",
+        "mulai": 0,
+        "selesai": 3.5,
+        "elemen": [
+          {
+            "tipe": "broll",
+            "efek": "pull-back-reveal",
+            "file": "aset/broll/pull-back-reveal.mp4",
+            "sfx": "riser"
+          },
+          {
+            "tipe": "judul",
+            "efek": "glass-type",
+            "teks": "TODO angka *mengejutkan*",
+            "posisi": "atas",
+            "latar": "panel",
+            "masuk": "naik",
+            "mulai": 0.5,
+            "durasi": 3.0
+          }
+        ]
+      },
+      {
+        "id": "problem",
+        "beat": "Problem",
+        "mulai": 3.5,
+        "selesai": 14.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO artinya buat *kamu*",
+            "posisi": "atas",
+            "durasi": 4.0,
+            "sfx": true
+          },
+          {
+            "tipe": "broll",
+            "efek": "chart-grow",
+            "file": "aset/broll/chart-grow.mp4",
+            "mulai": 8.0,
+            "durasi": 3.5,
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "solution",
+        "beat": "Solution",
+        "mulai": 14.0,
+        "selesai": 32.0,
+        "elemen": [
+          {
+            "tipe": "remotion",
+            "efek": "checklist",
+            "judul": "TODO yang bisa kamu lakukan",
+            "item": [
+              "TODO langkah *1*",
+              "TODO langkah 2",
+              "TODO langkah 3"
+            ],
+            "stagger": 0.8,
+            "posisi": "tengah",
+            "sfx": true,
+            "sfx_item": "pop"
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "beat": "CTA",
+        "mulai": 32.0,
+        "elemen": [
+          {
+            "tipe": "cta",
+            "teks": "TODO ajakan",
+            "posisi": "tengah"
+          }
+        ]
+      }
+    ]
+  }
+}

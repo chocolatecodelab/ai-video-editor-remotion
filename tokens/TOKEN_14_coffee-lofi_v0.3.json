@@ -1,0 +1,152 @@
+{
+  "_meta": {
+    "id": "coffee-lofi",
+    "versi": "0.3",
+    "status": "draft",
+    "catatan": "Gaya Coffee Lofi. Font dari folder font Windows/pengguna; ganti di sini bila memakai font lain. Font: DM Serif Display + Poppins Bold (Google Fonts di pipeline/fonts/ bila tidak terpasang)."
+  },
+  "warna": {
+    "latar": "#2A1F1A",
+    "teks-utama": "#F5EBDD",
+    "teks-sekunder": "#D9C7B0",
+    "aksen": "#E8A55A",
+    "aksen-2": "#9DBF9E",
+    "peringatan": "#E26D5A",
+    "panel": "#3A2B24",
+    "panel-opasitas": 0.84,
+    "garis-panel": "#F5EBDD",
+    "garis-opasitas": 0.1,
+    "stroke": "#1A120E",
+    "bayangan": "#000000",
+    "bayangan-opasitas": 0.45
+  },
+  "font": {
+    "judul": {
+      "file": "DMSerifDisplay-Regular.ttf",
+      "family": "DM Serif Display",
+      "weight": 400
+    },
+    "subjudul": {
+      "file": "DMSerifDisplay-Regular.ttf",
+      "family": "DM Serif Display",
+      "weight": 400
+    },
+    "isi": {
+      "file": "Poppins-Regular.ttf",
+      "family": "Poppins",
+      "weight": 400
+    },
+    "caption": {
+      "file": "Poppins-Bold.ttf",
+      "family": "Poppins",
+      "weight": 700
+    },
+    "depth": {
+      "file": "DMSerifDisplay-Regular.ttf",
+      "family": "DM Serif Display",
+      "weight": 400
+    }
+  },
+  "ukuran": {
+    "judul": 92,
+    "subjudul": 60,
+    "isi": 48,
+    "caption": 58,
+    "depth": 240
+  },
+  "spasi": {
+    "baris": 1.12,
+    "padding-kartu": 46,
+    "jarak-item": 22
+  },
+  "radius": {
+    "kartu": 22,
+    "chip": 999
+  },
+  "blur": {
+    "panel": 14
+  },
+  "bayangan": {
+    "offset": [
+      0,
+      12
+    ],
+    "blur": 30
+  },
+  "durasi": {
+    "masuk": 0.7,
+    "keluar": 0.45,
+    "tahan-min": 1.6,
+    "stagger": 0.15
+  },
+  "easing": {
+    "standar": [
+      0.25,
+      0.1,
+      0.25,
+      1.0
+    ],
+    "tegas": [
+      0.5,
+      0.0,
+      0.5,
+      1.0
+    ],
+    "keluar": [
+      0.4,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "naik",
+    "keluar-default": "fade",
+    "jarak-naik": 24,
+    "skala-pop": 0.95,
+    "push-in": 1.03
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 12
+  },
+  "caption": {
+    "kata-maks": 4,
+    "karakter-maks-baris": 20,
+    "stroke": 6,
+    "huruf-besar": false,
+    "baris-maks": 2,
+    "jeda-pecah": 0.35,
+    "warna-aktif": "aksen",
+    "mode": "karaoke",
+    "redup": 0.4
+  },
+  "sfx": {
+    "transisi": "whoosh-pendek",
+    "level-db": -26,
+    "level": {
+      "aksen": -26,
+      "status": -26,
+      "transisi": -27,
+      "ui": -31,
+      "ketik": -36
+    }
+  },
+  "mask": {
+    "feather-px": 1.5
+  },
+  "motif": {
+    "bingkai": "kertas",
+    "aksen": "garis",
+    "tekstur": "grain",
+    "transisi": "celup",
+    "reveal": "uap",
+    "boil": 0,
+    "depth": "padat",
+    "judul": {
+      "masuk": "ketik",
+      "hiasan": "none"
+    }
+  }
+}

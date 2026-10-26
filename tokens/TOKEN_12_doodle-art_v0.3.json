@@ -1,0 +1,168 @@
+{
+  "_meta": {
+    "id": "doodle-art",
+    "versi": "0.3",
+    "status": "draft",
+    "catatan": "Gaya Doodle Art. Font dari folder font Windows/pengguna; ganti di sini bila memakai font lain. Font: Luckiest Guy + Baloo 2 (Google Fonts di pipeline/fonts/ bila tidak terpasang)."
+  },
+  "warna": {
+    "latar": "#FFFCF2",
+    "teks-utama": "#1B1B1B",
+    "teks-sekunder": "#333333",
+    "aksen": "#B55300",
+    "aksen-2": "#7B61FF",
+    "peringatan": "#FF3B3B",
+    "panel": "#FFFFFF",
+    "panel-opasitas": 0.96,
+    "garis-panel": "#1B1B1B",
+    "garis-opasitas": 1.0,
+    "stroke": "#FFFFFF",
+    "bayangan": "#000000",
+    "bayangan-opasitas": 0.0
+  },
+  "font": {
+    "judul": {
+      "file": "LuckiestGuy-Regular.ttf",
+      "family": "Luckiest Guy",
+      "weight": 400
+    },
+    "subjudul": {
+      "file": "LuckiestGuy-Regular.ttf",
+      "family": "Luckiest Guy",
+      "weight": 400
+    },
+    "isi": {
+      "file": "Baloo2-Variable.ttf",
+      "family": "Baloo 2",
+      "weight": 600,
+      "wght": 600
+    },
+    "caption": {
+      "file": "Baloo2-Variable.ttf",
+      "family": "Baloo 2",
+      "weight": 800,
+      "wght": 800
+    },
+    "depth": {
+      "file": "LuckiestGuy-Regular.ttf",
+      "family": "Luckiest Guy",
+      "weight": 400
+    }
+  },
+  "ukuran": {
+    "judul": 104,
+    "subjudul": 68,
+    "isi": 46,
+    "caption": 64,
+    "depth": 250
+  },
+  "spasi": {
+    "baris": 1.1,
+    "padding-kartu": 42,
+    "jarak-item": 20
+  },
+  "radius": {
+    "kartu": 26,
+    "chip": 999
+  },
+  "blur": {
+    "panel": 0
+  },
+  "bayangan": {
+    "offset": [
+      0,
+      0
+    ],
+    "blur": 0
+  },
+  "durasi": {
+    "masuk": 0.32,
+    "keluar": 0.2,
+    "tahan-min": 1.1,
+    "stagger": 0.1
+  },
+  "easing": {
+    "standar": [
+      0.34,
+      1.8,
+      0.64,
+      1.0
+    ],
+    "tegas": [
+      0.7,
+      0.0,
+      0.3,
+      1.0
+    ],
+    "keluar": [
+      0.4,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "pop",
+    "keluar-default": "pop",
+    "jarak-naik": 60,
+    "skala-pop": 0.6,
+    "push-in": 1.06
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 30
+  },
+  "caption": {
+    "kata-maks": 3,
+    "karakter-maks-baris": 16,
+    "stroke": 9,
+    "huruf-besar": false,
+    "baris-maks": 2,
+    "jeda-pecah": 0.35,
+    "warna-aktif": "aksen",
+    "mode": "aktif",
+    "redup": 0.4
+  },
+  "sfx": {
+    "transisi": "pop",
+    "level-db": -18,
+    "peta": {
+      "judul": {
+        "bunyi": "pop",
+        "kelas": "aksen"
+      },
+      "teks": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      },
+      "kartu": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      }
+    },
+    "level": {
+      "aksen": -18,
+      "status": -18,
+      "transisi": -19,
+      "ui": -23,
+      "ketik": -28
+    }
+  },
+  "mask": {
+    "feather-px": 1.5
+  },
+  "motif": {
+    "bingkai": "spidol",
+    "aksen": "lingkar",
+    "tekstur": null,
+    "transisi": "coretan",
+    "reveal": "doodle",
+    "boil": 8,
+    "depth": "padat",
+    "judul": {
+      "masuk": "pop",
+      "hiasan": "none"
+    }
+  }
+}

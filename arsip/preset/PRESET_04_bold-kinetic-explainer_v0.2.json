@@ -1,0 +1,222 @@
+{
+  "_meta": {
+    "id": "bold-kinetic-explainer",
+    "versi": "0.2",
+    "status": "draft",
+    "catatan": "v0.2: nama baru (dulu explainer-kinetic); gaya & template v0.2. Titik awal, bukan hasil jadi. Setelah transkrip, ganti angka detik dengan anchor {\"kata\": …}."
+  },
+  "label": "Bold Kinetic · Explainer 60–90 s",
+  "format": "explainer",
+  "deskripsi": "Explainer 60–90 s berenergi: kartu solid, zoom tegas di akhir tiap poin, caption KAPITAL.",
+  "kapan": "Konsep 3 poin untuk audiens muda / topik yang butuh tempo cepat agar tidak membosankan.",
+  "gaya": "bold-kinetic@0.2",
+  "template": "explainer@0.2",
+  "efek": [
+    "digital-zoom@0.1",
+    "zoom-through-cut@0.1"
+  ],
+  "butuh": {
+    "rekaman": true,
+    "roto": false,
+    "remotion": false
+  },
+  "manifest": {
+    "platform": [
+      "reels",
+      "tiktok",
+      "shorts"
+    ],
+    "warna": {
+      "filter": "eq=contrast=1.06:saturation=1.12"
+    },
+    "transkrip": {
+      "bahasa": "id",
+      "model": "large-v3"
+    }
+  },
+  "beat_sheet": {
+    "_catatan": "Dibuat dari preset bold-kinetic-explainer@0.2. Waktu = detik; ganti dengan anchor {\"kata\": …} setelah transkrip. G02.2: ada perubahan visual tiap ≤ 3 s — tambah elemen/push bila beat terasa diam.",
+    "caption": {
+      "aktif": true,
+      "posisi": "bawah",
+      "kecuali": [
+        "hook"
+      ]
+    },
+    "beats": [
+      {
+        "id": "hook",
+        "beat": "Hook",
+        "mulai": 0,
+        "selesai": 3.0,
+        "elemen": [
+          {
+            "tipe": "judul",
+            "teks": "TODO KLAIM *BERANI*",
+            "posisi": "tengah",
+            "stroke": true,
+            "sfx": true
+          },
+          {
+            "tipe": "push",
+            "mulai": 0.2,
+            "gerak": 1.0
+          }
+        ]
+      },
+      {
+        "id": "konteks",
+        "beat": "Konteks",
+        "mulai": 3.0,
+        "selesai": 15.0,
+        "elemen": [
+          {
+            "tipe": "teks",
+            "teks": "TODO kenapa *penting*",
+            "posisi": "atas",
+            "stroke": true,
+            "durasi": 2.5
+          },
+          {
+            "tipe": "push",
+            "efek": "zoom-through-cut",
+            "mulai": {
+              "beat": "konteks",
+              "ujung": "selesai",
+              "offset": -0.8
+            },
+            "selesai": {
+              "beat": "konteks",
+              "ujung": "selesai"
+            },
+            "gerak": 0.8,
+            "easing": "tegas",
+            "sfx": "whoosh"
+          }
+        ]
+      },
+      {
+        "id": "poin-1",
+        "beat": "Poin 1",
+        "mulai": 15.0,
+        "selesai": 30.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO POIN *1*",
+            "teks": "TODO contoh",
+            "posisi": "atas",
+            "durasi": 4.0,
+            "sfx": true
+          },
+          {
+            "tipe": "push",
+            "efek": "digital-zoom",
+            "mulai": {
+              "beat": "poin-1",
+              "ujung": "selesai",
+              "offset": -1.5
+            },
+            "selesai": {
+              "beat": "poin-1",
+              "ujung": "selesai"
+            },
+            "gerak": 1.2,
+            "fokus": [
+              0.5,
+              0.35
+            ],
+            "easing": "tegas",
+            "sfx": "whoosh"
+          }
+        ]
+      },
+      {
+        "id": "poin-2",
+        "beat": "Poin 2",
+        "mulai": 30.0,
+        "selesai": 45.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO POIN *2*",
+            "teks": "TODO contoh",
+            "posisi": "atas",
+            "durasi": 4.0,
+            "sfx": true
+          },
+          {
+            "tipe": "push",
+            "efek": "digital-zoom",
+            "mulai": {
+              "beat": "poin-2",
+              "ujung": "selesai",
+              "offset": -1.5
+            },
+            "selesai": {
+              "beat": "poin-2",
+              "ujung": "selesai"
+            },
+            "gerak": 1.2,
+            "fokus": [
+              0.5,
+              0.35
+            ],
+            "easing": "tegas",
+            "sfx": "whoosh"
+          }
+        ]
+      },
+      {
+        "id": "poin-3",
+        "beat": "Poin 3",
+        "mulai": 45.0,
+        "selesai": 60.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "TODO POIN *3*",
+            "teks": "TODO contoh",
+            "posisi": "atas",
+            "durasi": 4.0,
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "ringkasan",
+        "beat": "Ringkasan",
+        "mulai": 60.0,
+        "selesai": 66.0,
+        "elemen": [
+          {
+            "tipe": "kartu",
+            "judul": "INTINYA",
+            "item": [
+              "TODO poin 1",
+              "TODO poin *2*",
+              "TODO poin 3"
+            ],
+            "penanda": "→",
+            "stagger": 0.6,
+            "posisi": "tengah",
+            "sfx": true
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "beat": "CTA",
+        "mulai": 66.0,
+        "elemen": [
+          {
+            "tipe": "cta",
+            "teks": "TODO ajakan",
+            "posisi": "tengah",
+            "sfx": "pop"
+          }
+        ]
+      }
+    ]
+  }
+}

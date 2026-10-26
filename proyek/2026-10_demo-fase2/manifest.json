@@ -1,0 +1,49 @@
+{
+  "proyek": "2026-10_demo-fase2",
+  "judul": "Demo Fase 2 — Perangkat UI",
+  "status": "brief",
+  "skill": "video-editor@0.1",
+  "preset": null,
+  "gaya": "glass-tech@0.3",
+  "template": "hook-problem-solution@0.2",
+  "konteks": [
+    "zona-aman@0.1",
+    "caption@0.2",
+    "depth-typography@0.1",
+    "ingest@0.1",
+    "gerak@0.1",
+    "audio@0.1",
+    "ekspor@0.1",
+    "sound-design@0.1"
+  ],
+  "platform": [
+    "reels",
+    "tiktok",
+    "shorts"
+  ],
+  "aset": {
+    "rekaman": null,
+    "potong": [],
+    "crop": {
+      "x": 0.5
+    },
+    "musik": {
+      "file": "bawaan:pulsa",
+      "db": -16
+    }
+  },
+  "warna": {
+    "filter": ""
+  },
+  "transkrip": {
+    "bahasa": "id",
+    "model": "large-v3"
+  },
+  "roto": {
+    "backend": "mediapipe",
+    "halus": 0.3
+  },
+  "token_override": {},
+  "terpakai": null,
+  "riwayat": []
+}

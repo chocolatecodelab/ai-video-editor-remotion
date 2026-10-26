@@ -1,0 +1,139 @@
+{
+  "_meta": {
+    "id": "kaca-gelap",
+    "versi": "0.2",
+    "status": "draft",
+    "catatan": "Gaya Kaca Gelap. Font dari folder font Windows/pengguna; ganti di sini bila memakai font lain."
+  },
+  "warna": {
+    "latar": "#050607",
+    "teks-utama": "#F5F5F7",
+    "teks-sekunder": "#A1A1AA",
+    "aksen": "#FFB547",
+    "aksen-2": "#7DD3FC",
+    "peringatan": "#FF5A5F",
+    "panel": "#0C0D10",
+    "panel-opasitas": 0.55,
+    "garis-panel": "#FFFFFF",
+    "garis-opasitas": 0.14,
+    "stroke": "#000000",
+    "bayangan": "#000000",
+    "bayangan-opasitas": 0.55
+  },
+  "font": {
+    "judul": {
+      "file": "Poppins-SemiBold.ttf",
+      "family": "Poppins",
+      "weight": 600
+    },
+    "subjudul": {
+      "file": "Poppins-Medium.ttf",
+      "family": "Poppins",
+      "weight": 500
+    },
+    "isi": {
+      "file": "Poppins-Regular.ttf",
+      "family": "Poppins",
+      "weight": 400
+    },
+    "caption": {
+      "file": "Poppins-SemiBold.ttf",
+      "family": "Poppins",
+      "weight": 600
+    },
+    "depth": {
+      "file": "Poppins-Bold.ttf",
+      "family": "Poppins",
+      "weight": 700
+    }
+  },
+  "ukuran": {
+    "judul": 88,
+    "subjudul": 60,
+    "isi": 46,
+    "caption": 58,
+    "depth": 230
+  },
+  "spasi": {
+    "baris": 1.12,
+    "padding-kartu": 46,
+    "jarak-item": 22
+  },
+  "radius": {
+    "kartu": 28,
+    "chip": 999
+  },
+  "blur": {
+    "panel": 44
+  },
+  "bayangan": {
+    "offset": [
+      0,
+      20
+    ],
+    "blur": 50
+  },
+  "durasi": {
+    "masuk": 0.55,
+    "keluar": 0.3,
+    "tahan-min": 1.3,
+    "stagger": 0.1
+  },
+  "easing": {
+    "standar": [
+      0.33,
+      0.0,
+      0.15,
+      1.0
+    ],
+    "tegas": [
+      0.7,
+      0.0,
+      0.3,
+      1.0
+    ],
+    "keluar": [
+      0.4,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "fade",
+    "keluar-default": "fade",
+    "jarak-naik": 30,
+    "skala-pop": 0.95,
+    "push-in": 1.05
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 12
+  },
+  "caption": {
+    "kata-maks": 4,
+    "karakter-maks-baris": 18,
+    "stroke": 6,
+    "huruf-besar": false,
+    "baris-maks": 2,
+    "jeda-pecah": 0.35,
+    "warna-aktif": "aksen",
+    "mode": "karaoke",
+    "redup": 0.4
+  },
+  "sfx": {
+    "transisi": "whoosh-pendek",
+    "level-db": -24,
+    "level": {
+      "aksen": -24,
+      "status": -24,
+      "transisi": -25,
+      "ui": -29,
+      "ketik": -34
+    }
+  },
+  "mask": {
+    "feather-px": 1.5
+  }
+}

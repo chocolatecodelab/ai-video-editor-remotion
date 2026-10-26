@@ -1,0 +1,130 @@
+{
+  "_meta": {
+    "id": "kolase-kertas",
+    "versi": "0.1",
+    "status": "draft",
+    "catatan": "Gaya Kolase Kertas. Font dari folder font Windows/pengguna; ganti di sini bila memakai font lain."
+  },
+  "warna": {
+    "latar": "#E8E0CC",
+    "teks-utama": "#121212",
+    "teks-sekunder": "#2E2E2E",
+    "aksen": "#BB1645",
+    "aksen-2": "#1FB5A8",
+    "peringatan": "#E63946",
+    "panel": "#FFFFFF",
+    "panel-opasitas": 1.0,
+    "garis-panel": "#121212",
+    "garis-opasitas": 0.0,
+    "stroke": "#FFFFFF",
+    "bayangan": "#2A2015",
+    "bayangan-opasitas": 0.4
+  },
+  "font": {
+    "judul": {
+      "file": "ROCKEB.TTF",
+      "family": "Rockwell Extra Bold",
+      "weight": 800
+    },
+    "subjudul": {
+      "file": "ROCKB.TTF",
+      "family": "Rockwell",
+      "weight": 700
+    },
+    "isi": {
+      "file": "ROCK.TTF",
+      "family": "Rockwell",
+      "weight": 400
+    },
+    "caption": {
+      "file": "ROCKEB.TTF",
+      "family": "Rockwell Extra Bold",
+      "weight": 800
+    },
+    "depth": {
+      "file": "ROCKEB.TTF",
+      "family": "Rockwell Extra Bold",
+      "weight": 800
+    }
+  },
+  "ukuran": {
+    "judul": 96,
+    "subjudul": 62,
+    "isi": 48,
+    "caption": 62,
+    "depth": 240
+  },
+  "spasi": {
+    "baris": 1.05,
+    "padding-kartu": 40,
+    "jarak-item": 20
+  },
+  "radius": {
+    "kartu": 2,
+    "chip": 2
+  },
+  "blur": {
+    "panel": 0
+  },
+  "bayangan": {
+    "offset": [
+      8,
+      12
+    ],
+    "blur": 4
+  },
+  "durasi": {
+    "masuk": 0.3,
+    "keluar": 0.18,
+    "tahan-min": 1.1,
+    "stagger": 0.14
+  },
+  "easing": {
+    "standar": [
+      0.3,
+      1.4,
+      0.6,
+      1.0
+    ],
+    "tegas": [
+      0.8,
+      0.0,
+      0.2,
+      1.0
+    ],
+    "keluar": [
+      0.4,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "turun",
+    "keluar-default": "fade",
+    "jarak-naik": 80,
+    "skala-pop": 0.85,
+    "push-in": 1.08
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 12
+  },
+  "caption": {
+    "kata-maks": 3,
+    "karakter-maks-baris": 15,
+    "stroke": 9,
+    "huruf-besar": true,
+    "baris-maks": 2,
+    "jeda-pecah": 0.35,
+    "warna-aktif": "aksen"
+  },
+  "sfx": {
+    "transisi": "pop",
+    "level-db": -18
+  },
+  "mask": {
+    "feather-px": 1.5
+  }
+}

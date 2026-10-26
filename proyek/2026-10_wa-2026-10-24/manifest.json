@@ -1,0 +1,62 @@
+{
+  "proyek": "2026-10_wa-2026-10-24",
+  "judul": "Control What You Can",
+  "status": "storyboard",
+  "skill": "video-editor@0.1",
+  "preset": "glass-tech-tips@0.2",
+  "gaya": "glass-tech@0.2",
+  "template": "hook-problem-solution@0.2",
+  "konteks": [
+    "zona-aman@0.1",
+    "caption@0.1",
+    "depth-typography@0.1",
+    "ingest@0.1",
+    "gerak@0.1",
+    "audio@0.1",
+    "ekspor@0.1"
+  ],
+  "platform": [
+    "reels",
+    "tiktok",
+    "shorts"
+  ],
+  "aset": {
+    "rekaman": "aset/rekaman/take1.mp4",
+    "potong": [
+      [
+        0.3,
+        9.6
+      ],
+      [
+        10.85,
+        19.1
+      ],
+      [
+        20.75,
+        25.5
+      ],
+      [
+        27.3,
+        51.45
+      ]
+    ],
+    "crop": {
+      "x": 0.5
+    },
+    "musik": null
+  },
+  "warna": {
+    "filter": "eq=contrast=1.03:saturation=0.96,colortemperature=6200"
+  },
+  "transkrip": {
+    "bahasa": "en",
+    "model": "large-v3"
+  },
+  "roto": {
+    "backend": "mediapipe",
+    "halus": 0.3
+  },
+  "token_override": {},
+  "terpakai": null,
+  "riwayat": []
+}

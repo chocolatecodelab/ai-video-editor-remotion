@@ -1,0 +1,28 @@
+{
+  "_meta": { "id": "TODO-nama", "versi": "0.1", "status": "draft", "catatan": "Salin ke TOKEN_NN_nama_v0.1.json. Kunci yang tidak diisi diambil dari TOKEN_00_platform." },
+  "warna": {
+    "latar": "#000000", "teks-utama": "#FFFFFF", "teks-sekunder": "#CCCCCC",
+    "aksen": "#00AAFF", "aksen-2": "#FF00AA", "peringatan": "#FF4444",
+    "panel": "#000000", "panel-opasitas": 0.6, "garis-panel": "#FFFFFF", "garis-opasitas": 0.2,
+    "stroke": "#000000", "bayangan": "#000000", "bayangan-opasitas": 0.4
+  },
+  "font": {
+    "judul":    { "file": "TODO.ttf", "family": "TODO", "weight": 800 },
+    "subjudul": { "file": "TODO.ttf", "family": "TODO", "weight": 700 },
+    "isi":      { "file": "TODO.ttf", "family": "TODO", "weight": 500 },
+    "caption":  { "file": "TODO.ttf", "family": "TODO", "weight": 700 },
+    "depth":    { "file": "TODO.ttf", "family": "TODO", "weight": 900 }
+  },
+  "ukuran": { "judul": 96, "subjudul": 64, "isi": 48, "caption": 60, "depth": 240 },
+  "spasi": { "baris": 1.1, "padding-kartu": 40, "jarak-item": 20 },
+  "radius": { "kartu": 24, "chip": 999 },
+  "blur": { "panel": 0 },
+  "bayangan": { "offset": [0, 8], "blur": 20 },
+  "durasi": { "masuk": 0.3, "keluar": 0.2, "tahan-min": 1.2, "stagger": 0.08 },
+  "easing": { "standar": [0.2, 0.8, 0.2, 1.0], "tegas": [0.7, 0.0, 0.3, 1.0], "keluar": [0.4, 0.0, 1.0, 1.0] },
+  "gerak": { "masuk-default": "naik", "keluar-default": "fade", "jarak-naik": 60, "skala-pop": 0.8, "push-in": 1.06 },
+  "motion-blur": { "aktif": true, "sampel": 5, "ambang-px": 12 },
+  "caption": { "kata-maks": 4, "karakter-maks-baris": 18, "baris-maks": 2, "jeda-pecah": 0.35, "stroke": 6, "warna-aktif": "aksen", "huruf-besar": false },
+  "sfx": { "transisi": "whoosh", "level-db": -18 },
+  "mask": { "feather-px": 1.5 }
+}

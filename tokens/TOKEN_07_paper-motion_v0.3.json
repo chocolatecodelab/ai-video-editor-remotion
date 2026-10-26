@@ -1,0 +1,162 @@
+{
+  "_meta": {
+    "id": "paper-motion",
+    "versi": "0.3",
+    "status": "draft",
+    "catatan": "Gaya Paper Motion. Font dari folder font Windows/pengguna; ganti di sini bila memakai font lain. Font: Lilita One + Poppins Bold (Google Fonts di pipeline/fonts/ bila tidak terpasang)."
+  },
+  "warna": {
+    "latar": "#F4EFE6",
+    "teks-utama": "#232323",
+    "teks-sekunder": "#4A4744",
+    "aksen": "#C43017",
+    "aksen-2": "#2F6FDB",
+    "peringatan": "#D62828",
+    "panel": "#FFFDF8",
+    "panel-opasitas": 1.0,
+    "garis-panel": "#E5DED2",
+    "garis-opasitas": 1.0,
+    "stroke": "#FFFDF8",
+    "bayangan": "#5A4632",
+    "bayangan-opasitas": 0.28
+  },
+  "font": {
+    "judul": {
+      "file": "LilitaOne-Regular.ttf",
+      "family": "Lilita One",
+      "weight": 400
+    },
+    "subjudul": {
+      "file": "LilitaOne-Regular.ttf",
+      "family": "Lilita One",
+      "weight": 400
+    },
+    "isi": {
+      "file": "Poppins-Medium.ttf",
+      "family": "Poppins",
+      "weight": 500
+    },
+    "caption": {
+      "file": "Poppins-Bold.ttf",
+      "family": "Poppins",
+      "weight": 700
+    },
+    "depth": {
+      "file": "LilitaOne-Regular.ttf",
+      "family": "Lilita One",
+      "weight": 400
+    }
+  },
+  "ukuran": {
+    "judul": 96,
+    "subjudul": 64,
+    "isi": 48,
+    "caption": 64,
+    "depth": 240
+  },
+  "spasi": {
+    "baris": 1.08,
+    "padding-kartu": 44,
+    "jarak-item": 20
+  },
+  "radius": {
+    "kartu": 8,
+    "chip": 999
+  },
+  "blur": {
+    "panel": 0
+  },
+  "bayangan": {
+    "offset": [
+      0,
+      14
+    ],
+    "blur": 16
+  },
+  "durasi": {
+    "masuk": 0.42,
+    "keluar": 0.22,
+    "tahan-min": 1.2,
+    "stagger": 0.1
+  },
+  "easing": {
+    "standar": [
+      0.34,
+      1.56,
+      0.64,
+      1.0
+    ],
+    "tegas": [
+      0.7,
+      0.0,
+      0.3,
+      1.0
+    ],
+    "keluar": [
+      0.4,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "gerak": {
+    "masuk-default": "pop",
+    "keluar-default": "pop",
+    "jarak-naik": 70,
+    "skala-pop": 0.7,
+    "push-in": 1.05
+  },
+  "motion-blur": {
+    "aktif": true,
+    "sampel": 5,
+    "ambang-px": 12
+  },
+  "caption": {
+    "kata-maks": 3,
+    "karakter-maks-baris": 16,
+    "stroke": 9,
+    "huruf-besar": false,
+    "baris-maks": 2,
+    "jeda-pecah": 0.35,
+    "warna-aktif": "aksen",
+    "mode": "karaoke",
+    "redup": 0.4
+  },
+  "sfx": {
+    "transisi": "pop",
+    "level-db": -18,
+    "peta": {
+      "judul": {
+        "bunyi": "pop",
+        "kelas": "aksen"
+      },
+      "kartu": {
+        "bunyi": "pop",
+        "kelas": "ui"
+      }
+    },
+    "level": {
+      "aksen": -18,
+      "status": -18,
+      "transisi": -19,
+      "ui": -23,
+      "ketik": -28
+    }
+  },
+  "mask": {
+    "feather-px": 1.5
+  },
+  "motif": {
+    "bingkai": "kertas",
+    "aksen": "garis",
+    "tekstur": "kertas",
+    "transisi": "kertas",
+    "reveal": "partikel",
+    "boil": 0,
+    "depth": "padat",
+    "judul": {
+      "masuk": "pop",
+      "hiasan": "long-shadow"
+    }
+  }
+}

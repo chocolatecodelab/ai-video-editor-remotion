@@ -1,0 +1,423 @@
+{
+  "proyek": "2026-10_otca-sertifikat-jerman",
+  "waktu": "2026-10-25T23:44:40",
+  "beat_sheet_sha": "c56ec4d27bcd40aba43588b361986ede59cbb9880a7db001b1a4ad6d62f3d955",
+  "durasi": 58.667,
+  "pra_qa": "LULUS",
+  "ringkas": {
+    "LULUS": 35,
+    "GAGAL": 0,
+    "PERINGATAN": 1,
+    "LEWAT": 6,
+    "BELUM DIIMPLEMENTASI": 0
+  },
+  "elemen": [
+    {
+      "id": "hook/0-gambar",
+      "tipe": "gambar",
+      "beat": "hook",
+      "mulai": 0.0,
+      "selesai": 58.6,
+      "teks": "aset/grafis/logo-otca.png",
+      "efek": null,
+      "anchor": null,
+      "masuk": "fade",
+      "keluar": "fade",
+      "t": 29.37
+    },
+    {
+      "id": "hook/1-push",
+      "tipe": "push",
+      "beat": "hook",
+      "mulai": 0,
+      "selesai": 3.297,
+      "teks": "push ×1.04, gerak 3.00s, standar",
+      "efek": null,
+      "anchor": null,
+      "t": 3.0
+    },
+    {
+      "id": "hook/2-depth",
+      "tipe": "depth",
+      "beat": "hook",
+      "mulai": 0.875,
+      "selesai": 3.247,
+      "teks": "STUDI JERMAN",
+      "efek": null,
+      "anchor": {
+        "kata": "Halo",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 2.131
+    },
+    {
+      "id": "konteks/1-info",
+      "tipe": "info",
+      "beat": "konteks",
+      "mulai": 4.207,
+      "selesai": 7.799,
+      "teks": "Sertifikat *Bahasa Jerman* bukti level bahasa",
+      "efek": null,
+      "anchor": {
+        "kata": "sertifikat",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": -0.15
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 6.0729999999999995
+    },
+    {
+      "id": "konteks/2-kamera",
+      "tipe": "kamera",
+      "beat": "konteks",
+      "mulai": 5.958,
+      "selesai": 7.799,
+      "teks": "",
+      "efek": "digital-zoom@0.2",
+      "anchor": {
+        "kata": "belum",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "masuk": "digital-zoom",
+      "keluar": "digital-zoom",
+      "t": 6.878500000000001
+    },
+    {
+      "id": "konteks/3-chip",
+      "tipe": "chip",
+      "beat": "konteks",
+      "mulai": 8.28,
+      "selesai": 10.121,
+      "teks": "Belum tentu *siap studi*",
+      "efek": null,
+      "anchor": {
+        "kata": "siap",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 9.2705
+    },
+    {
+      "id": "poin-1/0-remotion",
+      "tipe": "remotion",
+      "beat": "poin-1",
+      "mulai": 10.681,
+      "selesai": 19.907,
+      "teks": "Level di sertifikat Kemampuan nyata",
+      "efek": "sebelum-sesudah@0.1",
+      "anchor": {
+        "kata": "sertifikat",
+        "ke": 2,
+        "ujung": "mulai",
+        "offset": -0.2
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 19.634
+    },
+    {
+      "id": "poin-1/1-kamera",
+      "tipe": "kamera",
+      "beat": "poin-1",
+      "mulai": 20.107,
+      "selesai": 23.24,
+      "teks": "",
+      "efek": "pull-back-reveal@0.2",
+      "anchor": {
+        "kata": "dalam",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "masuk": "pull-back-reveal",
+      "keluar": "pull-back-reveal",
+      "t": 21.673499999999997
+    },
+    {
+      "id": "poin-1/2-chip",
+      "tipe": "chip",
+      "beat": "poin-1",
+      "mulai": 20.908,
+      "selesai": 23.24,
+      "teks": "Akademik · *sehari-hari*",
+      "efek": null,
+      "anchor": {
+        "kata": "akademik",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": -0.1
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 22.144
+    },
+    {
+      "id": "poin-2/1-depth",
+      "tipe": "depth",
+      "beat": "poin-2",
+      "mulai": 23.53,
+      "selesai": 25.831,
+      "teks": "KULIAH",
+      "efek": null,
+      "anchor": {
+        "kata": "perkuliahan",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 24.7505
+    },
+    {
+      "id": "poin-2/2-remotion",
+      "tipe": "remotion",
+      "beat": "poin-2",
+      "mulai": 25.931,
+      "selesai": 34.348,
+      "teks": "Paham dosen Paham materi Diskusi Berpendapat",
+      "efek": "langkah@0.1",
+      "anchor": {
+        "kata": "dosen",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": -0.3
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 34.075
+    },
+    {
+      "id": "poin-3/0-remotion",
+      "tipe": "remotion",
+      "beat": "poin-3",
+      "mulai": 34.598,
+      "selesai": 38.421,
+      "teks": "fokus.txt level sertifikat",
+      "efek": "coret@0.1",
+      "anchor": {
+        "kata": "Jadi",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": 0.1
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 38.148
+    },
+    {
+      "id": "poin-3/1-remotion",
+      "tipe": "remotion",
+      "beat": "poin-3",
+      "mulai": 39.201,
+      "selesai": 45.827,
+      "teks": "Mendengar Berbicara Menulis Membaca",
+      "efek": "checklist@0.3",
+      "anchor": {
+        "kata": "kemampuan",
+        "ke": 2,
+        "ujung": "mulai",
+        "offset": 0.3
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 45.554
+    },
+    {
+      "id": "ringkasan/0-chip",
+      "tipe": "chip",
+      "beat": "ringkasan",
+      "mulai": 48.189,
+      "selesai": 50.031,
+      "teks": "FAKTA: skill *terpakai*",
+      "efek": null,
+      "anchor": {
+        "kata": "bukan",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 49.18
+    },
+    {
+      "id": "ringkasan/1-depth",
+      "tipe": "depth",
+      "beat": "ringkasan",
+      "mulai": 50.432,
+      "selesai": 52.724,
+      "teks": "SIAP PAKAI",
+      "efek": null,
+      "anchor": {
+        "kata": "kemampuan",
+        "ke": 3,
+        "ujung": "mulai"
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 51.648
+    },
+    {
+      "id": "cta/0-cta",
+      "tipe": "cta",
+      "beat": "cta",
+      "mulai": 52.774,
+      "selesai": 58.667,
+      "teks": "Klik link di bio",
+      "efek": null,
+      "anchor": {
+        "kata": "Klik",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 55.7905
+    },
+    {
+      "id": "cta/2-remotion",
+      "tipe": "remotion",
+      "beat": "cta",
+      "mulai": 52.774,
+      "selesai": 53.624,
+      "teks": "Partikel",
+      "efek": "partikel@0.1",
+      "anchor": {
+        "kata": "Klik",
+        "ke": 1,
+        "ujung": "mulai"
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 53.05733333333333
+    },
+    {
+      "id": "cta/1-teks",
+      "tipe": "teks",
+      "beat": "cta",
+      "mulai": 53.174,
+      "selesai": 58.667,
+      "teks": "www.otca.co.id",
+      "efek": null,
+      "anchor": {
+        "kata": "Klik",
+        "ke": 1,
+        "ujung": "mulai",
+        "offset": 0.4
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 55.990500000000004
+    }
+  ],
+  "thumbnail": [
+    {
+      "frame": 64,
+      "t": 2.1333333333333333,
+      "label": "hook/2-depth",
+      "file": "storyboard/t00064.jpg"
+    },
+    {
+      "frame": 90,
+      "t": 3.0,
+      "label": "hook/1-push",
+      "file": "storyboard/t00090.jpg"
+    },
+    {
+      "frame": 182,
+      "t": 6.066666666666666,
+      "label": "konteks/1-info",
+      "file": "storyboard/t00182.jpg"
+    },
+    {
+      "frame": 206,
+      "t": 6.866666666666666,
+      "label": "konteks/2-kamera",
+      "file": "storyboard/t00206.jpg"
+    },
+    {
+      "frame": 278,
+      "t": 9.266666666666667,
+      "label": "konteks/3-chip",
+      "file": "storyboard/t00278.jpg"
+    },
+    {
+      "frame": 589,
+      "t": 19.633333333333333,
+      "label": "poin-1/0-remotion",
+      "file": "storyboard/t00589.jpg"
+    },
+    {
+      "frame": 650,
+      "t": 21.666666666666668,
+      "label": "poin-1/1-kamera",
+      "file": "storyboard/t00650.jpg"
+    },
+    {
+      "frame": 664,
+      "t": 22.133333333333333,
+      "label": "poin-1/2-chip",
+      "file": "storyboard/t00664.jpg"
+    },
+    {
+      "frame": 743,
+      "t": 24.766666666666666,
+      "label": "poin-2/1-depth",
+      "file": "storyboard/t00743.jpg"
+    },
+    {
+      "frame": 881,
+      "t": 29.366666666666667,
+      "label": "hook/0-gambar",
+      "file": "storyboard/t00881.jpg"
+    },
+    {
+      "frame": 1022,
+      "t": 34.06666666666667,
+      "label": "poin-2/2-remotion",
+      "file": "storyboard/t01022.jpg"
+    },
+    {
+      "frame": 1144,
+      "t": 38.13333333333333,
+      "label": "poin-3/0-remotion",
+      "file": "storyboard/t01144.jpg"
+    },
+    {
+      "frame": 1367,
+      "t": 45.56666666666667,
+      "label": "poin-3/1-remotion",
+      "file": "storyboard/t01367.jpg"
+    },
+    {
+      "frame": 1475,
+      "t": 49.166666666666664,
+      "label": "ringkasan/0-chip",
+      "file": "storyboard/t01475.jpg"
+    },
+    {
+      "frame": 1549,
+      "t": 51.63333333333333,
+      "label": "ringkasan/1-depth",
+      "file": "storyboard/t01549.jpg"
+    },
+    {
+      "frame": 1592,
+      "t": 53.06666666666667,
+      "label": "cta/2-remotion",
+      "file": "storyboard/t01592.jpg"
+    },
+    {
+      "frame": 1674,
+      "t": 55.8,
+      "label": "cta/0-cta, cta/1-teks",
+      "file": "storyboard/t01674.jpg"
+    }
+  ]
+}

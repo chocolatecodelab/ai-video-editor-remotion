@@ -1,0 +1,105 @@
+{
+ "_meta": {
+  "id": "minimal-quote",
+  "versi": "0.1",
+  "status": "draft",
+  "catatan": "Kerangka koreografi: ganti TODO, lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4)."
+ },
+ "label": "Minimal Quote · Talking Head 30–40 s",
+ "deskripsi": "Tenang & lapang: caption karaoke jadi bintang utama, hanya 3 perangkat lembut — kartu info pembuka, chip pemikiran, kartu ringkasan, CTA.",
+ "kapan": "Refleksi, quote, filosofi, cerita personal; gaya minimalism / kertas-tipografi / coffee-lofi.",
+ "template": "hook-problem-solution",
+ "variasi_min": 3,
+ "efek": [],
+ "butuh": {
+  "rekaman": true,
+  "roto": false,
+  "remotion": false
+ },
+ "manifest": {},
+ "beat_sheet": {
+  "_catatan": "Kerangka koreografi: ganti TODO, lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4).",
+  "caption": {
+   "aktif": true,
+   "posisi": "bawah",
+   "kecuali": []
+  },
+  "beats": [
+   {
+    "id": "hook",
+    "beat": "Hook",
+    "mulai": 0,
+    "selesai": 3.5,
+    "elemen": [
+     {
+      "tipe": "info",
+      "ikon": "pesan",
+      "judul": "TODO kalimat *pembuka*",
+      "sub": "",
+      "fungsi": "hook",
+      "mulai": 0.3,
+      "selesai": 3.5,
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "problem",
+    "beat": "Problem",
+    "mulai": 3.5,
+    "selesai": 14.0,
+    "elemen": []
+   },
+   {
+    "id": "agitasi",
+    "beat": "Agitasi",
+    "mulai": 14.0,
+    "selesai": 20.0,
+    "elemen": [
+     {
+      "tipe": "chip",
+      "status": "info",
+      "teks": "TODO *satu pikiran*",
+      "fungsi": "masalah",
+      "mulai": 14.3,
+      "selesai": 20.0,
+      "posisi": "atas"
+     }
+    ]
+   },
+   {
+    "id": "solution",
+    "beat": "Solution",
+    "mulai": 20.0,
+    "selesai": 30.0,
+    "elemen": [
+     {
+      "tipe": "kartu",
+      "judul": "TODO *inti*",
+      "teks": "TODO satu kalimat",
+      "fungsi": "ringkasan",
+      "posisi": "atas",
+      "mulai": 20.5,
+      "selesai": 27.0
+     }
+    ]
+   },
+   {
+    "id": "cta",
+    "beat": "CTA",
+    "mulai": 30.0,
+    "selesai": 34.0,
+    "elemen": [
+     {
+      "tipe": "cta",
+      "teks": "TODO ajakan",
+      "fungsi": "ajakan",
+      "mulai": 30.4,
+      "selesai": 34.0,
+      "posisi": "bawah"
+     }
+    ]
+   }
+  ]
+ }
+}

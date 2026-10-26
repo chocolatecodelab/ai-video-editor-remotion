@@ -1,0 +1,247 @@
+{
+ "_meta": {
+  "id": "tutorial-langkah",
+  "versi": "0.2",
+  "status": "draft",
+  "catatan": "Koreografi v0.2 berisi CONTOH isi (ganti dengan isi videomu), lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4)."
+ },
+ "label": "Tutorial Langkah · Talking Head 60–75 s",
+ "deskripsi": "Tutorial 3 langkah: chip penanda langkah, kartu info, cutaway terminal & timeline, kartu langkah, ringkasan checklist, CTA.",
+ "kapan": "Cara/tutorial/workflow bertahap dengan wajah; tiap langkah mendapat perangkat berbeda.",
+ "template": "explainer",
+ "variasi_min": 6,
+ "efek": [
+  "blur-zoom@0.1",
+  "terminal@0.1",
+  "timeline@0.1",
+  "checklist@0.2",
+  "partikel@0.1"
+ ],
+ "butuh": {
+  "rekaman": true,
+  "roto": false,
+  "remotion": true
+ },
+ "manifest": {},
+ "beat_sheet": {
+  "_catatan": "Koreografi v0.2 berisi CONTOH isi (ganti dengan isi videomu), lalu (bila ada rekaman) ganti angka detik dengan anchor {\"kata\": …}. Tiap perangkat punya 'fungsi' (K09.4).",
+  "caption": {
+   "aktif": true,
+   "posisi": "bawah",
+   "kecuali": [
+    "ringkasan"
+   ]
+  },
+  "beats": [
+   {
+    "id": "hook",
+    "beat": "Hook",
+    "mulai": 0,
+    "selesai": 3.0,
+    "elemen": [
+     {
+      "tipe": "chip",
+      "status": "nomor",
+      "teks": "*3 langkah* audio jernih",
+      "fungsi": "hook",
+      "mulai": 0.2,
+      "selesai": 3.0,
+      "nomor": "3",
+      "posisi": "atas"
+     },
+     {
+      "tipe": "push",
+      "mulai": 0.3,
+      "gerak": 1.0
+     }
+    ]
+   },
+   {
+    "id": "konteks",
+    "beat": "Konteks",
+    "mulai": 3.0,
+    "selesai": 14.0,
+    "elemen": [
+     {
+      "tipe": "info",
+      "ikon": "ide",
+      "judul": "Kenapa *penting*",
+      "sub": "suara buruk = penonton pergi",
+      "fungsi": "konteks",
+      "mulai": 3.4,
+      "selesai": 9.0,
+      "posisi": "atas"
+     },
+     {
+      "tipe": "chip",
+      "status": "info",
+      "teks": "Penonton bertahan *2× lebih lama*",
+      "fungsi": "bukti",
+      "posisi": "atas",
+      "mulai": 9.3,
+      "selesai": 14.0
+     }
+    ]
+   },
+   {
+    "id": "poin-1",
+    "beat": "Langkah 1",
+    "mulai": 14.0,
+    "selesai": 28.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 14.0
+     },
+     {
+      "tipe": "latar",
+      "mulai": 14.0,
+      "selesai": 21.0
+     },
+     {
+      "tipe": "remotion",
+      "efek": "terminal",
+      "fungsi": "langkah",
+      "mulai": 14.2,
+      "selesai": 21.0,
+      "judul": "terminal",
+      "perintah": "normalisasi audio.wav",
+      "keluaran": [
+       "target −14 LUFS",
+       "✓ audio siap"
+      ],
+      "posisi": "tengah"
+     },
+     {
+      "tipe": "chip",
+      "status": "benar",
+      "teks": "Audio *rata* & jelas",
+      "fungsi": "hasil",
+      "posisi": "atas",
+      "mulai": 21.3,
+      "selesai": 28.0
+     }
+    ]
+   },
+   {
+    "id": "poin-2",
+    "beat": "Langkah 2",
+    "mulai": 28.0,
+    "selesai": 42.0,
+    "elemen": [
+     {
+      "tipe": "kartu",
+      "judul": "Langkah *2*",
+      "teks": "Potong jeda yang panjang",
+      "fungsi": "langkah",
+      "posisi": "atas",
+      "mulai": 28.3,
+      "selesai": 35.5
+     },
+     {
+      "tipe": "info",
+      "ikon": "jam",
+      "judul": "Jeda > *0,6 detik*",
+      "sub": "potong tanpa ragu",
+      "fungsi": "langkah",
+      "posisi": "atas",
+      "mulai": 35.7,
+      "selesai": 42.0
+     }
+    ]
+   },
+   {
+    "id": "poin-3",
+    "beat": "Langkah 3",
+    "mulai": 42.0,
+    "selesai": 56.0,
+    "elemen": [
+     {
+      "tipe": "transisi",
+      "efek": "blur-zoom",
+      "mulai": 42.0
+     },
+     {
+      "tipe": "latar",
+      "mulai": 42.0,
+      "selesai": 48.5
+     },
+     {
+      "tipe": "remotion",
+      "efek": "timeline",
+      "fungsi": "proses",
+      "mulai": 42.2,
+      "selesai": 48.5,
+      "chip": [
+       "potong",
+       "rapikan",
+       "*ekspor*"
+      ],
+      "catatan": "satu alur, tanpa ulang",
+      "posisi": "tengah"
+     },
+     {
+      "tipe": "chip",
+      "status": "nomor",
+      "nomor": "3",
+      "teks": "Ekspor *−14 LUFS*",
+      "fungsi": "langkah",
+      "posisi": "atas",
+      "mulai": 48.8,
+      "selesai": 56.0
+     }
+    ]
+   },
+   {
+    "id": "ringkasan",
+    "beat": "Ringkasan",
+    "mulai": 56.0,
+    "selesai": 63.0,
+    "elemen": [
+     {
+      "tipe": "remotion",
+      "efek": "checklist",
+      "fungsi": "ringkasan",
+      "mulai": 56.2,
+      "selesai": 63.0,
+      "judul": "Ringkasnya",
+      "item": [
+       "Normalisasi",
+       "Potong *jeda*",
+       "Ekspor rapi"
+      ],
+      "stagger": 0.8,
+      "posisi": "tengah",
+      "sfx_item": "pop"
+     }
+    ]
+   },
+   {
+    "id": "cta",
+    "beat": "CTA",
+    "mulai": 63.0,
+    "selesai": 68.0,
+    "elemen": [
+     {
+      "tipe": "cta",
+      "teks": "Ikuti untuk part 2",
+      "fungsi": "ajakan",
+      "mulai": 63.4,
+      "selesai": 68.0,
+      "posisi": "atas"
+     },
+     {
+      "tipe": "remotion",
+      "efek": "partikel",
+      "fungsi": "reveal",
+      "mulai": 63.4,
+      "selesai": 64.6,
+      "x": 0.5,
+      "y": 0.16
+     }
+    ]
+   }
+  ]
+ }
+}
