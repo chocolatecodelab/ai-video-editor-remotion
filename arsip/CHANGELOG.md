@@ -269,6 +269,7 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
   Lebih dari satu kunci → tetap `<proyek>_<platform>.mp4`. QA K07 ikut path yang sama.
 - proyek/_template-proyek: `platform` bawaan `["reels"]` (sebelumnya reels, tiktok, shorts).
 
+
 ## 2026-10-28 — motion blur Remotion, zoom potong (E55), caption tidak dobel dengan teks kinetik
 - Baru E55 zoom-potong (native, otomatis): `zoom_potong.py` merencanakan bingkai rapat per kalimat (kalimat pendek digabung,
   berhenti saat cutaway/efek kamera/transisi/depth/PiP/push manual, sesudahnya mulai rapat); render `_zoom_potong` memasukkannya
@@ -282,3 +283,8 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
 - Motion blur Remotion: `lib/kabur.tsx` (Gaussian searah gerak, shutter 180°, aman untuk overlay ber-alpha — bukan
   CameraMotionBlur yang menumpuk salinan semi-transparan). Dipakai E51 (kata naik), E52 (pelari), E54 (halaman berbalik);
   Spek `blur_gerak` → layout `motion_blur.remotion` → detail K05.4.
+
+## 2026-10-28 — folder sementara di drive data
+- sistem.py: TEMP/TMP/TMPDIR dan `tempfile.tempdir` diarahkan ke `<repo>/.sementara` (env `VIDEO_TEMP` untuk memindahkan)
+  sebelum proses apa pun berjalan, jadi Remotion, Chrome headless, ffmpeg dan tempfile Python tidak memenuhi drive C:.
+  `.sementara/` di .gitignore.

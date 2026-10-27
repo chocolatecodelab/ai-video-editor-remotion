@@ -13,6 +13,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -21,6 +22,14 @@ import yaml
 VERSI_SCRIPTS = "0.6"
 
 ROOT = Path(__file__).resolve().parents[2]
+
+# Folder sementara semua proses pipeline (tempfile Python, ffmpeg, render-server Remotion & Chrome headless yang mewarisi
+# env) di dalam repo — drive data, bukan %TEMP% sistem di C: yang bisa penuh. Pindahkan dengan env VIDEO_TEMP.
+SEMENTARA = Path(os.environ.get("VIDEO_TEMP") or ROOT / ".sementara")
+SEMENTARA.mkdir(parents=True, exist_ok=True)
+for _k in ("TEMP", "TMP", "TMPDIR"):
+    os.environ[_k] = str(SEMENTARA)
+tempfile.tempdir = str(SEMENTARA)
 
 # jenis → (folder, prefix nama file, ekstensi)
 LAPISAN = {

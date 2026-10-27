@@ -17,6 +17,8 @@ remotion/out/
 # bundle Remotion ber-cache (render-server.mjs) & Chrome headless unduhan Remotion
 remotion/.bundle/
 .remotion/
+# folder sementara pipeline (sistem.SEMENTARA): Remotion, Chrome, ffmpeg, tempfile
+.sementara/
 
 # keluaran yang bisa dibuat ulang (video.py pratinjau) — .json ringkasannya tetap di-commit
 preset/pratinjau/*.mp4
