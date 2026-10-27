@@ -1,0 +1,22 @@
+[ingest] cache valid, dilewati.
+[transkrip] cache valid (audio sama), dilewati.
+[roto] cache valid: 336 mask sudah ada.
+[wajah] cache valid.
+[remotion] problem/1-remotion: PaperCut → PaperCut-a76b54f0ed35e9f9.mov (cache)
+[remotion] agitasi/1-judul: JudulGaya → JudulGaya-82e6abfc2145e636.mov (cache)
+[render] 1676 frame (55.87 s), 7 lapisan, 30 potongan caption, 0 push, 13 sfx
+[render] paralel: 4 proses × ±419 frame
+[render]  25% (1/4 bagian)
+[render]  50% (2/4 bagian)
+[render]  75% (3/4 bagian)
+[render] 100% (4/4 bagian)
+[render] audio: campur suara + musik (ducking) + sfx → loudnorm
+[render] selesai → out\master.mov, out\layout.json
+[ekspor] reels → 2026-10_life-isnt-a-race_reels.mp4
+[ekspor] tiktok → 2026-10_life-isnt-a-race_tiktok.mp4
+[ekspor] shorts → 2026-10_life-isnt-a-race_shorts.mp4
+[ekspor] selesai.
+[qa] LULUS — lulus 40, gagal 0, peringatan 0, lewat 7, manual 18 → out/qa-report.md
+[laporan] 9 perangkat → out/laporan-perangkat.md
+[laporan] kontak-sheet 5 beat → out\kontak.png
+[semua] QA LULUS. Selesaikan checklist manual di out/qa-report.md, lalu: video.py arsip <proyek>

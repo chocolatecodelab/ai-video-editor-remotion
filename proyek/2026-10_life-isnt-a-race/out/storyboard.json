@@ -1,0 +1,196 @@
+{
+  "proyek": "2026-10_life-isnt-a-race",
+  "waktu": "2026-10-27T23:24:57",
+  "beat_sheet_sha": "756426f2118fdd7c949d7cc69624006386567f0d915602c5abcf857aa9bb0d4c",
+  "durasi": 55.867,
+  "pra_qa": "LULUS",
+  "ringkas": {
+    "LULUS": 35,
+    "GAGAL": 0,
+    "PERINGATAN": 0,
+    "LEWAT": 12,
+    "BELUM DIIMPLEMENTASI": 0
+  },
+  "elemen": [
+    {
+      "id": "hook/0-chip",
+      "tipe": "chip",
+      "beat": "hook",
+      "mulai": 0.371,
+      "selesai": 3.133,
+      "teks": "Feel *left behind*?",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "sometimes",
+        "ke": 1
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 1.8519999999999999
+    },
+    {
+      "id": "problem/0-kamera",
+      "tipe": "kamera",
+      "beat": "problem",
+      "mulai": 5.535,
+      "selesai": 8.535,
+      "teks": "",
+      "efek": "paper-cutout@0.1",
+      "komposisi": null,
+      "anchor": {
+        "kata": "except",
+        "ke": 1
+      },
+      "masuk": "paper-cutout",
+      "keluar": "paper-cutout",
+      "t": 7.035
+    },
+    {
+      "id": "problem/1-remotion",
+      "tipe": "cutaway",
+      "beat": "problem",
+      "mulai": 7.597,
+      "selesai": 12.597,
+      "teks": "Better jobs. Big dreams. everyone else, it seems",
+      "efek": "paper-cut@0.2",
+      "komposisi": "PaperCut",
+      "anchor": {
+        "kata": "friends",
+        "ke": 1
+      },
+      "masuk": "potong",
+      "keluar": "potong",
+      "t": 10.097
+    },
+    {
+      "id": "problem/1-remotion",
+      "tipe": "broll",
+      "beat": "problem",
+      "mulai": 7.597,
+      "selesai": 12.597000000000001,
+      "teks": "PaperCut-a76b54f0ed35e9f9.mov",
+      "efek": "paper-cut@0.2",
+      "anchor": null,
+      "t": 10.097000000000001
+    },
+    {
+      "id": "agitasi/1-judul",
+      "tipe": "remotion",
+      "beat": "agitasi",
+      "mulai": 24.649,
+      "selesai": 30.149,
+      "teks": "Life isn't\na race",
+      "efek": "judul-gaya@0.1",
+      "komposisi": "JudulGaya",
+      "anchor": {
+        "kata": "life",
+        "ke": 1
+      },
+      "masuk": "masker",
+      "keluar": "fade",
+      "t": 27.499000000000002
+    },
+    {
+      "id": "solution/0-kartu",
+      "tipe": "kartu",
+      "beat": "solution",
+      "mulai": 32.083,
+      "selesai": 35.983,
+      "teks": "not someone else's",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "follow",
+        "ke": 1
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 34.308
+    },
+    {
+      "id": "solution/2-depth",
+      "tipe": "depth",
+      "beat": "solution",
+      "mulai": 38.805,
+      "selesai": 41.405,
+      "teks": "YOUR TIME",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "take",
+        "ke": 1
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 40.205000000000005
+    },
+    {
+      "id": "solution/1-kamera",
+      "tipe": "kamera",
+      "beat": "solution",
+      "mulai": 45.147,
+      "selesai": 47.647,
+      "teks": "",
+      "efek": "green-screen@0.2",
+      "komposisi": null,
+      "anchor": {
+        "kata": "youre",
+        "ke": 3
+      },
+      "masuk": "green-screen",
+      "keluar": "green-screen",
+      "t": 46.397
+    }
+  ],
+  "thumbnail": [
+    {
+      "frame": 56,
+      "t": 1.8666666666666667,
+      "label": "hook/0-chip",
+      "file": "storyboard/t00056.jpg"
+    },
+    {
+      "frame": 211,
+      "t": 7.033333333333333,
+      "label": "problem/0-kamera",
+      "file": "storyboard/t00211.jpg"
+    },
+    {
+      "frame": 303,
+      "t": 10.1,
+      "label": "problem/1-remotion",
+      "file": "storyboard/t00303.jpg"
+    },
+    {
+      "frame": 825,
+      "t": 27.5,
+      "label": "agitasi/1-judul",
+      "file": "storyboard/t00825.jpg"
+    },
+    {
+      "frame": 1029,
+      "t": 34.3,
+      "label": "solution/0-kartu",
+      "file": "storyboard/t01029.jpg"
+    },
+    {
+      "frame": 1206,
+      "t": 40.2,
+      "label": "solution/2-depth",
+      "file": "storyboard/t01206.jpg"
+    },
+    {
+      "frame": 1392,
+      "t": 46.4,
+      "label": "solution/1-kamera",
+      "file": "storyboard/t01392.jpg"
+    },
+    {
+      "frame": 1507,
+      "t": 50.233333333333334,
+      "label": "beat cta",
+      "file": "storyboard/t01507.jpg"
+    }
+  ]
+}

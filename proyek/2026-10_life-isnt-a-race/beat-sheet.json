@@ -1,0 +1,190 @@
+{
+  "_catatan": "Koreografi v0.3 ber-SLOT: tiap bagian menulis fungsi + isi generik; generator (slot.py) memilih perangkat yang cocok dengan gaya (gaya_cocok efek) dan seed (varian). Isi = CONTOH — ganti dengan isi videomu. Dengan rekaman: video.py pasang <proyek> mengganti detik dengan anchor kata & menghindari wajah.",
+  "caption": {
+    "aktif": true,
+    "posisi": "bawah",
+    "kecuali": []
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "beat": "Hook",
+      "mulai": 0,
+      "elemen": [
+        {
+          "tipe": "chip",
+          "status": "info",
+          "teks": "Feel *left behind*?",
+          "mulai": {
+            "kata": "sometimes",
+            "ke": 1
+          },
+          "posisi": "atas",
+          "fungsi": "hook"
+        }
+      ],
+      "_ucapan": "Sometimes, you look around and",
+      "_kata_kunci": [
+        "Sometimes"
+      ]
+    },
+    {
+      "id": "problem",
+      "beat": "Problem",
+      "mulai": {
+        "kata": "feel",
+        "ke": 1
+      },
+      "elemen": [
+        {
+          "tipe": "kamera",
+          "efek": "paper-cutout",
+          "mulai": {
+            "kata": "except",
+            "ke": 1
+          },
+          "fungsi": "hasil",
+          "durasi": 3.0
+        },
+        {
+          "tipe": "remotion",
+          "efek": "paper-cut",
+          "judul": "Better jobs. *Big dreams.*",
+          "sub": "everyone else, it seems",
+          "mulai": {
+            "kata": "friends",
+            "ke": 1
+          },
+          "fungsi": "konteks",
+          "durasi": 5.0
+        }
+      ],
+      "_ucapan": "feel like everyone is moving forward except you. Your friends are getting better jobs, achieving their dreams, and figuring out their lives while you're still trying to find your way. And honestly, it hurts.",
+      "_kata_kunci": [
+        "everyone",
+        "forward",
+        "friends",
+        "getting",
+        "achieving",
+        "dreams"
+      ]
+    },
+    {
+      "id": "agitasi",
+      "beat": "Agitasi",
+      "mulai": {
+        "kata": "but",
+        "ke": 1
+      },
+      "elemen": [
+        {
+          "tipe": "transisi",
+          "efek": "celup",
+          "jenis": "celup",
+          "mulai": {
+            "beat": "agitasi"
+          }
+        },
+        {
+          "tipe": "judul",
+          "teks": "Life isn't\na *race*",
+          "posisi": "atas",
+          "mulai": {
+            "kata": "life",
+            "ke": 1
+          },
+          "durasi": 5.5,
+          "fungsi": "masalah"
+        }
+      ],
+      "_ucapan": "But remember, life isn't a race, and we're not all running toward the same destination.",
+      "_kata_kunci": [
+        "remember",
+        "running",
+        "destination"
+      ]
+    },
+    {
+      "id": "solution",
+      "beat": "Solution",
+      "mulai": {
+        "kata": "you",
+        "ke": 3
+      },
+      "elemen": [
+        {
+          "tipe": "kartu",
+          "judul": "Your *own* timeline",
+          "teks": "not someone else's",
+          "fungsi": "ringkasan",
+          "posisi": "atas",
+          "mulai": {
+            "kata": "follow",
+            "ke": 1
+          },
+          "durasi": 3.9
+        },
+        {
+          "tipe": "kamera",
+          "efek": "green-screen",
+          "mulai": {
+            "kata": "youre",
+            "ke": 3
+          },
+          "fungsi": "hasil",
+          "durasi": 2.5
+        },
+        {
+          "tipe": "depth",
+          "teks": "YOUR TIME",
+          "fungsi": "reveal",
+          "y": 0.36,
+          "mulai": {
+            "kata": "take",
+            "ke": 1
+          },
+          "durasi": 2.6
+        }
+      ],
+      "_ucapan": "You don't have to follow someone else's timeline to prove that you're doing enough. Take your time. Keep learning. Keep growing. You're not falling behind. You're just",
+      "_kata_kunci": [
+        "someone",
+        "timeline",
+        "enough",
+        "learning",
+        "growing",
+        "falling"
+      ]
+    },
+    {
+      "id": "cta",
+      "beat": "Penutup",
+      "mulai": {
+        "kata": "living",
+        "ke": 1
+      },
+      "elemen": [
+        {
+          "tipe": "transisi",
+          "efek": "celup",
+          "jenis": "celup",
+          "mulai": {
+            "beat": "cta"
+          }
+        }
+      ],
+      "_ucapan": "living a different chapter of your life.",
+      "_kata_kunci": [
+        "different",
+        "chapter"
+      ]
+    }
+  ],
+  "_pasang": {
+    "skala": 1.643,
+    "durasi_rekaman": 55.87,
+    "durasi_contoh": 34.0,
+    "wajah": true,
+    "perubahan_posisi": []
+  }
+}

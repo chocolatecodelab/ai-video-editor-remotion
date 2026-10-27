@@ -1,0 +1,144 @@
+{
+  "gaya": {
+    "id": "G10",
+    "ref": "kertas-tipografi@0.5",
+    "file": "gaya/GAYA_10_kertas-tipografi_v0.5.md",
+    "sha256": "224d6d11e123cc5a"
+  },
+  "template": {
+    "id": "T02",
+    "ref": "hook-problem-solution@0.2",
+    "file": "template/TEMPLATE_02_hook-problem-solution_v0.2.md",
+    "sha256": "1051b0d67dafe623"
+  },
+  "konteks": [
+    {
+      "id": "K00",
+      "ref": "zona-aman@0.2",
+      "file": "konteks/KONTEKS_00_zona-aman_v0.2.md",
+      "sha256": "d240bb1259c5ca21"
+    },
+    {
+      "id": "K01",
+      "ref": "caption@0.2",
+      "file": "konteks/KONTEKS_01_caption_v0.2.md",
+      "sha256": "fa3cbc1e893dbeb0"
+    },
+    {
+      "id": "K03",
+      "ref": "parallax-push@0.1",
+      "file": "konteks/KONTEKS_03_parallax-push_v0.1.md",
+      "sha256": "9fa0b56a5ed38af4"
+    },
+    {
+      "id": "K04",
+      "ref": "ingest@0.1",
+      "file": "konteks/KONTEKS_04_ingest_v0.1.md",
+      "sha256": "dd31740ea9fcf8e7"
+    },
+    {
+      "id": "K05",
+      "ref": "gerak@0.2",
+      "file": "konteks/KONTEKS_05_gerak_v0.2.md",
+      "sha256": "a684dccbef7bd9b7"
+    },
+    {
+      "id": "K06",
+      "ref": "audio@0.1",
+      "file": "konteks/KONTEKS_06_audio_v0.1.md",
+      "sha256": "507472702bb9cf67"
+    },
+    {
+      "id": "K07",
+      "ref": "ekspor@0.1",
+      "file": "konteks/KONTEKS_07_ekspor_v0.1.md",
+      "sha256": "8b6be915c9c65009"
+    },
+    {
+      "id": "K08",
+      "ref": "sound-design@0.1",
+      "file": "konteks/KONTEKS_08_sound-design_v0.1.md",
+      "sha256": "17125ffd70cde749"
+    },
+    {
+      "id": "K09",
+      "ref": "koreografi@0.2",
+      "file": "konteks/KONTEKS_09_koreografi_v0.2.md",
+      "sha256": "5d8675ea99ad87ef"
+    },
+    {
+      "id": "K02",
+      "ref": "depth-typography@0.2",
+      "file": "konteks/KONTEKS_02_depth-typography_v0.2.md",
+      "sha256": "807caebc88d6b1c6"
+    }
+  ],
+  "tokens": [
+    {
+      "id": "TK00",
+      "ref": "platform@0.4",
+      "file": "tokens/TOKEN_00_platform_v0.4.json",
+      "sha256": "454836ac678c60b5"
+    },
+    {
+      "id": "TK10",
+      "ref": "kertas-tipografi@0.3",
+      "file": "tokens/TOKEN_10_kertas-tipografi_v0.3.json",
+      "sha256": "63bfc02a0c2093db"
+    }
+  ],
+  "efek": [
+    {
+      "id": "E46",
+      "ref": "paper-cutout@0.1",
+      "file": "efek/EFEK_46_paper-cutout_v0.1.md",
+      "sha256": "caaa60196a34c387"
+    },
+    {
+      "id": "E13",
+      "ref": "paper-cut@0.2",
+      "file": "efek/EFEK_13_paper-cut_v0.2.md",
+      "sha256": "bf8473d89ff0ad75"
+    },
+    {
+      "id": "E30",
+      "ref": "celup@0.1",
+      "file": "efek/EFEK_30_celup_v0.1.md",
+      "sha256": "6ef8855daa7139fc"
+    },
+    {
+      "id": "E12",
+      "ref": "green-screen@0.2",
+      "file": "efek/EFEK_12_green-screen_v0.2.md",
+      "sha256": "ad9e9e4b8817d62a"
+    }
+  ],
+  "skill": {
+    "ref": "video-editor@0.3",
+    "file": "pipeline/skill/SKILL.md",
+    "sha256": "b7cdd1a8664162b7"
+  },
+  "scripts": {
+    "ref": "scripts@0.6"
+  },
+  "preset": {
+    "id": "PR34",
+    "ref": "kertas-tipografi-minimal-quote@0.1",
+    "file": "preset/PRESET_34_kertas-tipografi-minimal-quote_v0.1.json",
+    "sha256": "1872ffc58bca630d"
+  },
+  "qa": "LULUS",
+  "qa_ringkas": {
+    "LULUS": 40,
+    "GAGAL": 0,
+    "PERINGATAN": 0,
+    "LEWAT": 7,
+    "BELUM DIIMPLEMENTASI": 0
+  },
+  "hasil": {
+    "2026-10_life-isnt-a-race_reels.mp4": "cf7f5873adc5ff13",
+    "2026-10_life-isnt-a-race_shorts.mp4": "388d3af38e875823",
+    "2026-10_life-isnt-a-race_tiktok.mp4": "eea3ba95a8344e19",
+    "master.mov": "c294e4c1b5bc88d8"
+  }
+}

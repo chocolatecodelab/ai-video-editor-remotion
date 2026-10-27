@@ -1,0 +1,193 @@
+{
+  "proyek": "2026-10_life-isnt-a-race",
+  "elemen": [
+    {
+      "id": "hook/0-chip",
+      "beat": "hook",
+      "tipe": "chip",
+      "perangkat": "chip-info",
+      "efek": null,
+      "fungsi": "hook",
+      "mulai": 0.371,
+      "selesai": 3.133,
+      "durasi": 2.76,
+      "luas_layar": 0.019,
+      "tutup_wajah": 0.0,
+      "wajah_data": true,
+      "dekoratif": false,
+      "bbox": [
+        283.5,
+        250.0,
+        736.5,
+        336.0
+      ],
+      "teks": "Feel *left behind*?"
+    },
+    {
+      "id": "problem/0-kamera",
+      "beat": "problem",
+      "tipe": "kamera",
+      "perangkat": "paper-cutout",
+      "efek": "paper-cutout@0.1",
+      "fungsi": "hasil",
+      "mulai": 5.535,
+      "selesai": 8.535,
+      "durasi": 3.0,
+      "luas_layar": 1.0,
+      "tutup_wajah": null,
+      "wajah_data": true,
+      "dekoratif": true,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "teks": ""
+    },
+    {
+      "id": "problem/1-remotion",
+      "beat": "problem",
+      "tipe": "cutaway",
+      "perangkat": "paper-cut",
+      "efek": "paper-cut@0.2",
+      "fungsi": "konteks",
+      "mulai": 7.597,
+      "selesai": 12.597,
+      "durasi": 5.0,
+      "luas_layar": 1.0,
+      "tutup_wajah": null,
+      "wajah_data": true,
+      "dekoratif": true,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "teks": "Better jobs. Big dreams. everyone else, it seems"
+    },
+    {
+      "id": "agitasi/0-transisi",
+      "beat": null,
+      "tipe": "transisi",
+      "perangkat": "transisi:celup",
+      "efek": "celup@0.1",
+      "fungsi": null,
+      "mulai": 22.468,
+      "selesai": 23.068,
+      "durasi": 0.6,
+      "luas_layar": 1.0,
+      "tutup_wajah": null,
+      "wajah_data": true,
+      "dekoratif": true,
+      "bbox": null,
+      "teks": ""
+    },
+    {
+      "id": "agitasi/1-judul",
+      "beat": "agitasi",
+      "tipe": "remotion",
+      "perangkat": "remotion",
+      "efek": "judul-gaya@0.1",
+      "fungsi": "masalah",
+      "mulai": 24.649,
+      "selesai": 30.149,
+      "durasi": 5.5,
+      "luas_layar": 0.039,
+      "tutup_wajah": 0.0,
+      "wajah_data": true,
+      "dekoratif": false,
+      "bbox": [
+        328.0,
+        269.0,
+        696.0,
+        486.0
+      ],
+      "teks": "Life isn't\na race"
+    },
+    {
+      "id": "solution/0-kartu",
+      "beat": "solution",
+      "tipe": "kartu",
+      "perangkat": "kartu",
+      "efek": null,
+      "fungsi": "ringkasan",
+      "mulai": 32.083,
+      "selesai": 35.983,
+      "durasi": 3.9,
+      "luas_layar": 0.13,
+      "tutup_wajah": 0.0,
+      "wajah_data": true,
+      "dekoratif": false,
+      "bbox": [
+        60.0,
+        250.0,
+        960.0,
+        550.5
+      ],
+      "teks": "not someone else's"
+    },
+    {
+      "id": "solution/2-depth",
+      "beat": "solution",
+      "tipe": "depth",
+      "perangkat": "depth",
+      "efek": null,
+      "fungsi": "reveal",
+      "mulai": 38.805,
+      "selesai": 41.405,
+      "durasi": 2.6,
+      "luas_layar": 0.103,
+      "tutup_wajah": null,
+      "wajah_data": true,
+      "dekoratif": false,
+      "bbox": [
+        267.5,
+        281.5,
+        752.5,
+        723.3
+      ],
+      "teks": "YOUR TIME"
+    },
+    {
+      "id": "solution/1-kamera",
+      "beat": "solution",
+      "tipe": "kamera",
+      "perangkat": "green-screen",
+      "efek": "green-screen@0.2",
+      "fungsi": "hasil",
+      "mulai": 45.147,
+      "selesai": 47.647,
+      "durasi": 2.5,
+      "luas_layar": 1.0,
+      "tutup_wajah": null,
+      "wajah_data": true,
+      "dekoratif": true,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "teks": ""
+    },
+    {
+      "id": "cta/0-transisi",
+      "beat": null,
+      "tipe": "transisi",
+      "perangkat": "transisi:celup",
+      "efek": "celup@0.1",
+      "fungsi": null,
+      "mulai": 49.428,
+      "selesai": 50.028,
+      "durasi": 0.6,
+      "luas_layar": 1.0,
+      "tutup_wajah": null,
+      "wajah_data": true,
+      "dekoratif": true,
+      "bbox": null,
+      "teks": ""
+    }
+  ]
+}

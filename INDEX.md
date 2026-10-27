@@ -119,6 +119,10 @@ Panduan umum & perbandingan dengan aturan sistem: [efek/README.md](efek/README.m
 | E44 | studio-reveal | efek/EFEK_44_studio-reveal_v0.1.md | 0.1 | draft | 3–6 s | native (render.py + Remotion) |
 | E45 | broll-overlay | efek/EFEK_45_broll-overlay_v0.1.md | 0.1 | draft | ikut jadwal | native (render.py) |
 | E46 | paper-cutout | efek/EFEK_46_paper-cutout_v0.1.md | 0.1 | draft | 2–6 s | native (render.py) |
+| E47 | layer-explosion | efek/EFEK_47_layer-explosion_v0.1.md | 0.1 | draft | 3–6 s | native (Remotion) |
+| E48 | validasi-badge | efek/EFEK_48_validasi-badge_v0.1.md | 0.1 | draft | 1.5–4 s | native (Remotion) |
+| E49 | chat-window | efek/EFEK_49_chat-window_v0.1.md | 0.1 | draft | 2.5–6 s | native (Remotion) |
+| E50 | split-explainer | efek/EFEK_50_split-explainer_v0.1.md | 0.1 | draft | 3–8 s | native (Remotion) |
 
 ## Koreografi (urutan perangkat motion per fungsi isi — dipakai preset; aturan ritme K09)
 Preset = gaya × koreografi. Koreografi menentukan perangkat tiap bagian (+ `fungsi`), template, kebutuhan footage, musik.
@@ -202,6 +206,8 @@ Semua efek E01–E30 native. Generator slot memilih efek per fungsi sesuai gaya 
 | 2026-10_demo-fase2 | hook-problem-solution@0.2 | glass-tech@0.3 | brief |
 | 2026-10_demo-fase3 | hook-problem-solution@0.2 | kaca-gelap@0.3 | brief |
 | 2026-10_otca-sertifikat-jerman | explainer@0.2 | glass-tech@0.5 | brief |
+| 2026-10_we-fail-today | explainer@0.2 | glass-tech@0.6 | brief |
+| 2026-10_life-isnt-a-race | hook-problem-solution@0.2 | kertas-tipografi@0.5 | selesai v1 |
 
 ## Aturan
 1. Pola nama: `JENIS_NN_nama-pendek_vX.Y.ext`. Satu nama pendek = satu file aktif.
