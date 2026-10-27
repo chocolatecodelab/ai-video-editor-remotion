@@ -1,7 +1,7 @@
 {
   "proyek": "2026-10_life-isnt-a-race",
-  "waktu": "2026-10-27T23:24:57",
-  "beat_sheet_sha": "756426f2118fdd7c949d7cc69624006386567f0d915602c5abcf857aa9bb0d4c",
+  "waktu": "2026-10-27T23:59:37",
+  "beat_sheet_sha": "f0a4ef786b70e91862d098869ce91f06ad934c343a58f322057d1dc755734d64",
   "durasi": 55.867,
   "pra_qa": "LULUS",
   "ringkas": {
@@ -30,7 +30,25 @@
       "t": 1.8519999999999999
     },
     {
-      "id": "problem/0-kamera",
+      "id": "problem/0-remotion",
+      "tipe": "remotion",
+      "beat": "problem",
+      "mulai": 3.714,
+      "selesai": 6.014,
+      "teks": "everyone is moving forward",
+      "efek": "kinetik-kata@0.1",
+      "komposisi": "KinetikKata",
+      "anchor": {
+        "kata": "everyone",
+        "ke": 1,
+        "offset": -0.1
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 4.964
+    },
+    {
+      "id": "problem/1-kamera",
       "tipe": "kamera",
       "beat": "problem",
       "mulai": 5.535,
@@ -47,7 +65,7 @@
       "t": 7.035
     },
     {
-      "id": "problem/1-remotion",
+      "id": "problem/2-remotion",
       "tipe": "cutaway",
       "beat": "problem",
       "mulai": 7.597,
@@ -64,22 +82,40 @@
       "t": 10.097
     },
     {
-      "id": "problem/1-remotion",
+      "id": "problem/2-remotion",
       "tipe": "broll",
       "beat": "problem",
       "mulai": 7.597,
       "selesai": 12.597000000000001,
-      "teks": "PaperCut-a76b54f0ed35e9f9.mov",
+      "teks": "PaperCut-8e3d7c522647a41b.mov",
       "efek": "paper-cut@0.2",
       "anchor": null,
       "t": 10.097000000000001
+    },
+    {
+      "id": "problem/3-remotion",
+      "tipe": "remotion",
+      "beat": "problem",
+      "mulai": 16.413,
+      "selesai": 22.613,
+      "teks": "still trying to find your way. honestly, it hurts.",
+      "efek": "kinetik-kata@0.1",
+      "komposisi": "KinetikKata",
+      "anchor": {
+        "kata": "still",
+        "ke": 1,
+        "offset": -0.15
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 19.613
     },
     {
       "id": "agitasi/1-judul",
       "tipe": "remotion",
       "beat": "agitasi",
       "mulai": 24.649,
-      "selesai": 30.149,
+      "selesai": 26.949,
       "teks": "Life isn't\na race",
       "efek": "judul-gaya@0.1",
       "komposisi": "JudulGaya",
@@ -89,41 +125,101 @@
       },
       "masuk": "masker",
       "keluar": "fade",
-      "t": 27.499000000000002
+      "t": 25.899
     },
     {
-      "id": "solution/0-kartu",
-      "tipe": "kartu",
+      "id": "agitasi/2-remotion",
+      "tipe": "cutaway",
+      "beat": "agitasi",
+      "mulai": 26.921,
+      "selesai": 31.021,
+      "teks": "life isn't a race Not the same destination career family your path travel",
+      "efek": "lintasan@0.1",
+      "komposisi": "Lintasan",
+      "anchor": {
+        "kata": "not",
+        "ke": 1,
+        "offset": 0.15
+      },
+      "masuk": "potong",
+      "keluar": "potong",
+      "t": 28.971
+    },
+    {
+      "id": "agitasi/2-remotion",
+      "tipe": "broll",
+      "beat": "agitasi",
+      "mulai": 26.921,
+      "selesai": 31.021,
+      "teks": "Lintasan-c612b471eaf4ca08.mov",
+      "efek": "lintasan@0.1",
+      "anchor": null,
+      "t": 28.971
+    },
+    {
+      "id": "solution/0-remotion",
+      "tipe": "cutaway",
       "beat": "solution",
-      "mulai": 32.083,
-      "selesai": 35.983,
-      "teks": "not someone else's",
-      "efek": null,
-      "komposisi": null,
+      "mulai": 31.883,
+      "selesai": 36.783,
+      "teks": "Your own timeline not someone else's degree job house learn fail grow bloom",
+      "efek": "dua-linimasa@0.1",
+      "komposisi": "DuaLinimasa",
       "anchor": {
         "kata": "follow",
-        "ke": 1
+        "ke": 1,
+        "offset": -0.2
       },
-      "masuk": "naik",
-      "keluar": "fade",
-      "t": 34.308
+      "masuk": "potong",
+      "keluar": "potong",
+      "t": 34.333
+    },
+    {
+      "id": "solution/0-remotion",
+      "tipe": "broll",
+      "beat": "solution",
+      "mulai": 31.883,
+      "selesai": 36.783,
+      "teks": "DuaLinimasa-5d4fe1070cfa86b7.mov",
+      "efek": "dua-linimasa@0.1",
+      "anchor": null,
+      "t": 34.333
     },
     {
       "id": "solution/2-depth",
       "tipe": "depth",
       "beat": "solution",
-      "mulai": 38.805,
-      "selesai": 41.405,
+      "mulai": 38.405,
+      "selesai": 40.705,
       "teks": "YOUR TIME",
       "efek": null,
       "komposisi": null,
       "anchor": {
         "kata": "take",
-        "ke": 1
+        "ke": 1,
+        "offset": -0.4
       },
       "masuk": "naik",
       "keluar": "fade",
-      "t": 40.205000000000005
+      "t": 39.655
+    },
+    {
+      "id": "solution/3-remotion",
+      "tipe": "remotion",
+      "beat": "solution",
+      "mulai": 40.706,
+      "selesai": 44.906,
+      "teks": "Keep learning. Keep growing.",
+      "efek": "kinetik-kata@0.1",
+      "komposisi": "KinetikKata",
+      "anchor": {
+        "kata": "keep",
+        "ke": 1,
+        "offset": -0.1
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 42.906
     },
     {
       "id": "solution/1-kamera",
@@ -141,6 +237,33 @@
       "masuk": "green-screen",
       "keluar": "green-screen",
       "t": 46.397
+    },
+    {
+      "id": "cta/1-remotion",
+      "tipe": "cutaway",
+      "beat": "cta",
+      "mulai": 49.728,
+      "selesai": 55.828,
+      "teks": "Chapter II A different chapter of your life",
+      "efek": "bab-baru@0.1",
+      "komposisi": "BabBaru",
+      "anchor": {
+        "beat": "cta"
+      },
+      "masuk": "potong",
+      "keluar": "potong",
+      "t": 52.778000000000006
+    },
+    {
+      "id": "cta/1-remotion",
+      "tipe": "broll",
+      "beat": "cta",
+      "mulai": 49.728,
+      "selesai": 55.828,
+      "teks": "BabBaru-55835a5be8e0ff0f.mov",
+      "efek": "bab-baru@0.1",
+      "anchor": null,
+      "t": 52.778000000000006
     }
   ],
   "thumbnail": [
@@ -151,34 +274,58 @@
       "file": "storyboard/t00056.jpg"
     },
     {
+      "frame": 149,
+      "t": 4.966666666666667,
+      "label": "problem/0-remotion",
+      "file": "storyboard/t00149.jpg"
+    },
+    {
       "frame": 211,
       "t": 7.033333333333333,
-      "label": "problem/0-kamera",
+      "label": "problem/1-kamera",
       "file": "storyboard/t00211.jpg"
     },
     {
       "frame": 303,
       "t": 10.1,
-      "label": "problem/1-remotion",
+      "label": "problem/2-remotion",
       "file": "storyboard/t00303.jpg"
     },
     {
-      "frame": 825,
-      "t": 27.5,
+      "frame": 588,
+      "t": 19.6,
+      "label": "problem/3-remotion",
+      "file": "storyboard/t00588.jpg"
+    },
+    {
+      "frame": 777,
+      "t": 25.9,
       "label": "agitasi/1-judul",
-      "file": "storyboard/t00825.jpg"
+      "file": "storyboard/t00777.jpg"
     },
     {
-      "frame": 1029,
-      "t": 34.3,
-      "label": "solution/0-kartu",
-      "file": "storyboard/t01029.jpg"
+      "frame": 869,
+      "t": 28.966666666666665,
+      "label": "agitasi/2-remotion",
+      "file": "storyboard/t00869.jpg"
     },
     {
-      "frame": 1206,
-      "t": 40.2,
+      "frame": 1030,
+      "t": 34.333333333333336,
+      "label": "solution/0-remotion",
+      "file": "storyboard/t01030.jpg"
+    },
+    {
+      "frame": 1190,
+      "t": 39.666666666666664,
       "label": "solution/2-depth",
-      "file": "storyboard/t01206.jpg"
+      "file": "storyboard/t01190.jpg"
+    },
+    {
+      "frame": 1287,
+      "t": 42.9,
+      "label": "solution/3-remotion",
+      "file": "storyboard/t01287.jpg"
     },
     {
       "frame": 1392,
@@ -187,10 +334,10 @@
       "file": "storyboard/t01392.jpg"
     },
     {
-      "frame": 1507,
-      "t": 50.233333333333334,
-      "label": "beat cta",
-      "file": "storyboard/t01507.jpg"
+      "frame": 1583,
+      "t": 52.766666666666666,
+      "label": "cta/1-remotion",
+      "file": "storyboard/t01583.jpg"
     }
   ]
 }

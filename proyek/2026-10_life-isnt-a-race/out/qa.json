@@ -1,11 +1,11 @@
 {
   "proyek": "2026-10_life-isnt-a-race",
-  "waktu": "2026-10-27T23:30:55",
+  "waktu": "2026-10-28T03:34:37",
   "status": "LULUS",
   "ringkas": {
-    "LULUS": 40,
+    "LULUS": 39,
     "GAGAL": 0,
-    "PERINGATAN": 0,
+    "PERINGATAN": 1,
     "LEWAT": 7,
     "BELUM DIIMPLEMENTASI": 0
   },
@@ -100,6 +100,12 @@
     ],
     "efek": [
       {
+        "id": "E51",
+        "ref": "kinetik-kata@0.1",
+        "file": "efek/EFEK_51_kinetik-kata_v0.1.md",
+        "sha256": "89dca44ab0e2c06f"
+      },
+      {
         "id": "E46",
         "ref": "paper-cutout@0.1",
         "file": "efek/EFEK_46_paper-cutout_v0.1.md",
@@ -118,10 +124,28 @@
         "sha256": "6ef8855daa7139fc"
       },
       {
+        "id": "E52",
+        "ref": "lintasan@0.1",
+        "file": "efek/EFEK_52_lintasan_v0.1.md",
+        "sha256": "a5fcf85eef78fdb5"
+      },
+      {
+        "id": "E53",
+        "ref": "dua-linimasa@0.1",
+        "file": "efek/EFEK_53_dua-linimasa_v0.1.md",
+        "sha256": "4d7c9459d9f7a6f7"
+      },
+      {
         "id": "E12",
         "ref": "green-screen@0.2",
         "file": "efek/EFEK_12_green-screen_v0.2.md",
         "sha256": "ad9e9e4b8817d62a"
+      },
+      {
+        "id": "E54",
+        "ref": "bab-baru@0.1",
+        "file": "efek/EFEK_54_bab-baru_v0.1.md",
+        "sha256": "a0b1be4b3acfae8c"
       }
     ],
     "skill": {
@@ -145,9 +169,10 @@
       "aturan": "Kotak pembatas setiap elemen teks/grafis berada di dalam zona aman pada setiap frame saat ia tampil, termasuk saat animasi masuk/keluar selesai.",
       "cek": "otomatis",
       "sumber": "konteks/KONTEKS_00_zona-aman_v0.2.md",
-      "status": "LULUS",
+      "status": "PERINGATAN",
       "detail": [
-        "40 elemen di dalam zona aman [60, 250, 960, 1520]"
+        "problem/3-remotion: saat animasi keluar {'atas': 11} px",
+        "solution/3-remotion: saat animasi keluar {'atas': 10} px"
       ],
       "manual": false
     },
@@ -167,7 +192,7 @@
       "sumber": "konteks/KONTEKS_00_zona-aman_v0.2.md",
       "status": "LULUS",
       "detail": [
-        "9 elemen ≤ 10% wajah tertutup"
+        "14 elemen ≤ 10% wajah tertutup"
       ],
       "manual": false
     },
@@ -218,7 +243,7 @@
       "sumber": "konteks/KONTEKS_01_caption_v0.2.md",
       "status": "LULUS",
       "detail": [
-        "34 teks ≥ ambang kontras"
+        "35 teks ≥ ambang kontras"
       ],
       "manual": false
     },
@@ -436,7 +461,7 @@
       "sumber": "konteks/KONTEKS_06_audio_v0.1.md",
       "status": "LULUS",
       "detail": [
-        "13 sfx ≤ -24 dB",
+        "33 sfx ≤ -24 dB",
         "musik di-duck (sidechain)"
       ],
       "manual": false
@@ -490,7 +515,7 @@
       "sumber": "konteks/KONTEKS_08_sound-design_v0.1.md",
       "status": "LULUS",
       "detail": [
-        "13 bunyi"
+        "33 bunyi"
       ],
       "manual": false
     },
@@ -563,7 +588,7 @@
       "sumber": "konteks/KONTEKS_09_koreografi_v0.2.md",
       "status": "LULUS",
       "detail": [
-        "6 perangkat berbeda (min 4): chip-info, depth, green-screen, kartu, paper-cut, paper-cutout"
+        "9 perangkat berbeda (min 4): bab-baru, chip-info, depth, dua-linimasa, green-screen, kinetik-kata, lintasan, paper-cut, paper-cutout"
       ],
       "manual": false
     },
@@ -601,7 +626,7 @@
       "sumber": "konteks/KONTEKS_09_koreografi_v0.2.md",
       "status": "LULUS",
       "detail": [
-        "3 efek khas kertas-tipografi: paper-cutout, paper-cut, celup (min 2)"
+        "7 efek khas kertas-tipografi: kinetik-kata, paper-cutout, paper-cut, lintasan, dua-linimasa, bab-baru, celup (min 2)"
       ],
       "manual": false
     },
@@ -719,6 +744,15 @@
       "manual": false
     },
     {
+      "id": "E51.4",
+      "aturan": "Kata muncul sinkron dengan ucapan (tonton dengan suara); teks tidak menutupi wajah & tidak bertumpuk dengan teks lain.",
+      "cek": "manual",
+      "sumber": "efek/EFEK_51_kinetik-kata_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
       "id": "E46.1",
       "aturan": "Durasi elemen ber-`efek: paper-cutout` dalam rentang `durasi`.",
       "cek": "otomatis",
@@ -756,7 +790,7 @@
       "sumber": "efek/EFEK_13_paper-cut_v0.2.md",
       "status": "LULUS",
       "detail": [
-        "problem/1-remotion: 1080x1920@30.00"
+        "problem/2-remotion: 1080x1920@30.00"
       ],
       "manual": false
     },
@@ -779,6 +813,24 @@
       "manual": true
     },
     {
+      "id": "E52.4",
+      "aturan": "Metafora terbaca tanpa suara; label tujuan terbaca; terasa khas gaya.",
+      "cek": "manual",
+      "sumber": "efek/EFEK_52_lintasan_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "E53.4",
+      "aturan": "Kontras dua tempo terbaca dalam sekali lihat; label tidak terpotong tepi.",
+      "cek": "manual",
+      "sumber": "efek/EFEK_53_dua-linimasa_v0.1.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
       "id": "E12.2",
       "aturan": "Klip broll efek ini: rasio = proyek, resolusi ≥ `format.resolusi`, fps = `format.fps`.",
       "cek": "otomatis",
@@ -794,6 +846,15 @@
       "aturan": "Hasil sesuai elemen visual & tips: Pencahayaan latar hijau harus rata, jarak subjek 1.5 - 2 m dari layar untuk mengurangi green spill.",
       "cek": "manual",
       "sumber": "efek/EFEK_12_green-screen_v0.2.md",
+      "status": null,
+      "detail": [],
+      "manual": true
+    },
+    {
+      "id": "E54.4",
+      "aturan": "Balik halaman mulus (tanpa kedip), judul bab terbaca setelah kamera mendekat.",
+      "cek": "manual",
+      "sumber": "efek/EFEK_54_bab-baru_v0.1.md",
       "status": null,
       "detail": [],
       "manual": true

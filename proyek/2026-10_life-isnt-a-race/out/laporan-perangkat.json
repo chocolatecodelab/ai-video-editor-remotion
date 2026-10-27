@@ -24,7 +24,29 @@
       "teks": "Feel *left behind*?"
     },
     {
-      "id": "problem/0-kamera",
+      "id": "problem/0-remotion",
+      "beat": "problem",
+      "tipe": "remotion",
+      "perangkat": "kinetik-kata",
+      "efek": "kinetik-kata@0.1",
+      "fungsi": "konteks",
+      "mulai": 3.714,
+      "selesai": 6.014,
+      "durasi": 2.3,
+      "luas_layar": 0.099,
+      "tutup_wajah": 0.0,
+      "wajah_data": true,
+      "dekoratif": false,
+      "bbox": [
+        126.0,
+        250.0,
+        900.0,
+        514.0
+      ],
+      "teks": "everyone is moving forward"
+    },
+    {
+      "id": "problem/1-kamera",
       "beat": "problem",
       "tipe": "kamera",
       "perangkat": "paper-cutout",
@@ -46,7 +68,7 @@
       "teks": ""
     },
     {
-      "id": "problem/1-remotion",
+      "id": "problem/2-remotion",
       "beat": "problem",
       "tipe": "cutaway",
       "perangkat": "paper-cut",
@@ -66,6 +88,28 @@
         1920
       ],
       "teks": "Better jobs. Big dreams. everyone else, it seems"
+    },
+    {
+      "id": "problem/3-remotion",
+      "beat": "problem",
+      "tipe": "remotion",
+      "perangkat": "kinetik-kata",
+      "efek": "kinetik-kata@0.1",
+      "fungsi": "masalah",
+      "mulai": 16.413,
+      "selesai": 22.613,
+      "durasi": 6.2,
+      "luas_layar": 0.109,
+      "tutup_wajah": 0.0,
+      "wajah_data": true,
+      "dekoratif": false,
+      "bbox": [
+        101.0,
+        239.0,
+        922.0,
+        514.0
+      ],
+      "teks": "still trying to find your way. honestly, it hurts."
     },
     {
       "id": "agitasi/0-transisi",
@@ -92,8 +136,8 @@
       "efek": "judul-gaya@0.1",
       "fungsi": "masalah",
       "mulai": 24.649,
-      "selesai": 30.149,
-      "durasi": 5.5,
+      "selesai": 26.949,
+      "durasi": 2.3,
       "luas_layar": 0.039,
       "tutup_wajah": 0.0,
       "wajah_data": true,
@@ -107,26 +151,48 @@
       "teks": "Life isn't\na race"
     },
     {
-      "id": "solution/0-kartu",
-      "beat": "solution",
-      "tipe": "kartu",
-      "perangkat": "kartu",
-      "efek": null,
-      "fungsi": "ringkasan",
-      "mulai": 32.083,
-      "selesai": 35.983,
-      "durasi": 3.9,
-      "luas_layar": 0.13,
-      "tutup_wajah": 0.0,
+      "id": "agitasi/2-remotion",
+      "beat": "agitasi",
+      "tipe": "cutaway",
+      "perangkat": "lintasan",
+      "efek": "lintasan@0.1",
+      "fungsi": "konteks",
+      "mulai": 26.921,
+      "selesai": 31.021,
+      "durasi": 4.1,
+      "luas_layar": 1.0,
+      "tutup_wajah": null,
       "wajah_data": true,
-      "dekoratif": false,
+      "dekoratif": true,
       "bbox": [
-        60.0,
-        250.0,
-        960.0,
-        550.5
+        0,
+        0,
+        1080,
+        1920
       ],
-      "teks": "not someone else's"
+      "teks": "life isn't a race Not the same destination career family you"
+    },
+    {
+      "id": "solution/0-remotion",
+      "beat": "solution",
+      "tipe": "cutaway",
+      "perangkat": "dua-linimasa",
+      "efek": "dua-linimasa@0.1",
+      "fungsi": "ringkasan",
+      "mulai": 31.883,
+      "selesai": 36.783,
+      "durasi": 4.9,
+      "luas_layar": 1.0,
+      "tutup_wajah": null,
+      "wajah_data": true,
+      "dekoratif": true,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "teks": "Your own timeline not someone else's degree job house learn "
     },
     {
       "id": "solution/2-depth",
@@ -135,9 +201,9 @@
       "perangkat": "depth",
       "efek": null,
       "fungsi": "reveal",
-      "mulai": 38.805,
-      "selesai": 41.405,
-      "durasi": 2.6,
+      "mulai": 38.405,
+      "selesai": 40.705,
+      "durasi": 2.3,
       "luas_layar": 0.103,
       "tutup_wajah": null,
       "wajah_data": true,
@@ -149,6 +215,28 @@
         723.3
       ],
       "teks": "YOUR TIME"
+    },
+    {
+      "id": "solution/3-remotion",
+      "beat": "solution",
+      "tipe": "remotion",
+      "perangkat": "kinetik-kata",
+      "efek": "kinetik-kata@0.1",
+      "fungsi": "hasil",
+      "mulai": 40.706,
+      "selesai": 44.906,
+      "durasi": 4.2,
+      "luas_layar": 0.057,
+      "tutup_wajah": 0.0,
+      "wajah_data": true,
+      "dekoratif": false,
+      "bbox": [
+        171.0,
+        240.0,
+        853.0,
+        412.0
+      ],
+      "teks": "Keep learning. Keep growing."
     },
     {
       "id": "solution/1-kamera",
@@ -188,6 +276,28 @@
       "dekoratif": true,
       "bbox": null,
       "teks": ""
+    },
+    {
+      "id": "cta/1-remotion",
+      "beat": "cta",
+      "tipe": "cutaway",
+      "perangkat": "bab-baru",
+      "efek": "bab-baru@0.1",
+      "fungsi": "reveal",
+      "mulai": 49.728,
+      "selesai": 55.828,
+      "durasi": 6.1,
+      "luas_layar": 1.0,
+      "tutup_wajah": null,
+      "wajah_data": true,
+      "dekoratif": true,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "teks": "Chapter II A different chapter of your life"
     }
   ]
 }

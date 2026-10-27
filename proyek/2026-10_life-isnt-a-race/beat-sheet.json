@@ -37,6 +37,20 @@
       },
       "elemen": [
         {
+          "tipe": "remotion",
+          "efek": "kinetik-kata",
+          "frasa": [
+            "everyone is moving *forward*"
+          ],
+          "mulai": {
+            "kata": "everyone",
+            "ke": 1,
+            "offset": -0.1
+          },
+          "durasi": 2.3,
+          "fungsi": "konteks"
+        },
+        {
           "tipe": "kamera",
           "efek": "paper-cutout",
           "mulai": {
@@ -57,6 +71,21 @@
           },
           "fungsi": "konteks",
           "durasi": 5.0
+        },
+        {
+          "tipe": "remotion",
+          "efek": "kinetik-kata",
+          "frasa": [
+            "still trying to find *your way.*",
+            "honestly, *it hurts.*"
+          ],
+          "mulai": {
+            "kata": "still",
+            "ke": 1,
+            "offset": -0.15
+          },
+          "durasi": 6.2,
+          "fungsi": "masalah"
         }
       ],
       "_ucapan": "feel like everyone is moving forward except you. Your friends are getting better jobs, achieving their dreams, and figuring out their lives while you're still trying to find your way. And honestly, it hurts.",
@@ -93,8 +122,27 @@
             "kata": "life",
             "ke": 1
           },
-          "durasi": 5.5,
+          "durasi": 2.3,
           "fungsi": "masalah"
+        },
+        {
+          "tipe": "remotion",
+          "efek": "lintasan",
+          "judul": "Not the same *destination*",
+          "sub": "life isn't a race",
+          "tujuan": [
+            "career",
+            "family",
+            "*your path*",
+            "travel"
+          ],
+          "mulai": {
+            "kata": "not",
+            "ke": 1,
+            "offset": 0.15
+          },
+          "durasi": 4.1,
+          "fungsi": "konteks"
         }
       ],
       "_ucapan": "But remember, life isn't a race, and we're not all running toward the same destination.",
@@ -113,16 +161,30 @@
       },
       "elemen": [
         {
-          "tipe": "kartu",
+          "tipe": "remotion",
+          "efek": "dua-linimasa",
           "judul": "Your *own* timeline",
-          "teks": "not someone else's",
-          "fungsi": "ringkasan",
-          "posisi": "atas",
+          "sub": "not someone else's",
+          "label_a": "theirs",
+          "label_b": "yours",
+          "titik_a": [
+            "degree",
+            "job",
+            "house"
+          ],
+          "titik_b": [
+            "learn",
+            "fail",
+            "grow",
+            "bloom"
+          ],
           "mulai": {
             "kata": "follow",
-            "ke": 1
+            "ke": 1,
+            "offset": -0.2
           },
-          "durasi": 3.9
+          "durasi": 4.9,
+          "fungsi": "ringkasan"
         },
         {
           "tipe": "kamera",
@@ -141,9 +203,25 @@
           "y": 0.36,
           "mulai": {
             "kata": "take",
-            "ke": 1
+            "ke": 1,
+            "offset": -0.4
           },
-          "durasi": 2.6
+          "durasi": 2.3
+        },
+        {
+          "tipe": "remotion",
+          "efek": "kinetik-kata",
+          "frasa": [
+            "Keep *learning.*",
+            "Keep *growing.*"
+          ],
+          "mulai": {
+            "kata": "keep",
+            "ke": 1,
+            "offset": -0.1
+          },
+          "durasi": 4.2,
+          "fungsi": "hasil"
         }
       ],
       "_ucapan": "You don't have to follow someone else's timeline to prove that you're doing enough. Take your time. Keep learning. Keep growing. You're not falling behind. You're just",
@@ -171,6 +249,19 @@
           "mulai": {
             "beat": "cta"
           }
+        },
+        {
+          "tipe": "remotion",
+          "efek": "bab-baru",
+          "judul": "A *different* chapter",
+          "sub": "of your life",
+          "kepala": "Chapter",
+          "nomor": "II",
+          "mulai": {
+            "beat": "cta"
+          },
+          "durasi": 6.1,
+          "fungsi": "reveal"
         }
       ],
       "_ucapan": "living a different chapter of your life.",

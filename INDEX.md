@@ -123,6 +123,10 @@ Panduan umum & perbandingan dengan aturan sistem: [efek/README.md](efek/README.m
 | E48 | validasi-badge | efek/EFEK_48_validasi-badge_v0.1.md | 0.1 | draft | 1.5–4 s | native (Remotion) |
 | E49 | chat-window | efek/EFEK_49_chat-window_v0.1.md | 0.1 | draft | 2.5–6 s | native (Remotion) |
 | E50 | split-explainer | efek/EFEK_50_split-explainer_v0.1.md | 0.1 | draft | 3–8 s | native (Remotion) |
+| E51 | kinetik-kata | efek/EFEK_51_kinetik-kata_v0.1.md | 0.1 | draft | ikut ucapan | native (Remotion) |
+| E52 | lintasan | efek/EFEK_52_lintasan_v0.1.md | 0.1 | draft | 3.2–6 s | native (Remotion) |
+| E53 | dua-linimasa | efek/EFEK_53_dua-linimasa_v0.1.md | 0.1 | draft | 3.4–6 s | native (Remotion) |
+| E54 | bab-baru | efek/EFEK_54_bab-baru_v0.1.md | 0.1 | draft | 3.6–7 s | native (Remotion) |
 
 ## Koreografi (urutan perangkat motion per fungsi isi — dipakai preset; aturan ritme K09)
 Preset = gaya × koreografi. Koreografi menentukan perangkat tiap bagian (+ `fungsi`), template, kebutuhan footage, musik.
@@ -207,7 +211,7 @@ Semua efek E01–E30 native. Generator slot memilih efek per fungsi sesuai gaya 
 | 2026-10_demo-fase3 | hook-problem-solution@0.2 | kaca-gelap@0.3 | brief |
 | 2026-10_otca-sertifikat-jerman | explainer@0.2 | glass-tech@0.5 | brief |
 | 2026-10_we-fail-today | explainer@0.2 | glass-tech@0.6 | brief |
-| 2026-10_life-isnt-a-race | hook-problem-solution@0.2 | kertas-tipografi@0.5 | selesai v1 |
+| 2026-10_life-isnt-a-race | hook-problem-solution@0.2 | kertas-tipografi@0.5 | selesai v2 |
 
 ## Aturan
 1. Pola nama: `JENIS_NN_nama-pendek_vX.Y.ext`. Satu nama pendek = satu file aktif.

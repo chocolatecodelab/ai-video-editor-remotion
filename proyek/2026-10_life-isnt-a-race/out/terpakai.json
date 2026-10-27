@@ -89,6 +89,12 @@
   ],
   "efek": [
     {
+      "id": "E51",
+      "ref": "kinetik-kata@0.1",
+      "file": "efek/EFEK_51_kinetik-kata_v0.1.md",
+      "sha256": "89dca44ab0e2c06f"
+    },
+    {
       "id": "E46",
       "ref": "paper-cutout@0.1",
       "file": "efek/EFEK_46_paper-cutout_v0.1.md",
@@ -107,10 +113,28 @@
       "sha256": "6ef8855daa7139fc"
     },
     {
+      "id": "E52",
+      "ref": "lintasan@0.1",
+      "file": "efek/EFEK_52_lintasan_v0.1.md",
+      "sha256": "a5fcf85eef78fdb5"
+    },
+    {
+      "id": "E53",
+      "ref": "dua-linimasa@0.1",
+      "file": "efek/EFEK_53_dua-linimasa_v0.1.md",
+      "sha256": "4d7c9459d9f7a6f7"
+    },
+    {
       "id": "E12",
       "ref": "green-screen@0.2",
       "file": "efek/EFEK_12_green-screen_v0.2.md",
       "sha256": "ad9e9e4b8817d62a"
+    },
+    {
+      "id": "E54",
+      "ref": "bab-baru@0.1",
+      "file": "efek/EFEK_54_bab-baru_v0.1.md",
+      "sha256": "a0b1be4b3acfae8c"
     }
   ],
   "skill": {
@@ -129,16 +153,16 @@
   },
   "qa": "LULUS",
   "qa_ringkas": {
-    "LULUS": 40,
+    "LULUS": 39,
     "GAGAL": 0,
-    "PERINGATAN": 0,
+    "PERINGATAN": 1,
     "LEWAT": 7,
     "BELUM DIIMPLEMENTASI": 0
   },
   "hasil": {
-    "2026-10_life-isnt-a-race_reels.mp4": "cf7f5873adc5ff13",
-    "2026-10_life-isnt-a-race_shorts.mp4": "388d3af38e875823",
-    "2026-10_life-isnt-a-race_tiktok.mp4": "eea3ba95a8344e19",
-    "master.mov": "c294e4c1b5bc88d8"
+    "2026-10_life-isnt-a-race_reels.mp4": "8ef8355f7f0c028c",
+    "2026-10_life-isnt-a-race_shorts.mp4": "0c79ff4ea078da93",
+    "2026-10_life-isnt-a-race_tiktok.mp4": "c88674b7ffcf6fe3",
+    "master.mov": "f11c7c65b16fc08b"
   }
 }
