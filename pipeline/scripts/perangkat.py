@@ -31,6 +31,8 @@ class Spek:
     panel: bool = True        # teks di atas panel sendiri; False = langsung di atas video (kontras diukur vs video)
     lensa: bool = False       # E37: video di balik alpha dibiaskan seperti kaca cair (render_pip._lensa)
     scrim: float | None = None  # teks di atas scrim hitam ber-opasitas ini (kontras diukur vs video × scrim)
+    ganti_caption: bool = False  # teks ucapan sendiri (kinetik-kata): caption di rentang elemen disembunyikan
+    blur_gerak: bool = False     # komposisi memberi motion blur sendiri pada gerak cepat (lib/kabur.tsx, K05.4)
 
 
 def _cukup(e, butuh: float, dur: float, saran: str) -> None:
@@ -504,11 +506,13 @@ PERANGKAT: dict[str, Spek] = {
     "GrowthCurve": Spek(_growth_curve, lambda e: _gabung(e.get("judul"), str(e.get("ke")), e.get("catatan")),
                         {"ukuran": ["isi"], "warna": ["teks-utama", "teks-sekunder", "aksen"]}),
     "KinetikKata": Spek(_kinetik, lambda e: _gabung(*(e.get("frasa") or [e.get("teks")])), {"ukuran": ["judul"], "warna": ["teks-utama", "aksen"]},
-                        posisi="atas", jendela=False, panel=False),
-    "Lintasan": Spek(_lintasan, lambda e: _gabung(e.get("sub"), e.get("judul"), *e.get("tujuan", [])), cutaway=True),
+                        posisi="atas", jendela=False, panel=False, ganti_caption=True, blur_gerak=True),
+    "Lintasan": Spek(_lintasan, lambda e: _gabung(e.get("sub"), e.get("judul"), *e.get("tujuan", [])), cutaway=True,
+                     blur_gerak=True),
     "DuaLinimasa": Spek(_dua_linimasa, lambda e: _gabung(e.get("judul"), e.get("sub"), *e.get("titik_a", []), *e.get("titik_b", [])),
                         cutaway=True),
-    "BabBaru": Spek(_bab_baru, lambda e: _gabung(e.get("kepala"), e.get("nomor"), e.get("judul"), e.get("sub")), cutaway=True),
+    "BabBaru": Spek(_bab_baru, lambda e: _gabung(e.get("kepala"), e.get("nomor"), e.get("judul"), e.get("sub")), cutaway=True,
+                    blur_gerak=True),
     "HeadlineWall": Spek(_headline, lambda e: _gabung(*e.get("judul_judul", [])), cutaway=True),
     "Orbit": Spek(_orbit, lambda e: _gabung(e.get("pusat"), e.get("sub"), *e.get("satelit", [])), cutaway=True),
     "CouchWall": Spek(_couch, lambda e: _gabung(*[f"{k.get('judul')} {k.get('sub', '')}" for k in e.get("konten", [])]), cutaway=True),

@@ -1,9 +1,10 @@
 import React from "react";
 import { AbsoluteFill, interpolate, spring } from "remotion";
-import { PropsDasar, rgba, skalaPersepsi } from "../lib/kontrak";
+import { PropsDasar, Tokens, kurva, rgba, skalaPersepsi } from "../lib/kontrak";
 import { ElemenUI, pakaiDasar } from "../lib/dasar";
 import { LatarGaya } from "../lib/latar";
-import { HiasKata, LapisTekstur, progresHias } from "../lib/motif";
+import { DefKabur, useKaburGerak } from "../lib/kabur";
+import { HiasKata, LapisTekstur, Motif, progresHias } from "../lib/motif";
 import { Teks } from "../lib/Teks";
 
 // Grafis untuk video reflektif/motivasi (permintaan pengguna 2026-10-27, proyek "Life Isn't a Race"):
@@ -41,6 +42,31 @@ export type KinetikKataElemen = ElemenUI & {
   skala_teks?: number;
   jadwal: { kata: number[][]; frasa: [number, number][] };
 };
+const PEGAS_KATA = { damping: 200, stiffness: 170, mass: 0.7 };
+/** Satu kata: naik dari balik masker saat diucapkan, dengan motion blur vertikal selama bergerak cepat. */
+const KataMasuk: React.FC<{ k: KataKinetik; tk: number; f: number; fps: number; dtk: number; tinggi: number; motif: Motif;
+                            aksen: string; seed: string; px: (v: number) => number }> = ({ k, tk, f, fps, dtk, tinggi, motif, aksen, seed, px }) => {
+  const mulai = Math.round(tk * fps);
+  const sp = spring({ frame: f - mulai, fps, config: PEGAS_KATA });
+  const spLalu = spring({ frame: f - 1 - mulai, fps, config: PEGAS_KATA });
+  const kabur = useKaburGerak(0, (sp - spLalu) * 1.05 * tinggi);
+  const isi = k.aksen ? (
+    <HiasKata jenis={motif.aksen} p={progresHias(dtk, tk + 0.25)} warnaTeks={aksen} seed={seed}>
+      <span style={{ fontStyle: "italic" }}>{k.w}</span>
+    </HiasKata>
+  ) : k.w;
+  return (
+    <span style={{ display: "inline-block", overflow: "hidden", verticalAlign: "top",
+                   padding: `${px(4)}px ${px(6)}px ${px(14)}px`, margin: "0 0.07em" }}>
+      <DefKabur def={kabur.def} />
+      <span style={{ display: "inline-block", opacity: dtk < tk ? 0 : 1, filter: kabur.url,
+                     translate: `0 ${(1 - sp) * 105}%`, rotate: `${(1 - sp) * 7}deg`, transformOrigin: "0 100%" }}>
+        {isi}
+      </span>
+    </span>
+  );
+};
+
 export const KinetikKata: React.FC<PropsDasar<KinetikKataElemen>> = (props) => {
   const { dtk, fps, f, px, el, w, u, font, motif, Wadah, wadah } = pakaiDasar(props, "atas", { masukSendiri: true });
   const j = el.jadwal;
@@ -62,24 +88,10 @@ export const KinetikKata: React.FC<PropsDasar<KinetikKataElemen>> = (props) => {
               <div style={{ width: px(120), height: px(5), margin: `0 auto ${px(18)}px`, background: w.aksen, scale: `${garis} 1` }} />
               <div style={{ ...font("judul"), fontSize: ukuran, lineHeight: 1.14, color: w.utama,
                             textShadow: `0 0 ${px(14)}px ${rgba(w.latar, 0.85)}, 0 ${px(1)}px ${px(3)}px ${rgba(w.latar, 0.9)}` }}>
-                {kata.map((k, ki) => {
-                  const tk = j.kata[fi][ki];
-                  const sp = spring({ frame: f - Math.round(tk * fps), fps, config: { damping: 200, stiffness: 170, mass: 0.7 } });
-                  const isi = k.aksen ? (
-                    <HiasKata jenis={motif.aksen} p={progresHias(dtk, tk + 0.25)} warnaTeks={w.aksen} seed={`${fi}${ki}`}>
-                      <span style={{ fontStyle: "italic" }}>{k.w}</span>
-                    </HiasKata>
-                  ) : k.w;
-                  return (
-                    <span key={ki} style={{ display: "inline-block", overflow: "hidden", verticalAlign: "top",
-                                            padding: `${px(4)}px ${px(6)}px ${px(14)}px`, margin: "0 0.07em" }}>
-                      <span style={{ display: "inline-block", opacity: dtk < tk ? 0 : 1,
-                                     translate: `0 ${(1 - sp) * 105}%`, rotate: `${(1 - sp) * 7}deg`, transformOrigin: "0 100%" }}>
-                        {isi}
-                      </span>
-                    </span>
-                  );
-                })}
+                {kata.map((k, ki) => (
+                  <KataMasuk key={ki} k={k} tk={j.kata[fi][ki]} f={f} fps={fps} dtk={dtk} tinggi={ukuran * 1.14 + px(18)}
+                             motif={motif} aksen={w.aksen} seed={`${fi}${ki}`} px={px} />
+                ))}
               </div>
             </div>
           );
@@ -99,6 +111,26 @@ export type LintasanElemen = ElemenUI & {
   start?: string;
   jadwal: { judul: number; garis: number[]; pelari: number; tujuan: number[] };
 };
+/** Pelari di jalur: posisi dari kurva Bézier, motion blur searah gerak (sumbu x/y). */
+const Pelari: React.FC<{ p: [number, number][]; dtk: number; fps: number; mulai: number; kecepatan: number; kamu: boolean;
+                         warna: string; latar: string; px: (v: number) => number }> = ({ p, dtk, fps, mulai, kecepatan, kamu, warna, latar, px }) => {
+  const posisi = (x: number) => {
+    const pp = Math.max(0, Math.min(1, (x - mulai) / (2.6 / kecepatan)));
+    return bez(p, 1 - (1 - pp) ** 2);
+  };
+  const [rx, ry] = posisi(dtk);
+  const [lx, ly] = posisi(dtk - 1 / fps);
+  const kabur = useKaburGerak(rx - lx, ry - ly);
+  return (
+    <g filter={kabur.url}>
+      {kabur.def}
+      <circle cx={rx} cy={ry + px(6)} r={px(16)} fill="#000" opacity={0.12} />
+      <circle cx={rx} cy={ry} r={px(kamu ? 17 : 13)} fill={warna} />
+      <circle cx={rx} cy={ry} r={px(kamu ? 7 : 5)} fill={latar} />
+    </g>
+  );
+};
+
 export const Lintasan: React.FC<PropsDasar<LintasanElemen>> = (props) => {
   const { dtk, px, t, el, w, u, font, naik, SediaMotif, wadah } = pakaiDasar(props);
   const { W, H, zona } = props;
@@ -130,9 +162,6 @@ export const Lintasan: React.FC<PropsDasar<LintasanElemen>> = (props) => {
               const pg = naik(j.garis[i], 1.1);
               const kamu = el.tujuan[i].includes("*");
               const d = `M${p[0][0]},${p[0][1]} C${p[1][0]},${p[1][1]} ${p[2][0]},${p[2][1]} ${p[3][0]},${p[3][1]}`;
-              const pp = Math.max(0, Math.min(1, (dtk - j.pelari) / (2.6 / kecepatan[i % 4])));
-              const lari = 1 - (1 - pp) ** 2;
-              const [rx, ry] = bez(p, lari);
               return (
                 <g key={i}>
                   <path d={d} fill="none" stroke={kamu ? rgba(w.aksen, 0.18) : rgba(w.utama, 0.08)} strokeWidth={px(46)}
@@ -140,11 +169,8 @@ export const Lintasan: React.FC<PropsDasar<LintasanElemen>> = (props) => {
                   <path d={d} fill="none" stroke={kamu ? w.aksen : rgba(w.utama, 0.55)} strokeWidth={px(kamu ? 7 : 4)}
                         strokeLinecap="round" strokeDasharray={L} strokeDashoffset={L * (1 - pg)} />
                   {dtk >= j.pelari && (
-                    <g>
-                      <circle cx={rx} cy={ry + px(6)} r={px(16)} fill="#000" opacity={0.12} />
-                      <circle cx={rx} cy={ry} r={px(kamu ? 17 : 13)} fill={kamu ? w.aksen : w.utama} />
-                      <circle cx={rx} cy={ry} r={px(kamu ? 7 : 5)} fill={w.latar} />
-                    </g>
+                    <Pelari p={p} dtk={dtk} fps={props.fps} mulai={j.pelari} kecepatan={kecepatan[i % 4]} kamu={kamu}
+                            warna={kamu ? w.aksen : w.utama} latar={w.latar} px={px} />
                   )}
                 </g>
               );
@@ -303,6 +329,37 @@ export type BabBaruElemen = ElemenUI & {
   nomor?: string;
   jadwal: { balik: number[]; judul: number; dorong: number };
 };
+/** Halaman yang berbalik (rotateY 0 → −180°) dengan blur searah balikan sebesar kecepatan tepi halaman. */
+const HalamanBalik: React.FC<{ tb: number; i: number; n: number; dtk: number; fps: number; t: Tokens; hal: number;
+                               isi: (seed: number) => React.ReactNode; kertas: string; px: (v: number) => number }> =
+  ({ tb, i, n, dtk, fps, t, hal, isi, kertas, px }) => {
+    const putar = (x: number) => interpolate(x, [tb, tb + 0.55], [0, 1], { easing: kurva(t, "standar"), ...jepit });
+    const p = putar(dtk);
+    const sudut = -180 * p;
+    const rad = (sudut * Math.PI) / 180;
+    // tepi bebas bergerak di bidang halaman sejauh hal·|sin|·Δsudut per frame → blur arah x lokal
+    const kabur = useKaburGerak(hal * Math.abs(Math.sin(rad)) * Math.PI * (p - putar(dtk - 1 / fps)), 0);
+    if (p >= 1) return null;
+    const terang = Math.abs(Math.cos(rad));
+    const muka = (belakang: boolean) => (
+      <div style={{ position: "absolute", inset: 0, background: kertas, backfaceVisibility: "hidden", overflow: "hidden",
+                    transform: belakang ? "rotateY(180deg)" : undefined,
+                    borderRadius: belakang ? `${px(10)}px 0 0 ${px(10)}px` : `0 ${px(10)}px ${px(10)}px 0`,
+                    filter: [`brightness(${belakang ? 0.8 + 0.2 * terang : 0.82 + 0.18 * terang})`, kabur.url].filter(Boolean).join(" ") }}>
+        <LapisTekstur jenis="kertas" panelHex={kertas} />
+        {isi(i * 3 + (belakang ? 2 : 1))}
+      </div>
+    );
+    return (
+      <div style={{ position: "absolute", inset: 0, transformOrigin: "0 50%", transformStyle: "preserve-3d",
+                    transform: `rotateY(${sudut}deg)`, zIndex: n - i }}>
+        <DefKabur def={kabur.def} />
+        {muka(false)}
+        {muka(true)}
+      </div>
+    );
+  };
+
 export const BabBaru: React.FC<PropsDasar<BabBaruElemen>> = (props) => {
   const { dtk, px, t, el, w, u, font, naik, SediaMotif, wadah } = pakaiDasar(props);
   const { W, H } = props;
@@ -364,27 +421,10 @@ export const BabBaru: React.FC<PropsDasar<BabBaruElemen>> = (props) => {
           <div style={{ position: "absolute", left: hal - px(3), top: 0, width: px(6), height: bh, background: rgba("#000000", 0.18) }} />
           {/* halaman yang berbalik: dari kanan ke kiri, bersumbu di punggung buku */}
           <div style={{ position: "absolute", left: hal, top: 0, width: hal, height: bh, transformStyle: "preserve-3d" }}>
-            {j.balik.map((tb, i) => {
-              const p = naik(tb, 0.55, "standar");
-              if (p >= 1) return null;
-              const sudut = -180 * p;
-              const terang = Math.abs(Math.cos((sudut * Math.PI) / 180));
-              return (
-                <div key={i} style={{ position: "absolute", inset: 0, transformOrigin: "0 50%", transformStyle: "preserve-3d",
-                                      transform: `rotateY(${sudut}deg)`, zIndex: j.balik.length - i }}>
-                  <div style={{ position: "absolute", inset: 0, background: kertas, backfaceVisibility: "hidden", overflow: "hidden",
-                                borderRadius: `0 ${px(10)}px ${px(10)}px 0`, filter: `brightness(${0.82 + 0.18 * terang})` }}>
-                    <LapisTekstur jenis="kertas" panelHex={kertas} />
-                    {garisTeks(i * 3 + 1, 8, 1)}
-                  </div>
-                  <div style={{ position: "absolute", inset: 0, background: kertas, backfaceVisibility: "hidden", transform: "rotateY(180deg)",
-                                borderRadius: `${px(10)}px 0 0 ${px(10)}px`, filter: `brightness(${0.8 + 0.2 * terang})`, overflow: "hidden" }}>
-                    <LapisTekstur jenis="kertas" panelHex={kertas} />
-                    {garisTeks(i * 3 + 2, 8, 1)}
-                  </div>
-                </div>
-              );
-            })}
+            {j.balik.map((tb, i) => (
+              <HalamanBalik key={i} tb={tb} i={i} n={j.balik.length} dtk={dtk} fps={props.fps} t={t} hal={hal} kertas={kertas}
+                            isi={(seed) => garisTeks(seed, 8, 1)} px={px} />
+            ))}
           </div>
         </div>
       </AbsoluteFill>

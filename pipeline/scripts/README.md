@@ -24,7 +24,7 @@ Satu pintu: `python pipeline/scripts/video.py <perintah> <proyek>` — `<proyek>
 | `storyboard <p> [--buka]` | beat-sheet + cache | out/storyboard.html — lembar kontak per bagian (frame, ucapan + kata pemicu, elemen dalam bahasa pengguna, pra-QA per elemen), catatan revisi → permintaan revisi siap salin, tombol setujui, linimasa lengkap; storyboard.json | semua kecuali K02.1, K06.1–2, K07.1–2 |
 | `setuju <p>` | storyboard.json | manifest.persetujuan (sha beat-sheet) | — |
 | `render <p> [--pekerja N]` | beat-sheet + token + cache | out/master.mov, out/layout.json — komposit paralel per rentang frame (default ½ inti maks 4, env `VIDEO_PEKERJA`; `--pekerja 1` = berurutan, hasil identik) | K00–K06 |
-| `ekspor <p>` | out/master.mov | out/<proyek>_<platform>.mp4 | K07 |
+| `ekspor <p>` | out/master.mov | out/<proyek>.mp4 (satu platform) atau out/<proyek>_<platform>.mp4 | K07 |
 | `qa <p>` | out/* + modul | out/qa-report.md, out/qa.json (exit 1 = GAGAL) + laporan & kontak-sheet | semua |
 | `laporan <p>` | out/layout.json + master + wajah.json | out/laporan-perangkat.md·json (per elemen: efek, fungsi, waktu, luas layar, % wajah tertutup), out/kontak.png (3 frame/beat + kotak elemen & wajah) | K00.3 |
 | `semua <p>` | | ingest → transkrip → roto → wajah → render → ekspor → qa + laporan. **Ditolak** bila beat-sheet saat ini belum disetujui (`setuju`); `--tanpa-setuju` hanya atas keputusan pengguna (dicatat di manifest) | |
@@ -61,7 +61,7 @@ Font dicari di `pipeline/fonts/`, lalu folder font sistem.
 | gaya, template | `nama@versi` (tanpa versi = terbaru) |
 | preset | `nama@versi` preset asal (catatan saja; null bila dibuat tanpa preset) |
 | konteks | daftar `nama@versi`; kosong = ikut frontmatter gaya |
-| platform | kunci dari `ekspor.platform` token: reels, tiktok, shorts |
+| platform | kunci dari `ekspor.platform` token: reels, tiktok, shorts. Bawaan `["reels"]` → satu file `<proyek>.mp4` untuk semua platform vertikal; isi beberapa kunci bila memang butuh file per platform |
 | aset.rekaman | path video talking-head (kosong = video grafis saja, latar warna) |
 | aset.potong | rough cut: `[[mulai, selesai], …]` bagian sumber yang DISIMPAN |
 | aset.crop | `{"x": 0.5}` posisi crop horizontal 0–1 (sumber landscape) / `{"y": …}` |
@@ -151,6 +151,14 @@ Bunyi: klik-ketik, tick, pop, ketuk, whoosh-pendek, whoosh-panjang, swoosh-balik
 
 ## Caption
 `caption.mode` di token gaya: `aktif` (kata yang diucapkan berwarna aksen) atau `karaoke` (kata berikutnya diredupkan `caption.redup`).
+Selama teks kinetik (E51) tampil, caption disembunyikan otomatis: kata yang dibawakan teks kinetik dibuang dari caption, dan
+sisanya hanya tampil bila masih terbaca (K01.5).
+
+## Zoom potong (E55)
+Otomatis pada video berekaman: bingkai lebar ↔ rapat bergantian per kalimat, dipotong di awal kata pertama, berpusat di
+wajah (lihat `efek/EFEK_55_zoom-potong_v0.1.md`). Beat-sheet `"zoom_potong": {"aktif": false}` mematikannya; field lain
+(`skala`, `kalimat-min`, `jeda`) menimpa `param` modul dan token `kamera.zoom-potong`. Tercatat di layout `push` dengan
+`potong: true`; K00.3 dan kontak-sheet mengukur wajah dalam ukuran yang tampil saat bingkai rapat.
 
 ## Struktur proyek
 ```

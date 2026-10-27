@@ -96,11 +96,22 @@ def wajah(p: Proyek, paksa: bool = False, fps: float = 5.0) -> dict:
     return data
 
 
-def kotak_di(data: dict | None, t0: float, t1: float) -> list[list[float]]:
-    """Semua kotak wajah (0–1) yang terdeteksi di rentang [t0, t1]."""
+def kotak_di(data: dict | None, t0: float, t1: float, push: list[dict] | None = None) -> list[list[float]]:
+    """Semua kotak wajah (0–1) yang terdeteksi di rentang [t0, t1]. `push` (layout.json): kotak diperbesar seperti
+    yang tampil saat push / zoom potong aktif (skala penuh, berpusat di fokus) — K00.3 mengukur wajah yang terlihat."""
     if not data:
         return []
-    return [x["kotak"] for x in data.get("bingkai", []) if x["kotak"] and t0 - 0.1 <= x["t"] <= t1 + 0.1]
+    hasil = []
+    for x in data.get("bingkai", []):
+        if not x["kotak"] or not t0 - 0.1 <= x["t"] <= t1 + 0.1:
+            continue
+        k = x["kotak"]
+        for u in push or []:
+            if u["mulai"] <= x["t"] < u["selesai"]:
+                s, (fx, fy) = u["skala"], u["fokus"]
+                k = [fx + (k[0] - fx) * s, fy + (k[1] - fy) * s, fx + (k[2] - fx) * s, fy + (k[3] - fy) * s]
+        hasil.append(k)
+    return hasil
 
 
 def main() -> int:

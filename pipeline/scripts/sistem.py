@@ -245,10 +245,13 @@ class Proyek:
         if not self.beat_sheet_path.exists():
             return []
         refs = []
-        for b in baca_json(self.beat_sheet_path).get("beats", []):
+        bs = baca_json(self.beat_sheet_path)
+        for b in bs.get("beats", []):
             for e in b.get("elemen", []):
                 if e.get("efek") and e["efek"] not in refs:
                     refs.append(e["efek"])
+        if (bs.get("zoom_potong") or {}).get("aktif", True) and self.ingest_video.exists():
+            refs.append("zoom-potong")  # E55 otomatis pada rekaman (render._zoom_potong)
         return [resolve("efek", r) for r in refs]
 
     def modul_terpakai(self) -> dict:

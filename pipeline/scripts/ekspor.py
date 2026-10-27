@@ -15,6 +15,9 @@ from sistem import SETPARAMS_BT709, GagalPipeline, Proyek, jalankan, log, main_a
 
 
 def path_platform(p: Proyek, nama: str):
+    # satu platform (bawaan proyek baru) → satu file <proyek>.mp4 untuk semua platform vertikal
+    if len(p.manifest.get("platform") or []) == 1:
+        return p.out / f"{p.manifest['proyek']}.mp4"
     return p.out / f"{p.manifest['proyek']}_{nama}.mp4"
 
 

@@ -37,12 +37,14 @@ from render_dasar import (Animator, Easing, Lapisan, Overlay, Pembaca, Transform
                           ke_premult, ke_uint8, tempel, warp_penuh)
 from render_depth import DepthMixin
 from render_elemen import ElemenMixin
-from render_kamera import JENIS_TRANSISI, KAMERA, KAMERA_MASK, KameraMixin  # noqa: F401
+from render_kamera import JENIS_TRANSISI, KAMERA, KAMERA_MASK, KameraMixin, param_efek  # noqa: F401
 from render_pip import PipMixin
 from render_panel import IKON, Panel, buat_panel, tempel_panel  # noqa: F401
 from render_perangkat import ALPHA_KOTAK, KONTRAK_DEFAULT, KONTRAK_TEKS, PerangkatMixin  # noqa: F401
 from render_teks import Penata, Sprite, parse_teks  # noqa: F401
-from sistem import SETPARAMS_BT709, GagalPipeline, Proyek, baca_json, durasi, hex_rgb, jalankan, log, main_aman, tulis_json
+from sistem import (SETPARAMS_BT709, GagalPipeline, Proyek, baca_json, durasi, hex_rgb, jalankan, log, main_aman, resolve,
+                    tulis_json)
+import zoom_potong
 
 PARALLAX_DEPTH = 0.5  # K03.4: teks depth ikut push 50% → bergerak lebih lambat dari latar
 
@@ -70,6 +72,8 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
         self.lapisan: list[Lapisan] = []
         self.rekam: dict[str, dict] = {}
         self.push: list[dict] = []
+        self.tanpa_caption: list[tuple[float, float]] = []  # rentang teks kinetik (E51) yang menggantikan caption
+        self.mb_remotion: list[str] = []                     # overlay Remotion dengan motion blur sendiri (K05.4)
         self.broll: list[dict] = []
         self.pip: list[dict] = []
         self.transisi: list[dict] = []
@@ -151,6 +155,7 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
                 self._sfx_otomatis(e)
         self._tata_depth()
         self._caption()
+        self._zoom_potong()
 
     def _el_push(self, e):
         p = self.p
@@ -159,9 +164,32 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
                 "skala": float(e.get("skala", p.t("gerak.push-in"))),
                 "gerak": float(e.get("gerak", min(1.0, rentang))),
                 "fokus": e.get("fokus", [0.5, 0.4]), "easing": e.get("easing", "standar"),
-                "anchor_kata": e.get("_anchor", False), "efek": e.get("_efek"), "anchor": e.get("_anchor_spek")}
+                "anchor_kata": e.get("_anchor", False), "efek": e.get("_efek"), "anchor": e.get("_anchor_spek"),
+                "potong": str(e.get("_efek", "")).startswith("zoom-potong@")}  # E55 manual: ganti bingkai, bukan push
         item["_e"] = self._easing(item["easing"], "standar")
         self.push.append(item)
+
+    def _zoom_potong(self) -> None:
+        """E55: zoom cut otomatis (zoom_potong.py) — beat-sheet `zoom_potong: {"aktif": false}` untuk mematikan.
+        Masuk ke daftar push sebagai `potong` (gerak 0 = ganti bingkai seketika, berpusat di wajah)."""
+        cfg = self.bs.get("zoom_potong") or {}
+        words = self.bs.get("_words")
+        if not cfg.get("aktif", True) or not self.ada_rekaman or not words:
+            return
+        modul = resolve("efek", "zoom-potong")
+        c = {**param_efek("zoom-potong"), **self.p.t("kamera.zoom-potong", {}), **cfg}
+        blok = [(x["mulai"], x["selesai"]) for x in self.broll + self.kamera + self.transisi + self.push + self.pip]
+        blok += [(L.mulai, L.selesai) for L in self.lapisan if L.belakang]
+        rentang = zoom_potong.rencana(words["kata"], blok, self.dur, float(c["jeda"]), float(c["kalimat-min"]))
+        for n, (a, z) in enumerate(rentang):
+            beat_id = next((b["id"] for b in self.bs["beats"] if b["mulai"] <= a < b["selesai"]), "zoom")
+            ff = [self._fokus_wajah(a + (z - a) * q, self.p.W / 2, self.p.H * 0.4) for q in (0.1, 0.5, 0.9)]
+            fx, fy = float(np.median([f[0] for f in ff])), float(np.median([f[1] for f in ff]))
+            item = {"id": f"{beat_id}/zoom-potong{n}", "mulai": a, "selesai": z, "skala": float(c["skala"]), "gerak": 0.0,
+                    "fokus": [round(fx / self.p.W, 4), round(fy / self.p.H, 4)], "easing": "standar", "anchor_kata": True,
+                    "efek": modul.ref, "anchor": None, "potong": True}
+            item["_e"] = self._easing("standar", "standar")
+            self.push.append(item)
 
     def _el_broll(self, e):
         if e.get("jendela") or str(e.get("_efek", "")).startswith("broll-overlay@"):
@@ -211,6 +239,15 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
             tengah = (s + e) / 2
             if any(a <= tengah < z for a, z in cfg["kecuali"]):
                 continue
+            # teks kinetik (E51) sudah membawakan kalimat ini → caption tidak dobel: kata yang diucapkan selama teks
+            # kinetik dibuang; sisanya tampil sampai teks kinetik masuk bila masih terbaca (K01.5), selain itu dilewati
+            kin = [(a, z) for a, z in self.tanpa_caption if s < z and e > a]
+            if kin:
+                a = kin[0][0]
+                g = [w for w in g if w["s"] < a - 0.05]
+                e = a
+                if not g or e - s < 0.3 or len(" ".join(w["w"] for w in g)) / (e - s) > p.t("qa.karakter-per-detik-maks"):
+                    continue
             teks = " ".join(w["w"] for w in g)
             buat = lambda aktif, teks=teks: self.pen.teks(
                 teks, "caption", p.px(p.t("ukuran.caption")), zx1 - zx0, p.t("warna.teks-utama"), stroke=stroke,
@@ -438,7 +475,8 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
                        for km in self.kamera],
             "mask_kamera": self.kamera_info,
             "sfx": self.sfx, "audio": audio, "mask": self.mask_info,
-            "motion_blur": {"aktif": bool(p.t("motion-blur.aktif")), "frame_terpakai": self.mb_dipakai},
+            "motion_blur": {"aktif": bool(p.t("motion-blur.aktif")), "frame_terpakai": self.mb_dipakai,
+                            "remotion": self.mb_remotion},
             "caption": {"aktif": self.bs["caption"].get("aktif", True), "potongan": len(self.cap),
                         "sumber": (words or {}).get("_meta")},
             "beats": [{"id": b["id"], "mulai": b["mulai"], "selesai": b["selesai"], "anchor_kata": b["_anchor_mulai"]}

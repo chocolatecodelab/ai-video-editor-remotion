@@ -330,7 +330,8 @@ def _depth_tumpuk(c: Ctx):
 # ------------------------------------------------------------------ K03 push
 
 def _push(c):
-    return (c.L or {}).get("push", [])
+    # zoom potong (E55) = ganti bingkai seketika, bukan push bergerak → diatur aturan modulnya, bukan K03
+    return [u for u in (c.L or {}).get("push", []) if not u.get("potong")]
 
 
 @cek("K03.1")
@@ -464,12 +465,28 @@ def _tahan(c: Ctx):
     return (GAGAL, salah) if salah else (LULUS, [])
 
 
+@cek("E55.5")
+def _zoom_potong(c: Ctx):
+    zp = [u for u in (c.L or {}).get("push", []) if u.get("potong")]
+    if not zp:
+        return LEWAT, ["tidak ada zoom potong (tanpa rekaman, dimatikan, atau tak ada kalimat yang layak)"]
+    L = c.L
+    blok = [(x["id"], x["mulai"], x["selesai"]) for k in ("broll", "kamera", "transisi") for x in L.get(k, [])]
+    salah = [f"{u['id']}: skala {u['skala']} > 1,15" for u in zp if u["skala"] > 1.15 + 1e-6]
+    salah += [f"{u['id']} bertumpuk dengan {b}" for u in zp for b, a, z in blok if u["mulai"] < z and u["selesai"] > a]
+    salah += [f"{u['id']} @ {u['mulai']:.2f}s tidak di awal kata" for u in zp if not _dekat_kata(c, u["mulai"], 0.05)]
+    return (GAGAL, salah) if salah else (LULUS, [f"{len(zp)} bingkai rapat ×{zp[0]['skala']:.2f}"])
+
+
 @cek("K05.4")
 def _mblur(c: Ctx):
     mb = (c.L or {}).get("motion_blur", {})
     if not mb.get("aktif"):
         return GAGAL, ["motion-blur.aktif = false"]
-    return LULUS, [f"dipakai di {mb.get('frame_terpakai', 0)} lapisan-frame"]
+    det = [f"dipakai di {mb.get('frame_terpakai', 0)} lapisan-frame"]
+    if mb.get("remotion"):
+        det.append(f"{len(mb['remotion'])} overlay Remotion ber-blur arah: {', '.join(mb['remotion'])}")
+    return LULUS, det
 
 
 @cek("K05.5")

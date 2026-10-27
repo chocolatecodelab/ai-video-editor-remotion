@@ -263,3 +263,22 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
 - render_depth.py: penataan teks depth memeriksa tepi atas KOTAK teks (bbox_teks, yang diukur QA K00.1), bukan puncak
   glyph — sebelumnya teks bisa lolos penataan tetapi keluar zona aman.
 - Tes: test_efek.UjiKinetik (aksen lintas kata, sinkron ucapan, perapatan jadwal linimasa).
+
+## 2026-10-28 — ekspor satu file
+- ekspor.py: manifest `platform` berisi satu kunci → satu file `out/<proyek>.mp4` (Reels/TikTok/Shorts memakai file yang sama).
+  Lebih dari satu kunci → tetap `<proyek>_<platform>.mp4`. QA K07 ikut path yang sama.
+- proyek/_template-proyek: `platform` bawaan `["reels"]` (sebelumnya reels, tiktok, shorts).
+
+## 2026-10-28 — motion blur Remotion, zoom potong (E55), caption tidak dobel dengan teks kinetik
+- Baru E55 zoom-potong (native, otomatis): `zoom_potong.py` merencanakan bingkai rapat per kalimat (kalimat pendek digabung,
+  berhenti saat cutaway/efek kamera/transisi/depth/PiP/push manual, sesudahnya mulai rapat); render `_zoom_potong` memasukkannya
+  ke push dengan `potong: true` (gerak 0, berpusat di wajah). Aturan E55.5 (skala ≤ 1,15, di awal kata, tidak bertumpuk);
+  K03 hanya untuk push bergerak. `efek_dipakai` mencantumkan E55 bila aktif & ada rekaman. Matikan: beat-sheet
+  `"zoom_potong": {"aktif": false}`.
+- K00.3/kontak-sheet: kotak wajah diperbesar seperti yang tampil saat push/zoom potong (wajah.kotak_di `push`,
+  render_perangkat memakai `_skala_push`).
+- Caption: selama teks kinetik (Spek `ganti_caption`, E51) kata yang dibawakannya dibuang dari caption; sisa tampil sampai
+  teks kinetik masuk bila masih ≤ cps maks (K01.5).
+- Motion blur Remotion: `lib/kabur.tsx` (Gaussian searah gerak, shutter 180°, aman untuk overlay ber-alpha — bukan
+  CameraMotionBlur yang menumpuk salinan semi-transparan). Dipakai E51 (kata naik), E52 (pelari), E54 (halaman berbalik);
+  Spek `blur_gerak` → layout `motion_blur.remotion` → detail K05.4.

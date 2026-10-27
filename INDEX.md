@@ -127,6 +127,7 @@ Panduan umum & perbandingan dengan aturan sistem: [efek/README.md](efek/README.m
 | E52 | lintasan | efek/EFEK_52_lintasan_v0.1.md | 0.1 | draft | 3.2–6 s | native (Remotion) |
 | E53 | dua-linimasa | efek/EFEK_53_dua-linimasa_v0.1.md | 0.1 | draft | 3.4–6 s | native (Remotion) |
 | E54 | bab-baru | efek/EFEK_54_bab-baru_v0.1.md | 0.1 | draft | 3.6–7 s | native (Remotion) |
+| E55 | zoom-potong | efek/EFEK_55_zoom-potong_v0.1.md | 0.1 | draft | per kalimat | native (otomatis) |
 
 ## Koreografi (urutan perangkat motion per fungsi isi — dipakai preset; aturan ritme K09)
 Preset = gaya × koreografi. Koreografi menentukan perangkat tiap bagian (+ `fungsi`), template, kebutuhan footage, musik.

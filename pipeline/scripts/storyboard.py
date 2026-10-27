@@ -59,7 +59,8 @@ def kumpulkan(r: Renderer) -> tuple[list[dict], list[dict]]:
                       "keluar": rec.get("keluar"), "t": min(t, rec["selesai"] - 1 / fps)})
     for u in r.push:
         items.append({"id": u["id"], "tipe": "push", "beat": u["id"].split("/")[0], "mulai": u["mulai"],
-                      "selesai": u["selesai"], "teks": f"push ×{u['skala']:.2f}, gerak {u['gerak']:.2f}s, {u['easing']}",
+                      "selesai": u["selesai"], "teks": (f"zoom potong ×{u['skala']:.2f}" if u.get("potong")
+                                                       else f"push ×{u['skala']:.2f}, gerak {u['gerak']:.2f}s, {u['easing']}"),
                       "efek": u.get("efek"), "anchor": None, "t": min(u["selesai"] - 1 / fps, u["mulai"] + u["gerak"])})
     for b in r.broll:
         items.append({"id": b["id"], "tipe": "broll", "beat": b["id"].split("/")[0], "mulai": b["mulai"],

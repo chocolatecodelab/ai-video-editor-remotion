@@ -7,7 +7,7 @@
   "gaya": "glass-tech@0.1",
   "template": "explainer@0.1",
   "konteks": [],
-  "platform": ["reels", "tiktok", "shorts"],
+  "platform": ["reels"],
   "aset": {
     "rekaman": "aset/rekaman/take1.mp4",
     "potong": [],

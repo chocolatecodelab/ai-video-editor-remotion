@@ -59,7 +59,7 @@ def elemen_laporan(p: Proyek, L: dict) -> list[dict]:
             continue
         b = e.get("bbox_animasi") or e.get("bbox")
         penuh = e["tipe"] in ("cutaway", "kamera", "latar")
-        kotak = modul_wajah.kotak_di(data_wajah, e["mulai"], e["selesai"])
+        kotak = modul_wajah.kotak_di(data_wajah, e["mulai"], e["selesai"], L.get("push"))
         di_latar = any(x["tipe"] == "latar" and x["mulai"] <= e["mulai"] + 0.3 and x["selesai"] >= e["selesai"] - 0.3
                        for x in L["elemen"])  # wajah sudah tertutup latar kaca (cutaway)
         if penuh or e["tipe"] == "depth" or di_latar:
@@ -144,7 +144,7 @@ def kontak(p: Proyek, L: dict, rows: list[dict], sumber: Path | None = None, leb
                     if r["bbox"] and r["mulai"] <= t < r["selesai"] and r["luas_layar"] < 0.95:
                         bx = [x + r["bbox"][0] * sk, y + r["bbox"][1] * sk, x + r["bbox"][2] * sk, y + r["bbox"][3] * sk]
                         g.rectangle(bx, outline=warna_el.get(r["id"], "#FFFFFF"), width=2)
-                for k in modul_wajah.kotak_di(data_wajah, t - 0.15, t + 0.15)[:1]:
+                for k in modul_wajah.kotak_di(data_wajah, t - 0.15, t + 0.15, L.get("push"))[:1]:
                     fx = [x + k[0] * lebar, y + k[1] * tinggi, x + k[2] * lebar, y + k[3] * tinggi]
                     for xa in range(int(fx[0]), int(fx[2]), 8):  # garis putus: kotak wajah
                         g.line([(xa, fx[1]), (min(xa + 4, fx[2]), fx[1])], fill="#FF3B3B", width=2)

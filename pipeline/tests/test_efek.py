@@ -130,5 +130,45 @@ class UjiKinetik(unittest.TestCase):
         self.assertLessEqual(j["akhir"], 3.6 - 0.5)
 
 
+class UjiZoomPotong(unittest.TestCase):
+    @staticmethod
+    def kata(*kalimat):
+        """[(mulai, "kalimat.")] → words.json: 0,3 s per kata."""
+        out = []
+        for t, teks in kalimat:
+            for i, w in enumerate(teks.split()):
+                out.append({"w": w, "s": round(t + 0.3 * i, 3), "e": round(t + 0.3 * i + 0.25, 3)})
+        return out
+
+    def test_bergantian_lebar_rapat(self):
+        from zoom_potong import rencana
+        kata = self.kata((0, "satu dua tiga empat lima."), (2, "enam tujuh delapan sembilan."), (4, "a b c d e."), (6, "f g h i j."))
+        self.assertEqual(rencana(kata, [], 8, 0.45, 1.0), [(2, 4), (6, 7.75)])
+
+    def test_blok_memutus_dan_kembali_lebar(self):
+        from zoom_potong import rencana
+        kata = self.kata((0, "a b c d e."), (2, "f g h i j."), (4, "k l m n o."), (6, "p q r s t."), (8, "u v w x y."))
+        hasil = rencana(kata, [(4.5, 5.5)], 10, 0.45, 1.0)  # cutaway mulai di tengah kalimat ke-3
+        self.assertEqual(hasil, [(2, 4), (6, 8)])             # sesudah blok mulai dari bingkai rapat
+
+    def test_kalimat_pendek_digabung(self):
+        from zoom_potong import rencana
+        kata = self.kata((0, "a b c d e."), (2, "keep learning."), (3, "keep growing."))
+        self.assertEqual(rencana(kata, [], 5, 0.45, 1.0), [(2, 3.85)])  # dua kalimat pendek = satu bingkai rapat
+
+    def test_kotak_wajah_ikut_bingkai_rapat(self):
+        from wajah import kotak_di
+        data = {"bingkai": [{"t": 1.0, "kotak": [0.4, 0.3, 0.6, 0.5]}, {"t": 3.0, "kotak": [0.4, 0.3, 0.6, 0.5]}]}
+        push = [{"mulai": 2.5, "selesai": 4.0, "skala": 1.5, "fokus": [0.5, 0.4]}]
+        self.assertEqual(kotak_di(data, 0.9, 1.1, push), [[0.4, 0.3, 0.6, 0.5]])  # bingkai lebar: apa adanya
+        k = kotak_di(data, 2.9, 3.1, push)[0]
+        self.assertAlmostEqual(k[2] - k[0], 0.3)                                      # lebar wajah ×1,5
+
+    def test_bingkai_berakhir_saat_blok_mulai(self):
+        from zoom_potong import rencana
+        kata = self.kata((0, "a b c d e."), (2, "f g h i j k l m n o."))
+        self.assertEqual(rencana(kata, [(3.5, 6)], 8, 0.45, 1.0), [(2, 3.5)])
+
+
 if __name__ == "__main__":
     unittest.main()

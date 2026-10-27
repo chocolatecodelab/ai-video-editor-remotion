@@ -49,6 +49,10 @@ class PerangkatMixin:
             elemen["jadwal"] = jadwal
             elemen.update(e.get("_props") or {})  # props yang diolah spek (mis. kinetik-kata: frasa → kata + aksen)
             elemen["posisi"] = e.get("posisi", spek.posisi)
+            if spek.ganti_caption:
+                self.tanpa_caption.append((e["mulai"], e["selesai"]))
+            if spek.blur_gerak:
+                self.mb_remotion.append(e["_id"])
             if spek.jendela:
                 po = max(po, p.t("perangkat.opasitas-min"))
             if "sfx" not in e and p.t("sfx.otomatis", False):
@@ -143,7 +147,9 @@ class PerangkatMixin:
         if self.wajah and not L.belakang and self._sampel:  # K00.3: piksel overlay (alpha ≥ 50%) di kotak wajah, bukan kotak gabungan
             k = min(self.wajah, key=lambda r: abs(r["t"] - t))
             if k.get("kotak") and abs(k["t"] - t) <= 0.3:
-                fx0, fy0, fx1, fy1 = (int(k["kotak"][0] * p.W), int(k["kotak"][1] * p.H), int(k["kotak"][2] * p.W), int(k["kotak"][3] * p.H))
+                s, cx, cy = self._skala_push(t)  # wajah seperti yang tampil (push / zoom potong memperbesarnya)
+                fx0, fy0, fx1, fy1 = (int(max(0, cx + (k["kotak"][0] * p.W - cx) * s)), int(max(0, cy + (k["kotak"][1] * p.H - cy) * s)),
+                                      int(cx + (k["kotak"][2] * p.W - cx) * s), int(cy + (k["kotak"][3] * p.H - cy) * s))
                 if fx1 > fx0 and fy1 > fy0:
                     tutup = float(kuat[fy0:fy1, fx0:fx1].mean())
                     rec["tutup_wajah_px"] = round(max(rec.get("tutup_wajah_px", 0.0), tutup), 3)
