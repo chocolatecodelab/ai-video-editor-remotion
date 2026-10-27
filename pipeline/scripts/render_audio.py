@@ -7,6 +7,7 @@ from pathlib import Path
 import numpy as np
 
 import sfx as pustaka_sfx
+from render_ketukan import sumber_musik
 from sistem import GagalPipeline, jalankan, loudnorm_2pass, sha_file, ukur_loudness
 
 
@@ -95,20 +96,18 @@ class AudioMixin:
         else:
             cmd += ["-f", "lavfi", "-t", f"{self.dur:.3f}", "-i", f"anullsrc=r={a['sample-rate']}:cl=stereo"]
         n = 1
-        musik = p.manifest.get("aset", {}).get("musik")
-        if isinstance(musik, str):
-            musik = {"file": musik}
-        if musik and musik.get("file"):
-            if str(musik["file"]).startswith("bawaan:"):  # musik latar sintesis (musik.py)
-                import musik as musik_bawaan
-                mp = musik_bawaan.file_musik(musik["file"].split(":", 1)[1])
-            else:
-                mp = p.path_aset(musik["file"])
-            if not mp.exists():
+        sm = sumber_musik(p)
+        musik = sm[0] if sm else None
+        if sm:
+            mp = sm[1]
+            if not mp or not mp.exists():
                 raise GagalPipeline(f"musik {musik['file']!r} tidak ada.")
             cmd += ["-stream_loop", "-1", "-i", mp]
             fc.append("[0:a]asplit=2[suara][kunci]")
-            fc.append("[1:a]" + filter_musik(a["sample-rate"], musik.get("db", -22), self.dur,
+            # titik mulai musik dipilih agar ketukannya jatuh di potongan (render_ketukan.py)
+            ofset = (getattr(self, "ketukan", None) or {}).get("ofset_musik", 0)
+            mulai = f"atrim=start={ofset:.4f},asetpts=PTS-STARTPTS," if ofset else ""
+            fc.append("[1:a]" + mulai + filter_musik(a["sample-rate"], musik.get("db", -22), self.dur,
                                               float(musik.get("fade_masuk", FADE_MASUK_MUSIK)),
                                               float(musik.get("fade_keluar", FADE_KELUAR_MUSIK))) + "[m0]")
             fc.append("[m0][kunci]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=350[musik]")

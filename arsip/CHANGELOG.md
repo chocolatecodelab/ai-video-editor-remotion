@@ -288,3 +288,12 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
 - sistem.py: TEMP/TMP/TMPDIR dan `tempfile.tempdir` diarahkan ke `<repo>/.sementara` (env `VIDEO_TEMP` untuk memindahkan)
   sebelum proses apa pun berjalan, jadi Remotion, Chrome headless, ffmpeg dan tempfile Python tidak memenuhi drive C:.
   `.sementara/` di .gitignore.
+
+## 2026-10-28 — sinkron ketukan musik & riser
+- Baru `ketukan.py`: deteksi tempo/fase (spectral flux + autokorelasi; akurat ±1 BPM, fase ±20 ms pada klik & musik bawaan),
+  pilihan fase grid, ofset musik, snap. `musik.BPM` untuk grid musik bawaan tanpa deteksi.
+- `render_ketukan.py` (KetukanMixin): titik mulai musik dipilih agar ketukan jatuh di potongan berbobot, potongan dekat
+  ketukan digeser ke ketukan (cutaway/transisi/kamera ≤ 0,16 s, reveal ≤ 0,1 s, ½ ketukan untuk < 100 BPM), elemen yang
+  menempel ikut; riser berpuncak di potongan masuk cutaway besar. render_audio memutar musik dari ofset (`atrim`).
+- QA: ketukan musik = titik sinkron sah (K05.5, K03.3); K06.3 melaporkan BPM, potongan di ketukan, dan riser.
+- Uji proyek "Life Isn't a Race": 11/16 potongan & reveal di ketukan (sebelumnya acak), 3 riser, pra-QA LULUS.

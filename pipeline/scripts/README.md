@@ -154,6 +154,18 @@ Bunyi: klik-ketik, tick, pop, ketuk, whoosh-pendek, whoosh-panjang, swoosh-balik
 Selama teks kinetik (E51) tampil, caption disembunyikan otomatis: kata yang dibawakan teks kinetik dibuang dari caption, dan
 sisanya hanya tampil bila masih terbaca (K01.5).
 
+## Ketukan musik
+Video bermusik latar otomatis sinkron dengan ketukannya (`ketukan.py`, `render_ketukan.py`). Ucapan tidak pernah digeser:
+1. Grid ketukan: musik bawaan punya tempo pasti (`musik.BPM`); file musik dideteksi (onset + autokorelasi), ber-cache di
+   `cache/ketukan.json`.
+2. Titik mulai musik dipilih agar ketukan jatuh paling banyak di potongan berbobot (transisi & cutaway 3, efek kamera 2,
+   judul/overlay/depth 1); musik diputar mulai dari ofset itu (`atrim`).
+3. Potongan yang tinggal dekat ketukan digeser tepat ke ketukan (≤ 0,16 s untuk cutaway/transisi/efek kamera, ≤ 0,1 s untuk
+   reveal); elemen yang mulai/berakhir di titik yang sama ikut. Musik < 100 BPM juga memakai ½ ketukan. Teks kinetik tidak digeser.
+4. Riser berpuncak tepat di potongan masuk cutaway ≥ 2,5 s (jarak antar-riser ≥ 6 s).
+Hasil di layout `ketukan` dan detail K06.3; ketukan dihitung titik sinkron sah di K05.5/K03.3. Beat-sheet:
+`"ketukan": {"aktif": false}` mematikan; `toleransi`, `toleransi_potong`, `riser` dapat diatur.
+
 ## Zoom potong (E55)
 Otomatis pada video berekaman: bingkai lebar ↔ rapat bergantian per kalimat, dipotong di awal kata pertama, berpusat di
 wajah (lihat `efek/EFEK_55_zoom-potong_v0.1.md`). Beat-sheet `"zoom_potong": {"aktif": false}` mematikannya; field lain

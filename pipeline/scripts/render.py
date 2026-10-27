@@ -32,19 +32,20 @@ import numpy as np
 from PIL import Image
 
 import beat
+import zoom_potong
 from render_audio import MARGIN_TP_LOSSY, AudioMixin  # noqa: F401  (re-export)
 from render_dasar import (Animator, Easing, Lapisan, Overlay, Pembaca, Transform, bbox_transform,  # noqa: F401
                           ke_premult, ke_uint8, tempel, warp_penuh)
 from render_depth import DepthMixin
 from render_elemen import ElemenMixin
 from render_kamera import JENIS_TRANSISI, KAMERA, KAMERA_MASK, KameraMixin, param_efek  # noqa: F401
+from render_ketukan import KetukanMixin
 from render_pip import PipMixin
 from render_panel import IKON, Panel, buat_panel, tempel_panel  # noqa: F401
 from render_perangkat import ALPHA_KOTAK, KONTRAK_DEFAULT, KONTRAK_TEKS, PerangkatMixin  # noqa: F401
 from render_teks import Penata, Sprite, parse_teks  # noqa: F401
 from sistem import (SETPARAMS_BT709, GagalPipeline, Proyek, baca_json, durasi, hex_rgb, jalankan, log, main_aman, resolve,
                     tulis_json)
-import zoom_potong
 
 PARALLAX_DEPTH = 0.5  # K03.4: teks depth ikut push 50% → bergerak lebih lambat dari latar
 
@@ -52,7 +53,7 @@ PARALLAX_DEPTH = 0.5  # K03.4: teks depth ikut push 50% → bergerak lebih lamba
 # ============================================================== penyusun
 
 
-class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, AudioMixin):
+class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, AudioMixin, KetukanMixin):
     def __init__(self, p: Proyek):
         self.p = p
         self.ada_rekaman = p.ingest_video.exists()
@@ -142,6 +143,7 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
     # ---------------------------------------------------------- bangun lapisan
     def _bangun(self) -> None:
         self._var_sfx: dict[str, int] = {}
+        self._ketukan_siapkan()  # potongan → ketukan musik sebelum elemen dibangun (render_ketukan.py)
         for e in beat.semua_elemen(self.bs):
             getattr(self, f"_el_{e['tipe']}")(e)
             if e["tipe"] == "sfx":
@@ -155,6 +157,7 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
                 self._sfx_otomatis(e)
         self._tata_depth()
         self._caption()
+        self._riser()
         self._zoom_potong()
 
     def _el_push(self, e):
@@ -482,6 +485,7 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
             "beats": [{"id": b["id"], "mulai": b["mulai"], "selesai": b["selesai"], "anchor_kata": b["_anchor_mulai"]}
                       for b in self.bs["beats"]],
             "kata_mulai": [w["s"] for w in (words or {}).get("kata", [])],
+            "ketukan": self.ketukan,
             "peringatan": self.peringatan,
         }
 

@@ -21,6 +21,7 @@ DIR = ROOT / "pipeline" / "aset-bawaan" / "musik"
 A4 = 440.0
 # progresi (semitone dari A): Am – F – C – G, tiap akord 2 bar
 PROGRESI = [[0, 3, 7], [-4, 0, 3], [3, 7, 10], [-2, 2, 5]]
+BPM = {"pulsa": 96, "lembut": 78, "lofi": 82}  # loop mulai tepat di ketukan pertama → grid ketukan = n·60/BPM (ketukan.py)
 
 
 def _hz(semi: float, oktaf: int = 0) -> float:
@@ -89,10 +90,9 @@ def _epiano(f: float, d: float) -> np.ndarray:
 
 
 def buat(nama: str) -> np.ndarray:
-    resep = {"pulsa": 96, "lembut": 78, "lofi": 82}
-    if nama not in resep:
-        raise GagalPipeline(f"musik bawaan '{nama}' tidak ada (ada: {', '.join(resep)}).")
-    bpm = resep[nama]
+    if nama not in BPM:
+        raise GagalPipeline(f"musik bawaan '{nama}' tidak ada (ada: {', '.join(BPM)}).")
+    bpm = BPM[nama]
     ketuk = 60 / bpm
     bar = 4 * ketuk
     panjang = 8 * bar

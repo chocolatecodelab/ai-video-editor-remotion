@@ -355,7 +355,9 @@ def _push_durasi(c: Ctx):
 
 
 def _dekat_kata(c, t, tol=0.15):
-    titik = (c.L or {}).get("kata_mulai", []) + [b["mulai"] for b in (c.L or {}).get("beats", [])]
+    L = c.L or {}
+    # titik sinkron: awal kata, awal beat, dan ketukan musik latar (render_ketukan)
+    titik = L.get("kata_mulai", []) + [b["mulai"] for b in L.get("beats", [])] + ((L.get("ketukan") or {}).get("titik") or [])
     return any(abs(t - x) <= tol for x in titik)
 
 
@@ -534,6 +536,14 @@ def _sfx(c: Ctx):
     if au.get("musik") and not au.get("ducking"):
         salah.append("musik tanpa ducking")
     info = [f"{len(c.L['sfx'])} sfx ≤ {mx} dB"] + (["musik di-duck (sidechain)"] if au.get("musik") else [])
+    kt = c.L.get("ketukan")
+    if kt:
+        info.append(f"musik {kt['bpm']} BPM ({kt['asal']}), mulai di {kt['ofset_musik']:.2f}s file: "
+                    f"{kt['peristiwa_di_ketukan']}/{kt['peristiwa']} potongan & reveal jatuh di ketukan"
+                    + (" (termasuk ½ ketukan)" if kt.get("subdivisi", 1) > 1 else ""))
+    riser = [s["sumber"] for s in c.L["sfx"] if s.get("bunyi") == "riser" and s["sumber"].endswith("/riser")]
+    if riser:
+        info.append(f"riser sebelum adegan besar: {', '.join(r.rsplit('/', 1)[0] for r in riser)}")
     return (GAGAL, salah) if salah else (LULUS, info)
 
 
