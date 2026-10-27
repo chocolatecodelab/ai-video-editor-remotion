@@ -378,6 +378,86 @@ def _growth_curve(e, an, p, dur):
     return {"gambar": g0, "durasi_gambar": dg, "catatan": catatan}, b
 
 
+# ---------------------------------------------------------------- E51 kinetik-kata · E52–E54 adegan metafora
+def frasa_kinetik(teks: str) -> list[dict]:
+    """"still trying to find *your way.*" → [{w, aksen}] per kata; *…* boleh melintasi beberapa kata."""
+    hasil, aksen = [], False
+    for kata in str(teks).split():
+        buka = kata.startswith("*")
+        tutup = kata.rstrip(".,!?;:").endswith("*") or kata.endswith("*")
+        hasil.append({"w": kata.replace("*", ""), "aksen": aksen or buka})
+        if buka and not tutup:
+            aksen = True
+        elif tutup:
+            aksen = False
+    return [k for k in hasil if k["w"]]
+
+
+def _kinetik(e, an, p, dur):
+    """Tiap kata muncul TEPAT saat diucapkan: kata frasa dicocokkan berurutan ke cache/words.json mulai dari awal
+    elemen (kata yang tak ditemukan → 0,22 s setelah kata sebelumnya). Frasa berikutnya menggantikan frasa sebelumnya."""
+    from beat import muat_words, norm
+    teks = e.get("frasa") or ([e["teks"]] if e.get("teks") else [])
+    if not teks:
+        raise GagalPipeline(f"{e['_id']}: kinetik-kata butuh 'frasa' (daftar kalimat ucapan, *kata* = aksen) atau 'teks'.")
+    kata_ucap = [w for w in ((muat_words(p) or {}).get("kata") or []) if w["s"] >= e["mulai"] - 0.3]
+    i, frasa, waktu = 0, [], []
+    t_lalu = 0.05
+    for f in teks:
+        kk = frasa_kinetik(f)
+        tt = []
+        for k in kk:
+            cari = next((j for j in range(i, min(i + 6, len(kata_ucap))) if norm(kata_ucap[j]["w"]) == norm(k["w"])), None)
+            if cari is not None:
+                t_lalu = max(t_lalu, round(kata_ucap[cari]["s"] - e["mulai"], 3))
+                i = cari + 1
+            else:
+                t_lalu = round(t_lalu + 0.22, 3)
+            tt.append(t_lalu)
+        frasa.append(kk)
+        waktu.append(tt)
+    rentang = [[max(0.0, round(tt[0] - 0.05, 3)), 0.0] for tt in waktu]
+    for n in range(len(rentang)):
+        rentang[n][1] = round(rentang[n + 1][0] - 0.05, 3) if n + 1 < len(rentang) else round(dur, 3)
+    _cukup(e, waktu[-1][-1] + p.t("durasi.tahan-min") * 0.6, dur, "perpanjang elemen sampai setelah kata terakhir diucapkan")
+    e["_props"] = {"frasa": frasa}  # props Remotion hasil olahan (render_perangkat menggabungkannya)
+    b = [(r[0], "judul-masuk", f"frasa{n}") for n, r in enumerate(rentang)]
+    return {"kata": waktu, "frasa": rentang}, b
+
+
+def _lintasan(e, an, p, dur):
+    tj = e.get("tujuan") or []
+    if not 2 <= len(tj) <= 4 or not e.get("judul"):
+        raise GagalPipeline(f"{e['_id']}: lintasan butuh 'judul' dan 'tujuan' (2–4 label; tandai milikmu dengan *…*).")
+    _cukup(e, 3.2, dur, "perpanjang elemen")
+    garis = [round(0.3 + 0.15 * i, 3) for i in range(len(tj))]
+    tujuan = [round(g + 1.1, 3) for g in garis]
+    j = {"judul": 0.1, "garis": garis, "pelari": 0.9, "tujuan": tujuan}
+    return j, [(0.0, "paper-lapis", "masuk")] + [(t, "langkah-titik", f"tujuan{i}") for i, t in enumerate(tujuan)]
+
+
+def _dua_linimasa(e, an, p, dur):
+    if not e.get("titik_a") or not e.get("titik_b") or not e.get("judul"):
+        raise GagalPipeline(f"{e['_id']}: dua-linimasa butuh 'judul', 'titik_a' (milik mereka) dan 'titik_b' (milikmu).")
+    _cukup(e, 3.4, dur, "perpanjang elemen / kurangi titik")
+    k = min(1.0, (dur - 1.0) / 3.2)                       # jadwal dirapatkan bila klip pendek
+    a = [round((0.65 + 0.3 * i) * k, 3) for i in range(len(e["titik_a"]))]
+    b = [round(x * k, 3) for x in [0.9, 1.7, 2.2, 2.9, 2.5][:len(e["titik_b"])]]
+    j = {"garis_a": [round(0.4 * k, 3), round(1.4 * k, 3)], "garis_b": [round(0.6 * k, 3), round(3.0 * k, 3)],
+         "a": a, "b": b, "akhir": round(3.2 * k, 3)}
+    bunyi = [(t, "timeline-blok", f"a{i}") for i, t in enumerate(a)] + [(t, "langkah-titik", f"b{i}") for i, t in enumerate(b)]
+    return j, bunyi + [(j["akhir"], "aksen-stempel", "cap")]
+
+
+def _bab_baru(e, an, p, dur):
+    if not e.get("judul"):
+        raise GagalPipeline(f"{e['_id']}: bab-baru butuh 'judul' (opsional sub, kepala, nomor).")
+    _cukup(e, 3.6, dur, "perpanjang elemen")
+    balik = [0.35, 0.75, 1.15]
+    j = {"balik": balik, "dorong": 1.7, "judul": 1.8}
+    return j, [(t, "paper-lapis", f"balik{i}") for i, t in enumerate(balik)] + [(1.8, "judul-masuk", "judul")]
+
+
 def _gabung(*bagian) -> str:
     return " ".join(_polos(x) for x in bagian if x)
 
@@ -423,6 +503,12 @@ PERANGKAT: dict[str, Spek] = {
     "HeadlineStorm": Spek(_headline_storm, lambda e: _gabung(*e.get("judul_judul", []), e.get("utama")), cutaway=True),
     "GrowthCurve": Spek(_growth_curve, lambda e: _gabung(e.get("judul"), str(e.get("ke")), e.get("catatan")),
                         {"ukuran": ["isi"], "warna": ["teks-utama", "teks-sekunder", "aksen"]}),
+    "KinetikKata": Spek(_kinetik, lambda e: _gabung(*(e.get("frasa") or [e.get("teks")])), {"ukuran": ["judul"], "warna": ["teks-utama", "aksen"]},
+                        posisi="atas", jendela=False, panel=False),
+    "Lintasan": Spek(_lintasan, lambda e: _gabung(e.get("sub"), e.get("judul"), *e.get("tujuan", [])), cutaway=True),
+    "DuaLinimasa": Spek(_dua_linimasa, lambda e: _gabung(e.get("judul"), e.get("sub"), *e.get("titik_a", []), *e.get("titik_b", [])),
+                        cutaway=True),
+    "BabBaru": Spek(_bab_baru, lambda e: _gabung(e.get("kepala"), e.get("nomor"), e.get("judul"), e.get("sub")), cutaway=True),
     "HeadlineWall": Spek(_headline, lambda e: _gabung(*e.get("judul_judul", [])), cutaway=True),
     "Orbit": Spek(_orbit, lambda e: _gabung(e.get("pusat"), e.get("sub"), *e.get("satelit", [])), cutaway=True),
     "CouchWall": Spek(_couch, lambda e: _gabung(*[f"{k.get('judul')} {k.get('sub', '')}" for k in e.get("konten", [])]), cutaway=True),

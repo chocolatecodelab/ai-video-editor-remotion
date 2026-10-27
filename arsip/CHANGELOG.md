@@ -253,3 +253,13 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
 - konteks: K05 0.1 → 0.2 — K05.6 gerak diam (manual) + catatan masuk/keluar perangkat Remotion & perceptual-scale.
 - gaya: G01/G02 0.5 → 0.6, G03–G14 0.4 → 0.5 (rujuk gerak@0.2; isi lain tidak berubah). Proyek lama tetap memakai versi
   gaya yang tercatat di manifestnya.
+
+## 2026-10-27 — E51–E54 grafis reflektif (proyek "Life Isn't a Race")
+- Baru (Remotion `compositions/Reflektif.tsx`, warna/font/hiasan dari token gaya):
+  E51 kinetik-kata (KinetikKata — tipografi kinetik per kata, waktu dari cache/words.json), E52 lintasan (jalur lari
+  bercabang ke tujuan berbeda), E53 dua-linimasa (linimasa mereka vs milikmu), E54 bab-baru (halaman buku berbalik 3D).
+  ID E47–E50 sudah dipakai sesi lain (layer-explosion, validasi-badge, chat-window, split-explainer) → nomor 51–54.
+- perangkat.py: spek boleh menulis `e["_props"]` (props Remotion hasil olahan) — render_perangkat menggabungkannya.
+- render_depth.py: penataan teks depth memeriksa tepi atas KOTAK teks (bbox_teks, yang diukur QA K00.1), bukan puncak
+  glyph — sebelumnya teks bisa lolos penataan tetapi keluar zona aman.
+- Tes: test_efek.UjiKinetik (aksen lintas kata, sinkron ucapan, perapatan jadwal linimasa).

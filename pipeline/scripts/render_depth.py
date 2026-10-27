@@ -139,6 +139,8 @@ class DepthMixin:
                     break
                 g0, g1 = int(baris[0]), int(baris[-1]) + 1          # glyph di dalam sprite
                 hg = g1 - g0
+                # kotak teks (bbox_teks, yang diukur QA K00.1) mulai di atas glyph sebesar ruang tinggi-baris
+                lebih_atas = max(0, g0 - spr.info["pad"])
                 x0 = int(max(0, L.cx - spr.w / 2))
                 x1 = int(min(p.W, L.cx + spr.w / 2))
                 puncak = []
@@ -154,7 +156,7 @@ class DepthMixin:
                 pilih = None
                 for bw in sorted(kandidat, reverse=True):
                     atas = bw - hg
-                    if atas < zy0:
+                    if atas - lebih_atas < zy0:
                         continue
                     if all(bw <= lo or atas >= hi for lo, hi in larang):
                         pilih = bw

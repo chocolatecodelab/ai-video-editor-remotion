@@ -47,6 +47,7 @@ class PerangkatMixin:
         if spek:  # perangkat UI: jadwal bersama gambar & suara (perangkat.py)
             jadwal, bunyi = spek.jadwal(e, an, p, dur)
             elemen["jadwal"] = jadwal
+            elemen.update(e.get("_props") or {})  # props yang diolah spek (mis. kinetik-kata: frasa → kata + aksen)
             elemen["posisi"] = e.get("posisi", spek.posisi)
             if spek.jendela:
                 po = max(po, p.t("perangkat.opasitas-min"))

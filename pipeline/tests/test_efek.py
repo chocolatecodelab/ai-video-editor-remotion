@@ -92,5 +92,43 @@ class UjiEfekFrame(unittest.TestCase):
         np.testing.assert_allclose(akhir, self.src, atol=2)
 
 
+class UjiKinetik(unittest.TestCase):
+    def setUp(self):
+        import json
+        import tempfile
+        from pathlib import Path
+        self.dir = tempfile.TemporaryDirectory()
+        kata = [("still", 16.6), ("trying", 16.9), ("to", 17.3), ("find", 17.5), ("your", 17.8), ("way.", 18.1),
+                ("And", 19.9), ("honestly,", 20.0), ("it", 20.8), ("hurts.", 20.9)]
+        path = Path(self.dir.name) / "words.json"
+        path.write_text(json.dumps({"kata": [{"w": w, "s": s, "e": s + 0.2} for w, s in kata]}), encoding="utf-8")
+        nilai = {"durasi.tahan-min": 1.2}
+        self.p = SimpleNamespace(words_path=path, t=lambda k, d=None: nilai.get(k, d))
+
+    def tearDown(self):
+        self.dir.cleanup()
+
+    def test_aksen_melintasi_kata(self):
+        from perangkat import frasa_kinetik
+        f = frasa_kinetik("still trying to find *your way.*")
+        self.assertEqual([k["aksen"] for k in f], [False, False, False, False, True, True])
+        self.assertEqual(f[-1]["w"], "way.")
+
+    def test_kata_sinkron_dengan_ucapan(self):
+        from perangkat import _kinetik
+        e = {"_id": "uji", "mulai": 16.4, "frasa": ["still trying to find *your way.*", "honestly, *it hurts.*"]}
+        j, _ = _kinetik(e, {}, self.p, 6.3)
+        self.assertAlmostEqual(j["kata"][0][0], 0.2, places=3)                # "still" diucapkan 16.6
+        self.assertAlmostEqual(j["kata"][1][1], 20.8 - 16.4, places=3)        # "it" 20.8 ("And" dilewati)
+        self.assertLess(j["frasa"][0][1], j["frasa"][1][0])                     # frasa tidak bertumpuk
+        self.assertEqual(len(e["_props"]["frasa"][1]), 3)
+
+    def test_linimasa_dirapatkan_pada_klip_pendek(self):
+        from perangkat import _dua_linimasa
+        e = {"_id": "uji", "judul": "x", "titik_a": ["a", "b"], "titik_b": ["c", "d", "e"]}
+        j, _ = _dua_linimasa(e, {}, self.p, 3.6)
+        self.assertLessEqual(j["akhir"], 3.6 - 0.5)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -26,6 +26,8 @@ import { Callout, CalloutElemen, Langkah, LangkahElemen, Linimasa, LinimasaEleme
          SebelumSesudah, SebelumSesudahElemen } from "./compositions/Penjelas";
 import { GrowthCurve, GrowthCurveElemen, HeadlineStorm, HeadlineStormElemen, LiquidGlass, LiquidGlassElemen, StudioSet,
          StudioSetElemen } from "./compositions/EfekBaru";
+import { BabBaru, BabBaruElemen, DuaLinimasa, DuaLinimasaElemen, KinetikKata, KinetikKataElemen, Lintasan,
+         LintasanElemen } from "./compositions/Reflektif";
 import { PropsDasar, Tokens } from "./lib/kontrak";
 import platform from "../../tokens/TOKEN_00_platform_v0.4.json";
 import glass from "../../tokens/TOKEN_01_glass-tech_v0.3.json";
@@ -158,5 +160,20 @@ export const RemotionRoot: React.FC = () => (
         durasi_masuk: 0.35, durasi_keluar: 0.25, jadwal: { gambar: 0.5, durasi_gambar: 2.0, catatan: 2.7 } }, 4.5) as PropsDasar<GrowthCurveElemen>} />
     <Composition id="StudioSet" component={StudioSet} calculateMetadata={dariProps<PropsDasar<StudioSetElemen>>()}
       defaultProps={dasar({ lubang: [0.2, 0.12, 0.8, 0.72], judul: "STUDIO", durasi_masuk: 0, durasi_keluar: 0, jadwal: {} }, 3) as PropsDasar<StudioSetElemen>} />
+    <Composition id="KinetikKata" component={KinetikKata} calculateMetadata={dariProps<PropsDasar<KinetikKataElemen>>()}
+      defaultProps={dasar({ frasa: [[{ w: "still", aksen: false }, { w: "finding", aksen: false }, { w: "your", aksen: true }, { w: "way", aksen: true }],
+                                    [{ w: "honestly,", aksen: false }, { w: "it", aksen: true }, { w: "hurts.", aksen: true }]],
+        posisi: "atas", durasi_masuk: 0.3, durasi_keluar: 0.3,
+        jadwal: { kata: [[0.1, 0.35, 0.7, 0.9], [2.2, 2.6, 2.75]], frasa: [[0.1, 2.1], [2.2, 4.0]] } }, 4) as PropsDasar<KinetikKataElemen>} />
+    <Composition id="Lintasan" component={Lintasan} calculateMetadata={dariProps<PropsDasar<LintasanElemen>>()}
+      defaultProps={dasar({ judul: "Not the same *destination*", sub: "life isn't a race", tujuan: ["career", "family", "*your path*", "travel"],
+        durasi_masuk: 0, durasi_keluar: 0, jadwal: { judul: 0.1, garis: [0.3, 0.45, 0.6, 0.75], pelari: 0.9, tujuan: [1.4, 1.55, 1.7, 1.85] } }, 4.5) as PropsDasar<LintasanElemen>} />
+    <Composition id="DuaLinimasa" component={DuaLinimasa} calculateMetadata={dariProps<PropsDasar<DuaLinimasaElemen>>()}
+      defaultProps={dasar({ judul: "Your *own* timeline", sub: "not someone else's", label_a: "theirs", label_b: "yours",
+        titik_a: ["degree", "job", "house"], titik_b: ["learn", "fail", "grow", "bloom"], durasi_masuk: 0, durasi_keluar: 0,
+        jadwal: { garis_a: [0.4, 1.4], garis_b: [0.6, 3.0], a: [0.65, 0.95, 1.25], b: [0.9, 1.7, 2.2, 2.9], akhir: 3.2 } }, 4.4) as PropsDasar<DuaLinimasaElemen>} />
+    <Composition id="BabBaru" component={BabBaru} calculateMetadata={dariProps<PropsDasar<BabBaruElemen>>()}
+      defaultProps={dasar({ judul: "A *different* chapter", sub: "of your life", kepala: "Chapter", nomor: "II", durasi_masuk: 0,
+        durasi_keluar: 0, jadwal: { balik: [0.4, 0.8, 1.2], judul: 1.9, dorong: 1.8 } }, 5.5) as PropsDasar<BabBaruElemen>} />
   </>
 );
