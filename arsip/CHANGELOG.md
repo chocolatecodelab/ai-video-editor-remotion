@@ -297,3 +297,24 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
   menempel ikut; riser berpuncak di potongan masuk cutaway besar. render_audio memutar musik dari ofset (`atrim`).
 - QA: ketukan musik = titik sinkron sah (K05.5, K03.3); K06.3 melaporkan BPM, potongan di ketukan, dan riser.
 - Uji proyek "Life Isn't a Race": 11/16 potongan & reveal di ketukan (sebelumnya acak), 3 riser, pra-QA LULUS.
+
+## 2026-10-28 — grafis menyatu dengan rekaman (K10)
+- Baru konteks K10 menyatu (K10.1–K10.3 otomatis, K10.4 manual). `sistem.KONTEKS_WAJIB`: Proyek selalu memuatnya, juga
+  untuk gaya/manifest yang belum mencantumkannya (tanpa menaikkan versi 14 gaya).
+- `menyatu.py` (fungsi murni) + `render_menyatu.py` (MenyatuMixin):
+  - grain film di komposit akhir (setelah caption & transisi) → rekaman dan semua grafis berbutir sama; derau ditentukan
+    nomor frame (berurutan = paralel);
+  - grade rekaman, b-roll & PiP ke palet gaya (kurva per kanal: angkat, kontras S, suhu, split-tone bayangan/sorot ke
+    warna token + saturasi); klip cutaway Remotion tidak di-grade. `manifest.warna.filter` tetap koreksi ingest;
+  - arah cahaya dari asimetri terang kiri/kanan wajah (16 frame, cache/cahaya.json; cadangan bingkai) → `bayangan.offset`
+    diputar menjauhi sisi terang sebelum sprite & props Remotion dibangun; bayangan efek kamera (`_tempel_kotak`) ikut;
+    `bayangan.putar` + `remotion/src/lib/cahaya.ts` memutar long-shadow & bayangan stroke JudulGaya.
+- Token: TOKEN_00 `grain`/`grade`/`cahaya` + `qa.grain-rasio-min`, `qa.grade-de-min`, `qa.grade-wajah-de-maks`; nilai khas
+  per gaya (`grain`, `grade`) di TOKEN_01–14 (draft, tanpa naik versi). Beat-sheet menimpa: `"grain"`, `"grade"`,
+  `"bayangan"` (`{"aktif": false}`, `{"kekuatan": …}`, `{"sudut": -25}`).
+- QA: K10.1 derau bagian rata grafis/rekaman di master, K10.2 ΔE rata-rata & wajah, K10.3 arah bayangan; K10.1 dilewati
+  di pra-QA storyboard. Tes: test_menyatu (grain, grade, cahaya, putar, cek QA).
+- Uji salinan "Life Isn't a Race" (.sementara/uji): cahaya dari kanan (asimetri +0,32, keyakinan 1,0) → bayangan −40°
+  ([0, 6] → [−4, 5]); derau grafis/rekaman 1,99 (sebelumnya grafis bersih); grade kertas-tipografi ΔE 3,2 (wajah 3,75).
+  K10.1–K10.3 LULUS. Temuan di luar K10: K06.2 GAGAL di mp4 (master −1,5 dBTP → AAC −0,8) setelah campuran audio baru
+  dari sinkron ketukan/riser — margin `MARGIN_TP_LOSSY` 0,5 dB tidak cukup.

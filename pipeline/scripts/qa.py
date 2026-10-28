@@ -693,6 +693,119 @@ def _platform(c: Ctx):
     return (GAGAL, salah + info) if salah else (LULUS, info)
 
 
+# ------------------------------------------------------------------ K10 grafis menyatu dengan rekaman
+
+GRAFIS_RATA = {"judul", "teks", "kartu", "info", "chip", "cta", "remotion", "caption"}
+
+
+def _menyatu(c: Ctx, bagian: str):
+    if r := _butuh_layout(c):
+        return None, r
+    m = (c.L.get("menyatu") or {}).get(bagian)
+    if m is None:
+        return None, (GAGAL, ["layout tanpa catatan `menyatu` — render ulang dengan scripts terbaru"])
+    return m, None
+
+
+def _ukur_grain(c: Ctx, maks: int = 6) -> tuple[float, str] | None:
+    """Derau bagian rata grafis vs rekaman di master, pada frame tengah elemen grafis yang tampil di atas rekaman."""
+    import cv2
+    import numpy as np
+
+    import menyatu
+    from render_dasar import Pembaca
+    p, L = c.p, c.L
+    if not p.ingest_video.exists() or not p.master_path.exists():
+        return None
+    blok = [(x["mulai"], x["selesai"]) for k in ("broll", "kamera", "transisi") for x in L.get(k, [])]
+    calon = sorted({round((e["mulai"] + e["selesai"]) / 2, 2) for e in c.el
+                    if e["tipe"] in GRAFIS_RATA and e.get("bbox_teks") and e["selesai"] - e["mulai"] > 0.5})
+    calon = [t for t in calon if not any(a <= t < z for a, z in blok)]
+    if not calon:
+        return None
+    pilih = [calon[int(k * (len(calon) - 1) / max(1, maks - 1))] for k in range(min(maks, len(calon)))]
+    W, H = p.W, p.H
+    g_all, r_all = [], []
+    for t in dict.fromkeys(pilih):
+        tampil = [e for e in c.el if e.get("bbox") and e["mulai"] <= t < e["selesai"]]
+        mg, mr = np.zeros((H, W), bool), np.ones((H, W), bool)
+        for e in tampil:
+            x0, y0, x1, y1 = (int(round(v)) for v in e["bbox"])
+            mr[max(0, y0 - 16):max(0, y1 + 16), max(0, x0 - 16):max(0, x1 + 16)] = False
+            if e["tipe"] in GRAFIS_RATA and e.get("bbox_teks"):
+                x0, y0, x1, y1 = (int(round(v)) for v in e["bbox_teks"])
+                mg[max(0, y0 + 4):max(0, y1 - 4), max(0, x0 + 4):max(0, x1 - 4)] = True
+        r = Pembaca(p.master_path, t, W, H, p.fps)
+        try:
+            gray = cv2.cvtColor(r.baca(), cv2.COLOR_RGB2GRAY)
+        finally:
+            r.tutup()
+        sg, sr = menyatu.derau(gray, mg), menyatu.derau(gray, mr)
+        if sg is not None and sr is not None and sr > 0:
+            g_all.append(sg)
+            r_all.append(sr)
+    if not g_all:
+        return None
+    g, r = float(np.median(g_all)), float(np.median(r_all))
+    return g / r, f"σ grafis {g:.2f} · rekaman {r:.2f} di {len(g_all)} frame"
+
+
+@cek("K10.1")
+def _grain(c: Ctx):
+    g, r = _menyatu(c, "grain")
+    if r:
+        return r
+    if not g["aktif"]:
+        return LULUS, ["grain dimatikan untuk proyek ini (beat-sheet `grain`)"]
+    det = [f"grain σ {g['kekuatan']} · butir {g['ukuran']} px · kroma {g['kroma']} di komposit akhir (rekaman + grafis)"]
+    ukur = _ukur_grain(c)
+    if ukur is None:
+        return LULUS, det + ["tidak ada grafis rata di atas rekaman untuk diukur"]
+    rasio, rinci = ukur
+    mn = c.p.t("qa.grain-rasio-min")
+    det.append(f"derau grafis/rekaman {rasio:.2f} (min {mn}) — {rinci}")
+    return (LULUS if rasio >= mn else GAGAL), det
+
+
+@cek("K10.2")
+def _grade(c: Ctx):
+    gr, r = _menyatu(c, "grade")
+    if r:
+        return r
+    if not gr["aktif"]:
+        return LULUS, ["grade dimatikan untuk proyek ini (beat-sheet `grade`)"]
+    s = gr.get("setelan", {})
+    det = [f"setelan: kontras {s.get('kontras')}, saturasi {s.get('saturasi')}, suhu {s.get('suhu')}, "
+           f"bayangan→{s.get('bayangan')} {s.get('bayangan-kekuatan')}, sorot→{s.get('sorot')} {s.get('sorot-kekuatan')}"]
+    u = gr.get("ukur") or {}
+    if u.get("de_rata") is None:
+        return LULUS, det + ["tanpa rekaman — grade hanya mengenai b-roll"]
+    mn, mx = c.p.t("qa.grade-de-min"), c.p.t("qa.grade-wajah-de-maks")
+    det.insert(0, f"ΔE rata-rata {u['de_rata']} (min {mn}), wajah {u.get('de_wajah')} (maks {mx}), {u['sampel']} frame")
+    if u.get("de_wajah") is not None and u["de_wajah"] > mx:
+        return GAGAL, det + ["grade terlalu kuat di kulit — turunkan `grade.kekuatan` di beat-sheet"]
+    if u["de_rata"] < mn:
+        return PERINGATAN, det + ["grade hampir tak terlihat"]
+    return LULUS, det
+
+
+@cek("K10.3")
+def _arah_bayangan(c: Ctx):
+    b, r = _menyatu(c, "bayangan")
+    if r:
+        return r
+    det = [f"offset token {b['offset_token']} → {b['offset']} (putar {b['putar']:+.0f}°)"]
+    if b["sumber"] in ("dimatikan", "tanpa rekaman"):
+        return LULUS, [f"arah bawaan token ({b['sumber']})", *det]
+    if b["sumber"] == "manual":
+        return LULUS, [f"arah manual {b['sudut']:+.0f}°", *det]
+    asal = f"cahaya dari {b['sumber']}: asimetri {b['asimetri']:+.3f}, keyakinan {b['keyakinan']} ({b['sampel']} frame)"
+    if not b["dipakai"]:
+        return LULUS, [asal, "keyakinan di bawah `cahaya.keyakinan-min` → arah bawaan token", *det]
+    salah = b["asimetri"] * b["putar"] > 0  # putar + = ke kanan; cahaya dari kanan (asimetri +) → harus ke kiri
+    return (GAGAL if salah else LULUS), [asal, *det] + (["bayangan bergeser ke sisi yang terang"] if salah else [])
+
+
 # ------------------------------------------------------------------ efek
 
 def cek_efek(c: Ctx, m) -> dict:
@@ -770,7 +883,7 @@ def cek_template(c: Ctx, tid: str) -> list[dict]:
 # ------------------------------------------------------------------ laporan
 
 # Aturan yang butuh file hasil render penuh (master/ekspor/mask per frame) — dilewati saat pra-QA storyboard.
-BUTUH_RENDER = {"K02.1", "K06.1", "K06.2", "K07.1", "K07.2"}
+BUTUH_RENDER = {"K02.1", "K06.1", "K06.2", "K07.1", "K07.2", "K10.1"}
 
 
 def evaluasi(p: Proyek, c: Ctx, lewati: set[str] = frozenset()) -> list[dict]:

@@ -150,5 +150,16 @@
       "masuk": "fade",
       "hiasan": "neon"
     }
+  },
+  "grain": {
+    "kekuatan": 2.2,
+    "ukuran": 1.3
+  },
+  "grade": {
+    "bayangan-kekuatan": 0.08,
+    "sorot-kekuatan": 0.02,
+    "kontras": 0.06,
+    "saturasi": 0.96,
+    "suhu": -0.2
   }
 }

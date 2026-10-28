@@ -158,5 +158,17 @@
       "masuk": "pop",
       "hiasan": "long-shadow"
     }
+  },
+  "grain": {
+    "kekuatan": 4.2,
+    "ukuran": 1.8
+  },
+  "grade": {
+    "bayangan-kekuatan": 0.05,
+    "sorot-kekuatan": 0.015,
+    "kontras": 0.04,
+    "saturasi": 0.95,
+    "suhu": 0.15,
+    "angkat": 0.02
   }
 }

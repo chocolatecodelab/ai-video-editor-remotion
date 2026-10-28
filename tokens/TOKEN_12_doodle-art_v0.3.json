@@ -164,5 +164,15 @@
       "masuk": "pop",
       "hiasan": "none"
     }
+  },
+  "grain": {
+    "kekuatan": 3.0,
+    "ukuran": 1.5
+  },
+  "grade": {
+    "sorot-kekuatan": 0.02,
+    "kontras": 0.04,
+    "saturasi": 1.04,
+    "suhu": 0.06
   }
 }

@@ -10,7 +10,7 @@ export type Tokens = {
   ukuran: Record<string, number>;
   spasi: Record<string, number>;
   radius: Record<string, number>;
-  bayangan: { offset: [number, number]; blur: number };
+  bayangan: { offset: [number, number]; blur: number; putar?: number }; // putar: derajat searah cahaya rekaman (K10.3)
   easing: Record<string, [number, number, number, number]>;
   gerak: Record<string, number | string>;
   [k: string]: unknown;

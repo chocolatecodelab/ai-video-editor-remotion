@@ -153,5 +153,14 @@
       "masuk": "masker",
       "hiasan": "none"
     }
+  },
+  "grain": {
+    "kekuatan": 1.5,
+    "ukuran": 1.2
+  },
+  "grade": {
+    "sorot-kekuatan": 0.0,
+    "kontras": 0.03,
+    "saturasi": 0.97
   }
 }

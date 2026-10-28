@@ -6,7 +6,8 @@ Pemakaian:
     python render.py <folder-proyek> --pekerja 1     # paksa berurutan (default paralel otomatis, env VIDEO_PEKERJA)
 
 Urutan lapisan per frame:
-    latar (rekaman / broll, kena push) → teks depth → subjek (mask) → judul/teks/kartu/cta/gambar → caption
+    latar (rekaman / broll di-grade, kena push) → teks depth → subjek (mask) → judul/teks/kartu/cta/gambar → caption
+    → transisi → grain (K10, render_menyatu)
 
 Elemen beat-sheet (lihat pipeline/scripts/README.md untuk semua field):
     judul, teks, kartu, cta, depth, gambar, info, chip, broll, push, sfx, remotion
@@ -40,6 +41,7 @@ from render_depth import DepthMixin
 from render_elemen import ElemenMixin
 from render_kamera import JENIS_TRANSISI, KAMERA, KAMERA_MASK, KameraMixin, param_efek  # noqa: F401
 from render_ketukan import KetukanMixin
+from render_menyatu import MenyatuMixin
 from render_pip import PipMixin
 from render_panel import IKON, Panel, buat_panel, tempel_panel  # noqa: F401
 from render_perangkat import ALPHA_KOTAK, KONTRAK_DEFAULT, KONTRAK_TEKS, PerangkatMixin  # noqa: F401
@@ -53,7 +55,7 @@ PARALLAX_DEPTH = 0.5  # K03.4: teks depth ikut push 50% → bergerak lebih lamba
 # ============================================================== penyusun
 
 
-class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, AudioMixin, KetukanMixin):
+class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, AudioMixin, KetukanMixin, MenyatuMixin):
     def __init__(self, p: Proyek):
         self.p = p
         self.ada_rekaman = p.ingest_video.exists()
@@ -85,6 +87,7 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
         self.sfx: list[dict] = []
         self.peringatan: list[str] = []
         self.mask_info: dict[str, dict] = {}
+        self._menyatu_siapkan()  # K10: arah bayangan (token) sebelum sprite & props Remotion dibangun
         self._bangun()
 
     # ---------------------------------------------------------- helper posisi
@@ -396,6 +399,8 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
         t = i / p.fps
         br = self._frame_broll(t, sekuensial)
         src = br if br is not None else latar
+        if src is not None and (br is None or self._broll_rekaman(t)):
+            src = self._grade_rekaman(src)  # K10.2: rekaman & b-roll ke palet gaya (bukan klip grafis Remotion)
         if src is None:
             src = np.empty((p.H, p.W, 3), np.uint8)
             src[:] = hex_rgb(p.t("warna.latar"))
@@ -458,6 +463,7 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
                 tempel(frame, L.sprite.img, trs)
         self._gambar_caption(frame, t, self._sampel)
         frame = self._terapkan_transisi(frame, t, i)
+        frame = self._grain_akhir(frame, i)  # K10.1: grain yang sama untuk rekaman & grafis
         return ke_uint8(frame, i)
 
     _sampel = True
@@ -486,6 +492,7 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
                       for b in self.bs["beats"]],
             "kata_mulai": [w["s"] for w in (words or {}).get("kata", [])],
             "ketukan": self.ketukan,
+            "menyatu": self.menyatu_layout(),
             "peringatan": self.peringatan,
         }
 

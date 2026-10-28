@@ -37,7 +37,7 @@ Revisi beat-sheet hanya mengulang render → ekspor → qa.
 `render.py` = orkestrator (bangun lapisan, per frame, render berurutan/paralel, layout.json). Bagiannya:
 `render_dasar` (easing, sprite, pembaca video/overlay, lapisan) · `render_teks` · `render_panel` (motif bingkai, ikon) ·
 mixin Renderer: `render_elemen` (judul/kartu/info/chip/…), `render_depth`, `render_perangkat` (Remotion), `render_kamera`
-(transisi & kamera), `render_audio` (SFX & loudness). Nama lama tetap bisa diimpor dari `render`.
+(transisi & kamera), `render_audio` (SFX & loudness), `render_ketukan`, `render_menyatu` (grain, grade, arah bayangan). Nama lama tetap bisa diimpor dari `render`.
 
 ## Dependensi & venv
 Pipeline dijalankan dari venv proyek `.venv/` — **jangan pasang whisperx/mediapipe ke Python global**: keduanya
@@ -67,7 +67,7 @@ Font dicari di `pipeline/fonts/`, lalu folder font sistem.
 | aset.crop | `{"x": 0.5}` posisi crop horizontal 0–1 (sumber landscape) / `{"y": …}` |
 | aset.musik | `"path"`, `"bawaan:pulsa"`/`"bawaan:lembut"`/`"bawaan:lofi"` (sintesis `musik.py`), atau `{"file": …, "db": -22, "fade_masuk": 0.3, "fade_keluar": 1.5}` — di-loop, di-duck terhadap suara, fade masuk/keluar (selesai tepat di akhir video) |
 | koreografi | `nama@versi` koreografi asal preset (QA K09 memakai `variasi_min`-nya) |
-| warna.filter | filter ffmpeg color correction, mis. `"eq=brightness=0.02:saturation=1.05,colortemperature=5600"` |
+| warna.filter | filter ffmpeg color correction, mis. `"eq=brightness=0.02:saturation=1.05,colortemperature=5600"` — koreksi exposure/WB saat ingest (K04.3); look gaya diterapkan terpisah oleh grade K10 saat render |
 | transkrip | `{"bahasa": "id", "model": "large-v3", "backend": opsional}` |
 | roto | `{"backend": "mediapipe" / "rembg" / "eksternal", "halus": 0.3}` |
 | token_override | timpa token khusus proyek ini (hindari; lebih baik versi gaya baru) |
@@ -165,6 +165,22 @@ Video bermusik latar otomatis sinkron dengan ketukannya (`ketukan.py`, `render_k
 4. Riser berpuncak tepat di potongan masuk cutaway ≥ 2,5 s (jarak antar-riser ≥ 6 s).
 Hasil di layout `ketukan` dan detail K06.3; ketukan dihitung titik sinkron sah di K05.5/K03.3. Beat-sheet:
 `"ketukan": {"aktif": false}` mematikan; `toleransi`, `toleransi_potong`, `riser` dapat diatur.
+
+## Grafis menyatu dengan rekaman (K10)
+Otomatis di setiap video (`render_menyatu.py`, fungsi di `menyatu.py`; konteks K10 ditambahkan Proyek walau gaya/manifest
+tidak mencantumkannya):
+1. **Grain** (token `grain`: kekuatan σ level 8-bit, ukuran butir px, kroma, midtone) ditambahkan di komposit akhir —
+   rekaman, panel, teks, caption dan overlay Remotion berbutir sama. Derau ditentukan nomor frame (berurutan = paralel).
+2. **Grade** (token `grade`: kontras, saturasi, suhu, angkat, split-tone `bayangan`/`sorot` = nama warna token) hanya
+   pada rekaman, b-roll dan PiP (bukan klip cutaway Remotion) → rekaman condong ke palet gaya. `manifest.warna.filter`
+   tetap koreksi ingest; grade diterapkan sesudahnya.
+3. **Arah bayangan**: terang sisi kiri/kanan wajah di 16 frame (cache/wajah.json, cadangan: bingkai) → `bayangan.offset`
+   diputar menjauhi sisi terang (maks `cahaya.sudut-maks`), dipakai teks/panel PIL, motif Remotion, bayangan efek kamera;
+   `bayangan.putar` memutar bayangan yang ditulis di komposisi (`remotion/src/lib/cahaya.ts`). Cache: cache/cahaya.json.
+Nilai khas per gaya di token gaya (bawaan TOKEN_00). Beat-sheet menimpa: `"grain": {"aktif": false}` / `{"kekuatan": 2}`,
+`"grade": {"aktif": false}` / `{"kekuatan": 0.5}`, `"bayangan": {"aktif": false}` / `{"sudut": -25}` (° dari bawah, + = kanan).
+Hasil di layout `menyatu`; QA K10.1 (derau grafis/rekaman di master ≥ `qa.grain-rasio-min`), K10.2 (ΔE rata-rata ≥
+`qa.grade-de-min`, ΔE wajah ≤ `qa.grade-wajah-de-maks`), K10.3 (bayangan menjauhi sisi terang).
 
 ## Zoom potong (E55)
 Otomatis pada video berekaman: bingkai lebar ↔ rapat bergantian per kalimat, dipotong di awal kata pertama, berpusat di

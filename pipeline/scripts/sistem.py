@@ -23,6 +23,9 @@ VERSI_SCRIPTS = "0.6"
 
 ROOT = Path(__file__).resolve().parents[2]
 
+# Konteks yang dijalankan pipeline untuk setiap video (bukan pilihan gaya): K10 grain/grade/arah bayangan (render_menyatu)
+KONTEKS_WAJIB = ("menyatu",)
+
 # Folder sementara semua proses pipeline (tempfile Python, ffmpeg, render-server Remotion & Chrome headless yang mewarisi
 # env) di dalam repo — drive data, bukan %TEMP% sistem di C: yang bisa penuh. Pindahkan dengan env VIDEO_TEMP.
 SEMENTARA = Path(os.environ.get("VIDEO_TEMP") or ROOT / ".sementara")
@@ -193,6 +196,9 @@ class Proyek:
         self.template_fm, _ = frontmatter(self.template.path)
         ref_konteks = m.get("konteks") or self.gaya_fm.get("konteks", [])
         self.konteks = [resolve("konteks", r) for r in ref_konteks]
+        for nama in KONTEKS_WAJIB:  # berlaku untuk setiap proyek, juga gaya/manifest lama yang belum mencantumkannya
+            if all(k.nama != nama for k in self.konteks):
+                self.konteks.append(resolve("konteks", nama))
         self.token_modul = [resolve("tokens", r) for r in self.gaya_fm.get("tokens", [])]
         tok: dict = {}
         for tm in self.token_modul:

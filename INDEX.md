@@ -39,6 +39,7 @@ Validasi otomatis: `python pipeline/scripts/video.py cek`
 | K07 | ekspor | konteks/KONTEKS_07_ekspor_v0.1.md | 0.1 | draft |
 | K08 | sound-design | konteks/KONTEKS_08_sound-design_v0.1.md | 0.1 | draft |
 | K09 | koreografi | konteks/KONTEKS_09_koreografi_v0.2.md | 0.2 | draft |
+| K10 | menyatu | konteks/KONTEKS_10_menyatu_v0.1.md | 0.1 | draft |
 
 ## Gaya (tokens + konteks)
 Contoh visual tiap gaya: `video.py katalog` → [gaya/katalog/katalog.png](gaya/katalog/katalog.png).

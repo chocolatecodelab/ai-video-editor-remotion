@@ -3,6 +3,7 @@ import { random, spring } from "remotion";
 import { PropsDasar, rgba, skalaPersepsi, warna } from "../lib/kontrak";
 import { ElemenUI, Jendela, pakaiDasar } from "../lib/dasar";
 import { HiasKata, progresHias } from "../lib/motif";
+import { putarBayangan } from "../lib/cahaya";
 
 // E31 judul-gaya: judul/hook dengan efek teks profesional khas gaya (token motif.judul):
 //   masuk  — pop (memantul), masker (naik dari balik garis masker), ketik (mesin ketik + kursor), slam (menghentak
@@ -67,9 +68,11 @@ export const JudulGaya: React.FC<JudulGayaProps> = (props) => {
   const bayangan: string[] = [];
   if (hiasan === "neon") bayangan.push(`0 0 ${px(10)}px ${rgba(w.aksen, 0.9)}`, `0 0 ${px(28)}px ${rgba(w.aksen, 0.6)}`);
   if (hiasan === "long-shadow") {
-    for (let k = 1; k <= 10; k++) bayangan.push(`${px(k * 1.2)}px ${px(k * 1.2)}px 0 ${rgba(gelap, 0.9)}`);
+    const [lx, ly] = putarBayangan(t, 1.2, 1.2); // searah cahaya rekaman (K10.3)
+    for (let k = 1; k <= 10; k++) bayangan.push(`${px(k * lx)}px ${px(k * ly)}px 0 ${rgba(gelap, 0.9)}`);
   }
-  if (el.stroke) bayangan.push(`0 ${px(4)}px ${px(10)}px rgba(0,0,0,0.45)`);
+  const [sx, sy] = putarBayangan(t, 0, 4);
+  if (el.stroke) bayangan.push(`${px(sx)}px ${px(sy)}px ${px(10)}px rgba(0,0,0,0.45)`);
   const glitch = hiasan === "glitch" && (dtk < 0.35 || (Math.floor(dtk * 8) % 23 === 0));
   const geser = glitch ? px(4 + 6 * random(`g${Math.floor(dtk * 30)}`)) : 0;
   if (glitch) bayangan.push(`${geser}px 0 0 rgba(255,0,80,0.75)`, `${-geser}px 0 0 rgba(0,220,255,0.75)`);

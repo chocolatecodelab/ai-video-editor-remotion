@@ -162,5 +162,15 @@
       "masuk": "slam",
       "hiasan": "long-shadow"
     }
+  },
+  "grain": {
+    "kekuatan": 4.0,
+    "ukuran": 1.6
+  },
+  "grade": {
+    "sorot-kekuatan": 0.03,
+    "kontras": 0.1,
+    "saturasi": 1.05,
+    "suhu": 0.1
   }
 }

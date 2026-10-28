@@ -156,5 +156,14 @@
       "masuk": "slam",
       "hiasan": "none"
     }
+  },
+  "grain": {
+    "kekuatan": 3.0,
+    "ukuran": 1.4
+  },
+  "grade": {
+    "sorot-kekuatan": 0.012,
+    "kontras": 0.08,
+    "saturasi": 0.94
   }
 }

@@ -166,5 +166,16 @@
       "masuk": "ketik",
       "hiasan": "glitch"
     }
+  },
+  "grain": {
+    "kekuatan": 2.6,
+    "ukuran": 1.3
+  },
+  "grade": {
+    "bayangan-kekuatan": 0.08,
+    "sorot-kekuatan": 0.012,
+    "kontras": 0.08,
+    "saturasi": 0.9,
+    "suhu": -0.12
   }
 }

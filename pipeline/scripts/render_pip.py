@@ -54,7 +54,7 @@ class PipMixin:
                 if j["_r"]:
                     j["_r"].tutup()
                 j["_r"] = Pembaca(j["file"], j["dari"] + (t - j["mulai"]), j["w"], j["h"], p.fps, cover=True)
-            isi = j["_r"].baca().astype(np.float32)
+            isi = self._grade_rekaman(j["_r"].baca()).astype(np.float32)  # K10.2: b-roll ikut grade gaya
             masuk = self.ease["standar"](min(1.0, (t - j["mulai"]) / 0.35))
             keluar = self.ease["keluar"](min(1.0, max(0.0, (t - (j["selesai"] - 0.25)) / 0.25)))
             op = masuk * (1 - keluar)

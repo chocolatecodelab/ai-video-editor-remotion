@@ -95,7 +95,10 @@
     "ukuran-min-px": 40,
     "karakter-per-detik-maks": 17,
     "tahan-min": 1.2,
-    "durasi-toleransi-s": 3
+    "durasi-toleransi-s": 3,
+    "grain-rasio-min": 0.6,
+    "grade-de-min": 0.8,
+    "grade-wajah-de-maks": 6.0
   },
   "caption": {
     "mode": "aktif",
@@ -614,5 +617,32 @@
     "qa-tutup-rata": 0.3,
     "qa-tutup-maks": 0.45,
     "_catatan": "Teks rotoscope di ATAS kepala: dasar huruf boleh tertutup ≤ tutup-maks tinggi huruf (penataan render.py); QA K02.3 mengukur bagian huruf tertutup per frame."
+  },
+  "grain": {
+    "aktif": true,
+    "kekuatan": 2.5,
+    "ukuran": 1.4,
+    "kroma": 0.2,
+    "midtone": 0.6
+  },
+  "grade": {
+    "aktif": true,
+    "kekuatan": 1.0,
+    "bayangan": "latar",
+    "bayangan-kekuatan": 0.06,
+    "sorot": "aksen",
+    "sorot-kekuatan": 0.02,
+    "kontras": 0.05,
+    "saturasi": 1.0,
+    "suhu": 0.0,
+    "angkat": 0.0
+  },
+  "cahaya": {
+    "aktif": true,
+    "sampel": 16,
+    "asimetri-penuh": 0.15,
+    "sudut-maks": 40,
+    "keyakinan-min": 0.35,
+    "sudut-batas": 60
   }
 }

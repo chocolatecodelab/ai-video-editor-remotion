@@ -276,12 +276,13 @@ class KameraMixin:
             return
         sub = img[b0 - y:b1 - y, a0 - x:a1 - x]
         m = np.ones(sub.shape[:2], np.float32) if mask is None else mask[b0 - y:b1 - y, a0 - x:a1 - x]
-        if bayangan:
-            off = self.p.px(18)
-            sb0, sb1 = min(H, b0 + off), min(H, b1 + off)
-            reg = dasar[sb0:sb1, a0:a1]
-            ms = cv2.GaussianBlur(m[:sb1 - sb0], (0, 0), self.p.px(16))[..., None] * 0.45
-            reg *= 1 - ms
+        if bayangan:  # jatuh searah cahaya rekaman (K10.3, render_menyatu); bawaan lurus ke bawah
+            ux, uy = getattr(self, "arah_bayangan", (0.0, 1.0))
+            dx, dy = int(round(ux * self.p.px(18))), int(round(uy * self.p.px(18)))
+            xa, ya, xb, yb = max(0, a0 + dx), max(0, b0 + dy), min(W, a1 + dx), min(H, b1 + dy)
+            if xb > xa and yb > ya:
+                ms = cv2.GaussianBlur(m, (0, 0), self.p.px(16)) * 0.45
+                dasar[ya:yb, xa:xb] *= 1 - ms[ya - b0 - dy:yb - b0 - dy, xa - a0 - dx:xb - a0 - dx, None]
         reg = dasar[b0:b1, a0:a1]
         reg[:] = sub * m[..., None] + reg * (1 - m[..., None])
 

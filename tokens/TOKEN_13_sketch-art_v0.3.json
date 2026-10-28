@@ -148,5 +148,17 @@
       "masuk": "ketik",
       "hiasan": "none"
     }
+  },
+  "grain": {
+    "kekuatan": 4.0,
+    "ukuran": 1.6
+  },
+  "grade": {
+    "bayangan-kekuatan": 0.04,
+    "sorot-kekuatan": 0.0,
+    "kontras": 0.03,
+    "saturasi": 0.88,
+    "suhu": 0.03,
+    "angkat": 0.02
   }
 }
