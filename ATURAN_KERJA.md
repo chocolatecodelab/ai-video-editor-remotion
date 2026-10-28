@@ -73,3 +73,12 @@ Setiap kali menyerahkan hasil, akhiri dengan daftar singkat ide upgrade ("jangan
 - **Selalu tingkatkan kualitas** dibanding video sebelumnya: tiap video minimal satu peningkatan nyata (efek baru, transisi lebih halus, hook lebih kuat), lalu simpan yang bagus sebagai modul pakai-ulang (item 10).
 - Standar hasil: **profesional, premium, sinematik — tidak pernah terlihat generik/template AI** (hindari gradien ungu default, animasi fade/slide polos seragam, teks tengah tanpa hierarki, stok ikon generik).
 - Batasan yang tetap berlaku: brand klien (mis. OTCA §5), alur storyboard → persetujuan (§1), spesifikasi ekspor (§2), dan QA LULUS.
+
+## 9. Penyimpanan footage & hasil (aturan tetap Zar, 2026-10-28)
+
+Berlaku untuk video **baru** saja. File OTCA yang sudah ada tetap di folder file proyek (jangan dipindah).
+
+- **Penyimpanan utama = laptop:** `video-system\proyek\<proyek>\` menyimpan footage mentah, aset, dan hasil (`out/<proyek>.mp4`).
+- **Folder file proyek (cloud) = transit saja:** dipakai untuk upload footage saat laptop mati dan untuk berbagi hasil ke HP. Setelah laptop menyala, **pindahkan** file transit ke `proyek\<proyek>\` lalu bersihkan salinan transit (tanya Zar sebelum menghapus).
+- **Backup:** sarankan Zar mem-backup `proyek\` secara berkala ke Google Drive atau disk eksternal (folder ini di-`.gitignore`, tidak ikut git).
+- File sementara tetap mengikuti §3 (`.sementara`, D:).
