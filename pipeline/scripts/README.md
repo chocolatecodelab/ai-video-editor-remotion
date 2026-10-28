@@ -140,7 +140,8 @@ berbeda ≥ variasi_min, transisi tidak di hook & ≤ 1 per beat.
 
 ## Loudness akhir (K06)
 Setelah loudnorm, render mengukur ulang; bila meleset (video tanpa suara/musik) → koreksi gain + limiter oversampling 4×
-sampai −14 LUFS & true-peak ≤ −1,5 dBTP (`audio.akhir` di layout.json).
+sampai −14 LUFS & true-peak ≤ −2 dBTP (`audio.akhir` di layout.json) — headroom 1 dB di bawah token −1 untuk overshoot AAC
+saat ekspor (K06.2 diukur di mp4).
 
 ## Suara (K08)
 Elemen **tanpa** field `sfx` otomatis berbunyi menurut token `sfx.peta` (tipe elemen → {bunyi, kelas}); level per kelas

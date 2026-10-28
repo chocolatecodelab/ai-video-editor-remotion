@@ -11,7 +11,9 @@ from render_ketukan import sumber_musik
 from sistem import GagalPipeline, jalankan, loudnorm_2pass, sha_file, ukur_loudness
 
 
-MARGIN_TP_LOSSY = 0.5  # K06.2: headroom dB di master untuk overshoot encoder AAC saat ekspor (terukur ±0,1 dB)
+# K06.2: headroom dB di master untuk overshoot encoder AAC saat ekspor → plafon master −2 dBTP (token −1). Terukur
+# hingga +0,7 dB pada campuran musik + riser + suara (life-isnt-a-race: master −1,5 → mp4 −0,8); 0,5 tidak cukup.
+MARGIN_TP_LOSSY = 1.0
 FADE_MASUK_MUSIK = 0.3   # s — tanpa klik di awal
 FADE_KELUAR_MUSIK = 1.5  # s — musik berakhir lembut tepat di akhir video, bukan terpotong
 

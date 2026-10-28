@@ -318,3 +318,8 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
   ([0, 6] → [−4, 5]); derau grafis/rekaman 1,99 (sebelumnya grafis bersih); grade kertas-tipografi ΔE 3,2 (wajah 3,75).
   K10.1–K10.3 LULUS. Temuan di luar K10: K06.2 GAGAL di mp4 (master −1,5 dBTP → AAC −0,8) setelah campuran audio baru
   dari sinkron ketukan/riser — margin `MARGIN_TP_LOSSY` 0,5 dB tidak cukup.
+
+## 2026-10-28 — true peak setelah ekspor (K06.2)
+- render_audio `MARGIN_TP_LOSSY` 0,5 → 1,0 dB: plafon true-peak master −2 dBTP (token −1), loudness tetap −14 LUFS.
+  Pemicu: uji "Life Isn't a Race" setelah sinkron ketukan/riser — master −1,5 dBTP menjadi −0,8 di mp4 (overshoot AAC
+  +0,7 dB), K06.2 GAGAL.
