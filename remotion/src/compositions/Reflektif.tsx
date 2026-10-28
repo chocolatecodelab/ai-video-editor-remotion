@@ -43,6 +43,9 @@ export type KinetikKataElemen = ElemenUI & {
   jadwal: { kata: number[][]; frasa: [number, number][] };
 };
 const PEGAS_KATA = { damping: 200, stiffness: 170, mass: 0.7 };
+// Frasa yang keluar naik ke balik masker di tepi atas kotak elemen (clip-path hanya sisi atas): tetap di zona aman yang
+// ditata pipeline (K00.1) walau elemen menempel di tepi atas zona, tanpa menggeser posisi teks (kontras K01.4 tetap).
+const KELUAR_NAIK = 26;
 /** Satu kata: naik dari balik masker saat diucapkan, dengan motion blur vertikal selama bergerak cepat. */
 const KataMasuk: React.FC<{ k: KataKinetik; tk: number; f: number; fps: number; dtk: number; tinggi: number; motif: Motif;
                             aksen: string; seed: string; px: (v: number) => number }> = ({ k, tk, f, fps, dtk, tinggi, motif, aksen, seed, px }) => {
@@ -72,7 +75,7 @@ export const KinetikKata: React.FC<PropsDasar<KinetikKataElemen>> = (props) => {
   const j = el.jadwal;
   return (
     <Wadah wadah={wadah}>
-      <div style={{ position: "relative", width: "100%" }}>
+      <div style={{ position: "relative", width: "100%", clipPath: `inset(0px -${props.W}px -${props.H}px -${props.W}px)` }}>
         {el.frasa.map((kata, fi) => {
           const [a, b] = j.frasa[fi];
           if (dtk < a - 0.05 || dtk > b + 0.02) return null;
@@ -82,8 +85,8 @@ export const KinetikKata: React.FC<PropsDasar<KinetikKataElemen>> = (props) => {
           const ukuran = u.judul * (el.skala_teks ?? 1) * (n <= 12 ? 1.3 : n <= 22 ? 1.06 : 0.9);
           const garis = interpolate(dtk, [a, a + 0.5], [0, 1], jepit);
           return (
-            <div key={fi} style={{ position: fi === 0 ? "relative" : "absolute", top: 0, left: 0, right: 0, textAlign: "center",
-                                   opacity: 1 - pergi, translate: `0 ${-pergi * px(26)}px` }}>
+            <div key={fi} style={{ position: fi === 0 ? "relative" : "absolute", top: 0, left: 0, right: 0,
+                                   textAlign: "center", opacity: 1 - pergi, translate: `0 ${-pergi * px(KELUAR_NAIK)}px` }}>
               {/* garis editorial pendek di atas frasa (aksen gaya), tergambar dari tengah */}
               <div style={{ width: px(120), height: px(5), margin: `0 auto ${px(18)}px`, background: w.aksen, scale: `${garis} 1` }} />
               <div style={{ ...font("judul"), fontSize: ukuran, lineHeight: 1.14, color: w.utama,

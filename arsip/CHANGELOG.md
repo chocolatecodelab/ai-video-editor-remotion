@@ -323,3 +323,9 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
 - render_audio `MARGIN_TP_LOSSY` 0,5 → 1,0 dB: plafon true-peak master −2 dBTP (token −1), loudness tetap −14 LUFS.
   Pemicu: uji "Life Isn't a Race" setelah sinkron ketukan/riser — master −1,5 dBTP menjadi −0,8 di mp4 (overshoot AAC
   +0,7 dB), K06.2 GAGAL.
+
+## 2026-10-28 — teks kinetik tetap di zona aman saat keluar (K00.1)
+- remotion KinetikKata (E51): frasa yang digantikan (naik 26 px + pudar) kini naik ke balik masker di tepi atas kotak
+  elemen (clip-path hanya sisi atas), serasi dengan kata yang masuk dari balik masker. Sebelumnya elemen di posisi atas
+  keluar 10–11 px dari zona aman saat animasi keluar (peringatan K00.1, uji "Life Isn't a Race"). Posisi teks tidak
+  digeser: percobaan memberi ruang 26 px di atas frasa justru memindahkan kata aksen ke latar lain (K01.4 2,5 < 3).
