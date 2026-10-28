@@ -128,6 +128,7 @@ def bangun_props(p: Proyek) -> dict:
         "zoom": zoom, "adegan": adegan, "ketukan": irama,
         "hook": {k: v for k, v in {**HOOK_BAWAAN, **(cfg.get("hook") or {})}.items() if k != "sfx"},
         **({"menyatu": cfg["menyatu"]} if "menyatu" in cfg else {}),
+        **({"logo": siapkan_logo(p, cfg["logo"])} if cfg.get("logo") else {}),
         "kata": [{"w": k["w"], "s": k["s"], "e": k["e"]} for k in kata],
         "caption": {"y": cfg.get("caption_y", cfg.get("tinggi_panggung", p.H // 2)), "kata_maks": cap["kata-maks"],
                     "karakter_maks": cap["karakter-maks-baris"], "jeda_pecah": cap["jeda-pecah"]},
@@ -141,6 +142,22 @@ def salin_footage(p: Proyek) -> Path:
     if not tujuan.exists() or tujuan.stat().st_mtime < p.ingest_video.stat().st_mtime:
         shutil.copy(p.ingest_video, tujuan)
     return tujuan
+
+
+def siapkan_logo(p: Proyek, cfg: dict) -> dict:
+    """Logo klien (split.json `logo`: file di aset, lebar_atas/lebar_besar/y_atas/y_besar px, hook_s) → remotion/public/proyek/<id>/."""
+    from PIL import Image
+
+    src = p.path_aset(cfg["file"])
+    if not src or not src.exists():
+        raise GagalPipeline(f"logo '{cfg['file']}' tidak ada")
+    tujuan = rj.DIR / "public" / "proyek" / p.dir.name / src.name
+    tujuan.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy(src, tujuan)
+    w, h = Image.open(src).size
+    return {"src": f"proyek/{p.dir.name}/{src.name}", "rasio": h / w, "lebar_atas": cfg.get("lebar_atas", 300),
+            "lebar_besar": cfg.get("lebar_besar", 780), "y_atas": cfg.get("y_atas", 302), "y_besar": cfg.get("y_besar", 556),
+            "hook_s": cfg.get("hook_s", 1.0)}
 
 
 def tulis_props(p: Proyek) -> Path:

@@ -1,0 +1,726 @@
+{
+  "_catatan": "OTCA v3 — layout split (L01 v0.2). Adegan otca-* dari remotion/src/split/AdeganOtca.tsx; waktu = anchor kata transkrip.",
+  "tinggi_panggung": 930,
+  "caption_y": 930,
+  "footage": {
+    "geser_y": 560,
+    "titik_zoom_y": 950
+  },
+  "logo": {
+    "file": "aset/grafis/logo-otca.png",
+    "lebar_atas": 300,
+    "lebar_besar": 780,
+    "y_atas": 302,
+    "y_besar": 556,
+    "hook_s": 1.0
+  },
+  "adegan": [
+    {
+      "modul": "otca-sapa",
+      "mulai": 0,
+      "selesai": {
+        "kata": "anak",
+        "offset": -0.1
+      },
+      "t": {
+        "sapa": {
+          "kata": "halo",
+          "offset": 0.2
+        },
+        "hati": {
+          "kata": "hati-hati"
+        }
+      },
+      "keluar": "iris",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-sertifikat-kampus",
+      "mulai": {
+        "kata": "anak",
+        "offset": -0.1
+      },
+      "selesai": {
+        "kata": "karena",
+        "offset": -0.5
+      },
+      "t": {
+        "sertifikat": {
+          "kata": "sertifikat"
+        },
+        "centang": {
+          "kata": "jerman"
+        },
+        "belum": {
+          "kata": "belum"
+        },
+        "siap": {
+          "kata": "siap"
+        }
+      },
+      "masuk": "iris",
+      "keluar": "iris",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-tangga",
+      "mulai": {
+        "kata": "karena",
+        "offset": -0.5
+      },
+      "selesai": {
+        "kata": "tapi",
+        "offset": -0.2
+      },
+      "t": {
+        "naik": {
+          "kata": "sertifikat",
+          "ke": 2
+        },
+        "puncak": {
+          "kata": "dicapai"
+        }
+      },
+      "masuk": "iris",
+      "keluar": "iris",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-timbangan",
+      "mulai": {
+        "kata": "tapi",
+        "offset": -0.2
+      },
+      "selesai": {
+        "kata": "perkuliahan",
+        "offset": -0.4
+      },
+      "t": {
+        "timbangan": {
+          "kata": "belum",
+          "ke": 2
+        },
+        "sertifikat": {
+          "kata": "tentu",
+          "ke": 2
+        },
+        "akademik": {
+          "kata": "akademik"
+        },
+        "harian": {
+          "kata": "sehari-harinya"
+        }
+      },
+      "masuk": "iris",
+      "keluar": "iris",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-ruang-kuliah",
+      "mulai": {
+        "kata": "perkuliahan",
+        "offset": -0.4
+      },
+      "selesai": {
+        "kata": "jadi",
+        "offset": -0.4
+      },
+      "t": {
+        "telinga": {
+          "kata": "memahami"
+        },
+        "dosen": {
+          "kata": "dosen"
+        },
+        "buku": {
+          "kata": "materi"
+        },
+        "diskusi": {
+          "kata": "berdiskusi"
+        },
+        "tangan": {
+          "kata": "bertanya"
+        },
+        "mic": {
+          "kata": "pendapat"
+        }
+      },
+      "masuk": "iris",
+      "keluar": "iris",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-coret",
+      "mulai": {
+        "kata": "jadi",
+        "offset": -0.4
+      },
+      "selesai": {
+        "kata": "perhatikan",
+        "offset": -0.3
+      },
+      "t": {
+        "coret": {
+          "kata": "jangan"
+        }
+      },
+      "masuk": "iris",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-radar",
+      "mulai": {
+        "kata": "perhatikan",
+        "offset": -0.3
+      },
+      "selesai": {
+        "kata": "karena",
+        "ke": 2,
+        "offset": -0.5
+      },
+      "t": {
+        "dengar": {
+          "kata": "mendengar"
+        },
+        "bicara": {
+          "kata": "berbicara"
+        },
+        "tulis": {
+          "kata": "menulis"
+        },
+        "baca": {
+          "kata": "membaca"
+        },
+        "seimbang": {
+          "kata": "seimbang"
+        },
+        "guna": {
+          "kata": "digunakan"
+        }
+      },
+      "masuk": "match",
+      "keluar": "iris"
+    },
+    {
+      "modul": "otca-bukti-gear",
+      "mulai": {
+        "kata": "karena",
+        "ke": 2,
+        "offset": -0.5
+      },
+      "selesai": {
+        "kata": "klik",
+        "offset": -0.3
+      },
+      "t": {
+        "bukti": {
+          "kata": "bukti"
+        },
+        "tapi": {
+          "kata": "tapi",
+          "ke": 2
+        },
+        "terpakai": {
+          "kata": "terpakai"
+        }
+      },
+      "masuk": "iris",
+      "keluar": "iris",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-pesawat-peta",
+      "mulai": {
+        "kata": "klik",
+        "offset": -0.3
+      },
+      "selesai": {
+        "kata": "sebelum",
+        "offset": -0.1
+      },
+      "t": {
+        "terbang": {
+          "kata": "klik",
+          "offset": 0.3
+        }
+      },
+      "masuk": "iris",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-kartu",
+      "mulai": {
+        "kata": "sebelum",
+        "offset": -0.1
+      },
+      "selesai": null,
+      "masuk": "match"
+    }
+  ],
+  "zoom": [
+    [
+      0,
+      1.0
+    ],
+    [
+      {
+        "kata": "anak",
+        "offset": -0.1
+      },
+      1.07
+    ],
+    [
+      {
+        "kata": "karena",
+        "offset": -0.5
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "tapi",
+        "offset": -0.2
+      },
+      1.07
+    ],
+    [
+      {
+        "kata": "perkuliahan",
+        "offset": -0.4
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "jadi",
+        "offset": -0.4
+      },
+      1.08
+    ],
+    [
+      {
+        "kata": "perhatikan",
+        "offset": -0.3
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "karena",
+        "ke": 2,
+        "offset": -0.5
+      },
+      1.07
+    ],
+    [
+      {
+        "kata": "klik",
+        "offset": -0.3
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "sebelum",
+        "offset": -0.1
+      },
+      1.06
+    ]
+  ],
+  "musik": {
+    "file": "bawaan:pulsa",
+    "db": -21,
+    "fade_masuk": 0.6,
+    "fade_keluar": 2.0
+  },
+  "sfx": [
+    {
+      "jenis": "whoosh-panjang-1",
+      "t": 0.1,
+      "db": -22
+    },
+    {
+      "jenis": "kilau-1",
+      "t": {
+        "kata": "halo",
+        "offset": 0.2
+      },
+      "db": -21
+    },
+    {
+      "jenis": "hit-2",
+      "t": {
+        "kata": "hati-hati"
+      },
+      "db": -19
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": {
+        "kata": "anak",
+        "offset": -0.2
+      },
+      "db": -20
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "sertifikat"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "ding-benar-1",
+      "t": {
+        "kata": "jerman"
+      },
+      "db": -21
+    },
+    {
+      "jenis": "tick-1",
+      "t": {
+        "kata": "belum"
+      },
+      "db": -24
+    },
+    {
+      "jenis": "pop-3",
+      "t": {
+        "kata": "siap"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "whoosh-pendek-2",
+      "t": {
+        "kata": "karena",
+        "offset": -0.55
+      },
+      "db": -20
+    },
+    {
+      "jenis": "tick-1",
+      "t": {
+        "kata": "sertifikat",
+        "ke": 2
+      },
+      "db": -24
+    },
+    {
+      "jenis": "tick-2",
+      "t": {
+        "kata": "sertifikat",
+        "ke": 2,
+        "offset": 0.93
+      },
+      "db": -24
+    },
+    {
+      "jenis": "tick-3",
+      "t": {
+        "kata": "sertifikat",
+        "ke": 2,
+        "offset": 1.87
+      },
+      "db": -24
+    },
+    {
+      "jenis": "tick-1",
+      "t": {
+        "kata": "sertifikat",
+        "ke": 2,
+        "offset": 2.8
+      },
+      "db": -23
+    },
+    {
+      "jenis": "kilau-1",
+      "t": {
+        "kata": "dicapai"
+      },
+      "db": -21
+    },
+    {
+      "jenis": "whoosh-pendek-3",
+      "t": {
+        "kata": "tapi",
+        "offset": -0.25
+      },
+      "db": -20
+    },
+    {
+      "jenis": "ketuk-1",
+      "t": {
+        "kata": "belum",
+        "ke": 2
+      },
+      "db": -22
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "tentu",
+        "ke": 2
+      },
+      "db": -23
+    },
+    {
+      "jenis": "gores-1",
+      "t": {
+        "kata": "akademik"
+      },
+      "db": -20
+    },
+    {
+      "jenis": "pop-3",
+      "t": {
+        "kata": "sehari-harinya"
+      },
+      "db": -21
+    },
+    {
+      "jenis": "ketuk-2",
+      "t": {
+        "kata": "sehari-harinya",
+        "offset": 0.25
+      },
+      "db": -20
+    },
+    {
+      "jenis": "swoosh-balik-1",
+      "t": {
+        "kata": "perkuliahan",
+        "offset": -0.45
+      },
+      "db": -21
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "memahami"
+      },
+      "db": -23
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "dosen"
+      },
+      "db": -23
+    },
+    {
+      "jenis": "pop-3",
+      "t": {
+        "kata": "materi"
+      },
+      "db": -23
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "berdiskusi"
+      },
+      "db": -23
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "bertanya"
+      },
+      "db": -23
+    },
+    {
+      "jenis": "kilau-2",
+      "t": {
+        "kata": "pendapat"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": {
+        "kata": "jadi",
+        "offset": -0.45
+      },
+      "db": -20
+    },
+    {
+      "jenis": "gores-2",
+      "t": {
+        "kata": "jangan"
+      },
+      "db": -19
+    },
+    {
+      "jenis": "gores-1",
+      "t": {
+        "kata": "jangan",
+        "offset": 0.25
+      },
+      "db": -20
+    },
+    {
+      "jenis": "glitch-1",
+      "t": {
+        "kata": "hanya"
+      },
+      "db": -24
+    },
+    {
+      "jenis": "swoosh-balik-2",
+      "t": {
+        "kata": "perhatikan",
+        "offset": -0.35
+      },
+      "db": -21
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "mendengar"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "berbicara"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "pop-3",
+      "t": {
+        "kata": "menulis"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "membaca"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "riser-1",
+      "t": {
+        "kata": "cukup",
+        "offset": -0.3
+      },
+      "db": -24
+    },
+    {
+      "jenis": "kilau-2",
+      "t": {
+        "kata": "seimbang"
+      },
+      "db": -20
+    },
+    {
+      "jenis": "ding-benar-1",
+      "t": {
+        "kata": "digunakan"
+      },
+      "db": -21
+    },
+    {
+      "jenis": "whoosh-pendek-2",
+      "t": {
+        "kata": "karena",
+        "ke": 2,
+        "offset": -0.55
+      },
+      "db": -20
+    },
+    {
+      "jenis": "glitch-2",
+      "t": {
+        "kata": "bukti"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "riser-2",
+      "t": {
+        "kata": "tapi",
+        "ke": 2,
+        "offset": -0.8
+      },
+      "db": -24
+    },
+    {
+      "jenis": "hit-2",
+      "t": {
+        "kata": "tapi",
+        "ke": 2
+      },
+      "db": -20
+    },
+    {
+      "jenis": "kilau-1",
+      "t": {
+        "kata": "terpakai"
+      },
+      "db": -20
+    },
+    {
+      "jenis": "whoosh-panjang-2",
+      "t": {
+        "kata": "klik",
+        "offset": -0.35
+      },
+      "db": -21
+    },
+    {
+      "jenis": "whoosh-panjang-1",
+      "t": {
+        "kata": "klik",
+        "offset": 0.3
+      },
+      "db": -22
+    },
+    {
+      "jenis": "kilau-2",
+      "t": {
+        "kata": "sebelum",
+        "offset": -0.2
+      },
+      "db": -20
+    },
+    {
+      "jenis": "hit-1",
+      "t": {
+        "kata": "sebelum",
+        "offset": -0.1
+      },
+      "db": -20
+    }
+  ]
+}

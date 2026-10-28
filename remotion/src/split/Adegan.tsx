@@ -6,6 +6,10 @@
 import React from "react";
 import { random } from "remotion";
 import { rgba } from "../lib/kontrak";
+import {
+  OtcaBuktiGear, OtcaCoret, OtcaKartu, OtcaPesawatPeta, OtcaRadar, OtcaRuangKuliah, OtcaSapa, OtcaSertifikatKampus, OtcaTangga,
+  OtcaTimbangan,
+} from "./AdeganOtca";
 import { INOUT, Konteks, detik, drift, gambar, mix, prog, progE, tk } from "./alat";
 import {
   Bendera, Bintang, Cahaya, Centang, G, IkonKecil, Kaca, KilauDef, Langit, Laptop, Mata, Menara, Orang, Perisai,
@@ -540,4 +544,14 @@ export const PUSTAKA: Record<string, React.FC<PropsAdegan>> = {
   "jalan-sendiri": JalanSendiri,
   "puncak-fajar": PuncakFajar,
   "kartu-akhir": KartuAkhir,
+  "otca-sapa": OtcaSapa,
+  "otca-sertifikat-kampus": OtcaSertifikatKampus,
+  "otca-tangga": OtcaTangga,
+  "otca-timbangan": OtcaTimbangan,
+  "otca-ruang-kuliah": OtcaRuangKuliah,
+  "otca-coret": OtcaCoret,
+  "otca-radar": OtcaRadar,
+  "otca-bukti-gear": OtcaBuktiGear,
+  "otca-pesawat-peta": OtcaPesawatPeta,
+  "otca-kartu": OtcaKartu,
 };

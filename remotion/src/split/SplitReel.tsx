@@ -5,7 +5,7 @@
 // Audio TIDAK di sini: suara, musik ber-ducking, dan SFX dicampur & di-master oleh split.py (K06).
 
 import React from "react";
-import { AbsoluteFill, Easing, OffthreadVideo, interpolate, random, staticFile, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Easing, Img, OffthreadVideo, interpolate, random, staticFile, useCurrentFrame } from "remotion";
 import { Tokens, rgba } from "../lib/kontrak";
 import { pakaiFontToken } from "../lib/font";
 import { Adegan, Konteks, Panggung, denyut, mix, prog } from "./alat";
@@ -33,6 +33,8 @@ export type SplitReelProps = {
   ketukan?: { bpm: number; titik?: number[]; denyut?: number } | null;
   /** Hook visual detik pertama (roadmap #7): punch-in panggung & talent, gelombang cincin, kilat cahaya. */
   hook?: { aktif?: boolean; kuat?: number; durasi?: number };
+  /** Logo klien permanen (OTCA): besar di tengah selama hook, meluncur ke slot atas, kembali besar di adegan `kartu` (modul otca-kartu). */
+  logo?: { src: string; rasio: number; lebar_atas: number; lebar_besar: number; y_atas: number; y_besar: number; hook_s: number };
   kata: Kata[];
   caption: { y: number; kata_maks: number; karakter_maks: number; jeda_pecah: number };
 };
@@ -172,6 +174,26 @@ const CincinIris: React.FC<{ pr: SplitReelProps; wr: Warna; p: Panggung }> = ({ 
   return null;
 };
 
+/** Logo klien: posisi/lebar mengikuti hook (besar → slot atas) dan adegan kartu akhir (slot atas → besar). */
+const LogoKlien: React.FC<{ pr: SplitReelProps; cx: number }> = ({ pr, cx }) => {
+  const f = useCurrentFrame();
+  const t = f / pr.fps;
+  const l = pr.logo;
+  if (!l) return null;
+  const kartu = pr.adegan.find((x) => x.modul === "otca-kartu");
+  const ez = (a: number, d: number) =>
+    interpolate(t, [a, a + d], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
+  const u1 = ez(l.hook_s, 0.6);
+  const u2 = kartu ? ez(kartu.mulai, 0.7) : 0;
+  const lebar = mix(mix(l.lebar_besar, l.lebar_atas, u1), l.lebar_besar * 0.92, u2);
+  const y = mix(mix(l.y_besar, l.y_atas, u1), l.y_besar, u2);
+  const kilap = Math.exp(-Math.abs(t - l.hook_s) / 0.25) * 0.5;
+  return (
+    <Img src={staticFile(l.src)} style={{ position: "absolute", left: cx - lebar / 2, top: y - (lebar * l.rasio) / 2, width: lebar,
+      filter: `drop-shadow(0 0 ${14 + 24 * kilap}px rgba(203,157,49,${0.45 + kilap}))` }} />
+  );
+};
+
 const IRIS_TUTUP = 0.3;
 const IRIS_BUKA = 0.5;
 const titikIris = (a: Adegan, p: Panggung): [number, number] => a.titik ?? [p.cx, p.tinggi * 0.48];
@@ -189,6 +211,11 @@ const Defs: React.FC<{ wr: Warna }> = ({ wr }) => (
         <stop offset="0" stopColor={wr.aksen} stopOpacity={0.45} />
         <stop offset="1" stopColor={wr.aksen} stopOpacity={0} />
       </radialGradient>
+      <linearGradient id="ot-emas" gradientUnits="userSpaceOnUse" x1="0" y1="300" x2="1080" y2="900">
+        <stop offset="0" stopColor={wr.aksen} />
+        <stop offset="0.5" stopColor={wr.aksen2} />
+        <stop offset="1" stopColor={wr.bahaya} />
+      </linearGradient>
       <radialGradient id="sr-cahaya2">
         <stop offset="0" stopColor={wr.aksen2} stopOpacity={0.45} />
         <stop offset="1" stopColor={wr.aksen2} stopOpacity={0} />
@@ -363,6 +390,7 @@ export const SplitReel: React.FC<SplitReelProps> = (pr) => {
           opacity: 0.12 * d, background: `radial-gradient(ellipse 55% 45% at 50% 50%, ${rgba(wr.aksen, 0.5)}, ${rgba(wr.aksen, 0)})`,
           ...pudarBawah(pr.gradasi) }} />
       ) : null}
+      <LogoKlien pr={pr} cx={p.cx} />
       <HookPembuka pr={pr} wr={wr} cx={hx} cy={hy} />
       <Sambungan pr={pr} wr={wr} />
       {pr.menyatu?.sapuan !== false ? <SapuanCahaya pr={pr} wr={wr} /> : null}
