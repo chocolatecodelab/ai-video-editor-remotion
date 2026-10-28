@@ -56,3 +56,20 @@ Item 1–3, 6, 8 sudah ada di pipeline. Di setiap edit baru, terapkan:
 Ide yang sudah disetujui untuk edit berikutnya: musik latar dengan auto-ducking, shape match cut, parallax 2.5D + sapuan cahaya emas pada ikon utama, hook visual lebih kuat di 1 detik pertama, modul adegan pakai-ulang.
 
 Setiap kali menyerahkan hasil, akhiri dengan daftar singkat ide upgrade ("jangan pernah merasa puas").
+
+## 7. Hemat token (disetujui Zar 2026-10-28)
+
+- Balasan chat gaya caveman: singkat, kata kecil. Kode, naskah, dan storyboard tetap kualitas penuh.
+- Storyboard/naskah/rencana disimpan di file, chat cukup link.
+- Baca file seperlunya (grep/head); log render cukup ringkasan error + hasil QA.
+- Revisi dikumpulkan jadi satu putaran, bukan banyak render kecil.
+- Tanpa preview Studio; pakai ulang modul adegan.
+- Matikan dengan "stop caveman".
+
+## 8. Kebebasan kreatif & upgrade terus (aturan tetap Zar, 2026-10-28)
+
+- Setiap edit **boleh bebas memakai ulang dan meremix** semua efek, preset, template, gaya, dan modul adegan yang sudah ada di `video-system` (lihat `INDEX.md`, `efek/`, katalog) — kombinasikan agar tiap video bervariasi, tidak monoton.
+- **Kebebasan penuh dalam desain motion di Remotion**: komposisi, transisi, tipografi kinetik, partikel, cahaya, parallax, dll. Tetap ikuti skill `remotion-best-practices` + kontrak proyek (token gaya, K05 gerak, K09 koreografi, zona aman).
+- **Selalu tingkatkan kualitas** dibanding video sebelumnya: tiap video minimal satu peningkatan nyata (efek baru, transisi lebih halus, hook lebih kuat), lalu simpan yang bagus sebagai modul pakai-ulang (item 10).
+- Standar hasil: **profesional, premium, sinematik — tidak pernah terlihat generik/template AI** (hindari gradien ungu default, animasi fade/slide polos seragam, teks tengah tanpa hierarki, stok ikon generik).
+- Batasan yang tetap berlaku: brand klien (mis. OTCA §5), alur storyboard → persetujuan (§1), spesifikasi ekspor (§2), dan QA LULUS.

@@ -10,9 +10,11 @@ Setelah mengubah skrip pipeline: `.venv\Scripts\python -m unittest discover -s p
 
 ## Aturan kerja Zar (wajib, detail di `ATURAN_KERJA.md`)
 
-- **Alur terkunci tiap edit video:** konsep + storyboard (still per adegan + VO/timing/SFX) → **persetujuan Zar** → pratinjau Remotion Studio → Zar setuju → render final → QA LULUS → commit. **Jangan pernah render final sebelum storyboard disetujui.**
+- **Alur terkunci tiap edit video:** konsep + storyboard (still per adegan + VO/timing/SFX) → **persetujuan Zar** → render final (tanpa pratinjau Studio, hemat token) → QA LULUS → commit. **Jangan pernah render final sebelum storyboard disetujui.**
 - **Ekspor:** hanya SATU file per proyek, `proyek/<proyek>/out/<proyek>.mp4` — 1080x1920, H.264, −14 LUFS, plafon master −2 dBTP.
 - **File sementara hanya di D:** `.sementara/` di repo (override env `VIDEO_TEMP`), termasuk uji manual (`.sementara\uji`). Jangan pernah ke C:/`%TEMP%`.
 - **Commit hanya hunk milik pekerjaan ini** (`git add -p` / path spesifik). Sesi lain mengubah file yang sama secara paralel; jangan `git add -A`, stash, checkout, atau reset perubahan orang lain. Push hanya setelah Zar setuju.
 - **Klien OTCA:** pakai brand OTCA (hitam dominan, emas #CB9D31, Montserrat) + split layout: separuh atas = motion graphics yang merepresentasikan ucapan talent (bukan teks), talent di separuh bawah.
 - **Roadmap premium per video:** terapkan item 4, 5, 7, 9, 10 (lihat `ATURAN_KERJA.md`) dan akhiri tiap penyerahan dengan daftar singkat ide upgrade.
+- **Kebebasan kreatif:** tiap edit bebas pakai ulang/remix efek, preset, template, modul di repo ini agar bervariasi; bebas penuh di desain motion Remotion (ikuti `remotion-best-practices`). Tiap video harus lebih baik dari sebelumnya — profesional, premium, tidak pernah terlihat generik/AI (§8).
+- **Hemat token:** chat singkat (caveman), storyboard di file, log ringkas, revisi digabung (§7).
