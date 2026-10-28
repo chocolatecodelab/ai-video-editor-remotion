@@ -1,0 +1,63 @@
+{
+  "proyek": "2026-10_lonely-now-stronger",
+  "judul": "Lonely Now, Stronger Tomorrow",
+  "status": "disetujui",
+  "skill": "video-editor@0.1",
+  "preset": null,
+  "gaya": "glass-tech@0.6",
+  "template": "hook-problem-solution@0.2",
+  "konteks": [
+    "zona-aman@0.2",
+    "caption@0.2",
+    "depth-typography@0.2",
+    "ingest@0.1",
+    "gerak@0.2",
+    "audio@0.1",
+    "ekspor@0.1",
+    "sound-design@0.1",
+    "koreografi@0.2"
+  ],
+  "platform": [
+    "reels"
+  ],
+  "aset": {
+    "rekaman": "aset/rekaman/take1.mp4",
+    "potong": [],
+    "crop": {
+      "x": 0.5
+    },
+    "musik": null
+  },
+  "warna": {
+    "filter": ""
+  },
+  "transkrip": {
+    "bahasa": "en",
+    "model": "large-v3"
+  },
+  "roto": {
+    "backend": "mediapipe",
+    "halus": 0.3
+  },
+  "token_override": {
+    "ingest": {
+      "tinggi-min": 470
+    },
+    "qa": {
+      "durasi-toleransi-s": 20,
+      "karakter-per-detik-maks": 23
+    }
+  },
+  "terpakai": null,
+  "riwayat": [],
+  "koreografi": null,
+  "seed": null,
+  "layout": "split",
+  "persetujuan": {
+    "split_sha": "4a8593673d5b31ed677118f33bd8cc89db2ce450f3863c102d1a368c6c34e0a1",
+    "waktu": "2026-10-28T18:02:13",
+    "storyboard": "https://claude.ai/artifact/WLc1npLtn1Ufw5Te4KcbbN",
+    "catatan": "Zar setuju storyboard 2026-10-28; kartu akhir tanpa teks."
+  },
+  "qa": "LULUS"
+}

@@ -202,6 +202,7 @@ Semua efek E01–E30 native. Generator slot memilih efek per fungsi sesuai gaya 
 | S01 | video-editor (skill) | pipeline/skill/SKILL.md (aktif: .claude/skills/video-editor/SKILL.md) | 0.2 | draft |
 | P01 | scripts | pipeline/scripts/ (`sistem.VERSI_SCRIPTS`) | 0.6 | draft |
 | R01 | remotion | remotion/ (Remotion 4.0.538, React; membaca tokens/ yang sama) | 0.1 | draft |
+| L01 | split-layout | pipeline/scripts/split.py + remotion/src/split/ (SplitReel; pustaka adegan: menara-sendiri, tujuan-pengorbanan, perisai-sunyi, siang-malam, timbangan-ragu, jalan-sendiri, puncak-fajar, kartu-akhir) — per proyek `split.json` | 0.1 | draft |
 
 ## Proyek
 | id | template | gaya | status |

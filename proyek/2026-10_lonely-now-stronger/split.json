@@ -1,0 +1,563 @@
+{
+  "_catatan": "Layout split (pipeline/scripts/split.py → Remotion SplitReel). Adegan dari pustaka remotion/src/split/Adegan.tsx; waktu = anchor kata transkrip.",
+  "tinggi_panggung": 930,
+  "caption_y": 930,
+  "footage": {
+    "geser_y": 560,
+    "titik_zoom_y": 950
+  },
+  "adegan": [
+    {
+      "modul": "menara-sendiri",
+      "mulai": 0,
+      "selesai": {
+        "kata": "you",
+        "ke": 2,
+        "offset": -0.15
+      },
+      "keluar": "match",
+      "t": {
+        "bangun": {
+          "kata": "building"
+        },
+        "masa_depan": {
+          "kata": "future"
+        },
+        "mimpi": {
+          "kata": "dream"
+        },
+        "mundur": {
+          "kata": "feels"
+        },
+        "sepi": {
+          "kata": "lonely"
+        }
+      }
+    },
+    {
+      "modul": "tujuan-pengorbanan",
+      "mulai": {
+        "kata": "you",
+        "ke": 2,
+        "offset": -0.15
+      },
+      "selesai": {
+        "kata": "and",
+        "ke": 1,
+        "offset": -0.1
+      },
+      "masuk": "match",
+      "t": {
+        "tujuan": {
+          "kata": "goals"
+        },
+        "kejar": {
+          "kata": "chase"
+        },
+        "korban": {
+          "kata": "sacrifices"
+        },
+        "buat": {
+          "kata": "make"
+        }
+      }
+    },
+    {
+      "modul": "perisai-sunyi",
+      "mulai": {
+        "kata": "and",
+        "ke": 1,
+        "offset": -0.1
+      },
+      "selesai": {
+        "kata": "while",
+        "offset": -0.2
+      },
+      "t": {
+        "perang": {
+          "kata": "battles"
+        },
+        "tak_ada": {
+          "kata": "nobody",
+          "ke": 1
+        },
+        "lihat": {
+          "kata": "sees"
+        }
+      }
+    },
+    {
+      "modul": "siang-malam",
+      "mulai": {
+        "kata": "while",
+        "offset": -0.2
+      },
+      "selesai": {
+        "kata": "and",
+        "ke": 2,
+        "offset": -0.15
+      },
+      "keluar": "match",
+      "t": {
+        "orang_lain": {
+          "kata": "others"
+        },
+        "nikmati": {
+          "kata": "enjoying"
+        },
+        "malam": {
+          "kata": "nights"
+        },
+        "jadi": {
+          "kata": "become"
+        },
+        "belum": {
+          "kata": "not",
+          "ke": 1
+        }
+      }
+    },
+    {
+      "modul": "timbangan-ragu",
+      "mulai": {
+        "kata": "and",
+        "ke": 2,
+        "offset": -0.15
+      },
+      "selesai": {
+        "kata": "but",
+        "offset": -0.15
+      },
+      "masuk": "match",
+      "t": {
+        "heran": {
+          "kata": "wonder"
+        },
+        "beban": {
+          "kata": "struggle"
+        },
+        "layak": {
+          "kata": "worth"
+        }
+      }
+    },
+    {
+      "modul": "jalan-sendiri",
+      "mulai": {
+        "kata": "but",
+        "offset": -0.15
+      },
+      "selesai": {
+        "kata": "because",
+        "offset": -0.2
+      },
+      "keluar": "match",
+      "t": {
+        "perjalanan": {
+          "kata": "journey"
+        },
+        "tidak_semua": {
+          "kata": "everyone"
+        },
+        "jalanmu": {
+          "kata": "path"
+        },
+        "oke": {
+          "kata": "okay"
+        },
+        "terus": {
+          "kata": "keep"
+        },
+        "tak_lihat": {
+          "kata": "nobody",
+          "ke": 2
+        }
+      }
+    },
+    {
+      "modul": "puncak-fajar",
+      "mulai": {
+        "kata": "because",
+        "offset": -0.2
+      },
+      "selesai": {
+        "kata": "reason",
+        "offset": 0.85
+      },
+      "masuk": "match",
+      "t": {
+        "suatu_hari": {
+          "kata": "one"
+        },
+        "terima_kasih": {
+          "kata": "thank"
+        },
+        "tak_menyerah": {
+          "kata": "not",
+          "ke": 3
+        },
+        "alasan": {
+          "kata": "every"
+        }
+      },
+      "keluar": "match"
+    },
+    {
+      "modul": "kartu-akhir",
+      "mulai": {
+        "kata": "reason",
+        "offset": 0.9
+      },
+      "selesai": null,
+      "masuk": "match"
+    }
+  ],
+  "zoom": [
+    [
+      0,
+      1.0
+    ],
+    [
+      {
+        "kata": "you",
+        "ke": 2
+      },
+      1.08
+    ],
+    [
+      {
+        "kata": "while"
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "and",
+        "ke": 2
+      },
+      1.08
+    ],
+    [
+      {
+        "kata": "but"
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "keep"
+      },
+      1.1
+    ],
+    [
+      {
+        "kata": "because"
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "not",
+        "ke": 3
+      },
+      1.06
+    ]
+  ],
+  "musik": {
+    "file": "bawaan:lembut",
+    "db": -19,
+    "rasio_duck": 5,
+    "fade_masuk": 0.6,
+    "fade_keluar": 2.0
+  },
+  "sfx": [
+    {
+      "jenis": "hit-1",
+      "t": 0.05,
+      "db": -17
+    },
+    {
+      "jenis": "whoosh-panjang-1",
+      "t": 0.1,
+      "db": -22
+    },
+    {
+      "jenis": "kilau-1",
+      "t": {
+        "kata": "dream"
+      },
+      "db": -21
+    },
+    {
+      "jenis": "swoosh-balik-1",
+      "t": {
+        "kata": "feels",
+        "offset": -0.1
+      },
+      "db": -21
+    },
+    {
+      "jenis": "ketuk-1",
+      "t": {
+        "kata": "lonely"
+      },
+      "db": -20
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "goals"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "tick-1",
+      "t": {
+        "kata": "sacrifices"
+      },
+      "db": -24
+    },
+    {
+      "jenis": "tick-2",
+      "t": {
+        "kata": "sacrifices",
+        "offset": 0.18
+      },
+      "db": -24
+    },
+    {
+      "jenis": "tick-3",
+      "t": {
+        "kata": "sacrifices",
+        "offset": 0.36
+      },
+      "db": -24
+    },
+    {
+      "jenis": "gores-1",
+      "t": {
+        "kata": "make",
+        "offset": -0.15
+      },
+      "db": -20
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": {
+        "kata": "and",
+        "ke": 1,
+        "offset": -0.15
+      },
+      "db": -19
+    },
+    {
+      "jenis": "hit-2",
+      "t": {
+        "kata": "battles"
+      },
+      "db": -19
+    },
+    {
+      "jenis": "glitch-2",
+      "t": {
+        "kata": "battles",
+        "offset": 0.55
+      },
+      "db": -23
+    },
+    {
+      "jenis": "glitch-3",
+      "t": {
+        "kata": "battles",
+        "offset": 1.1
+      },
+      "db": -23
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "nobody",
+        "ke": 1
+      },
+      "db": -24
+    },
+    {
+      "jenis": "whoosh-pendek-2",
+      "t": {
+        "kata": "while",
+        "offset": -0.25
+      },
+      "db": -19
+    },
+    {
+      "jenis": "kilau-2",
+      "t": {
+        "kata": "enjoying"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "whoosh-panjang-2",
+      "t": {
+        "kata": "spending"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "kilau-1",
+      "t": {
+        "kata": "become"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "tick-2",
+      "t": {
+        "kata": "not",
+        "ke": 1
+      },
+      "db": -24
+    },
+    {
+      "jenis": "swoosh-balik-2",
+      "t": {
+        "kata": "and",
+        "ke": 2,
+        "offset": -0.2
+      },
+      "db": -21
+    },
+    {
+      "jenis": "ketuk-1",
+      "t": {
+        "kata": "struggle"
+      },
+      "db": -20
+    },
+    {
+      "jenis": "ketuk-2",
+      "t": {
+        "kata": "struggle",
+        "offset": 0.2
+      },
+      "db": -20
+    },
+    {
+      "jenis": "ketuk-3",
+      "t": {
+        "kata": "struggle",
+        "offset": 0.4
+      },
+      "db": -20
+    },
+    {
+      "jenis": "pop-3",
+      "t": {
+        "kata": "worth"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "riser-1",
+      "t": {
+        "kata": "but",
+        "offset": -1.2
+      },
+      "db": -24
+    },
+    {
+      "jenis": "whoosh-panjang-1",
+      "t": {
+        "kata": "but",
+        "offset": -0.2
+      },
+      "db": -20
+    },
+    {
+      "jenis": "kilau-2",
+      "t": {
+        "kata": "path"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "ding-benar-1",
+      "t": {
+        "kata": "okay"
+      },
+      "db": -21
+    },
+    {
+      "jenis": "tick-1",
+      "t": {
+        "kata": "nobody",
+        "ke": 2
+      },
+      "db": -24
+    },
+    {
+      "jenis": "tick-2",
+      "t": {
+        "kata": "nobody",
+        "ke": 2,
+        "offset": 0.35
+      },
+      "db": -24
+    },
+    {
+      "jenis": "tick-3",
+      "t": {
+        "kata": "nobody",
+        "ke": 2,
+        "offset": 0.7
+      },
+      "db": -24
+    },
+    {
+      "jenis": "riser-2",
+      "t": {
+        "kata": "because",
+        "offset": -1.2
+      },
+      "db": -24
+    },
+    {
+      "jenis": "whoosh-panjang-2",
+      "t": {
+        "kata": "because",
+        "offset": -0.25
+      },
+      "db": -20
+    },
+    {
+      "jenis": "kilau-1",
+      "t": {
+        "kata": "thank"
+      },
+      "db": -21
+    },
+    {
+      "jenis": "hit-1",
+      "t": {
+        "kata": "not",
+        "ke": 3
+      },
+      "db": -20
+    },
+    {
+      "jenis": "glitch-1",
+      "t": {
+        "kata": "every"
+      },
+      "db": -23
+    },
+    {
+      "jenis": "kilau-2",
+      "t": {
+        "kata": "reason",
+        "offset": 0.95
+      },
+      "db": -20
+    }
+  ]
+}

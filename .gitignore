@@ -28,6 +28,8 @@ proyek/_pratinjau/
 
 # font token disalin otomatis untuk Remotion (remotion_jembatan.siapkan_font)
 remotion/public/fonts/
+# rekaman proyek untuk SplitReel (split.py salin_footage)
+remotion/public/proyek/
 # analisis referensi (video.py referensi)
 referensi/*/kontak.png
 referensi/*/ritme.png
