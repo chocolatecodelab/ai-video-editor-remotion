@@ -5,10 +5,10 @@
 // Audio TIDAK di sini: suara, musik ber-ducking, dan SFX dicampur & di-master oleh split.py (K06).
 
 import React from "react";
-import { AbsoluteFill, OffthreadVideo, random, staticFile, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Easing, OffthreadVideo, interpolate, random, staticFile, useCurrentFrame } from "remotion";
 import { Tokens, rgba } from "../lib/kontrak";
 import { pakaiFontToken } from "../lib/font";
-import { Adegan, Konteks, Panggung, mix, prog } from "./alat";
+import { Adegan, Konteks, Panggung, denyut, mix, prog } from "./alat";
 import { PUSTAKA } from "./Adegan";
 import { Warna, ambilWarna } from "./Ikon";
 
@@ -29,6 +29,10 @@ export type SplitReelProps = {
   footage: { src: string; geser_y: number; titik_zoom_y: number };
   zoom: [number, number][];
   adegan: Adegan[];
+  /** Grid ketukan musik (split.py sinkron_ketukan): `titik` = detik tiap ketukan di video → denyut halus grafis. */
+  ketukan?: { bpm: number; titik?: number[]; denyut?: number } | null;
+  /** Hook visual detik pertama (roadmap #7): punch-in panggung & talent, gelombang cincin, kilat cahaya. */
+  hook?: { aktif?: boolean; kuat?: number; durasi?: number };
   kata: Kata[];
   caption: { y: number; kata_maks: number; karakter_maks: number; jeda_pecah: number };
 };
@@ -58,7 +62,7 @@ const Footage: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
   while (i < z.length - 2 && z[i + 1][0] <= t) i++;
   const u = Math.min(1, (t - z[i][0]) / Math.max(0.01, z[i + 1][0] - z[i][0]));
   // push-in linear disengaja (gerak kamera konstan di dalam satu potongan, K05.1 pengecualian kamera)
-  const s = z[i][1] * (1 + 0.03 * u);
+  const s = z[i][1] * (1 + 0.03 * u) * hookZoom(pr, t, 0.06);
   const atas = pr.tinggi_panggung;
   const grade = pr.tokens.grade as { kontras: number; saturasi: number };
   const G = pr.gradasi;
@@ -108,6 +112,76 @@ const pudarBawah = (g: number): React.CSSProperties => {
   return { maskImage: m, WebkitMaskImage: m, maskRepeat: "no-repeat", WebkitMaskRepeat: "no-repeat" };
 };
 
+/** Punch-in hook: skala `1 + kuat·amp` di frame 0 → 1 saat hook selesai (ease-out kuat, tanpa overshoot). Frame 0
+ *  sudah penuh (tanpa fade) agar thumbnail/scroll langsung berisi gerak. */
+const hookZoom = (pr: SplitReelProps, t: number, amp: number) => {
+  const h = pr.hook;
+  if (h?.aktif === false) return 1;
+  const d = h?.durasi ?? 0.9;
+  const u = interpolate(t, [0, d], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.exp) });
+  return 1 + (h?.kuat ?? 1) * amp * (1 - u);
+};
+
+/** Hook detik pertama: gelombang cincin aksen dari pusat adegan pembuka + kilat cahaya yang meluruh. Ditumpuk di atas
+ *  panggung (screen) sehingga gerak terkuat video ada sebelum kalimat pertama selesai. */
+const HookPembuka: React.FC<{ pr: SplitReelProps; wr: Warna; cx: number; cy: number }> = ({ pr, wr, cx, cy }) => {
+  const f = useCurrentFrame();
+  const t = f / pr.fps;
+  const h = pr.hook;
+  const d = h?.durasi ?? 0.9;
+  if (h?.aktif === false || t > d + 0.1) return null;
+  const kuat = h?.kuat ?? 1;
+  const u = interpolate(t, [0, d], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
+  const kilat = Math.exp(-t / 0.18) * 0.55 * kuat;
+  const R = Math.hypot(pr.W, pr.tinggi_panggung);
+  return (
+    <svg width={pr.W} height={pr.tinggi_panggung} style={{ position: "absolute", top: 0, left: 0, mixBlendMode: "screen",
+      pointerEvents: "none", ...pudarBawah(pr.gradasi * 0.6) }}>
+      <circle cx={cx} cy={cy} r={mix(60, R * 0.75, u)} fill="none" stroke={wr.aksen} strokeWidth={mix(14, 1, u)}
+        opacity={(1 - u) * 0.9 * kuat} filter="url(#sr-glow)" />
+      <circle cx={cx} cy={cy} r={mix(20, R * 0.5, Math.min(1, u * 1.25))} fill="none" stroke="#FFFFFF" strokeWidth={mix(4, 0.5, u)}
+        opacity={(1 - u) * 0.5 * kuat} />
+      <circle cx={cx} cy={cy} r={R * 0.6} fill="url(#sr-cahaya)" opacity={kilat * 2} />
+      <rect width={pr.W} height={pr.tinggi_panggung} fill={wr.aksen} opacity={kilat * 0.35} />
+    </svg>
+  );
+};
+
+/** Cincin aksen yang "membawa" match cut iris: menyempit ke titik di akhir adegan lama lalu membuka dari titik yang sama
+ *  di adegan baru — satu bentuk, satu gerak, jatuh di ketukan (potongan sudah di-snap split.py). */
+const CincinIris: React.FC<{ pr: SplitReelProps; wr: Warna; p: Panggung }> = ({ pr, wr, p }) => {
+  const f = useCurrentFrame();
+  const t = f / pr.fps;
+  for (let i = 1; i < pr.adegan.length; i++) {
+    const a = pr.adegan[i];
+    if (a.masuk !== "iris" || pr.adegan[i - 1].keluar !== "iris") continue;
+    if (t < a.mulai - IRIS_TUTUP || t > a.mulai + IRIS_BUKA) continue;
+    const [x, y] = titikIris(a, p);
+    const R = jariPenuh(x, y, p);
+    const r = irisJari(t, a.mulai, R);
+    const u = t < a.mulai ? (a.mulai - t) / IRIS_TUTUP : (t - a.mulai) / IRIS_BUKA;
+    return (
+      <svg width={p.W} height={p.tinggi} style={{ position: "absolute", top: 0, left: 0, pointerEvents: "none",
+        ...pudarBawah(pr.gradasi * 0.6) }}>
+        <circle cx={x} cy={y} r={Math.max(2, r)} fill="none" stroke={wr.aksen} strokeWidth={mix(10, 3, u)}
+          opacity={mix(1, 0.2, u)} filter="url(#sr-glow)" />
+        <circle cx={x} cy={y} r={mix(26, 6, u)} fill={wr.aksen} opacity={(1 - u) * 0.9} filter="url(#sr-glow)" />
+      </svg>
+    );
+  }
+  return null;
+};
+
+const IRIS_TUTUP = 0.3;
+const IRIS_BUKA = 0.5;
+const titikIris = (a: Adegan, p: Panggung): [number, number] => a.titik ?? [p.cx, p.tinggi * 0.48];
+const jariPenuh = (x: number, y: number, p: Panggung) => Math.hypot(Math.max(x, p.W - x), Math.max(y, p.tinggi - y)) + 20;
+/** Jari-jari iris di detik t untuk potongan di `cut`: ease-in menutup (mempercepat ke titik), ease-out membuka. */
+const irisJari = (t: number, cut: number, R: number) =>
+  t < cut
+    ? R * interpolate(t, [cut - IRIS_TUTUP, cut], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.in(Easing.cubic) })
+    : R * interpolate(t, [cut, cut + IRIS_BUKA], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
+
 const Defs: React.FC<{ wr: Warna }> = ({ wr }) => (
   <svg width={0} height={0} style={{ position: "absolute" }}>
     <defs>
@@ -144,22 +218,35 @@ const Defs: React.FC<{ wr: Warna }> = ({ wr }) => (
 
 /** Wadah adegan: masuk/keluar blur-zoom (motif transisi glass-tech) atau "match" (silang pudar tanpa zoom, agar
  *  bentuk yang sama di dua adegan terbaca sebagai satu gerak). */
-const Wadah: React.FC<{ k: Konteks; wr: Warna; font: string; gradasi: number }> = ({ k, wr, font, gradasi }) => {
+const Wadah: React.FC<{ k: Konteks; wr: Warna; font: string; gradasi: number; titikKeluar?: [number, number] }> = ({
+  k, wr, font, gradasi, titikKeluar,
+}) => {
   const { a, p } = k;
   const Modul = PUSTAKA[a.modul];
   if (!Modul) throw new Error(`modul adegan tidak dikenal: ${a.modul}`);
   const t = k.f / k.fps;
   if (t < a.mulai - 0.05 || t > a.selesai + 0.5) return null;
-  const match = { masuk: a.masuk === "match", keluar: a.keluar === "match" };
+  const iris = { masuk: a.masuk === "iris", keluar: a.keluar === "iris" && !!titikKeluar };
+  if (iris.keluar && t >= a.selesai) return null;
+  // iris: adegan dibatasi lingkaran (clip-path) yang menyempit/membuka di titik bersama — tanpa pudar/blur/zoom
+  let klip: string | undefined;
+  if (iris.masuk && t < a.mulai + IRIS_BUKA) {
+    const [x, y] = titikIris(a, p);
+    klip = `circle(${irisJari(t, a.mulai, jariPenuh(x, y, p)).toFixed(1)}px at ${x}px ${y}px)`;
+  } else if (iris.keluar && titikKeluar && t > a.selesai - IRIS_TUTUP) {
+    const [x, y] = titikKeluar;
+    klip = `circle(${irisJari(t, a.selesai, jariPenuh(x, y, p)).toFixed(1)}px at ${x}px ${y}px)`;
+  }
+  const match = { masuk: a.masuk === "match" || iris.masuk, keluar: a.keluar === "match" || iris.keluar };
   // adegan pertama tampil penuh di frame 0 (hook visual roadmap #7), tanpa fade masuk
-  const tin = a.mulai <= 0 ? 1 : prog(k, a.mulai, match.masuk ? 0.25 : 0.45);
-  const tout = prog(k, a.selesai, match.keluar ? 0.25 : 0.4, "keluar");
+  const tin = a.mulai <= 0 || iris.masuk ? 1 : prog(k, a.mulai, match.masuk ? 0.25 : 0.45);
+  const tout = iris.keluar ? 0 : prog(k, a.selesai, match.keluar ? 0.25 : 0.4, "keluar");
   const zm = (match.masuk ? 1 : mix(1.1, 1, tin)) * (match.keluar ? 1 : mix(1, 0.9, tout));
   const blur = (match.masuk ? 0 : (1 - tin) * 12) + (match.keluar ? 0 : tout * 12);
   return (
     <div style={{ position: "absolute", top: 0, left: 0, width: p.W, height: p.tinggi, opacity: tin * (1 - tout),
       scale: String(zm), filter: blur > 0.05 ? `blur(${blur}px)` : undefined, transformOrigin: `${p.cx}px ${p.tinggi / 2}px`,
-      ...pudarBawah(gradasi * 0.6) }}>
+      ...pudarBawah(gradasi * 0.6), clipPath: klip }}>
       <svg viewBox={`0 0 ${p.W} ${p.tinggi}`} width={p.W} height={p.tinggi} style={{ overflow: "visible" }}>
         <Modul k={k} wr={wr} font={font} />
       </svg>
@@ -173,8 +260,9 @@ const Sambungan: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
   const k = { f, fps: pr.fps, tok: pr.tokens } as Konteks;
   const g = prog(k, 0, 0.7);
   const G = pr.gradasi;
+  const d = denyut(f / pr.fps, pr.ketukan?.titik) * (pr.ketukan?.denyut ?? 1);
   return (
-    <div style={{ position: "absolute", top: pr.tinggi_panggung - G, left: 0, width: pr.W, height: G * 2, opacity: 0.55 * g,
+    <div style={{ position: "absolute", top: pr.tinggi_panggung - G, left: 0, width: pr.W, height: G * 2, opacity: Math.min(1, (0.55 + 0.3 * d) * g),
       background: `radial-gradient(ellipse 60% 22% at 50% 50%, ${rgba(wr.aksen, 0.16)}, ${rgba(wr.aksen, 0)})` }} />
   );
 };
@@ -200,7 +288,7 @@ const SapuanCahaya: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) =
   const f = useCurrentFrame();
   const k = { f, fps: pr.fps, tok: pr.tokens } as Konteks;
   const t = f / pr.fps;
-  const a = pr.adegan.find((x) => x.mulai > 0 && x.masuk !== "match" && t >= x.mulai - 0.15 && t < x.mulai + 0.85);
+  const a = pr.adegan.find((x) => x.mulai > 0 && x.masuk !== "match" && x.masuk !== "iris" && t >= x.mulai - 0.15 && t < x.mulai + 0.85);
   if (!a) return null;
   const u = prog(k, a.mulai - 0.15, 0.95);
   return (
@@ -253,14 +341,29 @@ export const SplitReel: React.FC<SplitReelProps> = (pr) => {
   const p: Panggung = { W: pr.W, tinggi: pr.tinggi_panggung, cx: (pr.zona[0] + pr.zona[2]) / 2, atas: pr.zona[1],
     bawah: pr.tinggi_panggung - 70 };
   const hal = React.useMemo(() => halaman(pr.kata, pr.caption), [pr.kata, pr.caption]);
+  const t = f / pr.fps;
+  // denyut ketukan: panggung "bernapas" ±1,2 % + cahaya aksen tipis — talent & caption tidak ikut berdenyut
+  const d = denyut(t, pr.ketukan?.titik) * (pr.ketukan?.denyut ?? 1);
+  const skalaPanggung = hookZoom(pr, t, 0.12) * (1 + 0.012 * d);
+  const [hx, hy] = pr.adegan[0] ? titikIris(pr.adegan[0], p) : [p.cx, p.tinggi / 2];
   return (
     <AbsoluteFill style={{ backgroundColor: wr.latar }}>
       <Defs wr={wr} />
       <Footage pr={pr} wr={wr} />
       <LatarPanggung pr={pr} wr={wr} />
-      {pr.adegan.map((a, i) => (
-        <Wadah key={i} k={{ f, fps: pr.fps, tok, p, a }} wr={wr} font={tok.font.judul.family} gradasi={pr.gradasi} />
-      ))}
+      <div style={{ position: "absolute", inset: 0, scale: String(skalaPanggung), transformOrigin: `${p.cx}px ${p.tinggi / 2}px` }}>
+        {pr.adegan.map((a, i) => (
+          <Wadah key={i} k={{ f, fps: pr.fps, tok, p, a }} wr={wr} font={tok.font.judul.family} gradasi={pr.gradasi}
+            titikKeluar={a.keluar === "iris" && pr.adegan[i + 1]?.masuk === "iris" ? titikIris(pr.adegan[i + 1], p) : undefined} />
+        ))}
+        <CincinIris pr={pr} wr={wr} p={p} />
+      </div>
+      {d > 0.01 ? (
+        <div style={{ position: "absolute", top: 0, left: 0, width: pr.W, height: pr.tinggi_panggung, mixBlendMode: "screen",
+          opacity: 0.12 * d, background: `radial-gradient(ellipse 55% 45% at 50% 50%, ${rgba(wr.aksen, 0.5)}, ${rgba(wr.aksen, 0)})`,
+          ...pudarBawah(pr.gradasi) }} />
+      ) : null}
+      <HookPembuka pr={pr} wr={wr} cx={hx} cy={hy} />
       <Sambungan pr={pr} wr={wr} />
       {pr.menyatu?.sapuan !== false ? <SapuanCahaya pr={pr} wr={wr} /> : null}
       {pr.menyatu?.grain !== false ? <Grain pr={pr} /> : null}

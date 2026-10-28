@@ -167,6 +167,27 @@ Video bermusik latar otomatis sinkron dengan ketukannya (`ketukan.py`, `render_k
 Hasil di layout `ketukan` dan detail K06.3; ketukan dihitung titik sinkron sah di K05.5/K03.3. Beat-sheet:
 `"ketukan": {"aktif": false}` mematikan; `toleransi`, `toleransi_potong`, `riser` dapat diatur.
 
+## Ducking musik (auto, dari transkrip)
+`ducking.py`: musik latar turun `db` (bawaan −9 dB) selama talent bicara — mulai 0,12 s SEBELUM kata pertama, naik lagi
+0,35 s setelah kata terakhir; jeda < 0,6 s digabung agar musik tidak memompa di tengah kalimat (rampa 0,18 s). Amplopnya
+ekspresi `volume` ffmpeg per frame, dipakai `render_audio.py` (beat-sheet) dan `split.py`. Atur di musik manifest/split.json:
+`"ducking": {"mode": "transkrip"|"sidechain"|"mati", "db", "pra", "pasca", "jeda_min", "rampa"}`; tanpa transkrip →
+sidechain (cara lama).
+
+## Layout split (L01): hook, iris, denyut ketukan, QA
+`split.py` + `remotion/src/split/` — lewat pintu utama: `video.py render|qa <proyek>` memakai split.py bila ada
+`split.json`; `video.py cek` memvalidasi split.json semua proyek split (modul ada di PUSTAKA, transisi, pasangan iris,
+SFX/musik ada, anchor ter-resolve, adegan berurutan, adegan pertama di 0 s).
+- **Hook detik pertama** (roadmap #7, bawaan nyala): punch-in panggung 12 % & talent 6 % → 1 dalam 0,9 s, gelombang cincin
+  aksen + kilat cahaya dari titik adegan pembuka, dentum `hit-1` di 0 s bila belum ada bunyi.
+  `"hook": {"aktif", "kuat", "durasi", "sfx": {"jenis", "db"} | null}`.
+- **Match cut iris** (roadmap #5): `"keluar": "iris"` + `"masuk": "iris"` di adegan berikutnya (+ `"titik": [x, y]` px
+  panggung) — adegan lama menyempit jadi lingkaran di titik itu, adegan baru membuka dari titik yang sama, dibawa cincin
+  aksen; potongannya ikut di-snap ke ketukan.
+- **Denyut ketukan**: panggung berskala ±1,2 % + cahaya aksen tipis di tiap ketukan (bar lebih kuat); talent & caption
+  diam. `"ketukan": {"denyut": 0..1}` (0 = mati).
+- QA (`out/qa-report.md`) menambah HOOK.1s (gerak 0→0,5 s), STRUKTUR, MATCH, KETUKAN, K08.6 (ducking).
+
 ## Grafis menyatu dengan rekaman (K10)
 Otomatis di setiap video (`render_menyatu.py`, fungsi di `menyatu.py`; konteks K10 ditambahkan Proyek walau gaya/manifest
 tidak mencantumkannya):

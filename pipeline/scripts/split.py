@@ -10,6 +10,11 @@ Pemakaian:
     python pipeline/scripts/split.py render <proyek>              # video (Remotion) + audio (suara, musik ber-ducking, SFX)
                                                                   #   → out/<proyek>.mp4 (−14 LUFS, plafon −2 dBTP, bt709)
     python pipeline/scripts/split.py qa     <proyek>              # QA keluaran split → out/qa-report.md
+    python pipeline/scripts/split.py cek    <proyek>              # validasi split.json tanpa render (juga di video.py cek)
+
+Lewat pintu utama: video.py render|qa <proyek> otomatis memakai split.py bila proyek punya split.json.
+split.json opsional (bawaan menyala): "hook": {"aktif", "kuat", "durasi", "sfx"}, "ketukan": {"denyut": 0..1},
+"musik": {"ducking": {"mode": "transkrip", "db": -9}}, adegan "masuk"/"keluar": "iris" (+ "titik": [x, y]).
 """
 from __future__ import annotations
 
@@ -27,10 +32,14 @@ from sistem import (ROOT, SEMENTARA, GagalPipeline, Proyek, baca_json, butuh, du
 import remotion_jembatan as rj  # noqa: E402
 from render_audio import MARGIN_TP_LOSSY  # noqa: E402
 from render_ketukan import BPM_SUBDIVISI, TOLERANSI_POTONG, _deteksi_file  # noqa: E402
+import ducking  # noqa: E402
 import ketukan  # noqa: E402
 import musik as musik_bawaan  # noqa: E402
 
 KOMPOSISI = "SplitReel"
+TRANSISI = {"blur-zoom", "match", "iris"}
+# hook visual detik pertama (roadmap #7): punch-in + gelombang cincin + kilat; sfx dentum di 0 s bila belum ada bunyi
+HOOK_BAWAAN = {"aktif": True, "kuat": 1.0, "durasi": 0.9, "sfx": {"jenis": "hit-1", "db": -20}}
 SFX_DIR = ROOT / "pipeline" / "aset-bawaan" / "sfx" / "v2"
 MUSIK_DIR = ROOT / "pipeline" / "aset-bawaan" / "musik"
 
@@ -81,7 +90,9 @@ def sinkron_ketukan(p: Proyek, cfg: dict, adegan: list[dict], dur: float) -> dic
             a["mulai"] = baru
             geser += 1
     return {"bpm": round(bpm, 2), "subdivisi": sub, "ofset_musik": round(ketukan.ofset_musik(fase_file, fase, periode), 4),
-            "potongan": len(potong), "digeser": geser}
+            "potongan": len(potong), "digeser": geser,
+            # ketukan penuh (bukan ½) → denyut grafis di SplitReel; denyut 0 = mati, 1 = halus bawaan
+            "titik": ketukan.titik(fase, periode, dur), "denyut": float(kcfg.get("denyut", 1.0))}
 
 
 def bangun_props(p: Proyek) -> dict:
@@ -100,7 +111,7 @@ def bangun_props(p: Proyek) -> dict:
             "mulai": resolve_waktu(a["mulai"], kata),
             "selesai": resolve_waktu(a["selesai"], kata) if a.get("selesai") is not None else dur,
             "t": {n: resolve_waktu(v, kata) for n, v in a.get("t", {}).items()},
-            **{k: a[k] for k in ("masuk", "keluar", "teks") if k in a},
+            **{k: a[k] for k in ("masuk", "keluar", "teks", "titik") if k in a},
         })
     irama = sinkron_ketukan(p, cfg, adegan, dur)
     zoom = [[resolve_waktu(t, kata), z] for t, z in cfg.get("zoom", [[0, 1]])]
@@ -115,6 +126,8 @@ def bangun_props(p: Proyek) -> dict:
         "gradasi": cfg.get("gradasi", 320),
         "footage": {"src": f"proyek/{p.dir.name}/talent.mp4", **cfg["footage"]},
         "zoom": zoom, "adegan": adegan, "ketukan": irama,
+        "hook": {k: v for k, v in {**HOOK_BAWAAN, **(cfg.get("hook") or {})}.items() if k != "sfx"},
+        **({"menyatu": cfg["menyatu"]} if "menyatu" in cfg else {}),
         "kata": [{"w": k["w"], "s": k["s"], "e": k["e"]} for k in kata],
         "caption": {"y": cfg.get("caption_y", cfg.get("tinggi_panggung", p.H // 2)), "kata_maks": cap["kata-maks"],
                     "karakter_maks": cap["karakter-maks-baris"], "jeda_pecah": cap["jeda-pecah"]},
@@ -176,8 +189,17 @@ def _sfx_path(nama: str) -> Path:
     return path
 
 
+def daftar_sfx(cfg: dict, kata: list[dict]) -> list[dict]:
+    """SFX split.json + dentum hook di 0 s (hook.sfx; null = tanpa) bila belum ada bunyi di 0,3 s pertama."""
+    sfx = list(cfg.get("sfx", []))
+    hook = {**HOOK_BAWAAN, **(cfg.get("hook") or {})}
+    if hook.get("aktif", True) and hook.get("sfx") and not any(resolve_waktu(s["t"], kata) < 0.3 for s in sfx):
+        sfx.append({**hook["sfx"], "t": 0})
+    return sfx
+
+
 def mix_audio(p: Proyek, cfg: dict, out: Path) -> dict:
-    """Suara + musik latar ber-ducking (sidechain dari suara) + SFX terjadwal → master −14 LUFS / plafon −2 dBTP."""
+    """Suara + musik latar ber-ducking (amplop transkrip, ducking.py) + SFX terjadwal → master −14 LUFS / plafon −2 dBTP."""
     kata = baca_json(p.words_path)["kata"]
     dur = durasi(p.ingest_video)
     ins: list = ["-i", p.ingest_audio]
@@ -189,17 +211,23 @@ def mix_audio(p: Proyek, cfg: dict, out: Path) -> dict:
         src = MUSIK_DIR / f"{musik['file'].split(':', 1)[1]}.wav" if musik["file"].startswith("bawaan:") else p.path_aset(musik["file"])
         irama = (baca_json(SEMENTARA / "split" / p.dir.name / "props.json") or {}).get("ketukan") or {}
         ins += ["-stream_loop", "-1", "-ss", f"{irama.get('ofset_musik', 0.0):.4f}", "-i", src]
+        dk = ducking.konfigurasi(musik)
+        env = ducking.filter_ducking(kata, dur, dk) if dk["mode"] == "transkrip" else ""
+        keluaran = "[m0]" if dk["mode"] == "sidechain" else "[musik]"
         fil.append(
             f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo,atrim=0:{dur:.3f},volume={musik.get('db', -18)}dB,"
             f"afade=t=in:d={musik.get('fade_masuk', 0.8)},afade=t=out:st={dur - musik.get('fade_keluar', 2.0):.3f}:"
-            f"d={musik.get('fade_keluar', 2.0)}[m0]")
-        # ducking: musik turun ±duck_db saat suara aktif, naik lagi di jeda (attack cepat, release pelan)
-        fil.append(f"[m0][kunci]sidechaincompress=threshold=0.02:ratio={musik.get('rasio_duck', 6)}:attack=30:release=450:"
-                   f"makeup=1[musik]")
+            f"d={musik.get('fade_keluar', 2.0)}{',' + env if env else ''}{keluaran}")
+        if dk["mode"] == "sidechain":
+            # ducking lama: musik turun saat suara aktif, naik lagi di jeda (attack cepat, release pelan)
+            fil.append(f"[m0][kunci]sidechaincompress=threshold=0.02:ratio={musik.get('rasio_duck', 6)}:attack=30:"
+                       f"release=450:makeup=1[musik]")
+        else:  # transkrip (amplop dari kata, ducking.py) atau mati
+            fil.append("[kunci]anullsink")
         label_mix.append("[musik]")
     else:
         fil.append("[kunci]anullsink")
-    for i, s in enumerate(cfg.get("sfx", [])):
+    for i, s in enumerate(daftar_sfx(cfg, kata)):
         idx = len([x for x in ins if x == "-i"])
         ins += ["-i", _sfx_path(s["jenis"])]
         t = resolve_waktu(s["t"], kata)
@@ -236,11 +264,80 @@ def render(p: Proyek) -> Path:
     return out
 
 
+def modul_pustaka() -> set[str]:
+    """Nama modul adegan yang terdaftar di PUSTAKA (remotion/src/split/Adegan.tsx)."""
+    teks = (rj.DIR / "src" / "split" / "Adegan.tsx").read_text(encoding="utf-8")
+    blok = re.search(r"export const PUSTAKA[^{]*\{(.*?)\n\};", teks, re.S)
+    return set(re.findall(r'"([\w-]+)"\s*:', blok.group(1))) if blok else set()
+
+
+def cek(p: Proyek) -> tuple[list[str], list[str]]:
+    """Validasi struktur split.json tanpa render (dipanggil video.py cek & split.py qa) → (masalah, info).
+    Selalu: modul ada di pustaka, transisi dikenal, file SFX/musik ada. Bila transkrip & ingest sudah ada: semua anchor
+    ter-resolve, adegan berurutan tanpa celah/tumpang, adegan pertama mulai di 0 s (hook #7)."""
+    cfg = baca_json(p.dir / "split.json")
+    if cfg is None:
+        return [], []
+    nama = p.dir.name
+    masalah, info = [], []
+    pustaka = modul_pustaka()
+    for i, a in enumerate(cfg.get("adegan", [])):
+        if a.get("modul") not in pustaka:
+            masalah.append(f"proyek/{nama}: adegan {i + 1} modul '{a.get('modul')}' tidak ada di PUSTAKA Adegan.tsx")
+        for sisi in ("masuk", "keluar"):
+            if sisi in a and a[sisi] not in TRANSISI:
+                masalah.append(f"proyek/{nama}: adegan {i + 1} {sisi}='{a[sisi]}' (pilihan: {', '.join(sorted(TRANSISI))})")
+    adg = cfg.get("adegan", [])
+    for i in range(1, len(adg)):
+        if (adg[i].get("masuk") == "iris") != (adg[i - 1].get("keluar") == "iris"):
+            masalah.append(f"proyek/{nama}: iris harus berpasangan (adegan {i} keluar & adegan {i + 1} masuk)")
+    hook = {**HOOK_BAWAAN, **(cfg.get("hook") or {})}
+    for s in cfg.get("sfx", []) + ([hook["sfx"]] if hook.get("sfx") else []):
+        if not (SFX_DIR / f"{s.get('jenis')}.wav").exists():
+            masalah.append(f"proyek/{nama}: SFX '{s.get('jenis')}' tidak ada di {SFX_DIR.relative_to(ROOT)}")
+    musik = cfg.get("musik")
+    if musik:
+        f = musik["file"]
+        src = MUSIK_DIR / f"{f.split(':', 1)[1]}.wav" if f.startswith("bawaan:") else p.path_aset(f)
+        if not src or not src.exists():
+            masalah.append(f"proyek/{nama}: musik '{f}' tidak ada")
+        if ducking.konfigurasi(musik)["mode"] not in ("transkrip", "sidechain", "mati"):
+            masalah.append(f"proyek/{nama}: musik.ducking.mode tidak dikenal")
+    jenis = [a.get("masuk") for a in adg[1:]]
+    info.append(f"proyek/{nama}: split {len(adg)} adegan, match cut {sum(j in ('match', 'iris') for j in jenis)}/{len(jenis)} "
+                f"potongan, hook {'aktif' if hook.get('aktif', True) else 'MATI'}")
+    words = baca_json(p.words_path) if p.words_path.exists() else None
+    if not words or not p.ingest_video.exists():
+        return masalah, info
+    try:
+        kata, dur = words["kata"], durasi(p.ingest_video)
+        waktu = [(resolve_waktu(a["mulai"], kata),
+                  resolve_waktu(a["selesai"], kata) if a.get("selesai") is not None else dur) for a in adg]
+        for a in adg:
+            for v in a.get("t", {}).values():
+                resolve_waktu(v, kata)
+        for s in cfg.get("sfx", []):
+            resolve_waktu(s["t"], kata)
+    except GagalPipeline as e:
+        return masalah + [f"proyek/{nama}: {e}"], info
+    if waktu and waktu[0][0] > 0.05:
+        masalah.append(f"proyek/{nama}: adegan pertama mulai {waktu[0][0]:.2f} s — hook visual harus di frame 0 (roadmap #7)")
+    for i, ((m0, s0), (m1, s1)) in enumerate(zip(waktu, waktu[1:])):
+        if s0 <= m0:
+            masalah.append(f"proyek/{nama}: adegan {i + 1} selesai ({s0:.2f}) ≤ mulai ({m0:.2f})")
+        if abs(m1 - s0) > 0.1:
+            masalah.append(f"proyek/{nama}: celah/tumpang {m1 - s0:+.2f} s antara adegan {i + 1} dan {i + 2}")
+    if waktu and waktu[-1][1] < dur - 0.1:
+        masalah.append(f"proyek/{nama}: adegan terakhir berhenti di {waktu[-1][1]:.2f} s, rekaman {dur:.2f} s")
+    return masalah, info
+
+
 def qa(p: Proyek) -> bool:
     """QA layout split → out/qa-report.md + out/qa.json. qa.py butuh layout.json dari render.py (perangkat per beat),
     jadi di sini dicek aturan yang berlaku untuk keluaran SplitReel: ekspor (K07.2), audio (K06.1–2), durasi & sinkron,
-    kepadatan caption, hook di frame 0; sisanya checklist manual."""
-    from PIL import Image, ImageStat
+    kepadatan caption, hook di frame 0 & gerak detik pertama, struktur split.json (cek), match cut, ketukan, ducking;
+    sisanya checklist manual."""
+    from PIL import Image, ImageChops, ImageStat
 
     out = p.out / f"{p.dir.name}.mp4"
     if not out.exists():
@@ -288,13 +385,37 @@ def qa(p: Proyek) -> bool:
     panggung = Image.open(f0).convert("L").crop((0, 0, W, props["tinggi_panggung"]))
     std = ImageStat.Stat(panggung).stddev[0]
     catat("HOOK", "frame 0 panggung sudah berisi visual (roadmap #7)", std >= 12, f"stddev luminans {std:.1f}", lunak=True)
+    # gerak di detik pertama: beda rata-rata panggung frame 0 vs 0,5 s (punch-in/cincin hook) — diam = hook lemah
+    f5 = f0.with_name("frame05.png")
+    jalankan(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", "0.5", "-i", out, "-frames:v", 1, f5])
+    panggung5 = Image.open(f5).convert("L").crop((0, 0, W, props["tinggi_panggung"]))
+    gerak = ImageStat.Stat(ImageChops.difference(panggung, panggung5)).mean[0]
+    catat("HOOK.1s", "gerak panggung 0→0,5 s cukup kuat (roadmap #7)", gerak >= 6, f"beda rata-rata {gerak:.1f}", lunak=True)
+    m_struktur, i_struktur = cek(p)
+    catat("STRUKTUR", "split.json valid (modul, transisi, anchor, urutan adegan)", not m_struktur,
+          "; ".join(m_struktur) or "; ".join(i_struktur))
+    adg = props["adegan"]
+    n_match = sum(a.get("masuk") in ("match", "iris") for a in adg[1:])
+    catat("MATCH", "≥1 match cut bentuk antar-adegan (roadmap #5)", n_match >= 1 or len(adg) < 3,
+          f"{n_match}/{max(0, len(adg) - 1)} potongan match/iris", lunak=True)
+    irama = props.get("ketukan")
+    if irama:
+        catat("KETUKAN", "potongan di ketukan + denyut grafis", True,
+              f"{irama['bpm']} BPM, {irama['digeser']}/{irama['potongan']} potongan di-snap, denyut {irama.get('denyut', 1)}")
+    cfg = baca_json(p.dir / "split.json")
+    if cfg.get("musik"):
+        dk = ducking.konfigurasi(cfg["musik"])
+        seg = ducking.segmen_bicara(props["kata"], dv, dk["pra"], dk["pasca"], dk["jeda_min"])
+        catat("K08.6", "musik di-duck di bawah ucapan", dk["mode"] != "mati",
+              f"{dk['mode']}" + (f" {dk['db']} dB, {len(seg)} segmen bicara" if dk["mode"] == "transkrip" else ""))
 
     gagal = any(s == "GAGAL" for _, _, s, _ in hasil)
     status = "GAGAL" if gagal else "LULUS"
     manual = [
         "K00 zona aman: grafis panggung tidak masuk area tombol kanan (120 px) & atas (250 px) di HP.",
         "K07.3 tonton di HP resolusi penuh: keterbacaan caption, sinkron bibir.",
-        "K08.5–6 cek SFX & ducking musik dengan headphone.",
+        "K08.5–6 cek SFX & ducking musik dengan headphone (musik naik di jeda, tidak memompa di tengah kalimat).",
+        "Denyut ketukan terasa halus (bukan kedip); iris/match cut terbaca sebagai satu gerak.",
         "G01.2 grafis tidak menutupi wajah talent; sambungan atas/bawah tidak terlihat terpotong.",
     ]
     md = [f"# QA — {p.dir.name} (layout split)", "", f"**Status: {status}**", "",
@@ -314,7 +435,7 @@ def qa(p: Proyek) -> bool:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("aksi", choices=["props", "still", "studio", "render", "qa"])
+    ap.add_argument("aksi", choices=["props", "still", "studio", "render", "qa", "cek"])
     ap.add_argument("proyek")
     ap.add_argument("detik", nargs="?", default="")
     arg = ap.parse_args()
@@ -330,6 +451,14 @@ def main() -> None:
         studio(p)
     elif arg.aksi == "qa":
         if not qa(p):
+            sys.exit(1)
+    elif arg.aksi == "cek":
+        masalah, info = cek(p)
+        for x in info:
+            log("cek", x)
+        for x in masalah:
+            log("cek", f"MASALAH: {x}")
+        if masalah:
             sys.exit(1)
     else:
         render(p)

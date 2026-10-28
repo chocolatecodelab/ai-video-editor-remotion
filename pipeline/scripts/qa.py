@@ -535,7 +535,7 @@ def _sfx(c: Ctx):
     au = c.L.get("audio") or {}
     if au.get("musik") and not au.get("ducking"):
         salah.append("musik tanpa ducking")
-    info = [f"{len(c.L['sfx'])} sfx ≤ {mx} dB"] + (["musik di-duck (sidechain)"] if au.get("musik") else [])
+    info = [f"{len(c.L['sfx'])} sfx ≤ {mx} dB"] + ([f"musik di-duck ({au['ducking'] if isinstance(au.get('ducking'), str) else 'sidechain'})"] if au.get("musik") else [])
     kt = c.L.get("ketukan")
     if kt:
         info.append(f"musik {kt['bpm']} BPM ({kt['asal']}), mulai di {kt['ofset_musik']:.2f}s file: "

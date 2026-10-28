@@ -12,7 +12,7 @@ Pemakaian:
     python pipeline/scripts/video.py pasang   <proyek>         # beat-sheet preset → anchor kata transkrip + hindari wajah
     python pipeline/scripts/video.py wajah    <proyek>         # deteksi wajah → cache/wajah.json
     python pipeline/scripts/video.py laporan  <proyek>         # laporan perangkat per beat + out/kontak.png
-    python pipeline/scripts/video.py cek                       # validasi registry & INDEX.md
+    python pipeline/scripts/video.py cek                       # validasi registry & INDEX.md + split.json proyek split
     python pipeline/scripts/video.py status   <proyek>         # modul ter-resolve + status cache
     python pipeline/scripts/video.py semua    <proyek>         # ingest → transkrip → roto → wajah → render → ekspor → qa (+laporan)
                                                                #   butuh persetujuan storyboard (video.py setuju); --tanpa-setuju hanya atas keputusan pengguna
@@ -692,9 +692,15 @@ def cek_registry() -> int:
     for d in sorted((ROOT / "proyek").iterdir()):
         if d.is_dir() and not d.name.startswith("_"):
             try:
-                Proyek(d)
+                pr = Proyek(d)
             except Exception as e:
                 masalah.append(f"proyek/{d.name}: {e}")
+                continue
+            if (d / "split.json").exists():  # layout split: QA struktur split.py (modul, transisi, anchor, hook)
+                import split
+                mp, ip = split.cek(pr)
+                masalah += mp
+                info += ip
     for i in info:
         log("cek", i)
     for m in masalah:
@@ -763,6 +769,18 @@ def semua(p: Proyek, paksa: bool = False, tanpa_setuju: bool = False) -> int:
     return 0
 
 
+def split_satu_pintu(p: Proyek, cmd: str) -> int:
+    """Proyek layout split (split.json): render/qa lewat split.py agar satu pintu video.py tetap berlaku."""
+    import split
+    if cmd == "semua":
+        raise GagalPipeline("proyek split: setelah storyboard (split.py still) disetujui Zar, jalankan "
+                            "video.py render <proyek> lalu video.py qa <proyek>.")
+    if cmd == "render":
+        split.render(p)
+        return 0
+    return 0 if split.qa(p) else 1
+
+
 def main() -> int:
     if len(sys.argv) < 2 or sys.argv[1] in ("-h", "--help"):
         print(__doc__)
@@ -826,6 +844,8 @@ def main() -> int:
     if cmd == "status":
         status(Proyek(folder))
         return 0
+    if (folder / "split.json").exists() and cmd in ("render", "qa", "semua"):
+        return split_satu_pintu(Proyek(folder), cmd)
     if cmd == "semua":
         return semua(Proyek(folder), "--paksa" in arg, "--tanpa-setuju" in arg)
     if cmd == "setuju":

@@ -13,10 +13,16 @@ export type Adegan = {
   mulai: number;
   selesai: number;
   t: Record<string, number>;
-  masuk?: "blur-zoom" | "match";
-  keluar?: "blur-zoom" | "match";
+  masuk?: Transisi;
+  keluar?: Transisi;
   teks?: Record<string, string>;
+  /** Titik fokus (px panggung) untuk match cut "iris": lingkaran menyempit/membuka di titik ini. Bawaan tengah panggung. */
+  titik?: [number, number];
 };
+
+/** blur-zoom = potong bawaan (motif glass-tech); match = silang pudar tanpa zoom (bentuk sama di dua adegan);
+ *  iris = shape match cut: adegan lama menyempit jadi lingkaran di `titik`, adegan baru membuka dari lingkaran yang sama. */
+export type Transisi = "blur-zoom" | "match" | "iris";
 
 export type Konteks = { f: number; fps: number; tok: Tokens; p: Panggung; a: Adegan };
 
@@ -48,4 +54,25 @@ export const tk = (a: Adegan, nama: string, relatif: number) => a.t[nama] ?? a.m
 export const drift = (k: Konteks, d: number) => {
   const t = detik(k) - k.a.mulai;
   return { x: Math.sin(t * 0.45) * 14 * d, y: Math.cos(t * 0.35) * 8 * d };
+};
+
+/** Denyut ketukan 0..1 pada detik `t`: naik cepat (serangan 50 ms) di tiap ketukan lalu meluruh eksponensial.
+ *  Ketukan ke-1 tiap bar (tiap 4) penuh, sisanya lebih lemah — grafis "bernapas" bersama musik tanpa berkedip. */
+export const denyut = (t: number, titik: number[] | undefined, luruh = 0.22) => {
+  if (!titik?.length) return 0;
+  let lo = 0;
+  let hi = titik.length - 1;
+  let i = -1;
+  while (lo <= hi) {
+    const m = (lo + hi) >> 1;
+    if (titik[m] <= t) {
+      i = m;
+      lo = m + 1;
+    } else hi = m - 1;
+  }
+  if (i < 0) return 0;
+  const dt = t - titik[i];
+  const serang = 0.05;
+  const kuat = i % 4 === 0 ? 1 : 0.55;
+  return kuat * (dt < serang ? dt / serang : Math.exp(-(dt - serang) / luruh));
 };

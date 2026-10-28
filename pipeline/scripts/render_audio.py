@@ -6,9 +6,10 @@ from pathlib import Path
 
 import numpy as np
 
+import ducking
 import sfx as pustaka_sfx
 from render_ketukan import sumber_musik
-from sistem import GagalPipeline, jalankan, loudnorm_2pass, sha_file, ukur_loudness
+from sistem import GagalPipeline, baca_json, jalankan, loudnorm_2pass, sha_file, ukur_loudness
 
 
 # K06.2: headroom dB di master untuk overshoot encoder AAC saat ekspor → plafon master −2 dBTP (token −1). Terukur
@@ -98,6 +99,7 @@ class AudioMixin:
         else:
             cmd += ["-f", "lavfi", "-t", f"{self.dur:.3f}", "-i", f"anullsrc=r={a['sample-rate']}:cl=stereo"]
         n = 1
+        mode_duck = None
         sm = sumber_musik(p)
         musik = sm[0] if sm else None
         if sm:
@@ -109,10 +111,21 @@ class AudioMixin:
             # titik mulai musik dipilih agar ketukannya jatuh di potongan (render_ketukan.py)
             ofset = (getattr(self, "ketukan", None) or {}).get("ofset_musik", 0)
             mulai = f"atrim=start={ofset:.4f},asetpts=PTS-STARTPTS," if ofset else ""
+            # ducking.py: amplop dari transkrip (turun sebelum kata pertama, naik di jeda); tanpa transkrip → sidechain
+            dk = ducking.konfigurasi(musik)
+            kata = (baca_json(p.words_path) or {}).get("kata", []) if p.words_path.exists() else []
+            if dk["mode"] == "transkrip" and not kata:
+                dk["mode"] = "sidechain"
+            env = ducking.filter_ducking(kata, self.dur, dk) if dk["mode"] == "transkrip" else ""
             fc.append("[1:a]" + mulai + filter_musik(a["sample-rate"], musik.get("db", -22), self.dur,
                                               float(musik.get("fade_masuk", FADE_MASUK_MUSIK)),
-                                              float(musik.get("fade_keluar", FADE_KELUAR_MUSIK))) + "[m0]")
-            fc.append("[m0][kunci]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=350[musik]")
+                                              float(musik.get("fade_keluar", FADE_KELUAR_MUSIK)))
+                      + ("," + env if env else "") + ("[m0]" if dk["mode"] == "sidechain" else "[musik]"))
+            if dk["mode"] == "sidechain":
+                fc.append("[m0][kunci]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=350[musik]")
+            else:
+                fc.append("[kunci]anullsink")
+            mode_duck = None if dk["mode"] == "mati" else dk["mode"]
             label += ["[suara]", "[musik]"]
             n = 2
         else:
@@ -140,7 +153,7 @@ class AudioMixin:
             ukur = None
         mentah.unlink(missing_ok=True)
         akhir = self._kunci_loudness(tujuan, a)
-        return {"musik": bool(musik), "ducking": bool(musik), "loudnorm_ukur": ukur, "sfx_bus": bus_info, "akhir": akhir}
+        return {"musik": bool(musik), "ducking": mode_duck, "loudnorm_ukur": ukur, "sfx_bus": bus_info, "akhir": akhir}
 
     def _kunci_loudness(self, path, a: dict) -> dict:
         """Pastikan target LUFS & true-peak tercapai (K06.1–2), juga untuk video tanpa suara (SFX/musik saja) yang
