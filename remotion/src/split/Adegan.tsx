@@ -399,7 +399,8 @@ export const JalanSendiri: React.FC<PropsAdegan> = ({ k, wr }) => {
         <G y={-80}>
           <Cahaya r={160} o={0.3 + 0.6 * prog(k, takLihat + 0.7, 0.8)} />
         </G>
-        <Orang wr={wr} />
+        {/* berjalan sungguhan: lengan & kaki berayun, ritme langkah mengikuti laju sepanjang jalan */}
+        <Orang wr={wr} langkah={Math.max(0, detik(k) - terus) * 7} />
       </G>
     </>
   );

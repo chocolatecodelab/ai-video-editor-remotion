@@ -24,6 +24,8 @@ export type SplitReelProps = {
   tinggi_panggung: number;
   /** Tinggi pita gradasi (px) tempat panggung & rekaman saling memudar — tanpa garis potong di tengah frame. */
   gradasi: number;
+  /** K10 menyatu: grain film di seluruh frame (token `grain`) + sapuan cahaya aksen melintasi rekaman di tiap potongan. */
+  menyatu?: { grain?: boolean; sapuan?: boolean };
   footage: { src: string; geser_y: number; titik_zoom_y: number };
   zoom: [number, number][];
   adegan: Adegan[];
@@ -177,6 +179,37 @@ const Sambungan: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
   );
 };
 
+/** Grain film (token grain: kekuatan, ukuran) — pola baru tiap frame, sama di panggung & rekaman agar menyatu (K10). */
+const Grain: React.FC<{ pr: SplitReelProps }> = ({ pr }) => {
+  const f = useCurrentFrame();
+  const g = pr.tokens.grain as { kekuatan: number; ukuran: number };
+  return (
+    <svg width={pr.W} height={pr.H} style={{ position: "absolute", inset: 0, mixBlendMode: "overlay", opacity: g.kekuatan * 0.04 }}>
+      <filter id="sr-grain">
+        <feTurbulence type="fractalNoise" baseFrequency={0.9 / g.ukuran} numOctaves={2} seed={f} />
+        <feColorMatrix type="saturate" values="0" />
+      </filter>
+      <rect width={pr.W} height={pr.H} filter="url(#sr-grain)" />
+    </svg>
+  );
+};
+
+/** Sapuan cahaya aksen diagonal melintasi seluruh frame (panggung + rekaman) di tiap potongan blur-zoom:
+ *  cahaya yang sama "menyentuh" talent & grafis sehingga keduanya terasa satu ruang (K10). */
+const SapuanCahaya: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
+  const f = useCurrentFrame();
+  const k = { f, fps: pr.fps, tok: pr.tokens } as Konteks;
+  const t = f / pr.fps;
+  const a = pr.adegan.find((x) => x.mulai > 0 && x.masuk !== "match" && t >= x.mulai - 0.15 && t < x.mulai + 0.85);
+  if (!a) return null;
+  const u = prog(k, a.mulai - 0.15, 0.95);
+  return (
+    <div style={{ position: "absolute", inset: 0, mixBlendMode: "screen", opacity: Math.sin(u * Math.PI),
+      background: `linear-gradient(105deg, transparent 38%, ${rgba(wr.aksen, 0.22)} 48%, ${rgba("#FFFFFF", 0.12)} 50%, ${rgba(wr.aksen, 0.22)} 52%, transparent 62%)`,
+      translate: `${mix(-pr.W, pr.W, u)}px 0px` }} />
+  );
+};
+
 const Caption: React.FC<{ pr: SplitReelProps; wr: Warna; tok: Tokens; hal: Kata[][] }> = ({ pr, wr, tok, hal }) => {
   const f = useCurrentFrame();
   const t = f / pr.fps;
@@ -229,6 +262,8 @@ export const SplitReel: React.FC<SplitReelProps> = (pr) => {
         <Wadah key={i} k={{ f, fps: pr.fps, tok, p, a }} wr={wr} font={tok.font.judul.family} gradasi={pr.gradasi} />
       ))}
       <Sambungan pr={pr} wr={wr} />
+      {pr.menyatu?.sapuan !== false ? <SapuanCahaya pr={pr} wr={wr} /> : null}
+      {pr.menyatu?.grain !== false ? <Grain pr={pr} /> : null}
       <Caption pr={pr} wr={wr} tok={tok} hal={hal} />
     </AbsoluteFill>
   );

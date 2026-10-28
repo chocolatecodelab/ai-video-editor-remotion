@@ -26,6 +26,9 @@ from sistem import (ROOT, SEMENTARA, GagalPipeline, Proyek, baca_json, butuh, du
                     jalankan, log, loudnorm_2pass, main_aman, stream, tulis_json, ukur_loudness)
 import remotion_jembatan as rj  # noqa: E402
 from render_audio import MARGIN_TP_LOSSY  # noqa: E402
+from render_ketukan import BPM_SUBDIVISI, TOLERANSI_POTONG, _deteksi_file  # noqa: E402
+import ketukan  # noqa: E402
+import musik as musik_bawaan  # noqa: E402
 
 KOMPOSISI = "SplitReel"
 SFX_DIR = ROOT / "pipeline" / "aset-bawaan" / "sfx" / "v2"
@@ -48,6 +51,39 @@ def resolve_waktu(nilai, kata: list[dict]) -> float:
     return round(cocok[ke - 1]["s"] + nilai.get("offset", 0.0), 3)
 
 
+def sinkron_ketukan(p: Proyek, cfg: dict, adegan: list[dict], dur: float) -> dict | None:
+    """Potongan antar-adegan jatuh di ketukan musik (seperti render_ketukan untuk beat-sheet): grid ketukan dipilih agar
+    paling banyak potongan dekat ketukan, potongan ≤ toleransi_potong digeser tepat ke ketukan (akhir adegan sebelumnya
+    ikut), dan titik mulai pemutaran musik dihitung supaya ketukan file jatuh di grid itu. split.json:
+    `"ketukan": {"aktif": true, "toleransi_potong": 0.16}`."""
+    kcfg = cfg.get("ketukan") or {}
+    musik = cfg.get("musik")
+    if not musik or not kcfg.get("aktif", True):
+        return None
+    if musik["file"].startswith("bawaan:"):
+        bpm, fase_file = float(musik_bawaan.BPM[musik["file"].split(":", 1)[1]]), 0.0
+    else:
+        bpm, fase_file = _deteksi_file(p, p.path_aset(musik["file"]))
+    periode = 60.0 / bpm
+    potong = [a["mulai"] for a in adegan if 0.05 < a["mulai"] < dur - 0.05]
+    fase = ketukan.pilih_fase(periode, [(t, 3.0) for t in potong])
+    sub = 2 if bpm < BPM_SUBDIVISI else 1
+    grid = ketukan.titik(fase, periode / sub, dur)
+    tol = float(kcfg.get("toleransi_potong", TOLERANSI_POTONG))
+    geser = 0
+    for i, a in enumerate(adegan):
+        if not 0.05 < a["mulai"] < dur - 0.05:
+            continue
+        baru = round(float(ketukan.snap(a["mulai"], grid, tol)), 4)
+        if abs(baru - a["mulai"]) > 1e-4:
+            if i and abs(adegan[i - 1]["selesai"] - a["mulai"]) < 1e-3:
+                adegan[i - 1]["selesai"] = baru
+            a["mulai"] = baru
+            geser += 1
+    return {"bpm": round(bpm, 2), "subdivisi": sub, "ofset_musik": round(ketukan.ofset_musik(fase_file, fase, periode), 4),
+            "potongan": len(potong), "digeser": geser}
+
+
 def bangun_props(p: Proyek) -> dict:
     cfg = baca_json(p.dir / "split.json")
     if cfg is None:
@@ -66,6 +102,7 @@ def bangun_props(p: Proyek) -> dict:
             "t": {n: resolve_waktu(v, kata) for n, v in a.get("t", {}).items()},
             **{k: a[k] for k in ("masuk", "keluar", "teks") if k in a},
         })
+    irama = sinkron_ketukan(p, cfg, adegan, dur)
     zoom = [[resolve_waktu(t, kata), z] for t, z in cfg.get("zoom", [[0, 1]])]
     zoom.append([dur + 1, zoom[-1][1]])
     cap = p.t("caption")
@@ -77,7 +114,7 @@ def bangun_props(p: Proyek) -> dict:
         "tinggi_panggung": cfg.get("tinggi_panggung", p.H // 2),
         "gradasi": cfg.get("gradasi", 320),
         "footage": {"src": f"proyek/{p.dir.name}/talent.mp4", **cfg["footage"]},
-        "zoom": zoom, "adegan": adegan,
+        "zoom": zoom, "adegan": adegan, "ketukan": irama,
         "kata": [{"w": k["w"], "s": k["s"], "e": k["e"]} for k in kata],
         "caption": {"y": cfg.get("caption_y", cfg.get("tinggi_panggung", p.H // 2)), "kata_maks": cap["kata-maks"],
                     "karakter_maks": cap["karakter-maks-baris"], "jeda_pecah": cap["jeda-pecah"]},
@@ -98,6 +135,10 @@ def tulis_props(p: Proyek) -> Path:
     path = SEMENTARA / "split" / p.dir.name / "props.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     tulis_json(path, props)
+    irama = props.get("ketukan")
+    if irama:
+        log("split", f"ketukan {irama['bpm']} BPM: {irama['digeser']}/{irama['potongan']} potongan digeser ke ketukan, "
+                     f"musik mulai di {irama['ofset_musik']:.2f} s")
     log("split", f"{len(props['adegan'])} adegan → {path}")
     return path
 
@@ -146,7 +187,8 @@ def mix_audio(p: Proyek, cfg: dict, out: Path) -> dict:
     fil.append("[0:a]aformat=sample_rates=48000:channel_layouts=stereo,asplit=2[suara][kunci]")
     if musik:
         src = MUSIK_DIR / f"{musik['file'].split(':', 1)[1]}.wav" if musik["file"].startswith("bawaan:") else p.path_aset(musik["file"])
-        ins += ["-stream_loop", "-1", "-i", src]
+        irama = (baca_json(SEMENTARA / "split" / p.dir.name / "props.json") or {}).get("ketukan") or {}
+        ins += ["-stream_loop", "-1", "-ss", f"{irama.get('ofset_musik', 0.0):.4f}", "-i", src]
         fil.append(
             f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo,atrim=0:{dur:.3f},volume={musik.get('db', -18)}dB,"
             f"afade=t=in:d={musik.get('fade_masuk', 0.8)},afade=t=out:st={dur - musik.get('fade_keluar', 2.0):.3f}:"

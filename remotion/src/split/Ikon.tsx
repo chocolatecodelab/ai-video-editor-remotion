@@ -69,16 +69,42 @@ export const Kaca: React.FC<{ x: number; y: number; w: number; h: number; r?: nu
 );
 
 /** Sosok sederhana; kaki di (0,0), tinggi ±150. */
-export const Orang: React.FC<{ wr: Warna; stroke?: string; isi?: string; p?: number; putus?: boolean }> = ({
-  wr, stroke, isi, p = 1, putus,
+/** Sosok; kaki di (0,0), tinggi ±150. `langkah` (fase radian, naik terus saat berjalan/berlari) → sosok utuh
+ *  dengan lengan & kaki berayun berlawanan + badan memantul; tanpa `langkah` = siluet dada (diam). */
+export const Orang: React.FC<{ wr: Warna; stroke?: string; isi?: string; p?: number; putus?: boolean; langkah?: number }> = ({
+  wr, stroke, isi, p = 1, putus, langkah,
 }) => {
   const st = stroke ?? wr.aksen;
   const g = putus ? { strokeDasharray: "10 14" } : gambar(p);
+  if (langkah === undefined || putus) {
+    return (
+      <g filter="url(#sr-glow)">
+        <path d="M -46 0 L -46 -40 Q -46 -82 0 -82 Q 46 -82 46 -40 L 46 0" fillOpacity={putus ? 0 : 0.9 * p}
+          {...garis(st)} fill={isi ?? wr.panel} {...g} />
+        <circle cx={0} cy={-116} r={25} fillOpacity={putus ? 0 : 0.9 * p} {...garis(st)} fill={isi ?? wr.panel} {...g} />
+      </g>
+    );
+  }
+  const ayun = Math.sin(langkah);
+  const pantul = Math.abs(Math.cos(langkah)) * 5;
+  const kaki = (s: number) => {
+    const a = (s * ayun * 28 * Math.PI) / 180;
+    const lutut = { x: Math.sin(a) * 34, y: -58 + Math.cos(a) * 34 };
+    const tekuk = Math.max(0, -s * Math.cos(langkah)) * 14; // kaki yang terangkat menekuk ke belakang
+    return `M 0 -58 L ${lutut.x} ${lutut.y} L ${lutut.x - tekuk} ${lutut.y + 34}`;
+  };
+  const lengan = (s: number) => {
+    const a = (-s * ayun * 32 * Math.PI) / 180;
+    return `M 0 -112 L ${Math.sin(a) * 30} ${-112 + Math.cos(a) * 30} L ${Math.sin(a) * 30 + Math.sin(a + 0.5) * 26} ${-82 + Math.cos(a) * 26}`;
+  };
   return (
-    <g filter="url(#sr-glow)">
-      <path d="M -46 0 L -46 -40 Q -46 -82 0 -82 Q 46 -82 46 -40 L 46 0" fillOpacity={putus ? 0 : 0.9 * p}
-        {...garis(st)} fill={isi ?? wr.panel} {...g} />
-      <circle cx={0} cy={-116} r={25} fillOpacity={putus ? 0 : 0.9 * p} {...garis(st)} fill={isi ?? wr.panel} {...g} />
+    <g filter="url(#sr-glow)" transform={`translate(0 ${-pantul})`}>
+      <path d={kaki(-1)} {...garis(st, 9)} opacity={0.6 * p} />
+      <path d={lengan(-1)} {...garis(st, 8)} opacity={0.6 * p} />
+      <path d="M -20 -58 L -22 -110 Q 0 -126 22 -110 L 20 -58 Z" {...garis(st)} fill={isi ?? wr.panel} fillOpacity={0.9 * p} />
+      <path d={kaki(1)} {...garis(st, 9)} opacity={p} />
+      <path d={lengan(1)} {...garis(st, 8)} opacity={p} />
+      <circle cx={0} cy={-142} r={22} {...garis(st)} fill={isi ?? wr.panel} fillOpacity={0.9 * p} />
     </g>
   );
 };
