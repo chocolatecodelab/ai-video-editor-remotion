@@ -7,12 +7,12 @@ Ringkasannya ada di `CLAUDE.md`; file ini detailnya. Bila bertentangan dengan pe
 
 1. **Desain (boleh di cloud):** transkripsi, konsep, hook 3 detik, naskah/beat-sheet, lalu **storyboard** — still per adegan + VO, timing, SFX, musik (`video.py storyboard <proyek> --buka`).
 2. **Persetujuan storyboard dari Zar.** Tunggu. Revisi beat-sheet = storyboard & persetujuan ulang.
-3. **Produksi di laptop:** bangun/port komposisi ke repo ini (modul yang bisa dipakai ulang, bukan kode sekali pakai), buka **Remotion Studio** agar Zar bisa pratinjau.
-4. **Render final** setelah Zar setuju pratinjau → `video.py semua <proyek>`.
+3. **Produksi di laptop:** bangun/port komposisi ke repo ini (modul yang bisa dipakai ulang, bukan kode sekali pakai). Tanpa pratinjau Studio dan tanpa render pratinjau di cloud (§7).
+4. **Render final sekali** di laptop setelah storyboard disetujui → `video.py semua <proyek>`.
 5. **QA:** `out/qa-report.md` harus **LULUS** (kode K00–K10), tunjukkan `out/kontak.png`.
 6. **Commit** ke repo ini. Repo `video-system` adalah sumber kebenaran tunggal: pekerjaan yang hanya ada di cloud harus masuk ke repo.
 
-Larangan: tidak ada render final sebelum storyboard + pratinjau Studio disetujui.
+Larangan: tidak ada render final sebelum storyboard disetujui.
 
 ## 2. Ekspor
 
@@ -66,6 +66,16 @@ Setiap kali menyerahkan hasil, akhiri dengan daftar singkat ide upgrade ("jangan
 - Tanpa preview Studio; pakai ulang modul adegan.
 - Matikan dengan "stop caveman".
 
+Tambahan (disetujui Zar 2026-10-29):
+
+- **Modul vs edit dipisah:** membangun/upgrade modul di thread tersendiri; thread edit video hanya memakai ulang modul yang ada.
+- **Tanpa render pratinjau di cloud:** storyboard = still per adegan; render sekali di laptop setelah storyboard disetujui.
+- **Satu thread per video:** tutup setelah selesai; revisi digabung satu putaran.
+- **Brief lengkap di awal:** footage, transkrip/naskah, tujuan, brand, durasi, CTA — agar tidak bolak-balik tanya.
+- **Level effort diatur Zar sendiri;** Claude tidak mengubahnya.
+- **Baca log/file seminimal mungkin:** grep/tail bagian yang perlu saja.
+- Ditolak: template adegan (adegan tiap video selalu berbeda).
+
 ## 8. Kebebasan kreatif & upgrade terus (aturan tetap Zar, 2026-10-28)
 
 - Setiap edit **boleh bebas memakai ulang dan meremix** semua efek, preset, template, gaya, dan modul adegan yang sudah ada di `video-system` (lihat `INDEX.md`, `efek/`, katalog) — kombinasikan agar tiap video bervariasi, tidak monoton.
@@ -82,3 +92,8 @@ Berlaku untuk video **baru** saja. File OTCA yang sudah ada tetap di folder file
 - **Folder file proyek (cloud) = transit saja:** dipakai untuk upload footage saat laptop mati dan untuk berbagi hasil ke HP. Setelah laptop menyala, **pindahkan** file transit ke `proyek\<proyek>\` lalu bersihkan salinan transit (tanya Zar sebelum menghapus).
 - **Backup:** sarankan Zar mem-backup `proyek\` secara berkala ke Google Drive atau disk eksternal (folder ini di-`.gitignore`, tidak ikut git).
 - File sementara tetap mengikuti §3 (`.sementara`, D:).
+
+## 10. Mask talent & subtitle (aturan tetap Zar, 2026-10-29)
+
+- **Mask talent harus bersih:** tepi hijab/rambut/bahu tanpa tepi kasar, halo, atau sisa latar. Cek still close-up tepi mask sebelum mengirim storyboard.
+- **Subtitle/caption tidak pernah menutupi wajah atau sosok manusia** (talent maupun figur di grafis). Cek posisi caption vs kotak wajah/orang per adegan; geser caption bila bertabrakan.
