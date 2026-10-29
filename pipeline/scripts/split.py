@@ -225,7 +225,8 @@ def mix_audio(p: Proyek, cfg: dict, out: Path) -> dict:
     fil = []
     musik = cfg.get("musik")
     label_mix = ["[suara]"]
-    fil.append("[0:a]aformat=sample_rates=48000:channel_layouts=stereo,asplit=2[suara][kunci]")
+    # apad: trek audio rekaman bisa lebih pendek dari gambar → tambal hening agar -shortest tidak memotong video
+    fil.append(f"[0:a]aformat=sample_rates=48000:channel_layouts=stereo,apad=whole_dur={dur:.3f},asplit=2[suara][kunci]")
     if musik:
         src = MUSIK_DIR / f"{musik['file'].split(':', 1)[1]}.wav" if musik["file"].startswith("bawaan:") else p.path_aset(musik["file"])
         irama = (baca_json(SEMENTARA / "split" / p.dir.name / "props.json") or {}).get("ketukan") or {}
