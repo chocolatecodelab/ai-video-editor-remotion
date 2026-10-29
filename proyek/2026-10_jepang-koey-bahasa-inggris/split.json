@@ -1,0 +1,532 @@
+{
+  "_catatan": "Jepang Koey — 'Bahasa Inggris aja nggak cukup ke Jepang' (split L01). PART 1-4 dipotong+digabung jadi take1.mov (framing wajah disamakan). Adegan koey-* dari remotion/src/split/AdeganKoey.tsx; potongan klip (5.25/12.55/17.9) = iris hinomaru tepat di jump cut talent. zoom = [waktu, skala, geser_y]: geser_y per klip menyamakan posisi kepala talent (±1010 px).",
+  "tinggi_panggung": 980,
+  "caption_y": 950,
+  "caption_gaya": "pil",
+  "footage": {
+    "geser_y": 335,
+    "titik_zoom_y": 655
+  },
+  "logo": {
+    "file": "aset/grafis/logo-koey-putih.png",
+    "lebar_atas": 300,
+    "lebar_besar": 520,
+    "y_atas": 330,
+    "y_besar": 530,
+    "hook_s": 0,
+    "awal_besar": false
+  },
+  "ketukan": {
+    "aktif": true,
+    "toleransi_potong": 0.0
+  },
+  "adegan": [
+    {
+      "modul": "koey-visa",
+      "mulai": 0,
+      "selesai": 5.25,
+      "t": {
+        "it": {
+          "kata": "pelamar"
+        },
+        "visa": {
+          "kata": "visa"
+        },
+        "inggris": {
+          "kata": "bahasa"
+        },
+        "tolak": {
+          "kata": "aja"
+        }
+      },
+      "keluar": "iris",
+      "titik": [
+        540,
+        560
+      ]
+    },
+    {
+      "modul": "koey-nilai-plus",
+      "mulai": 5.25,
+      "selesai": {
+        "kata": "interview",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "t": {
+        "plus": {
+          "kata": "plus"
+        }
+      },
+      "masuk": "iris",
+      "titik": [
+        540,
+        560
+      ]
+    },
+    {
+      "modul": "koey-interview",
+      "mulai": {
+        "kata": "interview",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "selesai": {
+        "kata": "tetap",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "t": {
+        "omotenashi": {
+          "kata": "omotenashi"
+        }
+      }
+    },
+    {
+      "modul": "koey-level",
+      "mulai": {
+        "kata": "tetap",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "selesai": 12.55,
+      "t": {
+        "jepang": {
+          "kata": "jepang",
+          "ke": 2,
+          "offset": 0.0
+        },
+        "n4": {
+          "kata": "n4"
+        },
+        "a2": {
+          "kata": "a2"
+        }
+      },
+      "keluar": "iris"
+    },
+    {
+      "modul": "koey-guru",
+      "mulai": 12.55,
+      "selesai": {
+        "kata": "nonton",
+        "ke": 1,
+        "offset": -0.35
+      },
+      "t": {
+        "guru": {
+          "kata": "guru"
+        },
+        "sela": {
+          "kata": "sela"
+        }
+      },
+      "masuk": "iris",
+      "titik": [
+        470,
+        560
+      ]
+    },
+    {
+      "modul": "koey-kaiwa",
+      "mulai": {
+        "kata": "nonton",
+        "ke": 1,
+        "offset": -0.35
+      },
+      "selesai": 17.9,
+      "t": {
+        "anime": {
+          "kata": "anime"
+        },
+        "kaiwa": {
+          "kata": "kaiwa"
+        },
+        "arah": {
+          "kata": "terarah"
+        }
+      },
+      "keluar": "iris"
+    },
+    {
+      "modul": "koey-simpan",
+      "mulai": 17.9,
+      "selesai": {
+        "kata": "share",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "t": {
+        "simpan": {
+          "kata": "simpan"
+        },
+        "lupa": {
+          "kata": "lupa"
+        }
+      },
+      "masuk": "iris",
+      "titik": [
+        540,
+        560
+      ]
+    },
+    {
+      "modul": "koey-share",
+      "mulai": {
+        "kata": "share",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "selesai": {
+        "kata": "buat",
+        "ke": 1,
+        "offset": -0.1
+      },
+      "t": {
+        "temen": {
+          "kata": "temen"
+        },
+        "inggris": {
+          "kata": "inggris",
+          "ke": 3,
+          "offset": 0.0
+        }
+      }
+    },
+    {
+      "modul": "koey-kartu",
+      "mulai": {
+        "kata": "buat",
+        "ke": 1,
+        "offset": -0.1
+      },
+      "selesai": null,
+      "t": {}
+    }
+  ],
+  "zoom": [
+    [
+      0,
+      1.0,
+      335
+    ],
+    [
+      5.25,
+      1.06,
+      510
+    ],
+    [
+      {
+        "kata": "interview",
+        "ke": 1,
+        "offset": -0.3
+      },
+      1.0,
+      510
+    ],
+    [
+      {
+        "kata": "tetap",
+        "ke": 1,
+        "offset": -0.3
+      },
+      1.06,
+      510
+    ],
+    [
+      12.55,
+      1.0,
+      482
+    ],
+    [
+      {
+        "kata": "nonton",
+        "ke": 1,
+        "offset": -0.35
+      },
+      1.06,
+      482
+    ],
+    [
+      17.9,
+      1.0,
+      606
+    ],
+    [
+      {
+        "kata": "share",
+        "ke": 1,
+        "offset": -0.3
+      },
+      1.06,
+      606
+    ],
+    [
+      {
+        "kata": "buat",
+        "ke": 1,
+        "offset": -0.1
+      },
+      1.0,
+      606
+    ]
+  ],
+  "musik": {
+    "file": "bawaan:pulsa",
+    "db": -21,
+    "fade_masuk": 0.4,
+    "fade_keluar": 1.5
+  },
+  "sfx": [
+    {
+      "jenis": "whoosh-panjang-1",
+      "t": 0.05,
+      "db": -22
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "pelamar"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "kilau-1",
+      "t": {
+        "kata": "visa"
+      },
+      "db": -21
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "bahasa"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "hit-2",
+      "t": {
+        "kata": "aja"
+      },
+      "db": -18
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": 5.0,
+      "db": -20
+    },
+    {
+      "jenis": "pop-3",
+      "t": {
+        "kata": "plus"
+      },
+      "db": -21
+    },
+    {
+      "jenis": "whoosh-pendek-2",
+      "t": {
+        "kata": "interview",
+        "ke": 1,
+        "offset": -0.4
+      },
+      "db": -21
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "interview",
+        "ke": 1,
+        "offset": 0.2
+      },
+      "db": -23
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "interview",
+        "ke": 1,
+        "offset": 0.7
+      },
+      "db": -23
+    },
+    {
+      "jenis": "kilau-2",
+      "t": {
+        "kata": "omotenashi",
+        "ke": 1,
+        "offset": 0.3
+      },
+      "db": -22
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": {
+        "kata": "tetap",
+        "ke": 1,
+        "offset": -0.45
+      },
+      "db": -21
+    },
+    {
+      "jenis": "tick-1",
+      "t": {
+        "kata": "tetap",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "db": -25
+    },
+    {
+      "jenis": "tick-2",
+      "t": {
+        "kata": "tetap"
+      },
+      "db": -25
+    },
+    {
+      "jenis": "tick-3",
+      "t": {
+        "kata": "tetap",
+        "ke": 1,
+        "offset": 0.2
+      },
+      "db": -25
+    },
+    {
+      "jenis": "ding-benar-1",
+      "t": {
+        "kata": "n4"
+      },
+      "db": -21
+    },
+    {
+      "jenis": "pop-3",
+      "t": {
+        "kata": "a2"
+      },
+      "db": -21
+    },
+    {
+      "jenis": "whoosh-pendek-2",
+      "t": 12.3,
+      "db": -20
+    },
+    {
+      "jenis": "gores-1",
+      "t": {
+        "kata": "guru"
+      },
+      "db": -23
+    },
+    {
+      "jenis": "tick-2",
+      "t": {
+        "kata": "sela"
+      },
+      "db": -24
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": {
+        "kata": "nonton",
+        "ke": 1,
+        "offset": -0.45
+      },
+      "db": -21
+    },
+    {
+      "jenis": "gores-2",
+      "t": {
+        "kata": "anime",
+        "ke": 1,
+        "offset": 0.1
+      },
+      "db": -20
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "kaiwa",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "db": -22
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "kaiwa",
+        "ke": 1,
+        "offset": 0.05
+      },
+      "db": -22
+    },
+    {
+      "jenis": "ding-benar-1",
+      "t": {
+        "kata": "terarah",
+        "ke": 1,
+        "offset": 0.3
+      },
+      "db": -21
+    },
+    {
+      "jenis": "whoosh-pendek-2",
+      "t": 17.65,
+      "db": -20
+    },
+    {
+      "jenis": "pop-3",
+      "t": {
+        "kata": "simpan",
+        "ke": 1,
+        "offset": 0.45
+      },
+      "db": -20
+    },
+    {
+      "jenis": "kilau-1",
+      "t": {
+        "kata": "lupa"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "whoosh-panjang-1",
+      "t": {
+        "kata": "share",
+        "ke": 1,
+        "offset": -0.1
+      },
+      "db": -22
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "temen",
+        "ke": 1,
+        "offset": 0.2
+      },
+      "db": -22
+    },
+    {
+      "jenis": "gores-1",
+      "t": {
+        "kata": "inggris",
+        "ke": 3,
+        "offset": 0.35
+      },
+      "db": -23
+    },
+    {
+      "jenis": "kilau-2",
+      "t": {
+        "kata": "buat",
+        "ke": 1,
+        "offset": 0.2
+      },
+      "db": -20
+    }
+  ]
+}

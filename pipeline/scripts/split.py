@@ -114,8 +114,9 @@ def bangun_props(p: Proyek) -> dict:
             **{k: a[k] for k in ("masuk", "keluar", "teks", "titik") if k in a},
         })
     irama = sinkron_ketukan(p, cfg, adegan, dur)
-    zoom = [[resolve_waktu(t, kata), z] for t, z in cfg.get("zoom", [[0, 1]])]
-    zoom.append([dur + 1, zoom[-1][1]])
+    # entri zoom: [waktu, skala] atau [waktu, skala, geser_y] (framing vertikal per klip)
+    zoom = [[resolve_waktu(e[0], kata), *e[1:]] for e in cfg.get("zoom", [[0, 1]])]
+    zoom.append([dur + 1, *zoom[-1][1:]])
     cap = p.t("caption")
     salin_footage(p)
     rj.siapkan_font(p.tokens)
@@ -131,7 +132,8 @@ def bangun_props(p: Proyek) -> dict:
         **({"logo": siapkan_logo(p, cfg["logo"])} if cfg.get("logo") else {}),
         "kata": [{"w": k["w"], "s": k["s"], "e": k["e"]} for k in kata],
         "caption": {"y": cfg.get("caption_y", cfg.get("tinggi_panggung", p.H // 2)), "kata_maks": cap["kata-maks"],
-                    "karakter_maks": cap["karakter-maks-baris"], "jeda_pecah": cap["jeda-pecah"]},
+                    "karakter_maks": cap["karakter-maks-baris"], "jeda_pecah": cap["jeda-pecah"],
+                    "gaya": cfg.get("caption_gaya", "kaca")},
     }
 
 
@@ -157,7 +159,7 @@ def siapkan_logo(p: Proyek, cfg: dict) -> dict:
     w, h = Image.open(src).size
     return {"src": f"proyek/{p.dir.name}/{src.name}", "rasio": h / w, "lebar_atas": cfg.get("lebar_atas", 300),
             "lebar_besar": cfg.get("lebar_besar", 780), "y_atas": cfg.get("y_atas", 302), "y_besar": cfg.get("y_besar", 556),
-            "hook_s": cfg.get("hook_s", 1.0)}
+            "hook_s": cfg.get("hook_s", 1.0), "awal_besar": cfg.get("awal_besar", True)}
 
 
 def tulis_props(p: Proyek) -> Path:

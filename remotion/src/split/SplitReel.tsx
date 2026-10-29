@@ -27,16 +27,20 @@ export type SplitReelProps = {
   /** K10 menyatu: grain film di seluruh frame (token `grain`) + sapuan cahaya aksen melintasi rekaman di tiap potongan. */
   menyatu?: { grain?: boolean; sapuan?: boolean };
   footage: { src: string; geser_y: number; titik_zoom_y: number };
-  zoom: [number, number][];
+  /** [detik, skala, geser_y?] per potongan; geser_y opsional = framing vertikal per klip (klip gabungan dengan posisi wajah beda). */
+  zoom: ([number, number] | [number, number, number])[];
   adegan: Adegan[];
   /** Grid ketukan musik (split.py sinkron_ketukan): `titik` = detik tiap ketukan di video → denyut halus grafis. */
   ketukan?: { bpm: number; titik?: number[]; denyut?: number } | null;
   /** Hook visual detik pertama (roadmap #7): punch-in panggung & talent, gelombang cincin, kilat cahaya. */
   hook?: { aktif?: boolean; kuat?: number; durasi?: number };
   /** Logo klien permanen (OTCA): besar di tengah selama hook, meluncur ke slot atas, kembali besar di adegan `kartu` (modul otca-kartu). */
-  logo?: { src: string; rasio: number; lebar_atas: number; lebar_besar: number; y_atas: number; y_besar: number; hook_s: number };
+  logo?: { src: string; rasio: number; lebar_atas: number; lebar_besar: number; y_atas: number; y_besar: number; hook_s: number;
+    /** false = logo langsung kecil di slot atas sejak frame 0 (hook milik adegan, bukan logo); besar lagi di kartu akhir. */
+    awal_besar?: boolean };
   kata: Kata[];
-  caption: { y: number; kata_maks: number; karakter_maks: number; jeda_pecah: number };
+  /** gaya "pil": kata aktif = teks putih di pil aksen (highlight style brand Jepang Koey); bawaan "kaca". */
+  caption: { y: number; kata_maks: number; karakter_maks: number; jeda_pecah: number; gaya?: "kaca" | "pil" };
 };
 
 /** Halaman caption: pecah per jeda / jumlah kata / panjang karakter (token caption). */
@@ -66,13 +70,14 @@ const Footage: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
   // push-in linear disengaja (gerak kamera konstan di dalam satu potongan, K05.1 pengecualian kamera)
   const s = z[i][1] * (1 + 0.03 * u) * hookZoom(pr, t, 0.06);
   const atas = pr.tinggi_panggung;
+  const geser = z[i][2] ?? pr.footage.geser_y;
   const grade = pr.tokens.grade as { kontras: number; saturasi: number };
   const G = pr.gradasi;
   return (
     <div style={{ position: "absolute", top: atas - G, left: 0, width: pr.W, height: pr.H - atas + G, overflow: "hidden",
       maskImage: `linear-gradient(180deg, transparent 0px, black ${G}px)`, WebkitMaskImage: `linear-gradient(180deg, transparent 0px, black ${G}px)` }}>
-      <div style={{ position: "absolute", top: G - pr.footage.geser_y, left: 0, width: pr.W, height: pr.H, scale: String(s),
-        transformOrigin: `${pr.W / 2}px ${pr.footage.titik_zoom_y}px` }}>
+      <div style={{ position: "absolute", top: G - geser, left: 0, width: pr.W, height: pr.H, scale: String(s),
+        transformOrigin: `${pr.W / 2}px ${pr.footage.titik_zoom_y + geser - pr.footage.geser_y}px` }}>
         <OffthreadVideo src={staticFile(pr.footage.src)} muted
           style={{ width: pr.W, height: pr.H, filter: `contrast(${1 + grade.kontras}) saturate(${grade.saturasi})` }} />
       </div>
@@ -174,23 +179,23 @@ const CincinIris: React.FC<{ pr: SplitReelProps; wr: Warna; p: Panggung }> = ({ 
   return null;
 };
 
-/** Logo klien: posisi/lebar mengikuti hook (besar → slot atas) dan adegan kartu akhir (slot atas → besar). */
-const LogoKlien: React.FC<{ pr: SplitReelProps; cx: number }> = ({ pr, cx }) => {
+/** Logo klien: posisi/lebar mengikuti hook (besar → slot atas) dan adegan kartu akhir (modul "*-kartu": slot atas → besar). */
+const LogoKlien: React.FC<{ pr: SplitReelProps; wr: Warna; cx: number }> = ({ pr, wr, cx }) => {
   const f = useCurrentFrame();
   const t = f / pr.fps;
   const l = pr.logo;
   if (!l) return null;
-  const kartu = pr.adegan.find((x) => x.modul === "otca-kartu");
+  const kartu = pr.adegan.find((x) => x.modul.endsWith("-kartu"));
   const ez = (a: number, d: number) =>
     interpolate(t, [a, a + d], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
-  const u1 = ez(l.hook_s, 0.6);
+  const u1 = l.awal_besar === false ? 1 : ez(l.hook_s, 0.6);
   const u2 = kartu ? ez(kartu.mulai, 0.7) : 0;
   const lebar = mix(mix(l.lebar_besar, l.lebar_atas, u1), l.lebar_besar * 0.92, u2);
   const y = mix(mix(l.y_besar, l.y_atas, u1), l.y_besar, u2);
-  const kilap = Math.exp(-Math.abs(t - l.hook_s) / 0.25) * 0.5;
+  const kilap = l.awal_besar === false ? 0 : Math.exp(-Math.abs(t - l.hook_s) / 0.25) * 0.5;
   return (
     <Img src={staticFile(l.src)} style={{ position: "absolute", left: cx - lebar / 2, top: y - (lebar * l.rasio) / 2, width: lebar,
-      filter: `drop-shadow(0 0 ${14 + 24 * kilap}px rgba(203,157,49,${0.45 + kilap}))` }} />
+      filter: `drop-shadow(0 0 ${14 + 24 * kilap}px ${rgba(wr.aksen, 0.45 + kilap)})` }} />
   );
 };
 
@@ -338,6 +343,7 @@ const Caption: React.FC<{ pr: SplitReelProps; wr: Warna; tok: Tokens; hal: Kata[
   const k = { f, fps: pr.fps, tok } as Konteks;
   const cap = tok.caption as { stroke: number; redup: number };
   const masuk = prog(k, h[0].s - 0.08, 0.25);
+  const pil = pr.caption.gaya === "pil";
   return (
     <div style={{ position: "absolute", top: pr.caption.y, left: 0, width: pr.W, display: "flex", justifyContent: "center",
       translate: `0px ${mix(14, 0, masuk)}px`, opacity: masuk }}>
@@ -348,6 +354,17 @@ const Caption: React.FC<{ pr: SplitReelProps; wr: Warna; tok: Tokens; hal: Kata[
         {h.map((w, i) => {
           const aktif = t >= w.s && t < Math.max(w.e, h[i + 1]?.s ?? w.e + 0.3);
           const sudah = t >= w.s;
+          if (pil) {
+            // highlight brand: kata aktif putih di pil aksen; pil muncul dengan skala halus saat kata diucapkan
+            const u = prog(k, w.s - 0.04, 0.14);
+            return (
+              <span key={i} style={{ position: "relative", color: wr.teks, opacity: sudah ? 1 : cap.redup, padding: "0 10px" }}>
+                <span style={{ position: "absolute", inset: "-4px 0", borderRadius: 14, background: wr.aksen,
+                  opacity: aktif ? u : 0, scale: String(mix(0.8, 1, u)), boxShadow: `0 6px 18px ${rgba(wr.aksen, 0.45)}` }} />
+                <span style={{ position: "relative" }}>{w.w}</span>
+              </span>
+            );
+          }
           return (
             <span key={i} style={{ color: aktif ? wr.aksen : wr.teks, opacity: sudah ? 1 : cap.redup,
               WebkitTextStroke: `${cap.stroke}px ${String(tok.warna.stroke)}`, paintOrder: "stroke fill",
@@ -390,7 +407,7 @@ export const SplitReel: React.FC<SplitReelProps> = (pr) => {
           opacity: 0.12 * d, background: `radial-gradient(ellipse 55% 45% at 50% 50%, ${rgba(wr.aksen, 0.5)}, ${rgba(wr.aksen, 0)})`,
           ...pudarBawah(pr.gradasi) }} />
       ) : null}
-      <LogoKlien pr={pr} cx={p.cx} />
+      <LogoKlien pr={pr} wr={wr} cx={p.cx} />
       <HookPembuka pr={pr} wr={wr} cx={hx} cy={hy} />
       <Sambungan pr={pr} wr={wr} />
       {pr.menyatu?.sapuan !== false ? <SapuanCahaya pr={pr} wr={wr} /> : null}
