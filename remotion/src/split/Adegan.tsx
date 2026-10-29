@@ -10,6 +10,7 @@ import {
   OtcaBuktiGear, OtcaCoret, OtcaKartu, OtcaPesawatPeta, OtcaRadar, OtcaRuangKuliah, OtcaSapa, OtcaSertifikatKampus, OtcaTangga,
   OtcaTimbangan,
 } from "./AdeganOtca";
+import { CiaoBos, CiaoBudaya, CiaoGlobal, CiaoHati, CiaoKartu, CiaoMandarin, CiaoNilaiTambah, CiaoPengantar, CiaoRiset, CiaoTanya, CiaoVs, CiaoWlb } from "./AdeganCiao";
 import { KoeyGuru, KoeyInterview, KoeyKaiwa, KoeyKartu, KoeyLevel, KoeyNilaiPlus, KoeyShare, KoeySimpan, KoeyVisa } from "./AdeganKoey";
 import { INOUT, Konteks, detik, drift, gambar, mix, prog, progE, tk } from "./alat";
 import {
@@ -564,4 +565,16 @@ export const PUSTAKA: Record<string, React.FC<PropsAdegan>> = {
   "koey-simpan": KoeySimpan,
   "koey-share": KoeyShare,
   "koey-kartu": KoeyKartu,
+  "ciao-tanya": CiaoTanya,
+  "ciao-vs": CiaoVs,
+  "ciao-mandarin": CiaoMandarin,
+  "ciao-pengantar": CiaoPengantar,
+  "ciao-nilai-tambah": CiaoNilaiTambah,
+  "ciao-wlb": CiaoWlb,
+  "ciao-budaya": CiaoBudaya,
+  "ciao-riset": CiaoRiset,
+  "ciao-bos": CiaoBos,
+  "ciao-global": CiaoGlobal,
+  "ciao-hati": CiaoHati,
+  "ciao-kartu": CiaoKartu,
 };

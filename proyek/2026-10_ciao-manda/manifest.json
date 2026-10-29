@@ -1,0 +1,105 @@
+{
+  "proyek": "2026-10_ciao-manda",
+  "judul": "Kerja di Perusahaan China di Indonesia: Ekspektasi vs Realita (Ciao Manda, split)",
+  "status": "storyboard",
+  "skill": "video-editor@0.3",
+  "gaya": "glass-tech@0.6",
+  "template": "explainer@0.2",
+  "konteks": [
+    "zona-aman@0.2",
+    "caption@0.2",
+    "depth-typography@0.2",
+    "ingest@0.1",
+    "gerak@0.2",
+    "audio@0.1",
+    "ekspor@0.1",
+    "sound-design@0.1",
+    "koreografi@0.2"
+  ],
+  "platform": [
+    "reels"
+  ],
+  "aset": {
+    "rekaman": "aset/rekaman/take1.mp4",
+    "potong": [],
+    "crop": {
+      "x": 0.5
+    },
+    "musik": null
+  },
+  "warna": {
+    "filter": "eq=contrast=1.03:saturation=1.02"
+  },
+  "transkrip": {
+    "bahasa": "id",
+    "model": "large-v3"
+  },
+  "token_override": {
+    "_catatan": "Brand Ciao Manda by OTCA (project files ciao-manda/brand/Brand_Guidelines_Ciao_Manda_Video.pdf) — HANYA proyek ini. Merah #D40000, putih, hitam; Montserrat.",
+    "warna": {
+      "latar": "#080808",
+      "teks-utama": "#FFFFFF",
+      "teks-sekunder": "#FFFFFF",
+      "aksen": "#D40000",
+      "aksen-2": "#FF5A4E",
+      "peringatan": "#8E0000",
+      "panel": "#151517",
+      "panel-opasitas": 0.66,
+      "garis-panel": "#FFFFFF",
+      "garis-opasitas": 0.28,
+      "stroke": "#000000",
+      "bayangan": "#000000"
+    },
+    "font": {
+      "judul": {
+        "file": "Montserrat-ExtraBold.ttf",
+        "family": "Montserrat",
+        "weight": 800,
+        "wght": 0
+      },
+      "subjudul": {
+        "file": "Montserrat-Bold.ttf",
+        "family": "Montserrat",
+        "weight": 700,
+        "wght": 0
+      },
+      "isi": {
+        "file": "Montserrat-SemiBold.ttf",
+        "family": "Montserrat",
+        "weight": 600,
+        "wght": 0
+      },
+      "caption": {
+        "file": "Montserrat-Bold.ttf",
+        "family": "Montserrat",
+        "weight": 700,
+        "wght": 0
+      },
+      "depth": {
+        "file": "Montserrat-ExtraBold.ttf",
+        "family": "Montserrat",
+        "weight": 800,
+        "wght": 0
+      }
+    },
+    "motif": {
+      "aksen": "kotak",
+      "tekstur": null
+    },
+    "zona-aman": {
+      "kiri": 108
+    },
+    "caption": {
+      "kata-maks": 2
+    },
+    "qa": {
+      "karakter-per-detik-maks": 29
+    },
+    "_catatan_qa": "23→29 khusus proyek ini: talent bicara cepat di 'bahasa Inggris' (4,38–4,84 s, 28,3 cps); caption disorot per kata, tetap terbaca."
+  },
+  "terpakai": null,
+  "riwayat": [],
+  "layout": "split",
+  "persetujuan": null,
+  "qa": null
+}

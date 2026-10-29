@@ -26,7 +26,8 @@ export type SplitReelProps = {
   gradasi: number;
   /** K10 menyatu: grain film di seluruh frame (token `grain`) + sapuan cahaya aksen melintasi rekaman di tiap potongan. */
   menyatu?: { grain?: boolean; sapuan?: boolean };
-  footage: { src: string; geser_y: number; titik_zoom_y: number };
+  /** tutup = detik footage memudar ke latar (0,7 s), mis. menutup outro/sisa rekaman di bawah kartu akhir. */
+  footage: { src: string; geser_y: number; titik_zoom_y: number; tutup?: number };
   /** [detik, skala, geser_y?] per potongan; geser_y opsional = framing vertikal per klip (klip gabungan dengan posisi wajah beda). */
   zoom: ([number, number] | [number, number, number])[];
   adegan: Adegan[];
@@ -79,6 +80,8 @@ const Footage: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
   const G = pr.gradasi;
   return (
     <div style={{ position: "absolute", top: atas - G, left: 0, width: pr.W, height: pr.H - atas + G, overflow: "hidden",
+      opacity: pr.footage.tutup === undefined ? 1
+        : interpolate(t, [pr.footage.tutup, pr.footage.tutup + 0.7], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
       maskImage: `linear-gradient(180deg, transparent 0px, black ${G}px)`, WebkitMaskImage: `linear-gradient(180deg, transparent 0px, black ${G}px)` }}>
       <div style={{ position: "absolute", top: G - geser, left: 0, width: pr.W, height: pr.H, scale: String(s),
         transformOrigin: `${pr.W / 2}px ${pr.footage.titik_zoom_y + geser - pr.footage.geser_y}px` }}>

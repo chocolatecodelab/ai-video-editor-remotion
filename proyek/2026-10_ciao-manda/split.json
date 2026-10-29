@@ -1,0 +1,857 @@
+{
+  "_catatan": "Ciao Manda — 'Kerja di perusahaan China di Indonesia: ekspektasi vs realita' (split L01, 1 take). Adegan ciao-* dari remotion/src/split/AdeganCiao.tsx; iris di batas poin (01 10.2 s, 02, 03); label poin 01/02/03 + pil EKSPEKTASI/REALITA di adegan.",
+  "tinggi_panggung": 980,
+  "caption_y": 935,
+  "caption_gaya": "pil",
+  "footage": {
+    "geser_y": 640,
+    "titik_zoom_y": 870,
+    "tutup": 59.7
+  },
+  "logo": {
+    "file": "aset/grafis/logo-ciao-manda-gelap.png",
+    "lebar_atas": 170,
+    "lebar_besar": 560,
+    "y_atas": 330,
+    "y_besar": 900,
+    "hook_s": 0,
+    "awal_besar": false
+  },
+  "ketukan": {
+    "aktif": true,
+    "toleransi_potong": 0.0
+  },
+  "adegan": [
+    {
+      "modul": "ciao-tanya",
+      "mulai": 0,
+      "selesai": {
+        "kata": "nah",
+        "ke": 1,
+        "offset": -0.15
+      },
+      "t": {
+        "perusahaan": {
+          "kata": "perusahaan",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "indonesia": {
+          "kata": "indonesia",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "enak": {
+          "kata": "enak",
+          "ke": 1,
+          "offset": 0.0
+        }
+      }
+    },
+    {
+      "modul": "ciao-vs",
+      "mulai": {
+        "kata": "nah",
+        "ke": 1,
+        "offset": -0.15
+      },
+      "selesai": 10.2,
+      "t": {
+        "ekspektasi": {
+          "kata": "ekspektasi",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "realita": {
+          "kata": "realita",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "kerja": {
+          "kata": "kerja",
+          "ke": 2,
+          "offset": 0.0
+        }
+      },
+      "keluar": "iris",
+      "titik": [
+        540,
+        640
+      ]
+    },
+    {
+      "modul": "ciao-mandarin",
+      "mulai": 10.2,
+      "selesai": {
+        "kata": "realitanya",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "t": {
+        "harus": {
+          "kata": "harus",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "jago": {
+          "kata": "jago",
+          "ke": 1,
+          "offset": 0.0
+        }
+      },
+      "masuk": "iris",
+      "titik": [
+        540,
+        640
+      ]
+    },
+    {
+      "modul": "ciao-pengantar",
+      "mulai": {
+        "kata": "realitanya",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "selesai": {
+        "kata": "namun",
+        "ke": 1,
+        "offset": -0.1
+      },
+      "t": {
+        "selalu": {
+          "kata": "selalu",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "indonesia": {
+          "kata": "indonesia",
+          "ke": 3,
+          "offset": 0.0
+        },
+        "inggris": {
+          "kata": "inggris",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "pengantar": {
+          "kata": "karena",
+          "ke": 1,
+          "offset": 0.0
+        }
+      }
+    },
+    {
+      "modul": "ciao-nilai-tambah",
+      "mulai": {
+        "kata": "namun",
+        "ke": 1,
+        "offset": -0.1
+      },
+      "selesai": {
+        "kata": "kerjanya",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "t": {
+        "mandarin": {
+          "kata": "mandarin",
+          "ke": 2,
+          "offset": 0.0
+        },
+        "tambah": {
+          "kata": "tambah",
+          "ke": 1,
+          "offset": 0.0
+        }
+      },
+      "keluar": "iris",
+      "titik": [
+        380,
+        580
+      ]
+    },
+    {
+      "modul": "ciao-wlb",
+      "mulai": {
+        "kata": "kerjanya",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "selesai": {
+        "kata": "realitanya",
+        "ke": 2,
+        "offset": -0.2
+      },
+      "t": {
+        "balance": {
+          "kata": "balance",
+          "ke": 1,
+          "offset": 0.0
+        }
+      },
+      "masuk": "iris",
+      "titik": [
+        380,
+        580
+      ]
+    },
+    {
+      "modul": "ciao-budaya",
+      "mulai": {
+        "kata": "realitanya",
+        "ke": 2,
+        "offset": -0.2
+      },
+      "selesai": {
+        "kata": "kuncinya",
+        "ke": 1,
+        "offset": -0.15
+      },
+      "t": {
+        "tergantung": {
+          "kata": "tergantung",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "budaya": {
+          "kata": "budaya",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "masing-masing": {
+          "kata": "masing-masing",
+          "ke": 1,
+          "offset": 0.0
+        }
+      }
+    },
+    {
+      "modul": "ciao-riset",
+      "mulai": {
+        "kata": "kuncinya",
+        "ke": 1,
+        "offset": -0.15
+      },
+      "selesai": {
+        "kata": "tiga",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "t": {
+        "riset": {
+          "kata": "riset",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "apply": {
+          "kata": "apply",
+          "ke": 1,
+          "offset": 0.0
+        }
+      },
+      "keluar": "iris",
+      "titik": [
+        790,
+        850
+      ]
+    },
+    {
+      "modul": "ciao-bos",
+      "mulai": {
+        "kata": "tiga",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "selesai": {
+        "kata": "realitanya",
+        "ke": 3,
+        "offset": -0.25
+      },
+      "t": {
+        "bos": {
+          "kata": "bos",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "sulit": {
+          "kata": "sulit",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "komunikasi": {
+          "kata": "komunikasi",
+          "ke": 1,
+          "offset": 0.0
+        }
+      },
+      "masuk": "iris",
+      "titik": [
+        790,
+        850
+      ]
+    },
+    {
+      "modul": "ciao-global",
+      "mulai": {
+        "kata": "realitanya",
+        "ke": 3,
+        "offset": -0.25
+      },
+      "selesai": {
+        "kata": "gak",
+        "ke": 4,
+        "offset": -0.15
+      },
+      "t": {
+        "pengalaman": {
+          "kata": "pengalaman",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "global": {
+          "kata": "global",
+          "ke": 1,
+          "offset": 0.0
+        }
+      }
+    },
+    {
+      "modul": "ciao-hati",
+      "mulai": {
+        "kata": "gak",
+        "ke": 4,
+        "offset": -0.15
+      },
+      "selesai": 59.4,
+      "t": {
+        "semua": {
+          "kata": "semua",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "pandai-pandai": {
+          "kata": "pandai-pandai",
+          "ke": 1,
+          "offset": 0.0
+        },
+        "hati": {
+          "kata": "hati",
+          "ke": 1,
+          "offset": 0.0
+        }
+      }
+    },
+    {
+      "modul": "ciao-kartu",
+      "mulai": 59.4,
+      "selesai": null,
+      "t": {}
+    }
+  ],
+  "zoom": [
+    [
+      0,
+      1.0
+    ],
+    [
+      {
+        "kata": "ekspektasi",
+        "ke": 2,
+        "offset": -0.1
+      },
+      1.05
+    ],
+    [
+      {
+        "kata": "realitanya",
+        "ke": 1,
+        "offset": -0.1
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "namun",
+        "ke": 1,
+        "offset": 0
+      },
+      1.04
+    ],
+    [
+      {
+        "kata": "kerjanya",
+        "ke": 1,
+        "offset": -0.1
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "kuncinya",
+        "ke": 1,
+        "offset": 0
+      },
+      1.05
+    ],
+    [
+      {
+        "kata": "tiga",
+        "ke": 1,
+        "offset": -0.1
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "realitanya",
+        "ke": 3,
+        "offset": -0.1
+      },
+      1.04
+    ],
+    [
+      {
+        "kata": "pandai-pandai",
+        "ke": 1,
+        "offset": 0
+      },
+      1.07
+    ],
+    [
+      59.4,
+      1.0
+    ]
+  ],
+  "musik": {
+    "file": "bawaan:pulsa",
+    "db": -21,
+    "fade_masuk": 0.4,
+    "fade_keluar": 1.8,
+    "ducking": {
+      "mode": "transkrip"
+    }
+  },
+  "sfx": [
+    {
+      "jenis": "whoosh-panjang-1",
+      "t": 0.05,
+      "db": -22
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "perusahaan",
+        "ke": 1,
+        "offset": 0.1
+      },
+      "db": -23
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "indonesia",
+        "ke": 1,
+        "offset": 0.0
+      },
+      "db": -22
+    },
+    {
+      "jenis": "kilau-1",
+      "t": {
+        "kata": "enak",
+        "ke": 1,
+        "offset": 0.0
+      },
+      "db": -22
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": {
+        "kata": "nah",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "db": -21
+    },
+    {
+      "jenis": "swoosh-balik-1",
+      "t": {
+        "kata": "ekspektasi",
+        "ke": 1,
+        "offset": -0.15
+      },
+      "db": -22
+    },
+    {
+      "jenis": "swoosh-balik-2",
+      "t": {
+        "kata": "realita",
+        "ke": 1,
+        "offset": -0.15
+      },
+      "db": -22
+    },
+    {
+      "jenis": "hit-2",
+      "t": {
+        "kata": "kerja",
+        "ke": 2,
+        "offset": 0.0
+      },
+      "db": -19
+    },
+    {
+      "jenis": "whoosh-pendek-2",
+      "t": 9.95,
+      "db": -20
+    },
+    {
+      "jenis": "pop-3",
+      "t": {
+        "kata": "harus",
+        "ke": 1,
+        "offset": -0.1
+      },
+      "db": -22
+    },
+    {
+      "jenis": "riser-1",
+      "t": {
+        "kata": "jago",
+        "ke": 1,
+        "offset": 0.0
+      },
+      "db": -24
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "jago",
+        "ke": 1,
+        "offset": 0.2
+      },
+      "db": -24
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "jago",
+        "ke": 1,
+        "offset": 0.4
+      },
+      "db": -24
+    },
+    {
+      "jenis": "hit-1",
+      "t": {
+        "kata": "selalu",
+        "ke": 1,
+        "offset": 0.0
+      },
+      "db": -20
+    },
+    {
+      "jenis": "pop-3",
+      "t": {
+        "kata": "indonesia",
+        "ke": 3,
+        "offset": -0.2
+      },
+      "db": -21
+    },
+    {
+      "jenis": "ding-benar-1",
+      "t": {
+        "kata": "indonesia",
+        "ke": 3,
+        "offset": 0.3
+      },
+      "db": -22
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "inggris",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "db": -21
+    },
+    {
+      "jenis": "ding-benar-1",
+      "t": {
+        "kata": "inggris",
+        "ke": 1,
+        "offset": 0.3
+      },
+      "db": -22
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": {
+        "kata": "namun",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "db": -21
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "mandarin",
+        "ke": 2,
+        "offset": -0.2
+      },
+      "db": -21
+    },
+    {
+      "jenis": "kilau-2",
+      "t": {
+        "kata": "tambah",
+        "ke": 1,
+        "offset": 0.0
+      },
+      "db": -20
+    },
+    {
+      "jenis": "whoosh-pendek-2",
+      "t": {
+        "kata": "kerjanya",
+        "ke": 1,
+        "offset": -0.45
+      },
+      "db": -20
+    },
+    {
+      "jenis": "tick-1",
+      "t": {
+        "kata": "kerjanya",
+        "ke": 1,
+        "offset": 0.2
+      },
+      "db": -25
+    },
+    {
+      "jenis": "tick-2",
+      "t": {
+        "kata": "worklife",
+        "ke": 1,
+        "offset": 0.0
+      },
+      "db": -25
+    },
+    {
+      "jenis": "ketuk-1",
+      "t": {
+        "kata": "balance",
+        "ke": 1,
+        "offset": 0.0
+      },
+      "db": -20
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": {
+        "kata": "realitanya",
+        "ke": 2,
+        "offset": -0.3
+      },
+      "db": -21
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "tergantung",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "db": -22
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "budaya",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "db": -22
+    },
+    {
+      "jenis": "pop-3",
+      "t": {
+        "kata": "masing-masing",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "db": -22
+    },
+    {
+      "jenis": "whoosh-pendek-2",
+      "t": {
+        "kata": "kuncinya",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "db": -21
+    },
+    {
+      "jenis": "gores-1",
+      "t": {
+        "kata": "riset",
+        "ke": 1,
+        "offset": 0.0
+      },
+      "db": -23
+    },
+    {
+      "jenis": "tick-1",
+      "t": {
+        "kata": "riset",
+        "ke": 1,
+        "offset": 0.3
+      },
+      "db": -24
+    },
+    {
+      "jenis": "tick-2",
+      "t": {
+        "kata": "riset",
+        "ke": 1,
+        "offset": 0.6
+      },
+      "db": -24
+    },
+    {
+      "jenis": "tick-3",
+      "t": {
+        "kata": "riset",
+        "ke": 1,
+        "offset": 0.9
+      },
+      "db": -24
+    },
+    {
+      "jenis": "klik-ketik-1",
+      "t": {
+        "kata": "apply",
+        "ke": 1,
+        "offset": 0.6
+      },
+      "db": -20
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": 39.05,
+      "db": -20
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "bos",
+        "ke": 1,
+        "offset": -0.1
+      },
+      "db": -22
+    },
+    {
+      "jenis": "glitch-1",
+      "t": {
+        "kata": "sulit",
+        "ke": 1,
+        "offset": 0.0
+      },
+      "db": -24
+    },
+    {
+      "jenis": "ketuk-2",
+      "t": {
+        "kata": "komunikasi",
+        "ke": 1,
+        "offset": 0.0
+      },
+      "db": -22
+    },
+    {
+      "jenis": "ketuk-3",
+      "t": {
+        "kata": "komunikasi",
+        "ke": 1,
+        "offset": 0.5
+      },
+      "db": -22
+    },
+    {
+      "jenis": "whoosh-panjang-1",
+      "t": {
+        "kata": "realitanya",
+        "ke": 3,
+        "offset": -0.3
+      },
+      "db": -22
+    },
+    {
+      "jenis": "kilau-1",
+      "t": {
+        "kata": "pengalaman",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "db": -22
+    },
+    {
+      "jenis": "kilau-2",
+      "t": {
+        "kata": "global",
+        "ke": 1,
+        "offset": 0.0
+      },
+      "db": -20
+    },
+    {
+      "jenis": "whoosh-pendek-2",
+      "t": {
+        "kata": "gak",
+        "ke": 4,
+        "offset": -0.25
+      },
+      "db": -21
+    },
+    {
+      "jenis": "pop-2",
+      "t": {
+        "kata": "semua",
+        "ke": 1,
+        "offset": 0.0
+      },
+      "db": -23
+    },
+    {
+      "jenis": "pop-3",
+      "t": {
+        "kata": "pandai-pandai",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "db": -22
+    },
+    {
+      "jenis": "ding-benar-1",
+      "t": {
+        "kata": "hati",
+        "ke": 1,
+        "offset": 0.4
+      },
+      "db": -20
+    },
+    {
+      "jenis": "whoosh-panjang-1",
+      "t": 59.35,
+      "db": -21
+    },
+    {
+      "jenis": "kilau-1",
+      "t": 59.9,
+      "db": -20
+    }
+  ]
+}
