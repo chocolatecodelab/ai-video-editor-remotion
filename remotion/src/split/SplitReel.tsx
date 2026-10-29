@@ -38,6 +38,9 @@ export type SplitReelProps = {
   logo?: { src: string; rasio: number; lebar_atas: number; lebar_besar: number; y_atas: number; y_besar: number; hook_s: number;
     /** false = logo langsung kecil di slot atas sejak frame 0 (hook milik adegan, bukan logo); besar lagi di kartu akhir. */
     awal_besar?: boolean };
+  /** Transisi antar-klip rekaman gabungan (jump cut ruangan beda): sapuan panel aksen miring menutup potongan di
+   *  detik `potong`, rekaman lama push-in + blur keluar, rekaman baru mendarat dari zoom + blur. Hanya area talent. */
+  transisi_klip?: { potong: number[]; durasi?: number } | null;
   kata: Kata[];
   /** gaya "pil": kata aktif = teks putih di pil aksen (highlight style brand Jepang Koey); bawaan "kaca". */
   caption: { y: number; kata_maks: number; karakter_maks: number; jeda_pecah: number; gaya?: "kaca" | "pil" };
@@ -68,7 +71,8 @@ const Footage: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
   while (i < z.length - 2 && z[i + 1][0] <= t) i++;
   const u = Math.min(1, (t - z[i][0]) / Math.max(0.01, z[i + 1][0] - z[i][0]));
   // push-in linear disengaja (gerak kamera konstan di dalam satu potongan, K05.1 pengecualian kamera)
-  const s = z[i][1] * (1 + 0.03 * u) * hookZoom(pr, t, 0.06);
+  const tk = transisiKlip(pr, t);
+  const s = z[i][1] * (1 + 0.03 * u) * hookZoom(pr, t, 0.06) * (1 + 0.12 * tk.dorong);
   const atas = pr.tinggi_panggung;
   const geser = z[i][2] ?? pr.footage.geser_y;
   const grade = pr.tokens.grade as { kontras: number; saturasi: number };
@@ -79,14 +83,46 @@ const Footage: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
       <div style={{ position: "absolute", top: G - geser, left: 0, width: pr.W, height: pr.H, scale: String(s),
         transformOrigin: `${pr.W / 2}px ${pr.footage.titik_zoom_y + geser - pr.footage.geser_y}px` }}>
         <OffthreadVideo src={staticFile(pr.footage.src)} muted
-          style={{ width: pr.W, height: pr.H, filter: `contrast(${1 + grade.kontras}) saturate(${grade.saturasi})` }} />
+          style={{ width: pr.W, height: pr.H, filter: `contrast(${1 + grade.kontras}) saturate(${grade.saturasi})${
+            tk.dorong > 0.01 ? ` blur(${(tk.dorong * 9).toFixed(2)}px) brightness(${1 + 0.18 * tk.dorong})` : ""}` }} />
       </div>
       {/* grade palet gaya agar rekaman menyatu dengan panggung (K10): bayangan ke latar, rona dingin aksen tipis */}
       <div style={{ position: "absolute", inset: 0, background: rgba(wr.latar, 0.18), mixBlendMode: "multiply" }} />
       <div style={{ position: "absolute", inset: 0, background: rgba(wr.aksen, 0.07), mixBlendMode: "soft-light" }} />
       <div style={{ position: "absolute", inset: 0, background: `linear-gradient(180deg, ${rgba(wr.latar, 0.85)} 0px, ${rgba(wr.latar, 0)} ${G * 1.5}px)` }} />
       <div style={{ position: "absolute", inset: 0, boxShadow: `inset 0 0 180px ${rgba(wr.latar, 0.6)}` }} />
+      {tk.sapu !== null ? <SapuanKlip x={tk.sapu} W={pr.W} wr={wr} /> : null}
     </div>
+  );
+};
+
+/** Keadaan transisi klip di detik t: `dorong` 0..1 (puncak tepat di potongan: push-in + blur), `sapu` = posisi pusat
+ *  panel (px, 0 = menutupi penuh tepat di potongan) atau null di luar jendela transisi. */
+const transisiKlip = (pr: SplitReelProps, t: number) => {
+  const tr = pr.transisi_klip;
+  const d = tr?.durasi ?? 0.55;
+  const c = tr?.potong.find((x) => Math.abs(t - x) <= d / 2);
+  if (c === undefined) return { dorong: 0, sapu: null as number | null };
+  const v = (t - (c - d / 2)) / d;
+  const dorong = t < c ? Easing.in(Easing.cubic)(v * 2) : 1 - Easing.out(Easing.cubic)(v * 2 - 1);
+  return { dorong, sapu: mix(-1.25, 1.25, Easing.inOut(Easing.quad)(v)) * pr.W };
+};
+
+/** Panel sapuan miring: garis putih tipis di depan, panel aksen lebar (cukup menutup seluruh area talent saat x≈0),
+ *  bayangan latar di belakang — potongan ruangan jatuh di balik panel. */
+const SapuanKlip: React.FC<{ x: number; W: number; wr: Warna }> = ({ x, W, wr }) => {
+  const lebar = W * 1.5;
+  const pita = (dx: number, w: number, bg: string, o = 1) => (
+    <div style={{ position: "absolute", top: -60, bottom: -60, left: W / 2 + x + dx - w / 2, width: w, background: bg, opacity: o,
+      transform: "skewX(-18deg)" }} />
+  );
+  return (
+    <>
+      {pita(-lebar / 2 - 70, 90, rgba(wr.latar, 0.55))}
+      {pita(0, lebar, `linear-gradient(90deg, ${wr.bahaya}, ${wr.aksen} 18%, ${wr.aksen} 82%, ${wr.aksen2})`)}
+      {pita(lebar / 2 + 26, 14, "#FFFFFF", 0.9)}
+      {pita(lebar / 2 + 62, 6, "#FFFFFF", 0.5)}
+    </>
   );
 };
 

@@ -129,6 +129,7 @@ def bangun_props(p: Proyek) -> dict:
         "zoom": zoom, "adegan": adegan, "ketukan": irama,
         "hook": {k: v for k, v in {**HOOK_BAWAAN, **(cfg.get("hook") or {})}.items() if k != "sfx"},
         **({"menyatu": cfg["menyatu"]} if "menyatu" in cfg else {}),
+        **({"transisi_klip": cfg["transisi_klip"]} if cfg.get("transisi_klip") else {}),
         **({"logo": siapkan_logo(p, cfg["logo"])} if cfg.get("logo") else {}),
         "kata": [{"w": k["w"], "s": k["s"], "e": k["e"]} for k in kata],
         "caption": {"y": cfg.get("caption_y", cfg.get("tinggi_panggung", p.H // 2)), "kata_maks": cap["kata-maks"],
