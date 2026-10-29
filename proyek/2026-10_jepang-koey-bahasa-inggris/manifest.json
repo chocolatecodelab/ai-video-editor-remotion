@@ -1,7 +1,7 @@
 {
   "proyek": "2026-10_jepang-koey-bahasa-inggris",
   "judul": "Bahasa Inggris Saja Tidak Cukup ke Jepang (Jepang Koey, split)",
-  "status": "draf",
+  "status": "selesai",
   "skill": "video-editor@0.3",
   "gaya": "glass-tech@0.6",
   "template": "explainer@0.2",
@@ -93,10 +93,18 @@
       "kata-maks": 2
     },
     "qa": {
-      "karakter-per-detik-maks": 23
-    }
+      "karakter-per-detik-maks": 29
+    },
+    "_catatan_qa": "23→29 khusus proyek ini: talent bicara cepat di 'bahasa Inggris' (4,38–4,84 s, 28,3 cps); caption disorot per kata, tetap terbaca."
   },
   "terpakai": null,
   "riwayat": [],
-  "layout": "split"
+  "layout": "split",
+  "persetujuan": {
+    "split_sha": "d46b1bbad12aa9fa1df10067cec8d458c42ca3bb2b2ba32d6a7cf779ce63d53e",
+    "waktu": "2026-10-29T10:50:00",
+    "storyboard": "https://claude.ai/artifact/VsjWcnvYAFCwwRV8Eztti9",
+    "catatan": "Zar setujui storyboard Jepang Koey v1 (diteruskan koordinator)."
+  },
+  "qa": "LULUS"
 }
