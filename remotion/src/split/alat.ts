@@ -18,11 +18,14 @@ export type Adegan = {
   teks?: Record<string, string>;
   /** Titik fokus (px panggung) untuk match cut "iris": lingkaran menyempit/membuka di titik ini. Bawaan tengah panggung. */
   titik?: [number, number];
+  /** Tinggi (px panggung) garis emas untuk transisi "garis": adegan lama memipih jadi garis ini, adegan baru membuka darinya. */
+  garis_y?: number;
 };
 
 /** blur-zoom = potong bawaan (motif glass-tech); match = silang pudar tanpa zoom (bentuk sama di dua adegan);
- *  iris = shape match cut: adegan lama menyempit jadi lingkaran di `titik`, adegan baru membuka dari lingkaran yang sama. */
-export type Transisi = "blur-zoom" | "match" | "iris";
+ *  iris = shape match cut: adegan lama menyempit jadi lingkaran di `titik`, adegan baru membuka dari lingkaran yang sama;
+ *  garis = "benang emas": adegan lama memipih jadi satu garis cahaya di `garis_y`, adegan baru membuka dari garis itu. */
+export type Transisi = "blur-zoom" | "match" | "iris" | "garis";
 
 export type Konteks = { f: number; fps: number; tok: Tokens; p: Panggung; a: Adegan };
 

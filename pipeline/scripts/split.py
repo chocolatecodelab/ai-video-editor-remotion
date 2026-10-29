@@ -15,6 +15,9 @@ Pemakaian:
 Lewat pintu utama: video.py render|qa <proyek> otomatis memakai split.py bila proyek punya split.json.
 split.json opsional (bawaan menyala): "hook": {"aktif", "kuat", "durasi", "sfx"}, "ketukan": {"denyut": 0..1},
 "musik": {"ducking": {"mode": "transkrip", "db": -9}}, adegan "masuk"/"keluar": "iris" (+ "titik": [x, y]).
+v0.3: "garis" (benang emas, + "garis_y"), "latar_talent" (relight.py: latar talent digelapkan), "merek" (logo tetap di
+atas: file, lebar, y, sembunyi), "caption": {"tekankan": [kata kunci]}, "musik": {"babak": [[anchor, dB], …]}
+(otomasi volume musik per bagian, mis. stop-down −40 dB sebelum kalimat kunci).
 """
 from __future__ import annotations
 
@@ -37,7 +40,8 @@ import ketukan  # noqa: E402
 import musik as musik_bawaan  # noqa: E402
 
 KOMPOSISI = "SplitReel"
-TRANSISI = {"blur-zoom", "match", "iris"}
+TRANSISI = {"blur-zoom", "match", "iris", "garis"}
+BERPASANGAN = ("iris", "garis")  # transisi yang harus keluar & masuk bersama di satu potongan
 # hook visual detik pertama (roadmap #7): punch-in + gelombang cincin + kilat; sfx dentum di 0 s bila belum ada bunyi
 HOOK_BAWAAN = {"aktif": True, "kuat": 1.0, "durasi": 0.9, "sfx": {"jenis": "hit-1", "db": -20}}
 SFX_DIR = ROOT / "pipeline" / "aset-bawaan" / "sfx" / "v2"
@@ -111,7 +115,7 @@ def bangun_props(p: Proyek) -> dict:
             "mulai": resolve_waktu(a["mulai"], kata),
             "selesai": resolve_waktu(a["selesai"], kata) if a.get("selesai") is not None else dur,
             "t": {n: resolve_waktu(v, kata) for n, v in a.get("t", {}).items()},
-            **{k: a[k] for k in ("masuk", "keluar", "teks", "titik") if k in a},
+            **{k: a[k] for k in ("masuk", "keluar", "teks", "titik", "garis_y") if k in a},
         })
     irama = sinkron_ketukan(p, cfg, adegan, dur)
     zoom = [[resolve_waktu(t, kata), z] for t, z in cfg.get("zoom", [[0, 1]])]
@@ -119,18 +123,36 @@ def bangun_props(p: Proyek) -> dict:
     cap = p.t("caption")
     salin_footage(p)
     rj.siapkan_font(p.tokens)
+    footage = {"src": f"proyek/{p.dir.name}/talent.mp4", **cfg["footage"]}
+    if cfg.get("latar_talent"):
+        import relight
+        relight.buat(p, cfg["latar_talent"])
+        footage["src"] = f"proyek/{p.dir.name}/talent_relit.mp4"
+    merek = None
+    if cfg.get("merek"):
+        m = cfg["merek"]
+        sumber = p.path_aset(m["file"])
+        if not sumber or not sumber.exists():
+            raise GagalPipeline(f"logo merek tidak ada: {m['file']}")
+        tujuan = rj.DIR / "public" / "proyek" / p.dir.name / "merek.png"
+        tujuan.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(sumber, tujuan)
+        merek = {"src": f"proyek/{p.dir.name}/merek.png", "lebar": m.get("lebar", 240), "y": m.get("y", 150),
+                 **({"sembunyi": resolve_waktu(m["sembunyi"], kata)} if m.get("sembunyi") is not None else {})}
     return {
         "W": p.W, "H": p.H, "fps": p.fps, "durasiFrame": int(round(dur * p.fps)),
         "tokens": p.tokens, "zona": list(p.zona_aman()),
         "tinggi_panggung": cfg.get("tinggi_panggung", p.H // 2),
         "gradasi": cfg.get("gradasi", 320),
-        "footage": {"src": f"proyek/{p.dir.name}/talent.mp4", **cfg["footage"]},
+        "footage": footage,
         "zoom": zoom, "adegan": adegan, "ketukan": irama,
         "hook": {k: v for k, v in {**HOOK_BAWAAN, **(cfg.get("hook") or {})}.items() if k != "sfx"},
         **({"menyatu": cfg["menyatu"]} if "menyatu" in cfg else {}),
         "kata": [{"w": k["w"], "s": k["s"], "e": k["e"]} for k in kata],
         "caption": {"y": cfg.get("caption_y", cfg.get("tinggi_panggung", p.H // 2)), "kata_maks": cap["kata-maks"],
-                    "karakter_maks": cap["karakter-maks-baris"], "jeda_pecah": cap["jeda-pecah"]},
+                    "karakter_maks": cap["karakter-maks-baris"], "jeda_pecah": cap["jeda-pecah"],
+                    **({"tekankan": cfg["caption"]["tekankan"]} if (cfg.get("caption") or {}).get("tekankan") else {})},
+        **({"merek": merek} if merek else {}),
     }
 
 
@@ -198,6 +220,20 @@ def daftar_sfx(cfg: dict, kata: list[dict]) -> list[dict]:
     return sfx
 
 
+def filter_babak(babak: list | None, kata: list[dict]) -> str:
+    """Otomasi volume musik per bagian: titik [anchor, dB] → volume=eval=frame dengan interpolasi linear antar-titik
+    (mis. babak masalah −3 dB, solusi 0 dB, stop-down −40 dB tepat sebelum kalimat kunci, CTA +2,5 dB)."""
+    if not babak:
+        return ""
+    titik = sorted((resolve_waktu(t, kata), float(db)) for t, db in babak)
+    ekspr = f"{titik[-1][1]}"
+    for (t0, d0), (t1, d1) in reversed(list(zip(titik, titik[1:]))):
+        seg = f"({d0}+({d1}-({d0}))*(t-{t0:.3f})/{max(1e-3, t1 - t0):.3f})"
+        ekspr = f"if(lt(t,{t1:.3f}),{seg},{ekspr})"
+    ekspr = f"if(lt(t,{titik[0][0]:.3f}),{titik[0][1]},{ekspr})"
+    return f"volume='pow(10,({ekspr})/20)':eval=frame"
+
+
 def mix_audio(p: Proyek, cfg: dict, out: Path) -> dict:
     """Suara + musik latar ber-ducking (amplop transkrip, ducking.py) + SFX terjadwal → master −14 LUFS / plafon −2 dBTP."""
     kata = baca_json(p.words_path)["kata"]
@@ -214,8 +250,10 @@ def mix_audio(p: Proyek, cfg: dict, out: Path) -> dict:
         dk = ducking.konfigurasi(musik)
         env = ducking.filter_ducking(kata, dur, dk) if dk["mode"] == "transkrip" else ""
         keluaran = "[m0]" if dk["mode"] == "sidechain" else "[musik]"
+        babak = filter_babak(musik.get("babak"), kata)
         fil.append(
             f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo,atrim=0:{dur:.3f},volume={musik.get('db', -18)}dB,"
+            f"{babak + ',' if babak else ''}"
             f"afade=t=in:d={musik.get('fade_masuk', 0.8)},afade=t=out:st={dur - musik.get('fade_keluar', 2.0):.3f}:"
             f"d={musik.get('fade_keluar', 2.0)}{',' + env if env else ''}{keluaran}")
         if dk["mode"] == "sidechain":
@@ -265,10 +303,12 @@ def render(p: Proyek) -> Path:
 
 
 def modul_pustaka() -> set[str]:
-    """Nama modul adegan yang terdaftar di PUSTAKA (remotion/src/split/Adegan.tsx)."""
-    teks = (rj.DIR / "src" / "split" / "Adegan.tsx").read_text(encoding="utf-8")
-    blok = re.search(r"export const PUSTAKA[^{]*\{(.*?)\n\};", teks, re.S)
-    return set(re.findall(r'"([\w-]+)"\s*:', blok.group(1))) if blok else set()
+    """Nama modul adegan yang terdaftar di PUSTAKA* (remotion/src/split/*.tsx: Adegan.tsx + pustaka klien, mis. AdeganOtcaV4)."""
+    nama: set[str] = set()
+    for f in sorted((rj.DIR / "src" / "split").glob("*.tsx")):
+        for blok in re.findall(r"export const PUSTAKA\w*[^{]*\{(.*?)\n\};", f.read_text(encoding="utf-8"), re.S):
+            nama |= set(re.findall(r'"([\w-]+)"\s*:', blok))
+    return nama
 
 
 def cek(p: Proyek) -> tuple[list[str], list[str]]:
@@ -283,14 +323,17 @@ def cek(p: Proyek) -> tuple[list[str], list[str]]:
     pustaka = modul_pustaka()
     for i, a in enumerate(cfg.get("adegan", [])):
         if a.get("modul") not in pustaka:
-            masalah.append(f"proyek/{nama}: adegan {i + 1} modul '{a.get('modul')}' tidak ada di PUSTAKA Adegan.tsx")
+            masalah.append(f"proyek/{nama}: adegan {i + 1} modul '{a.get('modul')}' tidak ada di PUSTAKA remotion/src/split")
         for sisi in ("masuk", "keluar"):
             if sisi in a and a[sisi] not in TRANSISI:
                 masalah.append(f"proyek/{nama}: adegan {i + 1} {sisi}='{a[sisi]}' (pilihan: {', '.join(sorted(TRANSISI))})")
     adg = cfg.get("adegan", [])
     for i in range(1, len(adg)):
-        if (adg[i].get("masuk") == "iris") != (adg[i - 1].get("keluar") == "iris"):
-            masalah.append(f"proyek/{nama}: iris harus berpasangan (adegan {i} keluar & adegan {i + 1} masuk)")
+        for jenis_t in BERPASANGAN:
+            if (adg[i].get("masuk") == jenis_t) != (adg[i - 1].get("keluar") == jenis_t):
+                masalah.append(f"proyek/{nama}: {jenis_t} harus berpasangan (adegan {i} keluar & adegan {i + 1} masuk)")
+    if cfg.get("merek") and not (p.path_aset(cfg["merek"].get("file")) or Path("-")).exists():
+        masalah.append(f"proyek/{nama}: logo merek '{cfg['merek'].get('file')}' tidak ada")
     hook = {**HOOK_BAWAAN, **(cfg.get("hook") or {})}
     for s in cfg.get("sfx", []) + ([hook["sfx"]] if hook.get("sfx") else []):
         if not (SFX_DIR / f"{s.get('jenis')}.wav").exists():
@@ -304,7 +347,7 @@ def cek(p: Proyek) -> tuple[list[str], list[str]]:
         if ducking.konfigurasi(musik)["mode"] not in ("transkrip", "sidechain", "mati"):
             masalah.append(f"proyek/{nama}: musik.ducking.mode tidak dikenal")
     jenis = [a.get("masuk") for a in adg[1:]]
-    info.append(f"proyek/{nama}: split {len(adg)} adegan, match cut {sum(j in ('match', 'iris') for j in jenis)}/{len(jenis)} "
+    info.append(f"proyek/{nama}: split {len(adg)} adegan, match cut {sum(j in ('match', 'iris', 'garis') for j in jenis)}/{len(jenis)} "
                 f"potongan, hook {'aktif' if hook.get('aktif', True) else 'MATI'}")
     words = baca_json(p.words_path) if p.words_path.exists() else None
     if not words or not p.ingest_video.exists():
@@ -318,6 +361,10 @@ def cek(p: Proyek) -> tuple[list[str], list[str]]:
                 resolve_waktu(v, kata)
         for s in cfg.get("sfx", []):
             resolve_waktu(s["t"], kata)
+        for t_, _ in (cfg.get("musik") or {}).get("babak", []):
+            resolve_waktu(t_, kata)
+        if (cfg.get("merek") or {}).get("sembunyi") is not None:
+            resolve_waktu(cfg["merek"]["sembunyi"], kata)
     except GagalPipeline as e:
         return masalah + [f"proyek/{nama}: {e}"], info
     if waktu and waktu[0][0] > 0.05:
@@ -395,9 +442,9 @@ def qa(p: Proyek) -> bool:
     catat("STRUKTUR", "split.json valid (modul, transisi, anchor, urutan adegan)", not m_struktur,
           "; ".join(m_struktur) or "; ".join(i_struktur))
     adg = props["adegan"]
-    n_match = sum(a.get("masuk") in ("match", "iris") for a in adg[1:])
+    n_match = sum(a.get("masuk") in ("match", "iris", "garis") for a in adg[1:])
     catat("MATCH", "≥1 match cut bentuk antar-adegan (roadmap #5)", n_match >= 1 or len(adg) < 3,
-          f"{n_match}/{max(0, len(adg) - 1)} potongan match/iris", lunak=True)
+          f"{n_match}/{max(0, len(adg) - 1)} potongan match/iris/garis", lunak=True)
     irama = props.get("ketukan")
     if irama:
         catat("KETUKAN", "potongan di ketukan + denyut grafis", True,

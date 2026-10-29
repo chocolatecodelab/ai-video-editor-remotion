@@ -215,6 +215,95 @@ def _gores(v: int) -> np.ndarray:
     return _stereo(_normal(x, -5), pan=np.linspace(-0.3, 0.3, n))
 
 
+# ---- foley brand (OTCA v4, 2026-10-29): cap/segel, retak, air, kertas, fokus lensa, chime logo
+def _stempel(v: int) -> np.ndarray:
+    """Segel/stempel menghentak kertas: dentum rendah + tepukan kertas + ketuk kayu pendek."""
+    rng = np.random.default_rng(1000 + v)
+    d = 0.55
+    n = int(d * SR)
+    x = _sinus(np.geomspace(95 - 8 * v, 42, n), d) * _env(n, 0.001, 0.28, 4)
+    x += _band(_noise(n, rng), 500, 3200) * _env(n, 0.0004, 0.035, 5) * 0.8
+    x += _sinus(230 + 20 * v, d) * _env(n, 0.001, 0.05, 6) * 0.35
+    return _stereo(_normal(np.tanh(1.8 * x), -2))
+
+
+def _retak(v: int) -> np.ndarray:
+    """Retakan kaca/es: rentetan klik tajam yang makin rapat + denting tinggi + dentum tipis."""
+    rng = np.random.default_rng(1100 + v)
+    d = 0.6
+    n = int(d * SR)
+    x = np.zeros(n)
+    t0 = 0.0
+    for k in range(14):
+        t0 += rng.uniform(0.004, 0.03) * (1 - k / 18)
+        i = int(t0 * SR)
+        m = int(rng.uniform(0.002, 0.006) * SR)
+        if i + m >= n:
+            break
+        x[i:i + m] += _band(_noise(m, rng), 2500, 9000) * _env(m, 0.0002, m / SR, 5) * rng.uniform(0.5, 1)
+    x += _sinus(3150 + 200 * v, d) * _env(n, 0.002, 0.25, 4) * 0.25
+    x += _sinus(np.geomspace(140, 60, n), d) * _env(n, 0.002, 0.12, 5) * 0.3
+    return _stereo(_normal(x, -3), pan=np.linspace(-0.35, 0.35, n), lebar=0.3, rng=rng)
+
+
+def _celup(v: int) -> np.ndarray:
+    """Menyelam ke air: deru rendah + gelembung naik (nada meluncur ke atas)."""
+    rng = np.random.default_rng(1200 + v)
+    d = 1.1
+    n = int(d * SR)
+    x = _lowpass(_lowpass(_noise(n, rng), 420), 420) * _lonceng(n, 0.18) * 1.4
+    for k in range(7):
+        t0 = int((0.08 + k * 0.09 + rng.uniform(0, 0.05)) * SR)
+        m = int(rng.uniform(0.05, 0.09) * SR)
+        if t0 + m >= n:
+            break
+        f = np.geomspace(rng.uniform(260, 420), rng.uniform(800, 1300), m)
+        x[t0:t0 + m] += _sinus(f, m / SR) * _env(m, 0.003, m / SR, 3) * 0.35 * (1 - k / 9)
+    return _stereo(_normal(x, -3), lebar=0.4, rng=rng)
+
+
+def _kertas(v: int) -> np.ndarray:
+    """Kertas dilipat: gemeresik bergelombang lalu jepret lipatan di akhir."""
+    rng = np.random.default_rng(1300 + v)
+    d = 0.7
+    n = int(d * SR)
+    kres = np.repeat(rng.uniform(0.2, 1.0, n // 240 + 1), 240)[:n]
+    kres = _lowpass(kres, 60)
+    x = _band(_noise(n, rng), 1200, 6500) * kres * _lonceng(n, 0.55)
+    j = int(0.6 * SR)
+    m = int(0.03 * SR)
+    x[j:j + m] += _band(_noise(m, rng), 1500, 8000) * _env(m, 0.0003, 0.02, 5) * 1.6
+    return _stereo(_normal(x, -4), pan=np.linspace(0.25, -0.25, n), lebar=0.3, rng=rng)
+
+
+def _fokus(v: int) -> np.ndarray:
+    """Fokus lensa: dengung motor halus naik + klik kunci fokus."""
+    d = 0.45
+    n = int(d * SR)
+    am = _lonceng(n, 0.6)
+    x = (_sinus(np.linspace(900, 1500, n), d) * 0.25 + _sinus(np.linspace(1800, 3000, n), d) * 0.08) * am
+    i = int(0.38 * SR)
+    m = int(0.012 * SR)
+    x[i:i + m] += _sinus(4200, m / SR) * _env(m, 0.0002, 0.008, 5)
+    return _stereo(_normal(x, -6))
+
+
+def _chime(v: int) -> np.ndarray:
+    """Logo sonik OTCA: tiga lonceng naik (E5, B5, E6) bertingkat, parsial lonceng + kilau tipis."""
+    rng = np.random.default_rng(1400 + v)
+    d = 2.0
+    n = int(d * SR)
+    x = np.zeros(n)
+    for k, f in enumerate((659.25, 987.77, 1318.5)):
+        t0 = int(k * 0.13 * SR)
+        m = n - t0
+        nada = sum(a * _sinus(f * r, m / SR) * _env(m, 0.002, dk, 3) for r, a, dk in
+                   ((1, 1.0, 1.4), (2.76, 0.35, 0.6), (5.4, 0.15, 0.3), (2.0, 0.2, 0.9)))
+        x[t0:] += nada * (0.8 + 0.1 * k)
+    x += _band(_noise(n, rng), 6000, 12000) * _env(n, 0.05, 0.8, 3) * 0.05
+    return _stereo(_normal(x, -4), pan=np.linspace(-0.2, 0.2, n), lebar=0.5, rng=rng)
+
+
 RESEP = {
     "klik-ketik": (4, _klik_ketik),
     "tick": (3, _tick),
@@ -230,6 +319,12 @@ RESEP = {
     "glitch": (3, _glitch),
     "kilau": (2, _kilau),
     "gores": (2, _gores),
+    "stempel": (1, _stempel),
+    "retak": (1, _retak),
+    "celup": (1, _celup),
+    "kertas": (1, _kertas),
+    "fokus": (1, _fokus),
+    "chime-otca": (1, _chime),
 }
 ALIAS = {"whoosh": "whoosh-pendek"}  # nama v0.1
 # Detik dari awal file ke puncak bunyi: render menggeser bunyi ini lebih awal agar puncaknya jatuh tepat di gerak.
