@@ -1,0 +1,94 @@
+{
+  "proyek": "2026-10_accept-it-keep-moving",
+  "judul": "Accept It, Keep Moving Forward",
+  "status": "storyboard",
+  "skill": "video-editor@0.1",
+  "preset": null,
+  "gaya": "glass-tech@0.6",
+  "template": "hook-problem-solution@0.2",
+  "konteks": [
+    "zona-aman@0.2",
+    "caption@0.2",
+    "depth-typography@0.2",
+    "ingest@0.1",
+    "gerak@0.2",
+    "audio@0.1",
+    "ekspor@0.1",
+    "sound-design@0.1",
+    "koreografi@0.2"
+  ],
+  "platform": [
+    "reels"
+  ],
+  "aset": {
+    "rekaman": "aset/rekaman/take1.mp4",
+    "potong": [
+      [
+        0,
+        31.52
+      ],
+      [
+        32.28,
+        36.42
+      ],
+      [
+        37.18,
+        43.74
+      ],
+      [
+        44.74,
+        53.0
+      ]
+    ],
+    "crop": {
+      "x": 0.5
+    },
+    "musik": null
+  },
+  "warna": {
+    "filter": ""
+  },
+  "transkrip": {
+    "bahasa": "en",
+    "model": "large-v3"
+  },
+  "roto": {
+    "backend": "mediapipe",
+    "halus": 0.3
+  },
+  "token_override": {
+    "ingest": {
+      "tinggi-min": 470
+    },
+    "caption": {
+      "karakter-maks-baris": 22
+    },
+    "qa": {
+      "durasi-toleransi-s": 20,
+      "karakter-per-detik-maks": 23
+    },
+    "warna": {
+      "latar": "#0B0F1A",
+      "panel": "#141A2A",
+      "aksen": "#F2A65A",
+      "aksen-2": "#7FD6E8",
+      "peringatan": "#FFD9A0",
+      "stroke": "#06080F"
+    },
+    "font": {
+      "serif": {
+        "file": "DMSerifDisplay-Regular.ttf",
+        "family": "DM Serif Display",
+        "weight": 400
+      }
+    },
+    "grade": {
+      "saturasi": 1.0,
+      "kontras": 0.05
+    }
+  },
+  "terpakai": null,
+  "riwayat": [],
+  "layout": "split",
+  "qa": "LULUS"
+}

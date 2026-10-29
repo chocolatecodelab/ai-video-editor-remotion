@@ -18,6 +18,8 @@ export type Adegan = {
   teks?: Record<string, string>;
   /** Titik fokus (px panggung) untuk match cut "iris": lingkaran menyempit/membuka di titik ini. Bawaan tengah panggung. */
   titik?: [number, number];
+  /** Adegan layar penuh (kartu akhir): wadah setinggi frame tanpa pudar bawah, menutupi talent. */
+  penuh?: boolean;
 };
 
 /** blur-zoom = potong bawaan (motif glass-tech); match = silang pudar tanpa zoom (bentuk sama di dua adegan);

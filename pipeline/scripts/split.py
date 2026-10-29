@@ -111,7 +111,7 @@ def bangun_props(p: Proyek) -> dict:
             "mulai": resolve_waktu(a["mulai"], kata),
             "selesai": resolve_waktu(a["selesai"], kata) if a.get("selesai") is not None else dur,
             "t": {n: resolve_waktu(v, kata) for n, v in a.get("t", {}).items()},
-            **{k: a[k] for k in ("masuk", "keluar", "teks", "titik") if k in a},
+            **{k: a[k] for k in ("masuk", "keluar", "teks", "titik", "penuh") if k in a},
         })
     irama = sinkron_ketukan(p, cfg, adegan, dur)
     # entri zoom: [waktu, skala] atau [waktu, skala, geser_y] (framing vertikal per klip)

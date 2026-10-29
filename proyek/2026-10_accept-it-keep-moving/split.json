@@ -1,0 +1,533 @@
+{
+  "_catatan": "Accept It, Keep Moving Forward — split (pipeline/scripts/split.py → SplitReel). Modul ak-* di remotion/src/split/AdeganAccept.tsx; waktu = anchor kata transkrip (sesudah rough cut manifest.aset.potong). Langit malam → fajar per adegan.",
+  "tinggi_panggung": 930,
+  "caption_y": 895,
+  "footage": {
+    "geser_y": 450,
+    "titik_zoom_y": 1020,
+    "tutup": 48.56
+  },
+  "menyatu": {
+    "grain": true,
+    "sapuan": true
+  },
+  "ketukan": {
+    "aktif": true,
+    "denyut": 0.6
+  },
+  "adegan": [
+    {
+      "modul": "ak-tenang",
+      "mulai": 0,
+      "selesai": {
+        "kata": "were",
+        "offset": -0.12
+      },
+      "keluar": "match",
+      "t": {
+        "damai": {
+          "kata": "peace"
+        },
+        "berhenti": {
+          "kata": "stop"
+        }
+      }
+    },
+    {
+      "modul": "ak-batu",
+      "mulai": {
+        "kata": "were",
+        "offset": -0.12
+      },
+      "selesai": {
+        "kata": "undo",
+        "offset": -0.15
+      },
+      "masuk": "match",
+      "t": {
+        "ubah": {
+          "kata": "change"
+        },
+        "situasi": {
+          "kata": "situation"
+        }
+      }
+    },
+    {
+      "modul": "ak-simpul",
+      "mulai": {
+        "kata": "undo",
+        "offset": -0.15
+      },
+      "selesai": {
+        "kata": "according",
+        "offset": -0.15
+      },
+      "keluar": "match",
+      "t": {
+        "undo": {
+          "kata": "undo"
+        },
+        "salah": {
+          "kata": "mistake"
+        },
+        "terjadi": {
+          "kata": "happen"
+        }
+      }
+    },
+    {
+      "modul": "ak-jalur",
+      "mulai": {
+        "kata": "according",
+        "offset": -0.15
+      },
+      "selesai": {
+        "kata": "you",
+        "ke": 3,
+        "offset": -0.25
+      },
+      "masuk": "match",
+      "t": {
+        "rencana": {
+          "kata": "plans"
+        },
+        "oke": {
+          "kata": "okay"
+        }
+      }
+    },
+    {
+      "modul": "ak-tanya",
+      "mulai": {
+        "kata": "you",
+        "ke": 3,
+        "offset": -0.25
+      },
+      "selesai": {
+        "kata": "accept",
+        "offset": -0.2
+      },
+      "keluar": "iris",
+      "t": {
+        "paham": {
+          "kata": "understand"
+        },
+        "terjadi": {
+          "kata": "happens"
+        },
+        "kadang": {
+          "kata": "sometimes"
+        }
+      }
+    },
+    {
+      "modul": "ak-terima",
+      "mulai": {
+        "kata": "accept",
+        "offset": -0.2
+      },
+      "selesai": {
+        "kata": "learn",
+        "offset": -0.12
+      },
+      "masuk": "iris",
+      "titik": [
+        520,
+        380
+      ],
+      "t": {
+        "terima": {
+          "kata": "accept"
+        }
+      }
+    },
+    {
+      "modul": "ak-belajar",
+      "mulai": {
+        "kata": "learn",
+        "offset": -0.12
+      },
+      "selesai": {
+        "kata": "keep",
+        "offset": -0.15
+      },
+      "keluar": "iris",
+      "t": {
+        "belajar": {
+          "kata": "learn"
+        }
+      }
+    },
+    {
+      "modul": "ak-maju",
+      "mulai": {
+        "kata": "keep",
+        "offset": -0.15
+      },
+      "selesai": {
+        "kata": "making",
+        "offset": -0.2
+      },
+      "masuk": "iris",
+      "titik": [
+        540,
+        380
+      ],
+      "keluar": "match",
+      "t": {
+        "maju": {
+          "kata": "moving"
+        }
+      }
+    },
+    {
+      "modul": "ak-benang",
+      "mulai": {
+        "kata": "making",
+        "offset": -0.2
+      },
+      "selesai": {
+        "kata": "it",
+        "ke": 3,
+        "offset": -0.2
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "t": {
+        "realita": {
+          "kata": "reality"
+        },
+        "mimpi": {
+          "kata": "dreams"
+        },
+        "menyerah": {
+          "kata": "giving"
+        }
+      }
+    },
+    {
+      "modul": "ak-pin",
+      "mulai": {
+        "kata": "it",
+        "ke": 3,
+        "offset": -0.2
+      },
+      "selesai": {
+        "kata": "can",
+        "offset": -0.35
+      },
+      "masuk": "match",
+      "t": {
+        "menerima": {
+          "kata": "accepting"
+        },
+        "percaya": {
+          "kata": "believing"
+        },
+        "bisa": {
+          "kata": "could"
+        }
+      }
+    },
+    {
+      "modul": "ak-cakrawala",
+      "mulai": {
+        "kata": "can",
+        "offset": -0.35
+      },
+      "selesai": {
+        "kata": "future",
+        "offset": 0.95
+      },
+      "keluar": "match",
+      "t": {
+        "kini": {
+          "kata": "present"
+        },
+        "masa_depan": {
+          "kata": "future"
+        }
+      }
+    },
+    {
+      "modul": "ak-kartu",
+      "mulai": {
+        "kata": "future",
+        "offset": 0.95
+      },
+      "selesai": null,
+      "masuk": "match",
+      "penuh": true
+    }
+  ],
+  "zoom": [
+    [
+      0,
+      1.0
+    ],
+    [
+      {
+        "kata": "were",
+        "offset": -0.12
+      },
+      1.05
+    ],
+    [
+      {
+        "kata": "undo",
+        "offset": -0.15
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "according",
+        "offset": -0.15
+      },
+      1.05
+    ],
+    [
+      {
+        "kata": "you",
+        "ke": 3,
+        "offset": -0.25
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "accept",
+        "offset": -0.2
+      },
+      1.05
+    ],
+    [
+      {
+        "kata": "learn",
+        "offset": -0.12
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "keep",
+        "offset": -0.15
+      },
+      1.06
+    ],
+    [
+      31.52,
+      1.0
+    ],
+    [
+      35.66,
+      1.05
+    ],
+    [
+      42.22,
+      1.0
+    ]
+  ],
+  "musik": {
+    "file": "bawaan:lembut",
+    "db": -22,
+    "rasio_duck": 5,
+    "fade_masuk": 0.6,
+    "fade_keluar": 2.0,
+    "ducking": {
+      "mode": "transkrip",
+      "db": -9
+    }
+  },
+  "sfx": [
+    {
+      "jenis": "hit-1",
+      "t": 0.03,
+      "db": -18
+    },
+    {
+      "jenis": "whoosh-panjang-1",
+      "t": 0.05,
+      "db": -23
+    },
+    {
+      "jenis": "kilau-1",
+      "t": {
+        "kata": "peace"
+      },
+      "db": -21
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": {
+        "kata": "were",
+        "offset": -0.2
+      },
+      "db": -23
+    },
+    {
+      "jenis": "ketuk-1",
+      "t": {
+        "kata": "change"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "whoosh-pendek-2",
+      "t": {
+        "kata": "undo",
+        "offset": -0.25
+      },
+      "db": -21
+    },
+    {
+      "jenis": "glitch-2",
+      "t": {
+        "kata": "undo",
+        "offset": 0.55
+      },
+      "db": -23
+    },
+    {
+      "jenis": "gores-1",
+      "t": {
+        "kata": "mistake"
+      },
+      "db": -24
+    },
+    {
+      "jenis": "whoosh-pendek-3",
+      "t": {
+        "kata": "according",
+        "offset": -0.25
+      },
+      "db": -23
+    },
+    {
+      "jenis": "ding-benar-1",
+      "t": {
+        "kata": "okay"
+      },
+      "db": -25
+    },
+    {
+      "jenis": "whoosh-panjang-2",
+      "t": {
+        "kata": "you",
+        "ke": 3,
+        "offset": -0.35
+      },
+      "db": -23
+    },
+    {
+      "jenis": "kilau-2",
+      "t": {
+        "kata": "happens",
+        "offset": 0.4
+      },
+      "db": -23
+    },
+    {
+      "jenis": "riser-1",
+      "t": {
+        "kata": "accept",
+        "offset": -1.3
+      },
+      "db": -20
+    },
+    {
+      "jenis": "hit-2",
+      "t": {
+        "kata": "accept"
+      },
+      "db": -17
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": {
+        "kata": "learn",
+        "offset": -0.2
+      },
+      "db": -20
+    },
+    {
+      "jenis": "pop-1",
+      "t": {
+        "kata": "learn",
+        "offset": 0.6
+      },
+      "db": -22
+    },
+    {
+      "jenis": "swoosh-balik-1",
+      "t": {
+        "kata": "keep",
+        "offset": -0.25
+      },
+      "db": -20
+    },
+    {
+      "jenis": "whoosh-pendek-2",
+      "t": {
+        "kata": "making",
+        "offset": -0.3
+      },
+      "db": -23
+    },
+    {
+      "jenis": "kilau-1",
+      "t": {
+        "kata": "dreams"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "tick-1",
+      "t": {
+        "kata": "giving"
+      },
+      "db": -24
+    },
+    {
+      "jenis": "whoosh-pendek-3",
+      "t": {
+        "kata": "it",
+        "ke": 3,
+        "offset": -0.3
+      },
+      "db": -23
+    },
+    {
+      "jenis": "kilau-2",
+      "t": {
+        "kata": "could"
+      },
+      "db": -22
+    },
+    {
+      "jenis": "whoosh-panjang-1",
+      "t": {
+        "kata": "can",
+        "offset": -0.45
+      },
+      "db": -23
+    },
+    {
+      "jenis": "riser-2",
+      "t": {
+        "kata": "future",
+        "offset": -0.4
+      },
+      "db": -23
+    },
+    {
+      "jenis": "hit-1",
+      "t": {
+        "kata": "future",
+        "offset": 0.95
+      },
+      "db": -20
+    }
+  ]
+}

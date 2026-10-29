@@ -15,6 +15,9 @@ import { KoeyGuru, KoeyInterview, KoeyKaiwa, KoeyKartu, KoeyLevel, KoeyNilaiPlus
 import {
   IjJalan, IjCabang, IjTigaJalur, IjBeda, IjAusbildung, IjTangga, IjFsj, IjKontribusi, IjProfesional, IjKoper, IjBanding, IjTren, IjKomentar, IjKartu,
 } from "./AdeganInfoJerman";
+import {
+  AkBatu, AkBelajar, AkBenang, AkCakrawala, AkJalur, AkKartu, AkMaju, AkPin, AkSimpul, AkTanya, AkTenang, AkTerima,
+} from "./AdeganAccept";
 import { INOUT, Konteks, detik, drift, gambar, mix, prog, progE, tk } from "./alat";
 import {
   Bendera, Bintang, Cahaya, Centang, G, IkonKecil, Kaca, KilauDef, Langit, Laptop, Mata, Menara, Orang, Perisai,
@@ -594,4 +597,16 @@ export const PUSTAKA: Record<string, React.FC<PropsAdegan>> = {
   "ij-tren": IjTren,
   "ij-komentar": IjKomentar,
   "ij-kartu": IjKartu,
+  "ak-tenang": AkTenang,
+  "ak-batu": AkBatu,
+  "ak-simpul": AkSimpul,
+  "ak-jalur": AkJalur,
+  "ak-tanya": AkTanya,
+  "ak-terima": AkTerima,
+  "ak-belajar": AkBelajar,
+  "ak-maju": AkMaju,
+  "ak-benang": AkBenang,
+  "ak-pin": AkPin,
+  "ak-cakrawala": AkCakrawala,
+  "ak-kartu": AkKartu,
 };

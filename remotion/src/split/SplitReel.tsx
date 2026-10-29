@@ -291,9 +291,11 @@ const Defs: React.FC<{ wr: Warna }> = ({ wr }) => (
 
 /** Wadah adegan: masuk/keluar blur-zoom (motif transisi glass-tech) atau "match" (silang pudar tanpa zoom, agar
  *  bentuk yang sama di dua adegan terbaca sebagai satu gerak). */
-const Wadah: React.FC<{ k: Konteks; wr: Warna; font: string; gradasi: number; titikKeluar?: [number, number] }> = ({
-  k, wr, font, gradasi, titikKeluar,
+const Wadah: React.FC<{ k: Konteks; wr: Warna; font: string; gradasi: number; H: number; titikKeluar?: [number, number] }> = ({
+  k: k0, wr, font, gradasi, H, titikKeluar,
 }) => {
+  // adegan `penuh`: panggung setinggi frame (kartu akhir menutupi talent), tanpa pudar bawah
+  const k = k0.a.penuh ? { ...k0, p: { ...k0.p, tinggi: H, bawah: H - 400 } } : k0;
   const { a, p } = k;
   const Modul = PUSTAKA[a.modul];
   if (!Modul) throw new Error(`modul adegan tidak dikenal: ${a.modul}`);
@@ -319,7 +321,7 @@ const Wadah: React.FC<{ k: Konteks; wr: Warna; font: string; gradasi: number; ti
   return (
     <div style={{ position: "absolute", top: 0, left: 0, width: p.W, height: p.tinggi, opacity: tin * (1 - tout),
       scale: String(zm), filter: blur > 0.05 ? `blur(${blur}px)` : undefined, transformOrigin: `${p.cx}px ${p.tinggi / 2}px`,
-      ...pudarBawah(gradasi * 0.6), clipPath: klip }}>
+      ...(a.penuh ? {} : pudarBawah(gradasi * 0.6)), clipPath: klip }}>
       <svg viewBox={`0 0 ${p.W} ${p.tinggi}`} width={p.W} height={p.tinggi} style={{ overflow: "visible" }}>
         <Modul k={k} wr={wr} font={font} />
       </svg>
@@ -438,7 +440,7 @@ export const SplitReel: React.FC<SplitReelProps> = (pr) => {
       <LatarPanggung pr={pr} wr={wr} />
       <div style={{ position: "absolute", inset: 0, scale: String(skalaPanggung), transformOrigin: `${p.cx}px ${p.tinggi / 2}px` }}>
         {pr.adegan.map((a, i) => (
-          <Wadah key={i} k={{ f, fps: pr.fps, tok, p, a }} wr={wr} font={tok.font.judul.family} gradasi={pr.gradasi}
+          <Wadah key={i} k={{ f, fps: pr.fps, tok, p, a }} wr={wr} font={tok.font.judul.family} gradasi={pr.gradasi} H={pr.H}
             titikKeluar={a.keluar === "iris" && pr.adegan[i + 1]?.masuk === "iris" ? titikIris(pr.adegan[i + 1], p) : undefined} />
         ))}
         <CincinIris pr={pr} wr={wr} p={p} />
