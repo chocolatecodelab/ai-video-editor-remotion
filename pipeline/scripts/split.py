@@ -134,7 +134,8 @@ def bangun_props(p: Proyek) -> dict:
         "kata": [{"w": k["w"], "s": k["s"], "e": k["e"]} for k in kata],
         "caption": {"y": cfg.get("caption_y", cfg.get("tinggi_panggung", p.H // 2)), "kata_maks": cap["kata-maks"],
                     "karakter_maks": cap["karakter-maks-baris"], "jeda_pecah": cap["jeda-pecah"],
-                    "gaya": cfg.get("caption_gaya", "kaca")},
+                    "gaya": cfg.get("caption_gaya", "kaca"),
+                    **({"teks_pil": cfg["caption_teks_pil"]} if cfg.get("caption_teks_pil") else {})},
     }
 
 

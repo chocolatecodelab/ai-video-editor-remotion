@@ -1,0 +1,108 @@
+{
+  "proyek": "2026-10_info-jerman-3-jalur",
+  "judul": "3 Jalur Kerja ke Jerman: Ausbildung, FSJ, Kerja Profesional (Info Jerman, split)",
+  "status": "storyboard",
+  "skill": "video-editor@0.3",
+  "gaya": "glass-tech@0.6",
+  "template": "explainer@0.2",
+  "konteks": [
+    "zona-aman@0.2",
+    "caption@0.2",
+    "depth-typography@0.2",
+    "ingest@0.1",
+    "gerak@0.2",
+    "audio@0.1",
+    "ekspor@0.1",
+    "sound-design@0.1",
+    "koreografi@0.2"
+  ],
+  "platform": [
+    "reels"
+  ],
+  "aset": {
+    "rekaman": "aset/rekaman/take1.mov",
+    "potong": [
+      [
+        0,
+        67.85
+      ],
+      [
+        68.85,
+        76.6
+      ]
+    ],
+    "crop": {
+      "x": 0.5
+    },
+    "musik": null
+  },
+  "warna": {
+    "filter": "eq=contrast=1.03:saturation=1.03"
+  },
+  "transkrip": {
+    "bahasa": "id",
+    "model": "large-v3"
+  },
+  "token_override": {
+    "_catatan": "Brand Info Jerman by OTCA (Info_Jerman_Brand_Guideline_2026.pdf) — HANYA proyek ini. Warm professionalism: charcoal #25272B, krem #F7F1E2, kuning #F3CF45 (aksen; teks charcoal di atas kuning), merah logo #D95347 hemat; Lato Black + Regular.",
+    "warna": {
+      "latar": "#25272B",
+      "teks-utama": "#F7F1E2",
+      "teks-sekunder": "#F7F1E2",
+      "aksen": "#F3CF45",
+      "aksen-2": "#D95347",
+      "peringatan": "#B8433A",
+      "panel": "#31343A",
+      "panel-opasitas": 0.7,
+      "garis-panel": "#F7F1E2",
+      "garis-opasitas": 0.22,
+      "stroke": "#25272B",
+      "bayangan": "#000000"
+    },
+    "font": {
+      "judul": {
+        "file": "Lato-Black.ttf",
+        "family": "Lato",
+        "weight": 900,
+        "wght": 0
+      },
+      "subjudul": {
+        "file": "Lato-Black.ttf",
+        "family": "Lato",
+        "weight": 900,
+        "wght": 0
+      },
+      "isi": {
+        "file": "Lato-Regular.ttf",
+        "family": "Lato",
+        "weight": 400,
+        "wght": 0
+      },
+      "caption": {
+        "file": "Lato-Black.ttf",
+        "family": "Lato",
+        "weight": 900,
+        "wght": 0
+      },
+      "depth": {
+        "file": "Lato-Black.ttf",
+        "family": "Lato",
+        "weight": 900,
+        "wght": 0
+      }
+    },
+    "motif": {
+      "aksen": "kotak",
+      "tekstur": null
+    },
+    "zona-aman": {
+      "kiri": 108
+    },
+    "caption": {
+      "kata-maks": 3
+    }
+  },
+  "terpakai": null,
+  "riwayat": [],
+  "layout": "split"
+}

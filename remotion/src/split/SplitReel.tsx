@@ -43,7 +43,9 @@ export type SplitReelProps = {
   transisi_klip?: { potong: number[]; durasi?: number } | null;
   kata: Kata[];
   /** gaya "pil": kata aktif = teks putih di pil aksen (highlight style brand Jepang Koey); bawaan "kaca". */
-  caption: { y: number; kata_maks: number; karakter_maks: number; jeda_pecah: number; gaya?: "kaca" | "pil" };
+  caption: { y: number; kata_maks: number; karakter_maks: number; jeda_pecah: number; gaya?: "kaca" | "pil";
+    /** warna teks kata aktif di atas pil aksen (brand dengan aksen terang, mis. kuning Info Jerman: teks charcoal); bawaan teks. */
+    teks_pil?: string };
 };
 
 /** Halaman caption: pecah per jeda / jumlah kata / panjang karakter (token caption). */
@@ -394,7 +396,7 @@ const Caption: React.FC<{ pr: SplitReelProps; wr: Warna; tok: Tokens; hal: Kata[
             // highlight brand: kata aktif putih di pil aksen; pil muncul dengan skala halus saat kata diucapkan
             const u = prog(k, w.s - 0.04, 0.14);
             return (
-              <span key={i} style={{ position: "relative", color: wr.teks, opacity: sudah ? 1 : cap.redup, padding: "0 10px" }}>
+              <span key={i} style={{ position: "relative", color: aktif && u > 0.5 ? (pr.caption.teks_pil ?? wr.teks) : wr.teks, opacity: sudah ? 1 : cap.redup, padding: "0 10px" }}>
                 <span style={{ position: "absolute", inset: "-4px 0", borderRadius: 14, background: wr.aksen,
                   opacity: aktif ? u : 0, scale: String(mix(0.8, 1, u)), boxShadow: `0 6px 18px ${rgba(wr.aksen, 0.45)}` }} />
                 <span style={{ position: "relative" }}>{w.w}</span>

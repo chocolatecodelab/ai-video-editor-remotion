@@ -11,6 +11,9 @@ import {
   OtcaTimbangan,
 } from "./AdeganOtca";
 import { KoeyGuru, KoeyInterview, KoeyKaiwa, KoeyKartu, KoeyLevel, KoeyNilaiPlus, KoeyShare, KoeySimpan, KoeyVisa } from "./AdeganKoey";
+import {
+  IjJalan, IjCabang, IjTigaJalur, IjBeda, IjAusbildung, IjTangga, IjFsj, IjKontribusi, IjProfesional, IjKoper, IjBanding, IjTren, IjKomentar, IjKartu,
+} from "./AdeganInfoJerman";
 import { INOUT, Konteks, detik, drift, gambar, mix, prog, progE, tk } from "./alat";
 import {
   Bendera, Bintang, Cahaya, Centang, G, IkonKecil, Kaca, KilauDef, Langit, Laptop, Mata, Menara, Orang, Perisai,
@@ -564,4 +567,18 @@ export const PUSTAKA: Record<string, React.FC<PropsAdegan>> = {
   "koey-simpan": KoeySimpan,
   "koey-share": KoeyShare,
   "koey-kartu": KoeyKartu,
+  "ij-jalan": IjJalan,
+  "ij-cabang": IjCabang,
+  "ij-tiga-jalur": IjTigaJalur,
+  "ij-beda": IjBeda,
+  "ij-ausbildung": IjAusbildung,
+  "ij-tangga": IjTangga,
+  "ij-fsj": IjFsj,
+  "ij-kontribusi": IjKontribusi,
+  "ij-profesional": IjProfesional,
+  "ij-koper": IjKoper,
+  "ij-banding": IjBanding,
+  "ij-tren": IjTren,
+  "ij-komentar": IjKomentar,
+  "ij-kartu": IjKartu,
 };
