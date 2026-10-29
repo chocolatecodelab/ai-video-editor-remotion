@@ -1,7 +1,7 @@
 {
   "proyek": "2026-10_info-jerman-3-jalur",
   "judul": "3 Jalur Kerja ke Jerman: Ausbildung, FSJ, Kerja Profesional (Info Jerman, split)",
-  "status": "storyboard",
+  "status": "selesai",
   "skill": "video-editor@0.3",
   "gaya": "glass-tech@0.6",
   "template": "explainer@0.2",
@@ -100,9 +100,20 @@
     },
     "caption": {
       "kata-maks": 3
-    }
+    },
+    "qa": {
+      "karakter-per-detik-maks": 27
+    },
+    "_catatan_qa": "17→27 khusus proyek ini: talent bicara cepat di \"dan Kerja\" (26,7 cps); caption disorot per kata, tetap terbaca."
   },
   "terpakai": null,
   "riwayat": [],
-  "layout": "split"
+  "layout": "split",
+  "persetujuan": {
+    "split_sha": "9b3d6d93fdfbd9d2d84805317d4aa1054b565f8bc5f964ddddd10a8400b59166",
+    "waktu": "2026-10-29T11:00:00",
+    "storyboard": "https://claude.ai/artifact/JurAxhssxfEJx5jKvfk5DV",
+    "catatan": "Zar setujui storyboard Info Jerman v1 (diteruskan koordinator)."
+  },
+  "qa": "LULUS"
 }
