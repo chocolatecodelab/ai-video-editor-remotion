@@ -1,7 +1,7 @@
 {
   "proyek": "2026-10_ciao-manda",
   "judul": "Kerja di Perusahaan China di Indonesia: Ekspektasi vs Realita (Ciao Manda, split)",
-  "status": "storyboard",
+  "status": "selesai",
   "skill": "video-editor@0.3",
   "gaya": "glass-tech@0.6",
   "template": "explainer@0.2",
@@ -101,5 +101,5 @@
   "riwayat": [],
   "layout": "split",
   "persetujuan": null,
-  "qa": null
+  "qa": "LULUS"
 }
