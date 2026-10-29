@@ -82,3 +82,8 @@ Berlaku untuk video **baru** saja. File OTCA yang sudah ada tetap di folder file
 - **Folder file proyek (cloud) = transit saja:** dipakai untuk upload footage saat laptop mati dan untuk berbagi hasil ke HP. Setelah laptop menyala, **pindahkan** file transit ke `proyek\<proyek>\` lalu bersihkan salinan transit (tanya Zar sebelum menghapus).
 - **Backup:** sarankan Zar mem-backup `proyek\` secara berkala ke Google Drive atau disk eksternal (folder ini di-`.gitignore`, tidak ikut git).
 - File sementara tetap mengikuti §3 (`.sementara`, D:).
+
+## 10. Mask talent & posisi caption (aturan tetap Zar, 2026-10-29)
+
+- **Mask talent harus rapi.** Tepi hijab, rambut, dan bahu tidak boleh kasar, berpendar, atau menyisakan latar (feedback OTCA v4: mask relight masih kasar di tepi hijab). Cek frame close-up di tepi subjek sebelum kirim storyboard. Bila perlu, pakai model segmentasi/matting yang lebih tajam + penghalusan tepi antar-frame.
+- **Caption tidak boleh menutupi wajah atau tubuh manusia** (talent maupun figur di grafis). Taruh caption di area kosong dengan jarak aman, cek per frame dengan deteksi wajah/orang, dan geser bila bertabrakan.

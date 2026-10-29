@@ -18,3 +18,4 @@ Setelah mengubah skrip pipeline: `.venv\Scripts\python -m unittest discover -s p
 - **Roadmap premium per video:** terapkan item 4, 5, 7, 9, 10 (lihat `ATURAN_KERJA.md`) dan akhiri tiap penyerahan dengan daftar singkat ide upgrade.
 - **Kebebasan kreatif:** tiap edit bebas pakai ulang/remix efek, preset, template, modul di repo ini agar bervariasi; bebas penuh di desain motion Remotion (ikuti `remotion-best-practices`). Tiap video harus lebih baik dari sebelumnya — profesional, premium, tidak pernah terlihat generik/AI (§8).
 - **Hemat token:** chat singkat (caveman), storyboard di file, log ringkas, revisi digabung (§7).
+- **Mask & caption (§10):** mask talent harus rapi di tepi (hijab/rambut); caption tidak pernah menutupi wajah atau tubuh manusia.
