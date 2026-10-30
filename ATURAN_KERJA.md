@@ -76,6 +76,15 @@ Tambahan (disetujui Zar 2026-10-29):
 - **Baca log/file seminimal mungkin:** grep/tail bagian yang perlu saja.
 - Ditolak: template adegan (adegan tiap video selalu berbeda).
 
+Tambahan (disetujui Zar 2026-10-30):
+
+- **Satu edit video dalam satu waktu:** jangan render paralel (bentrok port) atau dua thread edit aktif; antrekan permintaan edit baru sampai yang berjalan selesai/ditutup.
+- **Laptop siap selama edit:** dicolok charger, sleep mati, aplikasi Claude terbuka — agar render tidak putus dan tidak diulang.
+- **Tanpa cek status:** thread wajib mengabari sendiri saat selesai atau macet. Pesan "masih jalan?" dijawab satu baris.
+- **Pikir berat hanya untuk konsep + storyboard;** langkah render, QA, push dibuat singkat (effort/model tetap pilihan Zar, jangan diubah).
+- **Lihat gambar/frame seminimal mungkin:** hanya still per adegan + cek QA yang perlu.
+- **Jaga ruang C:** sarankan Zar mengosongkan C: agar Chrome/render tidak gagal di tengah jalan.
+
 ## 8. Kebebasan kreatif & upgrade terus (aturan tetap Zar, 2026-10-28)
 
 - Setiap edit **boleh bebas memakai ulang dan meremix** semua efek, preset, template, gaya, dan modul adegan yang sudah ada di `video-system` (lihat `INDEX.md`, `efek/`, katalog) — kombinasikan agar tiap video bervariasi, tidak monoton.
@@ -92,6 +101,7 @@ Berlaku untuk video **baru** saja. File OTCA yang sudah ada tetap di folder file
 - **Folder file proyek (cloud) = transit saja:** dipakai untuk upload footage saat laptop mati dan untuk berbagi hasil ke HP. Setelah laptop menyala, **pindahkan** file transit ke `proyek\<proyek>\` lalu bersihkan salinan transit (tanya Zar sebelum menghapus).
 - **Backup:** sarankan Zar mem-backup `proyek\` secara berkala ke Google Drive atau disk eksternal (folder ini di-`.gitignore`, tidak ikut git).
 - File sementara tetap mengikuti §3 (`.sementara`, D:).
+- **Tambahan 2026-10-30:** footage + file brand langsung ditaruh di `video-system\proyek\<proyek>\` (lewati transit/bundle/kartu izin bila laptop menyala). Semua temp/cache render di D: `.sementara` — jangan pernah memuat temp/cache di C: — dan bersihkan setelah selesai.
 
 ## 10. Mask talent & subtitle (aturan tetap Zar, 2026-10-29)
 
