@@ -229,3 +229,6 @@ Semua efek E01–E30 native. Generator slot memilih efek per fungsi sesuai gaya 
    Kombinasi manual (gaya+template+efek) yang dipakai di ≥2 proyek → jadikan preset baru.
 9. Nama preset = `<gaya>-<format>` + field `label` (nama tampilan). Gaya baru → tambah `ciri` & `teks_di_video` di frontmatter,
    jalankan `video.py katalog <gaya>`, daftarkan gaya di `gaya_cocok` template.
+
+## Komposisi editorial campuran
+- EditorialReview@0.1 — [panduan](remotion/src/storyboards/README.md), [komposisi](remotion/src/storyboards/EditorialReview.tsx). Split talent bergantian dengan cutaway grafis layar penuh; layout/timing lewat props. Produksi melalui video.py dengan gerbang persetujuan props; QA menyimpan kontak.png dari MP4 final. Pemicu: OTCA sertifikat premium, November 2026.

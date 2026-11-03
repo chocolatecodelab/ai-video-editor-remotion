@@ -1,0 +1,1882 @@
+{
+  "W": 1080,
+  "H": 1920,
+  "fps": 30,
+  "durasiFrame": 1760,
+  "tokens": {
+    "format": {
+      "rasio": "9:16",
+      "resolusi": [
+        1080,
+        1920
+      ],
+      "fps": 30,
+      "resolusi-referensi": [
+        1080,
+        1920
+      ]
+    },
+    "zona-aman": {
+      "atas": 250,
+      "bawah": 400,
+      "kiri": 108,
+      "kanan": 120,
+      "_catatan": "px @1080x1920. Atas = status bar + tab, bawah = caption/username/musik, kanan = tombol like/komen/share (Reels/TikTok/Shorts)."
+    },
+    "ingest": {
+      "fps-diterima": [
+        24,
+        25,
+        29.97,
+        30,
+        50,
+        59.94,
+        60
+      ],
+      "tinggi-min": 1080,
+      "crf-antara": 12
+    },
+    "audio": {
+      "lufs": -14,
+      "lufs-toleransi": 1.0,
+      "true-peak": -1.0,
+      "lra": 11,
+      "sample-rate": 48000,
+      "highpass-hz": 80,
+      "denoise": "afftdn=nf=-25"
+    },
+    "ekspor": {
+      "master": {
+        "codec": "prores_ks",
+        "profil": 3,
+        "pix_fmt": "yuv422p10le",
+        "ext": "mov"
+      },
+      "platform": {
+        "reels": {
+          "vcodec": "libx264",
+          "profile": "high",
+          "level": "4.1",
+          "crf": 18,
+          "maxrate": "12M",
+          "bufsize": "24M",
+          "acodec": "aac",
+          "abitrate": "192k"
+        },
+        "tiktok": {
+          "vcodec": "libx264",
+          "profile": "high",
+          "level": "4.1",
+          "crf": 18,
+          "maxrate": "12M",
+          "bufsize": "24M",
+          "acodec": "aac",
+          "abitrate": "192k"
+        },
+        "shorts": {
+          "vcodec": "libx264",
+          "profile": "high",
+          "level": "4.2",
+          "crf": 17,
+          "maxrate": "16M",
+          "bufsize": "32M",
+          "acodec": "aac",
+          "abitrate": "192k"
+        }
+      },
+      "warna": "bt709",
+      "pix_fmt": "yuv420p"
+    },
+    "qa": {
+      "kontras-min": 4.5,
+      "kontras-min-besar": 3.0,
+      "ukuran-besar-px": 72,
+      "ukuran-min-px": 40,
+      "karakter-per-detik-maks": 22,
+      "tahan-min": 1.2,
+      "durasi-toleransi-s": 3,
+      "grain-rasio-min": 0.6,
+      "grade-de-min": 0.8,
+      "grade-wajah-de-maks": 6.0
+    },
+    "caption": {
+      "mode": "karaoke",
+      "redup": 0.4,
+      "kata-maks": 2,
+      "karakter-maks-baris": 18,
+      "baris-maks": 2,
+      "jeda-pecah": 0.35,
+      "stroke": 7,
+      "warna-aktif": "aksen",
+      "huruf-besar": false
+    },
+    "ketik": {
+      "cps": 22,
+      "jeda-awal": 0.2,
+      "jeda-kirim": 0.3,
+      "durasi-ciut": 0.45
+    },
+    "sfx": {
+      "transisi": "whoosh-pendek",
+      "level-db": -18,
+      "otomatis": true,
+      "jarak-min": 0.06,
+      "push-gerak-maks": 1.2,
+      "level": {
+        "ui": -23,
+        "transisi": -19,
+        "aksen": -18,
+        "status": -18,
+        "ketik": -28
+      },
+      "peta": {
+        "judul": {
+          "bunyi": "whoosh-pendek",
+          "kelas": "transisi"
+        },
+        "teks": {
+          "bunyi": "tick",
+          "kelas": "ui"
+        },
+        "kartu": {
+          "bunyi": "ketuk",
+          "kelas": "ui"
+        },
+        "item": {
+          "bunyi": "tick",
+          "kelas": "ui"
+        },
+        "cta": {
+          "bunyi": "pop",
+          "kelas": "aksen"
+        },
+        "gambar": {
+          "bunyi": "ketuk",
+          "kelas": "ui"
+        },
+        "broll": {
+          "bunyi": "whoosh-pendek",
+          "kelas": "transisi"
+        },
+        "push": {
+          "bunyi": "whoosh-panjang",
+          "kelas": "transisi"
+        },
+        "depth": {
+          "bunyi": "hit",
+          "kelas": "aksen"
+        },
+        "info": {
+          "bunyi": "pop",
+          "kelas": "ui"
+        },
+        "chip": {
+          "bunyi": "tick",
+          "kelas": "ui"
+        },
+        "chip-benar": {
+          "bunyi": "ding-benar",
+          "kelas": "status"
+        },
+        "chip-salah": {
+          "bunyi": "ding-salah",
+          "kelas": "status"
+        },
+        "chip-nomor": {
+          "bunyi": "pop",
+          "kelas": "ui"
+        },
+        "remotion": {
+          "bunyi": "ketuk",
+          "kelas": "ui"
+        },
+        "prompt-masuk": {
+          "bunyi": "whoosh-pendek",
+          "kelas": "transisi"
+        },
+        "prompt-lampiran": {
+          "bunyi": "pop",
+          "kelas": "ui"
+        },
+        "prompt-ketik": {
+          "bunyi": "klik-ketik",
+          "kelas": "ketik"
+        },
+        "prompt-kirim": {
+          "bunyi": "tick",
+          "kelas": "ui"
+        },
+        "prompt-ciut": {
+          "bunyi": "swoosh-balik",
+          "kelas": "transisi"
+        },
+        "hitung-tick": {
+          "bunyi": "tick",
+          "kelas": "ketik"
+        },
+        "hitung-selesai": {
+          "bunyi": "pop",
+          "kelas": "aksen"
+        },
+        "terminal-ketik": {
+          "bunyi": "klik-ketik",
+          "kelas": "ketik"
+        },
+        "terminal-baris": {
+          "bunyi": "tick",
+          "kelas": "ui"
+        },
+        "terminal-selesai": {
+          "bunyi": "ding-benar",
+          "kelas": "status"
+        },
+        "coret-gores": {
+          "bunyi": "gores",
+          "kelas": "aksen"
+        },
+        "coret-silang": {
+          "bunyi": "ding-salah",
+          "kelas": "status"
+        },
+        "timeline-blok": {
+          "bunyi": "tick",
+          "kelas": "ui"
+        },
+        "timeline-chip": {
+          "bunyi": "pop",
+          "kelas": "ui"
+        },
+        "grid-isi": {
+          "bunyi": "tick",
+          "kelas": "ketik"
+        },
+        "grid-selesai": {
+          "bunyi": "pop",
+          "kelas": "aksen"
+        },
+        "form-ganti": {
+          "bunyi": "tick",
+          "kelas": "ui"
+        },
+        "form-lencana": {
+          "bunyi": "pop",
+          "kelas": "ui"
+        },
+        "partikel": {
+          "bunyi": "kilau",
+          "kelas": "aksen"
+        },
+        "transisi": {
+          "bunyi": "whoosh-panjang",
+          "kelas": "transisi"
+        },
+        "chart-batang": {
+          "bunyi": "tick",
+          "kelas": "ketik"
+        },
+        "chart-selesai": {
+          "bunyi": "pop",
+          "kelas": "aksen"
+        },
+        "kaca-masuk": {
+          "bunyi": "whoosh-pendek",
+          "kelas": "transisi"
+        },
+        "cover-masthead": {
+          "bunyi": "hit",
+          "kelas": "aksen"
+        },
+        "cover-baris": {
+          "bunyi": "tick",
+          "kelas": "ui"
+        },
+        "cover-judul": {
+          "bunyi": "whoosh-pendek",
+          "kelas": "transisi"
+        },
+        "doodle-gores": {
+          "bunyi": "gores",
+          "kelas": "aksen"
+        },
+        "aksen-kilau": {
+          "bunyi": "kilau",
+          "kelas": "aksen"
+        },
+        "aksen-target": {
+          "bunyi": "glitch",
+          "kelas": "aksen"
+        },
+        "aksen-stempel": {
+          "bunyi": "hit",
+          "kelas": "aksen"
+        },
+        "aksen-selotip": {
+          "bunyi": "gores",
+          "kelas": "aksen"
+        },
+        "aksen-doodle": {
+          "bunyi": "gores",
+          "kelas": "aksen"
+        },
+        "aksen-uap": {
+          "bunyi": "kilau",
+          "kelas": "ui"
+        },
+        "aksen-garis": {
+          "bunyi": "swoosh-balik",
+          "kelas": "ui"
+        },
+        "headline-jatuh": {
+          "bunyi": "ketuk",
+          "kelas": "ui"
+        },
+        "headline-sorot": {
+          "bunyi": "whoosh-pendek",
+          "kelas": "transisi"
+        },
+        "orbit": {
+          "bunyi": "whoosh-panjang",
+          "kelas": "transisi"
+        },
+        "dinding-ganti": {
+          "bunyi": "swoosh-balik",
+          "kelas": "transisi"
+        },
+        "ui-dolly": {
+          "bunyi": "riser",
+          "kelas": "transisi"
+        },
+        "ui-tiba": {
+          "bunyi": "hit",
+          "kelas": "aksen"
+        },
+        "paper-lapis": {
+          "bunyi": "gores",
+          "kelas": "ui"
+        },
+        "paper-kartu": {
+          "bunyi": "ketuk",
+          "kelas": "ui"
+        },
+        "kamera-pukul": {
+          "bunyi": "hit",
+          "kelas": "aksen"
+        },
+        "kamera-masuk": {
+          "bunyi": "whoosh-panjang",
+          "kelas": "transisi"
+        },
+        "judul-pop": {
+          "bunyi": "pop",
+          "kelas": "aksen"
+        },
+        "judul-slam": {
+          "bunyi": "hit",
+          "kelas": "aksen"
+        },
+        "judul-masuk": {
+          "bunyi": "whoosh-pendek",
+          "kelas": "transisi"
+        },
+        "judul-neon": {
+          "bunyi": "kilau",
+          "kelas": "aksen"
+        },
+        "judul-ketik": {
+          "bunyi": "klik-ketik",
+          "kelas": "ketik"
+        },
+        "lower-pita": {
+          "bunyi": "whoosh-pendek",
+          "kelas": "transisi"
+        },
+        "lower-teks": {
+          "bunyi": "tick",
+          "kelas": "ui"
+        },
+        "langkah-titik": {
+          "bunyi": "pop",
+          "kelas": "ui"
+        },
+        "wipe": {
+          "bunyi": "swoosh-balik",
+          "kelas": "transisi"
+        },
+        "callout": {
+          "bunyi": "pop",
+          "kelas": "aksen"
+        }
+      },
+      "_catatan": "Bunyi pustaka: pipeline/scripts/sfx.py (RESEP). Elemen tanpa field 'sfx' memakai peta ini; 'sfx': false = diam."
+    },
+    "perangkat": {
+      "durasi-hitung": 1.6,
+      "tick-maks": 14,
+      "stagger-baris": 0.35,
+      "stagger-form": 0.7,
+      "stagger-chip": 0.3,
+      "durasi-coret": 0.35,
+      "durasi-grid": 1.8,
+      "opasitas-min": 0.9,
+      "durasi-partikel": 1.2,
+      "_catatan": "Waktu perangkat UI (E19–E25); opasitas-min = panel jendela mock UI minimal (keterbacaan).",
+      "latar-opasitas": 0.82,
+      "latar-blur": 40
+    },
+    "transisi": {
+      "blur-zoom": {
+        "durasi": 0.5,
+        "skala": 1.06,
+        "blur-px": 22,
+        "bunyi": "whoosh-panjang"
+      },
+      "zoom-tembus": {
+        "durasi": 0.6,
+        "skala": 2.2,
+        "skala-masuk": 1.5,
+        "blur-px": 26,
+        "bunyi": "whoosh-panjang"
+      },
+      "whip": {
+        "durasi": 0.4,
+        "geser": 0.18,
+        "blur-px": 90,
+        "bunyi": "whoosh-pendek"
+      },
+      "glitch": {
+        "durasi": 0.35,
+        "geser-px": 28,
+        "bunyi": "glitch"
+      },
+      "celup": {
+        "durasi": 0.6,
+        "bunyi": "swoosh-balik"
+      },
+      "kertas": {
+        "durasi": 0.9,
+        "bunyi": "gores"
+      },
+      "coretan": {
+        "durasi": 0.9,
+        "bunyi": "gores"
+      },
+      "_catatan": "Jenis transisi (E09, E13, E14, E26, E28–E30). Default per gaya = token motif.transisi."
+    },
+    "kamera": {
+      "digital-zoom": {
+        "skala": [
+          1.12,
+          1.24
+        ],
+        "durasi-pukul": 0.12,
+        "guncang-px": 10,
+        "durasi-keluar": 0.25
+      },
+      "phone-mockup": {
+        "skala": 0.66,
+        "radius": 64,
+        "bezel": 24,
+        "pusat-y": 0.46,
+        "durasi-masuk": 0.5
+      },
+      "pull-back-reveal": {
+        "skala": 0.6,
+        "radius": 48,
+        "pusat-y": 0.45,
+        "durasi-masuk": 1.1
+      },
+      "frame-break": {
+        "skala": 0.8,
+        "lebar": 0.76,
+        "tinggi": 0.5,
+        "tebal": 14,
+        "pusat-y": 0.47,
+        "durasi-masuk": 0.4
+      },
+      "vertigo": {
+        "skala-latar": 1.3
+      },
+      "green-screen": {
+        "durasi-masuk": 0.4
+      },
+      "_catatan": "Efek kamera pada rekaman (tipe kamera; E04 E05 E06 E11 E12 E15). frame-break/vertigo/green-screen butuh roto."
+    },
+    "slot": {
+      "hook": [
+        "lower-third",
+        "chip",
+        "glass-type",
+        "cover-story",
+        "prompt-ui",
+        "doodle-boil",
+        "info"
+      ],
+      "konteks": [
+        "info",
+        "couch-wall",
+        "ui-world",
+        "orbit",
+        "paper-cut",
+        "headline-wall",
+        "lower-third",
+        "linimasa",
+        "chat-window"
+      ],
+      "masalah": [
+        "info",
+        "chip-salah",
+        "coret",
+        "doodle-boil",
+        "callout"
+      ],
+      "membantah": [
+        "sebelum-sesudah",
+        "coret",
+        "form-ganti",
+        "chip-salah"
+      ],
+      "bukti": [
+        "penghitung",
+        "chart-grow",
+        "grid-variasi",
+        "headline-wall",
+        "info",
+        "linimasa"
+      ],
+      "proses": [
+        "langkah",
+        "terminal",
+        "timeline",
+        "ui-world",
+        "checklist",
+        "chat-window",
+        "split-explainer"
+      ],
+      "langkah": [
+        "langkah",
+        "checklist",
+        "terminal",
+        "timeline",
+        "info",
+        "chip",
+        "callout",
+        "split-explainer"
+      ],
+      "kustomisasi": [
+        "form-ganti",
+        "grid-variasi",
+        "sebelum-sesudah"
+      ],
+      "hasil": [
+        "chip-benar",
+        "sebelum-sesudah",
+        "glass-type",
+        "checklist",
+        "info",
+        "depth"
+      ],
+      "ringkasan": [
+        "checklist",
+        "langkah",
+        "timeline",
+        "info",
+        "split-explainer"
+      ],
+      "ajakan": [
+        "cta"
+      ],
+      "kamera": [
+        "digital-zoom",
+        "vertigo",
+        "phone-mockup",
+        "pull-back-reveal",
+        "frame-break",
+        "green-screen"
+      ],
+      "_catatan": "Kandidat per fungsi untuk generator koreografi (slot.py). Urutan tidak berarti prioritas; bobot = kecocokan gaya (gaya_cocok efek) + variasi. reveal & transisi dari token motif gaya."
+    },
+    "koreografi": {
+      "variasi-min": 4,
+      "fungsi": [
+        "hook",
+        "konteks",
+        "bukti",
+        "masalah",
+        "membantah",
+        "proses",
+        "langkah",
+        "kustomisasi",
+        "hasil",
+        "reveal",
+        "ringkasan",
+        "ajakan"
+      ],
+      "bukan-perangkat": [
+        "judul",
+        "teks",
+        "push",
+        "transisi",
+        "latar",
+        "sfx"
+      ],
+      "tutup-wajah-maks": 0.1,
+      "khas-min": 2,
+      "_catatan": "Perangkat = elemen visual utama (remotion efek, info, chip-<status>, kartu, cta, gambar, broll, depth)."
+    },
+    "depth": {
+      "tutup-maks": 0.25,
+      "qa-tutup-rata": 0.3,
+      "qa-tutup-maks": 0.45,
+      "_catatan": "Teks rotoscope di ATAS kepala: dasar huruf boleh tertutup ≤ tutup-maks tinggi huruf (penataan render.py); QA K02.3 mengukur bagian huruf tertutup per frame."
+    },
+    "grain": {
+      "aktif": true,
+      "kekuatan": 2.2,
+      "ukuran": 1.3,
+      "kroma": 0.2,
+      "midtone": 0.6
+    },
+    "grade": {
+      "aktif": true,
+      "kekuatan": 1.0,
+      "bayangan": "latar",
+      "bayangan-kekuatan": 0.08,
+      "sorot": "aksen",
+      "sorot-kekuatan": 0.02,
+      "kontras": 0.06,
+      "saturasi": 0.96,
+      "suhu": -0.2,
+      "angkat": 0.0
+    },
+    "cahaya": {
+      "aktif": true,
+      "sampel": 16,
+      "asimetri-penuh": 0.15,
+      "sudut-maks": 40,
+      "keyakinan-min": 0.35,
+      "sudut-batas": 60
+    },
+    "warna": {
+      "latar": "#000000",
+      "teks-utama": "#FFFFFF",
+      "teks-sekunder": "#FFFFFF",
+      "aksen": "#CB9D31",
+      "aksen-2": "#FDF1A4",
+      "peringatan": "#B3822C",
+      "panel": "#000000",
+      "panel-opasitas": 0.62,
+      "garis-panel": "#CB9D31",
+      "garis-opasitas": 0.6,
+      "stroke": "#000000",
+      "bayangan": "#000000",
+      "bayangan-opasitas": 0.45
+    },
+    "font": {
+      "judul": {
+        "file": "Montserrat-ExtraBold.ttf",
+        "family": "Montserrat",
+        "weight": 800,
+        "wght": 0
+      },
+      "subjudul": {
+        "file": "Montserrat-Bold.ttf",
+        "family": "Montserrat",
+        "weight": 700,
+        "wght": 0
+      },
+      "isi": {
+        "file": "Montserrat-SemiBold.ttf",
+        "family": "Montserrat",
+        "weight": 600,
+        "wght": 0
+      },
+      "caption": {
+        "file": "Montserrat-Bold.ttf",
+        "family": "Montserrat",
+        "weight": 700,
+        "wght": 0
+      },
+      "depth": {
+        "file": "Montserrat-ExtraBold.ttf",
+        "family": "Montserrat",
+        "weight": 800,
+        "wght": 0
+      }
+    },
+    "ukuran": {
+      "judul": 96,
+      "subjudul": 64,
+      "isi": 48,
+      "caption": 62,
+      "depth": 240
+    },
+    "spasi": {
+      "baris": 1.12,
+      "padding-kartu": 44,
+      "jarak-item": 22
+    },
+    "radius": {
+      "kartu": 36,
+      "chip": 999
+    },
+    "blur": {
+      "panel": 28
+    },
+    "bayangan": {
+      "offset": [
+        0,
+        10
+      ],
+      "blur": 30
+    },
+    "durasi": {
+      "masuk": 0.38,
+      "keluar": 0.24,
+      "tahan-min": 1.2,
+      "stagger": 0.08
+    },
+    "easing": {
+      "standar": [
+        0.2,
+        0.8,
+        0.2,
+        1.0
+      ],
+      "tegas": [
+        0.7,
+        0.0,
+        0.3,
+        1.0
+      ],
+      "keluar": [
+        0.4,
+        0.0,
+        1.0,
+        1.0
+      ]
+    },
+    "gerak": {
+      "masuk-default": "naik",
+      "keluar-default": "fade",
+      "jarak-naik": 60,
+      "skala-pop": 0.86,
+      "push-in": 1.06
+    },
+    "motion-blur": {
+      "aktif": true,
+      "sampel": 5,
+      "ambang-px": 14
+    },
+    "mask": {
+      "feather-px": 1.5
+    },
+    "motif": {
+      "bingkai": "kaca",
+      "aksen": "kotak",
+      "tekstur": null,
+      "transisi": "blur-zoom",
+      "reveal": "partikel",
+      "boil": 0,
+      "depth": "gradien",
+      "judul": {
+        "masuk": "fade",
+        "hiasan": "neon"
+      }
+    },
+    "_catatan": "Brand OTCA (D:/KERJAAN/OTCA/Brand Guidelines OTCA New.pdf) — HANYA proyek ini; gaya dasar glass-tech tidak diubah.",
+    "_catatan_qa": "karakter-per-detik-maks 17→22 atas keputusan pengguna (2026-10-25): caption verbatim, tempo bicara cepat."
+  },
+  "zona": [
+    108,
+    250,
+    960,
+    1520
+  ],
+  "tinggi_panggung": 930,
+  "gradasi": 320,
+  "footage": {
+    "src": "proyek/2026-11_otca-sertifikat-premium/talent.mp4",
+    "geser_y": 560,
+    "titik_zoom_y": 950
+  },
+  "zoom": [
+    [
+      0.0,
+      1.0
+    ],
+    [
+      3.197,
+      1.07
+    ],
+    [
+      9.721,
+      1.0
+    ],
+    [
+      14.504,
+      1.07
+    ],
+    [
+      23.13,
+      1.0
+    ],
+    [
+      34.098,
+      1.08
+    ],
+    [
+      37.2,
+      1.0
+    ],
+    [
+      45.887,
+      1.07
+    ],
+    [
+      52.474,
+      1.0
+    ],
+    [
+      56.198,
+      1.06
+    ],
+    [
+      59.666667,
+      1.06
+    ]
+  ],
+  "adegan": [
+    {
+      "modul": "otca-sertifikat-kampus",
+      "mulai": 0,
+      "selesai": 9.705,
+      "t": {
+        "sertifikat": 0.08,
+        "centang": 5.298,
+        "belum": 5.958,
+        "siap": 8.28
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-tangga",
+      "mulai": 9.705,
+      "selesai": 14.3925,
+      "t": {
+        "naik": 10.881,
+        "puncak": 13.683
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-timbangan",
+      "mulai": 14.3925,
+      "selesai": 23.1425,
+      "t": {
+        "timbangan": 15.404,
+        "sertifikat": 15.725,
+        "akademik": 21.008,
+        "harian": 22.109
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-ruang-kuliah",
+      "mulai": 23.1425,
+      "selesai": 34.08,
+      "t": {
+        "telinga": 25.191,
+        "dosen": 26.231,
+        "buku": 27.853,
+        "diskusi": 28.993,
+        "tangan": 30.415,
+        "mic": 32.796
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-coret",
+      "mulai": 34.08,
+      "selesai": 37.205,
+      "t": {
+        "coret": 34.998
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-radar",
+      "mulai": 37.205,
+      "selesai": 45.955,
+      "t": {
+        "dengar": 39.442,
+        "bicara": 40.402,
+        "tulis": 41.463,
+        "baca": 42.304,
+        "seimbang": 43.485,
+        "guna": 45.306
+      },
+      "masuk": "match",
+      "keluar": "match"
+    },
+    {
+      "modul": "otca-bukti-gear",
+      "mulai": 45.955,
+      "selesai": 52.5175,
+      "t": {
+        "bukti": 48.79,
+        "tapi": 50.131,
+        "terpakai": 51.793
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-pesawat-peta",
+      "mulai": 52.5175,
+      "selesai": 57.9,
+      "t": {
+        "terbang": 53.074
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-kartu",
+      "mulai": 57.9,
+      "selesai": 58.666667,
+      "t": {},
+      "masuk": "match",
+      "penuh": true,
+      "keluar": "match"
+    }
+  ],
+  "ketukan": {
+    "bpm": 96.0,
+    "subdivisi": 2,
+    "ofset_musik": 0.295,
+    "potongan": 9,
+    "digeser": 9,
+    "titik": [
+      0.33,
+      0.955,
+      1.58,
+      2.205,
+      2.83,
+      3.455,
+      4.08,
+      4.705,
+      5.33,
+      5.955,
+      6.58,
+      7.205,
+      7.83,
+      8.455,
+      9.08,
+      9.705,
+      10.33,
+      10.955,
+      11.58,
+      12.205,
+      12.83,
+      13.455,
+      14.08,
+      14.705,
+      15.33,
+      15.955,
+      16.58,
+      17.205,
+      17.83,
+      18.455,
+      19.08,
+      19.705,
+      20.33,
+      20.955,
+      21.58,
+      22.205,
+      22.83,
+      23.455,
+      24.08,
+      24.705,
+      25.33,
+      25.955,
+      26.58,
+      27.205,
+      27.83,
+      28.455,
+      29.08,
+      29.705,
+      30.33,
+      30.955,
+      31.58,
+      32.205,
+      32.83,
+      33.455,
+      34.08,
+      34.705,
+      35.33,
+      35.955,
+      36.58,
+      37.205,
+      37.83,
+      38.455,
+      39.08,
+      39.705,
+      40.33,
+      40.955,
+      41.58,
+      42.205,
+      42.83,
+      43.455,
+      44.08,
+      44.705,
+      45.33,
+      45.955,
+      46.58,
+      47.205,
+      47.83,
+      48.455,
+      49.08,
+      49.705,
+      50.33,
+      50.955,
+      51.58,
+      52.205,
+      52.83,
+      53.455,
+      54.08,
+      54.705,
+      55.33,
+      55.955,
+      56.58,
+      57.205,
+      57.83,
+      58.455
+    ],
+    "denyut": 1.0
+  },
+  "hook": {
+    "aktif": true,
+    "kuat": 0.65,
+    "durasi": 0.8
+  },
+  "logo": {
+    "src": "proyek/2026-11_otca-sertifikat-premium/logo-otca.png",
+    "rasio": 0.2656826568265683,
+    "lebar_atas": 235,
+    "lebar_besar": 780,
+    "y_atas": 302,
+    "y_besar": 556,
+    "hook_s": 1.0,
+    "awal_besar": false
+  },
+  "kata": [
+    {
+      "w": "Halo",
+      "s": 0.875,
+      "e": 1.075
+    },
+    {
+      "w": "parents,",
+      "s": 1.175,
+      "e": 1.595
+    },
+    {
+      "w": "hati-hati",
+      "s": 1.996,
+      "e": 2.496
+    },
+    {
+      "w": "ya.",
+      "s": 2.636,
+      "e": 2.916
+    },
+    {
+      "w": "Anak",
+      "s": 3.297,
+      "e": 3.717
+    },
+    {
+      "w": "sudah",
+      "s": 3.857,
+      "e": 4.057
+    },
+    {
+      "w": "punya",
+      "s": 4.117,
+      "e": 4.277
+    },
+    {
+      "w": "sertifikat",
+      "s": 4.357,
+      "e": 4.878
+    },
+    {
+      "w": "bahasa",
+      "s": 4.958,
+      "e": 5.218
+    },
+    {
+      "w": "Jerman,",
+      "s": 5.298,
+      "e": 5.698
+    },
+    {
+      "w": "belum",
+      "s": 5.958,
+      "e": 6.158
+    },
+    {
+      "w": "tentu",
+      "s": 6.278,
+      "e": 6.659
+    },
+    {
+      "w": "kemampuan",
+      "s": 6.759,
+      "e": 7.199
+    },
+    {
+      "w": "bahasanya",
+      "s": 7.259,
+      "e": 7.799
+    },
+    {
+      "w": "sudah",
+      "s": 7.96,
+      "e": 8.16
+    },
+    {
+      "w": "siap",
+      "s": 8.28,
+      "e": 8.54
+    },
+    {
+      "w": "untuk",
+      "s": 8.62,
+      "e": 8.82
+    },
+    {
+      "w": "studi",
+      "s": 8.84,
+      "e": 9.1
+    },
+    {
+      "w": "di",
+      "s": 9.14,
+      "e": 9.22
+    },
+    {
+      "w": "Jerman.",
+      "s": 9.28,
+      "e": 9.641
+    },
+    {
+      "w": "Karena",
+      "s": 10.221,
+      "e": 10.681
+    },
+    {
+      "w": "sertifikat",
+      "s": 10.881,
+      "e": 11.482
+    },
+    {
+      "w": "menunjukkan",
+      "s": 11.622,
+      "e": 12.062
+    },
+    {
+      "w": "level",
+      "s": 12.142,
+      "e": 12.523
+    },
+    {
+      "w": "bahasa",
+      "s": 12.583,
+      "e": 13.083
+    },
+    {
+      "w": "yang",
+      "s": 13.183,
+      "e": 13.303
+    },
+    {
+      "w": "berhasil",
+      "s": 13.343,
+      "e": 13.663
+    },
+    {
+      "w": "dicapai.",
+      "s": 13.683,
+      "e": 14.184
+    },
+    {
+      "w": "Tapi",
+      "s": 14.704,
+      "e": 15.264
+    },
+    {
+      "w": "belum",
+      "s": 15.404,
+      "e": 15.625
+    },
+    {
+      "w": "tentu",
+      "s": 15.725,
+      "e": 16.065
+    },
+    {
+      "w": "menggambarkan",
+      "s": 16.185,
+      "e": 16.825
+    },
+    {
+      "w": "seberapa",
+      "s": 16.945,
+      "e": 17.326
+    },
+    {
+      "w": "siap",
+      "s": 17.406,
+      "e": 17.786
+    },
+    {
+      "w": "sih",
+      "s": 17.866,
+      "e": 18.006
+    },
+    {
+      "w": "anak",
+      "s": 18.206,
+      "e": 18.426
+    },
+    {
+      "w": "menggunakan",
+      "s": 18.466,
+      "e": 18.927
+    },
+    {
+      "w": "bahasa",
+      "s": 19.007,
+      "e": 19.247
+    },
+    {
+      "w": "Jerman",
+      "s": 19.307,
+      "e": 19.687
+    },
+    {
+      "w": "dalam",
+      "s": 20.107,
+      "e": 20.388
+    },
+    {
+      "w": "situasi",
+      "s": 20.468,
+      "e": 20.948
+    },
+    {
+      "w": "akademik",
+      "s": 21.008,
+      "e": 21.508
+    },
+    {
+      "w": "dan",
+      "s": 21.608,
+      "e": 21.729
+    },
+    {
+      "w": "juga",
+      "s": 21.829,
+      "e": 22.049
+    },
+    {
+      "w": "sehari-harinya.",
+      "s": 22.109,
+      "e": 22.889
+    },
+    {
+      "w": "Di",
+      "s": 23.39,
+      "e": 23.47
+    },
+    {
+      "w": "perkuliahan,",
+      "s": 23.53,
+      "e": 24.27
+    },
+    {
+      "w": "anak",
+      "s": 24.51,
+      "e": 24.71
+    },
+    {
+      "w": "perlu",
+      "s": 24.79,
+      "e": 25.091
+    },
+    {
+      "w": "memahami",
+      "s": 25.191,
+      "e": 25.671
+    },
+    {
+      "w": "penjelasan",
+      "s": 25.731,
+      "e": 26.191
+    },
+    {
+      "w": "dosen.",
+      "s": 26.231,
+      "e": 27.132
+    },
+    {
+      "w": "memahami",
+      "s": 27.252,
+      "e": 27.793
+    },
+    {
+      "w": "materi,",
+      "s": 27.853,
+      "e": 28.353
+    },
+    {
+      "w": "berdiskusi,",
+      "s": 28.993,
+      "e": 29.914
+    },
+    {
+      "w": "bertanya,",
+      "s": 30.415,
+      "e": 31.275
+    },
+    {
+      "w": "sampai",
+      "s": 31.656,
+      "e": 32.076
+    },
+    {
+      "w": "menyampaikan",
+      "s": 32.136,
+      "e": 32.716
+    },
+    {
+      "w": "pendapat",
+      "s": 32.796,
+      "e": 33.197
+    },
+    {
+      "w": "dengan",
+      "s": 33.317,
+      "e": 33.557
+    },
+    {
+      "w": "jelas.",
+      "s": 33.617,
+      "e": 33.877
+    },
+    {
+      "w": "Jadi",
+      "s": 34.498,
+      "e": 34.918
+    },
+    {
+      "w": "jangan",
+      "s": 34.998,
+      "e": 35.218
+    },
+    {
+      "w": "hanya",
+      "s": 35.258,
+      "e": 35.479
+    },
+    {
+      "w": "fokus",
+      "s": 35.559,
+      "e": 35.819
+    },
+    {
+      "w": "pada",
+      "s": 35.879,
+      "e": 36.079
+    },
+    {
+      "w": "level",
+      "s": 36.159,
+      "e": 36.419
+    },
+    {
+      "w": "sertifikat.",
+      "s": 36.479,
+      "e": 37.0
+    },
+    {
+      "w": "Perhatikan",
+      "s": 37.5,
+      "e": 37.88
+    },
+    {
+      "w": "juga",
+      "s": 37.981,
+      "e": 38.321
+    },
+    {
+      "w": "apakah",
+      "s": 38.521,
+      "e": 38.841
+    },
+    {
+      "w": "kemampuan",
+      "s": 38.901,
+      "e": 39.382
+    },
+    {
+      "w": "mendengar,",
+      "s": 39.442,
+      "e": 39.962
+    },
+    {
+      "w": "berbicara,",
+      "s": 40.402,
+      "e": 41.163
+    },
+    {
+      "w": "menulis,",
+      "s": 41.463,
+      "e": 42.084
+    },
+    {
+      "w": "dan",
+      "s": 42.144,
+      "e": 42.264
+    },
+    {
+      "w": "membaca",
+      "s": 42.304,
+      "e": 42.804
+    },
+    {
+      "w": "sudah",
+      "s": 42.964,
+      "e": 43.165
+    },
+    {
+      "w": "cukup",
+      "s": 43.225,
+      "e": 43.425
+    },
+    {
+      "w": "seimbang",
+      "s": 43.485,
+      "e": 43.925
+    },
+    {
+      "w": "dan",
+      "s": 44.025,
+      "e": 44.165
+    },
+    {
+      "w": "benar-benar",
+      "s": 44.245,
+      "e": 44.846
+    },
+    {
+      "w": "bisa",
+      "s": 44.946,
+      "e": 45.286
+    },
+    {
+      "w": "digunakan.",
+      "s": 45.306,
+      "e": 45.827
+    },
+    {
+      "w": "Karena",
+      "s": 46.387,
+      "e": 46.708
+    },
+    {
+      "w": "yang",
+      "s": 46.748,
+      "e": 46.868
+    },
+    {
+      "w": "dibutuhkan",
+      "s": 46.908,
+      "e": 47.448
+    },
+    {
+      "w": "saat",
+      "s": 47.508,
+      "e": 47.649
+    },
+    {
+      "w": "studi",
+      "s": 47.729,
+      "e": 48.129
+    },
+    {
+      "w": "bukan",
+      "s": 48.189,
+      "e": 48.369
+    },
+    {
+      "w": "hanya",
+      "s": 48.429,
+      "e": 48.69
+    },
+    {
+      "w": "bukti",
+      "s": 48.79,
+      "e": 49.17
+    },
+    {
+      "w": "level",
+      "s": 49.21,
+      "e": 49.511
+    },
+    {
+      "w": "bahasa,",
+      "s": 49.551,
+      "e": 49.991
+    },
+    {
+      "w": "tapi",
+      "s": 50.131,
+      "e": 50.372
+    },
+    {
+      "w": "kemampuan",
+      "s": 50.432,
+      "e": 50.972
+    },
+    {
+      "w": "yang",
+      "s": 51.032,
+      "e": 51.152
+    },
+    {
+      "w": "benar-benar",
+      "s": 51.213,
+      "e": 51.713
+    },
+    {
+      "w": "terpakai.",
+      "s": 51.793,
+      "e": 52.394
+    },
+    {
+      "w": "Klik",
+      "s": 52.774,
+      "e": 52.974
+    },
+    {
+      "w": "link",
+      "s": 53.055,
+      "e": 53.175
+    },
+    {
+      "w": "di",
+      "s": 53.215,
+      "e": 53.315
+    },
+    {
+      "w": "bio",
+      "s": 53.375,
+      "e": 53.755
+    },
+    {
+      "w": "dan",
+      "s": 53.916,
+      "e": 54.056
+    },
+    {
+      "w": "siapkan",
+      "s": 54.136,
+      "e": 54.456
+    },
+    {
+      "w": "bahasa",
+      "s": 54.516,
+      "e": 54.776
+    },
+    {
+      "w": "Jerman",
+      "s": 54.837,
+      "e": 55.097
+    },
+    {
+      "w": "anak",
+      "s": 55.157,
+      "e": 55.437
+    },
+    {
+      "w": "lebih",
+      "s": 55.457,
+      "e": 55.697
+    },
+    {
+      "w": "matang",
+      "s": 55.758,
+      "e": 56.078
+    },
+    {
+      "w": "sebelum",
+      "s": 56.298,
+      "e": 56.538
+    },
+    {
+      "w": "berangkat",
+      "s": 56.578,
+      "e": 56.959
+    },
+    {
+      "w": "studi",
+      "s": 56.979,
+      "e": 57.299
+    },
+    {
+      "w": "ke",
+      "s": 57.339,
+      "e": 57.399
+    },
+    {
+      "w": "Jerman.",
+      "s": 57.459,
+      "e": 57.88
+    }
+  ],
+  "caption": {
+    "y": 930,
+    "kata_maks": 3,
+    "karakter_maks": 24,
+    "jeda_pecah": 0.35
+  },
+  "editorial": [
+    {
+      "id": "01",
+      "mulai": 0,
+      "selesai": 9.705,
+      "modul": "otca-sertifikat-kampus",
+      "mode": "split",
+      "judul": [],
+      "pusat_asal": [
+        540,
+        620
+      ],
+      "pusat_tujuan": [
+        540,
+        1000
+      ],
+      "skala": 1,
+      "caption_y": 1410,
+      "label": "",
+      "logo_saja": false
+    },
+    {
+      "id": "02",
+      "mulai": 9.705,
+      "selesai": 14.3925,
+      "modul": "otca-tangga",
+      "mode": "full",
+      "judul": [
+        "SERTIFIKAT",
+        "MENUNJUKKAN LEVEL"
+      ],
+      "pusat_asal": [
+        540,
+        690
+      ],
+      "pusat_tujuan": [
+        540,
+        1010
+      ],
+      "skala": 1.2,
+      "caption_y": 1410,
+      "label": "Ilustrasi capaian bahasa",
+      "logo_saja": false
+    },
+    {
+      "id": "03",
+      "mulai": 14.3925,
+      "selesai": 23.1425,
+      "modul": "otca-timbangan",
+      "mode": "split",
+      "judul": [],
+      "pusat_asal": [
+        540,
+        620
+      ],
+      "pusat_tujuan": [
+        540,
+        1000
+      ],
+      "skala": 1,
+      "caption_y": 1410,
+      "label": "",
+      "logo_saja": false
+    },
+    {
+      "id": "04",
+      "mulai": 23.1425,
+      "selesai": 34.08,
+      "modul": "otca-ruang-kuliah",
+      "mode": "full",
+      "judul": [
+        "BAHASA DI",
+        "RUANG KULIAH"
+      ],
+      "pusat_asal": [
+        540,
+        625
+      ],
+      "pusat_tujuan": [
+        540,
+        1000
+      ],
+      "skala": 1.18,
+      "caption_y": 1410,
+      "label": "",
+      "logo_saja": false
+    },
+    {
+      "id": "05",
+      "mulai": 34.08,
+      "selesai": 37.205,
+      "modul": "otca-coret",
+      "mode": "split",
+      "judul": [],
+      "pusat_asal": [
+        540,
+        620
+      ],
+      "pusat_tujuan": [
+        540,
+        1000
+      ],
+      "skala": 1,
+      "caption_y": 1410,
+      "label": "",
+      "logo_saja": false
+    },
+    {
+      "id": "06",
+      "mulai": 37.205,
+      "selesai": 45.955,
+      "modul": "otca-radar",
+      "mode": "full",
+      "judul": [
+        "EMPAT KETERAMPILAN",
+        "PERLU SEIMBANG"
+      ],
+      "pusat_asal": [
+        540,
+        580
+      ],
+      "pusat_tujuan": [
+        540,
+        980
+      ],
+      "skala": 1.48,
+      "caption_y": 1410,
+      "label": "Ilustrasi keseimbangan, bukan hasil tes",
+      "logo_saja": false
+    },
+    {
+      "id": "07",
+      "mulai": 45.955,
+      "selesai": 52.5175,
+      "modul": "otca-bukti-gear",
+      "mode": "full",
+      "judul": [
+        "BUKAN HANYA BUKTI.",
+        "KEMAMPUAN TERPAKAI."
+      ],
+      "pusat_asal": [
+        540,
+        620
+      ],
+      "pusat_tujuan": [
+        540,
+        990
+      ],
+      "skala": 1.08,
+      "caption_y": 1410,
+      "label": "",
+      "logo_saja": false
+    },
+    {
+      "id": "08",
+      "mulai": 52.5175,
+      "selesai": 57.9,
+      "modul": "otca-pesawat-peta",
+      "mode": "split",
+      "judul": [],
+      "pusat_asal": [
+        540,
+        620
+      ],
+      "pusat_tujuan": [
+        540,
+        1000
+      ],
+      "skala": 1,
+      "caption_y": 1410,
+      "label": "",
+      "logo_saja": false
+    },
+    {
+      "id": "09",
+      "mulai": 57.9,
+      "selesai": 58.666667,
+      "modul": "otca-kartu",
+      "mode": "full",
+      "judul": [],
+      "pusat_asal": [
+        540,
+        620
+      ],
+      "pusat_tujuan": [
+        540,
+        1000
+      ],
+      "skala": 1,
+      "caption_y": 1410,
+      "label": "",
+      "logo_saja": true
+    }
+  ]
+}

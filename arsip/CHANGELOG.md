@@ -329,3 +329,6 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
   elemen (clip-path hanya sisi atas), serasi dengan kata yang masuk dari balik masker. Sebelumnya elemen di posisi atas
   keluar 10–11 px dari zona aman saat animasi keluar (peringatan K00.1, uji "Life Isn't a Race"). Posisi teks tidak
   digeser: percobaan memberi ruang 26 px di atas frasa justru memindahkan kata aksen ke latar lain (K01.4 2,5 < 3).
+
+## 2026-11-03
+- EditorialReview@0.1: komposisi campuran split/full, dipicu OTCA sertifikat premium revisi 2. Pipeline editorial memakai props yang disetujui, audio split/FFmpeg, serta audit sampel dari video final. Dua tes mencegah komposisi campuran jatuh kembali ke renderer split lama.

@@ -1,0 +1,96 @@
+{
+  "status": "LULUS",
+  "hasil": [
+    {
+      "id": "K07.2",
+      "aturan": "H.264, resolusi format, pix_fmt, tag bt709, AAC",
+      "status": "LULUS",
+      "detail": "h264 1080x1920 yuv420p ('bt709', 'bt709', 'bt709') audio aac"
+    },
+    {
+      "id": "FPS",
+      "aturan": "fps = format.fps",
+      "status": "LULUS",
+      "detail": "30.00"
+    },
+    {
+      "id": "K06.1",
+      "aturan": "loudness terintegrasi = audio.lufs ± toleransi",
+      "status": "LULUS",
+      "detail": "-14.7 LUFS"
+    },
+    {
+      "id": "K06.2",
+      "aturan": "true peak ≤ audio.true-peak",
+      "status": "LULUS",
+      "detail": "-2.8 dBTP"
+    },
+    {
+      "id": "DUR",
+      "aturan": "durasi = rekaman (±0,1 s)",
+      "status": "LULUS",
+      "detail": "58.67 s vs rekaman 58.67 s"
+    },
+    {
+      "id": "SINK",
+      "aturan": "audio & video sama panjang (±0,1 s)",
+      "status": "LULUS",
+      "detail": "audio 58.67 s"
+    },
+    {
+      "id": "K01.cps",
+      "aturan": "caption ≤ qa.karakter-per-detik-maks",
+      "status": "LULUS",
+      "detail": "terpadat 22.0 cps (“yang benar-benar”), batas 23"
+    },
+    {
+      "id": "HOOK",
+      "aturan": "frame 0 panggung sudah berisi visual (roadmap #7)",
+      "status": "LULUS",
+      "detail": "stddev luminans 15.0"
+    },
+    {
+      "id": "HOOK.1s",
+      "aturan": "gerak panggung 0→0,5 s cukup kuat (roadmap #7)",
+      "status": "LULUS",
+      "detail": "beda rata-rata 34.0"
+    },
+    {
+      "id": "STRUKTUR",
+      "aturan": "split.json valid (modul, transisi, anchor, urutan adegan)",
+      "status": "LULUS",
+      "detail": "proyek/2026-11_otca-sertifikat-premium: split 9 adegan, match cut 8/8 potongan, hook aktif; proyek/2026-11_otca-sertifikat-premium: caption vs wajah/sosok — 47 halaman, 14 digeser naik (maks 26 px)"
+    },
+    {
+      "id": "MATCH",
+      "aturan": "≥1 match cut bentuk antar-adegan (roadmap #5)",
+      "status": "LULUS",
+      "detail": "8/8 potongan match/iris"
+    },
+    {
+      "id": "KETUKAN",
+      "aturan": "potongan di ketukan + denyut grafis",
+      "status": "LULUS",
+      "detail": "Grid visual 96 BPM; loop musik lembut disesuaikan ke 96 BPM. Potongan mengikuti ucapan storyboard; jumlah snap lama bukan pengukuran hasil final."
+    },
+    {
+      "id": "K08.6",
+      "aturan": "musik di-duck di bawah ucapan",
+      "status": "LULUS",
+      "detail": "transkrip -9 dB, 1 segmen bicara"
+    },
+    {
+      "id": "LAYOUT-EDITORIAL",
+      "aturan": "mode campuran pada MP4 final, tanpa frame kosong di cut",
+      "status": "LULUS",
+      "detail": "9 sampel adegan dan 24 frame transisi diperiksa"
+    }
+  ],
+  "manual": [
+    "K00 zona aman: grafis panggung tidak masuk area tombol kanan (120 px) & atas (250 px) di HP.",
+    "K07.3 tonton di HP resolusi penuh: keterbacaan caption, sinkron bibir.",
+    "K08.5–6 cek SFX & ducking musik dengan headphone (musik naik di jeda, tidak memompa di tengah kalimat).",
+    "Denyut ketukan terasa halus (bukan kedip); iris/match cut terbaca sebagai satu gerak.",
+    "G01.2 grafis tidak menutupi wajah talent; sambungan atas/bawah tidak terlihat terpotong."
+  ]
+}

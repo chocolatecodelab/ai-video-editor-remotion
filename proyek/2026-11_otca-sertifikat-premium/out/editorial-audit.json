@@ -1,0 +1,233 @@
+{
+  "status": "LULUS",
+  "adegan": [
+    {
+      "id": "01",
+      "layout": "split",
+      "t": 7.5,
+      "bottom_std": 42.95,
+      "frame_std": 53.44,
+      "mode_correct": true,
+      "not_blank": true
+    },
+    {
+      "id": "02",
+      "layout": "full",
+      "t": 13.8,
+      "bottom_std": 0.46,
+      "frame_std": 46.57,
+      "mode_correct": true,
+      "not_blank": true
+    },
+    {
+      "id": "03",
+      "layout": "split",
+      "t": 22.5,
+      "bottom_std": 42.52,
+      "frame_std": 53.38,
+      "mode_correct": true,
+      "not_blank": true
+    },
+    {
+      "id": "04",
+      "layout": "full",
+      "t": 32.9,
+      "bottom_std": 0.45,
+      "frame_std": 37.28,
+      "mode_correct": true,
+      "not_blank": true
+    },
+    {
+      "id": "05",
+      "layout": "split",
+      "t": 36.6,
+      "bottom_std": 42.42,
+      "frame_std": 52.4,
+      "mode_correct": true,
+      "not_blank": true
+    },
+    {
+      "id": "06",
+      "layout": "full",
+      "t": 44.8,
+      "bottom_std": 0.45,
+      "frame_std": 45.97,
+      "mode_correct": true,
+      "not_blank": true
+    },
+    {
+      "id": "07",
+      "layout": "full",
+      "t": 52,
+      "bottom_std": 0.45,
+      "frame_std": 39.49,
+      "mode_correct": true,
+      "not_blank": true
+    },
+    {
+      "id": "08",
+      "layout": "split",
+      "t": 55.5,
+      "bottom_std": 40.55,
+      "frame_std": 50.5,
+      "mode_correct": true,
+      "not_blank": true
+    },
+    {
+      "id": "09",
+      "layout": "full",
+      "t": 58.6,
+      "bottom_std": 0.43,
+      "frame_std": 21.88,
+      "mode_correct": true,
+      "not_blank": true
+    }
+  ],
+  "transisi": [
+    {
+      "cut": "02",
+      "frame": 290,
+      "std": 53.13,
+      "not_blank": true
+    },
+    {
+      "cut": "02",
+      "frame": 291,
+      "std": 53.18,
+      "not_blank": true
+    },
+    {
+      "cut": "02",
+      "frame": 292,
+      "std": 18.03,
+      "not_blank": true
+    },
+    {
+      "cut": "03",
+      "frame": 431,
+      "std": 47.08,
+      "not_blank": true
+    },
+    {
+      "cut": "03",
+      "frame": 432,
+      "std": 54.67,
+      "not_blank": true
+    },
+    {
+      "cut": "03",
+      "frame": 433,
+      "std": 54.42,
+      "not_blank": true
+    },
+    {
+      "cut": "04",
+      "frame": 693,
+      "std": 53.15,
+      "not_blank": true
+    },
+    {
+      "cut": "04",
+      "frame": 694,
+      "std": 53.32,
+      "not_blank": true
+    },
+    {
+      "cut": "04",
+      "frame": 695,
+      "std": 13.89,
+      "not_blank": true
+    },
+    {
+      "cut": "05",
+      "frame": 1021,
+      "std": 31.9,
+      "not_blank": true
+    },
+    {
+      "cut": "05",
+      "frame": 1022,
+      "std": 31.94,
+      "not_blank": true
+    },
+    {
+      "cut": "05",
+      "frame": 1023,
+      "std": 52.73,
+      "not_blank": true
+    },
+    {
+      "cut": "06",
+      "frame": 1115,
+      "std": 51.89,
+      "not_blank": true
+    },
+    {
+      "cut": "06",
+      "frame": 1116,
+      "std": 52.26,
+      "not_blank": true
+    },
+    {
+      "cut": "06",
+      "frame": 1117,
+      "std": 21.03,
+      "not_blank": true
+    },
+    {
+      "cut": "07",
+      "frame": 1378,
+      "std": 42.59,
+      "not_blank": true
+    },
+    {
+      "cut": "07",
+      "frame": 1379,
+      "std": 15.6,
+      "not_blank": true
+    },
+    {
+      "cut": "07",
+      "frame": 1380,
+      "std": 23.24,
+      "not_blank": true
+    },
+    {
+      "cut": "08",
+      "frame": 1575,
+      "std": 38.61,
+      "not_blank": true
+    },
+    {
+      "cut": "08",
+      "frame": 1576,
+      "std": 49.83,
+      "not_blank": true
+    },
+    {
+      "cut": "08",
+      "frame": 1577,
+      "std": 49.89,
+      "not_blank": true
+    },
+    {
+      "cut": "09",
+      "frame": 1736,
+      "std": 48.4,
+      "not_blank": true
+    },
+    {
+      "cut": "09",
+      "frame": 1737,
+      "std": 8.25,
+      "not_blank": true
+    },
+    {
+      "cut": "09",
+      "frame": 1738,
+      "std": 13.38,
+      "not_blank": true
+    }
+  ],
+  "cakupan": "Sampel scene dan tiga frame di setiap cut; bukan deteksi wajah di seluruh frame."
+}

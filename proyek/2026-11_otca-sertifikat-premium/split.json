@@ -1,0 +1,281 @@
+{
+  "_catatan": "Produksi revisi 2: props storyboard yang disetujui; jalankan pipeline/scripts/editorial.py, bukan renderer split lama.",
+  "tinggi_panggung": 930,
+  "caption_y": 930,
+  "footage": {
+    "geser_y": 560,
+    "titik_zoom_y": 950
+  },
+  "logo": {
+    "file": "aset/grafis/logo-otca.png",
+    "lebar_atas": 235,
+    "lebar_besar": 780,
+    "y_atas": 302,
+    "y_besar": 556,
+    "hook_s": 1.0,
+    "awal_besar": false
+  },
+  "adegan": [
+    {
+      "modul": "otca-sertifikat-kampus",
+      "mulai": 0,
+      "selesai": 9.705,
+      "t": {
+        "sertifikat": 0.08,
+        "centang": 5.298,
+        "belum": 5.958,
+        "siap": 8.28
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-tangga",
+      "mulai": 9.705,
+      "selesai": 14.3925,
+      "t": {
+        "naik": 10.881,
+        "puncak": 13.683
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-timbangan",
+      "mulai": 14.3925,
+      "selesai": 23.1425,
+      "t": {
+        "timbangan": 15.404,
+        "sertifikat": 15.725,
+        "akademik": 21.008,
+        "harian": 22.109
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-ruang-kuliah",
+      "mulai": 23.1425,
+      "selesai": 34.08,
+      "t": {
+        "telinga": 25.191,
+        "dosen": 26.231,
+        "buku": 27.853,
+        "diskusi": 28.993,
+        "tangan": 30.415,
+        "mic": 32.796
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-coret",
+      "mulai": 34.08,
+      "selesai": 37.205,
+      "t": {
+        "coret": 34.998
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-radar",
+      "mulai": 37.205,
+      "selesai": 45.955,
+      "t": {
+        "dengar": 39.442,
+        "bicara": 40.402,
+        "tulis": 41.463,
+        "baca": 42.304,
+        "seimbang": 43.485,
+        "guna": 45.306
+      },
+      "masuk": "match",
+      "keluar": "match"
+    },
+    {
+      "modul": "otca-bukti-gear",
+      "mulai": 45.955,
+      "selesai": 52.5175,
+      "t": {
+        "bukti": 48.79,
+        "tapi": 50.131,
+        "terpakai": 51.793
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-pesawat-peta",
+      "mulai": 52.5175,
+      "selesai": 57.9,
+      "t": {
+        "terbang": 53.074
+      },
+      "masuk": "match",
+      "keluar": "match",
+      "titik": [
+        534,
+        620
+      ]
+    },
+    {
+      "modul": "otca-kartu",
+      "mulai": 57.9,
+      "selesai": 58.666667,
+      "t": {},
+      "masuk": "match",
+      "penuh": true,
+      "keluar": "match"
+    }
+  ],
+  "zoom": [
+    [
+      0,
+      1.0
+    ],
+    [
+      {
+        "kata": "anak",
+        "offset": -0.1
+      },
+      1.07
+    ],
+    [
+      {
+        "kata": "karena",
+        "offset": -0.5
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "tapi",
+        "offset": -0.2
+      },
+      1.07
+    ],
+    [
+      {
+        "kata": "perkuliahan",
+        "offset": -0.4
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "jadi",
+        "offset": -0.4
+      },
+      1.08
+    ],
+    [
+      {
+        "kata": "perhatikan",
+        "offset": -0.3
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "karena",
+        "ke": 2,
+        "offset": -0.5
+      },
+      1.07
+    ],
+    [
+      {
+        "kata": "klik",
+        "offset": -0.3
+      },
+      1.0
+    ],
+    [
+      {
+        "kata": "sebelum",
+        "offset": -0.1
+      },
+      1.06
+    ]
+  ],
+  "musik": {
+    "file": "aset/audio/lembut-96bpm.wav",
+    "db": -23,
+    "fade_masuk": 0.6,
+    "fade_keluar": 2.0,
+    "ducking": {
+      "mode": "transkrip",
+      "db": -9
+    },
+    "catatan": "Loop lembut 78 BPM disesuaikan menjadi 96 BPM, pitch dipertahankan; mengikuti grid visual storyboard."
+  },
+  "sfx": [
+    {
+      "jenis": "kilau-1",
+      "t": 4.357,
+      "db": -25
+    },
+    {
+      "jenis": "whoosh-pendek-1",
+      "t": 14.3925,
+      "db": -25
+    },
+    {
+      "jenis": "ketuk-1",
+      "t": 25.191,
+      "db": -25
+    },
+    {
+      "jenis": "ketuk-2",
+      "t": 39.442,
+      "db": -25
+    },
+    {
+      "jenis": "kilau-2",
+      "t": 51.793,
+      "db": -25
+    },
+    {
+      "jenis": "whoosh-panjang-1",
+      "t": 52.774,
+      "db": -25
+    }
+  ],
+  "hook": {
+    "aktif": true,
+    "kuat": 0.65,
+    "durasi": 0.8,
+    "sfx": {
+      "jenis": "hit-1",
+      "db": -24
+    }
+  },
+  "editorial_props": "production-props.json",
+  "editorial_entry": "otca-storyboard-entry.tsx",
+  "editorial_composition": "OtcaEditorialReview"
+}
