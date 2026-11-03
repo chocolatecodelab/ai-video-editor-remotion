@@ -1,0 +1,16 @@
+---
+description: Subtitle premium untuk adegan motion grafis layar penuh
+alwaysApply: true
+---
+
+Untuk pekerjaan video dengan motion grafis full frame, baca dan terapkan
+`konteks/KONTEKS_11_caption-premium-full-frame_v0.1.md` bersama K00, K01, dan K05.
+
+- Subtitle harus menjadi bagian dari desain premium, bukan teks kecil polos
+  yang ditambahkan otomatis di bawah grafis.
+- Boleh menyamai mutu kapsul/panel subtitle split, atau memakai tipografi
+  editorial lain yang sesuai brand dan tetap jelas terbaca.
+- Tunjukkan gaya full frame serta split pada storyboard sebelum produksi.
+- Sinkronkan dengan suara dan hindari tabrakan dengan diagram maupun sosok.
+- Aturan ini untuk pekerjaan berikutnya; jangan render ulang video lama hanya
+  untuk menerapkan preferensi baru tanpa permintaan pengguna.

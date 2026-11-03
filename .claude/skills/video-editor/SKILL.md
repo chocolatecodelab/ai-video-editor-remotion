@@ -1,7 +1,7 @@
 ---
 name: video-editor
 description: Gunakan saat pengguna meminta membuat atau mengedit video pendek vertikal (Reels/TikTok/Shorts, talking-head) di video-system — dari brief, naskah, beat-sheet, sampai render, QA, dan arsip. Juga saat pengguna menyebut gaya (glass-tech, bold-kinetic), template (explainer, hook-problem-solution), konteks (K00–K07), atau efek motion (orbit, checklist, glass-type, E01–E30), atau meminta analisis video referensi.
-versi: 0.3
+versi: 0.4
 ---
 
 # Skill: video-editor
@@ -51,6 +51,16 @@ Bila pengguna bertanya "file apa saja yang sudah kamu baca", jawab dengan daftar
 | Arsip | setelah QA LULUS + checklist manual dicentang | `video.py arsip <proyek>` |
 
 Referensi field beat-sheet & manifest: `pipeline/scripts/README.md`.
+
+## Subtitle pada komposisi campuran / full frame
+
+Jika ada motion grafis layar penuh, wajib baca dan terapkan
+`konteks/KONTEKS_11_caption-premium-full-frame_v0.1.md`. Subtitle harus dirancang
+premium: boleh selaras dengan kapsul/panel split atau memakai tipografi editorial
+lain yang sesuai brand. Jangan default ke teks kecil polos di bawah animasi.
+Tunjukkan contoh full frame dan split beserta frasa terpanjang pada storyboard;
+cek timing, keterbacaan, kontras, dan tabrakan grafis saat QA. Preferensi ini
+berlaku pada pekerjaan berikutnya, bukan perintah render ulang video lama.
 
 ## Kewajiban QA
 - Jangan menyerahkan video sebelum `out/qa-report.md` berstatus **LULUS**.

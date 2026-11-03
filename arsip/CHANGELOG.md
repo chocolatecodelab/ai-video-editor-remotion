@@ -332,3 +332,6 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
 
 ## 2026-11-03
 - EditorialReview@0.1: komposisi campuran split/full, dipicu OTCA sertifikat premium revisi 2. Pipeline editorial memakai props yang disetujui, audio split/FFmpeg, serta audit sampel dari video final. Dua tes mencegah komposisi campuran jatuh kembali ke renderer split lama.
+
+### 2026-11-03 — subtitle full frame
+- K11 caption-premium-full-frame@0.1 dan video-editor@0.4: simpan preferensi pengguna agar subtitle adegan full frame premium, selaras split atau bergaya editorial; berlaku ke depan tanpa render ulang. Sinkronkan ATURAN_KERJA, CLAUDE, AGENTS, aturan agen, serta salinan skill.

@@ -107,3 +107,11 @@ Berlaku untuk video **baru** saja. File OTCA yang sudah ada tetap di folder file
 
 - **Mask talent harus bersih:** tepi hijab/rambut/bahu tanpa tepi kasar, halo, atau sisa latar. Cek still close-up tepi mask sebelum mengirim storyboard.
 - **Subtitle/caption tidak pernah menutupi wajah atau sosok manusia** (talent maupun figur di grafis). Cek posisi caption vs kotak wajah/orang per adegan; geser caption bila bertabrakan.
+
+## 11. Subtitle premium untuk motion grafis full frame (2026-11-03)
+
+- Pada adegan animasi layar penuh, subtitle wajib didesain premium dan profesional; jangan otomatis memakai teks kecil polos di bawah grafis.
+- Boleh mengikuti mutu gaya subtitle split (grafis tengah-ke-atas + talent bawah), atau memakai tipografi editorial lain yang sesuai brand. Kapsul bukan satu-satunya pilihan.
+- Desain ukuran, hierarki, aksen, pemenggalan, posisi, dan reveal mengikuti ucapan. Jaga area grafis dan sosok tetap bersih; K00/K01/K05 tetap berlaku.
+- Tampilkan gaya subtitle full frame dan split pada storyboard, termasuk contoh frasa panjang, sebelum produksi.
+- Panduan rinci: `konteks/KONTEKS_11_caption-premium-full-frame_v0.1.md`. Terapkan pada video berikutnya; tidak perlu render ulang video yang sudah selesai hanya karena aturan ini.
