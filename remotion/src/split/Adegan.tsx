@@ -11,6 +11,7 @@ import {
   OtcaTimbangan,
 } from "./AdeganOtca";
 import { CiaoBos, CiaoBudaya, CiaoGlobal, CiaoHati, CiaoKartu, CiaoMandarin, CiaoNilaiTambah, CiaoPengantar, CiaoRiset, CiaoTanya, CiaoVs, CiaoWlb } from "./AdeganCiao";
+import { BaraBayang, BaraBerjuang, BaraCoba, BaraEnso, BaraPintu, BaraPodium, BaraSabuk, BaraSemalam, BaraSiklus, BaraTitikAwal } from "./AdeganBara";
 import { KoeyGuru, KoeyInterview, KoeyKaiwa, KoeyKartu, KoeyLevel, KoeyNilaiPlus, KoeyShare, KoeySimpan, KoeyVisa } from "./AdeganKoey";
 import {
   IjJalan, IjCabang, IjTigaJalur, IjBeda, IjAusbildung, IjTangga, IjFsj, IjKontribusi, IjProfesional, IjKoper, IjBanding, IjTren, IjKomentar, IjKartu,
@@ -562,6 +563,16 @@ export const PUSTAKA: Record<string, React.FC<PropsAdegan>> = {
   "otca-bukti-gear": OtcaBuktiGear,
   "otca-pesawat-peta": OtcaPesawatPeta,
   "otca-kartu": OtcaKartu,
+  "bara-coba": BaraCoba,
+  "bara-titik-awal": BaraTitikAwal,
+  "bara-semalam": BaraSemalam,
+  "bara-berjuang": BaraBerjuang,
+  "bara-sabuk": BaraSabuk,
+  "bara-podium": BaraPodium,
+  "bara-siklus": BaraSiklus,
+  "bara-bayang": BaraBayang,
+  "bara-pintu": BaraPintu,
+  "bara-enso": BaraEnso,
   "koey-visa": KoeyVisa,
   "koey-nilai-plus": KoeyNilaiPlus,
   "koey-interview": KoeyInterview,
