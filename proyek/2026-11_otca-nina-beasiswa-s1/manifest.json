@@ -1,0 +1,153 @@
+{
+  "skill": "video-editor@0.4",
+  "gaya": "glass-tech@0.6",
+  "template": "explainer@0.2",
+  "konteks": [
+    "zona-aman@0.2",
+    "caption@0.2",
+    "depth-typography@0.2",
+    "ingest@0.1",
+    "gerak@0.2",
+    "audio@0.1",
+    "ekspor@0.1",
+    "sound-design@0.1",
+    "koreografi@0.2",
+    "caption-premium-full-frame@0.1",
+    "kurasi-motion-premium@0.1"
+  ],
+  "platform": [
+    "reels"
+  ],
+  "token_override": {
+    "_catatan": "Brand asli: D:/KERJAAN/OTCA/BRAND GUIDELINES/Brand Guidelines OTCA New.pdf; proyek ini saja.",
+    "warna": {
+      "latar": "#000000",
+      "teks-utama": "#FFFFFF",
+      "teks-sekunder": "#FFFFFF",
+      "aksen": "#CB9D31",
+      "aksen-2": "#FDF1A4",
+      "peringatan": "#B3822C",
+      "panel": "#000000",
+      "panel-opasitas": 0.62,
+      "garis-panel": "#CB9D31",
+      "garis-opasitas": 0.6,
+      "stroke": "#000000",
+      "bayangan": "#000000"
+    },
+    "font": {
+      "judul": {
+        "file": "Montserrat-ExtraBold.ttf",
+        "family": "Montserrat",
+        "weight": 800,
+        "wght": 0
+      },
+      "subjudul": {
+        "file": "Montserrat-Bold.ttf",
+        "family": "Montserrat",
+        "weight": 700,
+        "wght": 0
+      },
+      "isi": {
+        "file": "Montserrat-SemiBold.ttf",
+        "family": "Montserrat",
+        "weight": 600,
+        "wght": 0
+      },
+      "caption": {
+        "file": "Montserrat-Bold.ttf",
+        "family": "Montserrat",
+        "weight": 700,
+        "wght": 0
+      },
+      "depth": {
+        "file": "Montserrat-ExtraBold.ttf",
+        "family": "Montserrat",
+        "weight": 800,
+        "wght": 0
+      }
+    },
+    "motif": {
+      "aksen": "kotak",
+      "tekstur": null
+    },
+    "zona-aman": {
+      "kiri": 108
+    },
+    "caption": {
+      "kata-maks": 3,
+      "karakter-maks-baris": 24
+    },
+    "qa": {
+      "karakter-per-detik-maks": 23
+    },
+    "audio": {
+      "true-peak": -2.0
+    }
+  },
+  "proyek": "2026-11_otca-nina-beasiswa-s1",
+  "judul": "Beasiswa S1 di Jerman — Mbak Nina",
+  "status": "selesai",
+  "layout": "split",
+  "qa": "LULUS",
+  "terpakai": null,
+  "riwayat": [],
+  "aset": {
+    "rekaman": "aset/rekaman/take1.mov",
+    "potong": [],
+    "crop": {
+      "x": 0.5
+    },
+    "musik": null
+  },
+  "transkrip": {
+    "backend": "faster-whisper",
+    "model": "large-v3",
+    "bahasa": "id"
+  },
+  "storyboard": {
+    "revisi": 3,
+    "status": "disetujui-dengan-arahan",
+    "file": "out/storyboard-r2.html",
+    "data": "storyboard-r2.json",
+    "props": "production-props.json",
+    "komposisi": "OtcaNinaScholarship",
+    "arahan": "R2 sebagai dasar, animasi dilengkapi dan latar seluruhnya hitam termasuk belakang talent. Pengguna: Sekarang jalankan rendernya."
+  },
+  "catatan_produksi": "Selesai sesuai permintaan: animasi objek + subtitle premium, latar hitam penuh, suara dan CTA sumber. QA otomatis LULUS; tinjauan sampel final dilakukan, cek HP/headphone oleh pengguna belum.",
+  "roto": {
+    "backend": "rembg",
+    "model": "u2net_human_seg",
+    "halus": 0.12,
+    "langkah": 2
+  },
+  "persetujuan": {
+    "scholarship_props_sha": "ce5bce172a9f723b1507296c1e55cc8abfd446eba0e6157c66f29223d3f8d8c2",
+    "source_sha": {
+      "remotion/src/storyboards/ScholarshipReel.tsx": "53c9b102bb1279db73f640c0b4bbe930782f0b3b0e0191e4a61f56fb09fa3971",
+      "remotion/src/storyboards/ScholarshipArt.tsx": "51f2c7223cab4b2074da0df04554e8f684eeff2b2f4bf1779e0e6b61a58d058a",
+      "remotion/nina-scholarship-entry.tsx": "f6fb98f0aaa89eea50688f73bb5c62192a8accb8798898220958b2644342e3b6",
+      "pipeline/scripts/scholarship.py": "6d2d09c2bff85842e57d714d2edd910f11b67c15666f21b1c467a569e5806ad0",
+      "pipeline/scripts/scholarship_render.cjs": "85ba959e58a3fe5c90383a6d2036b79f570b3e128b7713b2d7f347baf5859439"
+    },
+    "waktu": "2026-11-06T18:08:06.209619+07:00",
+    "revisi": 3,
+    "catatan": "Pengguna meminta: animasinya ada, full hitam background, Sekarang jalankan rendernya. Ditegaskan kembali: Lanjut. R2 objek sebagai dasar; produksi R3 mengimplementasikan arahan ini.",
+    "catatan_teknis": "Label dibesarkan hingga minimal 40px efektif; pemeriksaan font dan layout diperketat. Parameter narasi/timing/layout yang disetujui tetap. Jarak label seleksi diperbaiki setelah tinjauan frame final; pemeriksaan tabrakan teks diperketat."
+  },
+  "hasil": {
+    "file": "out/2026-11_otca-nina-beasiswa-s1.mp4",
+    "durasi": 51.533,
+    "resolusi": [
+      1080,
+      1920
+    ],
+    "fps": 30,
+    "lufs": -14.3,
+    "true_peak": -3.0,
+    "sha256": "b74dbefac9689a3f517909923171d6f82cb6231c3a6954c99ddb667e19ba1f90",
+    "bytes": 11083611,
+    "qa": "LULUS",
+    "background": "hitam dengan talent RGBA",
+    "komposisi": "ScholarshipReel@0.1"
+  }
+}

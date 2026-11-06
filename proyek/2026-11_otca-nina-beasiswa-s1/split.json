@@ -1,0 +1,148 @@
+{
+  "renderer": "scholarship",
+  "props": "production-props.json",
+  "entry": "nina-scholarship-entry.tsx",
+  "composition": "OtcaNinaScholarship",
+  "_catatan": "Adegan di sini hanya jendela matting untuk utilitas split; ilustrasi aktual ditentukan oleh production-props.scenes.",
+  "adegan": [
+    {
+      "modul": "otca-kartu",
+      "mulai": 0,
+      "selesai": 4.1,
+      "depan": true
+    },
+    {
+      "modul": "otca-kartu",
+      "mulai": 4.1,
+      "selesai": 8.1,
+      "depan": true
+    },
+    {
+      "modul": "otca-kartu",
+      "mulai": 8.1,
+      "selesai": 16.5,
+      "depan": false
+    },
+    {
+      "modul": "otca-kartu",
+      "mulai": 16.5,
+      "selesai": 22.9,
+      "depan": true
+    },
+    {
+      "modul": "otca-kartu",
+      "mulai": 22.9,
+      "selesai": 27.93,
+      "depan": false
+    },
+    {
+      "modul": "otca-kartu",
+      "mulai": 27.93,
+      "selesai": 30.95,
+      "depan": true
+    },
+    {
+      "modul": "otca-kartu",
+      "mulai": 30.95,
+      "selesai": 39.7,
+      "depan": false
+    },
+    {
+      "modul": "otca-kartu",
+      "mulai": 39.7,
+      "selesai": 45.7,
+      "depan": true
+    },
+    {
+      "modul": "otca-kartu",
+      "mulai": 45.7,
+      "selesai": 50.3,
+      "depan": true
+    },
+    {
+      "modul": "otca-kartu",
+      "mulai": 50.3,
+      "selesai": 51.547,
+      "depan": false
+    }
+  ],
+  "depan": {
+    "feather": 1.3,
+    "kikis": 1.2
+  },
+  "hook": {
+    "aktif": false
+  },
+  "musik": {
+    "file": "bawaan:lembut",
+    "db": -15,
+    "fade_masuk": 0.8,
+    "fade_keluar": 1.5,
+    "ducking": {
+      "mode": "transkrip",
+      "db": -7
+    }
+  },
+  "sfx": [
+    {
+      "t": 0.1,
+      "jenis": "hit-1",
+      "db": -30
+    },
+    {
+      "t": 4.13,
+      "jenis": "whoosh-pendek-1",
+      "db": -28
+    },
+    {
+      "t": 11.43,
+      "jenis": "ketuk-1",
+      "db": -30
+    },
+    {
+      "t": 14.83,
+      "jenis": "ketuk-2",
+      "db": -30
+    },
+    {
+      "t": 15.79,
+      "jenis": "ketuk-3",
+      "db": -30
+    },
+    {
+      "t": 16.69,
+      "jenis": "whoosh-pendek-2",
+      "db": -29
+    },
+    {
+      "t": 24.33,
+      "jenis": "whoosh-pendek-1",
+      "db": -29
+    },
+    {
+      "t": 33.83,
+      "jenis": "ketuk-1",
+      "db": -30
+    },
+    {
+      "t": 34.65,
+      "jenis": "ketuk-2",
+      "db": -30
+    },
+    {
+      "t": 36.51,
+      "jenis": "ketuk-3",
+      "db": -30
+    },
+    {
+      "t": 39.79,
+      "jenis": "whoosh-pendek-2",
+      "db": -29
+    },
+    {
+      "t": 45.79,
+      "jenis": "kilau-1",
+      "db": -30
+    }
+  ]
+}

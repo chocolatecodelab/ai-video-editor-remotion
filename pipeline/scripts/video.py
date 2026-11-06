@@ -772,6 +772,13 @@ def semua(p: Proyek, paksa: bool = False, tanpa_setuju: bool = False) -> int:
 def split_satu_pintu(p: Proyek, cmd: str) -> int:
     """Proyek layout split (split.json): render/qa lewat split.py agar satu pintu video.py tetap berlaku."""
     import split
+    if (baca_json(p.dir / "split.json") or {}).get("renderer") == "scholarship":
+        import scholarship
+        if cmd in ("render", "semua"):
+            scholarship.render(p)
+        if cmd in ("qa", "semua"):
+            return 0 if scholarship.qa(p) else 1
+        return 0
     if (baca_json(p.dir / "split.json") or {}).get("editorial_props"):
         import editorial
         if cmd in ("render", "semua"):

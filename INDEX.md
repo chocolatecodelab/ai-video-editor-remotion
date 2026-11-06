@@ -235,3 +235,6 @@ Semua efek E01–E30 native. Generator slot memilih efek per fungsi sesuai gaya 
 
 ## Panduan subtitle full frame
 - K11 — caption-premium-full-frame@0.1: [panduan](konteks/KONTEKS_11_caption-premium-full-frame_v0.1.md). Wajib saat adegan motion grafis layar penuh: subtitle premium setara split atau tipografi editorial profesional; contoh wajib di storyboard. Tidak memicu render ulang video lama.
+
+## Komposisi beasiswa OTCA
+- ScholarshipReel@0.1 — [panduan](remotion/src/storyboards/README.md), [komposisi](remotion/src/storyboards/ScholarshipReel.tsx), [ilustrasi](remotion/src/storyboards/ScholarshipArt.tsx). Talent RGBA di atas hitam, aksi objek bertimestamp, caption premium. Produksi/QA melalui `video.py` dengan gerbang persetujuan props/sumber. Contoh: `proyek/2026-11_otca-nina-beasiswa-s1/produksi-final.md` (QA otomatis LULUS; cek HP/headphone terpisah).

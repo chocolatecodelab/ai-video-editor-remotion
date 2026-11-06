@@ -1,0 +1,231 @@
+{
+  "versi": 1,
+  "proyek": "2026-11_otca-nina-beasiswa-s1",
+  "status": "draf-belum-disetujui",
+  "durasi": 51.547,
+  "fps": 30,
+  "resolusi": [
+    1080,
+    1920
+  ],
+  "catatan": "Still desain konsep, bukan frame MP4 final atau bukti kualitas animasi. Subtitle ditampilkan contoh frase; final mengikuti words-review yang ditinjau.",
+  "adegan": [
+    {
+      "id": "01",
+      "mulai": 0,
+      "selesai": 4.1,
+      "mode": "split",
+      "judul": "Peluang S1",
+      "headline": [
+        "BEASISWA S1",
+        "TERBATAS"
+      ],
+      "visual": "aperture",
+      "contoh_caption": [
+        "peluang beasiswa S1 di Jerman",
+        "ternyata sangat terbatas."
+      ],
+      "ucapan": "Halo parents, peluang beasiswa S1 di Jerman ternyata sangat terbatas.",
+      "motion": "Bidang pendanaan membuka sebagai celah terukur; fokus menyempit pada S1 saat “terbatas”, lalu diam. Tanpa angka peluang atau tanda tidak mungkin.",
+      "transisi": "Garis celah menjadi punggung direktori program.",
+      "sfx": "paper-soft",
+      "still": "storyboard-r1/01.png",
+      "status": "draf-belum-disetujui"
+    },
+    {
+      "id": "02",
+      "mulai": 4.1,
+      "selesai": 8.1,
+      "mode": "split",
+      "judul": "Kenali DAAD",
+      "headline": [
+        "MENGENAL",
+        "DAAD"
+      ],
+      "visual": "directory",
+      "contoh_caption": [
+        "Contohnya DAAD,",
+        "lembaga pemberi beasiswa"
+      ],
+      "ucapan": "Contohnya DAAD, lembaga pemberi beasiswa terbesar di Jerman.",
+      "motion": "Direktori berputar ringan pada engsel; nama DAAD terungkap lewat mask horizontal. Nama organisasi berupa teks, bukan logo rekaan.",
+      "transisi": "Tab direktori diteruskan ke kategori penerima.",
+      "sfx": "page-turn",
+      "still": "storyboard-r1/02.png",
+      "status": "draf-belum-disetujui"
+    },
+    {
+      "id": "03",
+      "mulai": 8.1,
+      "selesai": 16.5,
+      "mode": "full",
+      "judul": "Sasaran pendanaan",
+      "headline": [
+        "SASARAN",
+        "PENDANAAN"
+      ],
+      "visual": "branches",
+      "contoh_caption": [
+        "Sebagian besar program",
+        "pendanaannya memang ditujukan"
+      ],
+      "ucapan": "Sebagian besar program pendanaannya memang ditujukan untuk lulusan S1 yang ingin melanjutkan S2, mahasiswa doktoral, dan peneliti.",
+      "motion": "Tab DAAD melebar menjadi tiga jalur. S2, doktoral, dan peneliti mendapat fokus bergiliran mengikuti kata; tidak diberi persentase atau ukuran pangsa. Setelah tiap reveal, objek settle.",
+      "transisi": "Lembar jalur terakhir menjadi lembar kalender.",
+      "sfx": "soft-tick",
+      "still": "storyboard-r1/03.png",
+      "status": "draf-belum-disetujui"
+    },
+    {
+      "id": "04",
+      "mulai": 16.5,
+      "selesai": 22.9,
+      "mode": "split",
+      "judul": "Peluang program tertentu",
+      "headline": [
+        "KURSUS",
+        "MUSIM PANAS"
+      ],
+      "visual": "calendar",
+      "contoh_caption": [
+        "seperti kursus musim panas",
+        "bahasa Jerman."
+      ],
+      "ucapan": "Mahasiswa S1 juga punya peluang melalui program tertentu seperti kursus musim panas bahasa Jerman.",
+      "motion": "Satu lembar kalender terlipat dan membuka halaman kursus bahasa. Ikon buku menggantikan tanggal; tidak menambahkan jadwal atau syarat yang tidak diucapkan.",
+      "transisi": "Tepi halaman kalender membuka dua bidang perbandingan.",
+      "sfx": "paper-soft",
+      "still": "storyboard-r1/04.png",
+      "status": "draf-belum-disetujui"
+    },
+    {
+      "id": "05",
+      "mulai": 22.9,
+      "selesai": 27.93,
+      "mode": "full",
+      "judul": "Bedakan cakupan",
+      "headline": [
+        "CAKUPANNYA",
+        "BERBEDA"
+      ],
+      "visual": "compare",
+      "contoh_caption": [
+        "Tetapi program ini berbeda",
+        "dari beasiswa"
+      ],
+      "ucapan": "Tetapi program ini berbeda dari beasiswa yang membiayai kuliah S1 secara penuh.",
+      "motion": "Halaman kursus dan lembar studi dipisahkan; tanda berbeda digambar sekali pada kata “berbeda”. Teks kursus bahasa vs kuliah S1 penuh menetap untuk dibaca. Tidak memakai tanda silang yang berarti kursusnya tidak sah.",
+      "transisi": "Garis pembatas menjadi ambang kampus.",
+      "sfx": "soft-swipe",
+      "still": "storyboard-r1/05.png",
+      "status": "draf-belum-disetujui"
+    },
+    {
+      "id": "06",
+      "mulai": 27.93,
+      "selesai": 30.95,
+      "mode": "split",
+      "judul": "Status mahasiswa",
+      "headline": [
+        "SUDAH KULIAH",
+        "DI JERMAN"
+      ],
+      "visual": "campus",
+      "contoh_caption": [
+        "Bahkan ketika sudah menjadi",
+        "mahasiswa di Jerman,"
+      ],
+      "ucapan": "Bahkan ketika sudah menjadi mahasiswa di Jerman,",
+      "motion": "Bidang kampus terbentuk lewat reveal arsitektur sederhana; satu berkas mahasiswa masuk ke area peninjauan. Tidak ada cap lolos otomatis.",
+      "transisi": "Berkas yang sama dibawa ke proses seleksi.",
+      "sfx": "soft-slide",
+      "still": "storyboard-r1/06.png",
+      "status": "draf-belum-disetujui"
+    },
+    {
+      "id": "07",
+      "mulai": 30.95,
+      "selesai": 39.7,
+      "mode": "full",
+      "judul": "Seleksi tetap berlaku",
+      "headline": [
+        "BEASISWA",
+        "TETAP SELEKTIF"
+      ],
+      "visual": "selection",
+      "contoh_caption": [
+        "prestasi, persyaratan,",
+        "dan proses seleksi."
+      ],
+      "ucapan": "peluang mendapatkan beasiswa tetap tergantung pada prestasi, persyaratan, dan proses seleksi. Tidak semua mahasiswa bisa mendapatkannya.",
+      "motion": "Berkas ditinjau melalui tiga tahap; prestasi → persyaratan → seleksi menyala pada ucapan. Pada “tidak semua”, garis berhenti di area keputusan tanpa simbol semua lolos. Tidak menggambarkan rasio penerima.",
+      "transisi": "Berkas seleksi ditutup menjadi map perencanaan.",
+      "sfx": "soft-tick",
+      "still": "storyboard-r1/07.png",
+      "status": "draf-belum-disetujui"
+    },
+    {
+      "id": "08",
+      "mulai": 39.7,
+      "selesai": 45.7,
+      "mode": "split",
+      "judul": "Rencanakan dengan matang",
+      "headline": [
+        "RENCANA STUDI",
+        "YANG MATANG"
+      ],
+      "visual": "plan",
+      "contoh_caption": [
+        "Jadi, jangan hanya",
+        "mengandalkan beasiswa"
+      ],
+      "ucapan": "Jadi, jangan hanya mengandalkan beasiswa untuk merencanakan kuliah S1 anak di Jerman.",
+      "motion": "Map perencanaan membuka beberapa lembar; beasiswa menjadi salah satu lembar, tidak mengisi seluruh rencana. Tidak menambah paket layanan, harga, atau janji hasil.",
+      "transisi": "Garis map mengarahkan mata ke CTA.",
+      "sfx": "paper-soft",
+      "still": "storyboard-r1/08.png",
+      "status": "draf-belum-disetujui"
+    },
+    {
+      "id": "09",
+      "mulai": 45.7,
+      "selesai": 50.3,
+      "mode": "split",
+      "judul": "CTA sumber",
+      "headline": [
+        "KLIK LINK",
+        "DI BIO"
+      ],
+      "visual": "cta",
+      "contoh_caption": [
+        "Klik link di bio untuk mulai",
+        "persiapkan studi anak ke Jerman"
+      ],
+      "ucapan": "Klik link di bio untuk mulai persiapkan studi anak ke Jerman bersama tim OTCA.",
+      "motion": "Penanda link disorot satu kali saat ucapan, lalu tahan. Tanpa tombol palsu yang seolah bisa diklik dalam MP4, tanpa URL/nomor tambahan. Talent tetap hadir menyampaikan ajakan.",
+      "transisi": "Cut bersih ke identitas brand setelah ucapan selesai.",
+      "sfx": "soft-tap",
+      "still": "storyboard-r1/09.png",
+      "status": "draf-belum-disetujui"
+    },
+    {
+      "id": "10",
+      "mulai": 50.3,
+      "selesai": 51.547,
+      "mode": "full",
+      "judul": "Penutup",
+      "headline": [
+        "OTCA",
+        ""
+      ],
+      "visual": "brand",
+      "contoh_caption": [],
+      "ucapan": "",
+      "motion": "Logo resmi besar masuk tenang dan tahan; tidak menambah CTA/narasi. Tidak memotong akhir kata.",
+      "transisi": "Selesai.",
+      "sfx": "none",
+      "still": "storyboard-r1/10.png",
+      "status": "draf-belum-disetujui"
+    }
+  ]
+}
