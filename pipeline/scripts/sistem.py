@@ -274,13 +274,14 @@ class Proyek:
             return {"id": m.id, "ref": m.ref, "file": m.rel(), "sha256": sha_file(m.path, penuh=True)[:16]}
         skill = ROOT / "pipeline" / "skill" / "SKILL.md"
         skill_fm, _ = frontmatter(skill)
+        skill_version = skill_fm.get("versi", skill_fm.get("metadata", {}).get("version"))
         hasil = {
             "gaya": info(self.gaya),
             "template": info(self.template),
             "konteks": [info(k) for k in self.konteks],
             "tokens": [info(t) for t in self.token_modul],
             "efek": [info(e) for e in self.efek_dipakai()],
-            "skill": {"ref": f"{skill_fm.get('name')}@{skill_fm.get('versi')}", "file": "pipeline/skill/SKILL.md",
+            "skill": {"ref": f"{skill_fm.get('name')}@{skill_version}", "file": "pipeline/skill/SKILL.md",
                       "sha256": sha_file(skill, penuh=True)[:16]},
             "scripts": {"ref": f"scripts@{VERSI_SCRIPTS}"},
         }

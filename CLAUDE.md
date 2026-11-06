@@ -2,6 +2,9 @@
 
 Selalu baca `INDEX.md` dulu. Kalau pengguna menyebut nama pendek (gaya, template, konteks K00–K07), cari file-nya di INDEX.
 Untuk pekerjaan video, ikuti `pipeline/skill/SKILL.md` (skill video-editor) — termasuk kewajiban QA LULUS sebelum menyerahkan hasil.
+Untuk desain atau tinjauan motion, baca `konteks/KONTEKS_13_motion-hidup_v0.1.md`:
+perilaku objek, aksi–reaksi, bobot dan ritme harus menjelaskan narasi. Referensi
+bukan resep wajib; QA teknis/pixel delta bukan bukti keluwesan artistik.
 Jalankan pipeline dengan `.venv\Scripts\python` — jangan pip install ke Python global (merusak TensorFlow pengguna).
 Remotion ada di `remotion/` (npm lokal, jangan install global); lihat remotion/README.md.
 Sebelum menulis/mengubah TSX di `remotion/`, pakai skill `remotion-best-practices` (resmi Remotion, `.claude/skills/`) bersama aturan proyek: token gaya (`motif`), K05 gerak, K09 koreografi. Bila bertentangan, kontrak proyek (`src/lib/kontrak.ts`, render ber-alpha dari pipeline) yang menang.

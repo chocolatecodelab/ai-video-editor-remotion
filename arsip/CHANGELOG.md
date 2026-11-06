@@ -3,6 +3,14 @@
 Format: "## YYYY-MM-DD" lalu per perubahan: modul@versi — apa, kenapa, video pemicu.
 Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/konteks/KONTEKS_00_zona-aman_v0.1.md).
 
+## 2026-11-06
+- K13 motion-hidup@0.1 (draft): perilaku objek, aksi–reaksi, bobot, ritme dan
+  kontinuitas dari evaluasi referensi OTCA vs Nina. QA teknis/pixel delta tidak
+  membuktikan keluwesan. Referensi tidak menjadi resep wajib setiap video.
+- Skill video-editor@0.5: rujukan K13 dan prompt pemula; versi 0.4 diarsipkan,
+  salinan Claude disamakan. AGENTS/CLAUDE/aturan kerja dan rule proyek ditautkan.
+  Perubahan panduan saja; tidak merender ulang hasil video atau mengubah model.
+
 ## 2026-10-24
 - Kerangka awal video-system dibuat (semua modul v0.1, status draft).
 - Restrukturisasi: pola nama `JENIS_NN_nama_vX.Y`, ID (TK/K/G/T), INDEX.md sebagai buku acuan.

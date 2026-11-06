@@ -40,6 +40,9 @@ Validasi otomatis: `python pipeline/scripts/video.py cek`
 | K08 | sound-design | konteks/KONTEKS_08_sound-design_v0.1.md | 0.1 | draft |
 | K09 | koreografi | konteks/KONTEKS_09_koreografi_v0.2.md | 0.2 | draft |
 | K10 | menyatu | konteks/KONTEKS_10_menyatu_v0.1.md | 0.1 | draft |
+| K11 | caption-premium-full-frame | konteks/KONTEKS_11_caption-premium-full-frame_v0.1.md | 0.1 | draft |
+| K12 | kurasi-motion-premium | konteks/KONTEKS_12_kurasi-motion-premium_v0.1.md | 0.1 | draft |
+| K13 | motion-hidup | konteks/KONTEKS_13_motion-hidup_v0.1.md | 0.1 | draft |
 
 ## Gaya (tokens + konteks)
 Contoh visual tiap gaya: `video.py katalog` → [gaya/katalog/katalog.png](gaya/katalog/katalog.png).
@@ -199,7 +202,7 @@ Semua efek E01–E30 native. Generator slot memilih efek per fungsi sesuai gaya 
 ## Pipeline
 | ID | Nama pendek | File | Versi | Status |
 |---|---|---|---|---|
-| S01 | video-editor (skill) | pipeline/skill/SKILL.md (aktif: .claude/skills/video-editor/SKILL.md) | 0.2 | draft |
+| S01 | video-editor (skill) | pipeline/skill/SKILL.md (aktif: .claude/skills/video-editor/SKILL.md) | 0.5 | draft |
 | P01 | scripts | pipeline/scripts/ (`sistem.VERSI_SCRIPTS`) | 0.6 | draft |
 | R01 | remotion | remotion/ (Remotion 4.0.538, React; membaca tokens/ yang sama) | 0.1 | draft |
 | L01 | split-layout | pipeline/scripts/split.py + remotion/src/split/ (SplitReel; pustaka adegan: menara-sendiri, tujuan-pengorbanan, perisai-sunyi, siang-malam, timbangan-ragu, jalan-sendiri, puncak-fajar, kartu-akhir) — per proyek `split.json`; hook detik pertama, match cut iris, denyut ketukan, ducking transkrip (`ducking.py`), QA lewat `video.py cek/qa` | 0.2 | draft |

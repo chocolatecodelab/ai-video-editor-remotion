@@ -1,0 +1,18 @@
+---
+description: Kurasi gerak motion grafis agar objek hidup dan saling merespons
+alwaysApply: true
+---
+
+Untuk pekerjaan motion grafis, baca dan terapkan
+`konteks/KONTEKS_13_motion-hidup_v0.1.md` bersama K05, K09, K11 dan K12.
+
+- Rancang aksi, pemicu dan respons yang menjelaskan narasi; jangan berhenti
+  pada ikon masuk lalu diam sebagai pola dominan.
+- Variasikan bobot, kurva dan ritme sesuai benda; spring/bounce bukan resep universal.
+- Pelajari kualitas gerak referensi, bukan menyalin semua adegan atau efeknya.
+- Pakai still dari renderer produksi; tandai sketsa dengan jelas.
+- Pisahkan kelulusan brand, QA teknis, dan kurasi gerak. Pixel delta tidak
+  membuktikan keluwesan atau kualitas premium.
+- Jika alat hanya melihat frame/kode, nyatakan batas verifikasi gerak.
+- Hormati persetujuan storyboard dan izin render yang sudah diberikan.
+- Tidak mengubah model/effort, atau merender ulang video lama secara otomatis.

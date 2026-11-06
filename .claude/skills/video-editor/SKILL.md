@@ -1,7 +1,8 @@
 ---
 name: video-editor
-description: Gunakan saat pengguna meminta membuat atau mengedit video pendek vertikal (Reels/TikTok/Shorts, talking-head) di video-system — dari brief, naskah, beat-sheet, sampai render, QA, dan arsip. Juga saat pengguna menyebut gaya (glass-tech, bold-kinetic), template (explainer, hook-problem-solution), konteks (K00–K07), atau efek motion (orbit, checklist, glass-type, E01–E30), atau meminta analisis video referensi.
-versi: 0.4
+description: Gunakan saat membuat atau mengedit video pendek vertikal di video-system, dari brief dan storyboard sampai render dan QA; memilih gaya, template, konteks atau efek; menganalisis video referensi; atau mengkurasi motion yang terasa kaku dan generik.
+metadata:
+  version: "0.5"
 ---
 
 # Skill: video-editor
@@ -51,6 +52,17 @@ Bila pengguna bertanya "file apa saja yang sudah kamu baca", jawab dengan daftar
 | Arsip | setelah QA LULUS + checklist manual dicentang | `video.py arsip <proyek>` |
 
 Referensi field beat-sheet & manifest: `pipeline/scripts/README.md`.
+
+## Kurasi gerak yang hidup
+
+Untuk merancang atau mengulas motion grafis, baca
+`konteks/KONTEKS_13_motion-hidup_v0.1.md` bersama K05/K09/K12.
+Tentukan perilaku objek, pemicu dan respons, bobot, ritme serta kontinuitas.
+Pola utama ikon masuk lalu diam harus dikurasi kembali bila tidak menjelaskan isi.
+Gunakan referensi sebagai standar kualitas gerak; metafora tetap sesuai narasi.
+Pisahkan bukti brand, QA teknis, dan artistik. Still/pixel delta tidak membuktikan
+keluwesan; nyatakan batas verifikasi alat dan hormati izin render yang sudah ada.
+Contoh prompt pengguna: `panduan/PROMPT_MOTION_HIDUP.md`.
 
 ## Subtitle pada komposisi campuran / full frame
 

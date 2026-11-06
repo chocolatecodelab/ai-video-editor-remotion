@@ -43,6 +43,22 @@ Larangan: tidak ada render final sebelum storyboard disetujui.
 
 ## 6. Roadmap premium — diterapkan per video
 
+**Gerak hidup (arahan pengguna 2026-11-06):** baca
+`konteks/KONTEKS_13_motion-hidup_v0.1.md`. Rancang perilaku objek dan hubungan
+pemicu–respons, bukan hanya kemunculan ikon. Variasikan kurva, bobot dan ritme
+sesuai narasi; jangan memakai satu resep durasi untuk semua benda. Pegas,
+overshoot dan gerak sisa boleh bila bermakna. Profesional tidak berarti semua
+ilustrasi harus cepat diam. K05 tentang UI yang settle tetap berlaku; mekanisme
+ilustrasi boleh terus merespons aksi baru saat menjelaskan narasi.
+Referensi menuntun kualitas gerak, bukan mewajibkan tema/efek sama setiap video.
+Pisahkan penilaian brand, teknis dan artistik; pixel delta tidak membuktikan
+keluwesan. Aturan ini tidak memicu render ulang video selesai.
+
+Untuk kurasi artistik motion, baca `konteks/KONTEKS_12_kurasi-motion-premium_v0.1.md`.
+Setiap adegan harus menjelaskan pesan melalui gerak yang disengaja; spring,
+glow, kaca, dan partikel bukan syarat premium. Bedakan hasil QA teknis dari
+tinjauan artistik dan jangan menyatakan gerak lulus hanya berdasarkan still.
+
 Item 1–3, 6, 8 sudah ada di pipeline. Di setiap edit baru, terapkan:
 
 | # | Item | Praktiknya |
@@ -89,6 +105,7 @@ Tambahan (disetujui Zar 2026-10-30):
 
 - Setiap edit **boleh bebas memakai ulang dan meremix** semua efek, preset, template, gaya, dan modul adegan yang sudah ada di `video-system` (lihat `INDEX.md`, `efek/`, katalog) — kombinasikan agar tiap video bervariasi, tidak monoton.
 - **Kebebasan penuh dalam desain motion di Remotion**: komposisi, transisi, tipografi kinetik, partikel, cahaya, parallax, dll. Tetap ikuti skill `remotion-best-practices` + kontrak proyek (token gaya, K05 gerak, K09 koreografi, zona aman).
+- **Penegasan 2026-11-06:** eksplorasi motion boleh seluas mungkin dalam brand guidelines; tidak dibatasi katalog/ikon/resep yang ada. Boleh menciptakan ilustrasi, bentuk, dan koreografi baru yang menjelaskan narasi. Kurasi melalui K12 dan tampilkan desain di storyboard; tidak perlu izin terpisah untuk tiap pilihan kreatif dalam cakupan ini.
 - **Selalu tingkatkan kualitas** dibanding video sebelumnya: tiap video minimal satu peningkatan nyata (efek baru, transisi lebih halus, hook lebih kuat), lalu simpan yang bagus sebagai modul pakai-ulang (item 10).
 - Standar hasil: **profesional, premium, sinematik — tidak pernah terlihat generik/template AI** (hindari gradien ungu default, animasi fade/slide polos seragam, teks tengah tanpa hierarki, stok ikon generik).
 - **Variasi layout per video (Zar, 2026-11-01):** jangan split terus sepanjang video. Selipkan beberapa **adegan full animasi** (motion graphics menutup seluruh frame selama beberapa detik, talent tidak tampak, suara tetap jalan) dan **cutback** (kembali ke talent full frame / split, mis. untuk penekanan atau reaksi). Ritme contoh: split → full animasi di kalimat kunci → cutback ke talent → split. Rencanakan di storyboard.
