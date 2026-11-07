@@ -151,6 +151,8 @@ Berlaku untuk video **baru** saja. File OTCA yang sudah ada tetap di folder file
 - Revisi Zar 2026-11-07: **headline maksimal 3 baris, subheadline maksimal 2
   baris untuk semua brand dan ukuran**. Hitung hasil wrap, bukan hanya enter.
   Ringkas teks bila melebihi batas; jangan mengecilkan atau memotong diam-diam.
-- OTCA Official: ukuran/bobot huruf mengikuti contoh, aksen emas berupa gradien
-  di dalam huruf. Info Jerman: kuning `#EDD05F` dari ketiga contoh pengguna.
-  Rincian font, margin, jarak dan gradien disimpan pada template thumbnail v1.1.
+- OTCA Official: ukuran/bobot huruf mengikuti contoh. Gradien emas di dalam huruf
+  mendatar kiri → cream terang di tengah → emas gelap kanan; posisi sorot mengikuti
+  kanvas, tidak diulang per kata/baris. Jangan memakai gradien vertikal.
+  Info Jerman: kuning `#EDD05F` dari ketiga contoh pengguna.
+  Rincian font, margin, jarak dan gradien disimpan pada template thumbnail v1.2.

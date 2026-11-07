@@ -1,0 +1,69 @@
+{
+  "versi": "1.1",
+  "font_judul": "Montserrat-ExtraBold.ttf",
+  "font_sub": "Montserrat-SemiBold.ttf",
+  "formats": {
+    "reels": [
+      1080,
+      1920
+    ],
+    "grid": [
+      1080,
+      1440
+    ]
+  },
+  "brands": {
+    "otca": {
+      "overlay": "#000000",
+      "headline": "#FFFFFF",
+      "accent": "#CB9D31",
+      "sub": "#FFFFFF",
+      "logo": "thumbnail/aset/otca.png",
+      "highlight": "last-line",
+      "margin": 8,
+      "font_headline": "thumbnail/aset/Montserrat-Black.ttf",
+      "font_sub": "thumbnail/aset/Montserrat-BoldItalic.ttf",
+      "font_size": 72,
+      "sub_size": 36,
+      "headline_leading": 74,
+      "sub_leading": 40,
+      "sub_gap": 8,
+      "grid_bottom_margin": 100,
+      "accent_gradient": [
+        "#FDF1A4",
+        "#E1C267",
+        "#B3822C"
+      ]
+    },
+    "info-jerman": {
+      "overlay": "#EDD05F",
+      "headline": "#151515",
+      "accent": "#EDD05F",
+      "sub": "#151515",
+      "logo": null,
+      "highlight": "none",
+      "margin": 108
+    },
+    "jepang-koey": {
+      "overlay": "#D40000",
+      "headline": "#FFFFFF",
+      "accent": "#D40000",
+      "sub": "#FFFFFF",
+      "logo": null,
+      "highlight": "white-band",
+      "margin": 96
+    },
+    "ciao-manda": {
+      "background": "ivory-cutout",
+      "overlay": "#79202A",
+      "headline": "#FFFFFF",
+      "accent": "#BD2331",
+      "sub": "#FFFFFF",
+      "logo": "thumbnail/aset/ciao-manda.png",
+      "highlight": "none",
+      "margin": 108
+    }
+  },
+  "max_headline_lines": 3,
+  "max_subheadline_lines": 2
+}

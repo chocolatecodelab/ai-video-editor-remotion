@@ -355,3 +355,8 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
 - Semua brand: headline maksimal tiga baris dan subheadline dua baris, termasuk hasil wrap; tanpa pengecilan font otomatis.
 - OTCA: kalibrasi Montserrat Black 72 px, susunan lebih lebar dan rapat, pendukung Bold Italic, emas gradien di dalam huruf.
 - Info Jerman: kuning #EDD05F disampel dari ketiga screenshot; perbarui empat demo dan arsipkan konfigurasi v1.0. 89 tes pipeline lulus.
+
+## 2026-11-07 — samakan gradien emas thumbnail OTCA v1.2
+
+- Koreksi sapuan emas menjadi mendatar: sorot cream di 47,2% kanvas, sisi kiri dan kanan lebih gelap. Warna dikalibrasi dari piksel huruf screenshot pengguna, tanpa mengulang gradien per baris.
+- Perbarui cover OTCA, snapshot tipografi, bukti perbandingan, dan aturan tetap; arsipkan konfigurasi v1.1. 89 pengujian lulus termasuk pembandingan warna interior dengan screenshot.

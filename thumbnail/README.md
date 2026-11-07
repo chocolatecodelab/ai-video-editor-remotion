@@ -1,4 +1,4 @@
-# Thumbnail empat brand — template v1.1
+# Thumbnail empat brand — template v1.2
 
 Ketetapan pengguna, 7 November 2026: setiap video baru dari empat brand ini
 disertai thumbnail. Template dibakukan untuk penggunaan internal. Contoh asli pengguna tersimpan di
@@ -10,7 +10,12 @@ disertai thumbnail. Template dibakukan untuk penggunaan internal. Contoh asli pe
 
 - **OTCA Official (`otca`):** foto talent, fade hitam bawah, judul putih tebal,
   aksen gradien emas pada baris terakhir, logo emas resmi di tengah atas.
-  Gradien isi huruf: `#FDF1A4` → `#E1C267` → `#B3822C`; teks pendukung putih miring.
+  Gradien isi huruf **mendatar dari kiri ke kanan**: emas `#C19E47` →
+  cream terang `#F7EEAC` → emas gelap `#9C712B`. Sorot di **47,2% lebar
+  kanvas**, bukan di tengah masing-masing kata. Warna dan posisi dikalibrasi
+  dari huruf screenshot 03, lalu dibandingkan dengan screenshot 01.
+  Jangan memakai gradien vertikal atau memulai ulang gradien pada tiap baris.
+  Teks pendukung putih miring.
   Montserrat Black 72 px, jarak baris 74 px, margin 8 px agar lebar tulisan
   mendekati contoh asli. Pendukung Montserrat Bold Italic 36 px, jarak 40 px.
   Font khusus OTCA dibundel di `aset/`; tidak mengikuti perubahan font brand lain.
@@ -120,7 +125,7 @@ dengan judul/terpotong kanvas. Ringkas teks atau pilih foto lain; tidak ada
 pemotongan kalimat atau pengecilan font diam-diam. Jika satu format gagal,
 gambar lama tidak ditimpa dan laporan ditandai GAGAL.
 
-## Bukti uji v1.1
+## Bukti uji v1.2
 
 Empat pratinjau memakai footage asli proyek Nina beasiswa, Info Jerman 3 jalur,
 Jepang Koey bahasa Inggris, dan Ciao Manda. Foto/teks contoh merupakan draf
@@ -133,4 +138,7 @@ demo, sehingga gambar ini bukan contoh isi untuk video beasiswa.
 Konfigurasi warna/logo ada di `brand-v1.json`; renderer di
 `pipeline/scripts/thumbnail.py`. Identitas brand dapat dipakai ulang; judul,
 ekspresi dan latar mengikuti video masing-masing.
-Konfigurasi v1.0 diarsipkan di `arsip/thumbnail/brand-v1.0.json`.
+Konfigurasi v1.0 dan v1.1 diarsipkan di `arsip/thumbnail/`.
+Perbandingan potongan teks sumber dan gradien revisi ada di
+`pratinjau/perbandingan-gradien-otca.png`. Warna adalah hasil kalibrasi screenshot;
+bukan klaim memperoleh file desain asli atau mengubah palet video OTCA.

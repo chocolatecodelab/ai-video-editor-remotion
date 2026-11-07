@@ -21,5 +21,6 @@
   Ikuti template brand masing-masing, jangan masukkan ikon Reels dari screenshot.
   Revisi cover tidak memerlukan render ulang video lama.
 - Thumbnail semua brand: headline maksimal 3 baris, subheadline maksimal 2.
-  OTCA mengikuti bobot/ukuran contoh dengan emas gradien; kuning Info Jerman
-  mengikuti sampel screenshot `#EDD05F`. Rincian dikunci di template v1.1.
+  OTCA mengikuti bobot/ukuran contoh dengan emas gradien mendatar, sorot terang
+  di tengah kanvas; kuning Info Jerman mengikuti sampel `#EDD05F`.
+  Rincian dikunci di template v1.2.

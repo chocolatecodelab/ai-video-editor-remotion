@@ -244,4 +244,4 @@ Semua efek E01–E30 native. Generator slot memilih efek per fungsi sesuai gaya 
 
 ## Thumbnail empat brand
 
-- Thumbnail@1.1 — [panduan dan contoh](thumbnail/README.md), [konfigurasi](thumbnail/brand-v1.json), [referensi asli](thumbnail/referensi.json). OTCA Official, Info Jerman, Jepang Koey, Ciao Manda. Cover 9:16 dan grid 3:4 mengikuti storyboard; dibuat otomatis saat ekspor melalui pipeline, atau terpisah lewat `video.py thumbnail <proyek>`.
+- Thumbnail@1.2 — [panduan dan contoh](thumbnail/README.md), [konfigurasi](thumbnail/brand-v1.json), [referensi asli](thumbnail/referensi.json). OTCA Official, Info Jerman, Jepang Koey, Ciao Manda. Cover 9:16 dan grid 3:4 mengikuti storyboard; dibuat otomatis saat ekspor melalui pipeline, atau terpisah lewat `video.py thumbnail <proyek>`.

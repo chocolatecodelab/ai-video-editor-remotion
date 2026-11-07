@@ -52,17 +52,21 @@ def wrap(text: str, font, width: int, maximum: int) -> list[str]:
     return lines
 
 
-def gradient_text(im: Image.Image, position: tuple[int, int], text: str, font, colors: list[str]) -> None:
-    """Fill the actual glyphs with a vertical gold gradient; preserve antialiased edges."""
+def gradient_text(im: Image.Image, position: tuple[int, int], text: str, font, colors: list[str],
+                  positions: list[float] | None = None) -> None:
+    """Horizontal gold field anchored to the canvas, matching the supplied OTCA covers."""
     box = ImageDraw.Draw(im).textbbox(position, text, font=font, anchor="lt")
     width, height = box[2] - box[0], box[3] - box[1]
     mask = Image.new("L", (width, height))
     ImageDraw.Draw(mask).text((position[0] - box[0], position[1] - box[1]), text,
                              font=font, fill=255, anchor="lt")
     stops = np.array([[int(c[i:i + 2], 16) for i in (1, 3, 5)] for c in colors])
-    rows = np.array([np.interp(np.linspace(0, 1, height), np.linspace(0, 1, len(stops)), stops[:, i])
+    # The light band stays in the same canvas position even on a shorter line.
+    xs = (box[0] + np.arange(width)) / max(1, im.width - 1)
+    knots = positions if positions is not None else np.linspace(0, 1, len(stops))
+    columns = np.array([np.interp(xs, knots, stops[:, i])
                      for i in range(3)]).T.round().astype(np.uint8)
-    fill = Image.fromarray(np.repeat(rows[:, None, :], width, axis=1)).convert("RGBA")
+    fill = Image.fromarray(np.repeat(columns[None, :, :], height, axis=0)).convert("RGBA")
     im.paste(fill, (box[0], box[1]), mask)
 
 
@@ -182,7 +186,7 @@ def compose(photo: Image.Image, face: list[float], brand: str, headline: str, su
             d.rectangle((box[0] - 6, box[1] - 3, box[2] + 7, box[3] + 4), fill="white")
             fill = b["accent"]
         if accented and b.get("accent_gradient"):
-            gradient_text(im, (margin, y), line, font, b["accent_gradient"])
+            gradient_text(im, (margin, y), line, font, b["accent_gradient"], b.get("accent_gradient_positions"))
         else:
             d.text((margin, y), line, font=font, fill=fill, anchor="lt")
         boxes.append(box)

@@ -6,7 +6,7 @@ from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 import _dasar  # noqa: F401
 import ekspor
@@ -32,18 +32,26 @@ class CoverDelivery(unittest.TestCase):
                         thumbnail.compose(photo, [.32, .2, .68, .4], brand,
                                           "SATU", "Satu\nDua\nTiga", fmt, {})
 
-    def test_otca_gold_is_a_visible_gradient_inside_the_letters(self):
-        im = Image.new("RGBA", (500, 160), "black")
-        font = thumbnail.ImageFont.truetype(str(thumbnail.ROOT / "thumbnail/aset/Montserrat-Black.ttf"), 74)
-        thumbnail.gradient_text(im, (8, 8), "EMAS", font, ["#FDF1A4", "#E1C267", "#B3822C"])
-        pixels = np.asarray(im)
-        rows, _ = np.where((pixels[:, :, 0] > 160) & (pixels[:, :, 1] > 100))
-        high = pixels[:int(np.quantile(rows, .25)), :, :3]
-        low = pixels[int(np.quantile(rows, .75)):, :, :3]
-        high_gold = high[(high[:, :, 0] > 160) & (high[:, :, 1] > 100)]
-        low_gold = low[(low[:, :, 0] > 160) & (low[:, :, 1] > 100)]
-        self.assertGreater(float(high_gold[:, 2].mean()), float(low_gold[:, 2].mean()) + 30)
-        self.assertTrue(np.array_equal(pixels[0, 0, :3], [0, 0, 0]))
+    def test_otca_gold_matches_reference_horizontal_center_highlight(self):
+        text = "ADA LAPORAN BELAJAR!"
+        image, qa = thumbnail.compose(Image.new("RGB", (1080, 1920), "black"),
+                                      [.32, .2, .68, .4], "otca", text, "", "grid", {})
+        font = ImageFont.truetype(str(thumbnail.ROOT / "thumbnail/aset/Montserrat-Black.ttf"), 72)
+        mask = Image.new("L", image.size)
+        ImageDraw.Draw(mask).text((8, qa["text_boxes"][0][1]), text, font=font, fill=255, anchor="lt")
+        y, x = np.where(np.asarray(mask) == 255)
+        colors = np.asarray(image)[y, x]
+        # Interior colors sampled from the user's screenshot 03, with resize/JPEG tolerance.
+        for low, high, expected in [(.08, .12, [206, 175, 90]), (.46, .50, [245, 233, 167]),
+                                    (.86, .90, [177, 141, 70])]:
+            sample = colors[(x / 1080 >= low) & (x / 1080 < high)]
+            self.assertTrue(len(sample))
+            self.assertLess(float(np.max(np.abs(np.median(sample, axis=0) - expected))), 12)
+        # No light-to-dark sweep from the top of a letter to the bottom.
+        for column in (100, 500, 900):
+            sample = colors[x == column]
+            self.assertGreater(len(sample), 1)
+            self.assertEqual(int(np.ptp(sample, axis=0).max()), 0)
 
     def test_unknown_explicit_brand_is_rejected_and_no_substring_guessing(self):
         p = SimpleNamespace(dir=Path("2026-11_notcat"), manifest={})
