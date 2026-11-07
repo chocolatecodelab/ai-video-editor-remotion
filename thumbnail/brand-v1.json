@@ -1,5 +1,5 @@
 {
-  "versi": "1.0",
+  "versi": "1.1",
   "font_judul": "Montserrat-ExtraBold.ttf",
   "font_sub": "Montserrat-SemiBold.ttf",
   "formats": {
@@ -20,12 +20,25 @@
       "sub": "#FFFFFF",
       "logo": "thumbnail/aset/otca.png",
       "highlight": "last-line",
-      "margin": 108
+      "margin": 8,
+      "font_headline": "thumbnail/aset/Montserrat-Black.ttf",
+      "font_sub": "thumbnail/aset/Montserrat-BoldItalic.ttf",
+      "font_size": 72,
+      "sub_size": 36,
+      "headline_leading": 74,
+      "sub_leading": 40,
+      "sub_gap": 8,
+      "grid_bottom_margin": 100,
+      "accent_gradient": [
+        "#FDF1A4",
+        "#E1C267",
+        "#B3822C"
+      ]
     },
     "info-jerman": {
-      "overlay": "#F3CF45",
+      "overlay": "#EDD05F",
       "headline": "#151515",
-      "accent": "#F3CF45",
+      "accent": "#EDD05F",
       "sub": "#151515",
       "logo": null,
       "highlight": "none",
@@ -50,5 +63,7 @@
       "highlight": "none",
       "margin": 108
     }
-  }
+  },
+  "max_headline_lines": 3,
+  "max_subheadline_lines": 2
 }

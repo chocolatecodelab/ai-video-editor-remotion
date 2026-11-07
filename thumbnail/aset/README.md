@@ -7,5 +7,8 @@
 
 Logo tidak diketik atau digambar ulang. Info Jerman dan Jepang Koey tidak
 ditambahi logo baru karena contoh thumbnail pengguna tidak menampilkannya.
-Font memakai Montserrat ExtraBold dan SemiBold yang sudah tersedia di
-`pipeline/fonts/`; tidak memerlukan instalasi font sistem baru.
+Font khusus OTCA: `Montserrat-Black.ttf` disalin dari `pipeline/fonts/`,
+`Montserrat-BoldItalic.ttf` dari font Montserrat yang sudah ada di laptop.
+Lisensi SIL OFL dibundel dalam `Montserrat-OFL.txt`. Font brand lain memakai
+Montserrat ExtraBold dan SemiBold di `pipeline/fonts/`. Pengguna template tidak
+perlu memasang font sistem baru.

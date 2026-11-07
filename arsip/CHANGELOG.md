@@ -349,3 +349,9 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
 - Bakukan referensi cover OTCA Official, Info Jerman, Jepang Koey, Ciao Manda; simpan sembilan screenshot sumber dan logo.
 - Tambah compositor cover 9:16 + grid 3:4, seleksi foto, penjagaan wajah/teks dan laporan QA. Ekspor standar serta render split/editorial/scholarship lewat video.py otomatis membuat thumbnail.
 - Masukkan cover ke persetujuan storyboard dan sediakan revisi thumbnail tanpa render video; 87 tes lulus. Catatan pemeriksaan repo lain ada di thumbnail/validasi.md.
+
+## 2026-11-07 — revisi thumbnail v1.1
+
+- Semua brand: headline maksimal tiga baris dan subheadline dua baris, termasuk hasil wrap; tanpa pengecilan font otomatis.
+- OTCA: kalibrasi Montserrat Black 72 px, susunan lebih lebar dan rapat, pendukung Bold Italic, emas gradien di dalam huruf.
+- Info Jerman: kuning #EDD05F disampel dari ketiga screenshot; perbarui empat demo dan arsipkan konfigurasi v1.0. 89 tes pipeline lulus.

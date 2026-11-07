@@ -52,6 +52,20 @@ def wrap(text: str, font, width: int, maximum: int) -> list[str]:
     return lines
 
 
+def gradient_text(im: Image.Image, position: tuple[int, int], text: str, font, colors: list[str]) -> None:
+    """Fill the actual glyphs with a vertical gold gradient; preserve antialiased edges."""
+    box = ImageDraw.Draw(im).textbbox(position, text, font=font, anchor="lt")
+    width, height = box[2] - box[0], box[3] - box[1]
+    mask = Image.new("L", (width, height))
+    ImageDraw.Draw(mask).text((position[0] - box[0], position[1] - box[1]), text,
+                             font=font, fill=255, anchor="lt")
+    stops = np.array([[int(c[i:i + 2], 16) for i in (1, 3, 5)] for c in colors])
+    rows = np.array([np.interp(np.linspace(0, 1, height), np.linspace(0, 1, len(stops)), stops[:, i])
+                     for i in range(3)]).T.round().astype(np.uint8)
+    fill = Image.fromarray(np.repeat(rows[:, None, :], width, axis=1)).convert("RGBA")
+    im.paste(fill, (box[0], box[1]), mask)
+
+
 def select_photo(p: Proyek, cfg: dict) -> tuple[Image.Image, list[float], dict]:
     import cv2
     from wajah import Detektor
@@ -98,12 +112,16 @@ def compose(photo: Image.Image, face: list[float], brand: str, headline: str, su
     b = template["brands"][brand]
     w, h = template["formats"][fmt]
     margin = b["margin"]
-    font = ImageFont.truetype(str(ROOT / "pipeline/fonts" / template["font_judul"]), 76)
-    small = ImageFont.truetype(str(ROOT / "pipeline/fonts" / template["font_sub"]), 34)
-    lines = wrap(headline.upper(), font, w - 2 * margin - 16, 4)
-    subs = wrap(sub, small, w - 2 * margin, 3) if sub else []
-    bottom = h - (420 if fmt == "reels" else 115)
-    text_height = len(lines) * 81 + (32 + len(subs) * 43 if subs else 0)
+    size, sub_size = b.get("font_size", 76), b.get("sub_size", 34)
+    font_path = ROOT / b["font_headline"] if b.get("font_headline") else ROOT / "pipeline/fonts" / template["font_judul"]
+    sub_path = ROOT / b["font_sub"] if b.get("font_sub") else ROOT / "pipeline/fonts" / template["font_sub"]
+    font = ImageFont.truetype(str(font_path), size)
+    small = ImageFont.truetype(str(sub_path), sub_size)
+    leading, sub_leading, gap = b.get("headline_leading", 81), b.get("sub_leading", 43), b.get("sub_gap", 32)
+    lines = wrap(headline.upper(), font, w - 2 * margin - 16, template["max_headline_lines"])
+    subs = wrap(sub, small, w - 2 * margin, template["max_subheadline_lines"]) if sub else []
+    bottom = h - (420 if fmt == "reels" else b.get("grid_bottom_margin", 115))
+    text_height = len(lines) * leading + (gap + len(subs) * sub_leading if subs else 0)
     top = bottom - text_height
     x0, y0, x1, y1 = face
     # Face anchor is measured in the source, then mapped to a fixed portrait slot.
@@ -156,21 +174,27 @@ def compose(photo: Image.Image, face: list[float], brand: str, headline: str, su
     d = ImageDraw.Draw(im)
     boxes = []
     for i, line in enumerate(lines):
-        y = top + i * 81
-        fill = b["accent"] if b["highlight"] == "last-line" and i == len(lines) - 1 else b["headline"]
+        y = top + i * leading
+        accented = b["highlight"] == "last-line" and i == len(lines) - 1
+        fill = b["accent"] if accented else b["headline"]
         box = d.textbbox((margin, y), line, font=font, anchor="lt")
         if b["highlight"] == "white-band" and i == len(lines) - 1:
             d.rectangle((box[0] - 6, box[1] - 3, box[2] + 7, box[3] + 4), fill="white")
             fill = b["accent"]
-        d.text((margin, y), line, font=font, fill=fill, anchor="lt")
+        if accented and b.get("accent_gradient"):
+            gradient_text(im, (margin, y), line, font, b["accent_gradient"])
+        else:
+            d.text((margin, y), line, font=font, fill=fill, anchor="lt")
         boxes.append(box)
     for i, line in enumerate(subs):
-        y = top + len(lines) * 81 + 32 + i * 43
+        y = top + len(lines) * leading + gap + i * sub_leading
         d.text((margin, y), line, font=small, fill=b["sub"], anchor="lt")
         boxes.append(d.textbbox((margin, y), line, font=small, anchor="lt"))
     if not all(0 <= a < c <= w and 0 <= b0 < d0 <= h for a, b0, c, d0 in boxes):
         raise GagalPipeline("Teks thumbnail keluar kanvas.")
-    return im.convert("RGB"), {"face": face_box, "text_boxes": boxes, "font_headline": 76, "format": fmt}
+    return im.convert("RGB"), {"face": face_box, "text_boxes": boxes, "font_headline": size,
+                               "font_subheadline": sub_size, "headline_lines": lines, "subheadline_lines": subs,
+                               "format": fmt}
 
 
 def generate(p: Proyek, *, record_manifest: bool = True) -> list[Path]:

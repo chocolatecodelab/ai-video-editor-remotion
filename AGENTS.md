@@ -20,3 +20,6 @@
   9:16 dan grid 3:4 dalam persetujuan storyboard; ekspor melalui `video.py`.
   Ikuti template brand masing-masing, jangan masukkan ikon Reels dari screenshot.
   Revisi cover tidak memerlukan render ulang video lama.
+- Thumbnail semua brand: headline maksimal 3 baris, subheadline maksimal 2.
+  OTCA mengikuti bobot/ukuran contoh dengan emas gradien; kuning Info Jerman
+  mengikuti sampel screenshot `#EDD05F`. Rincian dikunci di template v1.1.

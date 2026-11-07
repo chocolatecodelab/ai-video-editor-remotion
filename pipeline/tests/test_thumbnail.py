@@ -5,6 +5,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
+import numpy as np
 from PIL import Image
 
 import _dasar  # noqa: F401
@@ -15,6 +16,35 @@ from sistem import GagalPipeline, SEMENTARA, baca_json
 
 
 class CoverDelivery(unittest.TestCase):
+    def test_three_headline_and_two_subheadline_lines_are_the_limit_for_every_brand(self):
+        photo = Image.new("RGB", (1080, 1920), "#666666")
+        for brand in ("otca", "info-jerman", "jepang-koey", "ciao-manda"):
+            for fmt in ("reels", "grid"):
+                with self.subTest(brand=brand, format=fmt):
+                    _, qa = thumbnail.compose(photo, [.32, .2, .68, .4], brand,
+                                              "SATU\nDUA\nTIGA", "Satu\nDua", fmt, {})
+                    self.assertEqual(len(qa["headline_lines"]), 3)
+                    self.assertEqual(len(qa["subheadline_lines"]), 2)
+                    with self.assertRaisesRegex(GagalPipeline, "maksimum 3 baris"):
+                        thumbnail.compose(photo, [.32, .2, .68, .4], brand,
+                                          "SATU\nDUA\nTIGA\nEMPAT", "", fmt, {})
+                    with self.assertRaisesRegex(GagalPipeline, "maksimum 2 baris"):
+                        thumbnail.compose(photo, [.32, .2, .68, .4], brand,
+                                          "SATU", "Satu\nDua\nTiga", fmt, {})
+
+    def test_otca_gold_is_a_visible_gradient_inside_the_letters(self):
+        im = Image.new("RGBA", (500, 160), "black")
+        font = thumbnail.ImageFont.truetype(str(thumbnail.ROOT / "thumbnail/aset/Montserrat-Black.ttf"), 74)
+        thumbnail.gradient_text(im, (8, 8), "EMAS", font, ["#FDF1A4", "#E1C267", "#B3822C"])
+        pixels = np.asarray(im)
+        rows, _ = np.where((pixels[:, :, 0] > 160) & (pixels[:, :, 1] > 100))
+        high = pixels[:int(np.quantile(rows, .25)), :, :3]
+        low = pixels[int(np.quantile(rows, .75)):, :, :3]
+        high_gold = high[(high[:, :, 0] > 160) & (high[:, :, 1] > 100)]
+        low_gold = low[(low[:, :, 0] > 160) & (low[:, :, 1] > 100)]
+        self.assertGreater(float(high_gold[:, 2].mean()), float(low_gold[:, 2].mean()) + 30)
+        self.assertTrue(np.array_equal(pixels[0, 0, :3], [0, 0, 0]))
+
     def test_unknown_explicit_brand_is_rejected_and_no_substring_guessing(self):
         p = SimpleNamespace(dir=Path("2026-11_notcat"), manifest={})
         self.assertIsNone(thumbnail.brand_for(p))

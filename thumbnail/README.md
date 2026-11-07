@@ -1,4 +1,4 @@
-# Thumbnail empat brand — template v1.0
+# Thumbnail empat brand — template v1.1
 
 Ketetapan pengguna, 7 November 2026: setiap video baru dari empat brand ini
 disertai thumbnail. Template dibakukan untuk penggunaan internal. Contoh asli pengguna tersimpan di
@@ -9,10 +9,15 @@ disertai thumbnail. Template dibakukan untuk penggunaan internal. Contoh asli pe
 ## Yang dikunci
 
 - **OTCA Official (`otca`):** foto talent, fade hitam bawah, judul putih tebal,
-  aksen emas pada baris terakhir, logo emas resmi di tengah atas. Warna emas
-  `#CB9D31`; teks pendukung putih.
-- **Info Jerman (`info-jerman`):** foto talent, fade kuning `#F3CF45` hingga
+  aksen gradien emas pada baris terakhir, logo emas resmi di tengah atas.
+  Gradien isi huruf: `#FDF1A4` → `#E1C267` → `#B3822C`; teks pendukung putih miring.
+  Montserrat Black 72 px, jarak baris 74 px, margin 8 px agar lebar tulisan
+  mendekati contoh asli. Pendukung Montserrat Bold Italic 36 px, jarak 40 px.
+  Font khusus OTCA dibundel di `aset/`; tidak mengikuti perubahan font brand lain.
+- **Info Jerman (`info-jerman`):** foto talent, fade kuning **`#EDD05F`** hingga
   bidang bawah, judul dan pendukung hitam. Tanpa logo tambahan sesuai contoh.
+  Nilai tersebut diambil dari bidang kuning bawah pada ketiga screenshot pengguna
+  (04, 05, 06), bukan dari warna kuning PDF konsep.
 - **Jepang Koey (`jepang-koey`):** foto talent, fade merah `#D40000`, judul
   putih, baris terakhir merah di atas bidang putih. Motif garis putih di kanan
   atas; tanpa logo tambahan sesuai contoh.
@@ -21,8 +26,11 @@ disertai thumbnail. Template dibakukan untuk penggunaan internal. Contoh asli pe
   fade merah tua `#79202A`, judul putih, logo merah resmi di tengah atas.
   Latar lokasi/ilustrasi boleh mengikuti topik; pabrik bukan elemen wajib semua cover.
 
-Huruf kerja: Montserrat ExtraBold untuk judul, SemiBold untuk pendukung.
-Judul 76 px, pendukung 34 px pada lebar 1080; maksimum 4 dan 3 baris.
+Untuk brand selain OTCA: Montserrat ExtraBold 76 px untuk judul dan SemiBold
+34 px untuk pendukung, pada lebar 1080.
+**Semua brand: headline maksimal 3 baris, subheadline maksimal 2 baris.**
+Aturan berlaku pada kedua ukuran, termasuk baris hasil pembungkusan otomatis.
+Jika melebihi batas, ringkas teks dahulu; jangan kecilkan font atau potong kalimat.
 Font keluarga ini adalah standardisasi produksi berdasarkan tampilan contoh,
 bukan klaim bahwa seluruh screenshot memakai berkas font yang sama.
 Logo memakai aset resmi; tidak digambar ulang dengan teks.
@@ -112,12 +120,17 @@ dengan judul/terpotong kanvas. Ringkas teks atau pilih foto lain; tidak ada
 pemotongan kalimat atau pengecilan font diam-diam. Jika satu format gagal,
 gambar lama tidak ditimpa dan laporan ditandai GAGAL.
 
-## Bukti uji v1.0
+## Bukti uji v1.1
 
 Empat pratinjau memakai footage asli proyek Nina beasiswa, Info Jerman 3 jalur,
 Jepang Koey bahasa Inggris, dan Ciao Manda. Foto/teks contoh merupakan draf
 demonstrasi, bukan persetujuan publikasi pengguna. Gambar demo ada di `pratinjau/`.
 Video dan manifest lama tidak diubah oleh pembuatan demo.
+Teks Ciao Manda pada demo diringkas agar memenuhi batas tiga baris.
+Kalibrasi tipografi OTCA dengan teks dari screenshot 03 tersimpan sebagai
+`pratinjau/otca-kalibrasi-tipografi.png`; foto talent kalibrasi tetap dari footage
+demo, sehingga gambar ini bukan contoh isi untuk video beasiswa.
 Konfigurasi warna/logo ada di `brand-v1.json`; renderer di
 `pipeline/scripts/thumbnail.py`. Identitas brand dapat dipakai ulang; judul,
 ekspresi dan latar mengikuti video masing-masing.
+Konfigurasi v1.0 diarsipkan di `arsip/thumbnail/brand-v1.0.json`.
