@@ -1,0 +1,34 @@
+[
+  {
+    "proyek": "2026-11_otca-nina-beasiswa-s1",
+    "thumbnail": {
+      "brand": "otca",
+      "headline": "BEASISWA S1 DI JERMAN\nTERNYATA TERBATAS",
+      "subheadline": "Jangan hanya mengandalkan beasiswa untuk merencanakan studi."
+    }
+  },
+  {
+    "proyek": "2026-10_info-jerman-3-jalur",
+    "thumbnail": {
+      "brand": "info-jerman",
+      "headline": "3 JALUR KERJA\nKE JERMAN",
+      "subheadline": "Ausbildung, FSJ, dan kerja profesional."
+    }
+  },
+  {
+    "proyek": "2026-10_jepang-koey-bahasa-inggris",
+    "thumbnail": {
+      "brand": "jepang-koey",
+      "headline": "BAHASA INGGRIS SAJA\nCUKUP KE JEPANG?",
+      "subheadline": "Kenali pentingnya bahasa Jepang untuk persiapanmu."
+    }
+  },
+  {
+    "proyek": "2026-10_ciao-manda",
+    "thumbnail": {
+      "brand": "ciao-manda",
+      "headline": "PERUSAHAAN CHINA:\nEKSPEKTASI VS REALITA",
+      "subheadline": "Kenali budaya kerja dan persiapan bahasa Mandarin."
+    }
+  }
+]

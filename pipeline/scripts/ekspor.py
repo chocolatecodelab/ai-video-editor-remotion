@@ -44,6 +44,8 @@ def ekspor(p: Proyek, platform: list[str] | None = None) -> list:
         jalankan(cmd)
         hasil.append(out)
     log("ekspor", "selesai.")
+    import thumbnail
+    thumbnail.generate(p)
     return hasil
 
 

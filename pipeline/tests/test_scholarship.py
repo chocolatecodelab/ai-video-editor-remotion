@@ -28,10 +28,11 @@ class ScholarshipGate(unittest.TestCase):
         project = SimpleNamespace(dir=Path("proyek/uji"))
         with patch("video.baca_json", return_value={"renderer": "scholarship"}), \
                 patch("scholarship.render") as render, patch("scholarship.qa", return_value=False), \
-                patch("split.render") as old:
+                patch("split.render") as old, patch("thumbnail.generate") as cover:
             self.assertEqual(video.split_satu_pintu(project, "semua"), 1)
         render.assert_called_once_with(project)
         old.assert_not_called()
+        cover.assert_called_once_with(project)
 
 
 if __name__ == "__main__":

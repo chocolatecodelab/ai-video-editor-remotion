@@ -18,6 +18,7 @@ Pemakaian:
                                                                #   butuh persetujuan storyboard (video.py setuju); --tanpa-setuju hanya atas keputusan pengguna
     python pipeline/scripts/video.py ingest|transkrip|roto|render|ekspor|qa|arsip <proyek> [opsi skrip]
     python pipeline/scripts/video.py still    <proyek> 1.5,8   # PNG frame untuk review
+    python pipeline/scripts/video.py thumbnail <proyek>       # cover 9:16 + grid 3:4, tanpa render video
     python pipeline/scripts/video.py storyboard <proyek> [--buka]  # pratinjau + timestamp + pra-QA (HTML)
     python pipeline/scripts/video.py setuju   <proyek>         # setujui versi beat-sheet di storyboard
 
@@ -776,6 +777,8 @@ def split_satu_pintu(p: Proyek, cmd: str) -> int:
         import scholarship
         if cmd in ("render", "semua"):
             scholarship.render(p)
+            import thumbnail
+            thumbnail.generate(p)
         if cmd in ("qa", "semua"):
             return 0 if scholarship.qa(p) else 1
         return 0
@@ -783,6 +786,8 @@ def split_satu_pintu(p: Proyek, cmd: str) -> int:
         import editorial
         if cmd in ("render", "semua"):
             editorial.render(p)
+            import thumbnail
+            thumbnail.generate(p)
         if cmd in ("qa", "semua"):
             return 0 if editorial.qa(p) else 1
         return 0
@@ -791,6 +796,8 @@ def split_satu_pintu(p: Proyek, cmd: str) -> int:
                             "video.py render <proyek> lalu video.py qa <proyek>.")
     if cmd == "render":
         split.render(p)
+        import thumbnail
+        thumbnail.generate(p)
         return 0
     return 0 if split.qa(p) else 1
 
@@ -855,6 +862,10 @@ def main() -> int:
     if not arg:
         raise GagalPipeline(f"'{cmd}' butuh <proyek>.")
     folder = cari_proyek(arg[0])
+    if cmd == "thumbnail":
+        import thumbnail
+        thumbnail.generate(Proyek(folder))
+        return 0
     if cmd == "status":
         status(Proyek(folder))
         return 0

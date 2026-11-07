@@ -133,3 +133,18 @@ Berlaku untuk video **baru** saja. File OTCA yang sudah ada tetap di folder file
 - Desain ukuran, hierarki, aksen, pemenggalan, posisi, dan reveal mengikuti ucapan. Jaga area grafis dan sosok tetap bersih; K00/K01/K05 tetap berlaku.
 - Tampilkan gaya subtitle full frame dan split pada storyboard, termasuk contoh frasa panjang, sebelum produksi.
 - Panduan rinci: `konteks/KONTEKS_11_caption-premium-full-frame_v0.1.md`. Terapkan pada video berikutnya; tidak perlu render ulang video yang sudah selesai hanya karena aturan ini.
+
+## 12. Thumbnail empat brand (Zar, 2026-11-07)
+
+- Setiap video baru OTCA Official, Info Jerman, Jepang Koey, dan Ciao Manda
+  wajib disertai thumbnail sesuai `thumbnail/README.md` dan `thumbnail/brand-v1.json`.
+- Screenshot terbaru pengguna adalah referensi khusus cover; perbedaan dengan
+  PDF konsep tidak mengubah panduan/token untuk isi video.
+- Tunjukkan judul, teks pendukung, foto, serta cover 9:16 dan grid 3:4 bersama
+  storyboard. Revisi dahulu, lalu pakai desain yang disetujui pada ekspor final.
+- Wajah dan ekspresi harus jelas, teks sesuai narasi, logo memakai aset resmi.
+  Ikon Reels dari screenshot bukan bagian desain. QA otomatis bukan persetujuan
+  artistik atau pengganti pemeriksaan ekspresi.
+- `video.py thumbnail <proyek>` membuat/merevisi cover tanpa render video.
+  Ekspor standar dan render final split/editorial/scholarship lewat `video.py`
+  otomatis menyertakannya. Preferensi ini tidak merender ulang video lama.

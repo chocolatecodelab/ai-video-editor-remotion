@@ -1,0 +1,50 @@
+{
+  "sumber": "Contoh thumbnail pengguna, 7 November 2026",
+  "referensi": [
+    {
+      "file": "thumbnail/referensi/01-otca.png",
+      "brand": "otca",
+      "sha256": "9865de06f27a794c4402149784dfc2d61e301a59533c3736cc93405aa922db30"
+    },
+    {
+      "file": "thumbnail/referensi/02-otca.png",
+      "brand": "otca",
+      "sha256": "f7a3fb76a3c6d49ca51615699502742276b606c5e8bcf9d1bd93389eb9157d63"
+    },
+    {
+      "file": "thumbnail/referensi/03-otca.png",
+      "brand": "otca",
+      "sha256": "c3aebec299a5c047de3b8a6b93d4fa4b8178a00a11ee22a09003db7a68d7d0c5"
+    },
+    {
+      "file": "thumbnail/referensi/04-info-jerman.png",
+      "brand": "info-jerman",
+      "sha256": "6f4ec2d539738e7ea42fda752a8e6fc9989d2dcf6e55d3c85970c62ca2d39e22"
+    },
+    {
+      "file": "thumbnail/referensi/05-info-jerman.png",
+      "brand": "info-jerman",
+      "sha256": "bda073e424048f78d27d495a2e7c01976b07d8bee2180e537639fd0c176cb853"
+    },
+    {
+      "file": "thumbnail/referensi/06-info-jerman.png",
+      "brand": "info-jerman",
+      "sha256": "14734b464d5dd528037d41b5c1582df8953123dc87e8bcf9703c36528caf3690"
+    },
+    {
+      "file": "thumbnail/referensi/07-jepang-koey.png",
+      "brand": "jepang-koey",
+      "sha256": "6d9607504b905d920e6523ab921d8b7d8b28e3576f837fb442b1fa8e58c868d7"
+    },
+    {
+      "file": "thumbnail/referensi/08-jepang-koey.png",
+      "brand": "jepang-koey",
+      "sha256": "171df7ae800a4f071232670c96d4c7bd1e5994def7570066b43f73258fdb439b"
+    },
+    {
+      "file": "thumbnail/referensi/09-ciao-manda.png",
+      "brand": "ciao-manda",
+      "sha256": "587df6d93dde446d23b8e242f450be19597318baa5c5a892da34f41a2947fbb0"
+    }
+  ]
+}

@@ -241,3 +241,7 @@ Semua efek E01–E30 native. Generator slot memilih efek per fungsi sesuai gaya 
 
 ## Komposisi beasiswa OTCA
 - ScholarshipReel@0.1 — [panduan](remotion/src/storyboards/README.md), [komposisi](remotion/src/storyboards/ScholarshipReel.tsx), [ilustrasi](remotion/src/storyboards/ScholarshipArt.tsx). Talent RGBA di atas hitam, aksi objek bertimestamp, caption premium. Produksi/QA melalui `video.py` dengan gerbang persetujuan props/sumber. Contoh: `proyek/2026-11_otca-nina-beasiswa-s1/produksi-final.md` (QA otomatis LULUS; cek HP/headphone terpisah).
+
+## Thumbnail empat brand
+
+- Thumbnail@1.0 — [panduan dan contoh](thumbnail/README.md), [konfigurasi](thumbnail/brand-v1.json), [referensi asli](thumbnail/referensi.json). OTCA Official, Info Jerman, Jepang Koey, Ciao Manda. Cover 9:16 dan grid 3:4 mengikuti storyboard; dibuat otomatis saat ekspor melalui pipeline, atau terpisah lewat `video.py thumbnail <proyek>`.

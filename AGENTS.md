@@ -15,3 +15,8 @@
   `konteks/KONTEKS_13_motion-hidup_v0.1.md`: rancang perilaku dan aksi–reaksi
   objek, bobot, ritme dan kontinuitas. Jangan menganggap pixel delta atau
   status QA teknis sebagai bukti kualitas gerak. Referensi bukan resep wajib.
+- Untuk video baru OTCA Official, Info Jerman, Jepang Koey, dan Ciao Manda,
+  baca `thumbnail/README.md`: thumbnail wajib ikut pipeline. Sertakan cover
+  9:16 dan grid 3:4 dalam persetujuan storyboard; ekspor melalui `video.py`.
+  Ikuti template brand masing-masing, jangan masukkan ikon Reels dari screenshot.
+  Revisi cover tidak memerlukan render ulang video lama.

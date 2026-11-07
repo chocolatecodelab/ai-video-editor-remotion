@@ -343,3 +343,9 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
 
 ### 2026-11-03 — subtitle full frame
 - K11 caption-premium-full-frame@0.1 dan video-editor@0.4: simpan preferensi pengguna agar subtitle adegan full frame premium, selaras split atau bergaya editorial; berlaku ke depan tanpa render ulang. Sinkronkan ATURAN_KERJA, CLAUDE, AGENTS, aturan agen, serta salinan skill.
+
+## 2026-11-07 — thumbnail empat brand v1.0
+
+- Bakukan referensi cover OTCA Official, Info Jerman, Jepang Koey, Ciao Manda; simpan sembilan screenshot sumber dan logo.
+- Tambah compositor cover 9:16 + grid 3:4, seleksi foto, penjagaan wajah/teks dan laporan QA. Ekspor standar serta render split/editorial/scholarship lewat video.py otomatis membuat thumbnail.
+- Masukkan cover ke persetujuan storyboard dan sediakan revisi thumbnail tanpa render video; 87 tes lulus. Catatan pemeriksaan repo lain ada di thumbnail/validasi.md.
