@@ -1,0 +1,9 @@
+{
+  "status": "pending-user-review",
+  "native_art": "SVG/React",
+  "imagegen_assets_used": false,
+  "caption_max_lines": 2,
+  "source_sha256": "fca0a0b9efd1dc1964e1f533c37922e4e967bf9de1563cf7ebabf996e3c235a5",
+  "motion_playback_review": false,
+  "final_render": false
+}

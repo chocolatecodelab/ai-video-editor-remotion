@@ -1,0 +1,210 @@
+{
+  "status": "belum-disetujui",
+  "imagegen": false,
+  "final_render": false,
+  "scenes": [
+    {
+      "id": "01",
+      "kind": "opening",
+      "mode": "talent",
+      "kicker": "STUDI KE JERMAN",
+      "title": [
+        "BEASISWA S1",
+        "TERBATAS."
+      ],
+      "labels": [],
+      "anchors": [
+        2.57
+      ],
+      "sample": 3.3,
+      "start": 0,
+      "end": 4.1,
+      "motion": "Cabang program terbentuk; titik bergerak menuju peluang S1, jalur lain meredup. Tanpa angka peluang rekaan.",
+      "transition": "Rencana kontinuitas native; belum disetujui.",
+      "image": "check-99.png"
+    },
+    {
+      "id": "02",
+      "kind": "directory",
+      "mode": "split",
+      "kicker": "CONTOH PENDANAAN",
+      "title": [
+        "MENGENAL",
+        "DAAD."
+      ],
+      "labels": [
+        "PROGRAM"
+      ],
+      "anchors": [
+        5.47
+      ],
+      "sample": 6.2,
+      "start": 4.1,
+      "end": 8.1,
+      "motion": "Lembar DAAD terangkat keluar dari map; sampul dan lembar adalah objek terpisah. Label pendanaan menyusul setelah lembar terbaca.",
+      "transition": "Rencana kontinuitas native; belum disetujui.",
+      "image": "check-186.png"
+    },
+    {
+      "id": "03",
+      "kind": "funding",
+      "mode": "full",
+      "kicker": "JENJANG & RISET",
+      "title": [
+        "SASARAN",
+        "PENDANAAN."
+      ],
+      "labels": [
+        "S2 / MASTER",
+        "DOKTORAL",
+        "PENELITI"
+      ],
+      "anchors": [
+        12.29,
+        14.09,
+        15.3
+      ],
+      "sample": 15.9,
+      "start": 8.1,
+      "end": 16.5,
+      "motion": "Tiga cabang tersambung berurutan ke S2, doktoral, dan penelitian sesuai ucapan. Buku di setiap cabang memberi konteks jenjang.",
+      "transition": "Rencana kontinuitas native; belum disetujui.",
+      "image": "check-477.png"
+    },
+    {
+      "id": "04",
+      "kind": "summer",
+      "mode": "split",
+      "kicker": "PELUANG PROGRAM",
+      "title": [
+        "KURSUS",
+        "MUSIM PANAS."
+      ],
+      "labels": [
+        "MUSIM PANAS",
+        "BAHASA JERMAN"
+      ],
+      "anchors": [
+        20.31
+      ],
+      "sample": 21.7,
+      "start": 16.5,
+      "end": 22.9,
+      "motion": "Lembar kalender berputar pada engsel atas. Sel periode tersorot saat kursus disebut; buku bahasa menjadi pasangan ilustrasinya.",
+      "transition": "Rencana kontinuitas native; belum disetujui.",
+      "image": "check-651.png"
+    },
+    {
+      "id": "05",
+      "kind": "comparison",
+      "mode": "full",
+      "kicker": "PAHAMI CAKUPANNYA",
+      "title": [
+        "DUA CAKUPAN",
+        "BERBEDA."
+      ],
+      "labels": [
+        "KURSUS BAHASA",
+        "KULIAH S1"
+      ],
+      "anchors": [
+        23.7
+      ],
+      "sample": 27.2,
+      "start": 22.9,
+      "end": 27.93,
+      "motion": "Buku kursus dan kampus bergerak menjauh; pembatas tumbuh di antaranya. Panjang garis tidak mewakili durasi atau biaya.",
+      "transition": "Rencana kontinuitas native; belum disetujui.",
+      "image": "check-816.png"
+    },
+    {
+      "id": "06",
+      "kind": "student",
+      "mode": "talent",
+      "kicker": "SETELAH TIBA",
+      "title": [
+        "SUDAH DI",
+        "JERMAN?"
+      ],
+      "labels": [],
+      "anchors": [
+        28
+      ],
+      "sample": 30.3,
+      "start": 27.93,
+      "end": 30.95,
+      "motion": "Figur memasuki konteks kampus. Pesan visual: status mahasiswa belum menjamin beasiswa. Talent kembali menjadi pusat penjelasan.",
+      "transition": "Rencana kontinuitas native; belum disetujui.",
+      "image": "check-909.png"
+    },
+    {
+      "id": "07",
+      "kind": "selection",
+      "mode": "full",
+      "kicker": "PELUANG BUKAN JAMINAN",
+      "title": [
+        "TETAP ADA",
+        "SELEKSI."
+      ],
+      "labels": [
+        "PRESTASI",
+        "PERSYARATAN",
+        "SELEKSI",
+        "APLIKASI"
+      ],
+      "anchors": [
+        33.5,
+        34.65,
+        35.9
+      ],
+      "sample": 36.7,
+      "start": 30.95,
+      "end": 39.7,
+      "motion": "Berkas terangkat; garis pemeriksa melintasi dokumen. Jalur dan indikator prestasi, persyaratan, seleksi aktif berurutan. Indikator berarti tahap dibahas, bukan pelamar pasti lolos.",
+      "transition": "Rencana kontinuitas native; belum disetujui.",
+      "image": "check-1101.png"
+    },
+    {
+      "id": "08",
+      "kind": "planning",
+      "mode": "talent",
+      "kicker": "PERSIAPAN STUDI",
+      "title": [
+        "RENCANAKAN",
+        "SEJAK AWAL."
+      ],
+      "labels": [],
+      "anchors": [
+        41.35
+      ],
+      "sample": 43.6,
+      "start": 39.7,
+      "end": 45.7,
+      "motion": "Buku, lembar rencana, dan kampus tersusun di jalur persiapan. Gerak mereda untuk memberi ruang pada saran talent.",
+      "transition": "Rencana kontinuitas native; belum disetujui.",
+      "image": "check-1308.png"
+    },
+    {
+      "id": "09",
+      "kind": "closing",
+      "mode": "split",
+      "kicker": "BERSAMA TIM OTCA",
+      "title": [
+        "STUDI ANAK",
+        "KE JERMAN."
+      ],
+      "labels": [
+        "LINK DI BIO"
+      ],
+      "anchors": [
+        45.79
+      ],
+      "sample": 46.3,
+      "start": 45.7,
+      "end": 51.55,
+      "motion": "Penunjuk mendekati link di bio; tombol merespons tekanan singkat dan lingkaran respons meluruh. Penutup mengikuti sumber.",
+      "transition": "Rencana kontinuitas native; belum disetujui.",
+      "image": "check-1389.png"
+    }
+  ]
+}

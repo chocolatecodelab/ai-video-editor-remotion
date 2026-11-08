@@ -1,6 +1,7 @@
 # Storyboard Nina — revisi 02
 
-Status: **menunggu persetujuan pengguna**. Tidak ada render video final.
+Status: **arah aset ImageGen ditolak pengguna**. Tidak ada render video final.
+Arahan pengganti dicatat di `KOREKSI-ARAH-03.md`; gambar revisi 02 hanya riwayat.
 
 Buka `out/r2/storyboard.html` untuk sembilan adegan, ucapan sumber, rencana
 gerak, tahapan adegan 03/07, dan cover. Gambar berasal dari Remotion, bukan
