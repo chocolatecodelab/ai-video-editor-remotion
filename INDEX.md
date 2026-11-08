@@ -43,6 +43,7 @@ Validasi otomatis: `python pipeline/scripts/video.py cek`
 | K11 | caption-premium-full-frame | konteks/KONTEKS_11_caption-premium-full-frame_v0.1.md | 0.1 | draft |
 | K12 | kurasi-motion-premium | konteks/KONTEKS_12_kurasi-motion-premium_v0.1.md | 0.1 | draft |
 | K13 | motion-hidup | konteks/KONTEKS_13_motion-hidup_v0.1.md | 0.1 | draft |
+| K14 | motion-native-brand-qa | konteks/KONTEKS_14_motion-native-brand-qa_v0.1.md | 0.1 | draft |
 
 ## Gaya (tokens + konteks)
 Contoh visual tiap gaya: `video.py katalog` → [gaya/katalog/katalog.png](gaya/katalog/katalog.png).

@@ -26,3 +26,9 @@ Setelah mengubah skrip pipeline: `.venv\Scripts\python -m unittest discover -s p
 - **Subtitle full frame:** wajib premium, setara mutu subtitle split atau tipografi editorial profesional lain; jangan default teks kecil polos. Baca `konteks/KONTEKS_11_caption-premium-full-frame_v0.1.md` dan tampilkan contohnya pada storyboard (§11). Berlaku ke depan, tanpa render ulang video lama otomatis.
 - **Thumbnail empat brand:** baca `thumbnail/README.md` (§12). Video baru OTCA Official, Info Jerman, Jepang Koey, Ciao Manda wajib mendapat cover 9:16 + grid 3:4; tunjukkan bersama storyboard sebelum persetujuan. Gunakan template brand masing-masing, tanpa ikon Reels platform. Ekspor lewat `video.py` otomatis membuat cover; revisi cover saja lewat `video.py thumbnail`, tanpa render ulang video.
 - **Batas thumbnail:** semua brand maksimal 3 baris headline dan 2 baris subheadline (termasuk wrap). OTCA memakai ukuran/bobot contoh dan emas gradien mendatar dengan sorot di tengah kanvas; Info Jerman memakai kuning sampel `#EDD05F`. Ikuti template v1.2, ringkas teks berlebih tanpa mengecilkan font.
+
+- Semua brand wajib membaca `konteks/KONTEKS_14_motion-native-brand-qa_v0.1.md`: motion native
+  Remotion dengan aksi–reaksi per komponen sesuai guideline brand; jangan
+  mengganti animasi dengan gambar ImageGen yang hanya digeser/zoom. QA brief,
+  brand, artistik dan teknis wajib berbukti sebelum penyerahan storyboard/hasil.
+  Yang belum diuji tetap belum terverifikasi; persetujuan hanya dari pengguna.

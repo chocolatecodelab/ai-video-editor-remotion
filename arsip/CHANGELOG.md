@@ -3,6 +3,14 @@
 Format: "## YYYY-MM-DD" lalu per perubahan: modul@versi — apa, kenapa, video pemicu.
 Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/konteks/KONTEKS_00_zona-aman_v0.1.md).
 
+## 2026-11-08
+- K14 motion-native-brand-qa@0.1: aturan semua brand untuk objek native Remotion,
+  aksi–reaksi per komponen dan QA berbukti atas brief, brand, artistik, teknis.
+  Pemicu: koreksi ImageGen dan penerimaan arah storyboard Nina R3.
+- Skill video-editor@0.6: rujukan K14; versi 0.5 diarsipkan, salinan Claude
+  disamakan. AGENTS, CLAUDE dan aturan kerja ditautkan. Aturan proses agen,
+  bukan klaim QA selera otomatis; tidak menjalankan render final.
+
 ## 2026-11-06
 - K13 motion-hidup@0.1 (draft): perilaku objek, aksi–reaksi, bobot, ritme dan
   kontinuitas dari evaluasi referensi OTCA vs Nina. QA teknis/pixel delta tidak

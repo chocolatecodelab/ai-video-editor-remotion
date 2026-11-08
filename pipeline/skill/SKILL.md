@@ -2,7 +2,7 @@
 name: video-editor
 description: Gunakan saat membuat atau mengedit video pendek vertikal di video-system, dari brief dan storyboard sampai render dan QA; memilih gaya, template, konteks atau efek; menganalisis video referensi; atau mengkurasi motion yang terasa kaku dan generik.
 metadata:
-  version: "0.5"
+  version: "0.6"
 ---
 
 # Skill: video-editor
@@ -52,6 +52,14 @@ Bila pengguna bertanya "file apa saja yang sudah kamu baca", jawab dengan daftar
 | Arsip | setelah QA LULUS + checklist manual dicentang | `video.py arsip <proyek>` |
 
 Referensi field beat-sheet & manifest: `pipeline/scripts/README.md`.
+
+## Motion native dan QA semua brand
+
+Wajib baca `konteks/KONTEKS_14_motion-native-brand-qa_v0.1.md` sebelum merancang,
+merevisi atau menilai motion/storyboard. Buat objek native dan aksi–reaksi
+sesuai brand; QA brief, brand, artistik dan teknis dengan bukti per adegan.
+Simpan `out/qa-storyboard.md`; status belum terverifikasi tidak boleh disebut
+lulus. Persetujuan desain tetap keputusan pengguna.
 
 ## Kurasi gerak yang hidup
 

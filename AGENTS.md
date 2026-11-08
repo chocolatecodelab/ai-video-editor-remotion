@@ -24,3 +24,9 @@
   OTCA mengikuti bobot/ukuran contoh dengan emas gradien mendatar, sorot terang
   di tengah kanvas; kuning Info Jerman mengikuti sampel `#EDD05F`.
   Rincian dikunci di template v1.2.
+
+- Semua brand wajib membaca `konteks/KONTEKS_14_motion-native-brand-qa_v0.1.md`: motion native
+  Remotion dengan aksi–reaksi per komponen sesuai guideline brand; jangan
+  mengganti animasi dengan gambar ImageGen yang hanya digeser/zoom. QA brief,
+  brand, artistik dan teknis wajib berbukti sebelum penyerahan storyboard/hasil.
+  Yang belum diuji tetap belum terverifikasi; persetujuan hanya dari pengguna.

@@ -156,3 +156,11 @@ Berlaku untuk video **baru** saja. File OTCA yang sudah ada tetap di folder file
   kanvas, tidak diulang per kata/baris. Jangan memakai gradien vertikal.
   Info Jerman: kuning `#EDD05F` dari ketiga contoh pengguna.
   Rincian font, margin, jarak dan gradien disimpan pada template thumbnail v1.2.
+
+## 13. Motion native dan QA semua brand (2026-11-08)
+
+Wajib baca `konteks/KONTEKS_14_motion-native-brand-qa_v0.1.md`. Arahan Nina R3 menjadi standar usaha motion,
+bukan template visual semua brand. Rancang komponen dan aksi–reaksi sesuai
+guideline brand; audit brief, brand, artistik dan teknis sebelum menyerahkan
+storyboard atau hasil. Catat bukti, temuan dan batas verifikasi. Tidak ada
+persetujuan otomatis atau render ulang video lama.
