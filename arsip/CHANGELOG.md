@@ -4,6 +4,10 @@ Format: "## YYYY-MM-DD" lalu per perubahan: modul@versi — apa, kenapa, video p
 Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/konteks/KONTEKS_00_zona-aman_v0.1.md).
 
 ## 2026-11-08
+- Skill video-editor@0.7: direksi kreatif lintas brand; pustaka gaya/template/
+  koreografi/efek sebagai fondasi pengembangan, kurasi komposisi, tipografi,
+  gerak, transisi dan sound design. Panduan DIREKSI_KREATIF_MOTION ditautkan
+  melalui K14 dan entrypoint agen; versi 0.6 diarsipkan, salinan disamakan.
 - K14 motion-native-brand-qa@0.1: aturan semua brand untuk objek native Remotion,
   aksi–reaksi per komponen dan QA berbukti atas brief, brand, artistik, teknis.
   Pemicu: koreksi ImageGen dan penerimaan arah storyboard Nina R3.

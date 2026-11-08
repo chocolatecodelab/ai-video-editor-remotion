@@ -13,6 +13,12 @@ Berlaku untuk semua brand, termasuk OTCA Official, Info Jerman, Jepang Koey,
 dan Ciao Manda. Standar usaha dan pemeriksaannya sama; identitas visualnya
 mengikuti guideline masing-masing. Tidak memicu render ulang video lama.
 
+## Cakupan direksi kreatif
+
+Baca `panduan/DIREKSI_KREATIF_MOTION.md`: native motion hanya salah satu
+alat. Pustaka gaya, template, koreografi dan efek menjadi fondasi pengembangan
+kreatif; rancang dan kurasi keseluruhan bahasa visual, bukan hanya aksi objek.
+
 ## Kontrak desain sebelum membuat scene
 
 Catat dalam brief/storyboard: permintaan terbaru pengguna, narasi/CTA sumber,

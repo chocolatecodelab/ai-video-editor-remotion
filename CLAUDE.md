@@ -32,3 +32,8 @@ Setelah mengubah skrip pipeline: `.venv\Scripts\python -m unittest discover -s p
   mengganti animasi dengan gambar ImageGen yang hanya digeser/zoom. QA brief,
   brand, artistik dan teknis wajib berbukti sebelum penyerahan storyboard/hasil.
   Yang belum diuji tetap belum terverifikasi; persetujuan hanya dari pengguna.
+
+- Untuk direksi kreatif, baca `panduan/DIREKSI_KREATIF_MOTION.md`. Pustaka gaya,
+  template, koreografi dan efek adalah fondasi pengembangan, bukan batas
+  kreativitas. Bertindak sebagai motion designer/art director; kurasi visual,
+  tipografi, gerak dan transisi sebagai satu kesatuan sesuai brand dan narasi.

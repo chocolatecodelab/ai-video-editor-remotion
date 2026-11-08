@@ -164,3 +164,11 @@ bukan template visual semua brand. Rancang komponen dan aksi–reaksi sesuai
 guideline brand; audit brief, brand, artistik dan teknis sebelum menyerahkan
 storyboard atau hasil. Catat bukti, temuan dan batas verifikasi. Tidak ada
 persetujuan otomatis atau render ulang video lama.
+
+## 14. Direksi kreatif dan pengembangan pustaka (2026-11-08)
+
+Baca `panduan/DIREKSI_KREATIF_MOTION.md`. Pengguna meminta agen memahami dan
+mengembangkan gaya, template, koreografi dan efek proyek secara kreatif dan
+matang. Rancang cerita, visual, tipografi, gerak, transisi dan sound design
+sebagai kesatuan; pakai ulang atau kembangkan modul sesuai kebutuhan. Kurasi
+dan revisi hasil generik sebelum ditunjukkan. Tetap ikuti brand dan QA K11–K14.
