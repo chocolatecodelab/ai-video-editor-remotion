@@ -1,0 +1,959 @@
+[
+  {
+    "frame": 99,
+    "scene": "01",
+    "items": [
+      {
+        "text": "STUDI KE JERMAN",
+        "x": 108,
+        "y": 350,
+        "w": 307.921875,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "BEASISWA S1",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 86.515625,
+        "size": 84,
+        "overflow": false
+      },
+      {
+        "text": "TERBATAS.",
+        "x": 108,
+        "y": 491.515625,
+        "w": 852,
+        "h": 86.515625,
+        "size": 84,
+        "overflow": false
+      },
+      {
+        "text": "ternyata sangat",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 64.265625,
+        "size": 52,
+        "overflow": false
+      },
+      {
+        "text": "terbatas.",
+        "x": 108,
+        "y": 1438.265625,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 186,
+    "scene": "02",
+    "items": [
+      {
+        "text": "CONTOH PENDANAAN",
+        "x": 108,
+        "y": 350,
+        "w": 370.3125,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "MENGENAL",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 86.515625,
+        "size": 84,
+        "overflow": false
+      },
+      {
+        "text": "DAAD.",
+        "x": 108,
+        "y": 491.515625,
+        "w": 852,
+        "h": 86.515625,
+        "size": 84,
+        "overflow": false
+      },
+      {
+        "text": "PROGRAM",
+        "x": 264.0759582519531,
+        "y": 605.0128784179688,
+        "w": 205.8480224609375,
+        "h": 47.8759765625,
+        "size": 28,
+        "overflow": false
+      },
+      {
+        "text": "lembaga pemberi",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 64.265625,
+        "size": 52,
+        "overflow": false
+      },
+      {
+        "text": "beasiswa",
+        "x": 108,
+        "y": 1438.265625,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 477,
+    "scene": "03",
+    "items": [
+      {
+        "text": "JENJANG & RISET",
+        "x": 108,
+        "y": 350,
+        "w": 295.546875,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "SASARAN",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "PENDANAAN.",
+        "x": 108,
+        "y": 495.625,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "S2 / MASTER",
+        "x": 640,
+        "y": 595,
+        "w": 284.5625,
+        "h": 54,
+        "size": 44,
+        "overflow": false
+      },
+      {
+        "text": "DOKTORAL",
+        "x": 680,
+        "y": 947,
+        "w": 256.6875,
+        "h": 54,
+        "size": 44,
+        "overflow": false
+      },
+      {
+        "text": "PENELITI",
+        "x": 620,
+        "y": 1270,
+        "w": 214.40625,
+        "h": 57,
+        "size": 46,
+        "overflow": false
+      },
+      {
+        "text": "mahasiswa doktoral,",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 64.265625,
+        "size": 52,
+        "overflow": false
+      },
+      {
+        "text": "dan peneliti.",
+        "x": 108,
+        "y": 1438.265625,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 651,
+    "scene": "04",
+    "items": [
+      {
+        "text": "PELUANG PROGRAM",
+        "x": 108,
+        "y": 350,
+        "w": 342.15625,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "KURSUS",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 86.515625,
+        "size": 84,
+        "overflow": false
+      },
+      {
+        "text": "MUSIM PANAS.",
+        "x": 108,
+        "y": 491.515625,
+        "w": 852,
+        "h": 86.515625,
+        "size": 84,
+        "overflow": false
+      },
+      {
+        "text": "MUSIM PANAS",
+        "x": 528.4718627929688,
+        "y": 649.6898803710938,
+        "w": 239.05938720703125,
+        "h": 50.468017578125,
+        "size": 28,
+        "overflow": false
+      },
+      {
+        "text": "BAHASA JERMAN",
+        "x": 552.76806640625,
+        "y": 981.0244750976562,
+        "w": 264.54400634765625,
+        "h": 52.25006103515625,
+        "size": 28,
+        "overflow": false
+      },
+      {
+        "text": "seperti kursus musim",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 64.265625,
+        "size": 52,
+        "overflow": false
+      },
+      {
+        "text": "panas",
+        "x": 108,
+        "y": 1438.265625,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 816,
+    "scene": "05",
+    "items": [
+      {
+        "text": "PAHAMI CAKUPANNYA",
+        "x": 108,
+        "y": 350,
+        "w": 378.078125,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "DUA CAKUPAN",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "BERBEDA.",
+        "x": 108,
+        "y": 495.625,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "KURSUS BAHASA",
+        "x": 108,
+        "y": 1110,
+        "w": 339.9375,
+        "h": 47,
+        "size": 38,
+        "overflow": false
+      },
+      {
+        "text": "KULIAH S1",
+        "x": 610,
+        "y": 805,
+        "w": 198.078125,
+        "h": 47,
+        "size": 38,
+        "overflow": false
+      },
+      {
+        "text": "kuliah S1 secara penuh.",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 909,
+    "scene": "06",
+    "items": [
+      {
+        "text": "SETELAH TIBA",
+        "x": 108,
+        "y": 350,
+        "w": 241.375,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "SUDAH DI",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 86.515625,
+        "size": 84,
+        "overflow": false
+      },
+      {
+        "text": "JERMAN?",
+        "x": 108,
+        "y": 491.515625,
+        "w": 852,
+        "h": 86.515625,
+        "size": 84,
+        "overflow": false
+      },
+      {
+        "text": "mahasiswa di Jerman,",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 1101,
+    "scene": "07",
+    "items": [
+      {
+        "text": "PELUANG BUKAN JAMINAN",
+        "x": 108,
+        "y": 350,
+        "w": 456.953125,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "TETAP ADA",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "SELEKSI.",
+        "x": 108,
+        "y": 495.625,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "APLIKASI",
+        "x": 329.0610656738281,
+        "y": 678.68310546875,
+        "w": 220.83822631835938,
+        "h": 49.19384765625,
+        "size": 28,
+        "overflow": false
+      },
+      {
+        "text": "PRESTASI",
+        "x": 550,
+        "y": 869,
+        "w": 209.828125,
+        "h": 52,
+        "size": 42,
+        "overflow": false
+      },
+      {
+        "text": "PERSYARATAN",
+        "x": 550,
+        "y": 1014,
+        "w": 322.546875,
+        "h": 52,
+        "size": 42,
+        "overflow": false
+      },
+      {
+        "text": "SELEKSI",
+        "x": 550,
+        "y": 1159,
+        "w": 176.015625,
+        "h": 52,
+        "size": 42,
+        "overflow": false
+      },
+      {
+        "text": "persyaratan, dan",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 64.265625,
+        "size": 52,
+        "overflow": false
+      },
+      {
+        "text": "proses seleksi.",
+        "x": 108,
+        "y": 1438.265625,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 1308,
+    "scene": "08",
+    "items": [
+      {
+        "text": "PERSIAPAN STUDI",
+        "x": 108,
+        "y": 350,
+        "w": 306.28125,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "RENCANAKAN",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 86.515625,
+        "size": 84,
+        "overflow": false
+      },
+      {
+        "text": "SEJAK AWAL.",
+        "x": 108,
+        "y": 491.515625,
+        "w": 852,
+        "h": 86.515625,
+        "size": 84,
+        "overflow": false
+      },
+      {
+        "text": "untuk merencanakan",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 64.265625,
+        "size": 52,
+        "overflow": false
+      },
+      {
+        "text": "kuliah S1",
+        "x": 108,
+        "y": 1438.265625,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 1389,
+    "scene": "09",
+    "items": [
+      {
+        "text": "BERSAMA TIM OTCA",
+        "x": 108,
+        "y": 350,
+        "w": 338.484375,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "STUDI ANAK",
+        "x": 108,
+        "y": 405.0009765625,
+        "w": 852,
+        "h": 86.515625,
+        "size": 84,
+        "overflow": false
+      },
+      {
+        "text": "KE JERMAN.",
+        "x": 108,
+        "y": 491.5166015625,
+        "w": 852,
+        "h": 86.515625,
+        "size": 84,
+        "overflow": false
+      },
+      {
+        "text": "LINK DI BIO",
+        "x": 235,
+        "y": 630.049072265625,
+        "w": 610,
+        "h": 124,
+        "size": 56,
+        "overflow": false
+      },
+      {
+        "text": "Klik link di bio",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 348,
+    "scene": "03",
+    "items": [
+      {
+        "text": "JENJANG & RISET",
+        "x": 108,
+        "y": 350,
+        "w": 295.546875,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "SASARAN",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "PENDANAAN.",
+        "x": 108,
+        "y": 495.625,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "S2 / MASTER",
+        "x": 640,
+        "y": 595,
+        "w": 284.5625,
+        "h": 54,
+        "size": 44,
+        "overflow": false
+      },
+      {
+        "text": "DOKTORAL",
+        "x": 680,
+        "y": 947,
+        "w": 256.6875,
+        "h": 54,
+        "size": 44,
+        "overflow": false
+      },
+      {
+        "text": "PENELITI",
+        "x": 620,
+        "y": 1270,
+        "w": 214.40625,
+        "h": 57,
+        "size": 46,
+        "overflow": false
+      },
+      {
+        "text": "lulusan S1",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 411,
+    "scene": "03",
+    "items": [
+      {
+        "text": "JENJANG & RISET",
+        "x": 108,
+        "y": 350,
+        "w": 295.546875,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "SASARAN",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "PENDANAAN.",
+        "x": 108,
+        "y": 495.625,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "S2 / MASTER",
+        "x": 640,
+        "y": 595,
+        "w": 284.5625,
+        "h": 54,
+        "size": 44,
+        "overflow": false
+      },
+      {
+        "text": "DOKTORAL",
+        "x": 680,
+        "y": 947,
+        "w": 256.6875,
+        "h": 54,
+        "size": 44,
+        "overflow": false
+      },
+      {
+        "text": "PENELITI",
+        "x": 620,
+        "y": 1270,
+        "w": 214.40625,
+        "h": 57,
+        "size": 46,
+        "overflow": false
+      },
+      {
+        "text": "yang ingin",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 64.265625,
+        "size": 52,
+        "overflow": false
+      },
+      {
+        "text": "melanjutkan S2,",
+        "x": 108,
+        "y": 1438.265625,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 990,
+    "scene": "07",
+    "items": [
+      {
+        "text": "PELUANG BUKAN JAMINAN",
+        "x": 108,
+        "y": 350,
+        "w": 456.953125,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "TETAP ADA",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "SELEKSI.",
+        "x": 108,
+        "y": 495.625,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "APLIKASI",
+        "x": 267.9549865722656,
+        "y": 791.1174926757812,
+        "w": 221.2833251953125,
+        "h": 78.7896728515625,
+        "size": 28,
+        "overflow": false
+      },
+      {
+        "text": "PRESTASI",
+        "x": 550,
+        "y": 869,
+        "w": 209.828125,
+        "h": 52,
+        "size": 42,
+        "overflow": false
+      },
+      {
+        "text": "PERSYARATAN",
+        "x": 550,
+        "y": 1014,
+        "w": 322.546875,
+        "h": 52,
+        "size": 42,
+        "overflow": false
+      },
+      {
+        "text": "SELEKSI",
+        "x": 550,
+        "y": 1159,
+        "w": 176.015625,
+        "h": 52,
+        "size": 42,
+        "overflow": false
+      },
+      {
+        "text": "tetap tergantung pada",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 64.265625,
+        "size": 52,
+        "overflow": false
+      },
+      {
+        "text": "prestasi,",
+        "x": 108,
+        "y": 1438.265625,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 1047,
+    "scene": "07",
+    "items": [
+      {
+        "text": "PELUANG BUKAN JAMINAN",
+        "x": 108,
+        "y": 350,
+        "w": 456.953125,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "TETAP ADA",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "SELEKSI.",
+        "x": 108,
+        "y": 495.625,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "APLIKASI",
+        "x": 329.0610656738281,
+        "y": 678.68310546875,
+        "w": 220.83822631835938,
+        "h": 49.19384765625,
+        "size": 28,
+        "overflow": false
+      },
+      {
+        "text": "PRESTASI",
+        "x": 550,
+        "y": 869,
+        "w": 209.828125,
+        "h": 52,
+        "size": 42,
+        "overflow": false
+      },
+      {
+        "text": "PERSYARATAN",
+        "x": 550,
+        "y": 1014,
+        "w": 322.546875,
+        "h": 52,
+        "size": 42,
+        "overflow": false
+      },
+      {
+        "text": "SELEKSI",
+        "x": 550,
+        "y": 1159,
+        "w": 176.015625,
+        "h": 52,
+        "size": 42,
+        "overflow": false
+      },
+      {
+        "text": "persyaratan, dan",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 64.265625,
+        "size": 52,
+        "overflow": false
+      },
+      {
+        "text": "proses seleksi.",
+        "x": 108,
+        "y": 1438.265625,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "frame": 1122,
+    "scene": "07",
+    "items": [
+      {
+        "text": "PELUANG BUKAN JAMINAN",
+        "x": 108,
+        "y": 350,
+        "w": 456.953125,
+        "h": 32,
+        "size": 26,
+        "overflow": false
+      },
+      {
+        "text": "TETAP ADA",
+        "x": 108,
+        "y": 405,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "SELEKSI.",
+        "x": 108,
+        "y": 495.625,
+        "w": 852,
+        "h": 90.625,
+        "size": 88,
+        "overflow": false
+      },
+      {
+        "text": "APLIKASI",
+        "x": 329.0610656738281,
+        "y": 678.68310546875,
+        "w": 220.83822631835938,
+        "h": 49.19384765625,
+        "size": 28,
+        "overflow": false
+      },
+      {
+        "text": "PRESTASI",
+        "x": 550,
+        "y": 869,
+        "w": 209.828125,
+        "h": 52,
+        "size": 42,
+        "overflow": false
+      },
+      {
+        "text": "PERSYARATAN",
+        "x": 550,
+        "y": 1014,
+        "w": 322.546875,
+        "h": 52,
+        "size": 42,
+        "overflow": false
+      },
+      {
+        "text": "SELEKSI",
+        "x": 550,
+        "y": 1159,
+        "w": 176.015625,
+        "h": 52,
+        "size": 42,
+        "overflow": false
+      },
+      {
+        "text": "Tidak semua",
+        "x": 108,
+        "y": 1368,
+        "w": 852,
+        "h": 64.265625,
+        "size": 52,
+        "overflow": false
+      },
+      {
+        "text": "mahasiswa",
+        "x": 108,
+        "y": 1438.265625,
+        "w": 852,
+        "h": 77.953125,
+        "size": 64,
+        "overflow": false
+      }
+    ]
+  }
+]

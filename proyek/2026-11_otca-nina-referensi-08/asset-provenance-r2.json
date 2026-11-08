@@ -1,0 +1,23 @@
+[
+  {
+    "file": "proyek\\2026-11_otca-nina-referensi-08\\aset\\r2\\campus.png",
+    "tool": "imagegen",
+    "prompt_summary": "Generic fictional German university; ivory limestone, slate roof, three-quarter view; no text or logos.",
+    "transparent_background": true,
+    "sha256": "cf7165b143f209a7b01040bf1017a184aaa1b428310899aff1e3fd32594bcd95"
+  },
+  {
+    "file": "proyek\\2026-11_otca-nina-referensi-08\\aset\\r2\\study.png",
+    "tool": "imagegen",
+    "prompt_summary": "Black mortarboard, brass tassel, open cream books; tactile materials; no text.",
+    "transparent_background": true,
+    "sha256": "7d7fdc37d06b34e37dfeee510fe0bbe3abcdb8eb88cd104ff487b7311f123745"
+  },
+  {
+    "file": "proyek\\2026-11_otca-nina-referensi-08\\aset\\r2\\dossier.png",
+    "tool": "imagegen",
+    "prompt_summary": "Charcoal linen folder, brass corners, ivory ruled papers, gold clip and fountain pen; no official markings.",
+    "transparent_background": true,
+    "sha256": "6b493c9aeac2c3099507991ea6a9453394950475bcf25d20d914c79dd5370356"
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "status": "rancangan-belum-disetujui",
+  "jenis": "sketsa komposisi; belum still produksi Remotion",
+  "sumber": "D:/KERJAAN/OTCA/CONTOH VIDEO MBAK NINA.MOV",
+  "referensi": "D:/KERJAAN/OTCA/Referensi Video.mp4",
+  "durasi": 51.55,
+  "scenes": [
+    {
+      "id": 1,
+      "mulai": 0,
+      "selesai": 4.1,
+      "layout": "talent",
+      "headline": [
+        "BEASISWA S1",
+        "TERBATAS"
+      ],
+      "caption_sample": "peluang beasiswa S1 di Jerman\nternyata sangat terbatas.",
+      "motion": "Celah pendanaan menyempit saat kata terbatas; fokus lalu kembali ke wajah.",
+      "image": "01.png"
+    },
+    {
+      "id": 2,
+      "mulai": 4.1,
+      "selesai": 8.1,
+      "layout": "split",
+      "headline": [
+        "MENGENAL",
+        "DAAD"
+      ],
+      "caption_sample": "Contohnya DAAD, lembaga pemberi\nbeasiswa terbesar di Jerman.",
+      "motion": "Sampul direktori terbuka; lembar membentang menjadi tiga jalur pada adegan berikutnya.",
+      "image": "02.png"
+    },
+    {
+      "id": 3,
+      "mulai": 8.1,
+      "selesai": 16.5,
+      "layout": "full",
+      "headline": [
+        "SASARAN",
+        "PENDANAAN"
+      ],
+      "caption_sample": "untuk lulusan S1 yang ingin\nmelanjutkan S2",
+      "motion": "Tiga lembar keluar berurutan pada ucapan S2, doktoral, peneliti; satu lembar menjadi kalender.",
+      "image": "03.png"
+    },
+    {
+      "id": 4,
+      "mulai": 16.5,
+      "selesai": 22.9,
+      "layout": "split",
+      "headline": [
+        "PELUANG",
+        "PROGRAM TERTENTU"
+      ],
+      "caption_sample": "seperti kursus musim panas\nbahasa Jerman.",
+      "motion": "Lembar kalender dibalik; penanda musim panas bergerak ke fokus, talent tetap tampak.",
+      "image": "04.png"
+    },
+    {
+      "id": 5,
+      "mulai": 22.9,
+      "selesai": 27.93,
+      "layout": "full",
+      "headline": [
+        "PROGRAM KHUSUS",
+        "BUKAN S1 PENUH"
+      ],
+      "caption_sample": "Tetapi program ini berbeda\ndari beasiswa yang membiayai",
+      "motion": "Lembar kursus dan biaya studi berpisah ke dua sisi; garis pembeda muncul karena pemisahan.",
+      "image": "05.png"
+    },
+    {
+      "id": 6,
+      "mulai": 27.93,
+      "selesai": 30.95,
+      "layout": "talent",
+      "headline": [
+        "SUDAH KULIAH",
+        "DI JERMAN?"
+      ],
+      "caption_sample": "Bahkan ketika sudah menjadi\nmahasiswa di Jerman,",
+      "motion": "Cutback ke Nina, kamera mendekat perlahan; kartu mahasiswa menjadi penghubung ke seleksi.",
+      "image": "06.png"
+    },
+    {
+      "id": 7,
+      "mulai": 30.95,
+      "selesai": 39.7,
+      "layout": "full",
+      "headline": [
+        "TETAP ADA",
+        "PROSES SELEKSI"
+      ],
+      "caption_sample": "prestasi, persyaratan,\ndan proses seleksi.",
+      "motion": "Berkas melewati tiga tahap secara berurutan; berhenti sebelum keputusan agar tidak menjanjikan kelulusan.",
+      "image": "07.png"
+    },
+    {
+      "id": 8,
+      "mulai": 39.7,
+      "selesai": 45.7,
+      "layout": "talent",
+      "headline": [
+        "RENCANAKAN",
+        "SEJAK AWAL"
+      ],
+      "caption_sample": "jangan hanya mengandalkan beasiswa\nuntuk merencanakan kuliah S1",
+      "motion": "Kembali ke talent. Berkas studi tersusun sebagai rencana, tidak menambah janji atau angka biaya.",
+      "image": "08.png"
+    },
+    {
+      "id": 9,
+      "mulai": 45.7,
+      "selesai": 51.55,
+      "layout": "split",
+      "headline": [
+        "PERSIAPKAN STUDI",
+        "BERSAMA OTCA"
+      ],
+      "caption_sample": "Klik link di bio untuk mulai\npersiapkan studi anak ke Jerman",
+      "motion": "Garis emas mengantar fokus ke LINK DI BIO. Tahan sampai ucapan asli selesai dan sisakan ekor alami.",
+      "image": "09.png"
+    }
+  ],
+  "persetujuan": null
+}
