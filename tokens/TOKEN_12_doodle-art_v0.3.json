@@ -22,14 +22,14 @@
   },
   "font": {
     "judul": {
-      "file": "LuckiestGuy-Regular.ttf",
-      "family": "Luckiest Guy",
-      "weight": 400
+      "file": "Gliker Bold.ttf",
+      "family": "Gliker-Bold",
+      "weight": 700
     },
     "subjudul": {
-      "file": "LuckiestGuy-Regular.ttf",
-      "family": "Luckiest Guy",
-      "weight": 400
+      "file": "Gliker Bold.ttf",
+      "family": "Gliker-Bold",
+      "weight": 700
     },
     "isi": {
       "file": "Baloo2-Variable.ttf",
@@ -44,9 +44,9 @@
       "wght": 800
     },
     "depth": {
-      "file": "LuckiestGuy-Regular.ttf",
-      "family": "Luckiest Guy",
-      "weight": 400
+      "file": "Gliker Black.ttf",
+      "family": "Gliker-Black",
+      "weight": 900
     }
   },
   "ukuran": {

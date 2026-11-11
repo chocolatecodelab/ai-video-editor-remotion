@@ -22,29 +22,29 @@
   },
   "font": {
     "judul": {
-      "file": "Anton-Regular.ttf",
-      "family": "Anton",
-      "weight": 400
+      "file": "FRAHV.TTF",
+      "family": "Franklin Gothic Heavy",
+      "weight": 800
     },
     "subjudul": {
-      "file": "Anton-Regular.ttf",
-      "family": "Anton",
-      "weight": 400
+      "file": "FRADM.TTF",
+      "family": "Franklin Gothic Demi",
+      "weight": 600
     },
     "isi": {
-      "file": "courbd.ttf",
-      "family": "Courier New",
+      "file": "consolab.ttf",
+      "family": "Consolas",
       "weight": 700
     },
     "caption": {
-      "file": "Anton-Regular.ttf",
-      "family": "Anton",
-      "weight": 400
+      "file": "FRAHV.TTF",
+      "family": "Franklin Gothic Heavy",
+      "weight": 800
     },
     "depth": {
-      "file": "Anton-Regular.ttf",
-      "family": "Anton",
-      "weight": 400
+      "file": "FRAHV.TTF",
+      "family": "Franklin Gothic Heavy",
+      "weight": 800
     }
   },
   "ukuran": {

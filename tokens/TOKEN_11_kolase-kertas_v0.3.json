@@ -22,29 +22,30 @@
   },
   "font": {
     "judul": {
-      "file": "Bangers-Regular.ttf",
-      "family": "Bangers",
-      "weight": 400
+      "file": "GARABD.TTF",
+      "family": "Garamond",
+      "weight": 700
     },
     "subjudul": {
-      "file": "Bangers-Regular.ttf",
-      "family": "Bangers",
+      "file": "GARA.TTF",
+      "family": "Garamond",
       "weight": 400
     },
     "isi": {
-      "file": "Poppins-SemiBold.ttf",
-      "family": "Poppins",
-      "weight": 600
+      "file": "Inter-Variable.ttf",
+      "family": "Inter",
+      "weight": 500,
+      "wght": 500
     },
     "caption": {
-      "file": "Poppins-Bold.ttf",
-      "family": "Poppins",
+      "file": "GARABD.TTF",
+      "family": "Garamond",
       "weight": 700
     },
     "depth": {
-      "file": "Bangers-Regular.ttf",
-      "family": "Bangers",
-      "weight": 400
+      "file": "GARABD.TTF",
+      "family": "Garamond",
+      "weight": 700
     }
   },
   "ukuran": {

@@ -22,19 +22,20 @@
   },
   "font": {
     "judul": {
-      "file": "Anton-Regular.ttf",
-      "family": "Anton",
-      "weight": 400
+      "file": "Montserrat-Black.ttf",
+      "family": "Montserrat",
+      "weight": 900
     },
     "subjudul": {
-      "file": "Anton-Regular.ttf",
-      "family": "Anton",
-      "weight": 400
+      "file": "Montserrat-ExtraBold.ttf",
+      "family": "Montserrat",
+      "weight": 800
     },
     "isi": {
-      "file": "Montserrat-Bold.ttf",
-      "family": "Montserrat",
-      "weight": 700
+      "file": "Inter-Variable.ttf",
+      "family": "Inter",
+      "weight": 600,
+      "wght": 600
     },
     "caption": {
       "file": "Montserrat-ExtraBold.ttf",
@@ -42,9 +43,9 @@
       "weight": 800
     },
     "depth": {
-      "file": "Anton-Regular.ttf",
-      "family": "Anton",
-      "weight": 400
+      "file": "Montserrat-Black.ttf",
+      "family": "Montserrat",
+      "weight": 900
     }
   },
   "ukuran": {

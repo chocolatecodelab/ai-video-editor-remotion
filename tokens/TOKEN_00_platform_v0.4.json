@@ -513,7 +513,8 @@
       "paper-cut",
       "headline-wall",
       "lower-third",
-      "linimasa"
+      "linimasa",
+      "chat-window"
     ],
     "masalah": [
       "info",
@@ -541,7 +542,9 @@
       "terminal",
       "timeline",
       "ui-world",
-      "checklist"
+      "checklist",
+      "chat-window",
+      "split-explainer"
     ],
     "langkah": [
       "langkah",
@@ -550,7 +553,8 @@
       "timeline",
       "info",
       "chip",
-      "callout"
+      "callout",
+      "split-explainer"
     ],
     "kustomisasi": [
       "form-ganti",
@@ -569,7 +573,8 @@
       "checklist",
       "langkah",
       "timeline",
-      "info"
+      "info",
+      "split-explainer"
     ],
     "ajakan": [
       "cta"

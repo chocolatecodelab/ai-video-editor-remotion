@@ -32,14 +32,16 @@
       "weight": 400
     },
     "isi": {
-      "file": "Poppins-Regular.ttf",
-      "family": "Poppins",
-      "weight": 400
+      "file": "Inter-Variable.ttf",
+      "family": "Inter",
+      "weight": 500,
+      "wght": 500
     },
     "caption": {
-      "file": "Poppins-Bold.ttf",
-      "family": "Poppins",
-      "weight": 700
+      "file": "Inter-Variable.ttf",
+      "family": "Inter",
+      "weight": 700,
+      "wght": 700
     },
     "depth": {
       "file": "DMSerifDisplay-Regular.ttf",

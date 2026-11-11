@@ -22,29 +22,30 @@
   },
   "font": {
     "judul": {
-      "file": "LilitaOne-Regular.ttf",
-      "family": "Lilita One",
-      "weight": 400
+      "file": "ROCKB.TTF",
+      "family": "Rockwell",
+      "weight": 700
     },
     "subjudul": {
-      "file": "LilitaOne-Regular.ttf",
-      "family": "Lilita One",
+      "file": "ROCK.TTF",
+      "family": "Rockwell",
       "weight": 400
     },
     "isi": {
-      "file": "Poppins-Medium.ttf",
-      "family": "Poppins",
-      "weight": 500
+      "file": "Inter-Variable.ttf",
+      "family": "Inter",
+      "weight": 500,
+      "wght": 500
     },
     "caption": {
-      "file": "Poppins-Bold.ttf",
-      "family": "Poppins",
+      "file": "ROCKB.TTF",
+      "family": "Rockwell",
       "weight": 700
     },
     "depth": {
-      "file": "LilitaOne-Regular.ttf",
-      "family": "Lilita One",
-      "weight": 400
+      "file": "ROCKEB.TTF",
+      "family": "Rockwell Extra Bold",
+      "weight": 800
     }
   },
   "ukuran": {
