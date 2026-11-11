@@ -39,3 +39,19 @@ efek/pratinjau/*.png
 proyek/*/out/*.png
 proyek/*/out/storyboard/
 proyek/*/out/storyboard.html
+
+# hasil render, keluaran sementara, dan berkas uji (bisa dibuat ulang)
+output/
+proyek/*/out/
+proyek/office-*/
+proyek/test-sb-*/
+proyek/*.mp4
+*.mp4
+remotion/public/
+remotion/test_*.png
+referensi/ai_effect_frames/
+referensi/rotoscope-ref/
+referensi/*.mp4
+proyek/*/aset/brand/
+proyek/*/aset/
+
