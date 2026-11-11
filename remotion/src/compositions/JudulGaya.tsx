@@ -124,7 +124,8 @@ export const JudulGaya: React.FC<JudulGayaProps> = (props) => {
     <Wadah wadah={wadah}>
       <div style={{ display: "flex", justifyContent: "center", opacity, transform, transformOrigin: "50% 60%" }}>
         {el.latar === "panel" ? (
-          <div style={{ display: "inline-block", maxWidth: "100%" }}>
+          <div style={{ display: "inline-block", maxWidth: "100%", borderRadius: px(t.radius.kartu),
+                        boxShadow: `0 0 ${px(32)}px ${rgba(w.aksen, 0.35)}, 0 ${px(16)}px ${px(40)}px rgba(0,0,0,0.55)` }}>
             <Jendela t={t} px={px} w={w} u={u} polos seed={el.teks} padding={px(t.spasi["padding-kartu"]) * 0.8}>{isi}</Jendela>
           </div>
         ) : isi}

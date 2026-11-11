@@ -102,7 +102,11 @@ export const pakaiDasar = <E extends ElemenUI>(props: PropsDasar<E>, posisiDefau
     bayangan: `${px(t.bayangan.offset[0])}px ${px(t.bayangan.offset[1])}px ${px(t.bayangan.blur)}px ${rgba(warna(t, "bayangan"), Number(t.warna["bayangan-opasitas"]))}`,
   };
   const u = { isi: px(t.ukuran.isi), sub: px(t.ukuran.subjudul), judul: px(t.ukuran.judul), kecil: px(qa["ukuran-min-px"]) };
-  const font = (peran: "isi" | "subjudul" | "judul") => ({ fontFamily: t.font[peran].family, fontWeight: t.font[peran].weight });
+  const font = (peran: "isi" | "subjudul" | "judul") => ({
+    fontFamily: t.font[peran]?.family || "Inter, sans-serif",
+    fontWeight: t.font[peran]?.weight || 500,
+    letterSpacing: peran === "judul" ? "-0.025em" : peran === "subjudul" ? "-0.015em" : undefined,
+  });
   const motif = motifDari(t);
   const [x0, , x1] = zona;
   // bingkai yang melampaui kotaknya sendiri (bayangan keras, rotasi, braket sudut) diberi jarak agar tetap di zona aman (K00.1)

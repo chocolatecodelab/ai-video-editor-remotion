@@ -13,7 +13,7 @@ const muat = (alias: string, file: string, weight: number) => {
   if (!dimuat.has(kunci)) {
     // variable font: descriptor rentang → font-weight CSS memilih titik sumbu wght (Inter, Baloo 2, Playfair)
     const variabel = /variable/i.test(file);
-    const ff = new FontFace(alias, `url(${staticFile(`fonts/${encodeURIComponent(file)}`)})`, { weight: variabel ? "100 900" : String(weight) });
+    const ff = new FontFace(alias, `url("${staticFile(`fonts/${file}`)}")`, { weight: variabel ? "100 900" : String(weight) });
     dimuat.set(kunci, ff.load().then((f) => { document.fonts.add(f); }).catch((e) => {
       const pesan = `font token '${file}' (${alias}) gagal dimuat dari public/fonts: ${e}`;
       if (getRemotionEnvironment().isRendering) cancelRender(new Error(pesan));

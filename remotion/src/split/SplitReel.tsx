@@ -46,7 +46,11 @@ export type SplitReelProps = {
   /** gaya "pil": kata aktif = teks putih di pil aksen (highlight style brand Jepang Koey); bawaan "kaca". */
   caption: { y: number; kata_maks: number; karakter_maks: number; jeda_pecah: number; gaya?: "kaca" | "pil";
     /** warna teks kata aktif di atas pil aksen (brand dengan aksen terang, mis. kuning Info Jerman: teks charcoal); bawaan teks. */
-    teks_pil?: string };
+    teks_pil?: string;
+    /** [detik awal halaman, y] dari split.py: y per halaman, sudah digeser di atas puncak wajah/sosok (§10). */
+    per_halaman?: [number, number][] };
+  /** Cutout talent RGBA per frame (split.py potong_talent) untuk adegan `depan`: `dir` + NNNNNN.webp, `frame` = yang ada. */
+  depan?: { dir: string; frame: number[]; skala: number };
 };
 
 /** Halaman caption: pecah per jeda / jumlah kata / panjang karakter (token caption). */
@@ -66,9 +70,9 @@ const halaman = (kata: Kata[], c: SplitReelProps["caption"]) => {
   return hasil;
 };
 
-const Footage: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
-  const f = useCurrentFrame();
-  const t = f / pr.fps;
+/** Posisi rekaman di detik t (dipakai Footage & TalentDepan agar cutout tepat di atas pikselnya): skala, geser_y,
+ *  titik asal zoom (px dalam bingkai rekaman), keadaan transisi klip. */
+const posisiFootage = (pr: SplitReelProps, t: number) => {
   const z = pr.zoom;
   let i = 0;
   while (i < z.length - 2 && z[i + 1][0] <= t) i++;
@@ -76,8 +80,15 @@ const Footage: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
   // push-in linear disengaja (gerak kamera konstan di dalam satu potongan, K05.1 pengecualian kamera)
   const tk = transisiKlip(pr, t);
   const s = z[i][1] * (1 + 0.03 * u) * hookZoom(pr, t, 0.06) * (1 + 0.12 * tk.dorong);
-  const atas = pr.tinggi_panggung;
   const geser = z[i][2] ?? pr.footage.geser_y;
+  return { s, geser, oy: pr.footage.titik_zoom_y + geser - pr.footage.geser_y, tk };
+};
+
+const Footage: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
+  const f = useCurrentFrame();
+  const t = f / pr.fps;
+  const { s, geser, oy, tk } = posisiFootage(pr, t);
+  const atas = pr.tinggi_panggung;
   const grade = pr.tokens.grade as { kontras: number; saturasi: number };
   const G = pr.gradasi;
   return (
@@ -86,7 +97,7 @@ const Footage: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
         : interpolate(t, [pr.footage.tutup, pr.footage.tutup + 0.7], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
       maskImage: `linear-gradient(180deg, transparent 0px, black ${G}px)`, WebkitMaskImage: `linear-gradient(180deg, transparent 0px, black ${G}px)` }}>
       <div style={{ position: "absolute", top: G - geser, left: 0, width: pr.W, height: pr.H, scale: String(s),
-        transformOrigin: `${pr.W / 2}px ${pr.footage.titik_zoom_y + geser - pr.footage.geser_y}px` }}>
+        transformOrigin: `${pr.W / 2}px ${oy}px` }}>
         <OffthreadVideo src={staticFile(pr.footage.src)} muted
           style={{ width: pr.W, height: pr.H, filter: `contrast(${1 + grade.kontras}) saturate(${grade.saturasi})${
             tk.dorong > 0.01 ? ` blur(${(tk.dorong * 9).toFixed(2)}px) brightness(${1 + 0.18 * tk.dorong})` : ""}` }} />
@@ -97,6 +108,33 @@ const Footage: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) => {
       <div style={{ position: "absolute", inset: 0, background: `linear-gradient(180deg, ${rgba(wr.latar, 0.85)} 0px, ${rgba(wr.latar, 0)} ${G * 1.5}px)` }} />
       <div style={{ position: "absolute", inset: 0, boxShadow: `inset 0 0 180px ${rgba(wr.latar, 0.6)}` }} />
       {tk.sapu !== null ? <SapuanKlip x={tk.sapu} W={pr.W} wr={wr} /> : null}
+    </div>
+  );
+};
+
+/** Talent DI DEPAN panggung (adegan `depan`): cutout RGBA hasil matting (split.py, birefnet + feather + decontaminate)
+ *  digambar dengan transform & grade yang sama persis dengan Footage, jadi hanya grafis di belakang kepala yang
+ *  "terpotong" oleh sosok. Memudar ke rekaman di bawah dada (piksel identik → tanpa sambungan). <Img> per frame
+ *  ditunggu Remotion (stabil frame-akurat, tidak seperti CSS mask-image yang tidak dilacak delayRender). */
+const TalentDepan: React.FC<{ pr: SplitReelProps }> = ({ pr }) => {
+  const f = useCurrentFrame();
+  const t = f / pr.fps;
+  const dp = pr.depan;
+  const a = pr.adegan.find((x) => x.depan && t >= x.mulai - 0.2 && t < x.selesai + 0.2);
+  if (!dp || !a || !dp.frame.includes(f)) return null;
+  const o = interpolate(t, [a.mulai - 0.15, a.mulai + 0.12, a.selesai - 0.12, a.selesai + 0.15], [0, 1, 1, 0],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const { s, geser, oy } = posisiFootage(pr, t);
+  const grade = pr.tokens.grade as { kontras: number; saturasi: number };
+  const m = `linear-gradient(180deg, black ${pr.tinggi_panggung + 260}px, transparent ${pr.tinggi_panggung + 480}px)`;
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: o, maskImage: m, WebkitMaskImage: m }}>
+      <div style={{ position: "absolute", top: pr.tinggi_panggung - geser, left: 0, width: pr.W, height: pr.H, scale: String(s),
+        transformOrigin: `${pr.W / 2}px ${oy}px` }}>
+        {/* brightness 0.83 ≈ lapisan multiply latar 18 % di Footage */}
+        <Img src={staticFile(`${dp.dir}${String(f).padStart(6, "0")}.webp`)}
+          style={{ width: pr.W, height: pr.H, filter: `contrast(${1 + grade.kontras}) saturate(${grade.saturasi}) brightness(0.83)` }} />
+      </div>
     </div>
   );
 };
@@ -318,11 +356,13 @@ const Wadah: React.FC<{ k: Konteks; wr: Warna; font: string; gradasi: number; H:
   const tout = iris.keluar ? 0 : prog(k, a.selesai, match.keluar ? 0.25 : 0.4, "keluar");
   const zm = (match.masuk ? 1 : mix(1.1, 1, tin)) * (match.keluar ? 1 : mix(1, 0.9, tout));
   const blur = (match.masuk ? 0 : (1 - tin) * 12) + (match.keluar ? 0 : tout * 12);
+  // depan: kanvas setinggi frame tanpa pudar (grafis turun ke belakang kepala talent; TalentDepan menutupinya)
+  const tinggi = a.depan ? H : p.tinggi;
   return (
-    <div style={{ position: "absolute", top: 0, left: 0, width: p.W, height: p.tinggi, opacity: tin * (1 - tout),
+    <div style={{ position: "absolute", top: 0, left: 0, width: p.W, height: tinggi, opacity: tin * (1 - tout),
       scale: String(zm), filter: blur > 0.05 ? `blur(${blur}px)` : undefined, transformOrigin: `${p.cx}px ${p.tinggi / 2}px`,
-      ...(a.penuh ? {} : pudarBawah(gradasi * 0.6)), clipPath: klip }}>
-      <svg viewBox={`0 0 ${p.W} ${p.tinggi}`} width={p.W} height={p.tinggi} style={{ overflow: "visible" }}>
+      ...(a.penuh || a.depan ? {} : pudarBawah(gradasi * 0.6)), clipPath: klip }}>
+      <svg viewBox={`0 0 ${p.W} ${tinggi}`} width={p.W} height={tinggi} style={{ overflow: "visible" }}>
         <Modul k={k} wr={wr} font={font} />
       </svg>
     </div>
@@ -387,8 +427,9 @@ const Caption: React.FC<{ pr: SplitReelProps; wr: Warna; tok: Tokens; hal: Kata[
   const cap = tok.caption as { stroke: number; redup: number };
   const masuk = prog(k, h[0].s - 0.08, 0.25);
   const pil = pr.caption.gaya === "pil";
+  const y = pr.caption.per_halaman?.find((x) => Math.abs(x[0] - h[0].s) < 1e-3)?.[1] ?? pr.caption.y;
   return (
-    <div style={{ position: "absolute", top: pr.caption.y, left: 0, width: pr.W, display: "flex", justifyContent: "center",
+    <div style={{ position: "absolute", top: y, left: 0, width: pr.W, display: "flex", justifyContent: "center",
       translate: `0px ${mix(14, 0, masuk)}px`, opacity: masuk }}>
       <div style={{ translate: "0 -50%", padding: "14px 34px", borderRadius: 999, background: rgba(wr.panel, 0.72),
         border: `2px solid ${wr.garis}`, boxShadow: `0 10px 30px ${rgba("#000000", 0.45)}, 0 0 40px ${rgba(wr.aksen, 0.18)}`,
@@ -453,6 +494,7 @@ export const SplitReel: React.FC<SplitReelProps> = (pr) => {
       <LogoKlien pr={pr} wr={wr} cx={p.cx} />
       <HookPembuka pr={pr} wr={wr} cx={hx} cy={hy} />
       <Sambungan pr={pr} wr={wr} />
+      <TalentDepan pr={pr} />
       {pr.menyatu?.sapuan !== false ? <SapuanCahaya pr={pr} wr={wr} /> : null}
       {pr.menyatu?.grain !== false ? <Grain pr={pr} /> : null}
       <Caption pr={pr} wr={wr} tok={tok} hal={hal} />

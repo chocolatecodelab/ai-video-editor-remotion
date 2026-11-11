@@ -20,6 +20,11 @@ export type Adegan = {
   titik?: [number, number];
   /** Adegan layar penuh (kartu akhir): wadah setinggi frame tanpa pudar bawah, menutupi talent. */
   penuh?: boolean;
+  /** Talent hasil matting digambar DI DEPAN panggung: grafis boleh turun ke area talent (svg setinggi frame, tanpa
+   *  pudar bawah) dan tampak di belakang/di atas kepala. Latar modul memudar sendiri (lihat `PudarLatar`). */
+  depan?: boolean;
+  /** y pusat caption selama adegan ini (px); split.py tetap menggeser naik bila menabrak sosok (§10). */
+  caption_y?: number;
 };
 
 /** blur-zoom = potong bawaan (motif glass-tech); match = silang pudar tanpa zoom (bentuk sama di dua adegan);

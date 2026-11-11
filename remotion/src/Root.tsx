@@ -28,6 +28,10 @@ import { GrowthCurve, GrowthCurveElemen, HeadlineStorm, HeadlineStormElemen, Liq
          StudioSetElemen } from "./compositions/EfekBaru";
 import { BabBaru, BabBaruElemen, DuaLinimasa, DuaLinimasaElemen, KinetikKata, KinetikKataElemen, Lintasan,
          LintasanElemen } from "./compositions/Reflektif";
+import { LayerExplosion, LayerExplosionProps } from "./compositions/LayerExplosion";
+import { ValidasiBadge, ValidasiBadgeProps } from "./compositions/ValidasiBadge";
+import { ChatWindow, ChatWindowProps } from "./compositions/ChatWindow";
+import { SplitExplainer, SplitExplainerProps } from "./compositions/SplitExplainer";
 import { SplitReel, SplitReelProps } from "./split/SplitReel";
 import { PropsDasar, Tokens } from "./lib/kontrak";
 import platform from "../../tokens/TOKEN_00_platform_v0.4.json";
@@ -86,8 +90,22 @@ export const RemotionRoot: React.FC = () => (
       defaultProps={dasar({ judul: "naskah.txt", teks: "naskahnya", durasi_masuk: 0.38, durasi_keluar: 0.24, opasitas: 0.9,
         jadwal: { coret: 0.8, durasi_coret: 0.35, silang: 1.15 } }, 3) as CoretProps} />
     <Composition id="Timeline" component={Timeline} calculateMetadata={dariProps<TimelineProps>()}
-      defaultProps={dasar({ chip: ["semua", "pas", "dengan", "tiap", "kata"], catatan: "ditambatkan ke kata", durasi_masuk: 0.38, durasi_keluar: 0.24, opasitas: 0.9,
-        jadwal: { trek: [0.58, 1.08, 1.58], chip: [2.2, 2.5, 2.8, 3.1, 3.4], playhead: [0.38, 5.5] } }, 6) as TimelineProps} />
+      defaultProps={dasar({
+        nama_studio: "Timeline Editor",
+        judul: "Workflow Editor",
+        sub: "Sinkronisasi trek video & audio",
+        trek: [
+          { nama: "V2", label: "B-roll Cutaway", warna: "#ea580c", offset_persen: 30, lebar_persen: 45 },
+          { nama: "V1", label: "Talking Head A-Roll", warna: "#2563eb", offset_persen: 5, lebar_persen: 90 },
+          { nama: "A1", label: "Voiceover Audio", warna: "#10b981", offset_persen: 5, lebar_persen: 90 },
+        ],
+        chip: ["semua", "pas", "dengan", "tiap", "kata"],
+        catatan: "ditambatkan ke kata",
+        durasi_masuk: 0.38,
+        durasi_keluar: 0.24,
+        opasitas: 0.9,
+        jadwal: { trek: [0.58, 1.08, 1.58], chip: [2.2, 2.5, 2.8, 3.1, 3.4], playhead: [0.38, 5.5] },
+      }, 6) as TimelineProps} />
     <Composition id="GridVariasi" component={GridVariasi} calculateMetadata={dariProps<GridVariasiProps>()}
       defaultProps={dasar({ judul: "ship", ke: 60, durasi_masuk: 0.38, durasi_keluar: 0.24, opasitas: 0.9,
         jadwal: { ubin: Array.from({ length: 60 }, (_, i) => 0.7 + 1.8 * (0.5 - Math.sin(Math.asin(1 - 2 * ((i + 1) / 60)) / 3))) } }, 4.5) as GridVariasiProps} />
@@ -176,6 +194,91 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="BabBaru" component={BabBaru} calculateMetadata={dariProps<PropsDasar<BabBaruElemen>>()}
       defaultProps={dasar({ judul: "A *different* chapter", sub: "of your life", kepala: "Chapter", nomor: "II", durasi_masuk: 0,
         durasi_keluar: 0, jadwal: { balik: [0.4, 0.8, 1.2], judul: 1.9, dorong: 1.8 } }, 5.5) as PropsDasar<BabBaruElemen>} />
+    <Composition
+      id="LayerExplosion"
+      component={LayerExplosion}
+      calculateMetadata={dariProps<LayerExplosionProps>()}
+      defaultProps={dasar(
+        {
+          judul: "DEKONSTRUKSI *LAYER*",
+          sub: "Struktur kedalaman rotoscope 3D",
+          teks_layer: "ROTOSCOPE",
+          caption_layer: "Memisahkan *subjek* dari latar",
+          durasi_masuk: 0.35,
+          durasi_keluar: 0.3,
+          jadwal: { ledak: 0.5, lapis: [0.65, 0.9, 1.15, 1.4] },
+        },
+        5,
+      ) as LayerExplosionProps}
+    />
+    <Composition
+      id="ValidasiBadge"
+      component={ValidasiBadge}
+      calculateMetadata={dariProps<ValidasiBadgeProps>()}
+      defaultProps={dasar(
+        {
+          salah_teks: "Salah",
+          salah_sub: "Teks menutupi wajah penutur",
+          benar_teks: "Benar",
+          benar_sub: "Teks rapi di balik subjek (rotoscope)",
+          posisi: "atas",
+          durasi_masuk: 0.3,
+          durasi_keluar: 0.25,
+          jadwal: { ganti: 1.8 },
+        },
+        3.5,
+      ) as ValidasiBadgeProps}
+    />
+    <Composition
+      id="ChatWindow"
+      component={ChatWindow}
+      calculateMetadata={dariProps<ChatWindowProps>()}
+      defaultProps={dasar(
+        {
+          utama: {
+            judul: "Chat dengan AI",
+            tag: "contoh",
+            balon: [
+              { peran: "user", pesan: "Stack paling bagus buat deploy website-ku apa?" },
+              { peran: "ai", pesan: "Pakai *VPS berbayar* + paket Pro. Itu stack wajib!" },
+            ],
+          },
+          kedua: {
+            judul: "Audit Prompt",
+            tag: "audit",
+            balon: [
+              { peran: "user", pesan: "Cek jawaban ini. Ada yang salah?" },
+            ],
+          },
+          pikiran: ["Harus bayar ini?", "Harus bayar VPS?"],
+          posisi: "tengah",
+          durasi_masuk: 0.35,
+          durasi_keluar: 0.25,
+          jadwal: { masuk_utama: 0.2, balon_utama: [0.5, 1.2], masuk_kedua: 2.2, balon_kedua: [2.6], pikiran: [0.9, 1.4] },
+        },
+        5,
+      ) as ChatWindowProps}
+    />
+    <Composition
+      id="SplitExplainer"
+      component={SplitExplainer}
+      calculateMetadata={dariProps<SplitExplainerProps>()}
+      defaultProps={dasar(
+        {
+          kategori: "CARANYA",
+          rasio_split: 0.5,
+          langkah: [
+            { nomor: 1, judul: "Kasih *datanya*", sub: "atau sumbernya, suruh jawab dari situ aja" },
+            { nomor: 2, judul: "Izinkan bilang *nggak tahu*", sub: "atau suruh cek ulang dulu" },
+            { nomor: 3, judul: "Cek sendiri *angka penting*", sub: "terutama metrik & biaya bisnis" },
+          ],
+          durasi_masuk: 0.3,
+          durasi_keluar: 0.25,
+          jadwal: { kategori: 0.2, langkah: [0.5, 1.4, 2.3] },
+        },
+        5,
+      ) as SplitExplainerProps}
+    />
     {/* Layout split talking-head (pipeline/scripts/split.py). Studio: split.py studio <proyek> mengisi --props. */}
     <Composition id="SplitReel" component={SplitReel}
       calculateMetadata={({ props }: { props: SplitReelProps }) => ({ durationInFrames: props.durasiFrame, fps: props.fps,

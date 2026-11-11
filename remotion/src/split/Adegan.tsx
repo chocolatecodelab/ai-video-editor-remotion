@@ -19,6 +19,7 @@ import {
 import {
   AkBatu, AkBelajar, AkBenang, AkCakrawala, AkJalur, AkKartu, AkMaju, AkPin, AkSimpul, AkTanya, AkTenang, AkTerima,
 } from "./AdeganAccept";
+import { LuKabut, LuKompas, LuLepas, LuMarionet, LuOrbitTanya, LuPeta, LuPuzzle, LuRencana, LuSungai, LuTangan } from "./AdeganLife";
 import { INOUT, Konteks, detik, drift, gambar, mix, prog, progE, tk } from "./alat";
 import {
   Bendera, Bintang, Cahaya, Centang, G, IkonKecil, Kaca, KilauDef, Langit, Laptop, Mata, Menara, Orang, Perisai,
@@ -620,4 +621,14 @@ export const PUSTAKA: Record<string, React.FC<PropsAdegan>> = {
   "ak-pin": AkPin,
   "ak-cakrawala": AkCakrawala,
   "ak-kartu": AkKartu,
+  "lu-rencana": LuRencana,
+  "lu-marionet": LuMarionet,
+  "lu-orbit-tanya": LuOrbitTanya,
+  "lu-tangan": LuTangan,
+  "lu-lepas": LuLepas,
+  "lu-sungai": LuSungai,
+  "lu-peta": LuPeta,
+  "lu-puzzle": LuPuzzle,
+  "lu-kompas": LuKompas,
+  "lu-kabut": LuKabut,
 };

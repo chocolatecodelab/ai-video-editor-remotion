@@ -160,7 +160,7 @@ export const GrowthCurve: React.FC<PropsDasar<GrowthCurveElemen>> = (props) => {
               <circle r={22 + 6 * Math.sin(p * 20)} fill="none" stroke={w.aksen} strokeWidth={2} opacity={0.5} />
               <g transform="translate(-8 -46)">
                 <rect x={-70} y={-36} width={150} height={48} rx={motif.bingkai === "brutal" ? 0 : 14} fill={w.aksen} />
-                <text x={5} y={-3} textAnchor="middle" fontSize={30} fill={w.latar} style={font("judul")}>{fmt(nilai)}{el.akhiran ?? ""}</text>
+                <text x={5} y={-3} textAnchor="middle" fontSize={30} fill={w.latar} style={{ ...font("judul"), fontVariantNumeric: "tabular-nums" }}>{fmt(nilai)}{el.akhiran ?? ""}</text>
               </g>
             </g>
           ) : null}
