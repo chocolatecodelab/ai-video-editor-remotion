@@ -7,9 +7,17 @@
       4.9
     ]
   },
+  "bab-baru": {
+    "efek": "bab-baru@0.1",
+    "gaya": "kertas-tipografi@0.5",
+    "jendela": [
+      0.3,
+      5.9
+    ]
+  },
   "blur-zoom": {
     "efek": "blur-zoom@0.2",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       1.5,
       4.5
@@ -17,7 +25,7 @@
   },
   "broll-overlay": {
     "efek": "broll-overlay@0.1",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       4.9
@@ -33,7 +41,7 @@
   },
   "celup": {
     "efek": "celup@0.1",
-    "gaya": "kaca-gelap@0.4",
+    "gaya": "kaca-gelap@0.5",
     "jendela": [
       1.5,
       4.5
@@ -41,15 +49,23 @@
   },
   "chart-grow": {
     "efek": "chart-grow@0.2",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       4.9
     ]
   },
+  "chat-window": {
+    "efek": "chat-window@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      5.9
+    ]
+  },
   "checklist": {
     "efek": "checklist@0.3",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       4.9
@@ -65,7 +81,7 @@
   },
   "coret": {
     "efek": "coret@0.1",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       4.9
@@ -73,7 +89,7 @@
   },
   "couch-wall": {
     "efek": "couch-wall@0.2",
-    "gaya": "coffee-lofi@0.4",
+    "gaya": "coffee-lofi@0.5",
     "jendela": [
       0.3,
       6.7
@@ -81,7 +97,7 @@
   },
   "cover-story": {
     "efek": "cover-story@0.2",
-    "gaya": "kertas-tipografi@0.4",
+    "gaya": "kertas-tipografi@0.5",
     "jendela": [
       0.3,
       4.9
@@ -89,7 +105,7 @@
   },
   "digital-zoom": {
     "efek": "digital-zoom@0.2",
-    "gaya": "bold-kinetic@0.5",
+    "gaya": "bold-kinetic@0.6",
     "jendela": [
       0.3,
       4.9
@@ -97,10 +113,18 @@
   },
   "doodle-boil": {
     "efek": "doodle-boil@0.2",
-    "gaya": "doodle-art@0.4",
+    "gaya": "doodle-art@0.5",
     "jendela": [
       0.3,
       4.9
+    ]
+  },
+  "dua-linimasa": {
+    "efek": "dua-linimasa@0.1",
+    "gaya": "kertas-tipografi@0.5",
+    "jendela": [
+      0.3,
+      5.3
     ]
   },
   "form-ganti": {
@@ -113,7 +137,7 @@
   },
   "frame-break": {
     "efek": "frame-break@0.2",
-    "gaya": "bold-kinetic@0.5",
+    "gaya": "bold-kinetic@0.6",
     "jendela": [
       0.3,
       4.9
@@ -121,7 +145,7 @@
   },
   "frame-escape": {
     "efek": "frame-escape@0.1",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       4.9
@@ -129,7 +153,7 @@
   },
   "glass-type": {
     "efek": "glass-type@0.2",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       4.9
@@ -137,7 +161,7 @@
   },
   "glitch": {
     "efek": "glitch@0.1",
-    "gaya": "rts-modern@0.4",
+    "gaya": "rts-modern@0.5",
     "jendela": [
       1.5,
       4.5
@@ -145,7 +169,7 @@
   },
   "green-screen": {
     "efek": "green-screen@0.2",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       6.7
@@ -153,7 +177,7 @@
   },
   "grid-variasi": {
     "efek": "grid-variasi@0.1",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       4.9
@@ -177,7 +201,7 @@
   },
   "headline-wall": {
     "efek": "headline-wall@0.2",
-    "gaya": "bold-kinetic@0.5",
+    "gaya": "bold-kinetic@0.6",
     "jendela": [
       0.3,
       5.4
@@ -185,6 +209,14 @@
   },
   "judul-gaya": {
     "efek": "judul-gaya@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      4.9
+    ]
+  },
+  "kinetik-kata": {
+    "efek": "kinetik-kata@0.1",
     "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
@@ -199,12 +231,28 @@
       4.9
     ]
   },
+  "layer-explosion": {
+    "efek": "layer-explosion@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      5.4
+    ]
+  },
   "linimasa": {
     "efek": "linimasa@0.1",
     "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       4.9
+    ]
+  },
+  "lintasan": {
+    "efek": "lintasan@0.1",
+    "gaya": "kertas-tipografi@0.5",
+    "jendela": [
+      0.3,
+      5.4
     ]
   },
   "liquid-glass": {
@@ -225,7 +273,7 @@
   },
   "orbit": {
     "efek": "orbit@0.2",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       4.9
@@ -233,7 +281,7 @@
   },
   "paper-cut": {
     "efek": "paper-cut@0.2",
-    "gaya": "paper-motion@0.4",
+    "gaya": "paper-motion@0.5",
     "jendela": [
       0.3,
       4.9
@@ -241,7 +289,7 @@
   },
   "paper-cutout": {
     "efek": "paper-cutout@0.1",
-    "gaya": "kolase-kertas@0.4",
+    "gaya": "kolase-kertas@0.5",
     "jendela": [
       0.3,
       4.9
@@ -257,7 +305,7 @@
   },
   "penghitung": {
     "efek": "penghitung@0.1",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       4.9
@@ -265,7 +313,7 @@
   },
   "phone-mockup": {
     "efek": "phone-mockup@0.2",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       4.9
@@ -273,7 +321,7 @@
   },
   "prompt-ui": {
     "efek": "prompt-ui@0.1",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       6.7
@@ -281,7 +329,7 @@
   },
   "pull-back-reveal": {
     "efek": "pull-back-reveal@0.2",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       4.9
@@ -297,10 +345,18 @@
   },
   "snap-zoom": {
     "efek": "snap-zoom@0.1",
-    "gaya": "bold-kinetic@0.5",
+    "gaya": "bold-kinetic@0.6",
     "jendela": [
       0.3,
       4.9
+    ]
+  },
+  "split-explainer": {
+    "efek": "split-explainer@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      5.9
     ]
   },
   "studio-reveal": {
@@ -313,7 +369,7 @@
   },
   "terminal": {
     "efek": "terminal@0.1",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       5.4
@@ -321,7 +377,7 @@
   },
   "timeline": {
     "efek": "timeline@0.1",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       6.4
@@ -329,15 +385,23 @@
   },
   "ui-world": {
     "efek": "ui-world@0.2",
-    "gaya": "glass-tech@0.5",
+    "gaya": "glass-tech@0.6",
     "jendela": [
       0.3,
       5.9
     ]
   },
+  "validasi-badge": {
+    "efek": "validasi-badge@0.1",
+    "gaya": "glass-tech@0.6",
+    "jendela": [
+      0.3,
+      5.4
+    ]
+  },
   "vertigo": {
     "efek": "vertigo@0.2",
-    "gaya": "bold-kinetic@0.5",
+    "gaya": "bold-kinetic@0.6",
     "jendela": [
       0.3,
       4.9
@@ -345,7 +409,7 @@
   },
   "whip": {
     "efek": "whip@0.1",
-    "gaya": "arang-lime@0.4",
+    "gaya": "arang-lime@0.5",
     "jendela": [
       1.5,
       4.5
@@ -353,7 +417,7 @@
   },
   "zoom-portal": {
     "efek": "zoom-portal@0.1",
-    "gaya": "apple-glass@0.4",
+    "gaya": "apple-glass@0.5",
     "jendela": [
       1.5,
       4.5
@@ -361,7 +425,7 @@
   },
   "zoom-through-cut": {
     "efek": "zoom-through-cut@0.2",
-    "gaya": "bold-kinetic@0.5",
+    "gaya": "bold-kinetic@0.6",
     "jendela": [
       1.5,
       4.5

@@ -1,7 +1,6 @@
 # CHANGELOG
 
 Format: "## YYYY-MM-DD" lalu per perubahan: modul@versi — apa, kenapa, video pemicu.
-Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/konteks/KONTEKS_00_zona-aman_v0.1.md).
 
 ## 2026-11-08
 - Skill video-editor@0.7: direksi kreatif lintas brand; pustaka gaya/template/
@@ -22,6 +21,13 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
 - Skill video-editor@0.5: rujukan K13 dan prompt pemula; versi 0.4 diarsipkan,
   salinan Claude disamakan. AGENTS/CLAUDE/aturan kerja dan rule proyek ditautkan.
   Perubahan panduan saja; tidak merender ulang hasil video atau mengubah model.
+- K12: penegasan izin eksplorasi kreatif seluas mungkin dalam brand guidelines;
+  katalog bukan batas desain. Persetujuan storyboard dan narasi sumber tetap berlaku.
+- K12 kurasi-motion-premium@0.1 (draft): kriteria artistik per adegan, prioritas
+  brand/narasi di atas resep efek, batas bukti still/kode, serta tinjauan gerak.
+  Pemicu: screenshot full frame OTCA sertifikat dan permintaan kurasi anti-generik.
+  Audit tersimpan di proyek sertifikat premium; belum ada render/implementasi baru.
+Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/konteks/KONTEKS_00_zona-aman_v0.1.md).
 
 ## 2026-10-24
 - Kerangka awal video-system dibuat (semua modul v0.1, status draft).
@@ -282,6 +288,7 @@ Versi lama dipindah ke `arsip/<lapisan>/` dengan nama file tetap (mis. arsip/kon
 - perangkat.py: spek boleh menulis `e["_props"]` (props Remotion hasil olahan) — render_perangkat menggabungkannya.
 - render_depth.py: penataan teks depth memeriksa tepi atas KOTAK teks (bbox_teks, yang diukur QA K00.1), bukan puncak
   glyph — sebelumnya teks bisa lolos penataan tetapi keluar zona aman.
+- storyboard.py: elemen dekoratif tanpa bbox ikut dipotret saat stabil (pra-QA K00.1 tak lagi melapor "tidak pernah tampil").
 - Tes: test_efek.UjiKinetik (aksen lintas kata, sinkron ucapan, perapatan jadwal linimasa).
 
 ## 2026-10-28 — ekspor satu file

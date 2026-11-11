@@ -219,6 +219,7 @@ Semua efek E01–E30 native. Generator slot memilih efek per fungsi sesuai gaya 
 | 2026-10_otca-sertifikat-jerman | explainer@0.2 | glass-tech@0.5 | brief |
 | 2026-10_we-fail-today | explainer@0.2 | glass-tech@0.6 | brief |
 | 2026-10_life-isnt-a-race | hook-problem-solution@0.2 | kertas-tipografi@0.5 | selesai v2 |
+| 2026-10_2026-10_lonely-now-stronger | hook-problem-solution@0.2 | glass-tech@0.6 | brief |
 
 ## Aturan
 1. Pola nama: `JENIS_NN_nama-pendek_vX.Y.ext`. Satu nama pendek = satu file aktif.
