@@ -317,6 +317,33 @@ def _kamera(efek):
     return lambda isi, c: {"tipe": "kamera", "efek": efek}
 
 
+def _chat_window(isi, c):
+    pesan = isi.get("pesan") or isi.get("chat")
+    if not pesan and isi.get("judul"):
+        pesan = [
+            {"pengirim": "user", "teks": isi.get("sub", "Jelaskan langkah ini")},
+            {"pengirim": "ai", "teks": isi["judul"]},
+        ]
+    if not pesan:
+        return None
+    return _r("chat-window", spek={"judul": isi.get("app", "Claude AI"), "tag": isi.get("tag", "PROMPT"), "pesan": pesan[:4]})
+
+
+def _split_explainer(isi, c):
+    items = isi.get("item") or isi.get("langkah")
+    if not items and isi.get("judul"):
+        items = [{"judul": isi["judul"], "sub": isi.get("sub", "")}]
+    if not items:
+        return None
+    formatted = []
+    for i, it in enumerate(items[:4]):
+        if isinstance(it, dict):
+            formatted.append(it)
+        else:
+            formatted.append({"nomor": i + 1, "judul": str(it)})
+    return _r("split-explainer", spek={"header": isi.get("header", "PANDUAN EKSKLUSIF"), "kategori": isi.get("kategori", "WORKFLOW"), "items": formatted})
+
+
 KANDIDAT: dict[str, Kandidat] = {
     "chip": Kandidat(None, _chip(), 1.5),
     "chip-benar": Kandidat(None, _chip("benar"), 1.5),
@@ -352,6 +379,8 @@ KANDIDAT: dict[str, Kandidat] = {
     "checklist-pop": Kandidat("checklist-pop", _checklist_pop, 3.2),
     "headline-storm": Kandidat("headline-storm", _storm, 3.4, 5.0, penuh=True),
     "growth-curve": Kandidat("growth-curve", _growth, 3.6),
+    "chat-window": Kandidat("chat-window", _chat_window, 3.0, 6.0),
+    "split-explainer": Kandidat("split-explainer", _split_explainer, 3.5, 6.5),
     "snap-zoom": Kandidat("snap-zoom", _kamera("snap-zoom"), 0.9, 2.5),
     "frame-escape": Kandidat("frame-escape", _kamera("frame-escape"), 2.6, 5.0, roto=True),
     "studio-reveal": Kandidat("studio-reveal", _kamera("studio-reveal"), 3.0, 6.0),

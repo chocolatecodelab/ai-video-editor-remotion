@@ -33,6 +33,7 @@ LEBAR_GIF = 270
 # Contoh di modul memakai "…" sebagai tempat isi; pratinjau butuh teks nyata.
 PENGGANTI = {
     "headline-wall": {"judul_judul": ["Harga naik lagi", "Kreator bingung", "Algoritma *berubah*"]},
+    "validasi-badge": {"ganti": 1.4, "durasi": 4.5},
 }
 
 
@@ -90,9 +91,9 @@ def _footage(tujuan) -> None:
 
 
 def _sudah_ada(m) -> bool:
-    """gif & png ada dan lebih baru dari modul efeknya → tidak perlu dirender ulang."""
-    hasil = [KELUAR / f"{m.nama}.{x}" for x in ("gif", "png")]
-    return all(f.exists() and f.stat().st_mtime >= m.path.stat().st_mtime for f in hasil)
+    """png ada dan lebih baru dari modul efeknya → tidak perlu dirender ulang."""
+    png = KELUAR / f"{m.nama}.png"
+    return png.exists() and png.stat().st_mtime >= m.path.stat().st_mtime
 
 
 def pratinjau_efek(nama: str | None = None, gaya: str | None = None, paksa: bool = False) -> list[str]:
@@ -119,7 +120,7 @@ def pratinjau_efek(nama: str | None = None, gaya: str | None = None, paksa: bool
             mf = baca_json(tujuan / "manifest.json")
             mf.update(proyek=f"pratinjau-efek-{m.nama}", gaya=g.ref, template=resolve("template", "hook-problem-solution").ref,
                       konteks=gfm.get("konteks", []), token_override={"format": {"resolusi": list(RESOLUSI)}})
-            mf["aset"]["rekaman"] = "pratinjau (footage contoh)"
+            mf["aset"]["rekaman"] = "pratinjau (clean background)"
             tulis_json(tujuan / "manifest.json", mf)
             tulis_json(tujuan / "beat-sheet.json", bs)
             _footage(tujuan)
@@ -127,20 +128,15 @@ def pratinjau_efek(nama: str | None = None, gaya: str | None = None, paksa: bool
             if str(contoh.get("efek", "")) in KAMERA_MASK:
                 import roto
                 roto.roto(p, semua=True)
-            log("pratinjau-efek", f"{m.id} {m.nama} ({g.nama}): render {RESOLUSI[0]}×{RESOLUSI[1]} …")
-            render.Renderer(p).render()
-            gif, png = KELUAR / f"{m.nama}.gif", KELUAR / f"{m.nama}.png"
-            jalankan(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{t0:.2f}", "-t", f"{t1 - t0:.2f}",
-                      "-i", p.master_path, "-vf",
-                      f"fps=12,scale={LEBAR_GIF}:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=96[p];"
-                      "[b][p]paletteuse=dither=bayer", "-loop", 0, gif])
-            # frame diam: transisi sesaat sebelum titik potong (blur/geser sedang terjadi; tepat di potong, celup =
-            # layar warna polos); efek lain 60% jalannya efek (animasi masuk selesai, belum keluar)
             t_png = POTONG - 0.1 if contoh.get("tipe") == "transisi" else t0 + (t1 - t0) * 0.6
-            jalankan(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{t_png:.2f}",
-                      "-i", p.master_path, "-frames:v", 1, "-vf", f"scale={LEBAR_GIF}:-1:flags=lanczos", png])
+            log("pratinjau-efek", f"{m.id} {m.nama} ({g.nama}): still t={t_png:.2f}s …")
+            r = render.Renderer(p)
+            stills = r.still([t_png])
+            png = KELUAR / f"{m.nama}.png"
+            jalankan(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", stills[0],
+                      "-vf", f"scale={LEBAR_GIF}:-1:flags=lanczos", png])
             ringkas[m.nama] = {"efek": m.ref, "gaya": g.ref, "jendela": [round(t0, 2), round(t1, 2)]}
-            log("pratinjau-efek", f"→ efek/pratinjau/{m.nama}.gif · .png")
+            log("pratinjau-efek", f"→ efek/pratinjau/{m.nama}.png")
         except (GagalPipeline, ValueError) as ex:  # ValueError: contoh JSON rusak di modul
             gagal.append(m.nama)
             log("pratinjau-efek", f"GAGAL {m.nama}: {ex}")

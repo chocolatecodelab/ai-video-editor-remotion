@@ -11,10 +11,13 @@ Pemakaian:
                                                                   #   → out/<proyek>.mp4 (−14 LUFS, plafon −2 dBTP, bt709)
     python pipeline/scripts/split.py qa     <proyek>              # QA keluaran split → out/qa-report.md
     python pipeline/scripts/split.py cek    <proyek>              # validasi split.json tanpa render (juga di video.py cek)
+    python pipeline/scripts/split.py depan  <proyek>              # matting talent adegan "depan" → cutout RGBA (otomatis di render)
 
 Lewat pintu utama: video.py render|qa <proyek> otomatis memakai split.py bila proyek punya split.json.
 split.json opsional (bawaan menyala): "hook": {"aktif", "kuat", "durasi", "sfx"}, "ketukan": {"denyut": 0..1},
-"musik": {"ducking": {"mode": "transkrip", "db": -9}}, adegan "masuk"/"keluar": "iris" (+ "titik": [x, y]).
+"musik": {"ducking": {"mode": "transkrip", "db": -9}}, adegan "masuk"/"keluar": "iris" (+ "titik": [x, y]),
+adegan "depan": true (talent hasil matting di atas grafis; split.json "depan": {"feather", "kikis"}), adegan "caption_y".
+Caption otomatis digeser naik di atas puncak wajah/sosok (§10, cache/wajah.json + cache/depan.json).
 """
 from __future__ import annotations
 
@@ -95,7 +98,8 @@ def sinkron_ketukan(p: Proyek, cfg: dict, adegan: list[dict], dur: float) -> dic
             "titik": ketukan.titik(fase, periode, dur), "denyut": float(kcfg.get("denyut", 1.0))}
 
 
-def bangun_props(p: Proyek) -> dict:
+def bangun_props(p: Proyek, siapkan: bool = True) -> dict:
+    """siapkan=False: tanpa salin footage/font (validasi cek)."""
     cfg = baca_json(p.dir / "split.json")
     if cfg is None:
         raise GagalPipeline(f"split.json tidak ada di {p.dir}")
@@ -111,16 +115,24 @@ def bangun_props(p: Proyek) -> dict:
             "mulai": resolve_waktu(a["mulai"], kata),
             "selesai": resolve_waktu(a["selesai"], kata) if a.get("selesai") is not None else dur,
             "t": {n: resolve_waktu(v, kata) for n, v in a.get("t", {}).items()},
-            **{k: a[k] for k in ("masuk", "keluar", "teks", "titik", "penuh") if k in a},
+            **{k: a[k] for k in ("masuk", "keluar", "teks", "titik", "penuh", "depan", "caption_y") if k in a},
         })
     irama = sinkron_ketukan(p, cfg, adegan, dur)
     # entri zoom: [waktu, skala] atau [waktu, skala, geser_y] (framing vertikal per klip)
     zoom = [[resolve_waktu(e[0], kata), *e[1:]] for e in cfg.get("zoom", [[0, 1]])]
     zoom.append([dur + 1, *zoom[-1][1:]])
     cap = p.t("caption")
-    salin_footage(p)
-    rj.siapkan_font(p.tokens)
-    return {
+    if siapkan:
+        salin_footage(p)
+        rj.siapkan_font(p.tokens)
+    dp = DEPAN_PUBLIK(p)
+    depan = {"dir": f"proyek/{p.dir.name}/depan/", "frame": sorted(int(f.stem) for f in dp.glob("*.webp")),
+             "skala": DEPAN_SKALA, **(cfg.get("depan") or {})} if any(a.get("depan") for a in adegan) else None
+    caption = {"y": cfg.get("caption_y", cfg.get("tinggi_panggung", p.H // 2)), "kata_maks": cap["kata-maks"],
+               "karakter_maks": cap["karakter-maks-baris"], "jeda_pecah": cap["jeda-pecah"],
+               "gaya": cfg.get("caption_gaya", "kaca"),
+               **({"teks_pil": cfg["caption_teks_pil"]} if cfg.get("caption_teks_pil") else {})}
+    props = {
         "W": p.W, "H": p.H, "fps": p.fps, "durasiFrame": int(round(dur * p.fps)),
         "tokens": p.tokens, "zona": list(p.zona_aman()),
         "tinggi_panggung": cfg.get("tinggi_panggung", p.H // 2),
@@ -132,11 +144,164 @@ def bangun_props(p: Proyek) -> dict:
         **({"transisi_klip": cfg["transisi_klip"]} if cfg.get("transisi_klip") else {}),
         **({"logo": siapkan_logo(p, cfg["logo"])} if cfg.get("logo") else {}),
         "kata": [{"w": k["w"], "s": k["s"], "e": k["e"]} for k in kata],
-        "caption": {"y": cfg.get("caption_y", cfg.get("tinggi_panggung", p.H // 2)), "kata_maks": cap["kata-maks"],
-                    "karakter_maks": cap["karakter-maks-baris"], "jeda_pecah": cap["jeda-pecah"],
-                    "gaya": cfg.get("caption_gaya", "kaca"),
-                    **({"teks_pil": cfg["caption_teks_pil"]} if cfg.get("caption_teks_pil") else {})},
+        "caption": caption,
+        **({"depan": depan} if depan else {}),
     }
+    # §10: caption tidak boleh menutupi wajah/sosok → y per halaman digeser ke atas puncak sosok bila bertabrakan
+    caption["per_halaman"] = [[h["s"], h["y"]] for h in posisi_caption(p, props)]
+    return props
+
+
+# ---------- talent "depan" (adegan split.json "depan": true): talent hasil matting di atas panggung grafis ----------
+
+DEPAN_SKALA = 0.5  # cutout disimpan 540×960 (rekaman sumber ≤ 1080 px; hemat disk), diskalakan CSS ke W×H
+DEPAN_BAWAAN = {"feather": 2.5, "kikis": 1.5}  # px di 1080×1920: feather tepi, kikis (erode) buang halo latar
+
+
+def DEPAN_PUBLIK(p: Proyek) -> Path:  # noqa: N802 — konstanta per proyek
+    return rj.DIR / "public" / "proyek" / p.dir.name / "depan"
+
+
+def bersihkan_alpha(rgb, alpha, feather: float, kikis: float):
+    """Mask matting → RGBA bersih: hanya komponen terbesar (buang bercak latar), kikis tepi `kikis` px (halo), feather
+    Gaussian `feather` px, lalu warna tepi diganti warna dalam subjek (decontaminate: tanpa sisa latar di rambut/bahu)."""
+    import cv2
+    import numpy as np
+
+    a = alpha.astype(np.float32)
+    n, lab, st, _ = cv2.connectedComponentsWithStats((a > 0.5).astype(np.uint8), 8)
+    if n > 2:
+        besar = 1 + int(np.argmax(st[1:, cv2.CC_STAT_AREA]))
+        jaga = cv2.dilate((lab == besar).astype(np.uint8), np.ones((15, 15), np.uint8)).astype(np.float32)
+        a *= jaga
+    if kikis > 0:
+        r = max(1, int(round(kikis)))
+        a = cv2.erode(a, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (2 * r + 1, 2 * r + 1)))
+    if feather > 0:
+        a = cv2.GaussianBlur(a, (0, 0), feather)
+    dalam = (a > 0.97).astype(np.float32)
+    f = rgb.astype(np.float32)
+    isi = cv2.GaussianBlur(f * dalam[..., None], (0, 0), 6)
+    bobot = cv2.GaussianBlur(dalam, (0, 0), 6)[..., None]
+    tepi = np.where(bobot > 1e-3, isi / np.maximum(bobot, 1e-3), f)
+    w = np.clip((0.97 - a) / 0.97, 0, 1)[..., None]  # makin transparan makin memakai warna dalam
+    warna = f * (1 - w) + tepi * w
+    return np.dstack([np.clip(warna, 0, 255), np.clip(a * 255, 0, 255)]).astype(np.uint8)
+
+
+def potong_talent(p: Proyek, frame: list[int] | None = None) -> dict:
+    """Talent adegan "depan" → remotion/public/proyek/<id>/depan/NNNNNN.webp (RGBA, alpha lossless) + cache/depan.json
+    (puncak sosok per frame, px layar-frame, untuk cek caption §10). Mask dari roto.py (manifest.roto: backend rembg,
+    model birefnet-portrait, halus = EMA temporal); `frame` = subset (still storyboard), bawaan semua rentang ±0,5 s."""
+    import cv2
+    import numpy as np
+    from PIL import Image
+
+    import roto
+
+    cfg = {**DEPAN_BAWAAN, **(baca_json(p.dir / "split.json").get("depan") or {})}
+    if frame is not None:
+        jendela = roto.jendela_split(p)
+        frame = [i for i in frame if any(m - roto.MARGIN <= i / p.fps <= s + roto.MARGIN for m, s in jendela)]
+    roto.roto(p, hanya=frame)
+    idx = roto.frame_dibutuhkan(p, False, frame)
+    tujuan = DEPAN_PUBLIK(p)
+    tujuan.mkdir(parents=True, exist_ok=True)
+    meta_path = p.cache / "depan.json"
+    meta = baca_json(meta_path) if meta_path.exists() else {}
+    kunci = {"feather": cfg["feather"], "kikis": cfg["kikis"], "skala": DEPAN_SKALA,
+             "mask": (baca_json(p.masks_dir / "meta.json") or {}).get("kunci")}
+    if meta.get("kunci") != kunci:
+        meta = {"kunci": kunci, "puncak": {}}
+        for f in tujuan.glob("*.webp"):
+            f.unlink()
+    kurang = [i for i in idx if not (tujuan / f"{i:06d}.webp").exists()]
+    w, h = int(p.W * DEPAN_SKALA), int(p.H * DEPAN_SKALA)
+    for a, z in roto._rentang(kurang):
+        for i, rgb in roto.baca_frame(p, a, z):
+            m = cv2.imread(str(p.masks_dir / f"{i:06d}.png"), cv2.IMREAD_GRAYSCALE)
+            rgba = bersihkan_alpha(rgb, m.astype(np.float32) / 255.0, cfg["feather"], cfg["kikis"])
+            baris = np.where((rgba[..., 3] > 128).sum(axis=1) > p.W * 0.02)[0]
+            meta["puncak"][str(i)] = int(baris[0]) if len(baris) else None
+            Image.fromarray(cv2.resize(rgba, (w, h), interpolation=cv2.INTER_AREA), "RGBA").save(
+                tujuan / f"{i:06d}.webp", "WEBP", quality=92, alpha_quality=100, method=4)
+    tulis_json(meta_path, meta)
+    log("split", f"talent depan: {len(kurang)} frame baru, {len(idx)} total → {tujuan.relative_to(ROOT)}")
+    return meta
+
+
+# ---------- caption vs wajah/sosok (§10) ----------
+
+def halaman_caption(kata: list[dict], c: dict) -> list[list[dict]]:
+    """Pecah halaman caption — sama dengan `halaman` di SplitReel.tsx (jeda / jumlah kata / panjang karakter)."""
+    hasil, kini = [], []
+    for k in kata:
+        if kini and (k["s"] - kini[-1]["e"] > c["jeda_pecah"] or len(kini) >= c["kata_maks"]
+                     or sum(len(x["w"]) + 1 for x in kini) + len(k["w"]) > c["karakter_maks"]):
+            hasil.append(kini)
+            kini = []
+        kini.append(k)
+    if kini:
+        hasil.append(kini)
+    return hasil
+
+
+def _skala_footage(props: dict, t: float) -> tuple[float, float]:
+    """(skala, geser_y) rekaman di detik t — cermin Footage di SplitReel (zoom potong × push-in 3 % × hook 6 %)."""
+    z = props["zoom"]
+    i = 0
+    while i < len(z) - 2 and z[i + 1][0] <= t:
+        i += 1
+    h = props["hook"]
+    hook = 1 + h.get("kuat", 1) * 0.06 if h.get("aktif", True) and t < h.get("durasi", 0.9) else 1
+    return z[i][1] * 1.03 * hook, (z[i][2] if len(z[i]) > 2 else props["footage"]["geser_y"])
+
+
+def puncak_sosok(p: Proyek, props: dict, t0: float, t1: float) -> float | None:
+    """Puncak sosok talent paling tinggi (px layar) di [t0, t1]: puncak mask (cache/depan.json) bila ada, selain itu
+    kotak wajah (cache/wajah.json, sudah +25 % dahi) + 22 % tinggi kotak untuk rambut/hijab (terukur: puncak mask
+    birefnet ±20 % di atas kotak). None = talent tak tampak (tertutup adegan penuh, kecuali saat iris membuka/menutup)."""
+    wj = baca_json(p.cache / "wajah.json") if (p.cache / "wajah.json").exists() else None
+    dp = (baca_json(p.cache / "depan.json") or {}).get("puncak", {}) if (p.cache / "depan.json").exists() else {}
+    atas, fz = props["tinggi_panggung"], props["footage"]
+    calon = []
+    for b in (wj or {}).get("bingkai", []):
+        if not b["kotak"] or not t0 - 0.1 <= b["t"] <= t1 + 0.1:
+            continue
+        y0, y1 = b["kotak"][1] * p.H, b["kotak"][3] * p.H
+        calon.append((b["t"], y0 - 0.22 * (y1 - y0)))
+    calon += [(int(i) / p.fps, float(v)) for i, v in dp.items() if v is not None and t0 <= int(i) / p.fps <= t1]
+    penuh = [a for a in props["adegan"] if a.get("penuh")]
+    tampak = []
+    for t, yf in calon:
+        if any(a["mulai"] + (0.15 if a.get("masuk") == "iris" else 0) <= t <= a["selesai"] - (0.06 if a.get("keluar") == "iris" else 0)
+               for a in penuh):
+            continue  # adegan layar penuh menutupi talent
+        s, geser = _skala_footage(props, t)
+        oy = fz["titik_zoom_y"] + geser - fz["geser_y"]
+        tampak.append(atas - geser + oy + (yf - oy) * s)
+    return min(tampak) if tampak else None
+
+
+def posisi_caption(p: Proyek, props: dict) -> list[dict]:
+    """Tiap halaman caption: y pusat (adegan `caption_y` > global), digeser naik agar tepi bawahnya ≥ JARAK_SOSOK px di
+    atas puncak sosok (§10), dibatasi zona atas. → [{s, e, y, teks, puncak, geser}]."""
+    c = props["caption"]
+    tinggi = p.t("ukuran.caption") * 1.15 + 32  # pil: font × line-height + padding 14 px × 2 + garis
+    hasil = []
+    for h in halaman_caption(props["kata"], c):
+        s, e = h[0]["s"], h[-1]["e"]
+        a = next((x for x in props["adegan"] if x["mulai"] <= s < x["selesai"]), None)
+        y0 = (a or {}).get("caption_y", c["y"])
+        pk = puncak_sosok(p, props, s - 0.1, e + 0.6)
+        y = y0 if pk is None else min(y0, pk - JARAK_SOSOK - tinggi / 2)
+        y = max(y, props["zona"][1] + tinggi / 2)
+        hasil.append({"s": s, "e": e, "y": round(y), "teks": " ".join(x["w"] for x in h), "puncak": pk,
+                      "geser": round(y0 - y), "tabrak": pk is not None and y + tinggi / 2 > pk - 4})
+    return hasil
+
+
+JARAK_SOSOK = 24
 
 
 def salin_footage(p: Proyek) -> Path:
@@ -184,15 +349,19 @@ def _remotion(args: list) -> None:
         raise GagalPipeline(f"remotion {args[0]} gagal (kode {r.returncode})")
 
 
-def still(p: Proyek, detik: list[float]) -> list[Path]:
+def still(p: Proyek, detik: list[float], skala: float = 1.0, ext: str = "png") -> list[Path]:
+    """Still per detik. Adegan "depan": talent hanya di-matting untuk frame still (±2 frame, EMA temporal)."""
+    cfg = baca_json(p.dir / "split.json") or {}
+    if any(a.get("depan") for a in cfg.get("adegan", [])):
+        potong_talent(p, [int(round(t * p.fps)) + d for t in detik for d in range(-2, 1)])
     props = tulis_props(p)
     d = p.out / "storyboard"
     d.mkdir(parents=True, exist_ok=True)
     hasil = []
     for t in detik:
-        out = d / f"split_{t:06.2f}.png"
+        out = d / f"split_{t:06.2f}.{ext}"
         _remotion(["still", "src/index.ts", KOMPOSISI, out, f"--props={props}", f"--frame={int(round(t * p.fps))}", "--port=3125",
-                   "--log=error"])
+                   f"--scale={skala}", "--log=error", *(["--jpeg-quality=85"] if ext == "jpg" else [])])
         hasil.append(out)
     log("split", f"{len(hasil)} still → {d}")
     return hasil
@@ -269,6 +438,9 @@ def mix_audio(p: Proyek, cfg: dict, out: Path) -> dict:
 def render(p: Proyek) -> Path:
     cfg = baca_json(p.dir / "split.json")
     props = tulis_props(p)
+    if any(a.get("depan") for a in cfg.get("adegan", [])):
+        potong_talent(p)
+        props = tulis_props(p)  # daftar frame cutout lengkap
     kerja = SEMENTARA / "split" / p.dir.name
     video = kerja / "video.mp4"
     _remotion(["render", "src/index.ts", KOMPOSISI, video, f"--props={props}", "--codec=h264", "--crf=14", "--muted",
@@ -351,6 +523,30 @@ def cek(p: Proyek) -> tuple[list[str], list[str]]:
             masalah.append(f"proyek/{nama}: celah/tumpang {m1 - s0:+.2f} s antara adegan {i + 1} dan {i + 2}")
     if waktu and waktu[-1][1] < dur - 0.1:
         masalah.append(f"proyek/{nama}: adegan terakhir berhenti di {waktu[-1][1]:.2f} s, rekaman {dur:.2f} s")
+    for i, a in enumerate(adg):
+        if a.get("depan") and a.get("penuh"):
+            masalah.append(f"proyek/{nama}: adegan {i + 1} 'depan' dan 'penuh' sekaligus (talent tertutup layar penuh)")
+    if any(a.get("depan") for a in adg):
+        roto_cfg = p.manifest.get("roto", {})
+        if roto_cfg.get("backend") != "rembg":
+            masalah.append(f"proyek/{nama}: adegan 'depan' butuh manifest.roto.backend = 'rembg' (mask bersih §10)")
+        n = len(list(DEPAN_PUBLIK(p).glob("*.webp")))
+        info.append(f"proyek/{nama}: {sum(bool(a.get('depan')) for a in adg)} adegan depan, cutout {n} frame "
+                    f"(model {roto_cfg.get('model', 'u2net_human_seg')}; lengkap dibuat saat render)")
+    if (p.cache / "wajah.json").exists():
+        try:
+            pos = posisi_caption(p, bangun_props(p, siapkan=False))
+        except GagalPipeline as e:
+            return masalah + [f"proyek/{nama}: {e}"], info
+        for h in pos:
+            if h["tabrak"]:
+                masalah.append(f"proyek/{nama}: caption “{h['teks']}” ({h['s']:.1f} s) menutupi wajah/sosok "
+                               f"(puncak {h['puncak']:.0f} px, caption y {h['y']}) — §10")
+        geser = [h for h in pos if h["geser"] > 0]
+        info.append(f"proyek/{nama}: caption vs wajah/sosok — {len(pos)} halaman, {len(geser)} digeser naik "
+                    f"(maks {max([h['geser'] for h in geser], default=0)} px)")
+    else:
+        info.append(f"proyek/{nama}: cache/wajah.json belum ada — caption vs wajah (§10) belum dicek (wajah.py)")
     return masalah, info
 
 
@@ -457,9 +653,11 @@ def qa(p: Proyek) -> bool:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("aksi", choices=["props", "still", "studio", "render", "qa", "cek"])
+    ap.add_argument("aksi", choices=["props", "still", "studio", "render", "qa", "cek", "depan"])
     ap.add_argument("proyek")
     ap.add_argument("detik", nargs="?", default="")
+    ap.add_argument("--skala", type=float, default=1.0, help="still: skala (0.5 = 540×960)")
+    ap.add_argument("--ext", choices=["png", "jpg"], default="png", help="still: format")
     arg = ap.parse_args()
     folder = Path(arg.proyek)
     if not folder.exists():
@@ -468,7 +666,9 @@ def main() -> None:
     if arg.aksi == "props":
         tulis_props(p)
     elif arg.aksi == "still":
-        still(p, [float(x) for x in arg.detik.split(",") if x])
+        still(p, [float(x) for x in arg.detik.split(",") if x], arg.skala, arg.ext)
+    elif arg.aksi == "depan":
+        potong_talent(p)
     elif arg.aksi == "studio":
         studio(p)
     elif arg.aksi == "qa":

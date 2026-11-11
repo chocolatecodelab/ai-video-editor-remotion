@@ -125,10 +125,15 @@ class Media:
             return None
         t, rel = self._tujuan(jenis, nama, "png")
         if self._perlu(sumber, t):
-            ss = ["-ss", f"{detik():.2f}"] if detik is not None else []
-            jalankan(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", *ss, "-i", sumber, "-frames:v", 1, "-vf",
-                      f"scale={LEBAR_PNG}:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors={WARNA_PNG}[p];"
-                      "[b][p]paletteuse=dither=bayer:bayer_scale=3", t])
+            if sumber.suffix.lower() == ".png":
+                jalankan(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", sumber, "-vf",
+                          f"scale={LEBAR_PNG}:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors={WARNA_PNG}[p];"
+                          "[b][p]paletteuse=dither=bayer:bayer_scale=3", t])
+            else:
+                ss = ["-ss", f"{detik():.2f}"] if detik is not None else []
+                jalankan(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", *ss, "-i", sumber, "-frames:v", 1, "-vf",
+                          f"scale={LEBAR_PNG}:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors={WARNA_PNG}[p];"
+                          "[b][p]paletteuse=dither=bayer:bayer_scale=3", t])
         return rel
 
     def gif(self, jenis: str, nama: str, sumber: Path, sampai: float | None = None, cepat: float = 1.0) -> str | None:
@@ -219,7 +224,7 @@ def bangun(keluar: Path, paksa: bool = False) -> dict:
                     durasi=f"{m_dur.group(1)}–{m_dur.group(2)} s" if m_dur else "")
         if item["template"] not in nama["template"]:
             masalah.append(f"koreografi {m.nama}: template '{item['template']}' tidak ada")
-        media.pasang(item, "koreografi", None)
+        media.pasang(item, "koreografi", media.png("koreografi", m.nama, ROOT / "koreografi" / "pratinjau" / f"{m.nama}.png"))
         koreografi.append(item)
 
     preset = []
@@ -231,10 +236,13 @@ def bangun(keluar: Path, paksa: bool = False) -> dict:
         for j in ("gaya", "koreografi"):
             if item[j] not in nama[j]:
                 masalah.append(f"preset {m.nama}: {j} '{item[j]}' tidak ada")
-        mp4 = ROOT / "preset" / "pratinjau" / f"{m.nama}.mp4"
-        png = media.png("preset", m.nama, mp4, lambda mp4=mp4: detik_preset(mp4))
-        gif = media.gif("preset", m.nama, mp4, PRESET_GIF_SUMBER, PRESET_GIF_CEPAT)
-        media.pasang(item, "preset", png, gif)
+        png_src = ROOT / "preset" / "pratinjau" / f"{m.nama}.png"
+        if png_src.exists():
+            png = media.png("preset", m.nama, png_src)
+        else:
+            mp4 = ROOT / "preset" / "pratinjau" / f"{m.nama}.mp4"
+            png = media.png("preset", m.nama, mp4, lambda mp4=mp4: detik_preset(mp4))
+        media.pasang(item, "preset", png, None)
         preset.append(item)
 
     template = []
@@ -244,7 +252,7 @@ def bangun(keluar: Path, paksa: bool = False) -> dict:
         item = dasar(m, judul(isi) or m.nama, bagian(isi, "Kapan dipakai"), "", [m.nama, *fm.get("beat_wajib", [])],
                      fm.get("status"))
         item.update(durasi=f"{dur[0]}–{dur[1]} s" if len(dur) == 2 else "", rasio=rasio(fm.get("rasio")))
-        media.pasang(item, "template", None)
+        media.pasang(item, "template", media.png("template", m.nama, ROOT / "template" / "pratinjau" / f"{m.nama}.png"))
         template.append(item)
 
     efek = []
@@ -256,9 +264,9 @@ def bangun(keluar: Path, paksa: bool = False) -> dict:
         item = dasar(m, judul(isi) or m.nama, tebal(isi, "Deskripsi"), tebal(isi, "Kapan dipakai"),
                      [*(["khas gaya"] if cocok else []), *cocok], baris.get("Status", fm.get("status")))
         item.update(durasi=baris.get("Durasi", ""), dukungan=baris.get("Dukungan", str(fm.get("dukungan", ""))),
-                    gayaCocok=cocok)
+                     gayaCocok=cocok)
         src = ROOT / "efek" / "pratinjau"
-        media.pasang(item, "efek", media.png("efek", m.nama, src / f"{m.nama}.png"), media.gif("efek", m.nama, src / f"{m.nama}.gif"))
+        media.pasang(item, "efek", media.png("efek", m.nama, src / f"{m.nama}.png"), None)
         efek.append(item)
 
     # konteks "otomatis" = dipakai semua gaya aktif (pengguna tidak perlu memilihnya)
@@ -275,7 +283,7 @@ def bangun(keluar: Path, paksa: bool = False) -> dict:
     if masalah:
         raise GagalPipeline("katalog tidak valid:\n  " + "\n  ".join(masalah))
     media.selesai()
-    tanpa = [h for h in media.hilang if h.split("/")[0] in ("gaya", "preset", "efek")]
+    tanpa = [h for h in media.hilang if h.split("/")[0] in ("gaya", "preset", "efek", "koreografi", "template")]
     if tanpa:
         log("katalog", f"PERINGATAN {len(tanpa)} item tanpa pratinjau: {', '.join(tanpa)}")
     return {"versi": VERSI_SKEMA, "dibuat": dt.date.today().isoformat(), "preset": preset, "gaya": gaya,

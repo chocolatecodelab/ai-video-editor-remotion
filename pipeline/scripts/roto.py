@@ -12,6 +12,7 @@ Backend (manifest.roto.backend):
     eksternal  — mask dari Roto Brush 3 / Magic Mask: PNG grayscale/alpha, nama NNNNNN.png,
                  N = indeks frame berbasis 0 pada cache/ingest.mp4. Skrip hanya memvalidasi.
 
+manifest.roto.langkah = n: model hanya tiap frame ke-n, sisanya interpolasi linear (lalu EMA `halus`).
 Feather (mask.feather-px) diterapkan saat render, jadi mengubahnya tidak perlu roto ulang.
 Aturan : K02.1, K02.2
 """
@@ -39,17 +40,34 @@ def butuh_mask(e: dict) -> bool:
     return e.get("tipe") == "kamera" and str(e.get("efek", "")).partition("@")[0] in KAMERA_MASK
 
 
-def frame_dibutuhkan(p: Proyek, semua: bool) -> list[int]:
+def jendela_split(p: Proyek) -> list[tuple[float, float]]:
+    """Jendela (detik) adegan split.json bertanda "depan": true — talent hasil matting digambar di atas panggung."""
+    cfg = baca_json(p.dir / "split.json") if (p.dir / "split.json").exists() else None
+    if not cfg or not p.words_path.exists():
+        return []
+    import split  # lazy: split.py juga memanggil roto (potong_talent)
+    kata = baca_json(p.words_path)["kata"]
+    dur = durasi(p.ingest_video)
+    return [(split.resolve_waktu(a["mulai"], kata),
+             split.resolve_waktu(a["selesai"], kata) if a.get("selesai") is not None else dur)
+            for a in cfg.get("adegan", []) if a.get("depan")]
+
+
+def frame_dibutuhkan(p: Proyek, semua: bool, hanya: list[int] | None = None) -> list[int]:
     total = int(round(durasi(p.ingest_video) * p.fps))
     if semua:
         return list(range(total))
-    bs = beat.muat(p, durasi(p.ingest_video))
+    if hanya is not None:
+        return sorted(i for i in set(hanya) if 0 <= i < total)
+    jendela = jendela_split(p)
+    if p.beat_sheet_path.exists():
+        jendela += [(e["mulai"], e["selesai"]) for e in beat.semua_elemen(beat.muat(p, durasi(p.ingest_video)))
+                    if butuh_mask(e)]
     idx: set[int] = set()
-    for e in beat.semua_elemen(bs):
-        if butuh_mask(e):
-            a = max(0, int((e["mulai"] - MARGIN) * p.fps))
-            z = min(total, int((e["selesai"] + MARGIN) * p.fps) + 1)
-            idx.update(range(a, z))
+    for m, s in jendela:
+        a = max(0, int((m - MARGIN) * p.fps))
+        z = min(total, int((s + MARGIN) * p.fps) + 1)
+        idx.update(range(a, z))
     return sorted(idx)
 
 
@@ -114,9 +132,19 @@ class _Mediapipe:
 
 
 class _Rembg:
-    def __init__(self):
+    """manifest.roto.model: birefnet-portrait (tepi rambut/hijab paling bersih, lambat di CPU) → cadangan u2net_human_seg."""
+
+    def __init__(self, model: str = "u2net_human_seg"):
         from rembg import new_session
-        self.s = new_session("u2net_human_seg")
+        for m in dict.fromkeys([model, "u2net_human_seg"]):
+            try:
+                self.s = new_session(m)
+                self.model = m
+                break
+            except Exception as e:  # unduhan/onnx gagal → model cadangan
+                log("roto", f"model {m} gagal dimuat ({e}); coba cadangan.")
+        else:
+            raise GagalPipeline("tidak ada model rembg yang bisa dimuat.")
 
     def __call__(self, rgb):
         from PIL import Image
@@ -127,16 +155,20 @@ class _Rembg:
 BACKEND = {"mediapipe": ("mediapipe", _Mediapipe), "rembg": ("rembg", _Rembg)}
 
 
-def roto(p: Proyek, paksa: bool = False, semua: bool = False) -> dict:
+def roto(p: Proyek, paksa: bool = False, semua: bool = False, hanya: list[int] | None = None) -> dict:
+    """`hanya` = indeks frame tertentu (mis. still storyboard) alih-alih semua rentang yang butuh mask."""
     if not p.ingest_video.exists():
         raise GagalPipeline("cache/ingest.mp4 belum ada. Jalankan ingest dulu.")
     cfg = p.manifest.get("roto", {})
     backend = cfg.get("backend", "mediapipe")
+    model = cfg.get("model", "u2net_human_seg")
     halus = float(cfg.get("halus", 0.3))  # EMA temporal untuk mengurangi flicker
+    langkah = max(1, int(cfg.get("langkah", 1)))  # model tiap n frame (model berat, mis. birefnet ±30 s/frame di CPU)
     d = p.masks_dir
     d.mkdir(parents=True, exist_ok=True)
     meta_path = d / "meta.json"
-    kunci = {"ingest": sha_file(p.ingest_video), "backend": backend, "halus": halus, "resolusi": [p.W, p.H]}
+    kunci = {"ingest": sha_file(p.ingest_video), "backend": backend, "halus": halus, "resolusi": [p.W, p.H],
+             **({"model": model} if backend == "rembg" else {}), **({"langkah": langkah} if langkah > 1 else {})}
 
     if backend != "eksternal":
         lama = baca_json(meta_path) if meta_path.exists() else None
@@ -145,7 +177,7 @@ def roto(p: Proyek, paksa: bool = False, semua: bool = False) -> dict:
             shutil.rmtree(d)
             d.mkdir(parents=True)
 
-    idx = frame_dibutuhkan(p, semua)
+    idx = frame_dibutuhkan(p, semua, hanya)
     if not idx:
         log("roto", "tidak ada elemen yang butuh mask (depth / belakang / kamera mask); tidak perlu roto.")
         return {"frame": 0}
@@ -168,16 +200,26 @@ def roto(p: Proyek, paksa: bool = False, semua: bool = False) -> dict:
     if importlib.util.find_spec(modul) is None:
         raise GagalPipeline(f"Backend '{backend}' belum terpasang: pip install {modul}\n"
                             "Atau pakai mask dari After Effects/DaVinci dengan manifest.roto.backend = \"eksternal\".")
-    seg = kelas()
-    log("roto", f"{backend}: {len(kurang)} frame baru dari {len(idx)} dibutuhkan …")
+    seg = kelas(model) if backend == "rembg" else kelas()
+    log("roto", f"{backend}{'/' + seg.model if backend == 'rembg' else ''}: {len(kurang)} frame baru dari {len(idx)} dibutuhkan …")
     for a, z in _rentang(kurang):
         prev = None
+        kunci_m = None  # (indeks, mask) frame kunci terakhir
+        tunda: list[int] = []
         for i, rgb in baca_frame(p, a, z):
-            m = seg(rgb)
-            if prev is not None and halus > 0:
-                m = (1 - halus) * m + halus * prev
-            prev = m
-            cv2.imwrite(str(d / f"{i:06d}.png"), np.clip(m * 255, 0, 255).astype(np.uint8))
+            # langkah > 1: model hanya di tiap frame ke-n (+ frame terakhir rentang), frame di antaranya interpolasi linear
+            if (i - a) % langkah and i != z - 1:
+                tunda.append(i)
+                continue
+            m_kunci = seg(rgb)
+            urut = [(j, kunci_m[1] + (m_kunci - kunci_m[1]) * (j - kunci_m[0]) / (i - kunci_m[0])) for j in tunda] if kunci_m else []
+            tunda = []
+            kunci_m = (i, m_kunci)
+            for j, m in [*urut, (i, m_kunci)]:
+                if prev is not None and halus > 0:
+                    m = (1 - halus) * m + halus * prev
+                prev = m
+                cv2.imwrite(str(d / f"{j:06d}.png"), np.clip(m * 255, 0, 255).astype(np.uint8))
     tulis_json(meta_path, {"kunci": kunci})
     log("roto", "selesai.")
     return {"frame": len(idx), "baru": len(kurang)}

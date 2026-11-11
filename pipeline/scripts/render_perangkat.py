@@ -81,8 +81,11 @@ class PerangkatMixin:
             if e.get("_sfx_sendiri"):
                 peta = p.t("sfx.peta")
                 for t, kunci, nama in bunyi:
-                    m = peta[kunci]
-                    self._daftar_sfx({"file": m["bunyi"]}, e["mulai"] + t, f"{e['_id']}/{nama}", kelas=m["kelas"], otomatis=True)
+                    m = peta.get(kunci)
+                    if m:
+                        self._daftar_sfx({"file": m["bunyi"]}, e["mulai"] + t, f"{e['_id']}/{nama}", kelas=m["kelas"], otomatis=True)
+                    else:
+                        self._daftar_sfx({"file": kunci}, e["mulai"] + t, f"{e['_id']}/{nama}", kelas="ui", otomatis=True)
             return
         kaca = bool(e.get("kaca", spek.kaca if spek and spek.kaca is not None else p.t("blur.panel") > 0))
         L = Lapisan(e["_id"], "remotion", e["mulai"], e["selesai"], 0, 0, ukur_kontras=False,
@@ -109,8 +112,11 @@ class PerangkatMixin:
         if spek and e.get("_sfx_sendiri"):
             peta = p.t("sfx.peta")
             for t, kunci, nama in bunyi:
-                m = peta[kunci]
-                self._daftar_sfx({"file": m["bunyi"]}, e["mulai"] + t, f"{e['_id']}/{nama}", kelas=m["kelas"], otomatis=True)
+                m = peta.get(kunci)
+                if m:
+                    self._daftar_sfx({"file": m["bunyi"]}, e["mulai"] + t, f"{e['_id']}/{nama}", kelas=m["kelas"], otomatis=True)
+                else:
+                    self._daftar_sfx({"file": kunci}, e["mulai"] + t, f"{e['_id']}/{nama}", kelas="ui", otomatis=True)
         if e.get("sfx_item") and item:  # bunyi saat tiap centang selesai (Checklist: 0,15 + 0,3 s setelah item masuk)
             nama = "pop" if e["sfx_item"] is True else e["sfx_item"]
             for i in range(len(item)):
@@ -143,7 +149,7 @@ class PerangkatMixin:
             latar = np.where(al > 0.004, cv2.GaussianBlur(reg, (0, 0), blur / 2), reg) if blur > 0 else reg
 
         rec = self.rekam[L.id]
-        kuat = a >= (230 if rec.get("panel_warna") else ALPHA_KOTAK)  # scrim (alpha ±0,6) bukan bagian kotak elemen
+        kuat = a >= (230 if rec.get("panel_warna") else (30 if rec.get("dekoratif") else ALPHA_KOTAK))  # scrim (alpha ±0,6) bukan bagian kotak elemen
         if self.wajah and not L.belakang and self._sampel:  # K00.3: piksel overlay (alpha ≥ 50%) di kotak wajah, bukan kotak gabungan
             k = min(self.wajah, key=lambda r: abs(r["t"] - t))
             if k.get("kotak") and abs(k["t"] - t) <= 0.3:
@@ -161,7 +167,9 @@ class PerangkatMixin:
                                                          max(ba[2], bb[2]), max(ba[3], bb[3])]
             if rec.get("dekoratif"):  # tanpa teks: kotak = jangkauan seluruh animasi (K00.1)
                 rec["bbox"] = rec["bbox_teks"] = rec["bbox_animasi"]
-            if self._sampel and rec["kontras"] is None and t + 0.5 / p.fps >= rec["t_ukur"]:
+            elif rec["bbox"] is None:
+                rec["bbox"] = rec["bbox_teks"] = bb
+            if self._sampel and rec["kontras"] is None and t >= L.mulai + rec["durasi_masuk"] - 0.5 / p.fps:
                 # latar efektif teks = panel (warna × opasitas token) di atas latar (ter-blur bila kaca)
                 rec["bbox"] = rec["bbox_teks"] = bb
                 po = rec["panel_opasitas"]

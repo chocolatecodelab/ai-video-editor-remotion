@@ -48,7 +48,7 @@ def kumpulkan(r: Renderer) -> tuple[list[dict], list[dict]]:
         if rec["tipe"] == "remotion" and rec.get("dekoratif"):  # hiasan yang memudar (partikel): sampel saat tampak, bukan di akhir
             t = rec["mulai"] + min(0.4, (rec["selesai"] - rec["mulai"]) / 3)
         elif rec["tipe"] == "remotion":
-            t = rec["t_ukur"]
+            t = min(rec["t_ukur"], _tengah(rec))
         else:
             t = max([_tengah(rec)] + [_tengah(x) for x in rek if x.get("induk") == rec["id"]])
         anak = " · ".join(x["teks"] for x in rek if x.get("induk") == rec["id"] and x.get("teks"))
@@ -107,6 +107,13 @@ def storyboard(p: Proyek, buka: bool = False) -> dict:
         img = img.resize((LEBAR_THUMB, round(img.height * LEBAR_THUMB / img.width)), Image.LANCZOS)
         th["file"] = f"storyboard/t{th['frame']:05d}.jpg"
         img.save(p.out / th["file"], quality=85)
+    for rec in r.rekam.values():
+        # tiap elemen dipotret sekali saat stabil: non-dekoratif untuk kontras, dekoratif untuk bbox (K00.1) bila tak kena thumbnail
+        perlu = rec.get("bbox") is None if rec.get("dekoratif") else rec.get("kontras") is None
+        if perlu and rec["tipe"] not in ("kamera", "latar", "push"):
+            t_stabil = min(rec["selesai"] - 1 / r.p.fps, rec["selesai"] - rec.get("durasi_keluar", 0.3) - 0.1)
+            if t_stabil > rec["mulai"]:
+                r.potret(t_stabil)
     r._tutup_pembaca()
 
     layout = r.layout(None)

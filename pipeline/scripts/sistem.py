@@ -33,6 +33,9 @@ SEMENTARA.mkdir(parents=True, exist_ok=True)
 for _k in ("TEMP", "TMP", "TMPDIR"):
     os.environ[_k] = str(SEMENTARA)
 tempfile.tempdir = str(SEMENTARA)
+# cache model (faster-whisper/HF, rembg) juga di D: — bawaan library-nya ke %USERPROFILE% di C: (gigabyte)
+os.environ.setdefault("HF_HOME", str(SEMENTARA / "hf"))
+os.environ.setdefault("U2NET_HOME", str(SEMENTARA / "u2net"))
 
 # jenis → (folder, prefix nama file, ekstensi)
 LAPISAN = {

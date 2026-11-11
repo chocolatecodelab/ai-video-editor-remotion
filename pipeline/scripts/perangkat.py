@@ -380,6 +380,49 @@ def _growth_curve(e, an, p, dur):
     return {"gambar": g0, "durasi_gambar": dg, "catatan": catatan}, b
 
 
+def _layer_explosion(e, an, p, dur):
+    t_ledak = round(an["d_in"] + 0.2, 3)
+    st = min(0.35, max(0.2, (dur - t_ledak - 1.5) / 4))
+    lapis = [round(t_ledak + 0.15 + i * st, 3) for i in range(4)]
+    _cukup(e, lapis[-1] + 1.2, dur, "perpanjang elemen")
+    j = {"ledak": t_ledak, "lapis": lapis}
+    b = [(0.0, "remotion", "masuk"), (t_ledak, "ui-dolly", "ledak")]
+    b += [(t, "pop", f"lapis{i}") for i, t in enumerate(lapis)]
+    return j, b
+
+
+def _validasi_badge(e, an, p, dur):
+    ganti = float(e.get("ganti", max(1.2, min(2.5, dur * 0.5))))
+    _cukup(e, ganti + 0.8 + p.t("durasi.tahan-min") + an["d_out"], dur, "perpanjang elemen / kecilkan 'ganti'")
+    j = {"ganti": round(ganti, 3)}
+    b = [(0.0, "chip-salah", "salah"), (ganti, "chip-benar", "benar")]
+    return j, b
+
+
+def _chat_window(e, an, p, dur):
+    t_mulai = round(an["d_in"] + 0.15, 3)
+    spek = e.get("spek") or {}
+    pesan = spek.get("pesan") or []
+    st = min(0.6, max(0.25, (dur - t_mulai - 1.0) / max(1, len(pesan))))
+    jadwal_pesan = [round(t_mulai + i * st, 3) for i in range(len(pesan))]
+    j = {"mulai": t_mulai, "pesan": jadwal_pesan}
+    b = [(0.0, "remotion", "masuk")]
+    b += [(t, "pop", f"pesan_{i}") for i, t in enumerate(jadwal_pesan)]
+    return j, b
+
+
+def _split_explainer(e, an, p, dur):
+    t_mulai = round(an["d_in"] + 0.2, 3)
+    spek = e.get("spek") or {}
+    items = e.get("langkah") or e.get("items") or spek.get("items") or spek.get("langkah") or []
+    st = min(0.7, max(0.3, (dur - t_mulai - 1.2) / max(1, len(items))))
+    jadwal_langkah = [round(t_mulai + i * st, 3) for i in range(len(items))]
+    j = {"mulai": t_mulai, "langkah": jadwal_langkah}
+    b = [(0.0, "remotion", "masuk")]
+    b += [(t, "whoosh", f"langkah_{i}") for i, t in enumerate(jadwal_langkah)]
+    return j, b
+
+
 # ---------------------------------------------------------------- E51 kinetik-kata · E52–E54 adegan metafora
 def frasa_kinetik(teks: str) -> list[dict]:
     """"still trying to find *your way.*" → [{w, aksen}] per kata; *…* boleh melintasi beberapa kata."""
@@ -465,6 +508,10 @@ def _gabung(*bagian) -> str:
 
 
 PERANGKAT: dict[str, Spek] = {
+    "ChatWindow": Spek(_chat_window, lambda e: _gabung(e.get("spek", {}).get("judul"), *[p.get("teks", "") for p in e.get("spek", {}).get("pesan", [])]),
+                       {"ukuran": ["isi"], "warna": ["teks-utama", "aksen"]}, posisi="atas", jendela=True),
+    "SplitExplainer": Spek(_split_explainer, lambda e: _gabung(e.get("spek", {}).get("header"), *[it.get("judul", "") for it in e.get("spek", {}).get("items", [])]),
+                           {"ukuran": ["isi", "judul"], "warna": ["teks-utama", "aksen"]}, posisi="atas", jendela=False),
     "PromptUI": Spek(_prompt, lambda e: _gabung(e.get("label"), e.get("teks")), posisi="atas", jendela=False),
     "Penghitung": Spek(_hitung, lambda e: _gabung(e.get("judul"), e.get("sub"), str(e.get("ke")), e.get("label")),
                        {"ukuran": ["isi"], "warna": ["teks-utama", "teks-sekunder", "aksen"]}),
@@ -518,6 +565,9 @@ PERANGKAT: dict[str, Spek] = {
     "CouchWall": Spek(_couch, lambda e: _gabung(*[f"{k.get('judul')} {k.get('sub', '')}" for k in e.get("konten", [])]), cutaway=True),
     "UIWorld": Spek(_ui_world, lambda e: _gabung(e.get("judul"), e.get("sub")), cutaway=True),
     "PaperCut": Spek(_paper, lambda e: _gabung(e.get("judul"), e.get("sub")), cutaway=True),
+    "LayerExplosion": Spek(_layer_explosion, lambda e: _gabung(e.get("judul"), e.get("sub"), e.get("teks_layer"), e.get("caption_layer")), cutaway=True),
+    "ValidasiBadge": Spek(_validasi_badge, lambda e: _gabung(e.get("salah_teks"), e.get("salah_sub"), e.get("benar_teks"), e.get("benar_sub")),
+                          {"ukuran": ["isi"], "warna": ["teks-utama", "aksen"]}, posisi="atas", jendela=False),
 }
 
 

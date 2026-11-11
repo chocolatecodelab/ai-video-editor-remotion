@@ -417,6 +417,85 @@ def _linimasa(r, items, layout, thumbs, beats) -> str:
     return f'<div class="lm"><div class="lm__baris lm__baris--sumbu"><span class="lm__label"></span><div class="lm__sumbu">{sumbu}</div></div>{isi}</div>'
 
 
+# font yang tersedia lokal di pipeline/fonts (bisa langsung dipakai token tanpa unduh)
+FONT_LOKAL = [("Inter-Variable.ttf", "Inter"), ("DMSerifDisplay-Regular.ttf", "DM Serif Display"),
+              ("PlayfairDisplay-Variable.ttf", "Playfair Display"), ("Anton-Regular.ttf", "Anton"),
+              ("BebasNeue-Regular.ttf", "Bebas Neue"), ("Baloo2-Variable.ttf", "Baloo 2"), ("LilitaOne-Regular.ttf", "Lilita One"),
+              ("Bangers-Regular.ttf", "Bangers"), ("LuckiestGuy-Regular.ttf", "Luckiest Guy")]
+MUSIK = [("tetap", "Seperti sekarang"), ("tanpa", "Tanpa musik"), ("bawaan:lembut", "Lembut"), ("bawaan:lofi", "Lofi"),
+         ("bawaan:pulsa", "Pulsa (bertenaga)")]
+POSISI = [("bawah", "Bawah"), ("tengah", "Tengah"), ("atas", "Atas")]
+
+
+def _pilihan_gaya(p, r, thumbs, out_dir: Path) -> tuple[str, str, dict]:
+    """Bagian 'Pilihan gaya untuk video ini' → (html, @font-face, data JS). Pilihan TIDAK mengubah proyek: yang berbeda
+    dari sekarang masuk rangkuman revisi sebagai token_override (untuk video ini saja), lalu agen yang menerapkannya."""
+    sekarang = {
+        "fontJudul": str(p.t("font.judul.family", "")), "fontCaption": str(p.t("font.caption.family", "")),
+        "aksen": str(p.t("warna.aksen", "#FFFFFF")).upper(), "utama": str(p.t("warna.teks-utama", "#FFFFFF")),
+        "stroke": str(p.t("warna.stroke", "#000000")), "ukuranCaption": int(p.t("ukuran.caption", 60)),
+        "ukuranJudul": int(p.t("ukuran.judul", 90)), "posisi": (r.bs.get("caption") or {}).get("posisi", "bawah"),
+        "sfx": bool(p.t("sfx.otomatis", False)), "musik": "tetap",
+    }
+    musik_kini = (p.manifest.get("aset") or {}).get("musik")
+    musik_kini = musik_kini.get("file") if isinstance(musik_kini, dict) else musik_kini
+    file_font = {fam: f for f, fam in FONT_LOKAL}
+    css = "".join(f'@font-face{{font-family:"Pilih {fam}";src:url("{_font(f, out_dir)}") format("truetype");font-display:swap}}'
+                  for f, fam in FONT_LOKAL)
+    keluarga = list(dict.fromkeys([sekarang["fontJudul"]] + [fam for _, fam in FONT_LOKAL]))
+    aksen_gaya = []  # warna aksen dari semua gaya aktif: pilihan yang sudah teruji kontrasnya di sistem
+    for f in sorted((ROOT / "tokens").glob("TOKEN_*_v*.json")):
+        w = json.loads(f.read_text(encoding="utf-8")).get("warna", {}).get("aksen")
+        if isinstance(w, str):
+            aksen_gaya.append(w.upper())
+    aksen_gaya = list(dict.fromkeys([sekarang["aksen"]] + aksen_gaya))
+
+    def tombol_font(nama: str, fam: str, kini: str) -> str:
+        nilai_css = f'"Pilih {fam}", "{fam}", sans-serif'
+        return (f'<label class="opsi-font"><input type="radio" name="{nama}" value="{e(fam)}"{" checked" if fam == kini else ""}>'
+                f'<span class="opsi-font__contoh" style="font-family:{e(nilai_css)}">Aa</span>'
+                f'<span class="opsi-font__nama">{e(fam)}{" (sekarang)" if fam == kini else ""}</span></label>')
+
+    latar = thumbs[0]["file"] if thumbs else ""
+    judul = polos(p.manifest.get("judul") or p.manifest["proyek"])
+    font_caption = list(dict.fromkeys([sekarang["fontCaption"], "Inter", "Baloo 2", "Bebas Neue"]))
+    html_ = f"""
+<section class="blok" id="gaya" aria-labelledby="j-gaya">
+  <h2 id="j-gaya">Pilihan gaya untuk video ini</h2>
+  <p class="blok__ringkas">Ganti lalu lihat perkiraannya di sebelah. Yang berbeda dari sekarang masuk ke permintaan revisi
+  sebagai pengaturan khusus video ini; gaya {e(label_modul(p.gaya.ref))} untuk video lain tidak berubah.</p>
+  <div class="gaya">
+    <form class="gaya__kontrol" id="form-gaya" onsubmit="return false">
+      <fieldset><legend>Font judul</legend><div class="opsi-font-daftar">{"".join(tombol_font("fontJudul", f, sekarang["fontJudul"]) for f in keluarga)}</div></fieldset>
+      <fieldset><legend>Font subtitle</legend><div class="opsi-font-daftar">{"".join(tombol_font("fontCaption", f, sekarang["fontCaption"]) for f in font_caption)}</div></fieldset>
+      <fieldset><legend>Warna aksen</legend><div class="opsi-warna">
+        {"".join(f'<label class="opsi-warna__item" title="{w}"><input type="radio" name="aksen" value="{w}"{" checked" if w == sekarang["aksen"] else ""}><span style="background:{w}"></span><span class="sr">{w}{" (sekarang)" if w == sekarang["aksen"] else ""}</span></label>' for w in aksen_gaya)}
+        <label class="opsi-warna__item opsi-warna__bebas"><input type="radio" name="aksen" value="bebas" aria-label="Warna lain"><input type="color" id="aksen-bebas" value="{sekarang['aksen'].lower()}" aria-label="Pilih warna lain"></label>
+      </div></fieldset>
+      <fieldset><legend>Posisi subtitle</legend><div class="opsi-segmen">
+        {"".join(f'<label><input type="radio" name="posisi" value="{v}"{" checked" if v == sekarang["posisi"] else ""}><span>{t}</span></label>' for v, t in POSISI)}
+      </div></fieldset>
+      <fieldset><legend>Ukuran subtitle <output id="ukuran-nilai">100%</output></legend>
+        <input type="range" name="ukuran" min="80" max="130" step="5" value="100" aria-label="Ukuran subtitle dalam persen"></fieldset>
+      <fieldset><legend>Suara</legend>
+        <label class="centang"><input type="checkbox" name="sfx"{" checked" if sekarang["sfx"] else ""}><span>Bunyi efek otomatis (klik, pop, whoosh)</span></label>
+        <p class="kontrol__label">Musik latar <span class="redup">(sekarang: {e(musik_kini or "tanpa musik")})</span></p>
+        <div class="opsi-segmen opsi-segmen--bungkus">{"".join(f'<label><input type="radio" name="musik" value="{v}"{" checked" if v == "tetap" else ""}><span>{t}</span></label>' for v, t in MUSIK)}</div>
+      </fieldset>
+      <button type="reset" class="tombol" id="gaya-reset">Kembalikan seperti sekarang</button>
+    </form>
+    <figure class="gaya__pratinjau">
+      <div class="layar" id="layar" style="background-image:url('{e(latar)}')" role="img" aria-label="Perkiraan judul dan subtitle di atas frame video">
+        <p class="layar__judul" id="layar-judul">{e(judul)}</p>
+        <p class="layar__caption" id="layar-caption">contoh <span>subtitle</span> di sini</p>
+      </div>
+      <figcaption>Perkiraan di atas frame video ini. Hasil akhir mengikuti render.</figcaption>
+    </figure>
+  </div>
+</section>"""
+    return html_, css, {"sekarang": sekarang, "fileFont": file_font}
+
+
 # CSS & JS dimuat dari file terpisah di folder yang sama (lebih mudah dirawat daripada string panjang di Python)
 _DIR = Path(__file__).resolve().parent / "storyboard_aset"
 CSS = (_DIR / "storyboard.css").read_text(encoding="utf-8")

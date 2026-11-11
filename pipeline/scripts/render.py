@@ -260,12 +260,15 @@ class Renderer(ElemenMixin, DepthMixin, PerangkatMixin, KameraMixin, PipMixin, A
                 warna_stroke=p.t("warna.stroke"), bayangan=True, aktif=aktif, warna_aktif=warna_aktif,
                 huruf_besar=c["huruf-besar"], maks_karakter=c["karakter-maks-baris"], redup=redup)
             spr0 = buat(0)
+            pad = spr0.info["pad"]
             cx = (zx0 + zx1) / 2
-            cy = {"bawah": zy1 - spr0.h / 2, "tengah": (zy0 + zy1) / 2, "atas": zy0 + spr0.h / 2}[posisi]
+            cy = {"bawah": (zy1 - 10) - spr0.h / 2 + pad,
+                  "tengah": (zy0 + zy1) / 2,
+                  "atas": (zy0 + 10) + spr0.h / 2 - pad}[posisi]
+            cy += self.p.px(cfg.get("geser_y", 0))
             item = {"id": f"caption/{i:03d}", "mulai": s, "selesai": e, "kata": g, "cx": cx, "cy": cy,
                     "buat": buat, "spr": {0: spr0}}
             self.cap.append(item)
-            pad = spr0.info["pad"]
             bb = bbox_transform(spr0.w, spr0.h, Transform(cx, cy, 1, 1))
             self.rekam[item["id"]] = {
                 "id": item["id"], "tipe": "caption", "teks": teks, "mulai": round(s, 3), "selesai": round(e, 3),
