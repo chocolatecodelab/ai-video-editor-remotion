@@ -1,0 +1,2540 @@
+{
+  "proyek": "2026-10_we-fail-today",
+  "resolusi": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "durasi": 56.833,
+  "zona_aman": [
+    60,
+    250,
+    960,
+    1760
+  ],
+  "elemen": [
+    {
+      "id": "hook/1-judul",
+      "tipe": "remotion",
+      "komposisi": "JudulGaya",
+      "beat": "hook",
+      "teks": "WE FAIL TODAY",
+      "mulai": 0.11,
+      "selesai": 3.11,
+      "delay": 0.0,
+      "bbox": [
+        63.0,
+        250.0,
+        957.0,
+        444.0
+      ],
+      "bbox_teks": [
+        63.0,
+        250.0,
+        957.0,
+        444.0
+      ],
+      "bbox_animasi": [
+        63.0,
+        250.0,
+        957.0,
+        444.0
+      ],
+      "t_ukur": 2.837,
+      "masuk": "fade",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": {
+        "t": 0.5,
+        "l_p10": 0.1079,
+        "l_p90": 0.1404,
+        "sumber": "panel+latar"
+      },
+      "efek": "judul-gaya@0.1",
+      "overlay": "JudulGaya-3003faa4d86fff9a.mov",
+      "kaca": true,
+      "anchor": {
+        "kata": "sometimes",
+        "ke": 1
+      },
+      "panel_opasitas": 0.62,
+      "panel_warna": null,
+      "dekoratif": false,
+      "ukuran": 96,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "item": null,
+      "stagger": null,
+      "fungsi": "hook",
+      "posisi": "atas",
+      "judul": true,
+      "tutup_wajah_px": 0.0
+    },
+    {
+      "id": "konteks/0-kamera",
+      "tipe": "kamera",
+      "beat": "konteks",
+      "efek": "green-screen@0.2",
+      "mulai": 6.03,
+      "selesai": 11.31,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_animasi": null,
+      "induk": null,
+      "dekoratif": true,
+      "fungsi": "konteks",
+      "anchor": {
+        "kata": "get",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "anchor_kata": true,
+      "butuh_mask": true,
+      "masuk": "green-screen",
+      "keluar": "green-screen"
+    },
+    {
+      "id": "konteks/1-remotion",
+      "tipe": "cutaway",
+      "komposisi": "UIWorld",
+      "beat": "konteks",
+      "teks": "Self Doubt when things fall apart",
+      "mulai": 7.95,
+      "selesai": 12.75,
+      "delay": 0.0,
+      "induk": null,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_teks": null,
+      "bbox_animasi": null,
+      "efek": "ui-world@0.2",
+      "overlay": "UIWorld-48510ef5c7b08e92.mov",
+      "anchor": {
+        "kata": "fail",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "anchor_kata": true,
+      "fungsi": "masalah",
+      "dekoratif": true,
+      "masuk": "potong",
+      "keluar": "potong"
+    },
+    {
+      "id": "poin-1/0-depth",
+      "tipe": "depth",
+      "beat": "poin-1",
+      "teks": "NOT OVER",
+      "mulai": 19.35,
+      "selesai": 21.95,
+      "delay": 0.0,
+      "bbox": [
+        143.0,
+        268.8,
+        877.0,
+        839.8
+      ],
+      "bbox_animasi": [
+        143.0,
+        268.8,
+        877.0,
+        889.1
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "fail",
+        "ke": 3
+      },
+      "fungsi": "reveal",
+      "bbox_teks": [
+        147.0,
+        272.8,
+        873.0,
+        835.8
+      ],
+      "ukuran": 240,
+      "baris": 2,
+      "karakter_baris_maks": 4,
+      "kata": 2,
+      "warna": [
+        "#5EE6FF",
+        "#8B7CFF",
+        "#FF5A6E"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "depth",
+      "depth_tata": {
+        "skala": 1.0,
+        "kepala_y": 667,
+        "tutup_rencana": 0.25
+      },
+      "tertutup": {
+        "n": 78,
+        "jumlah": 9.169,
+        "maks": 0.149
+      }
+    },
+    {
+      "id": "poin-1/1-kamera",
+      "tipe": "kamera",
+      "beat": "poin-1",
+      "efek": "paper-cutout@0.1",
+      "mulai": 22.23,
+      "selesai": 26.03,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_animasi": null,
+      "induk": null,
+      "dekoratif": true,
+      "fungsi": "reveal",
+      "anchor": {
+        "kata": "rejection",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "anchor_kata": true,
+      "butuh_mask": true,
+      "masuk": "paper-cutout",
+      "keluar": "paper-cutout"
+    },
+    {
+      "id": "poin-1/2-chip",
+      "tipe": "chip",
+      "beat": "poin-1",
+      "teks": "Mindset · Rejection ≠ *Your Worth*",
+      "mulai": 22.53,
+      "selesai": 26.03,
+      "delay": 0.0,
+      "bbox": [
+        61.5,
+        250.0,
+        958.5,
+        327.0
+      ],
+      "bbox_animasi": [
+        61.5,
+        250.0,
+        958.5,
+        327.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "rejection",
+        "ke": 1
+      },
+      "fungsi": "membantah",
+      "latar": "panel",
+      "status": "info"
+    },
+    {
+      "id": "poin-1/2-chip/teks",
+      "tipe": "teks-chip",
+      "beat": "poin-1",
+      "teks": "Mindset · Rejection ≠ *Your Worth*",
+      "mulai": 22.53,
+      "selesai": 26.03,
+      "delay": 0.0,
+      "bbox": [
+        89.5,
+        264.0,
+        930.5,
+        313.0
+      ],
+      "bbox_animasi": [
+        89.5,
+        264.0,
+        930.5,
+        313.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "poin-1/2-chip",
+      "kontras": {
+        "t": 24.333,
+        "l_p10": 0.0074,
+        "l_p90": 0.0075
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "rejection",
+        "ke": 1
+      },
+      "fungsi": "membantah",
+      "bbox_teks": [
+        89.5,
+        264.0,
+        930.5,
+        313.0
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 32,
+      "kata": 6,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null
+    },
+    {
+      "id": "poin-2/0-kartu",
+      "tipe": "kartu",
+      "beat": "poin-2",
+      "teks": "Doesn't determine your entire future",
+      "mulai": 27.29,
+      "selesai": 31.49,
+      "delay": 0.0,
+      "bbox": [
+        60.0,
+        250.0,
+        960.0,
+        498.0
+      ],
+      "bbox_animasi": [
+        60.0,
+        250.0,
+        960.0,
+        551.6
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "decision",
+        "ke": 1,
+        "offset": -0.4
+      },
+      "fungsi": "langkah",
+      "item": 0,
+      "stagger": null
+    },
+    {
+      "id": "poin-2/0-kartu/0",
+      "tipe": "teks-kartu",
+      "beat": "poin-2",
+      "teks": "One *Bad Decision*",
+      "mulai": 27.29,
+      "selesai": 31.49,
+      "delay": 0.19,
+      "bbox": [
+        100.0,
+        290.0,
+        715.0,
+        377.0
+      ],
+      "bbox_animasi": [
+        100.0,
+        290.0,
+        715.0,
+        424.2
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": "poin-2/0-kartu",
+      "kontras": {
+        "t": 29.567,
+        "l_p10": 0.0412,
+        "l_p90": 0.0481
+      },
+      "efek": null,
+      "anchor": null,
+      "fungsi": null,
+      "bbox_teks": [
+        104.0,
+        294.0,
+        711.0,
+        373.0
+      ],
+      "ukuran": 64,
+      "baris": 1,
+      "karakter_baris_maks": 16,
+      "kata": 3,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "subjudul",
+      "bagian": "judul"
+    },
+    {
+      "id": "poin-2/0-kartu/1",
+      "tipe": "teks-kartu",
+      "beat": "poin-2",
+      "teks": "Doesn't determine your entire future",
+      "mulai": 27.29,
+      "selesai": 31.49,
+      "delay": 0.27,
+      "bbox": [
+        100.0,
+        391.0,
+        897.0,
+        458.0
+      ],
+      "bbox_animasi": [
+        100.0,
+        391.0,
+        897.0,
+        493.1
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": false,
+      "induk": "poin-2/0-kartu",
+      "kontras": {
+        "t": 29.6,
+        "l_p10": 0.0412,
+        "l_p90": 0.0499
+      },
+      "efek": null,
+      "anchor": null,
+      "fungsi": null,
+      "bbox_teks": [
+        104.0,
+        395.0,
+        893.0,
+        454.0
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 36,
+      "kata": 5,
+      "warna": [
+        "#C9D3E6"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "isi",
+      "bagian": "teks"
+    },
+    {
+      "id": "poin-2/1-kamera",
+      "tipe": "kamera",
+      "beat": "poin-2",
+      "efek": "digital-zoom@0.2",
+      "mulai": 29.61,
+      "selesai": 31.41,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_animasi": null,
+      "induk": null,
+      "dekoratif": true,
+      "fungsi": "hasil",
+      "anchor": {
+        "kata": "entire",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "anchor_kata": true,
+      "butuh_mask": false,
+      "masuk": "digital-zoom",
+      "keluar": "digital-zoom"
+    },
+    {
+      "id": "poin-3/0-chip",
+      "tipe": "chip",
+      "beat": "poin-3",
+      "teks": "Stay *Adaptive*",
+      "mulai": 34.31,
+      "selesai": 38.31,
+      "delay": 0.0,
+      "bbox": [
+        303.5,
+        250.0,
+        716.5,
+        326.0
+      ],
+      "bbox_animasi": [
+        303.5,
+        250.0,
+        716.5,
+        326.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "unpredictable",
+        "ke": 1
+      },
+      "fungsi": "langkah",
+      "latar": "panel",
+      "status": "info"
+    },
+    {
+      "id": "poin-3/0-chip/teks",
+      "tipe": "teks-chip",
+      "beat": "poin-3",
+      "teks": "Stay *Adaptive*",
+      "mulai": 34.31,
+      "selesai": 38.31,
+      "delay": 0.0,
+      "bbox": [
+        331.5,
+        264.0,
+        688.5,
+        312.0
+      ],
+      "bbox_animasi": [
+        331.5,
+        264.0,
+        688.5,
+        312.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "poin-3/0-chip",
+      "kontras": {
+        "t": 36.367,
+        "l_p10": 0.0149,
+        "l_p90": 0.0172
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "unpredictable",
+        "ke": 1
+      },
+      "fungsi": "langkah",
+      "bbox_teks": [
+        331.5,
+        264.0,
+        688.5,
+        312.0
+      ],
+      "ukuran": 48,
+      "baris": 1,
+      "karakter_baris_maks": 13,
+      "kata": 2,
+      "warna": [
+        "#5EE6FF",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null
+    },
+    {
+      "id": "poin-3/1-remotion",
+      "tipe": "remotion",
+      "komposisi": "Checklist",
+      "beat": "poin-3",
+      "teks": "Stay Resilient  Accept Learn Never lose hope",
+      "mulai": 41.63,
+      "selesai": 45.23,
+      "delay": 0.0,
+      "bbox": [
+        60.0,
+        250.0,
+        960.0,
+        651.0
+      ],
+      "bbox_teks": [
+        60.0,
+        250.0,
+        960.0,
+        651.0
+      ],
+      "bbox_animasi": [
+        60.0,
+        250.0,
+        960.0,
+        658.0
+      ],
+      "t_ukur": 44.957,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": {
+        "t": 42.0,
+        "l_p10": 0.0218,
+        "l_p90": 0.0252,
+        "sumber": "panel+latar"
+      },
+      "efek": "checklist@0.3",
+      "overlay": "Checklist-b2a556c770ad777d.mov",
+      "kaca": true,
+      "anchor": {
+        "kata": "so",
+        "ke": 1,
+        "offset": -0.4
+      },
+      "panel_opasitas": 0.9,
+      "panel_warna": null,
+      "dekoratif": false,
+      "ukuran": 48,
+      "warna": [
+        "#5EE6FF",
+        "#C9D3E6",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "item": 3,
+      "stagger": 0.6,
+      "fungsi": "proses",
+      "posisi": "atas",
+      "tutup_wajah_px": 0.0
+    },
+    {
+      "id": "ringkasan/0-info",
+      "tipe": "info",
+      "beat": "ringkasan",
+      "teks": "Your Story *Isn't Over* Tomorrow is a fresh start",
+      "mulai": 47.75,
+      "selesai": 51.35,
+      "delay": 0.0,
+      "bbox": [
+        258.0,
+        250.0,
+        762.0,
+        504.0
+      ],
+      "bbox_animasi": [
+        258.0,
+        250.0,
+        762.0,
+        553.4
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "story",
+        "ke": 1,
+        "offset": -1.2
+      },
+      "fungsi": "ringkasan",
+      "latar": "panel"
+    },
+    {
+      "id": "ringkasan/0-info/teks",
+      "tipe": "teks-info",
+      "beat": "ringkasan",
+      "teks": "Your Story *Isn't Over* Tomorrow is a fresh start",
+      "mulai": 47.75,
+      "selesai": 51.35,
+      "delay": 0.0,
+      "bbox": [
+        287.0,
+        279.0,
+        733.0,
+        475.0
+      ],
+      "bbox_animasi": [
+        287.0,
+        279.0,
+        733.0,
+        524.4
+      ],
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "ringkasan/0-info",
+      "kontras": {
+        "t": 49.633,
+        "l_p10": 0.0109,
+        "l_p90": 0.0113
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "story",
+        "ke": 1,
+        "offset": -1.2
+      },
+      "fungsi": "ringkasan",
+      "bbox_teks": [
+        287.0,
+        279.0,
+        733.0,
+        475.0
+      ],
+      "ukuran": 40,
+      "baris": 3,
+      "karakter_baris_maks": 25,
+      "kata": 9,
+      "warna": [
+        "#5EE6FF",
+        "#C9D3E6",
+        "#FFFFFF"
+      ],
+      "stroke": 0,
+      "warna_stroke": null
+    },
+    {
+      "id": "cta/0-cta",
+      "tipe": "cta",
+      "beat": "cta",
+      "teks": "Tomorrow is Another *Chance*",
+      "mulai": 53.35,
+      "selesai": 56.75,
+      "delay": 0.0,
+      "bbox": [
+        101.0,
+        250.0,
+        919.0,
+        453.0
+      ],
+      "bbox_animasi": [
+        101.0,
+        250.0,
+        919.0,
+        453.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": null,
+      "efek": null,
+      "anchor": {
+        "kata": "chance",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "fungsi": "ajakan"
+    },
+    {
+      "id": "cta/0-cta/teks",
+      "tipe": "teks-cta",
+      "beat": "cta",
+      "teks": "Tomorrow is Another *Chance*",
+      "mulai": 53.35,
+      "selesai": 56.75,
+      "delay": 0.0,
+      "bbox": [
+        141.0,
+        272.0,
+        879.0,
+        431.0
+      ],
+      "bbox_animasi": [
+        141.0,
+        272.0,
+        879.0,
+        431.0
+      ],
+      "masuk": "pop",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": "cta/0-cta",
+      "kontras": {
+        "t": 55.133,
+        "l_p10": 0.6619,
+        "l_p90": 0.6619
+      },
+      "efek": null,
+      "anchor": {
+        "kata": "chance",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "fungsi": "ajakan",
+      "bbox_teks": [
+        145.0,
+        276.0,
+        875.0,
+        427.0
+      ],
+      "ukuran": 64,
+      "baris": 2,
+      "karakter_baris_maks": 19,
+      "kata": 4,
+      "warna": [
+        "#0B0F17"
+      ],
+      "stroke": 0,
+      "warna_stroke": null,
+      "peran": "subjudul"
+    },
+    {
+      "id": "cta/1-remotion",
+      "tipe": "remotion",
+      "komposisi": "AksenGaya",
+      "beat": "cta",
+      "teks": "",
+      "mulai": 54.49,
+      "selesai": 56.29,
+      "delay": 0.0,
+      "bbox": [
+        238.0,
+        394.0,
+        782.0,
+        398.0
+      ],
+      "bbox_teks": [
+        238.0,
+        394.0,
+        782.0,
+        398.0
+      ],
+      "bbox_animasi": [
+        238.0,
+        394.0,
+        782.0,
+        398.0
+      ],
+      "t_ukur": 56.017,
+      "masuk": "naik",
+      "keluar": "fade",
+      "durasi_masuk": 0.38,
+      "durasi_keluar": 0.24,
+      "easing": "standar",
+      "easing_keluar": "keluar",
+      "anchor_kata": true,
+      "induk": null,
+      "kontras": {
+        "t": 54.867,
+        "l_p10": 0.0302,
+        "l_p90": 0.1123,
+        "sumber": "panel+latar"
+      },
+      "efek": "aksen-gaya@0.1",
+      "overlay": "AksenGaya-e2322de87a0d27df.mov",
+      "kaca": true,
+      "anchor": {
+        "kata": "again",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "panel_opasitas": 0.62,
+      "panel_warna": null,
+      "dekoratif": true,
+      "ukuran": null,
+      "warna": [],
+      "stroke": 0,
+      "item": null,
+      "stagger": null,
+      "fungsi": "reveal",
+      "posisi": "tengah",
+      "tutup_wajah_px": 0.0
+    },
+    {
+      "id": "caption/000",
+      "tipe": "caption",
+      "teks": "Sometimes,",
+      "mulai": 0.11,
+      "selesai": 1.23,
+      "bbox": [
+        254.0,
+        1593.0,
+        766.0,
+        1831.0
+      ],
+      "bbox_teks": [
+        335.0,
+        1674.0,
+        685.0,
+        1750.0
+      ],
+      "bbox_animasi": [
+        254.0,
+        1593.0,
+        766.0,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 0.667,
+        "l_p10": 0.0035,
+        "l_p90": 0.1981
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/001",
+      "tipe": "caption",
+      "teks": "things don't work out",
+      "mulai": 1.87,
+      "selesai": 3.73,
+      "bbox": [
+        174.5,
+        1524.0,
+        845.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        255.5,
+        1605.0,
+        764.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        174.5,
+        1524.0,
+        845.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 2.8,
+        "l_p10": 0.005,
+        "l_p90": 0.3549
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 17,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/002",
+      "tipe": "caption",
+      "teks": "the way we hope.",
+      "mulai": 3.73,
+      "selesai": 5.33,
+      "bbox": [
+        176.0,
+        1593.0,
+        844.0,
+        1831.0
+      ],
+      "bbox_teks": [
+        257.0,
+        1674.0,
+        763.0,
+        1750.0
+      ],
+      "bbox_animasi": [
+        176.0,
+        1593.0,
+        844.0,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 4.533,
+        "l_p10": 0.0039,
+        "l_p90": 0.1765
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 16,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/003",
+      "tipe": "caption",
+      "teks": "We get rejected,",
+      "mulai": 5.69,
+      "selesai": 7.31,
+      "bbox": [
+        187.0,
+        1593.0,
+        833.0,
+        1831.0
+      ],
+      "bbox_teks": [
+        268.0,
+        1674.0,
+        752.0,
+        1750.0
+      ],
+      "bbox_animasi": [
+        187.0,
+        1593.0,
+        833.0,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 6.5,
+        "l_p10": 0.0035,
+        "l_p90": 0.1166
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 16,
+      "kata": 3,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/004",
+      "tipe": "caption",
+      "teks": "we fail,",
+      "mulai": 7.93,
+      "selesai": 9.25,
+      "bbox": [
+        325.5,
+        1593.0,
+        694.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        406.5,
+        1674.0,
+        613.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        325.5,
+        1593.0,
+        694.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 8.6,
+        "l_p10": 0.0047,
+        "l_p90": 0.0055
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 8,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/005",
+      "tipe": "caption",
+      "teks": "and we start questioning",
+      "mulai": 9.25,
+      "selesai": 11.11,
+      "bbox": [
+        247.5,
+        1524.0,
+        772.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        328.5,
+        1605.0,
+        691.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        247.5,
+        1524.0,
+        772.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 10.167,
+        "l_p10": 0.0047,
+        "l_p90": 0.0065
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 12,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/006",
+      "tipe": "caption",
+      "teks": "ourselves.",
+      "mulai": 11.11,
+      "selesai": 12.25,
+      "bbox": [
+        277.5,
+        1593.0,
+        742.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        358.5,
+        1674.0,
+        661.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        277.5,
+        1593.0,
+        742.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 11.667,
+        "l_p10": 0.0044,
+        "l_p90": 0.0047
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/007",
+      "tipe": "caption",
+      "teks": "But remember,",
+      "mulai": 13.51,
+      "selesai": 14.71,
+      "bbox": [
+        210.5,
+        1593.0,
+        809.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        291.5,
+        1674.0,
+        728.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        210.5,
+        1593.0,
+        809.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 14.1,
+        "l_p10": 0.0035,
+        "l_p90": 0.1536
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 13,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/008",
+      "tipe": "caption",
+      "teks": "just because we fail",
+      "mulai": 15.61,
+      "selesai": 17.03,
+      "bbox": [
+        192.5,
+        1524.0,
+        827.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        273.5,
+        1605.0,
+        746.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        192.5,
+        1524.0,
+        827.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 16.333,
+        "l_p10": 0.0045,
+        "l_p90": 0.2382
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 15,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/009",
+      "tipe": "caption",
+      "teks": "today,",
+      "mulai": 17.03,
+      "selesai": 17.83,
+      "bbox": [
+        336.5,
+        1593.0,
+        683.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        417.5,
+        1674.0,
+        602.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        336.5,
+        1593.0,
+        683.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 17.433,
+        "l_p10": 0.0031,
+        "l_p90": 0.0991
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 6,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/010",
+      "tipe": "caption",
+      "teks": "doesn't mean we will",
+      "mulai": 18.29,
+      "selesai": 19.35,
+      "bbox": [
+        180.5,
+        1524.0,
+        839.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        261.5,
+        1605.0,
+        758.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        180.5,
+        1524.0,
+        839.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 18.833,
+        "l_p10": 0.0046,
+        "l_p90": 0.2218
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 15,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/011",
+      "tipe": "caption",
+      "teks": "fail tomorrow.",
+      "mulai": 19.35,
+      "selesai": 20.57,
+      "bbox": [
+        223.5,
+        1593.0,
+        796.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        304.5,
+        1674.0,
+        715.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        223.5,
+        1593.0,
+        796.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 19.967,
+        "l_p10": 0.0033,
+        "l_p90": 0.0967
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 14,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/012",
+      "tipe": "caption",
+      "teks": "One rejection doesn't define",
+      "mulai": 21.99,
+      "selesai": 24.89,
+      "bbox": [
+        219.0,
+        1524.0,
+        801.0,
+        1831.0
+      ],
+      "bbox_teks": [
+        300.0,
+        1605.0,
+        720.0,
+        1750.0
+      ],
+      "bbox_animasi": [
+        219.0,
+        1524.0,
+        801.0,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 23.433,
+        "l_p10": 0.004,
+        "l_p90": 0.2893
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 14,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/013",
+      "tipe": "caption",
+      "teks": "your worth.",
+      "mulai": 24.89,
+      "selesai": 26.07,
+      "bbox": [
+        261.0,
+        1593.0,
+        759.0,
+        1831.0
+      ],
+      "bbox_teks": [
+        342.0,
+        1674.0,
+        678.0,
+        1750.0
+      ],
+      "bbox_animasi": [
+        261.0,
+        1593.0,
+        759.0,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 25.467,
+        "l_p10": 0.0034,
+        "l_p90": 0.0843
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 11,
+      "kata": 2,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/014",
+      "tipe": "caption",
+      "teks": "One bad decision doesn't",
+      "mulai": 26.77,
+      "selesai": 28.83,
+      "bbox": [
+        178.0,
+        1524.0,
+        842.0,
+        1831.0
+      ],
+      "bbox_teks": [
+        259.0,
+        1605.0,
+        761.0,
+        1750.0
+      ],
+      "bbox_animasi": [
+        178.0,
+        1524.0,
+        842.0,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 27.8,
+        "l_p10": 0.0039,
+        "l_p90": 0.259
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 16,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/015",
+      "tipe": "caption",
+      "teks": "determine your entire future.",
+      "mulai": 28.83,
+      "selesai": 31.81,
+      "bbox": [
+        204.5,
+        1524.0,
+        815.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        285.5,
+        1605.0,
+        734.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        204.5,
+        1524.0,
+        815.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 30.333,
+        "l_p10": 0.0053,
+        "l_p90": 0.1547
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 14,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/016",
+      "tipe": "caption",
+      "teks": "Life is unpredictable,",
+      "mulai": 32.49,
+      "selesai": 35.53,
+      "bbox": [
+        215.5,
+        1524.0,
+        804.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        296.5,
+        1605.0,
+        723.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        215.5,
+        1524.0,
+        804.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 34.0,
+        "l_p10": 0.0039,
+        "l_p90": 0.3122
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 14,
+      "kata": 3,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/017",
+      "tipe": "caption",
+      "teks": "and things can change",
+      "mulai": 36.07,
+      "selesai": 38.47,
+      "bbox": [
+        216.0,
+        1524.0,
+        804.0,
+        1831.0
+      ],
+      "bbox_teks": [
+        297.0,
+        1605.0,
+        723.0,
+        1750.0
+      ],
+      "bbox_animasi": [
+        216.0,
+        1524.0,
+        804.0,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 37.267,
+        "l_p10": 0.0048,
+        "l_p90": 0.2894
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 14,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/018",
+      "tipe": "caption",
+      "teks": "when you least expect",
+      "mulai": 38.47,
+      "selesai": 39.61,
+      "bbox": [
+        209.5,
+        1524.0,
+        810.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        290.5,
+        1605.0,
+        729.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        209.5,
+        1524.0,
+        810.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 39.033,
+        "l_p10": 0.0039,
+        "l_p90": 0.2568
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 14,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/019",
+      "tipe": "caption",
+      "teks": "them",
+      "mulai": 39.61,
+      "selesai": 40.37,
+      "bbox": [
+        352.5,
+        1593.0,
+        667.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        433.5,
+        1674.0,
+        586.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        352.5,
+        1593.0,
+        667.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 40.0,
+        "l_p10": 0.0523,
+        "l_p90": 0.0843
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 4,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/020",
+      "tipe": "caption",
+      "teks": "So don't lose hope,",
+      "mulai": 42.03,
+      "selesai": 45.07,
+      "bbox": [
+        241.0,
+        1524.0,
+        779.0,
+        1831.0
+      ],
+      "bbox_teks": [
+        322.0,
+        1605.0,
+        698.0,
+        1750.0
+      ],
+      "bbox_animasi": [
+        241.0,
+        1524.0,
+        779.0,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 43.533,
+        "l_p10": 0.0044,
+        "l_p90": 0.2347
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 13,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/021",
+      "tipe": "caption",
+      "teks": "just because today was",
+      "mulai": 45.07,
+      "selesai": 46.35,
+      "bbox": [
+        152.0,
+        1524.0,
+        868.0,
+        1831.0
+      ],
+      "bbox_teks": [
+        233.0,
+        1605.0,
+        787.0,
+        1750.0
+      ],
+      "bbox_animasi": [
+        152.0,
+        1524.0,
+        868.0,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 45.7,
+        "l_p10": 0.005,
+        "l_p90": 0.2965
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 18,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/022",
+      "tipe": "caption",
+      "teks": "difficult.",
+      "mulai": 46.35,
+      "selesai": 47.05,
+      "bbox": [
+        306.0,
+        1593.0,
+        714.0,
+        1831.0
+      ],
+      "bbox_teks": [
+        387.0,
+        1674.0,
+        633.0,
+        1750.0
+      ],
+      "bbox_animasi": [
+        306.0,
+        1593.0,
+        714.0,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 46.7,
+        "l_p10": 0.0518,
+        "l_p90": 0.1403
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 10,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/023",
+      "tipe": "caption",
+      "teks": "Your story is isn't",
+      "mulai": 47.05,
+      "selesai": 50.17,
+      "bbox": [
+        244.5,
+        1524.0,
+        775.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        325.5,
+        1605.0,
+        694.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        244.5,
+        1524.0,
+        775.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 48.6,
+        "l_p10": 0.0046,
+        "l_p90": 0.2915
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 13,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/024",
+      "tipe": "caption",
+      "teks": "over,",
+      "mulai": 50.17,
+      "selesai": 50.77,
+      "bbox": [
+        354.5,
+        1593.0,
+        665.5,
+        1831.0
+      ],
+      "bbox_teks": [
+        435.5,
+        1674.0,
+        584.5,
+        1750.0
+      ],
+      "bbox_animasi": [
+        354.5,
+        1593.0,
+        665.5,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 50.467,
+        "l_p10": 0.0048,
+        "l_p90": 0.1406
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 5,
+      "kata": 1,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/025",
+      "tipe": "caption",
+      "teks": "tomorrow is another chance",
+      "mulai": 51.83,
+      "selesai": 53.97,
+      "bbox": [
+        199.0,
+        1524.0,
+        821.0,
+        1831.0
+      ],
+      "bbox_teks": [
+        280.0,
+        1605.0,
+        740.0,
+        1750.0
+      ],
+      "bbox_animasi": [
+        199.0,
+        1524.0,
+        821.0,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 52.9,
+        "l_p10": 0.0047,
+        "l_p90": 0.2564
+      },
+      "ukuran": 62,
+      "baris": 2,
+      "karakter_baris_maks": 14,
+      "kata": 4,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    },
+    {
+      "id": "caption/026",
+      "tipe": "caption",
+      "teks": "to try again.",
+      "mulai": 53.97,
+      "selesai": 55.61,
+      "bbox": [
+        257.0,
+        1593.0,
+        763.0,
+        1831.0
+      ],
+      "bbox_teks": [
+        338.0,
+        1674.0,
+        682.0,
+        1750.0
+      ],
+      "bbox_animasi": [
+        257.0,
+        1593.0,
+        763.0,
+        1831.0
+      ],
+      "masuk": "pop",
+      "easing": "standar",
+      "induk": null,
+      "kontras": {
+        "t": 54.8,
+        "l_p10": 0.0044,
+        "l_p90": 0.2092
+      },
+      "ukuran": 62,
+      "baris": 1,
+      "karakter_baris_maks": 13,
+      "kata": 3,
+      "warna": [
+        "#FFFFFF"
+      ],
+      "stroke": 7,
+      "warna_stroke": "#05070C",
+      "mode": "karaoke"
+    }
+  ],
+  "push": [
+    {
+      "id": "hook/0-push",
+      "mulai": 0.0,
+      "selesai": 3.23,
+      "skala": 1.05,
+      "gerak": 2.8,
+      "fokus": [
+        0.5,
+        0.4
+      ],
+      "easing": "standar",
+      "anchor_kata": false,
+      "efek": null,
+      "anchor": null
+    }
+  ],
+  "broll": [
+    {
+      "id": "konteks/1-remotion",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\proyek\\2026-10_we-fail-today\\cache\\remotion\\UIWorld-48510ef5c7b08e92.mov",
+      "mulai": 7.95,
+      "selesai": 12.75,
+      "efek": "ui-world@0.2"
+    }
+  ],
+  "transisi": [
+    {
+      "id": "konteks/2-transisi",
+      "jenis": "blur-zoom",
+      "mulai": 13.08,
+      "selesai": 13.58,
+      "skala": 1.06,
+      "skala_masuk": 1.0,
+      "blur": 22,
+      "geser": 0.0,
+      "geser_px": 0,
+      "efek": "blur-zoom@0.2"
+    },
+    {
+      "id": "poin-1/3-transisi",
+      "jenis": "blur-zoom",
+      "mulai": 25.16,
+      "selesai": 25.66,
+      "skala": 1.06,
+      "skala_masuk": 1.0,
+      "blur": 22,
+      "geser": 0.0,
+      "geser_px": 0,
+      "efek": "blur-zoom@0.2"
+    },
+    {
+      "id": "poin-3/2-transisi",
+      "jenis": "blur-zoom",
+      "mulai": 45.7,
+      "selesai": 46.2,
+      "skala": 1.06,
+      "skala_masuk": 1.0,
+      "blur": 22,
+      "geser": 0.0,
+      "geser_px": 0,
+      "efek": "blur-zoom@0.2"
+    }
+  ],
+  "kamera": [
+    {
+      "id": "konteks/0-kamera",
+      "jenis": "green-screen",
+      "mulai": 6.03,
+      "selesai": 11.31,
+      "d_in": 0.4,
+      "d_out": 0.35,
+      "cfg": {
+        "durasi-masuk": 0.4,
+        "fungsi": "konteks"
+      }
+    },
+    {
+      "id": "poin-1/1-kamera",
+      "jenis": "paper-cutout",
+      "mulai": 22.23,
+      "selesai": 26.03,
+      "d_in": 0.4,
+      "d_out": 0.35,
+      "cfg": {
+        "tepi-px": 16,
+        "getar-px": 3,
+        "durasi-masuk": 0.4,
+        "durasi": 3.8,
+        "fungsi": "reveal"
+      }
+    },
+    {
+      "id": "poin-2/1-kamera",
+      "jenis": "digital-zoom",
+      "mulai": 29.61,
+      "selesai": 31.41,
+      "d_in": 0.45,
+      "d_out": 0.25,
+      "ketukan": [
+        0.0,
+        0.9
+      ],
+      "cfg": {
+        "skala": [
+          1.12,
+          1.24
+        ],
+        "durasi-pukul": 0.12,
+        "guncang-px": 10,
+        "durasi-keluar": 0.25,
+        "durasi": 1.8,
+        "fungsi": "hasil"
+      }
+    }
+  ],
+  "mask_kamera": {
+    "konteks/0-kamera": {
+      "butuh": 58,
+      "ada": 58
+    },
+    "poin-1/1-kamera": {
+      "butuh": 114,
+      "ada": 114
+    },
+    "poin-2/1-kamera": {
+      "butuh": 0,
+      "ada": 0
+    }
+  },
+  "sfx": [
+    {
+      "sumber": "hook/1-judul/masuk",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-pendek-1.wav",
+      "t": 0.0,
+      "db": -19.0,
+      "bunyi": "whoosh-pendek",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "konteks/0-kamera/k0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-1.wav",
+      "t": 5.49,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "konteks/1-remotion/dolly",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\riser-1.wav",
+      "t": 6.73,
+      "db": -19.0,
+      "bunyi": "riser",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "konteks/1-remotion/tiba",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\hit-1.wav",
+      "t": 11.15,
+      "db": -18.0,
+      "bunyi": "hit",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "konteks/2-transisi",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-2.wav",
+      "t": 12.79,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-1/0-depth",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\hit-2.wav",
+      "t": 19.35,
+      "db": -18.0,
+      "bunyi": "hit",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-1/1-kamera/k0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\gores-1.wav",
+      "t": 22.23,
+      "db": -23.0,
+      "bunyi": "gores",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-1/2-chip",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-1.wav",
+      "t": 22.53,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-1/3-transisi",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-1.wav",
+      "t": 24.87,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-2/0-kartu",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ketuk-1.wav",
+      "t": 27.29,
+      "db": -23.0,
+      "bunyi": "ketuk",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-2/1-kamera/k0",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\hit-1.wav",
+      "t": 29.61,
+      "db": -18.0,
+      "bunyi": "hit",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-2/1-kamera/k1",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\hit-2.wav",
+      "t": 30.51,
+      "db": -18.0,
+      "bunyi": "hit",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-3/0-chip",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\tick-2.wav",
+      "t": 34.31,
+      "db": -23.0,
+      "bunyi": "tick",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-3/1-remotion",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\ketuk-2.wav",
+      "t": 41.63,
+      "db": -23.0,
+      "bunyi": "ketuk",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "poin-3/2-transisi",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\whoosh-panjang-2.wav",
+      "t": 45.41,
+      "db": -19.0,
+      "bunyi": "whoosh-panjang",
+      "kelas": "transisi",
+      "otomatis": true
+    },
+    {
+      "sumber": "ringkasan/0-info",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-1.wav",
+      "t": 47.75,
+      "db": -23.0,
+      "bunyi": "pop",
+      "kelas": "ui",
+      "otomatis": true
+    },
+    {
+      "sumber": "cta/0-cta",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\pop-2.wav",
+      "t": 53.35,
+      "db": -18.0,
+      "bunyi": "pop",
+      "kelas": "aksen",
+      "otomatis": true
+    },
+    {
+      "sumber": "cta/1-remotion/aksen",
+      "file": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\pipeline\\aset-bawaan\\sfx\\v2\\swoosh-balik-1.wav",
+      "t": 54.165,
+      "db": -23.0,
+      "bunyi": "swoosh-balik",
+      "kelas": "ui",
+      "otomatis": true
+    }
+  ],
+  "audio": {
+    "musik": false,
+    "ducking": false,
+    "loudnorm_ukur": {
+      "input_i": "-14.37",
+      "input_tp": "-0.99",
+      "input_lra": "5.50",
+      "input_thresh": "-26.22",
+      "output_i": "-14.45",
+      "output_tp": "-1.50",
+      "output_lra": "4.60",
+      "output_thresh": "-26.23",
+      "normalization_type": "dynamic",
+      "target_offset": "0.45"
+    },
+    "sfx_bus": {
+      "jumlah": 18,
+      "puncak_db": -20.0
+    },
+    "akhir": {
+      "lufs": -14.1,
+      "true_peak": -1.5,
+      "koreksi": 0
+    }
+  },
+  "mask": {
+    "poin-1/0-depth": {
+      "butuh": 78,
+      "ada": 78
+    }
+  },
+  "motion_blur": {
+    "aktif": true,
+    "frame_terpakai": 14
+  },
+  "caption": {
+    "aktif": true,
+    "potongan": 27,
+    "sumber": {
+      "audio_sha": "d7baa0f5775ef3610bd4f99d72f13eecee6069da957f762a881baf655e4093a4",
+      "backend": "faster-whisper",
+      "model": "base",
+      "bahasa": "en",
+      "timestamp_per_kata": true,
+      "dikoreksi": true
+    }
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "mulai": 0.0,
+      "selesai": 3.23,
+      "anchor_kata": false
+    },
+    {
+      "id": "konteks",
+      "mulai": 3.23,
+      "selesai": 13.53,
+      "anchor_kata": true
+    },
+    {
+      "id": "poin-1",
+      "mulai": 13.53,
+      "selesai": 25.71,
+      "anchor_kata": true
+    },
+    {
+      "id": "poin-2",
+      "mulai": 25.71,
+      "selesai": 32.29,
+      "anchor_kata": true
+    },
+    {
+      "id": "poin-3",
+      "mulai": 32.29,
+      "selesai": 46.45,
+      "anchor_kata": true
+    },
+    {
+      "id": "ringkasan",
+      "mulai": 46.45,
+      "selesai": 51.63,
+      "anchor_kata": true
+    },
+    {
+      "id": "cta",
+      "mulai": 51.63,
+      "selesai": 56.833,
+      "anchor_kata": true
+    }
+  ],
+  "kata_mulai": [
+    0.11,
+    1.87,
+    2.65,
+    3.19,
+    3.43,
+    3.73,
+    3.99,
+    4.21,
+    4.43,
+    5.69,
+    6.23,
+    6.59,
+    7.93,
+    8.15,
+    9.25,
+    9.95,
+    10.11,
+    10.43,
+    11.11,
+    13.51,
+    13.83,
+    15.61,
+    15.81,
+    16.27,
+    16.69,
+    17.03,
+    18.29,
+    18.61,
+    18.85,
+    19.21,
+    19.35,
+    19.73,
+    21.99,
+    22.53,
+    23.33,
+    24.49,
+    24.89,
+    25.21,
+    26.77,
+    27.47,
+    27.69,
+    28.23,
+    28.83,
+    29.31,
+    29.81,
+    30.37,
+    32.49,
+    33.51,
+    34.31,
+    36.07,
+    36.69,
+    37.25,
+    38.11,
+    38.47,
+    38.75,
+    38.91,
+    39.11,
+    39.61,
+    42.03,
+    42.19,
+    43.67,
+    44.07,
+    45.07,
+    45.17,
+    45.53,
+    45.95,
+    46.35,
+    47.05,
+    48.95,
+    49.63,
+    50.01,
+    50.17,
+    51.83,
+    52.13,
+    52.93,
+    53.55,
+    53.97,
+    54.43,
+    54.79
+  ],
+  "peringatan": []
+}

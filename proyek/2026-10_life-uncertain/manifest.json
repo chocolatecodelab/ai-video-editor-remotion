@@ -1,0 +1,79 @@
+{
+  "proyek": "2026-10_life-uncertain",
+  "judul": "Life Uncertain",
+  "status": "render",
+  "skill": "video-editor@0.1",
+  "preset": null,
+  "gaya": "glass-tech@0.6",
+  "template": "hook-problem-solution@0.2",
+  "konteks": [
+    "zona-aman@0.2",
+    "caption@0.2",
+    "depth-typography@0.2",
+    "ingest@0.1",
+    "gerak@0.2",
+    "audio@0.1",
+    "ekspor@0.1",
+    "sound-design@0.1",
+    "koreografi@0.2"
+  ],
+  "platform": [
+    "reels"
+  ],
+  "aset": {
+    "rekaman": "aset/rekaman/take1.mp4",
+    "potong": [],
+    "crop": {
+      "x": 0.5
+    },
+    "musik": null
+  },
+  "warna": {
+    "filter": ""
+  },
+  "transkrip": {
+    "bahasa": "en",
+    "model": "large-v3"
+  },
+  "roto": {
+    "backend": "rembg",
+    "model": "birefnet-portrait",
+    "halus": 0.3,
+    "langkah": 3
+  },
+  "token_override": {
+    "ingest": {
+      "tinggi-min": 470
+    },
+    "caption": {
+      "karakter-maks-baris": 22
+    },
+    "qa": {
+      "durasi-toleransi-s": 20,
+      "karakter-per-detik-maks": 23
+    },
+    "warna": {
+      "latar": "#0D1214",
+      "panel": "#16201F",
+      "aksen": "#E8C27A",
+      "aksen-2": "#9FC6C0",
+      "peringatan": "#F3DDB0",
+      "stroke": "#05080A"
+    },
+    "font": {
+      "serif": {
+        "file": "PlayfairDisplay-Variable.ttf",
+        "family": "Playfair Display",
+        "weight": 500
+      }
+    },
+    "grade": {
+      "saturasi": 1.0,
+      "kontras": 0.05
+    }
+  },
+  "terpakai": null,
+  "riwayat": [],
+  "layout": "split",
+  "qa": null
+}

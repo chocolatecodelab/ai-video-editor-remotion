@@ -1,0 +1,116 @@
+{
+  "proyek": "2026-11_otca-nina-office-r4",
+  "judul": "Peluang S1 di Jerman â€” editorial R4",
+  "status": "rendered-review-pending",
+  "office_brand": "otca",
+  "composition": "EditorialStudyR4",
+  "persetujuan": null,
+  "office_render_approval": {
+    "requestedBy": "user",
+    "instruction": "ya jalankan render",
+    "storyboard": "out/storyboard-r4.html",
+    "storyboardSha256": "86bcea3be52f0e7281ac541d8a10f6411d68f7801679b26762dd3764717e5088",
+    "propsSha256": "cdc6a9980cf49f1c427b7d7e3e63649e1193190442127b17ab7564b203d36e4f",
+    "compositionSha256": "9cdda37711090fcd0383411191e8b0dc87def95f9f4e8b9e5e97a2a3907eb2d9",
+    "at": "2026-11-07T07:03:08.039Z"
+  },
+  "gaya": "glass-tech@0.6",
+  "template": "explainer@0.2",
+  "konteks": [
+    "zona-aman@0.2",
+    "caption@0.2",
+    "depth-typography@0.2",
+    "ingest@0.1",
+    "gerak@0.2",
+    "audio@0.1",
+    "ekspor@0.1",
+    "sound-design@0.1",
+    "koreografi@0.2",
+    "caption-premium-full-frame@0.1",
+    "kurasi-motion-premium@0.1"
+  ],
+  "token_override": {
+    "_catatan": "Brand asli: D:/KERJAAN/OTCA/BRAND GUIDELINES/Brand Guidelines OTCA New.pdf; proyek ini saja.",
+    "warna": {
+      "latar": "#000000",
+      "teks-utama": "#FFFFFF",
+      "teks-sekunder": "#FFFFFF",
+      "aksen": "#CB9D31",
+      "aksen-2": "#FDF1A4",
+      "peringatan": "#B3822C",
+      "panel": "#000000",
+      "panel-opasitas": 0.62,
+      "garis-panel": "#CB9D31",
+      "garis-opasitas": 0.6,
+      "stroke": "#000000",
+      "bayangan": "#000000"
+    },
+    "font": {
+      "judul": {
+        "file": "Montserrat-ExtraBold.ttf",
+        "family": "Montserrat",
+        "weight": 800,
+        "wght": 0
+      },
+      "subjudul": {
+        "file": "Montserrat-Bold.ttf",
+        "family": "Montserrat",
+        "weight": 700,
+        "wght": 0
+      },
+      "isi": {
+        "file": "Montserrat-SemiBold.ttf",
+        "family": "Montserrat",
+        "weight": 600,
+        "wght": 0
+      },
+      "caption": {
+        "file": "Montserrat-Bold.ttf",
+        "family": "Montserrat",
+        "weight": 700,
+        "wght": 0
+      },
+      "depth": {
+        "file": "Montserrat-ExtraBold.ttf",
+        "family": "Montserrat",
+        "weight": 800,
+        "wght": 0
+      }
+    },
+    "motif": {
+      "aksen": "kotak",
+      "tekstur": null
+    },
+    "zona-aman": {
+      "kiri": 108
+    },
+    "caption": {
+      "kata-maks": 3,
+      "karakter-maks-baris": 24
+    },
+    "qa": {
+      "karakter-per-detik-maks": 23
+    },
+    "audio": {
+      "true-peak": -2.0
+    }
+  },
+  "aset": {
+    "rekaman": "D:\\KERJAAN\\OTCA\\CONTOH VIDEO MBAK NINA.MOV"
+  },
+  "thumbnail": {
+    "brand": "otca",
+    "headline": "BEASISWA S1\nDI JERMAN\nTERNYATA TERBATAS",
+    "subheadline": "Rencanakan studi dengan matang.",
+    "frame_time": 13.9
+  },
+  "thumbnail_hasil": {
+    "template": "otca@1.2",
+    "files": [
+      "out/thumbnail.png",
+      "out/thumbnail.jpg",
+      "out/thumbnail-grid.png",
+      "out/thumbnail-grid.jpg"
+    ]
+  }
+}

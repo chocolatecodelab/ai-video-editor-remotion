@@ -1,0 +1,33 @@
+{
+  "approval": {
+    "requestedBy": "user",
+    "instruction": "ya jalankan render",
+    "storyboard": "out/storyboard-r4.html",
+    "storyboardSha256": "86bcea3be52f0e7281ac541d8a10f6411d68f7801679b26762dd3764717e5088",
+    "propsSha256": "cdc6a9980cf49f1c427b7d7e3e63649e1193190442127b17ab7564b203d36e4f",
+    "compositionSha256": "9cdda37711090fcd0383411191e8b0dc87def95f9f4e8b9e5e97a2a3907eb2d9",
+    "at": "2026-11-07T07:03:08.039Z"
+  },
+  "composition": "EditorialStudyR4",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "frames": 1547,
+  "stage": "encoded-and-verified",
+  "videoSha256": "2eb76ef6014fca39cd4f05aabf8e1833c4ea2b501ac38e5ce9ae64509bd31118",
+  "technicalQa": {
+    "resolution": true,
+    "frameRate": true,
+    "pixelFormat": true,
+    "color": true,
+    "audio": true,
+    "duration": true,
+    "loudness": true,
+    "truePeak": true,
+    "decode": true
+  },
+  "loudness": "-14.36",
+  "truePeak": "-1.98",
+  "artisticReview": "pending-human-review",
+  "encodedAt": "2026-11-07T07:12:02.515Z"
+}

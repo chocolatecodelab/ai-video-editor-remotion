@@ -1,0 +1,335 @@
+{
+  "_catatan": "We Fail Today — Preset Glass Tech Explainer Motivasi x Paper Cutout x Green Screen",
+  "caption": {
+    "aktif": true,
+    "posisi": "bawah",
+    "kecuali": []
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "beat": "Hook",
+      "mulai": 0.0,
+      "selesai": {
+        "kata": "out",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "elemen": [
+        {
+          "tipe": "push",
+          "skala": 1.05,
+          "gerak": 2.8
+        },
+        {
+          "tipe": "judul",
+          "teks": "WE FAIL *TODAY*",
+          "latar": "panel",
+          "posisi": "atas",
+          "opasitas": 0.95,
+          "fungsi": "hook",
+          "mulai": {
+            "kata": "sometimes",
+            "ke": 1
+          },
+          "durasi": 3.0,
+          "masuk": "naik",
+          "keluar": "fade"
+        }
+      ],
+      "_ucapan": "Sometimes, things don't work out"
+    },
+    {
+      "id": "konteks",
+      "beat": "Konteks",
+      "mulai": {
+        "kata": "out",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "selesai": {
+        "kata": "remember",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "elemen": [
+        {
+          "tipe": "kamera",
+          "efek": "green-screen",
+          "mulai": {
+            "kata": "get",
+            "ke": 1,
+            "offset": -0.2
+          },
+          "selesai": {
+            "kata": "ourselves",
+            "ke": 1,
+            "offset": 0.2
+          },
+          "fungsi": "konteks"
+        },
+        {
+          "tipe": "remotion",
+          "efek": "ui-world",
+          "judul": "Self *Doubt*",
+          "sub": "when things fall apart",
+          "mulai": {
+            "kata": "fail",
+            "ke": 1,
+            "offset": -0.2
+          },
+          "durasi": 4.8,
+          "posisi": "atas",
+          "opasitas": 0.9,
+          "fungsi": "masalah"
+        },
+        {
+          "tipe": "transisi",
+          "efek": "blur-zoom",
+          "jenis": "blur-zoom",
+          "mulai": {
+            "kata": "remember",
+            "ke": 1,
+            "offset": -0.5
+          }
+        }
+      ],
+      "_ucapan": "the way we hope. We get rejected, we fail, and we start questioning ourselves."
+    },
+    {
+      "id": "poin-1",
+      "beat": "Insight 1",
+      "mulai": {
+        "kata": "remember",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "selesai": {
+        "kata": "worth",
+        "ke": 1,
+        "offset": 0.5
+      },
+      "elemen": [
+        {
+          "tipe": "depth",
+          "teks": "NOT OVER",
+          "y": 0.34,
+          "mulai": {
+            "kata": "fail",
+            "ke": 3
+          },
+          "durasi": 2.6,
+          "fungsi": "reveal"
+        },
+        {
+          "tipe": "kamera",
+          "efek": "paper-cutout",
+          "mulai": {
+            "kata": "rejection",
+            "ke": 1,
+            "offset": -0.3
+          },
+          "durasi": 3.8,
+          "fungsi": "reveal"
+        },
+        {
+          "tipe": "chip",
+          "status": "info",
+          "teks": "Mindset · Rejection ≠ *Your Worth*",
+          "mulai": {
+            "kata": "rejection",
+            "ke": 1
+          },
+          "posisi": "atas",
+          "opasitas": 0.9,
+          "durasi": 3.5,
+          "fungsi": "membantah"
+        },
+        {
+          "tipe": "transisi",
+          "efek": "blur-zoom",
+          "jenis": "blur-zoom",
+          "mulai": {
+            "kata": "worth",
+            "ke": 1,
+            "offset": 0.2
+          }
+        }
+      ],
+      "_ucapan": "But remember, just because we fail today, doesn't mean we will fail tomorrow. One rejection doesn't define your worth."
+    },
+    {
+      "id": "poin-2",
+      "beat": "Insight 2",
+      "mulai": {
+        "kata": "worth",
+        "ke": 1,
+        "offset": 0.5
+      },
+      "selesai": {
+        "kata": "life",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "elemen": [
+        {
+          "tipe": "kartu",
+          "judul": "One *Bad Decision*",
+          "teks": "Doesn't determine your entire future",
+          "mulai": {
+            "kata": "decision",
+            "ke": 1,
+            "offset": -0.4
+          },
+          "posisi": "atas",
+          "opasitas": 0.9,
+          "durasi": 4.2,
+          "fungsi": "langkah"
+        },
+        {
+          "tipe": "kamera",
+          "efek": "digital-zoom",
+          "mulai": {
+            "kata": "entire",
+            "ke": 1,
+            "offset": -0.2
+          },
+          "durasi": 1.8,
+          "fungsi": "hasil"
+        }
+      ],
+      "_ucapan": "One bad decision doesn't determine your entire future."
+    },
+    {
+      "id": "poin-3",
+      "beat": "Insight 3",
+      "mulai": {
+        "kata": "life",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "selesai": {
+        "kata": "difficult",
+        "ke": 1,
+        "offset": 0.1
+      },
+      "elemen": [
+        {
+          "tipe": "chip",
+          "status": "info",
+          "teks": "Stay *Adaptive*",
+          "mulai": {
+            "kata": "unpredictable",
+            "ke": 1
+          },
+          "posisi": "atas",
+          "opasitas": 0.9,
+          "durasi": 4.0,
+          "fungsi": "langkah"
+        },
+        {
+          "tipe": "remotion",
+          "efek": "checklist",
+          "judul": "Stay Resilient",
+          "item": [
+            "Accept",
+            "Learn",
+            "*Never lose hope*"
+          ],
+          "stagger": 0.6,
+          "mulai": {
+            "kata": "so",
+            "ke": 1,
+            "offset": -0.4
+          },
+          "durasi": 3.6,
+          "posisi": "atas",
+          "opasitas": 0.9,
+          "fungsi": "proses"
+        },
+        {
+          "tipe": "transisi",
+          "efek": "blur-zoom",
+          "jenis": "blur-zoom",
+          "mulai": {
+            "kata": "difficult",
+            "ke": 1,
+            "offset": -0.4
+          }
+        }
+      ],
+      "_ucapan": "Life is unpredictable, and things can change when you least expect them. So don't lose hope, just because today was difficult."
+    },
+    {
+      "id": "ringkasan",
+      "beat": "Ringkasan",
+      "mulai": {
+        "kata": "difficult",
+        "ke": 1,
+        "offset": 0.1
+      },
+      "selesai": {
+        "kata": "tomorrow",
+        "ke": 2,
+        "offset": -0.2
+      },
+      "elemen": [
+        {
+          "tipe": "info",
+          "ikon": "bintang",
+          "judul": "Your Story *Isn't Over*",
+          "sub": "Tomorrow is a fresh start",
+          "mulai": {
+            "kata": "story",
+            "ke": 1,
+            "offset": -1.2
+          },
+          "durasi": 3.6,
+          "posisi": "atas",
+          "opasitas": 0.95,
+          "fungsi": "ringkasan",
+          "masuk": "naik",
+          "keluar": "fade"
+        }
+      ],
+      "_ucapan": "Your story isn't over,"
+    },
+    {
+      "id": "cta",
+      "beat": "Cta",
+      "mulai": {
+        "kata": "tomorrow",
+        "ke": 2,
+        "offset": -0.2
+      },
+      "selesai": 56.833,
+      "elemen": [
+        {
+          "tipe": "cta",
+          "teks": "Tomorrow is Another *Chance*",
+          "mulai": {
+            "kata": "chance",
+            "ke": 1,
+            "offset": -0.2
+          },
+          "posisi": "atas",
+          "opasitas": 0.9,
+          "durasi": 3.4,
+          "fungsi": "ajakan"
+        },
+        {
+          "tipe": "remotion",
+          "efek": "aksen-gaya",
+          "mulai": {
+            "kata": "again",
+            "ke": 1,
+            "offset": -0.3
+          },
+          "durasi": 1.8,
+          "fungsi": "reveal"
+        }
+      ],
+      "_ucapan": "tomorrow is another chance to try again."
+    }
+  ]
+}

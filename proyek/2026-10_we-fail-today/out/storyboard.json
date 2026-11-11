@@ -1,0 +1,342 @@
+{
+  "proyek": "2026-10_we-fail-today",
+  "waktu": "2026-10-27T09:29:53",
+  "beat_sheet_sha": "f9b5de67adf95e3db93f41a85958a559ecd6b69e36c9ef68453d2c6683552be0",
+  "durasi": 56.833,
+  "pra_qa": "LULUS",
+  "ringkas": {
+    "LULUS": 39,
+    "GAGAL": 0,
+    "PERINGATAN": 0,
+    "LEWAT": 7,
+    "BELUM DIIMPLEMENTASI": 0
+  },
+  "elemen": [
+    {
+      "id": "hook/0-push",
+      "tipe": "push",
+      "beat": "hook",
+      "mulai": 0.0,
+      "selesai": 3.23,
+      "teks": "push ×1.05, gerak 2.80s, standar",
+      "efek": null,
+      "anchor": null,
+      "t": 2.8
+    },
+    {
+      "id": "hook/1-judul",
+      "tipe": "remotion",
+      "beat": "hook",
+      "mulai": 0.11,
+      "selesai": 3.11,
+      "teks": "WE FAIL TODAY",
+      "efek": "judul-gaya@0.1",
+      "komposisi": "JudulGaya",
+      "anchor": {
+        "kata": "sometimes",
+        "ke": 1
+      },
+      "masuk": "fade",
+      "keluar": "fade",
+      "t": 1.6799999999999997
+    },
+    {
+      "id": "konteks/0-kamera",
+      "tipe": "kamera",
+      "beat": "konteks",
+      "mulai": 6.03,
+      "selesai": 11.31,
+      "teks": "",
+      "efek": "green-screen@0.2",
+      "komposisi": null,
+      "anchor": {
+        "kata": "get",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "masuk": "green-screen",
+      "keluar": "green-screen",
+      "t": 8.67
+    },
+    {
+      "id": "konteks/1-remotion",
+      "tipe": "cutaway",
+      "beat": "konteks",
+      "mulai": 7.95,
+      "selesai": 12.75,
+      "teks": "Self Doubt when things fall apart",
+      "efek": "ui-world@0.2",
+      "komposisi": "UIWorld",
+      "anchor": {
+        "kata": "fail",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "masuk": "potong",
+      "keluar": "potong",
+      "t": 10.35
+    },
+    {
+      "id": "konteks/1-remotion",
+      "tipe": "broll",
+      "beat": "konteks",
+      "mulai": 7.95,
+      "selesai": 12.75,
+      "teks": "UIWorld-48510ef5c7b08e92.mov",
+      "efek": "ui-world@0.2",
+      "anchor": null,
+      "t": 10.35
+    },
+    {
+      "id": "poin-1/0-depth",
+      "tipe": "depth",
+      "beat": "poin-1",
+      "mulai": 19.35,
+      "selesai": 21.95,
+      "teks": "NOT OVER",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "fail",
+        "ke": 3
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 20.72
+    },
+    {
+      "id": "poin-1/1-kamera",
+      "tipe": "kamera",
+      "beat": "poin-1",
+      "mulai": 22.23,
+      "selesai": 26.03,
+      "teks": "",
+      "efek": "paper-cutout@0.1",
+      "komposisi": null,
+      "anchor": {
+        "kata": "rejection",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "masuk": "paper-cutout",
+      "keluar": "paper-cutout",
+      "t": 24.130000000000003
+    },
+    {
+      "id": "poin-1/2-chip",
+      "tipe": "chip",
+      "beat": "poin-1",
+      "mulai": 22.53,
+      "selesai": 26.03,
+      "teks": "Mindset · Rejection ≠ *Your Worth*",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "rejection",
+        "ke": 1
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 24.349999999999998
+    },
+    {
+      "id": "poin-2/0-kartu",
+      "tipe": "kartu",
+      "beat": "poin-2",
+      "mulai": 27.29,
+      "selesai": 31.49,
+      "teks": "Doesn't determine your entire future",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "decision",
+        "ke": 1,
+        "offset": -0.4
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 29.594999999999995
+    },
+    {
+      "id": "poin-2/1-kamera",
+      "tipe": "kamera",
+      "beat": "poin-2",
+      "mulai": 29.61,
+      "selesai": 31.41,
+      "teks": "",
+      "efek": "digital-zoom@0.2",
+      "komposisi": null,
+      "anchor": {
+        "kata": "entire",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "masuk": "digital-zoom",
+      "keluar": "digital-zoom",
+      "t": 30.509999999999998
+    },
+    {
+      "id": "poin-3/0-chip",
+      "tipe": "chip",
+      "beat": "poin-3",
+      "mulai": 34.31,
+      "selesai": 38.31,
+      "teks": "Stay *Adaptive*",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "unpredictable",
+        "ke": 1
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 36.38
+    },
+    {
+      "id": "poin-3/1-remotion",
+      "tipe": "remotion",
+      "beat": "poin-3",
+      "mulai": 41.63,
+      "selesai": 45.23,
+      "teks": "Stay Resilient  Accept Learn Never lose hope",
+      "efek": "checklist@0.3",
+      "komposisi": "Checklist",
+      "anchor": {
+        "kata": "so",
+        "ke": 1,
+        "offset": -0.4
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 43.50000000000001
+    },
+    {
+      "id": "ringkasan/0-info",
+      "tipe": "info",
+      "beat": "ringkasan",
+      "mulai": 47.75,
+      "selesai": 51.35,
+      "teks": "Your Story *Isn't Over* Tomorrow is a fresh start",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "story",
+        "ke": 1,
+        "offset": -1.2
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 49.620000000000005
+    },
+    {
+      "id": "cta/0-cta",
+      "tipe": "cta",
+      "beat": "cta",
+      "mulai": 53.35,
+      "selesai": 56.75,
+      "teks": "Tomorrow is Another *Chance*",
+      "efek": null,
+      "komposisi": null,
+      "anchor": {
+        "kata": "chance",
+        "ke": 1,
+        "offset": -0.2
+      },
+      "masuk": "pop",
+      "keluar": "fade",
+      "t": 55.120000000000005
+    },
+    {
+      "id": "cta/1-remotion",
+      "tipe": "remotion",
+      "beat": "cta",
+      "mulai": 54.49,
+      "selesai": 56.29,
+      "teks": "AksenGaya",
+      "efek": "aksen-gaya@0.1",
+      "komposisi": "AksenGaya",
+      "anchor": {
+        "kata": "again",
+        "ke": 1,
+        "offset": -0.3
+      },
+      "masuk": "naik",
+      "keluar": "fade",
+      "t": 54.89
+    }
+  ],
+  "thumbnail": [
+    {
+      "frame": 50,
+      "t": 1.6666666666666667,
+      "label": "hook/1-judul",
+      "file": "storyboard/t00050.jpg"
+    },
+    {
+      "frame": 84,
+      "t": 2.8,
+      "label": "hook/0-push",
+      "file": "storyboard/t00084.jpg"
+    },
+    {
+      "frame": 260,
+      "t": 8.666666666666666,
+      "label": "konteks/0-kamera",
+      "file": "storyboard/t00260.jpg"
+    },
+    {
+      "frame": 310,
+      "t": 10.333333333333334,
+      "label": "konteks/1-remotion",
+      "file": "storyboard/t00310.jpg"
+    },
+    {
+      "frame": 622,
+      "t": 20.733333333333334,
+      "label": "poin-1/0-depth",
+      "file": "storyboard/t00622.jpg"
+    },
+    {
+      "frame": 724,
+      "t": 24.133333333333333,
+      "label": "poin-1/1-kamera, poin-1/2-chip",
+      "file": "storyboard/t00724.jpg"
+    },
+    {
+      "frame": 888,
+      "t": 29.6,
+      "label": "poin-2/0-kartu",
+      "file": "storyboard/t00888.jpg"
+    },
+    {
+      "frame": 915,
+      "t": 30.5,
+      "label": "poin-2/1-kamera",
+      "file": "storyboard/t00915.jpg"
+    },
+    {
+      "frame": 1091,
+      "t": 36.36666666666667,
+      "label": "poin-3/0-chip",
+      "file": "storyboard/t01091.jpg"
+    },
+    {
+      "frame": 1305,
+      "t": 43.5,
+      "label": "poin-3/1-remotion",
+      "file": "storyboard/t01305.jpg"
+    },
+    {
+      "frame": 1489,
+      "t": 49.63333333333333,
+      "label": "ringkasan/0-info",
+      "file": "storyboard/t01489.jpg"
+    },
+    {
+      "frame": 1647,
+      "t": 54.9,
+      "label": "cta/1-remotion, cta/0-cta",
+      "file": "storyboard/t01647.jpg"
+    }
+  ]
+}

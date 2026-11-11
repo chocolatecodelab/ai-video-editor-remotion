@@ -1,0 +1,19 @@
+{
+  "_catatan": "Waktu = detik di timeline akhir, atau anchor {\"kata\": \"…\"} / {\"beat\": \"…\"}. id beat harus sama dengan template. Field lengkap: pipeline/scripts/README.md",
+  "caption": { "aktif": true, "posisi": "bawah", "kecuali": [] },
+  "beats": [
+    {
+      "id": "hook", "beat": "Hook", "mulai": 0, "selesai": 3.0,
+      "elemen": [
+        { "tipe": "judul", "teks": "TODO judul *kata kunci*", "posisi": "atas", "sfx": true },
+        { "tipe": "push", "mulai": 0.2, "gerak": 1.0 }
+      ]
+    },
+    {
+      "id": "cta", "beat": "CTA",
+      "elemen": [
+        { "tipe": "cta", "teks": "TODO ajakan", "posisi": "tengah" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "proyek": "2026-10_we-fail-today",
+  "judul": "We Fail Today",
+  "status": "disetujui",
+  "skill": "video-editor@0.3",
+  "preset": null,
+  "gaya": "glass-tech@0.6",
+  "template": "explainer@0.2",
+  "konteks": [
+    "zona-aman@0.2",
+    "caption@0.2",
+    "depth-typography@0.2",
+    "ingest@0.1",
+    "gerak@0.2",
+    "audio@0.1",
+    "ekspor@0.1",
+    "sound-design@0.1",
+    "koreografi@0.2"
+  ],
+  "platform": [
+    "reels"
+  ],
+  "aset": {
+    "rekaman": "aset/rekaman/take1.mp4",
+    "potong": [],
+    "crop": {
+      "x": 0.5
+    },
+    "musik": null
+  },
+  "warna": {
+    "filter": "eq=contrast=1.03:saturation=0.96,colortemperature=6200"
+  },
+  "transkrip": {
+    "bahasa": "en",
+    "model": "base",
+    "backend": "faster-whisper"
+  },
+  "roto": {
+    "backend": "mediapipe",
+    "halus": 0.3
+  },
+  "token_override": {
+    "qa": {
+      "durasi-toleransi-s": 4,
+      "karakter-per-detik-maks": 20
+    },
+    "ingest": {
+      "tinggi-min": 470
+    },
+    "zona-aman": {
+      "bawah": 160
+    }
+  },
+  "terpakai": null,
+  "riwayat": [],
+  "koreografi": null,
+  "seed": 0,
+  "persetujuan": {
+    "beat_sheet_sha": "f9b5de67adf95e3db93f41a85958a559ecd6b69e36c9ef68453d2c6683552be0",
+    "waktu": "2026-10-27T09:31:38",
+    "pra_qa": "LULUS",
+    "storyboard": "2026-10-27T09:29:53"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "status": "LULUS",
+  "template": "otca@1.2",
+  "headline": "BEASISWA S1\nDI JERMAN\nTERNYATA TERBATAS",
+  "subheadline": "Rencanakan studi dengan matang.",
+  "source": {
+    "source": "D:\\KERJAAN\\OTCA\\CONTOH VIDEO MBAK NINA.MOV",
+    "frame_time": 13.9,
+    "sharpness": 466.5934984498282,
+    "photo_pixels_sha256": "4d870a0fbfee993bb79d4a6e1dcbc4063d4d130a24b9763c74141943f43b548c"
+  },
+  "layout": [
+    {
+      "face": [
+        345.0,
+        476.05487704435814,
+        735.0000000000001,
+        983.145122955642
+      ],
+      "text_boxes": [
+        [
+          8,
+          1230,
+          533,
+          1283
+        ],
+        [
+          8,
+          1304,
+          440,
+          1356
+        ],
+        [
+          8,
+          1378,
+          872,
+          1431
+        ],
+        [
+          8,
+          1460,
+          688,
+          1496
+        ]
+      ],
+      "font_headline": 72,
+      "font_subheadline": 36,
+      "headline_lines": [
+        "BEASISWA S1",
+        "DI JERMAN",
+        "TERNYATA TERBATAS"
+      ],
+      "subheadline_lines": [
+        "Rencanakan studi dengan matang."
+      ],
+      "format": "reels"
+    },
+    {
+      "face": [
+        345.0,
+        293.65487704435816,
+        735.0000000000001,
+        800.745122955642
+      ],
+      "text_boxes": [
+        [
+          8,
+          1070,
+          533,
+          1123
+        ],
+        [
+          8,
+          1144,
+          440,
+          1196
+        ],
+        [
+          8,
+          1218,
+          872,
+          1271
+        ],
+        [
+          8,
+          1300,
+          688,
+          1336
+        ]
+      ],
+      "font_headline": 72,
+      "font_subheadline": 36,
+      "headline_lines": [
+        "BEASISWA S1",
+        "DI JERMAN",
+        "TERNYATA TERBATAS"
+      ],
+      "subheadline_lines": [
+        "Rencanakan studi dengan matang."
+      ],
+      "format": "grid"
+    }
+  ],
+  "template_sha": "e11ddf3d7d8e884fd13ed9a24fd5d30ad161c7f2184888cd11edf47b19bb7fdc",
+  "renderer_sha": "38750de3dd373f91cc03194e03ce0978d94410c1fcde7ad852a5d20f3b5395ca",
+  "manual": "Periksa ekspresi, potongan hijab/rambut, dan judul pada storyboard; sharpness bukan deteksi mata terbuka."
+}

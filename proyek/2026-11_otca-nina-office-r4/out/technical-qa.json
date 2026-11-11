@@ -1,0 +1,55 @@
+{
+  "checks": {
+    "resolution": true,
+    "frameRate": true,
+    "pixelFormat": true,
+    "color": true,
+    "audio": true,
+    "duration": true,
+    "loudness": true,
+    "truePeak": true,
+    "decode": true
+  },
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "r_frame_rate": "30/1",
+        "nb_read_frames": "1544"
+      },
+      {
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "nb_read_frames": "2417"
+      }
+    ],
+    "format": {
+      "duration": "51.546854",
+      "size": "39369973"
+    }
+  },
+  "loudness": {
+    "input_i": "-14.36",
+    "input_tp": "-1.98",
+    "input_lra": "5.50",
+    "input_thresh": "-24.77",
+    "output_i": "-14.11",
+    "output_tp": "-2.00",
+    "output_lra": "5.50",
+    "output_thresh": "-24.44",
+    "normalization_type": "dynamic",
+    "target_offset": "0.11"
+  },
+  "technicalPass": true,
+  "artisticReview": "pending-human-review"
+}
