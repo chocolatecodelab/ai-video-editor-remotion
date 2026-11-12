@@ -1,3 +1,5 @@
 hyperframes/.hyperframes/
 __pycache__/
 hyperframes/assets/voice.wav
+hyperframes/assets/master.wav
+hyperframes/assets/talent.webm

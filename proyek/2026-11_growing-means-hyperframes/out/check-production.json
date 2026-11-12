@@ -1,0 +1,106 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 43.433,
+    "samples": [
+      2.715,
+      8.144,
+      13.573,
+      19.002,
+      24.431,
+      29.86,
+      35.289,
+      40.718
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      2.715,
+      8.144,
+      19.002,
+      29.86,
+      40.718
+    ],
+    "checked": 18,
+    "passed": 18
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 348
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "4d38a484-3968-4a85-b7c3-a7f11f777618",
+    "revision": "7d27f6f6-b580-4a0d-846d-a68f21c072a7",
+    "report": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\proyek\\2026-11_growing-means-hyperframes\\hyperframes\\.hyperframes\\artifacts\\checks\\4d38a484-3968-4a85-b7c3-a7f11f777618.json",
+    "attribution": "recorded-revision"
+  },
+  "_meta": {
+    "version": "0.9.33",
+    "updateAvailable": false
+  }
+}

@@ -3,8 +3,13 @@
   "judul": "GROWING MEANS",
   "engine": "hyperframes",
   "brand": "panduan/NAZARVERSE_BRAND.md",
-  "status": "storyboard-ready",
-  "persetujuan": null,
+  "status": "rendered",
+  "persetujuan": {
+    "message": "ya jalankan render finalnya",
+    "revision": "bilingual storyboard",
+    "beat_sheet_sha": "6cd6765d40610fd06192f27ff35b08a9b0e48db3f99d0c99e0e62d16daed4e9f",
+    "waktu": "2026-11-12T13:30:21.192342+07:00"
+  },
   "source": "D:/KERJAAN/CONTENT CREATOR/NAZARVERSE/GROWING MEANS.mp4",
   "duration": 43.433,
   "width": 1080,
@@ -20,9 +25,13 @@
     "user_requested": true
   },
   "storyboard": "out/storyboard.html",
-  "production_pending": [
-    "continuous talent mask",
-    "final audio mix",
-    "playback QA"
-  ]
+  "production_pending": [],
+  "final": {
+    "file": "out/GROWING-MEANS-FINAL.mp4",
+    "sha256": "7dcc97a1d6a9f11ddc6b6869d0bc79f913eaea2edba075414c9fc1e97e8bec05",
+    "technical_qa": "passed",
+    "manual_playback": "not fully verified",
+    "report": "out/qa-final.json",
+    "render_count": 1
+  }
 }
