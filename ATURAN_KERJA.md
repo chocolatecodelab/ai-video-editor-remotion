@@ -16,6 +16,8 @@ Larangan: tidak ada render final sebelum storyboard disetujui.
 
 ## 2. Ekspor
 
+Untuk seluruh pekerjaan NazarVerse, wajib baca `panduan/NAZARVERSE_BRAND.md` (guidelines v1.0 diadopsi pengguna 2026-11-12). Terapkan identitas resminya, bukan palet asumsi dari referensi lama.
+
 - Satu file saja per proyek: `proyek/<proyek>/out/<proyek>.mp4`, dipakai untuk Reels/TikTok/Shorts.
 - Penegasan Zar (2026-11-11): render visual final sekali; siapkan mix audio sebelum render agar langsung menghasilkan satu MP4 final. Jangan meninggalkan MP4 antara seperti `r2-picture.mp4` di folder hasil. Bila engine membutuhkan berkas antara untuk mux, simpan di `.sementara` pada D: dan gunakan stream copy, bukan render visual kedua.
 - 1080x1920 (9:16), H.264, AAC, tag warna bt709 (K07.2).

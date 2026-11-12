@@ -1,5 +1,7 @@
 # INDEX — Video System
 
+Acuan brand NazarVerse: [panduan/NAZARVERSE_BRAND.md](panduan/NAZARVERSE_BRAND.md), diadopsi dari Brand Guidelines v1.0 atas permintaan pengguna.
+
 Buku acuan: nama pendek / ID → file. **Agen selalu membaca file ini dulu.**
 Kalau pengguna menyebut nama pendek ("gaya glass-tech", "konteks 02", "template explainer"), cari file-nya di sini.
 Versi hanya disebut bila butuh versi lama; tanpa versi = versi aktif terbaru.
