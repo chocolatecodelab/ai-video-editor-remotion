@@ -3,14 +3,26 @@
   "judul": "GROWING MEANS",
   "engine": "hyperframes",
   "brand": "panduan/NAZARVERSE_BRAND.md",
-  "status": "analysis-awaiting-transcript-correction",
+  "status": "storyboard-ready",
   "persetujuan": null,
   "source": "D:/KERJAAN/CONTENT CREATOR/NAZARVERSE/GROWING MEANS.mp4",
   "duration": 43.433,
   "width": 1080,
   "height": 1920,
   "fps": 30,
-  "transcript_confirmed": false,
+  "transcript_confirmed": true,
   "transition_policy": "minimal cuts; one meaningful page-to-path morph; no repeating slide/wipe",
-  "delivery": "one final MP4 after storyboard approval"
+  "delivery": "one final MP4 after storyboard approval",
+  "subtitles": {
+    "primary": "en",
+    "secondary": "id",
+    "translation": "editorial draft",
+    "user_requested": true
+  },
+  "storyboard": "out/storyboard.html",
+  "production_pending": [
+    "continuous talent mask",
+    "final audio mix",
+    "playback QA"
+  ]
 }

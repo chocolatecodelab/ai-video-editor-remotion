@@ -1,0 +1,108 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 43.433,
+    "samples": [
+      2.172,
+      6.515,
+      10.858,
+      15.202,
+      19.545,
+      23.888,
+      28.231,
+      32.575,
+      36.918,
+      41.261
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      2.172,
+      10.858,
+      19.545,
+      28.231,
+      41.261
+    ],
+    "checked": 20,
+    "passed": 20
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 348
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "6277ff4f-82bc-4d68-87c0-7f672c8385d5",
+    "revision": "8eb291d8-f5b9-4759-b0e4-7f4d9c722db1",
+    "report": "D:\\KERJAAN\\CODING\\CLAUDE\\VIDEO_EDITOR\\video-system\\proyek\\2026-11_growing-means-hyperframes\\hyperframes\\.hyperframes\\artifacts\\checks\\6277ff4f-82bc-4d68-87c0-7f672c8385d5.json",
+    "attribution": "recorded-revision"
+  },
+  "_meta": {
+    "version": "0.9.33",
+    "updateAvailable": false
+  }
+}

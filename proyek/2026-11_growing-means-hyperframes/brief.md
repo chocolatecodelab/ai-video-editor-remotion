@@ -1,5 +1,7 @@
 # GROWING MEANS — NazarVerse
 
+Pembaruan pengguna: empat koreksi narasi dikonfirmasi benar. Subtitle Inggris utama + terjemahan Indonesia sekunder diwajibkan untuk video ini. Terjemahan dipenggal per makna, disinkronkan ke frasa Inggris, memakai area terpisah dari talent dan grafis. Jangan menganggap permintaan ini mengubah semua video lama.
+
 Status: analisis sumber dan direksi edit; bukan storyboard final atau izin render.
 Engine: HyperFrames, tanpa Remotion. Brand: `panduan/NAZARVERSE_BRAND.md`, PDF v1.0.
 Sumber: `D:/KERJAAN/CONTENT CREATOR/NAZARVERSE/GROWING MEANS.mp4`; 43.433 detik, 478×850, 30 fps, H.264/AAC. Target 1080×1920 30 fps.
