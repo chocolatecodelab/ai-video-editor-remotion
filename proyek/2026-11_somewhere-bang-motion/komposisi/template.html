@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<!-- Adapted from Bang Motion starter-explainer.html: continuous world, camera rig,
+     pure timeline render, autoplay/audio gate and OPENER seek contract. MIT Bang Tutorial. -->
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Somewhere — Tribute to my grandpa</title>
+<style>
+@font-face{font-family:Inter;src:url('assets/Inter.ttf')}@font-face{font-family:Cormorant;src:url('assets/CormorantGaramond.ttf')}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#101827}
+#stage{position:absolute;left:50%;top:50%;width:1080px;height:1920px;overflow:hidden;color:var(--ivory);font-family:Inter,sans-serif;background:var(--navy)}
+#world{position:absolute;inset:0;transform-origin:0 0}#art{width:1080px;height:1920px;overflow:visible}
+#surface{position:absolute;inset:-250px;background:radial-gradient(ellipse at 65% 42%,#26364c88,transparent 55%),linear-gradient(155deg,var(--navy),var(--slate) 180%)}
+#grain{position:absolute;inset:0;pointer-events:none;opacity:.047;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.74' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
+#vignette{position:absolute;inset:0;background:linear-gradient(0deg,var(--navy) 10%,transparent 31%,transparent 70%,#10182755);pointer-events:none}
+#heading{position:absolute;left:110px;top:272px;width:820px;text-align:center;font:500 88px/1.03 Cormorant,serif;letter-spacing:-.015em;opacity:0}
+#dedication{position:absolute;left:110px;top:276px;width:820px;text-align:center;font:500 57px/1.16 Cormorant,serif;opacity:0;color:var(--sand)}
+#caption{position:absolute;text-align:center;font-weight:500;letter-spacing:-.018em;color:var(--ivory);white-space:pre-line;text-wrap:balance}
+#caption span{display:inline-block;white-space:pre}#caption span.active{color:var(--sand)}
+#caption .idline{color:var(--ivory);opacity:.85;font-weight:400;text-wrap:balance}
+#last{position:absolute;left:110px;top:1310px;width:820px;font:500 76px/1.1 Cormorant,serif;text-align:center;opacity:0}
+#lastId{position:absolute;left:110px;top:1425px;width:820px;font:400 40px/1.2 Inter,sans-serif;text-align:center;opacity:0;color:var(--ivory)}
+#brand{position:absolute;left:110px;top:1580px;width:820px;text-align:center;font:400 25px Inter;letter-spacing:.2em;opacity:.45}
+#dbg{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);padding:12px;background:#101827ee;color:#edeae4;display:none;z-index:3;font:13px Inter;gap:12px}#dbg input{width:45vw}
+</style></head><body>
+<div id="stage"><div id="surface"></div><div id="world"><svg id="art" viewBox="0 0 1080 1920">
+<defs>
+ <radialGradient id="halo"><stop stop-color="var(--sand)" stop-opacity=".22"/><stop offset="1" stop-color="var(--sand)" stop-opacity="0"/></radialGradient>
+ <linearGradient id="sunfill" x2=".6" y2="1"><stop stop-color="#edeae4"/><stop offset="1" stop-color="#c5b69a"/></linearGradient>
+ <linearGradient id="ridge" x2="0" y2="1"><stop stop-color="#718a83" stop-opacity=".45"/><stop offset="1" stop-color="#26364c" stop-opacity="0"/></linearGradient>
+ <clipPath id="memoryClip"><rect x="260" y="368" width="560" height="996" rx="4"/></clipPath>
+ <clipPath id="sunClip"><rect x="-300" y="0" width="1700" height="1020"/></clipPath>
+ <filter id="soft"><feGaussianBlur stdDeviation="5"/></filter>
+ <linearGradient id="shadow"><stop stop-color="#c5b69a" stop-opacity=".11"/><stop offset="1" stop-color="#c5b69a" stop-opacity="0"/></linearGradient>
+</defs>
+<g id="horizon">
+ <ellipse id="horizonHalo" cx="540" cy="855" rx="540" ry="500" fill="url(#halo)"/>
+ <g clip-path="url(#sunClip)"><circle id="sun" cx="540" cy="855" r="124" fill="url(#sunfill)"/></g>
+ <path id="farRidge" d="M-500 1050 Q-120 820 250 1000 T1150 940 L1600 1550 H-500Z" fill="#26364c"/>
+ <path id="nearRidge" d="M-500 1210 Q100 990 540 1090 T1600 1110 L1600 1700 H-500Z" fill="url(#ridge)"/>
+ <path id="horizonLine" d="M100 1020 Q540 994 980 1020" fill="none" stroke="#c5b69a" stroke-opacity=".4" stroke-width="2"/>
+ <path id="longShadow" d="M540 1020 L760 1280 L890 1280Z" fill="url(#shadow)"/>
+</g>
+<g id="distance" opacity="0">
+ <path id="routeGhost" d="M170 1030 C250 760 420 1060 540 860 S800 720 910 1040" fill="none" stroke="#718a83" stroke-opacity=".25" stroke-width="2"/>
+ <path id="route" d="M170 1030 C250 760 420 1060 540 860 S800 720 910 1040" fill="none" stroke="#c5b69a" stroke-width="4" stroke-linecap="round"/>
+ <circle id="routeStart" cx="170" cy="1030" r="9" fill="#718a83"/><circle id="routeEnd" cx="910" cy="1040" r="9" fill="#c5b69a"/>
+ <path id="bridge" d="M250 1190 Q540 1260 830 1190" fill="none" stroke="#718a83" stroke-opacity=".35" stroke-width="2"/>
+</g>
+<g id="clock" opacity="0" transform="translate(540 850)">
+ <circle r="225" fill="none" stroke="#718a83" stroke-opacity=".23" stroke-width="2"/>
+ <path id="clockArc" d="M0 -210 A210 210 0 1 1 -209 -10" fill="none" stroke="#c5b69a" stroke-width="3"/>
+ <g id="ticks"></g><g id="hand"><path d="M0 26 L0 -172" stroke="#edeae4" stroke-width="4" stroke-linecap="round"/><circle cy="-172" r="7" fill="#c5b69a"/></g>
+ <circle r="10" fill="#c5b69a"/><circle r="3" fill="#101827"/>
+</g>
+<g id="sky" opacity="0"><path id="skyOne" d="M-300 555 Q300 390 620 530 T1400 450" fill="none" stroke="#718a83" stroke-width="45" stroke-opacity=".1"/><path id="skyTwo" d="M-300 650 Q400 450 740 610 T1400 530" fill="none" stroke="#c5b69a" stroke-width="2" stroke-opacity=".25"/></g>
+<g id="memory" opacity="0">
+ <rect x="241" y="350" width="598" height="1032" rx="5" fill="#0c1320" stroke="#c5b69a" stroke-opacity=".58" stroke-width="2"/>
+ <image id="portrait" href="assets/grandpa.jpeg" x="260" y="368" width="560" height="996" preserveAspectRatio="xMidYMid meet" clip-path="url(#memoryClip)"/>
+ <rect id="memoryTint" x="260" y="368" width="560" height="996" fill="#101827" opacity=".07"/>
+ <g clip-path="url(#memoryClip)"><g id="shutterLeft"><rect x="258" y="366" width="282" height="1000" fill="#1b293a"/><path d="M528 370 V1360" stroke="#c5b69a" stroke-opacity=".4"/></g>
+ <g id="shutterRight"><rect x="540" y="366" width="282" height="1000" fill="#1b293a"/><path d="M552 370 V1360" stroke="#c5b69a" stroke-opacity=".4"/></g></g>
+</g>
+<g id="light"><circle id="lightHalo" r="75" fill="url(#halo)"/><circle r="6" fill="#edeae4"/><circle r="2.5" fill="#c5b69a"/></g>
+</svg></div><div id="vignette"></div><div id="grain"></div><div id="heading"></div><div id="dedication"></div><div id="caption"></div><div id="last"></div><div id="lastId"></div><div id="brand">NAZARVERSE</div></div>
+<div id="dbg"><button id="play">Play</button><input id="scrub" type="range" min="0" max="1000"><span id="time"></span></div>
+<audio id="vo" src="assets/source-audio.m4a" preload="auto"></audio>
+<script src="assets/gsap.min.js"></script><script>
+const CFG=__CONFIG__, BEATS=__BEATS__, WORDS=__WORDS__, GROUPS=__GROUPS__;
+const W=CFG.format.width,H=CFG.format.height,DUR=CFG.format.duration,$=s=>document.querySelector(s),NS='http://www.w3.org/2000/svg';
+for(const [k,v] of Object.entries(CFG.palette))document.documentElement.style.setProperty('--'+k,v);
+$('#heading').textContent=BEATS.beats[0].title;$('#dedication').textContent=CFG.dedication;
+Object.assign($('#caption').style,{left:BEATS.caption.x+'px',top:BEATS.caption.y+'px',width:BEATS.caption.width+'px',fontSize:BEATS.caption.size+'px',lineHeight:BEATS.caption.line_height});
+function S(tag,attrs={},parent){let e=document.createElementNS(NS,tag);for(let k in attrs)e.setAttribute(k,attrs[k]);parent.append(e);return e}
+for(let i=0;i<12;i++){const a=i*Math.PI/6;S('line',{x1:Math.sin(a)*195,y1:-Math.cos(a)*195,x2:Math.sin(a)*204,y2:-Math.cos(a)*204,stroke:'#718a83','stroke-width':i%3===0?3:1.5},$('#ticks'))}
+// Continuous world and camera helpers adapted from the requested starter.
+const C={x:540,y:900,z:1},state={sunY:850,lightX:540,lightY:850,hand:-35,memoryScale:.9,memoryY:-60,route:0,sky:0,shade:0};
+const tl=gsap.timeline({paused:true});
+function applyCam(){ $('#world').style.transform=`translate(${W/2-C.x*C.z}px,${H/2-C.y*C.z}px) scale(${C.z})`; }
+const look=(at,x,y,z,duration=1.6)=>tl.to(C,{x,y,z,duration,ease:'sine.inOut'},at);
+const routeEl=$('#route'),RL=routeEl.getTotalLength();routeEl.setAttribute('stroke-dasharray',RL);
+const M=BEATS.beats.reduce((a,b)=>(a[b.id]=b.mulai,a),{});
+tl.fromTo('#heading',{opacity:0,y:14,filter:'blur(6px)'},{opacity:1,y:0,filter:'blur(0px)',duration:1.25,ease:'power3.out'},.1);
+tl.to('#heading',{opacity:0,y:-12,duration:.7,ease:'power2.in'},6.8);
+tl.to(state,{sunY:1085,lightY:1005,duration:12.6,ease:'sine.inOut'},.5);
+look(0,540,960,1.07,4);look(7.4,550,925,1,5.8);
+tl.to('#longShadow',{scaleX:1.6,transformOrigin:'540px 1020px',opacity:.2,duration:8,ease:'sine.inOut'},5);
+tl.to('#horizon',{opacity:.16,duration:1.6,ease:'sine.inOut'},M.memory-1);
+tl.to('#memory',{opacity:1,duration:.9,ease:'sine.inOut'},M.memory);
+tl.to('#shutterLeft',{x:-284,duration:1.5,ease:'power3.inOut'},M.memory+.15);tl.to('#shutterRight',{x:284,duration:1.5,ease:'power3.inOut'},M.memory+.15);
+// Shutters are a memory-window reveal, never a rig on the depicted people.
+tl.to(['#shutterLeft','#shutterRight'],{opacity:0,duration:.2},M.memory+1.55);
+tl.to(state,{lightX:220,lightY:800,duration:1.9,ease:'sine.inOut'},M.memory);
+tl.to(state,{lightX:170,lightY:1030,duration:.9,ease:'sine.inOut'},M.distance-.9);
+look(M.memory,540,950,1,1.8);
+tl.to(state,{memoryScale:.34,memoryY:30,duration:2.2,ease:'power3.inOut'},M.distance);
+tl.to('#memory',{opacity:.5,duration:1.8,ease:'sine.inOut'},M.distance);
+tl.to('#distance',{opacity:1,duration:1.2},M.distance+.7);
+tl.to(state,{route:1,duration:4.8,ease:'sine.inOut'},M.distance+.5);
+tl.to('#memory',{opacity:0,duration:.9},M.time-.8);
+tl.to('#distance',{opacity:0,duration:1},M.time-.6);tl.to('#clock',{opacity:1,duration:1.2},M.time);
+tl.set(state,{lightX:910,lightY:1040},M.time);
+tl.to(state,{hand:245,lightX:540,lightY:640,duration:5.4,ease:'sine.inOut'},M.time);
+look(M.time,540,900,1.12,2.4);
+tl.to('#clock',{opacity:0,duration:1.4},M.silence-.5);
+tl.to(state,{memoryScale:.86,memoryY:-55,lightX:216,lightY:1080,duration:2.5,ease:'power3.inOut'},M.silence);
+tl.to('#memory',{opacity:1,duration:1.5},M.silence+.2);tl.to('#sky',{opacity:1,duration:1.6},M.silence);
+look(M.silence,540,950,1,2.8);
+tl.to(state,{sky:1,duration:17,ease:'sine.inOut'},M.silence);
+tl.to(state,{lightX:850,lightY:690,duration:7.4,ease:'sine.inOut'},M.silence+5.3);
+tl.to(state,{memoryScale:.9,memoryY:-60,lightX:875,lightY:1090,duration:3.8,ease:'sine.inOut'},M.remains);
+tl.to('#dedication',{opacity:1,duration:1.8,ease:'sine.inOut'},M.remains+.5);
+look(M.remains,540,950,1,3.2);
+tl.to({},{duration:.01},DUR);
+let gi=-2;
+function captions(t){
+ const idx=GROUPS.findIndex(g=>t>=g.s&&t<g.e),g=GROUPS[idx],el=$('#caption');
+ if(idx!==gi){el.replaceChildren();if(g){const en=document.createElement('div');en.className='enline';for(const n of g.words){let sp=document.createElement('span');sp.textContent=WORDS[n].w+' ';sp.dataset.i=n;en.append(sp)}const id=document.createElement('div');id.className='idline';id.textContent=g.id;id.style.fontSize=BEATS.caption.translation_size+'px';id.style.marginTop=BEATS.caption.translation_gap+'px';el.append(en,id)}gi=idx}
+ if(g){const enter=Math.min(1,(t-g.s)/.22);el.style.opacity=enter;el.style.transform=`translateY(${(1-enter)*9}px)`;el.style.filter=`blur(${(1-enter)*2}px)`;for(let sp of el.querySelectorAll('span')){let w=WORDS[+sp.dataset.i];sp.classList.toggle('active',t>=w.s&&t<w.e)}}
+ else el.style.opacity=0;
+ const last=WORDS.filter(w=>w.w.toLowerCase().replace(/[^a-z]/g,'')==='love');const closing=last.length&&t>=last[0].s;
+ $('#last').textContent=closing?'Love remains':'';$('#last').style.opacity=closing?Math.min(1,(t-last[0].s)/.65):0;
+ $('#lastId').textContent=closing?'Cinta tetap ada':'';$('#lastId').style.opacity=$('#last').style.opacity;
+ if(closing)el.style.opacity=0;
+}
+function render(){const t=tl.time();applyCam();$('#sun').setAttribute('cy',state.sunY);$('#light').setAttribute('transform',`translate(${state.lightX} ${state.lightY})`);$('#hand').setAttribute('transform',`rotate(${state.hand})`);$('#memory').setAttribute('transform',`translate(540 ${850+state.memoryY}) scale(${state.memoryScale}) translate(-540 -850)`);routeEl.setAttribute('stroke-dashoffset',RL*(1-state.route));if(t>=M.distance&&t<M.time){const pt=routeEl.getPointAtLength(RL*state.route);$('#light').setAttribute('transform',`translate(${pt.x} ${pt.y})`)}$('#skyOne').setAttribute('transform',`translate(${-70*state.sky} ${18*state.sky})`);$('#skyTwo').setAttribute('transform',`translate(${45*state.sky} ${-22*state.sky})`);$('#surface').style.transform=`translate(${Math.sin(t*.13)*24}px,${Math.cos(t*.11)*16}px)`;$('#grain').style.backgroundPosition=`${Math.floor(t*8)%7*13}px ${Math.floor(t*8)%5*17}px`;captions(t)}
+tl.eventCallback('onUpdate',render);
+const vo=$('#vo'),q=new URLSearchParams(location.search);let playing=false;
+async function start(t=0){vo.currentTime=t;try{await vo.play();playing=true;tl.play(t)}catch{playing=false;tl.pause(t);render()}}
+function pause(){playing=false;tl.pause();vo.pause()}
+function seek(t){pause();tl.pause(Math.min(DUR,Math.max(0,t)),false);render();vo.currentTime=t}
+tl.eventCallback('onComplete',()=>start(0));
+gsap.ticker.add(()=>{if(playing&&Math.abs(vo.currentTime-tl.time())>.12)tl.time(vo.currentTime,false);if(q.has('debug')){$('#time').textContent=tl.time().toFixed(2);$('#scrub').value=tl.time()/DUR*1000}});
+function fit(){const s=Math.min(innerWidth/W,innerHeight/H);$('#stage').style.transform=`translate(-50%,-50%) scale(${s})`}addEventListener('resize',fit);fit();
+window.OPENER={W,H,DURATION:DUR,tl,ready:false,seek,seekFrame:async t=>seek(t),play:start};
+if(q.has('debug')){$('#dbg').style.display='flex';$('#scrub').oninput=e=>seek(e.target.value/1000*DUR);$('#play').onclick=()=>playing?pause():start(tl.time())}
+addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();playing?pause():start(tl.time())}if(e.key.toLowerCase()==='r')start(0)});
+Promise.all([document.fonts.ready,$('#portrait').decode?$('#portrait').decode():Promise.resolve()]).then(()=>{render();OPENER.ready=true;if(q.has('clean'))return;start(0);addEventListener('pointerdown',()=>{if(!playing&&!q.has('debug'))start(tl.time())})});
+</script></body></html>

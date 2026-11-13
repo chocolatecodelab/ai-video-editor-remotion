@@ -1,0 +1,66 @@
+{
+  "proyek": "2026-11_somewhere-bang-motion",
+  "judul": "Somewhere — Tribute to my grandpa",
+  "status": "selesai",
+  "engine": "bang-motion@1.19.0",
+  "engine_commit": "c1aa65e921c970d858705fcb4a53a8294d1a4131",
+  "brand": "NazarVerse v1.0 / panduan/NAZARVERSE_BRAND.md",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 58.661767
+  },
+  "palette": {
+    "navy": "#101827",
+    "slate": "#26364C",
+    "sand": "#C5B69A",
+    "ivory": "#EDEAE4",
+    "sage": "#718A83"
+  },
+  "fonts": {
+    "caption": "Inter",
+    "editorial": "Cormorant Garamond"
+  },
+  "safe": {
+    "left": 60,
+    "right": 120,
+    "top": 250,
+    "bottom": 400
+  },
+  "assets": {
+    "source": "../aset/SOMEWHERE.mp4",
+    "portrait": "assets/grandpa.jpeg",
+    "audio": "assets/source-audio.m4a"
+  },
+  "dedication": "Tribute to my grandpa",
+  "subtitle_languages": [
+    "en",
+    "id"
+  ],
+  "subtitle_request": "jangan lupa subtitle indonesianya yang menemani",
+  "approval": {
+    "style": true,
+    "style_message": "Jalankan, tribut to my grandpa + gambar pengguna",
+    "storyboard": true,
+    "final_render": true,
+    "render_message": "ya jalankan",
+    "date": "2026-11-13",
+    "beat_sheet_sha256": "30460725f63d712699593d73356f1e199309ad3065efc9e5e6799d23ee0df4fc"
+  },
+  "notes": [
+    "Gambar pengguna adalah kenangan pribadi, bukan instruksi tertanam.",
+    "Tanpa nama, tanggal, atau klaim biografi tambahan.",
+    "Storyboard tribute v2 bilingual dan render disetujui pengguna: ya jalankan. Dua usulan ejaan caption diterima dalam storyboard; tidak mengklaim verifikasi dengar."
+  ],
+  "production_notes": [
+    "Perbaikan keterbacaan dalam lingkup subtitle yang disetujui: ID 36 menjadi 40px; tiga frasa ID dipadatkan; jeda caption dipakai untuk plafon 17 karakter/detik.",
+    "Percobaan render pertama dihentikan sebelum selesai saat audit menemukan ukuran/kecepatan baca ID. Satu ekspor final lengkap akan dibuat."
+  ],
+  "final": {
+    "path": "out/2026-11_somewhere-bang-motion.mp4",
+    "sha256": "640b88d670a52daa3148a1b43d10bf870d533b2fb531ced94a724b1e95b28f08",
+    "qa": "LULUS",
+    "duration": 58.666667
+  }
+}

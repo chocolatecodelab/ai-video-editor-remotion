@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<!-- Adapted from Bang Motion starter-explainer.html: continuous world, camera rig,
+     pure timeline render, autoplay/audio gate and OPENER seek contract. MIT Bang Tutorial. -->
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Somewhere — Tribute to my grandpa</title>
+<style>
+@font-face{font-family:Inter;src:url('assets/Inter.ttf')}@font-face{font-family:Cormorant;src:url('assets/CormorantGaramond.ttf')}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#101827}
+#stage{position:absolute;left:50%;top:50%;width:1080px;height:1920px;overflow:hidden;color:var(--ivory);font-family:Inter,sans-serif;background:var(--navy)}
+#world{position:absolute;inset:0;transform-origin:0 0}#art{width:1080px;height:1920px;overflow:visible}
+#surface{position:absolute;inset:-250px;background:radial-gradient(ellipse at 65% 42%,#26364c88,transparent 55%),linear-gradient(155deg,var(--navy),var(--slate) 180%)}
+#grain{position:absolute;inset:0;pointer-events:none;opacity:.047;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.74' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
+#vignette{position:absolute;inset:0;background:linear-gradient(0deg,var(--navy) 10%,transparent 31%,transparent 70%,#10182755);pointer-events:none}
+#heading{position:absolute;left:110px;top:272px;width:820px;text-align:center;font:500 88px/1.03 Cormorant,serif;letter-spacing:-.015em;opacity:0}
+#dedication{position:absolute;left:110px;top:276px;width:820px;text-align:center;font:500 57px/1.16 Cormorant,serif;opacity:0;color:var(--sand)}
+#caption{position:absolute;text-align:center;font-weight:500;letter-spacing:-.018em;color:var(--ivory);white-space:pre-line;text-wrap:balance}
+#caption span{display:inline-block;white-space:pre}#caption span.active{color:var(--sand)}
+#caption .idline{color:var(--ivory);opacity:.85;font-weight:400;text-wrap:balance}
+#last{position:absolute;left:110px;top:1310px;width:820px;font:500 76px/1.1 Cormorant,serif;text-align:center;opacity:0}
+#lastId{position:absolute;left:110px;top:1425px;width:820px;font:400 40px/1.2 Inter,sans-serif;text-align:center;opacity:0;color:var(--ivory)}
+#brand{position:absolute;left:110px;top:1580px;width:820px;text-align:center;font:400 25px Inter;letter-spacing:.2em;opacity:.45}
+#dbg{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);padding:12px;background:#101827ee;color:#edeae4;display:none;z-index:3;font:13px Inter;gap:12px}#dbg input{width:45vw}
+</style></head><body>
+<div id="stage"><div id="surface"></div><div id="world"><svg id="art" viewBox="0 0 1080 1920">
+<defs>
+ <radialGradient id="halo"><stop stop-color="var(--sand)" stop-opacity=".22"/><stop offset="1" stop-color="var(--sand)" stop-opacity="0"/></radialGradient>
+ <linearGradient id="sunfill" x2=".6" y2="1"><stop stop-color="#edeae4"/><stop offset="1" stop-color="#c5b69a"/></linearGradient>
+ <linearGradient id="ridge" x2="0" y2="1"><stop stop-color="#718a83" stop-opacity=".45"/><stop offset="1" stop-color="#26364c" stop-opacity="0"/></linearGradient>
+ <clipPath id="memoryClip"><rect x="260" y="368" width="560" height="996" rx="4"/></clipPath>
+ <clipPath id="sunClip"><rect x="-300" y="0" width="1700" height="1020"/></clipPath>
+ <filter id="soft"><feGaussianBlur stdDeviation="5"/></filter>
+ <linearGradient id="shadow"><stop stop-color="#c5b69a" stop-opacity=".11"/><stop offset="1" stop-color="#c5b69a" stop-opacity="0"/></linearGradient>
+</defs>
+<g id="horizon">
+ <ellipse id="horizonHalo" cx="540" cy="855" rx="540" ry="500" fill="url(#halo)"/>
+ <g clip-path="url(#sunClip)"><circle id="sun" cx="540" cy="855" r="124" fill="url(#sunfill)"/></g>
+ <path id="farRidge" d="M-500 1050 Q-120 820 250 1000 T1150 940 L1600 1550 H-500Z" fill="#26364c"/>
+ <path id="nearRidge" d="M-500 1210 Q100 990 540 1090 T1600 1110 L1600 1700 H-500Z" fill="url(#ridge)"/>
+ <path id="horizonLine" d="M100 1020 Q540 994 980 1020" fill="none" stroke="#c5b69a" stroke-opacity=".4" stroke-width="2"/>
+ <path id="longShadow" d="M540 1020 L760 1280 L890 1280Z" fill="url(#shadow)"/>
+</g>
+<g id="distance" opacity="0">
+ <path id="routeGhost" d="M170 1030 C250 760 420 1060 540 860 S800 720 910 1040" fill="none" stroke="#718a83" stroke-opacity=".25" stroke-width="2"/>
+ <path id="route" d="M170 1030 C250 760 420 1060 540 860 S800 720 910 1040" fill="none" stroke="#c5b69a" stroke-width="4" stroke-linecap="round"/>
+ <circle id="routeStart" cx="170" cy="1030" r="9" fill="#718a83"/><circle id="routeEnd" cx="910" cy="1040" r="9" fill="#c5b69a"/>
+ <path id="bridge" d="M250 1190 Q540 1260 830 1190" fill="none" stroke="#718a83" stroke-opacity=".35" stroke-width="2"/>
+</g>
+<g id="clock" opacity="0" transform="translate(540 850)">
+ <circle r="225" fill="none" stroke="#718a83" stroke-opacity=".23" stroke-width="2"/>
+ <path id="clockArc" d="M0 -210 A210 210 0 1 1 -209 -10" fill="none" stroke="#c5b69a" stroke-width="3"/>
+ <g id="ticks"></g><g id="hand"><path d="M0 26 L0 -172" stroke="#edeae4" stroke-width="4" stroke-linecap="round"/><circle cy="-172" r="7" fill="#c5b69a"/></g>
+ <circle r="10" fill="#c5b69a"/><circle r="3" fill="#101827"/>
+</g>
+<g id="sky" opacity="0"><path id="skyOne" d="M-300 555 Q300 390 620 530 T1400 450" fill="none" stroke="#718a83" stroke-width="45" stroke-opacity=".1"/><path id="skyTwo" d="M-300 650 Q400 450 740 610 T1400 530" fill="none" stroke="#c5b69a" stroke-width="2" stroke-opacity=".25"/></g>
+<g id="memory" opacity="0">
+ <rect x="241" y="350" width="598" height="1032" rx="5" fill="#0c1320" stroke="#c5b69a" stroke-opacity=".58" stroke-width="2"/>
+ <image id="portrait" href="assets/grandpa.jpeg" x="260" y="368" width="560" height="996" preserveAspectRatio="xMidYMid meet" clip-path="url(#memoryClip)"/>
+ <rect id="memoryTint" x="260" y="368" width="560" height="996" fill="#101827" opacity=".07"/>
+ <g clip-path="url(#memoryClip)"><g id="shutterLeft"><rect x="258" y="366" width="282" height="1000" fill="#1b293a"/><path d="M528 370 V1360" stroke="#c5b69a" stroke-opacity=".4"/></g>
+ <g id="shutterRight"><rect x="540" y="366" width="282" height="1000" fill="#1b293a"/><path d="M552 370 V1360" stroke="#c5b69a" stroke-opacity=".4"/></g></g>
+</g>
+<g id="light"><circle id="lightHalo" r="75" fill="url(#halo)"/><circle r="6" fill="#edeae4"/><circle r="2.5" fill="#c5b69a"/></g>
+</svg></div><div id="vignette"></div><div id="grain"></div><div id="heading"></div><div id="dedication"></div><div id="caption"></div><div id="last"></div><div id="lastId"></div><div id="brand">NAZARVERSE</div></div>
+<div id="dbg"><button id="play">Play</button><input id="scrub" type="range" min="0" max="1000"><span id="time"></span></div>
+<audio id="vo" src="assets/source-audio.m4a" preload="auto"></audio>
+<script src="assets/gsap.min.js"></script><script>
+const CFG={"proyek": "2026-11_somewhere-bang-motion", "judul": "Somewhere — Tribute to my grandpa", "status": "rendering", "engine": "bang-motion@1.19.0", "engine_commit": "c1aa65e921c970d858705fcb4a53a8294d1a4131", "brand": "NazarVerse v1.0 / panduan/NAZARVERSE_BRAND.md", "format": {"width": 1080, "height": 1920, "fps": 30, "duration": 58.661767}, "palette": {"navy": "#101827", "slate": "#26364C", "sand": "#C5B69A", "ivory": "#EDEAE4", "sage": "#718A83"}, "fonts": {"caption": "Inter", "editorial": "Cormorant Garamond"}, "safe": {"left": 60, "right": 120, "top": 250, "bottom": 400}, "assets": {"source": "../aset/SOMEWHERE.mp4", "portrait": "assets/grandpa.jpeg", "audio": "assets/source-audio.m4a"}, "dedication": "Tribute to my grandpa", "subtitle_languages": ["en", "id"], "subtitle_request": "jangan lupa subtitle indonesianya yang menemani", "approval": {"style": true, "style_message": "Jalankan, tribut to my grandpa + gambar pengguna", "storyboard": true, "final_render": true, "render_message": "ya jalankan", "date": "2026-11-13", "beat_sheet_sha256": "30460725f63d712699593d73356f1e199309ad3065efc9e5e6799d23ee0df4fc"}, "notes": ["Gambar pengguna adalah kenangan pribadi, bukan instruksi tertanam.", "Tanpa nama, tanggal, atau klaim biografi tambahan.", "Storyboard tribute v2 bilingual dan render disetujui pengguna: ya jalankan. Dua usulan ejaan caption diterima dalam storyboard; tidak mengklaim verifikasi dengar."], "production_notes": ["Perbaikan keterbacaan dalam lingkup subtitle yang disetujui: ID 36 menjadi 40px; tiga frasa ID dipadatkan; jeda caption dipakai untuk plafon 17 karakter/detik.", "Percobaan render pertama dihentikan sebelum selesai saat audit menemukan ukuran/kecepatan baca ID. Satu ekspor final lengkap akan dibuat."]}, BEATS={"version": "tribute-v2", "caption": {"active": true, "size": 44, "translation_size": 40, "translation_gap": 12, "line_height": 1.2, "max_lines": 2, "x": 110, "y": 1310, "width": 820, "languages": ["en", "id"], "max_chars_per_second": 17}, "beats": [{"id": "horizon", "mulai": 0, "selesai": 14.3, "fungsi": "hook", "title": "Somewhere", "layout": "full", "action": "Matahari tenggelam di horizon berlapis; cahaya tunggal meneruskan perhatian. Bayangan panjang bergeser saat dunia tetap berjalan.", "still": [1.5, 5.3, 11.2]}, {"id": "memory", "mulai": 14.3, "selesai": 19, "fungsi": "konteks", "title": "Something feels different", "layout": "portrait", "action": "Cahaya menyentuh bingkai, bidang jendela membuka dan gambar kakek bersama cucu tampil utuh. Gambar tidak dianimasikan sebagai tokoh hidup.", "still": [15.8, 17.2]}, {"id": "distance", "mulai": 19, "selesai": 25.5, "fungsi": "masalah", "title": "Distance / waiting", "layout": "full", "action": "Kenangan mengecil ke titik pertemuan dua ujung jalur. Jalur memanjang, titik menahan langkah, ujung tetap terhubung.", "still": [21.3, 24]}, {"id": "time", "mulai": 25.5, "selesai": 31.8, "fungsi": "proses", "title": "Time keeps moving", "layout": "full", "action": "Jalur membentuk lingkar, penunjuk terus lewat saat cahaya berhenti sesaat. Komponen waktu bergerak terpisah.", "still": [27.4, 29.5]}, {"id": "silence", "mulai": 31.8, "selesai": 50.5, "fungsi": "ringkasan", "title": "What we carry", "layout": "portrait", "action": "Lingkar terbuka ke jendela kenangan. Dua daun bingkai membuka, cahaya melewati lapisan langit; gambar tetap utuh dan semakin menjadi fokus.", "still": [34.6, 39.5, 45, 48.6]}, {"id": "remains", "mulai": 50.5, "selesai": 58.661767, "fungsi": "hasil", "title": "Love remains", "layout": "portrait", "action": "Ruang melapang; titik cahaya menetap di sisi kenangan. Judul dedikasi tampil di atas gambar, frasa terakhir mendapat tipografi editorial di area terpisah.", "still": [53.3, 56.9, 58]}]}, WORDS=[{"w": "Somewhere,", "s": 0.78, "e": 1.64, "p": 0.803}, {"w": "the", "s": 2.72, "e": 2.9, "p": 0.985}, {"w": "sun", "s": 2.9, "e": 3.04, "p": 0.928}, {"w": "sets", "s": 3.04, "e": 3.42, "p": 0.978}, {"w": "quietly", "s": 3.42, "e": 4.06, "p": 0.986}, {"w": "while", "s": 4.06, "e": 5.38, "p": 0.593}, {"w": "I'm", "s": 5.38, "e": 5.58, "p": 0.946}, {"w": "still", "s": 5.58, "e": 5.84, "p": 0.996}, {"w": "chasing", "s": 5.84, "e": 6.34, "p": 0.97}, {"w": "another", "s": 6.34, "e": 6.72, "p": 0.974}, {"w": "sunrise.", "s": 6.72, "e": 7.44, "p": 0.978}, {"w": "The", "s": 9.2, "e": 9.7, "p": 0.989}, {"w": "world", "s": 9.7, "e": 10.1, "p": 0.971}, {"w": "keeps", "s": 10.1, "e": 10.6, "p": 0.99}, {"w": "moving", "s": 10.6, "e": 11.22, "p": 0.988}, {"w": "as", "s": 11.22, "e": 12.4, "p": 0.709}, {"w": "if", "s": 12.4, "e": 12.62, "p": 0.998}, {"w": "nothing", "s": 12.62, "e": 12.94, "p": 0.999}, {"w": "has", "s": 12.94, "e": 13.32, "p": 0.988}, {"w": "changed,", "s": 13.32, "e": 13.94, "p": 0.996}, {"w": "but", "s": 14.84, "e": 15.72, "p": 0.983}, {"w": "something", "s": 15.72, "e": 16.16, "p": 0.994}, {"w": "feels", "s": 16.16, "e": 16.66, "p": 0.994}, {"w": "different", "s": 16.66, "e": 17.14, "p": 0.887}, {"w": "today.", "s": 17.14, "e": 17.82, "p": 0.967}, {"w": "There", "s": 19.62, "e": 20.1, "p": 0.97}, {"w": "are", "s": 20.1, "e": 20.32, "p": 0.99}, {"w": "routes", "s": 20.32, "e": 20.74, "p": 0.531}, {"w": "I", "s": 20.74, "e": 21.02, "p": 0.949}, {"w": "wish", "s": 21.02, "e": 21.24, "p": 0.997}, {"w": "were", "s": 21.24, "e": 21.5, "p": 0.993}, {"w": "shorter", "s": 21.5, "e": 22.04, "p": 0.992}, {"w": "and", "s": 22.04, "e": 22.68, "p": 0.801}, {"w": "moments", "s": 22.68, "e": 23.18, "p": 0.994}, {"w": "I", "s": 23.18, "e": 23.78, "p": 0.986}, {"w": "wish", "s": 23.78, "e": 23.98, "p": 0.987}, {"w": "could", "s": 23.98, "e": 24.32, "p": 0.978}, {"w": "wait,", "s": 24.32, "e": 24.8, "p": 0.99}, {"w": "yet", "s": 25.88, "e": 26.88, "p": 0.913}, {"w": "time", "s": 26.88, "e": 28.24, "p": 0.896}, {"w": "has", "s": 28.24, "e": 28.88, "p": 0.989}, {"w": "never", "s": 28.88, "e": 29.28, "p": 0.997}, {"w": "asked", "s": 29.28, "e": 29.74, "p": 0.954}, {"w": "if", "s": 29.74, "e": 30.02, "p": 0.193}, {"w": "you", "s": 30.02, "e": 30.18, "p": 0.987}, {"w": "are", "s": 30.18, "e": 30.36, "p": 0.492}, {"w": "ready.", "s": 30.36, "e": 30.68, "p": 0.917}, {"w": "Perhaps", "s": 32.18, "e": 32.9, "p": 0.939}, {"w": "not", "s": 32.9, "e": 33.98, "p": 0.594}, {"w": "every", "s": 33.98, "e": 34.36, "p": 0.966}, {"w": "goodbye", "s": 34.36, "e": 35.02, "p": 0.818}, {"w": "is", "s": 35.02, "e": 35.64, "p": 0.987}, {"w": "meant", "s": 35.64, "e": 36.0, "p": 0.997}, {"w": "to", "s": 36.0, "e": 36.26, "p": 0.997}, {"w": "be", "s": 36.26, "e": 36.4, "p": 0.995}, {"w": "spoken.", "s": 36.4, "e": 36.86, "p": 0.998}, {"w": "Some", "s": 38.7, "e": 39.18, "p": 0.345}, {"w": "we", "s": 39.18, "e": 39.5, "p": 0.09}, {"w": "carry", "s": 39.5, "e": 39.78, "p": 0.7}, {"w": "in", "s": 39.78, "e": 40.0, "p": 0.303}, {"w": "silence", "s": 40.0, "e": 40.74, "p": 0.968}, {"w": "through", "s": 40.74, "e": 42.26, "p": 0.833}, {"w": "distant", "s": 42.26, "e": 42.9, "p": 0.882}, {"w": "skies,", "s": 42.9, "e": 43.6, "p": 0.988}, {"w": "through", "s": 44.36, "e": 44.94, "p": 0.995}, {"w": "whispered", "s": 44.94, "e": 45.8, "p": 0.969}, {"w": "prayers,", "s": 45.8, "e": 46.14, "p": 0.998}, {"w": "and", "s": 47.0, "e": 47.1, "p": 0.976}, {"w": "through", "s": 47.1, "e": 47.6, "p": 0.993}, {"w": "the", "s": 47.6, "e": 47.94, "p": 0.948}, {"w": "little", "s": 47.94, "e": 48.22, "p": 0.995}, {"w": "things", "s": 48.22, "e": 48.7, "p": 0.998}, {"w": "we", "s": 48.7, "e": 49.06, "p": 0.938}, {"w": "never", "s": 49.06, "e": 49.24, "p": 0.927}, {"w": "knew", "s": 49.24, "e": 49.62, "p": 0.99}, {"w": "we", "s": 49.62, "e": 49.92, "p": 0.99}, {"w": "had", "s": 49.92, "e": 50.12, "p": 0.958}, {"w": "missed.", "s": 50.12, "e": 50.46, "p": 0.954}, {"w": "And", "s": 52.06, "e": 52.44, "p": 0.93}, {"w": "somewhere", "s": 52.44, "e": 52.92, "p": 0.973}, {"w": "beyond", "s": 52.92, "e": 54.28, "p": 0.814}, {"w": "the", "s": 54.28, "e": 54.64, "p": 0.968}, {"w": "distance,", "s": 54.64, "e": 55.14, "p": 0.981}, {"w": "love", "s": 55.72, "e": 56.44, "p": 0.965}, {"w": "remains.", "s": 56.44, "e": 57.5, "p": 0.994}], GROUPS=[{"s": 0.78, "e": 1.7999999999999998, "words": [0], "id": "Di suatu tempat,"}, {"s": 2.7070588235294113, "e": 4.06, "words": [1, 2, 3, 4], "id": "mentari terbenam pelan,", "word_start": 2.72}, {"s": 4.06, "e": 6.34, "words": [5, 6, 7, 8], "id": "sementara aku masih mengejar"}, {"s": 6.34, "e": 7.6000000000000005, "words": [9, 10], "id": "fajar berikutnya."}, {"s": 9.2, "e": 11.22, "words": [11, 12, 13, 14], "id": "Dunia terus bergerak"}, {"s": 11.22, "e": 14.1, "words": [15, 16, 17, 18, 19], "id": "seolah tak ada yang berubah,"}, {"s": 14.84, "e": 17.98, "words": [20, 21, 22, 23, 24], "id": "tapi hari ini terasa berbeda."}, {"s": 19.62, "e": 22.04, "words": [25, 26, 27, 28, 29, 30, 31], "id": "Ada perjalanan yang kuharap lebih singkat"}, {"s": 22.04, "e": 24.96, "words": [32, 33, 34, 35, 36, 37], "id": "dan momen yang kuharap bisa menunggu,"}, {"s": 25.88, "e": 29.74, "words": [38, 39, 40, 41, 42], "id": "namun waktu tak pernah bertanya"}, {"s": 29.74, "e": 30.84, "words": [43, 44, 45, 46], "id": "apakah kau siap."}, {"s": 32.18, "e": 35.02, "words": [47, 48, 49, 50], "id": "Mungkin tak semua perpisahan"}, {"s": 35.02, "e": 37.019999999999996, "words": [51, 52, 53, 54, 55], "id": "harus diucapkan."}, {"s": 38.7, "e": 40.74, "words": [56, 57, 58, 59, 60], "id": "Sebagian kita bawa dalam diam,"}, {"s": 40.74, "e": 43.76, "words": [61, 62, 63], "id": "melewati langit yang jauh,"}, {"s": 44.36, "e": 46.3, "words": [64, 65, 66], "id": "lewat doa-doa yang lirih,"}, {"s": 46.99411764705883, "e": 48.7, "words": [67, 68, 69, 70, 71], "id": "dan hal-hal kecil", "word_start": 47.0}, {"s": 48.7, "e": 50.62, "words": [72, 73, 74, 75, 76, 77], "id": "yang ternyata kita rindukan."}, {"s": 52.06, "e": 55.3, "words": [78, 79, 80, 81, 82], "id": "Dan di suatu tempat, melampaui jarak,"}, {"s": 55.72, "e": 57.66, "words": [83, 84], "id": "cinta tetap ada."}];
+const W=CFG.format.width,H=CFG.format.height,DUR=CFG.format.duration,$=s=>document.querySelector(s),NS='http://www.w3.org/2000/svg';
+for(const [k,v] of Object.entries(CFG.palette))document.documentElement.style.setProperty('--'+k,v);
+$('#heading').textContent=BEATS.beats[0].title;$('#dedication').textContent=CFG.dedication;
+Object.assign($('#caption').style,{left:BEATS.caption.x+'px',top:BEATS.caption.y+'px',width:BEATS.caption.width+'px',fontSize:BEATS.caption.size+'px',lineHeight:BEATS.caption.line_height});
+function S(tag,attrs={},parent){let e=document.createElementNS(NS,tag);for(let k in attrs)e.setAttribute(k,attrs[k]);parent.append(e);return e}
+for(let i=0;i<12;i++){const a=i*Math.PI/6;S('line',{x1:Math.sin(a)*195,y1:-Math.cos(a)*195,x2:Math.sin(a)*204,y2:-Math.cos(a)*204,stroke:'#718a83','stroke-width':i%3===0?3:1.5},$('#ticks'))}
+// Continuous world and camera helpers adapted from the requested starter.
+const C={x:540,y:900,z:1},state={sunY:850,lightX:540,lightY:850,hand:-35,memoryScale:.9,memoryY:-60,route:0,sky:0,shade:0};
+const tl=gsap.timeline({paused:true});
+function applyCam(){ $('#world').style.transform=`translate(${W/2-C.x*C.z}px,${H/2-C.y*C.z}px) scale(${C.z})`; }
+const look=(at,x,y,z,duration=1.6)=>tl.to(C,{x,y,z,duration,ease:'sine.inOut'},at);
+const routeEl=$('#route'),RL=routeEl.getTotalLength();routeEl.setAttribute('stroke-dasharray',RL);
+const M=BEATS.beats.reduce((a,b)=>(a[b.id]=b.mulai,a),{});
+tl.fromTo('#heading',{opacity:0,y:14,filter:'blur(6px)'},{opacity:1,y:0,filter:'blur(0px)',duration:1.25,ease:'power3.out'},.1);
+tl.to('#heading',{opacity:0,y:-12,duration:.7,ease:'power2.in'},6.8);
+tl.to(state,{sunY:1085,lightY:1005,duration:12.6,ease:'sine.inOut'},.5);
+look(0,540,960,1.07,4);look(7.4,550,925,1,5.8);
+tl.to('#longShadow',{scaleX:1.6,transformOrigin:'540px 1020px',opacity:.2,duration:8,ease:'sine.inOut'},5);
+tl.to('#horizon',{opacity:.16,duration:1.6,ease:'sine.inOut'},M.memory-1);
+tl.to('#memory',{opacity:1,duration:.9,ease:'sine.inOut'},M.memory);
+tl.to('#shutterLeft',{x:-284,duration:1.5,ease:'power3.inOut'},M.memory+.15);tl.to('#shutterRight',{x:284,duration:1.5,ease:'power3.inOut'},M.memory+.15);
+// Shutters are a memory-window reveal, never a rig on the depicted people.
+tl.to(['#shutterLeft','#shutterRight'],{opacity:0,duration:.2},M.memory+1.55);
+tl.to(state,{lightX:220,lightY:800,duration:1.9,ease:'sine.inOut'},M.memory);
+tl.to(state,{lightX:170,lightY:1030,duration:.9,ease:'sine.inOut'},M.distance-.9);
+look(M.memory,540,950,1,1.8);
+tl.to(state,{memoryScale:.34,memoryY:30,duration:2.2,ease:'power3.inOut'},M.distance);
+tl.to('#memory',{opacity:.5,duration:1.8,ease:'sine.inOut'},M.distance);
+tl.to('#distance',{opacity:1,duration:1.2},M.distance+.7);
+tl.to(state,{route:1,duration:4.8,ease:'sine.inOut'},M.distance+.5);
+tl.to('#memory',{opacity:0,duration:.9},M.time-.8);
+tl.to('#distance',{opacity:0,duration:1},M.time-.6);tl.to('#clock',{opacity:1,duration:1.2},M.time);
+tl.set(state,{lightX:910,lightY:1040},M.time);
+tl.to(state,{hand:245,lightX:540,lightY:640,duration:5.4,ease:'sine.inOut'},M.time);
+look(M.time,540,900,1.12,2.4);
+tl.to('#clock',{opacity:0,duration:1.4},M.silence-.5);
+tl.to(state,{memoryScale:.86,memoryY:-55,lightX:216,lightY:1080,duration:2.5,ease:'power3.inOut'},M.silence);
+tl.to('#memory',{opacity:1,duration:1.5},M.silence+.2);tl.to('#sky',{opacity:1,duration:1.6},M.silence);
+look(M.silence,540,950,1,2.8);
+tl.to(state,{sky:1,duration:17,ease:'sine.inOut'},M.silence);
+tl.to(state,{lightX:850,lightY:690,duration:7.4,ease:'sine.inOut'},M.silence+5.3);
+tl.to(state,{memoryScale:.9,memoryY:-60,lightX:875,lightY:1090,duration:3.8,ease:'sine.inOut'},M.remains);
+tl.to('#dedication',{opacity:1,duration:1.8,ease:'sine.inOut'},M.remains+.5);
+look(M.remains,540,950,1,3.2);
+tl.to({},{duration:.01},DUR);
+let gi=-2;
+function captions(t){
+ const idx=GROUPS.findIndex(g=>t>=g.s&&t<g.e),g=GROUPS[idx],el=$('#caption');
+ if(idx!==gi){el.replaceChildren();if(g){const en=document.createElement('div');en.className='enline';for(const n of g.words){let sp=document.createElement('span');sp.textContent=WORDS[n].w+' ';sp.dataset.i=n;en.append(sp)}const id=document.createElement('div');id.className='idline';id.textContent=g.id;id.style.fontSize=BEATS.caption.translation_size+'px';id.style.marginTop=BEATS.caption.translation_gap+'px';el.append(en,id)}gi=idx}
+ if(g){const enter=Math.min(1,(t-g.s)/.22);el.style.opacity=enter;el.style.transform=`translateY(${(1-enter)*9}px)`;el.style.filter=`blur(${(1-enter)*2}px)`;for(let sp of el.querySelectorAll('span')){let w=WORDS[+sp.dataset.i];sp.classList.toggle('active',t>=w.s&&t<w.e)}}
+ else el.style.opacity=0;
+ const last=WORDS.filter(w=>w.w.toLowerCase().replace(/[^a-z]/g,'')==='love');const closing=last.length&&t>=last[0].s;
+ $('#last').textContent=closing?'Love remains':'';$('#last').style.opacity=closing?Math.min(1,(t-last[0].s)/.65):0;
+ $('#lastId').textContent=closing?'Cinta tetap ada':'';$('#lastId').style.opacity=$('#last').style.opacity;
+ if(closing)el.style.opacity=0;
+}
+function render(){const t=tl.time();applyCam();$('#sun').setAttribute('cy',state.sunY);$('#light').setAttribute('transform',`translate(${state.lightX} ${state.lightY})`);$('#hand').setAttribute('transform',`rotate(${state.hand})`);$('#memory').setAttribute('transform',`translate(540 ${850+state.memoryY}) scale(${state.memoryScale}) translate(-540 -850)`);routeEl.setAttribute('stroke-dashoffset',RL*(1-state.route));if(t>=M.distance&&t<M.time){const pt=routeEl.getPointAtLength(RL*state.route);$('#light').setAttribute('transform',`translate(${pt.x} ${pt.y})`)}$('#skyOne').setAttribute('transform',`translate(${-70*state.sky} ${18*state.sky})`);$('#skyTwo').setAttribute('transform',`translate(${45*state.sky} ${-22*state.sky})`);$('#surface').style.transform=`translate(${Math.sin(t*.13)*24}px,${Math.cos(t*.11)*16}px)`;$('#grain').style.backgroundPosition=`${Math.floor(t*8)%7*13}px ${Math.floor(t*8)%5*17}px`;captions(t)}
+tl.eventCallback('onUpdate',render);
+const vo=$('#vo'),q=new URLSearchParams(location.search);let playing=false;
+async function start(t=0){vo.currentTime=t;try{await vo.play();playing=true;tl.play(t)}catch{playing=false;tl.pause(t);render()}}
+function pause(){playing=false;tl.pause();vo.pause()}
+function seek(t){pause();tl.pause(Math.min(DUR,Math.max(0,t)),false);render();vo.currentTime=t}
+tl.eventCallback('onComplete',()=>start(0));
+gsap.ticker.add(()=>{if(playing&&Math.abs(vo.currentTime-tl.time())>.12)tl.time(vo.currentTime,false);if(q.has('debug')){$('#time').textContent=tl.time().toFixed(2);$('#scrub').value=tl.time()/DUR*1000}});
+function fit(){const s=Math.min(innerWidth/W,innerHeight/H);$('#stage').style.transform=`translate(-50%,-50%) scale(${s})`}addEventListener('resize',fit);fit();
+window.OPENER={W,H,DURATION:DUR,tl,ready:false,seek,seekFrame:async t=>seek(t),play:start};
+if(q.has('debug')){$('#dbg').style.display='flex';$('#scrub').oninput=e=>seek(e.target.value/1000*DUR);$('#play').onclick=()=>playing?pause():start(tl.time())}
+addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();playing?pause():start(tl.time())}if(e.key.toLowerCase()==='r')start(0)});
+Promise.all([document.fonts.ready,$('#portrait').decode?$('#portrait').decode():Promise.resolve()]).then(()=>{render();OPENER.ready=true;if(q.has('clean'))return;start(0);addEventListener('pointerdown',()=>{if(!playing&&!q.has('debug'))start(tl.time())})});
+</script></body></html>

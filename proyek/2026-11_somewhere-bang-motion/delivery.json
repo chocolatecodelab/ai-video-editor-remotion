@@ -1,0 +1,24 @@
+{
+  "final": {
+    "duration": 58.666667,
+    "frames": 1760,
+    "width": 1080,
+    "height": 1920,
+    "size_bytes": 12965563
+  },
+  "sha256": "640b88d670a52daa3148a1b43d10bf870d533b2fb531ced94a724b1e95b28f08",
+  "qa": "LULUS",
+  "manual_pending": [
+    "Dengar keseluruhan suara dan cek timing subtitle pada HP.",
+    "Tinjau keluwesan/ritme saat playback; still dan determinisme bukan bukti gerak premium."
+  ],
+  "modul": {
+    "bang-motion": "1.19.0",
+    "brand": "NazarVerse 1.0",
+    "platform": "0.4",
+    "caption-premium-full-frame": "0.1",
+    "kurasi-motion-premium": "0.1",
+    "motion-hidup": "0.1",
+    "motion-native-brand-qa": "0.1"
+  }
+}

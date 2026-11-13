@@ -1,0 +1,12 @@
+{
+  "version": "tribute-v2",
+  "caption": {"active":true,"size":44,"translation_size":40,"translation_gap":12,"line_height":1.2,"max_lines":2,"x":110,"y":1310,"width":820,"languages":["en","id"],"max_chars_per_second":17},
+  "beats": [
+    {"id":"horizon","mulai":0,"selesai":14.3,"fungsi":"hook","title":"Somewhere","layout":"full","action":"Matahari tenggelam di horizon berlapis; cahaya tunggal meneruskan perhatian. Bayangan panjang bergeser saat dunia tetap berjalan.","still":[1.5,5.3,11.2]},
+    {"id":"memory","mulai":14.3,"selesai":19,"fungsi":"konteks","title":"Something feels different","layout":"portrait","action":"Cahaya menyentuh bingkai, bidang jendela membuka dan gambar kakek bersama cucu tampil utuh. Gambar tidak dianimasikan sebagai tokoh hidup.","still":[15.8,17.2]},
+    {"id":"distance","mulai":19,"selesai":25.5,"fungsi":"masalah","title":"Distance / waiting","layout":"full","action":"Kenangan mengecil ke titik pertemuan dua ujung jalur. Jalur memanjang, titik menahan langkah, ujung tetap terhubung.","still":[21.3,24]},
+    {"id":"time","mulai":25.5,"selesai":31.8,"fungsi":"proses","title":"Time keeps moving","layout":"full","action":"Jalur membentuk lingkar, penunjuk terus lewat saat cahaya berhenti sesaat. Komponen waktu bergerak terpisah.","still":[27.4,29.5]},
+    {"id":"silence","mulai":31.8,"selesai":50.5,"fungsi":"ringkasan","title":"What we carry","layout":"portrait","action":"Lingkar terbuka ke jendela kenangan. Dua daun bingkai membuka, cahaya melewati lapisan langit; gambar tetap utuh dan semakin menjadi fokus.","still":[34.6,39.5,45,48.6]},
+    {"id":"remains","mulai":50.5,"selesai":58.661767,"fungsi":"hasil","title":"Love remains","layout":"portrait","action":"Ruang melapang; titik cahaya menetap di sisi kenangan. Judul dedikasi tampil di atas gambar, frasa terakhir mendapat tipografi editorial di area terpisah.","still":[53.3,56.9,58]}
+  ]
+}
