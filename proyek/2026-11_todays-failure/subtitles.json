@@ -1,0 +1,384 @@
+[
+  {
+    "en": "One thing I have learned",
+    "id": "Satu hal yang kupelajari",
+    "s": 0.21,
+    "e": 2.35,
+    "words": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "cps": 11.21
+  },
+  {
+    "en": "about life",
+    "id": "soal hidup",
+    "s": 2.35,
+    "e": 3.01,
+    "words": [
+      5,
+      6
+    ],
+    "cps": 15.15
+  },
+  {
+    "en": "is that failure",
+    "id": "kegagalan itu",
+    "s": 3.01,
+    "e": 4.29,
+    "words": [
+      7,
+      8,
+      9
+    ],
+    "cps": 11.72
+  },
+  {
+    "en": "is never the end",
+    "id": "bukan akhir",
+    "s": 4.29,
+    "e": 5.77,
+    "words": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "cps": 10.81
+  },
+  {
+    "en": "of the story.",
+    "id": "cerita.",
+    "s": 5.77,
+    "e": 7.11,
+    "words": [
+      14,
+      15,
+      16
+    ],
+    "cps": 9.7
+  },
+  {
+    "en": "You might fail today,",
+    "id": "Kau bisa gagal hari ini,",
+    "s": 7.11,
+    "e": 9.13,
+    "words": [
+      17,
+      18,
+      19,
+      20
+    ],
+    "cps": 11.88
+  },
+  {
+    "en": "you might lose",
+    "id": "bisa kehilangan",
+    "s": 9.13,
+    "e": 10.35,
+    "words": [
+      21,
+      22,
+      23
+    ],
+    "cps": 12.3
+  },
+  {
+    "en": "an opportunity,",
+    "id": "kesempatan,",
+    "s": 10.35,
+    "e": 11.97,
+    "words": [
+      24,
+      25
+    ],
+    "cps": 9.26
+  },
+  {
+    "en": "make the wrong decision,",
+    "id": "salah mengambil keputusan,",
+    "s": 11.97,
+    "e": 13.89,
+    "words": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "cps": 13.54
+  },
+  {
+    "en": "or feel like",
+    "id": "atau merasa",
+    "s": 13.89,
+    "e": 14.61,
+    "words": [
+      30,
+      31,
+      32
+    ],
+    "cps": 16.67
+  },
+  {
+    "en": "all your efforts",
+    "id": "semua usahamu",
+    "s": 14.61,
+    "e": 15.85,
+    "words": [
+      33,
+      34,
+      35
+    ],
+    "cps": 12.9
+  },
+  {
+    "en": "were wasted.",
+    "id": "sia-sia.",
+    "s": 15.85,
+    "e": 17.73,
+    "words": [
+      36,
+      37
+    ],
+    "cps": 6.38
+  },
+  {
+    "en": "And yes,",
+    "id": "Dan ya,",
+    "s": 17.73,
+    "e": 18.93,
+    "words": [
+      38,
+      39
+    ],
+    "cps": 6.67
+  },
+  {
+    "en": "it hurts.",
+    "id": "itu sakit.",
+    "s": 18.93,
+    "e": 20.188823529411764,
+    "words": [
+      40,
+      41
+    ],
+    "cps": 7.94
+  },
+  {
+    "en": "But just because",
+    "id": "Tapi karena",
+    "s": 20.208823529411763,
+    "e": 21.15,
+    "words": [
+      42,
+      43,
+      44
+    ],
+    "word_start": 20.31,
+    "cps": 17.0
+  },
+  {
+    "en": "you fail today",
+    "id": "gagal hari ini,",
+    "s": 21.15,
+    "e": 22.23,
+    "words": [
+      45,
+      46,
+      47
+    ],
+    "cps": 13.89
+  },
+  {
+    "en": "doesn't mean",
+    "id": "bukan berarti",
+    "s": 22.23,
+    "e": 23.35,
+    "words": [
+      48,
+      49
+    ],
+    "cps": 11.61
+  },
+  {
+    "en": "you will keep failing forever.",
+    "id": "terus gagal selamanya.",
+    "s": 23.35,
+    "e": 25.13,
+    "words": [
+      50,
+      51,
+      52,
+      53,
+      54
+    ],
+    "cps": 16.85
+  },
+  {
+    "en": "One bad chapter",
+    "id": "Satu bab buruk",
+    "s": 25.13,
+    "e": 27.35,
+    "words": [
+      55,
+      56,
+      57
+    ],
+    "cps": 6.76
+  },
+  {
+    "en": "doesn't define",
+    "id": "tak menentukan",
+    "s": 27.35,
+    "e": 28.65,
+    "words": [
+      58,
+      59
+    ],
+    "cps": 10.77
+  },
+  {
+    "en": "your entire story.",
+    "id": "seluruh kisahmu.",
+    "s": 28.65,
+    "e": 30.69,
+    "words": [
+      60,
+      61,
+      62
+    ],
+    "cps": 8.82
+  },
+  {
+    "en": "Give yourself permission",
+    "id": "Izinkan dirimu",
+    "s": 30.69,
+    "e": 32.37,
+    "words": [
+      63,
+      64,
+      65
+    ],
+    "cps": 14.29
+  },
+  {
+    "en": "to start again,",
+    "id": "memulai lagi,",
+    "s": 32.37,
+    "e": 34.15,
+    "words": [
+      66,
+      67,
+      68
+    ],
+    "cps": 8.43
+  },
+  {
+    "en": "even if you're afraid.",
+    "id": "meski kau takut.",
+    "s": 34.15,
+    "e": 36.97,
+    "words": [
+      69,
+      70,
+      71,
+      72
+    ],
+    "cps": 7.8
+  },
+  {
+    "en": "Because failure",
+    "id": "Karena kegagalan",
+    "s": 36.97,
+    "e": 38.57,
+    "words": [
+      73,
+      74
+    ],
+    "cps": 10.0
+  },
+  {
+    "en": "is something",
+    "id": "sesuatu",
+    "s": 38.57,
+    "e": 39.29,
+    "words": [
+      75,
+      76
+    ],
+    "cps": 16.67
+  },
+  {
+    "en": "you experience",
+    "id": "yang kau alami,",
+    "s": 39.29,
+    "e": 40.29,
+    "words": [
+      77,
+      78
+    ],
+    "cps": 15.0
+  },
+  {
+    "en": "not who you are.",
+    "id": "bukan jati dirimu.",
+    "s": 40.29,
+    "e": 42.747647058823524,
+    "words": [
+      79,
+      80,
+      81,
+      82
+    ],
+    "cps": 7.32
+  },
+  {
+    "en": "Today's failure",
+    "id": "Gagal hari ini",
+    "s": 42.76764705882353,
+    "e": 43.65,
+    "words": [
+      83,
+      84
+    ],
+    "word_start": 42.83,
+    "cps": 17.0
+  },
+  {
+    "en": "doesn't determine",
+    "id": "tak menentukan",
+    "s": 43.65,
+    "e": 45.07,
+    "words": [
+      85,
+      86
+    ],
+    "cps": 11.97
+  },
+  {
+    "en": "the rest",
+    "id": "sisa",
+    "s": 45.07,
+    "e": 45.87,
+    "words": [
+      87,
+      88
+    ],
+    "cps": 10.0
+  },
+  {
+    "en": "of your life.",
+    "id": "hidupmu.",
+    "s": 45.87,
+    "e": 49.456,
+    "words": [
+      89,
+      90,
+      91
+    ],
+    "cps": 3.63
+  }
+]

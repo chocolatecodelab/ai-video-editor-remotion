@@ -1,0 +1,77 @@
+{
+  "status": "usulan arah; belum storyboard produksi",
+  "beats": [
+    {
+      "time": [
+        0,
+        7.1
+      ],
+      "layout": "A",
+      "voice": "failure is never the end of the story",
+      "action": "Buku berpijak pada bidang bawah-kiri. Halaman yang menutup menyisakan halaman berikutnya; kamera mengikuti engsel, bukan ikon mengambang."
+    },
+    {
+      "time": [
+        7.1,
+        17.7
+      ],
+      "layout": "B",
+      "voice": "fail today / lose an opportunity / wrong decision / efforts wasted",
+      "action": "Talent menempel kiri. Jalur di kanan berawal dari sisi frame, satu simpang berhenti lalu tersambung ke arah baru. Tiap frasa mengubah keadaan, bukan menambah empat kartu."
+    },
+    {
+      "time": [
+        17.7,
+        20.3
+      ],
+      "layout": "full talking head",
+      "voice": "And yes, it hurts.",
+      "action": "Kembali ke footage asli yang memenuhi frame; hentikan dekorasi untuk memberi jeda emosional. Subtitle ditata pada bidang khusus; crop/area tubuh diperiksa dalam storyboard."
+    },
+    {
+      "time": [
+        20.3,
+        25.1
+      ],
+      "layout": "A",
+      "voice": "fail today / not failing forever",
+      "action": "Talent di kanan. Jalur yang terhenti di kiri tersambung ke halaman berikut; tidak memakai grafik capaian atau janji keberhasilan."
+    },
+    {
+      "time": [
+        25.1,
+        30.7
+      ],
+      "layout": "C",
+      "voice": "one bad chapter / entire story",
+      "action": "Grafis penuh: engsel buku membuka, satu lembar beraksen bergerak melewati lembar-lembar lainnya. Buku tetap menyentuh bidang bawah; suara sumber terus berjalan."
+    },
+    {
+      "time": [
+        30.7,
+        37
+      ],
+      "layout": "B",
+      "voice": "permission to start again / even if afraid",
+      "action": "Talent menempel kiri. Di kanan, halaman kosong menerima garis pertama; aksi kecil kemudian menjadi jalur. Tekankan kesempatan memulai, bukan pertumbuhan yang dijamin."
+    },
+    {
+      "time": [
+        37,
+        42.8
+      ],
+      "layout": "A",
+      "voice": "failure / experience / who you are",
+      "action": "Pisahkan label kejadian dari ruang identitas melalui halaman yang dilepas dari sampul. Teks persis menunggu pemeriksaan frasa ASR yang hilang."
+    },
+    {
+      "time": [
+        42.8,
+        49.456
+      ],
+      "layout": "full talking head / edge panel",
+      "voice": "Today's failure doesn't determine the rest of your life.",
+      "action": "Cutback ke talent untuk penutup. Pertahankan buku/jalur yang telah terbuka di satu sisi; tahan kalimat terakhir tanpa CTA tambahan."
+    }
+  ]
+}

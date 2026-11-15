@@ -1,0 +1,62 @@
+{
+  "proyek": "2026-11_todays-failure",
+  "judul": "Today's Failure",
+  "status": "selesai",
+  "engines": {
+    "bang-motion": "1.19.0",
+    "bang-motion-commit": "c1aa65e921c970d858705fcb4a53a8294d1a4131",
+    "latest_verified": "git fetch origin main / already up to date / 2026-11-15",
+    "hyperframes-local": "0.9.33"
+  },
+  "brand": "NazarVerse 1.0",
+  "source": {
+    "file": "aset/source.mp4",
+    "duration": 49.456292,
+    "width": 478,
+    "height": 850,
+    "black_bar_crop": [
+      478,
+      766,
+      0,
+      42
+    ]
+  },
+  "subtitle": [
+    "en",
+    "id"
+  ],
+  "format": [
+    1080,
+    1920,
+    30
+  ],
+  "approval": {
+    "style": true,
+    "storyboard": true,
+    "render": true,
+    "style_message": "setuju arah ini",
+    "render_message": "jalankan render",
+    "storyboard_version": "storyboard-2-rotoscope",
+    "at": "2026-11-15T12:54:37.694722+07:00",
+    "composition_sha256": "bbc7aa4cb8ef6d41cdeae1c42b7188cc5a19678658ebb6b88485bd4fa379c8b1",
+    "beat_sheet_sha256": "5fd2b9da75f6cf43d41bb4bf06e95c19e9fad3bd6d34f6e85e1b1dc8ec77f020",
+    "subtitles_sha256": "51542e54c455b9aa72711c6c8512bc8f7b14c288d055e67ea30ff2be07e54387"
+  },
+  "reference_role": "aset/reference-avoid.png adalah contoh masalah framing, bukan desain yang ditiru",
+  "latest_revision": "revision-mask-r2.md",
+  "latest_user_direction": "Tetap menggunakan rotoscope dengan mask bersih dan halus, meninjau referensi video 2, tetap mengikuti brand NazarVerse",
+  "roto": {
+    "method": "RobustVideoMatting mobilenetv3 fp32 ONNX",
+    "whole_clip_processed": true,
+    "frames": 1483,
+    "asset": "hyperframes/assets/talent-roto.webm",
+    "full_playback_verified": false
+  },
+  "latest_reference": "D:\\KERJAAN\\CONTENT CREATOR\\NAZARVERSE\\referensi video 2.mp4",
+  "final": {
+    "path": "out/2026-11_todays-failure.mp4",
+    "sha256": "cb55f472bdb3d0148cf65db5fa062f0e97d30697bd5b2113ea671760d470f543",
+    "qa_technical": "LULUS",
+    "duration": 49.466667
+  }
+}

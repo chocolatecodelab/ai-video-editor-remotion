@@ -1,0 +1,7 @@
+aset/
+cache/
+out/
+hyperframes/.hyperframes/
+hyperframes/assets/*.mp4
+hyperframes/assets/*.m4a
+hyperframes/assets/*.webm

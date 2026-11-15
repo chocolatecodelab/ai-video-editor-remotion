@@ -1,0 +1,42 @@
+{
+  "final": {
+    "path": "out/2026-11_todays-failure.mp4",
+    "sha256": "cb55f472bdb3d0148cf65db5fa062f0e97d30697bd5b2113ea671760d470f543",
+    "qa_technical": "LULUS",
+    "duration": 49.466667
+  },
+  "video": {
+    "frames": 1484,
+    "duration": 49.466667,
+    "width": 1080,
+    "height": 1920,
+    "size_bytes": 46526981
+  },
+  "audio": {
+    "integrated_lufs": -14.38,
+    "true_peak_dbtp": -2.32
+  },
+  "modul": {
+    "bang-motion": "1.19.0",
+    "hyperframes": "0.9.33",
+    "NazarVerse": "1.0",
+    "K11-K14": "0.1"
+  },
+  "manual_pending": [
+    "Normal-speed playback: hair/hand matte stability, rhythm and motion quality.",
+    "Listen to entire clip on phone: intelligibility, comfort and subtitle/lip timing."
+  ],
+  "approval": {
+    "style": true,
+    "storyboard": true,
+    "render": true,
+    "style_message": "setuju arah ini",
+    "render_message": "jalankan render",
+    "storyboard_version": "storyboard-2-rotoscope",
+    "at": "2026-11-15T12:54:37.694722+07:00",
+    "composition_sha256": "bbc7aa4cb8ef6d41cdeae1c42b7188cc5a19678658ebb6b88485bd4fa379c8b1",
+    "beat_sheet_sha256": "5fd2b9da75f6cf43d41bb4bf06e95c19e9fad3bd6d34f6e85e1b1dc8ec77f020",
+    "subtitles_sha256": "51542e54c455b9aa72711c6c8512bc8f7b14c288d055e67ea30ff2be07e54387"
+  },
+  "qa_report": "out/qa-report.md"
+}

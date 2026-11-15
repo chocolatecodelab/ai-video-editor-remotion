@@ -1,0 +1,113 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1080,height=1920">
+<title>Today's Failure — NazarVerse</title><script src="assets/gsap.min.js"></script>
+<style>
+@font-face{font-family:Inter;src:url('assets/Inter.ttf')}*{box-sizing:border-box;margin:0}html,body{width:1080px;height:1920px;overflow:hidden;background:#101827}
+#root{width:1080px;height:1920px;overflow:hidden;position:relative;font-family:Inter,sans-serif;color:#EDEAE4;background:#101827}
+#surface{position:absolute;inset:-80px;background:radial-gradient(ellipse at 30% 48%,#26364c,transparent 72%);pointer-events:none}
+#footage{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;z-index:2;background:transparent}
+#subjectPosition{position:absolute;left:0;top:157.24px;width:1100px;height:1762.76px}
+#talent{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain}
+#world{position:absolute;inset:0;width:1080px;height:1920px;z-index:1}
+#heading{position:absolute;top:300px;left:60px;width:390px;font-size:66px;line-height:1.08;font-weight:550;letter-spacing:-.04em;z-index:3}
+#captions{position:absolute;left:100px;top:270px;width:860px;z-index:4;color:#EDEAE4;font-size:52px;line-height:1.22;font-weight:550;letter-spacing:-.025em}
+#captions .en{max-width:100%;text-wrap:balance}#captions .id{font-size:44px;font-weight:400;line-height:1.22;margin-top:17px;color:#C5B69A;text-wrap:balance}#captions span.active{color:#C5B69A}
+#grain{position:absolute;inset:0;z-index:5;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.clip{position:absolute}audio{display:none}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="49.456292" data-width="1080" data-height="1920">
+ <div id="surface" data-layout-ignore></div>
+ <div id="footage"><div id="subjectPosition" data-layout-allow-overflow><video id="talent" class="clip" src="assets/talent-roto.webm" muted playsinline preload="auto" data-start="0" data-duration="49.456292" data-track-index="0" data-layout-allow-overflow></video></div></div>
+ <svg id="world" viewBox="0 0 1080 1920" aria-hidden="true" data-layout-ignore>
+  <defs><linearGradient id="paper" x2="1" y2="0"><stop stop-color="#26364c"/><stop offset="1" stop-color="#3c4c5a"/></linearGradient><clipPath id="leafClip"><path class="leaf-shape" d="M220 1080 L430 1045 L430 735 Q325 715 220 775Z"/></clipPath></defs>
+  <g id="graphicShift">
+   <path id="ground" d="M0 1094 H510 V1920 H0Z" fill="#26364c" fill-opacity=".38"/>
+   <path id="groundLine" d="M0 1094 H510" stroke="#718a83" stroke-width="2"/>
+   <g id="bookRig">
+    <ellipse cx="230" cy="1094" rx="214" ry="8" fill="#101827" opacity=".7"/>
+    <path d="M24 1043 L220 1087 L449 1046 L446 1058 L220 1094 L24 1055Z" fill="#718a83"/>
+    <path d="M32 1043 L220 1080 L438 1043 L438 1050 L220 1087 L32 1050Z" fill="#c5b69a"/>
+    <path id="coverLeft" d="M220 1080 L35 1045 L35 735 Q130 715 220 775Z" fill="url(#paper)" stroke="#c5b69a" stroke-width="2.5"/>
+    <path id="coverRight" d="M220 1080 L430 1045 L430 735 Q325 715 220 775Z" fill="url(#paper)" stroke="#c5b69a" stroke-width="2.5"/>
+    <g id="printLeft" stroke="#718a83" stroke-width="4" opacity=".65"><path d="M65 795 L184 815"/><path d="M65 845 L184 865"/><path d="M65 895 L184 915"/><path d="M65 945 L184 965"/></g>
+    <g id="printRight" stroke="#718a83" stroke-width="4"><path class="writeLine" d="M258 813 L395 785"/><path class="writeLine" d="M258 865 L395 837"/><path class="writeLine" d="M258 917 L395 889"/><path class="writeLine" d="M258 969 L395 941"/></g>
+    <path id="pageStack" d="M222 1085 L437 1051 V744" fill="none" stroke="#edeae4" stroke-opacity=".4" stroke-width="3"/>
+    <path id="leaf" class="leaf-shape" d="M220 1080 L430 1045 L430 735 Q325 715 220 775Z" fill="#c5b69a" opacity=".95" stroke="#edeae4" stroke-width="2"/>
+    <g id="leafPrint" clip-path="url(#leafClip)" stroke="#26364c" stroke-width="3" opacity=".5"><path d="M260 820 L400 795 M260 865 L400 840 M260 910 L400 885 M260 955 L400 930"/></g>
+    <path d="M220 775 Q213 920 220 1080" stroke="#101827" stroke-width="5" fill="none"/>
+   </g>
+   <g id="routeRig" opacity="0">
+    <path id="routeGuide" d="M80 1120 V1010 Q80 950 145 925 L290 860 Q355 825 355 745" stroke="#718a83" stroke-opacity=".26" stroke-width="4" fill="none"/>
+    <path id="stem" d="M80 1120 V1010 Q80 950 145 925 L290 860" stroke="#c5b69a" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path id="deadEnd" d="M290 860 L410 920" stroke="#718a83" stroke-width="4" fill="none"/>
+    <path id="newWay" d="M290 860 Q355 825 355 745 Q355 690 425 650" stroke="#c5b69a" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path id="stopMark" d="M398 903 L423 930 M421 902 L398 930" stroke="#c5b69a" stroke-width="3"/>
+    <circle id="routePin" cx="290" cy="860" r="9" fill="#edeae4"/>
+   </g>
+  </g>
+ </svg>
+ <div id="heading"></div><div id="captions"></div><div id="grain" data-layout-ignore></div>
+ <audio id="voice" src="assets/voice.m4a" data-start="0" data-duration="49.456292" data-track-index="3" data-volume="1"></audio>
+</div>
+<script>
+// HyperFrames owns all media clocks. No play/pause/seek calls on video/audio here.
+const BEATS=__BEATS__,SUBS=__SUBS__,WORDS=__WORDS__;
+window.__timelines=window.__timelines||{};
+const tl=gsap.timeline({paused:true}),$=s=>document.querySelector(s);
+const shapes={right:'M220 1080 L430 1045 L430 735 Q325 715 220 775Z',edge:'M220 1080 L250 1045 L260 690 Q230 715 220 775Z',left:'M220 1080 L35 1045 L35 735 Q130 715 220 775Z'};
+function pageTurn(at,d=.95){
+ tl.set('.leaf-shape',{attr:{d:shapes.right}},at);
+ tl.to('.leaf-shape',{attr:{d:shapes.edge},duration:d*.48,ease:'sine.in'},at);
+ tl.to('.leaf-shape',{attr:{d:shapes.left},duration:d*.52,ease:'power2.out'},at+d*.48);
+}
+const byid=Object.fromEntries(BEATS.map(b=>[b.id,b]));
+for(const b of BEATS){
+ const A=b.layout==='A',B=b.layout==='B',C=b.layout==='C',D=b.layout==='D';
+ tl.set('#footage',{opacity:C?0:1},b.s);
+ const sw=D?1250:B?1300:1100,sh=sw*766/478;
+ tl.set('#subjectPosition',{left:B?-220:D?-85:0,top:1920-sh,width:sw,height:sh},b.s);
+ tl.set('#graphicShift',{attr:{transform:C?'translate(0 0)':B?'translate(834 1094) scale(.55) translate(-220 -1094)':'translate(180 1094) scale(.62) translate(-220 -1094)'}},b.s);
+ tl.set('#bookRig',{attr:{transform:C?'translate(540 1094) scale(1.65) translate(-220 -1094)':'translate(0 0)'},opacity:b.mode==='book'?1:0},b.s);
+ tl.set('#routeRig',{opacity:b.mode==='route'?1:0},b.s);
+ tl.set('#ground',{attr:{d:C?'M0 1094 H1080 V4000 H0Z':'M-400 1094 H800 V4000 H-400Z'}},b.s);
+ tl.set('#groundLine',{attr:{d:C?'M0 1094 H1080':'M-400 1094 H800'}},b.s);
+ tl.set('#graphicShift',{opacity:D?0:1},b.s);
+ tl.set('#captions',{left:100,width:860,top:C?1320:270,fontSize:52},b.s);
+ tl.set('#heading',{opacity:0},b.s);
+ if(b.title)tl.fromTo('#heading',{y:14,filter:'blur(4px)'},{y:0,filter:'blur(0px)',duration:.6,ease:'power3.out',immediateRender:false},b.s+.12);
+}
+pageTurn(.35,1.7);pageTurn(4.65,1.25);
+// Setbacks: a grounded stem meets a stopped branch, then the route continues.
+for(const id of ['#stem','#deadEnd','#newWay']){
+ const e=$(id),len=e.getTotalLength();e.style.strokeDasharray=len;e.style.strokeDashoffset=len;
+ tl.fromTo(id,{strokeDashoffset:len},{strokeDashoffset:0,duration:1.5,ease:'power2.inOut',immediateRender:false},id==='#stem'?7.4:id==='#deadEnd'?9.5:13.0);
+}
+tl.fromTo('#stopMark',{opacity:0,scale:.6},{opacity:1,scale:1,duration:.45,ease:'back.out(1.15)',svgOrigin:'410 916',immediateRender:false},11.5);
+tl.to('#routePin',{attr:{cx:355,cy:745},duration:2,ease:'sine.inOut'},13);
+tl.set('#newWay',{strokeDashoffset:$('#newWay').getTotalLength()},20.3);
+tl.to('#newWay',{strokeDashoffset:0,duration:2.1,ease:'power2.inOut'},21);
+tl.to('#routePin',{attr:{cx:425,cy:650},duration:2.4,ease:'sine.inOut'},21);
+// One bad chapter: inspect three phases of the same articulated leaf.
+pageTurn(25.5,2.0);pageTurn(28,1.5);
+// Start again: the new page receives its first marks, one line at a time.
+for(let i=0;i<4;i++){
+ const el=document.querySelectorAll('.writeLine')[i],len=el.getTotalLength();
+ tl.set(el,{strokeDasharray:len,strokeDashoffset:len},30.69);
+ tl.to(el,{strokeDashoffset:0,duration:.75,ease:'power2.out'},31.5+i*.72);
+}
+tl.to('#leafPrint',{opacity:.06,duration:.7,ease:'sine.out'},36.97);
+pageTurn(39.6,1.5);
+tl.to('#surface',{x:38,y:22,duration:49.456,ease:'sine.inOut'},0);
+tl.to('#grain',{backgroundPosition:'96px 64px',duration:49.456,ease:'sine.inOut'},0);
+tl.to({},{duration:.01},49.456);
+let last=-2,lastBeat='';
+function renderText(){const t=tl.time(),b=BEATS.find(b=>t>=b.s&&t<b.e)||BEATS.at(-1);
+ if(b.id!==lastBeat){$('#heading').textContent=b.title;lastBeat=b.id}
+ const idx=SUBS.findIndex(g=>t>=g.s&&t<g.e),g=SUBS[idx],c=$('#captions');
+ if(idx!==last){c.replaceChildren();if(g){const en=document.createElement('div');en.className='en';for(const n of g.words){const s=document.createElement('span');s.textContent=WORDS[n].w+' ';s.dataset.word=n;en.append(s)}const id=document.createElement('div');id.className='id';id.textContent=g.id;c.append(en,id)}last=idx}
+ if(g){const f=Math.min(1,(t-g.s+.08)/.18);c.style.opacity=f;for(const e of c.querySelectorAll('span')){const w=WORDS[+e.dataset.word];e.classList.toggle('active',t>=w.s&&t<w.e)}}else c.style.opacity=0;
+}
+tl.eventCallback('onUpdate',renderText);
+window.__timelines.main=tl;
+window.__review={seek(t){tl.pause(t,false);renderText()},beats:BEATS,subs:SUBS};
+renderText();
+</script></body></html>

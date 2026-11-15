@@ -1,0 +1,107 @@
+{
+  "beats": [
+    {
+      "id": "opening",
+      "s": 0,
+      "e": 7.1,
+      "layout": "A",
+      "mode": "book",
+      "title": "Not the end",
+      "shots": [
+        1.7,
+        4.8,
+        6.2
+      ]
+    },
+    {
+      "id": "setbacks",
+      "s": 7.1,
+      "e": 17.7,
+      "layout": "B",
+      "mode": "route",
+      "title": "",
+      "shots": [
+        8.3,
+        11.9,
+        16
+      ]
+    },
+    {
+      "id": "hurt",
+      "s": 17.7,
+      "e": 20.3,
+      "layout": "D",
+      "mode": "quiet",
+      "title": "",
+      "shots": [
+        18.6
+      ]
+    },
+    {
+      "id": "continue",
+      "s": 20.3,
+      "e": 25.13,
+      "layout": "A",
+      "mode": "route",
+      "title": "",
+      "shots": [
+        21.4,
+        24
+      ]
+    },
+    {
+      "id": "chapter",
+      "s": 25.13,
+      "e": 30.69,
+      "layout": "C",
+      "mode": "book",
+      "title": "",
+      "shots": [
+        25.7,
+        26.7,
+        27.6,
+        29
+      ]
+    },
+    {
+      "id": "restart",
+      "s": 30.69,
+      "e": 36.97,
+      "layout": "B",
+      "mode": "book",
+      "title": "Start again",
+      "shots": [
+        32,
+        34.8
+      ]
+    },
+    {
+      "id": "identity",
+      "s": 36.97,
+      "e": 42.83,
+      "layout": "A",
+      "mode": "book",
+      "title": "",
+      "shots": [
+        38.5,
+        41.2
+      ]
+    },
+    {
+      "id": "closing",
+      "s": 42.83,
+      "e": 49.456292,
+      "layout": "A",
+      "mode": "book",
+      "title": "",
+      "shots": [
+        44.4,
+        46.5,
+        48.5
+      ]
+    }
+  ],
+  "captions": "subtitles.json",
+  "words": "cache/words-storyboard.json",
+  "version": "storyboard-2-rotoscope"
+}

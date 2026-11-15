@@ -1,0 +1,113 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1080,height=1920">
+<title>Today's Failure — NazarVerse</title><script src="assets/gsap.min.js"></script>
+<style>
+@font-face{font-family:Inter;src:url('assets/Inter.ttf')}*{box-sizing:border-box;margin:0}html,body{width:1080px;height:1920px;overflow:hidden;background:#101827}
+#root{width:1080px;height:1920px;overflow:hidden;position:relative;font-family:Inter,sans-serif;color:#EDEAE4;background:#101827}
+#surface{position:absolute;inset:-80px;background:radial-gradient(ellipse at 30% 48%,#26364c,transparent 72%);pointer-events:none}
+#footage{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;z-index:2;background:transparent}
+#subjectPosition{position:absolute;left:0;top:157.24px;width:1100px;height:1762.76px}
+#talent{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain}
+#world{position:absolute;inset:0;width:1080px;height:1920px;z-index:1}
+#heading{position:absolute;top:300px;left:60px;width:390px;font-size:66px;line-height:1.08;font-weight:550;letter-spacing:-.04em;z-index:3}
+#captions{position:absolute;left:100px;top:270px;width:860px;z-index:4;color:#EDEAE4;font-size:52px;line-height:1.22;font-weight:550;letter-spacing:-.025em}
+#captions .en{max-width:100%;text-wrap:balance}#captions .id{font-size:44px;font-weight:400;line-height:1.22;margin-top:17px;color:#C5B69A;text-wrap:balance}#captions span.active{color:#C5B69A}
+#grain{position:absolute;inset:0;z-index:5;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.clip{position:absolute}audio{display:none}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="49.456292" data-width="1080" data-height="1920">
+ <div id="surface" data-layout-ignore></div>
+ <div id="footage"><div id="subjectPosition" data-layout-allow-overflow><video id="talent" class="clip" src="assets/talent-roto.webm" muted playsinline preload="auto" data-start="0" data-duration="49.456292" data-track-index="0" data-layout-allow-overflow></video></div></div>
+ <svg id="world" viewBox="0 0 1080 1920" aria-hidden="true" data-layout-ignore>
+  <defs><linearGradient id="paper" x2="1" y2="0"><stop stop-color="#26364c"/><stop offset="1" stop-color="#3c4c5a"/></linearGradient><clipPath id="leafClip"><path class="leaf-shape" d="M220 1080 L430 1045 L430 735 Q325 715 220 775Z"/></clipPath></defs>
+  <g id="graphicShift">
+   <path id="ground" d="M0 1094 H510 V1920 H0Z" fill="#26364c" fill-opacity=".38"/>
+   <path id="groundLine" d="M0 1094 H510" stroke="#718a83" stroke-width="2"/>
+   <g id="bookRig">
+    <ellipse cx="230" cy="1094" rx="214" ry="8" fill="#101827" opacity=".7"/>
+    <path d="M24 1043 L220 1087 L449 1046 L446 1058 L220 1094 L24 1055Z" fill="#718a83"/>
+    <path d="M32 1043 L220 1080 L438 1043 L438 1050 L220 1087 L32 1050Z" fill="#c5b69a"/>
+    <path id="coverLeft" d="M220 1080 L35 1045 L35 735 Q130 715 220 775Z" fill="url(#paper)" stroke="#c5b69a" stroke-width="2.5"/>
+    <path id="coverRight" d="M220 1080 L430 1045 L430 735 Q325 715 220 775Z" fill="url(#paper)" stroke="#c5b69a" stroke-width="2.5"/>
+    <g id="printLeft" stroke="#718a83" stroke-width="4" opacity=".65"><path d="M65 795 L184 815"/><path d="M65 845 L184 865"/><path d="M65 895 L184 915"/><path d="M65 945 L184 965"/></g>
+    <g id="printRight" stroke="#718a83" stroke-width="4"><path class="writeLine" d="M258 813 L395 785"/><path class="writeLine" d="M258 865 L395 837"/><path class="writeLine" d="M258 917 L395 889"/><path class="writeLine" d="M258 969 L395 941"/></g>
+    <path id="pageStack" d="M222 1085 L437 1051 V744" fill="none" stroke="#edeae4" stroke-opacity=".4" stroke-width="3"/>
+    <path id="leaf" class="leaf-shape" d="M220 1080 L430 1045 L430 735 Q325 715 220 775Z" fill="#c5b69a" opacity=".95" stroke="#edeae4" stroke-width="2"/>
+    <g id="leafPrint" clip-path="url(#leafClip)" stroke="#26364c" stroke-width="3" opacity=".5"><path d="M260 820 L400 795 M260 865 L400 840 M260 910 L400 885 M260 955 L400 930"/></g>
+    <path d="M220 775 Q213 920 220 1080" stroke="#101827" stroke-width="5" fill="none"/>
+   </g>
+   <g id="routeRig" opacity="0">
+    <path id="routeGuide" d="M80 1120 V1010 Q80 950 145 925 L290 860 Q355 825 355 745" stroke="#718a83" stroke-opacity=".26" stroke-width="4" fill="none"/>
+    <path id="stem" d="M80 1120 V1010 Q80 950 145 925 L290 860" stroke="#c5b69a" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path id="deadEnd" d="M290 860 L410 920" stroke="#718a83" stroke-width="4" fill="none"/>
+    <path id="newWay" d="M290 860 Q355 825 355 745 Q355 690 425 650" stroke="#c5b69a" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path id="stopMark" d="M398 903 L423 930 M421 902 L398 930" stroke="#c5b69a" stroke-width="3"/>
+    <circle id="routePin" cx="290" cy="860" r="9" fill="#edeae4"/>
+   </g>
+  </g>
+ </svg>
+ <div id="heading"></div><div id="captions"></div><div id="grain" data-layout-ignore></div>
+ <audio id="voice" src="assets/voice.m4a" data-start="0" data-duration="49.456292" data-track-index="3" data-volume="1"></audio>
+</div>
+<script>
+// HyperFrames owns all media clocks. No play/pause/seek calls on video/audio here.
+const BEATS=[{"id": "opening", "s": 0, "e": 7.1, "layout": "A", "mode": "book", "title": "Not the end", "shots": [1.7, 4.8, 6.2]}, {"id": "setbacks", "s": 7.1, "e": 17.7, "layout": "B", "mode": "route", "title": "", "shots": [8.3, 11.9, 16]}, {"id": "hurt", "s": 17.7, "e": 20.3, "layout": "D", "mode": "quiet", "title": "", "shots": [18.6]}, {"id": "continue", "s": 20.3, "e": 25.13, "layout": "A", "mode": "route", "title": "", "shots": [21.4, 24]}, {"id": "chapter", "s": 25.13, "e": 30.69, "layout": "C", "mode": "book", "title": "", "shots": [25.7, 26.7, 27.6, 29]}, {"id": "restart", "s": 30.69, "e": 36.97, "layout": "B", "mode": "book", "title": "Start again", "shots": [32, 34.8]}, {"id": "identity", "s": 36.97, "e": 42.83, "layout": "A", "mode": "book", "title": "", "shots": [38.5, 41.2]}, {"id": "closing", "s": 42.83, "e": 49.456292, "layout": "A", "mode": "book", "title": "", "shots": [44.4, 46.5, 48.5]}],SUBS=[{"en": "One thing I have learned", "id": "Satu hal yang kupelajari", "s": 0.21, "e": 2.35, "words": [0, 1, 2, 3, 4], "cps": 11.21}, {"en": "about life", "id": "soal hidup", "s": 2.35, "e": 3.01, "words": [5, 6], "cps": 15.15}, {"en": "is that failure", "id": "kegagalan itu", "s": 3.01, "e": 4.29, "words": [7, 8, 9], "cps": 11.72}, {"en": "is never the end", "id": "bukan akhir", "s": 4.29, "e": 5.77, "words": [10, 11, 12, 13], "cps": 10.81}, {"en": "of the story.", "id": "cerita.", "s": 5.77, "e": 7.11, "words": [14, 15, 16], "cps": 9.7}, {"en": "You might fail today,", "id": "Kau bisa gagal hari ini,", "s": 7.11, "e": 9.13, "words": [17, 18, 19, 20], "cps": 11.88}, {"en": "you might lose", "id": "bisa kehilangan", "s": 9.13, "e": 10.35, "words": [21, 22, 23], "cps": 12.3}, {"en": "an opportunity,", "id": "kesempatan,", "s": 10.35, "e": 11.97, "words": [24, 25], "cps": 9.26}, {"en": "make the wrong decision,", "id": "salah mengambil keputusan,", "s": 11.97, "e": 13.89, "words": [26, 27, 28, 29], "cps": 13.54}, {"en": "or feel like", "id": "atau merasa", "s": 13.89, "e": 14.61, "words": [30, 31, 32], "cps": 16.67}, {"en": "all your efforts", "id": "semua usahamu", "s": 14.61, "e": 15.85, "words": [33, 34, 35], "cps": 12.9}, {"en": "were wasted.", "id": "sia-sia.", "s": 15.85, "e": 17.73, "words": [36, 37], "cps": 6.38}, {"en": "And yes,", "id": "Dan ya,", "s": 17.73, "e": 18.93, "words": [38, 39], "cps": 6.67}, {"en": "it hurts.", "id": "itu sakit.", "s": 18.93, "e": 20.188823529411764, "words": [40, 41], "cps": 7.94}, {"en": "But just because", "id": "Tapi karena", "s": 20.208823529411763, "e": 21.15, "words": [42, 43, 44], "word_start": 20.31, "cps": 17.0}, {"en": "you fail today", "id": "gagal hari ini,", "s": 21.15, "e": 22.23, "words": [45, 46, 47], "cps": 13.89}, {"en": "doesn't mean", "id": "bukan berarti", "s": 22.23, "e": 23.35, "words": [48, 49], "cps": 11.61}, {"en": "you will keep failing forever.", "id": "terus gagal selamanya.", "s": 23.35, "e": 25.13, "words": [50, 51, 52, 53, 54], "cps": 16.85}, {"en": "One bad chapter", "id": "Satu bab buruk", "s": 25.13, "e": 27.35, "words": [55, 56, 57], "cps": 6.76}, {"en": "doesn't define", "id": "tak menentukan", "s": 27.35, "e": 28.65, "words": [58, 59], "cps": 10.77}, {"en": "your entire story.", "id": "seluruh kisahmu.", "s": 28.65, "e": 30.69, "words": [60, 61, 62], "cps": 8.82}, {"en": "Give yourself permission", "id": "Izinkan dirimu", "s": 30.69, "e": 32.37, "words": [63, 64, 65], "cps": 14.29}, {"en": "to start again,", "id": "memulai lagi,", "s": 32.37, "e": 34.15, "words": [66, 67, 68], "cps": 8.43}, {"en": "even if you're afraid.", "id": "meski kau takut.", "s": 34.15, "e": 36.97, "words": [69, 70, 71, 72], "cps": 7.8}, {"en": "Because failure", "id": "Karena kegagalan", "s": 36.97, "e": 38.57, "words": [73, 74], "cps": 10.0}, {"en": "is something", "id": "sesuatu", "s": 38.57, "e": 39.29, "words": [75, 76], "cps": 16.67}, {"en": "you experience", "id": "yang kau alami,", "s": 39.29, "e": 40.29, "words": [77, 78], "cps": 15.0}, {"en": "not who you are.", "id": "bukan jati dirimu.", "s": 40.29, "e": 42.747647058823524, "words": [79, 80, 81, 82], "cps": 7.32}, {"en": "Today's failure", "id": "Gagal hari ini", "s": 42.76764705882353, "e": 43.65, "words": [83, 84], "word_start": 42.83, "cps": 17.0}, {"en": "doesn't determine", "id": "tak menentukan", "s": 43.65, "e": 45.07, "words": [85, 86], "cps": 11.97}, {"en": "the rest", "id": "sisa", "s": 45.07, "e": 45.87, "words": [87, 88], "cps": 10.0}, {"en": "of your life.", "id": "hidupmu.", "s": 45.87, "e": 49.456, "words": [89, 90, 91], "cps": 3.63}],WORDS=[{"w": "One", "s": 0.21, "e": 0.89, "p": 0.719}, {"w": "thing", "s": 0.89, "e": 1.15, "p": 0.992}, {"w": "I", "s": 1.15, "e": 1.75, "p": 0.86}, {"w": "have", "s": 1.75, "e": 1.95, "p": 0.764}, {"w": "learned", "s": 1.95, "e": 2.35, "p": 0.888}, {"w": "about", "s": 2.35, "e": 2.61, "p": 0.964}, {"w": "life", "s": 2.61, "e": 3.01, "p": 0.988}, {"w": "is", "s": 3.01, "e": 3.33, "p": 0.978}, {"w": "that", "s": 3.33, "e": 3.59, "p": 0.99}, {"w": "failure", "s": 3.59, "e": 4.29, "p": 0.955}, {"w": "is", "s": 4.29, "e": 4.95, "p": 0.99}, {"w": "never", "s": 4.95, "e": 5.25, "p": 0.997}, {"w": "the", "s": 5.25, "e": 5.51, "p": 0.994}, {"w": "end", "s": 5.51, "e": 5.77, "p": 0.998}, {"w": "of", "s": 5.77, "e": 5.95, "p": 0.995}, {"w": "the", "s": 5.95, "e": 6.09, "p": 0.975}, {"w": "story.", "s": 6.09, "e": 6.43, "p": 0.999}, {"w": "You", "s": 7.11, "e": 7.33, "p": 0.978}, {"w": "might", "s": 7.33, "e": 7.63, "p": 0.989}, {"w": "fail", "s": 7.63, "e": 8.05, "p": 0.985}, {"w": "today,", "s": 8.05, "e": 8.47, "p": 0.997}, {"w": "you", "s": 9.13, "e": 9.33, "p": 0.941}, {"w": "might", "s": 9.33, "e": 9.79, "p": 0.996}, {"w": "lose", "s": 9.79, "e": 10.35, "p": 0.772}, {"w": "an", "s": 10.35, "e": 10.55, "p": 0.723}, {"w": "opportunity,", "s": 10.55, "e": 11.23, "p": 0.996}, {"w": "make", "s": 11.97, "e": 12.19, "p": 0.965}, {"w": "the", "s": 12.19, "e": 12.43, "p": 0.994}, {"w": "wrong", "s": 12.43, "e": 12.69, "p": 0.992}, {"w": "decision,", "s": 12.69, "e": 13.25, "p": 0.926}, {"w": "or", "s": 13.89, "e": 14.01, "p": 0.987}, {"w": "feel", "s": 14.01, "e": 14.29, "p": 0.993}, {"w": "like", "s": 14.29, "e": 14.61, "p": 0.995}, {"w": "all", "s": 14.61, "e": 14.93, "p": 0.995}, {"w": "your", "s": 14.93, "e": 15.19, "p": 0.967}, {"w": "efforts", "s": 15.19, "e": 15.85, "p": 0.968}, {"w": "were", "s": 15.85, "e": 16.39, "p": 0.767}, {"w": "wasted.", "s": 16.39, "e": 16.99, "p": 0.432}, {"w": "And", "s": 17.73, "e": 17.91, "p": 0.943}, {"w": "yes,", "s": 17.91, "e": 18.29, "p": 0.935}, {"w": "it", "s": 18.93, "e": 19.13, "p": 0.985}, {"w": "hurts.", "s": 19.13, "e": 19.59, "p": 0.984}, {"w": "But", "s": 20.31, "e": 20.49, "p": 0.986}, {"w": "just", "s": 20.49, "e": 20.73, "p": 0.988}, {"w": "because", "s": 20.73, "e": 21.15, "p": 0.996}, {"w": "you", "s": 21.15, "e": 21.51, "p": 0.997}, {"w": "fail", "s": 21.51, "e": 21.81, "p": 0.808}, {"w": "today", "s": 21.81, "e": 22.23, "p": 0.999}, {"w": "doesn't", "s": 22.23, "e": 23.01, "p": 0.746}, {"w": "mean", "s": 23.01, "e": 23.35, "p": 0.998}, {"w": "you", "s": 23.35, "e": 23.67, "p": 0.982}, {"w": "will", "s": 23.67, "e": 23.81, "p": 0.708}, {"w": "keep", "s": 23.81, "e": 24.03, "p": 0.976}, {"w": "failing", "s": 24.03, "e": 24.47, "p": 0.973}, {"w": "forever.", "s": 24.47, "e": 25.13, "p": 0.976}, {"w": "One", "s": 25.13, "e": 26.47, "p": 0.113}, {"w": "bad", "s": 26.47, "e": 26.77, "p": 0.69}, {"w": "chapter", "s": 26.77, "e": 27.35, "p": 0.981}, {"w": "doesn't", "s": 27.35, "e": 28.17, "p": 0.98}, {"w": "define", "s": 28.17, "e": 28.65, "p": 0.964}, {"w": "your", "s": 28.65, "e": 29.09, "p": 0.992}, {"w": "entire", "s": 29.09, "e": 29.59, "p": 0.995}, {"w": "story.", "s": 29.59, "e": 30.15, "p": 0.995}, {"w": "Give", "s": 30.69, "e": 31.41, "p": 0.985}, {"w": "yourself", "s": 31.41, "e": 31.85, "p": 0.791}, {"w": "permission", "s": 31.85, "e": 32.37, "p": 0.783}, {"w": "to", "s": 32.37, "e": 32.77, "p": 0.997}, {"w": "start", "s": 32.77, "e": 33.17, "p": 0.988}, {"w": "again,", "s": 33.17, "e": 33.63, "p": 0.993}, {"w": "even", "s": 34.15, "e": 34.47, "p": 0.99}, {"w": "if", "s": 34.47, "e": 34.91, "p": 0.993}, {"w": "you're", "s": 34.91, "e": 35.41, "p": 0.817}, {"w": "afraid.", "s": 35.41, "e": 35.87, "p": 0.991}, {"w": "Because", "s": 36.97, "e": 37.57, "p": 0.935}, {"w": "failure", "s": 37.57, "e": 38.57, "p": 0.983}, {"w": "is", "s": 38.57, "e": 38.95, "p": 0.995}, {"w": "something", "s": 38.95, "e": 39.29, "p": 0.998}, {"w": "you", "s": 39.29, "e": 39.55, "p": 0.985}, {"w": "experience", "s": 39.55, "e": 40.29, "p": 0.79}, {"w": "not", "s": 40.29, "e": 40.61, "p": null, "review_required": false, "source": "user confirmed"}, {"w": "who", "s": 40.61, "e": 41.23, "p": 0.206}, {"w": "you", "s": 41.23, "e": 41.47, "p": 0.989}, {"w": "are.", "s": 41.47, "e": 41.81, "p": 0.842}, {"w": "Today's", "s": 42.83, "e": 43.23, "p": 0.983}, {"w": "failure", "s": 43.23, "e": 43.65, "p": 0.976}, {"w": "doesn't", "s": 43.65, "e": 44.67, "p": 0.991}, {"w": "determine", "s": 44.67, "e": 45.07, "p": 0.987}, {"w": "the", "s": 45.07, "e": 45.65, "p": 0.997}, {"w": "rest", "s": 45.65, "e": 45.87, "p": 0.978}, {"w": "of", "s": 45.87, "e": 46.09, "p": 0.999}, {"w": "your", "s": 46.09, "e": 46.27, "p": 0.993}, {"w": "life.", "s": 46.27, "e": 46.75, "p": 0.998}];
+window.__timelines=window.__timelines||{};
+const tl=gsap.timeline({paused:true}),$=s=>document.querySelector(s);
+const shapes={right:'M220 1080 L430 1045 L430 735 Q325 715 220 775Z',edge:'M220 1080 L250 1045 L260 690 Q230 715 220 775Z',left:'M220 1080 L35 1045 L35 735 Q130 715 220 775Z'};
+function pageTurn(at,d=.95){
+ tl.set('.leaf-shape',{attr:{d:shapes.right}},at);
+ tl.to('.leaf-shape',{attr:{d:shapes.edge},duration:d*.48,ease:'sine.in'},at);
+ tl.to('.leaf-shape',{attr:{d:shapes.left},duration:d*.52,ease:'power2.out'},at+d*.48);
+}
+const byid=Object.fromEntries(BEATS.map(b=>[b.id,b]));
+for(const b of BEATS){
+ const A=b.layout==='A',B=b.layout==='B',C=b.layout==='C',D=b.layout==='D';
+ tl.set('#footage',{opacity:C?0:1},b.s);
+ const sw=D?1250:B?1300:1100,sh=sw*766/478;
+ tl.set('#subjectPosition',{left:B?-220:D?-85:0,top:1920-sh,width:sw,height:sh},b.s);
+ tl.set('#graphicShift',{attr:{transform:C?'translate(0 0)':B?'translate(834 1094) scale(.55) translate(-220 -1094)':'translate(180 1094) scale(.62) translate(-220 -1094)'}},b.s);
+ tl.set('#bookRig',{attr:{transform:C?'translate(540 1094) scale(1.65) translate(-220 -1094)':'translate(0 0)'},opacity:b.mode==='book'?1:0},b.s);
+ tl.set('#routeRig',{opacity:b.mode==='route'?1:0},b.s);
+ tl.set('#ground',{attr:{d:C?'M0 1094 H1080 V4000 H0Z':'M-400 1094 H800 V4000 H-400Z'}},b.s);
+ tl.set('#groundLine',{attr:{d:C?'M0 1094 H1080':'M-400 1094 H800'}},b.s);
+ tl.set('#graphicShift',{opacity:D?0:1},b.s);
+ tl.set('#captions',{left:100,width:860,top:C?1320:270,fontSize:52},b.s);
+ tl.set('#heading',{opacity:0},b.s);
+ if(b.title)tl.fromTo('#heading',{y:14,filter:'blur(4px)'},{y:0,filter:'blur(0px)',duration:.6,ease:'power3.out',immediateRender:false},b.s+.12);
+}
+pageTurn(.35,1.7);pageTurn(4.65,1.25);
+// Setbacks: a grounded stem meets a stopped branch, then the route continues.
+for(const id of ['#stem','#deadEnd','#newWay']){
+ const e=$(id),len=e.getTotalLength();e.style.strokeDasharray=len;e.style.strokeDashoffset=len;
+ tl.fromTo(id,{strokeDashoffset:len},{strokeDashoffset:0,duration:1.5,ease:'power2.inOut',immediateRender:false},id==='#stem'?7.4:id==='#deadEnd'?9.5:13.0);
+}
+tl.fromTo('#stopMark',{opacity:0,scale:.6},{opacity:1,scale:1,duration:.45,ease:'back.out(1.15)',svgOrigin:'410 916',immediateRender:false},11.5);
+tl.to('#routePin',{attr:{cx:355,cy:745},duration:2,ease:'sine.inOut'},13);
+tl.set('#newWay',{strokeDashoffset:$('#newWay').getTotalLength()},20.3);
+tl.to('#newWay',{strokeDashoffset:0,duration:2.1,ease:'power2.inOut'},21);
+tl.to('#routePin',{attr:{cx:425,cy:650},duration:2.4,ease:'sine.inOut'},21);
+// One bad chapter: inspect three phases of the same articulated leaf.
+pageTurn(25.5,2.0);pageTurn(28,1.5);
+// Start again: the new page receives its first marks, one line at a time.
+for(let i=0;i<4;i++){
+ const el=document.querySelectorAll('.writeLine')[i],len=el.getTotalLength();
+ tl.set(el,{strokeDasharray:len,strokeDashoffset:len},30.69);
+ tl.to(el,{strokeDashoffset:0,duration:.75,ease:'power2.out'},31.5+i*.72);
+}
+tl.to('#leafPrint',{opacity:.06,duration:.7,ease:'sine.out'},36.97);
+pageTurn(39.6,1.5);
+tl.to('#surface',{x:38,y:22,duration:49.456,ease:'sine.inOut'},0);
+tl.to('#grain',{backgroundPosition:'96px 64px',duration:49.456,ease:'sine.inOut'},0);
+tl.to({},{duration:.01},49.456);
+let last=-2,lastBeat='';
+function renderText(){const t=tl.time(),b=BEATS.find(b=>t>=b.s&&t<b.e)||BEATS.at(-1);
+ if(b.id!==lastBeat){$('#heading').textContent=b.title;lastBeat=b.id}
+ const idx=SUBS.findIndex(g=>t>=g.s&&t<g.e),g=SUBS[idx],c=$('#captions');
+ if(idx!==last){c.replaceChildren();if(g){const en=document.createElement('div');en.className='en';for(const n of g.words){const s=document.createElement('span');s.textContent=WORDS[n].w+' ';s.dataset.word=n;en.append(s)}const id=document.createElement('div');id.className='id';id.textContent=g.id;c.append(en,id)}last=idx}
+ if(g){const f=Math.min(1,(t-g.s+.08)/.18);c.style.opacity=f;for(const e of c.querySelectorAll('span')){const w=WORDS[+e.dataset.word];e.classList.toggle('active',t>=w.s&&t<w.e)}}else c.style.opacity=0;
+}
+tl.eventCallback('onUpdate',renderText);
+window.__timelines.main=tl;
+window.__review={seek(t){tl.pause(t,false);renderText()},beats:BEATS,subs:SUBS};
+renderText();
+</script></body></html>
