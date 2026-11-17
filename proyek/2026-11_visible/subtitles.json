@@ -1,0 +1,313 @@
+[
+  {
+    "en": "Have you ever felt like",
+    "id": "Pernah merasa",
+    "s": 0.91,
+    "word_end": 2.51,
+    "words": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "e": 2.51,
+    "cps": 14.375000000000004
+  },
+  {
+    "en": "you were working so hard,",
+    "id": "sudah bekerja begitu keras,",
+    "s": 2.51,
+    "word_end": 4.43,
+    "words": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "e": 4.99,
+    "cps": 10.887096774193546
+  },
+  {
+    "en": "but nothing seems to change?",
+    "id": "tapi tak ada yang berubah?",
+    "s": 4.99,
+    "word_end": 6.33,
+    "words": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "e": 7.29,
+    "cps": 12.173913043478262
+  },
+  {
+    "en": "You keep trying, learning",
+    "id": "Kau terus mencoba, belajar",
+    "s": 7.29,
+    "word_end": 9.33,
+    "words": [
+      15,
+      16,
+      17,
+      18
+    ],
+    "e": 9.33,
+    "cps": 12.745098039215685
+  },
+  {
+    "en": "and pushing yourself,",
+    "id": "dan mendorong diri,",
+    "s": 9.33,
+    "word_end": 10.55,
+    "words": [
+      19,
+      20,
+      21
+    ],
+    "e": 11.29,
+    "cps": 10.714285714285719
+  },
+  {
+    "en": "yet the results",
+    "id": "tapi hasilnya",
+    "s": 11.29,
+    "word_end": 12.71,
+    "words": [
+      22,
+      23,
+      24
+    ],
+    "e": 12.71,
+    "cps": 10.563380281690128
+  },
+  {
+    "en": "are nowhere to be seen.",
+    "id": "belum juga terlihat.",
+    "s": 12.71,
+    "word_end": 14.43,
+    "words": [
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "e": 15.33,
+    "cps": 8.778625954198477
+  },
+  {
+    "en": "And honestly,",
+    "id": "Dan jujur,",
+    "s": 15.33,
+    "word_end": 15.75,
+    "words": [
+      30,
+      31
+    ],
+    "e": 16.39,
+    "cps": 12.26415094339622
+  },
+  {
+    "en": "it's frustrating.",
+    "id": "itu membuat frustrasi.",
+    "s": 16.39,
+    "word_end": 17.04,
+    "words": [
+      32,
+      33
+    ],
+    "e": 18.06,
+    "cps": 13.173652694610793
+  },
+  {
+    "en": "But here's something",
+    "id": "Tapi ada hal",
+    "s": 18.06,
+    "word_end": 19.38,
+    "words": [
+      34,
+      35,
+      36
+    ],
+    "e": 19.38,
+    "cps": 15.151515151515149
+  },
+  {
+    "en": "worth remembering.",
+    "id": "yang perlu kau ingat.",
+    "s": 19.38,
+    "word_end": 20.3,
+    "words": [
+      37,
+      38
+    ],
+    "e": 21.31,
+    "cps": 10.880829015544043
+  },
+  {
+    "en": "Not all progress is visible.",
+    "id": "Tak semua progres terlihat.",
+    "s": 21.31,
+    "word_end": 23.29,
+    "words": [
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "e": 24.35,
+    "cps": 9.210526315789465
+  },
+  {
+    "en": "Every mistake teaches you",
+    "id": "Tiap kesalahan mengajarimu",
+    "s": 24.35,
+    "word_end": 26.11,
+    "words": [
+      44,
+      45,
+      46,
+      47
+    ],
+    "e": 26.11,
+    "cps": 14.77272727272729
+  },
+  {
+    "en": "something,",
+    "id": "sesuatu,",
+    "s": 26.11,
+    "word_end": 26.45,
+    "words": [
+      48
+    ],
+    "e": 27.51,
+    "cps": 7.142857142857132
+  },
+  {
+    "en": "every small effort",
+    "id": "tiap usaha kecil",
+    "s": 27.51,
+    "word_end": 28.83,
+    "words": [
+      49,
+      50,
+      51
+    ],
+    "e": 28.83,
+    "cps": 13.63636363636367
+  },
+  {
+    "en": "helps you grow,",
+    "id": "membantumu tumbuh,",
+    "s": 28.83,
+    "word_end": 29.91,
+    "words": [
+      52,
+      53,
+      54
+    ],
+    "e": 30.49,
+    "cps": 10.843373493975903
+  },
+  {
+    "en": "even when nobody notices.",
+    "id": "meski tak ada yang melihat.",
+    "s": 30.49,
+    "word_end": 31.89,
+    "words": [
+      55,
+      56,
+      57,
+      58
+    ],
+    "e": 32.95,
+    "cps": 10.97560975609754
+  },
+  {
+    "en": "So, don't underestimate",
+    "id": "Jadi, jangan remehkan",
+    "s": 32.95,
+    "word_end": 34.86,
+    "words": [
+      59,
+      60,
+      61
+    ],
+    "e": 34.86,
+    "cps": 12.041884816753948
+  },
+  {
+    "en": "the little steps",
+    "id": "langkah kecil",
+    "s": 34.86,
+    "word_end": 35.9,
+    "words": [
+      62,
+      63,
+      64
+    ],
+    "e": 35.9,
+    "cps": 15.384615384615397
+  },
+  {
+    "en": "you're taking today,",
+    "id": "yang kau ambil hari ini,",
+    "s": 35.9,
+    "word_end": 37.38,
+    "words": [
+      65,
+      66,
+      67
+    ],
+    "e": 38.01,
+    "cps": 11.374407582938392
+  },
+  {
+    "en": "just because",
+    "id": "hanya karena",
+    "s": 38.01,
+    "word_end": 39.07,
+    "words": [
+      68,
+      69
+    ],
+    "e": 39.07,
+    "cps": 11.320754716981108
+  },
+  {
+    "en": "you can't see the progress,",
+    "id": "progresmu belum terlihat,",
+    "s": 39.07,
+    "word_end": 40.87,
+    "words": [
+      70,
+      71,
+      72,
+      73,
+      74
+    ],
+    "e": 41.41,
+    "cps": 11.538461538461556
+  },
+  {
+    "en": "doesn't mean you're not moving forward.",
+    "id": "bukan berarti kau tak melangkah maju.",
+    "s": 41.41,
+    "word_end": 44.1,
+    "words": [
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "e": 46.4365,
+    "cps": 7.758877946881519
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "version": "storyboard-1",
+  "storyboard_approved": false,
+  "render_approved": false,
+  "caption_phrases_confirmed": 3,
+  "composition_sha256": "1bd7870fae04f6091eef0a32b9fefedf04b7eb6465236e507820612e26cee28b",
+  "beat_sheet_sha256": "375ab32b24630e2a972412ce4b6b4744be5ad40e917fa49169b28a8e47ab447a",
+  "subtitles_sha256": "c1ee07ccf30cb5cc6bba2102ac0472145462bd50bb69fa70830536d262f37399",
+  "mask_asset_sha256": "5e9f378d6e73d6553d1599a0859b0b84cafcff8472e5213adbe652af82cfa5fc",
+  "whole_clip_masked": true,
+  "source_matte_frames": 1392,
+  "snapshot_count": 26,
+  "checks": {
+    "lint": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    "runtime": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    "layout": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    "motion": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    "contrast": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    "craft": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    "audio": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "max_cps": 15.384615384615397,
+  "minimum_font_px": 44,
+  "manual_unverified": [
+    "Normal-speed temporal mask stability",
+    "Motion rhythm/smoothness and sound listening",
+    "Final audio mix and export"
+  ],
+  "modul": {
+    "bang-motion": "1.19.0",
+    "hyperframes": "0.9.33",
+    "NazarVerse": "1.0",
+    "K11-K14": "0.1"
+  },
+  "sampled_visual_review": "Contact, encoded hair/shoulder edges, native action phases and final 46.42s frame inspected. Temporal/playback and listening remain unverified."
+}

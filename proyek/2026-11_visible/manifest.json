@@ -1,0 +1,78 @@
+{
+  "proyek": "2026-11_visible",
+  "judul": "Visible — Before the Surface",
+  "status": "storyboard",
+  "brand": "NazarVerse 1.0",
+  "brand_source": "panduan/NAZARVERSE_BRAND.md",
+  "engines": {
+    "bang-motion": "1.19.0",
+    "bang-motion-commit": "c1aa65e921c970d858705fcb4a53a8294d1a4131",
+    "latest_verified": "origin HEAD checked 2026-11-17",
+    "hyperframes": "0.9.33"
+  },
+  "source": {
+    "file": "aset/source.mp4",
+    "duration": 46.4365,
+    "width": 478,
+    "height": 850,
+    "crop": [
+      478,
+      766,
+      0,
+      42
+    ]
+  },
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "video": "h264",
+    "audio": "aac",
+    "color": "bt709",
+    "lufs": -14,
+    "true_peak_max": -2
+  },
+  "palette": {
+    "navy": "#101827",
+    "slate": "#26364C",
+    "sand": "#C5B69A",
+    "ivory": "#EDEAE4",
+    "sage": "#718A83"
+  },
+  "type": {
+    "font": "Inter",
+    "en": 56,
+    "id": 44,
+    "full_en": 62,
+    "full_id": 46,
+    "width": 880,
+    "left": 100,
+    "top": 270,
+    "full_top": 1340
+  },
+  "approval": {
+    "creative_discretion": true,
+    "source_message": "Editkan video ini dengan sebebas anda animasi motion grafis dan efeknya tetapi tetap sesuai dengan brand guidelines",
+    "storyboard": false,
+    "render": false
+  },
+  "subtitle": [
+    "en",
+    "id"
+  ],
+  "retained_preferences": [
+    "Smooth clean rotoscope",
+    "Talent touches canvas bottom and sides",
+    "Graphic focus varies between sides and full frame",
+    "Indonesian subtitles",
+    "Preserve natural voice and narrative; no invented CTA"
+  ],
+  "roto": {
+    "asset": "hyperframes/assets/talent-roto.webm",
+    "method": "continuous recurrent video matting",
+    "full_playback_verified": false,
+    "whole_clip_processed": true,
+    "frames": 1392,
+    "asset_sha256": "5e9f378d6e73d6553d1599a0859b0b84cafcff8472e5213adbe652af82cfa5fc"
+  }
+}

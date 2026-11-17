@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Visible — Before the Surface</title>
+<style>
+@font-face{font-family:Inter;src:url('assets/Inter.ttf') format('truetype');font-weight:100 900;font-display:block}
+:root{--navy:#101827;--slate:#26364C;--sand:#C5B69A;--ivory:#EDEAE4;--sage:#718A83}
+*{box-sizing:border-box}p{margin:0}html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:var(--navy)}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--navy);font-family:Inter,sans-serif}
+#atmosphere{position:absolute;inset:-160px;background:radial-gradient(ellipse at 70% 34%,var(--slate) 0%,var(--navy) 68%);background-size:140% 140%;background-position:20% 30%}
+#texture{position:absolute;inset:-80px;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.35' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
+#world{position:absolute;inset:0;width:1080px;height:1920px;overflow:visible}
+#footage{position:absolute;inset:0;z-index:3;pointer-events:none}#subjectPosition{position:absolute;left:0;top:157px;width:1100px;height:1763px}#talent{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+#captionTrack{position:absolute;z-index:6;left:100px;top:270px;width:880px;--en:56px;--id:44px}
+.clip{position:absolute}.caption{left:0;top:0;width:880px;max-width:880px}.english{display:block;font-size:var(--en);font-weight:640;line-height:1.18;letter-spacing:-.035em;color:var(--ivory)}.indonesian{display:block;font-size:var(--id);font-weight:420;line-height:1.24;letter-spacing:-.025em;color:var(--sand);margin-top:20px}audio{display:none}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="46.4365" data-width="1080" data-height="1920" data-fps="30">
+ <div id="atmosphere" data-layout-ignore></div><div id="texture" data-layout-ignore></div>
+ <svg id="world" viewBox="0 0 1080 1920" aria-label="A seed grows roots below an apparently unchanged surface" data-layout-allow-overflow>
+ <defs>
+  <linearGradient id="ceramic" x1="0" y1="0" x2="1" y2=".3"><stop stop-color="#26364C"/><stop offset=".48" stop-color="#718A83" stop-opacity=".3"/><stop offset="1" stop-color="#26364C"/></linearGradient>
+  <linearGradient id="soilShade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#26364C"/><stop offset="1" stop-color="#101827"/></linearGradient>
+  <path id="vesselShape" d="M-300 10 Q0 78 300 10 L236 553 Q0 618 -236 553Z"/>
+  <clipPath id="vesselClip"><use href="#vesselShape"/></clipPath>
+  <mask id="sectionMask" maskUnits="userSpaceOnUse" x="-350" y="0" width="700" height="650"><rect x="-350" y="0" width="700" height="650" fill="white"/><rect id="cutWindow" x="-252" y="85" width="504" height="0" rx="12" fill="black"/></mask>
+ </defs>
+ <g id="worldPos" transform="translate(190 860) scale(.46)">
+  <g id="plantOpacity">
+   <path id="shelf" d="M-5000 592H5000V4500H-5000Z" fill="#26364C"/>
+   <path d="M-5000 592H5000" stroke="#718A83" stroke-width="2"/>
+   <ellipse cx="0" cy="594" rx="310" ry="18" fill="#101827" opacity=".75"/>
+   <use href="#vesselShape" fill="url(#soilShade)" stroke="#C5B69A" stroke-width="3"/>
+   <g clip-path="url(#vesselClip)">
+    <g id="soilGrains" fill="#718A83" opacity=".35"></g>
+    <g id="rootSystem" fill="none" stroke="#C5B69A" stroke-linecap="round" stroke-linejoin="round">
+     <path id="rootMain" stroke-width="10" d="M0 13 C-10 80 12 112 -18 180 S-40 252 -25 326 Q-19 355 -38 380"/>
+     <path id="rootLeft" stroke-width="7" d="M-12 108 C-45 122 -70 150 -92 184 S-150 217 -179 260 Q-207 302 -180 351"/>
+     <path id="rootRight" stroke-width="7" d="M-10 170 C32 171 61 191 90 211 S131 243 146 274"/>
+     <path id="rootDetour" stroke-width="7" d="M90 211 C166 218 202 253 187 293 C170 333 114 335 123 387 Q130 430 104 458"/>
+     <path id="rootBranch1" stroke-width="5" d="M-145 232 C-110 267 -100 290 -118 326 Q-131 355 -101 379"/>
+     <path id="rootBranch2" stroke-width="5" d="M136 357 C81 337 57 366 68 400 Q82 429 50 459"/>
+     <path id="rootStep1" stroke-width="9" d="M-38 380 Q-85 389 -76 419"/>
+     <path id="rootStep2" stroke-width="9" d="M-76 419 Q-68 449 -52 475"/>
+     <path id="rootStep3" stroke-width="9" d="M-52 475 Q-41 518 -18 533"/>
+    </g>
+    <g id="stone"><path d="M91 266 Q113 237 147 256 L166 292 Q153 320 116 315 L88 294Z" fill="#718A83" stroke="#C5B69A" stroke-width="2.5"/><path d="M96 273L127 283L158 277M127 283L133 309" fill="none" stroke="#26364C" stroke-width="3"/></g>
+    <g id="nodes" fill="#718A83" stroke="#EDEAE4" stroke-width="2"><circle id="node1" cx="-76" cy="419" r="10"/><circle id="node2" cx="-52" cy="475" r="10"/><circle id="node3" cx="-18" cy="533" r="10"/></g>
+   </g>
+   <use href="#vesselShape" fill="#26364C" mask="url(#sectionMask)"/>
+   <use href="#vesselShape" fill="url(#ceramic)" stroke="#C5B69A" stroke-width="3" mask="url(#sectionMask)"/>
+   <path d="M-272 65L-218 542M273 65L220 542" stroke="#C5B69A" stroke-width="2" opacity=".35" fill="none"/>
+   <ellipse cx="0" cy="10" rx="300" ry="46" fill="#101827" stroke="#C5B69A" stroke-width="3"/>
+   <path d="M-278 5Q0-49 278 5Q0 51-278 5Z" fill="#26364C"/>
+   <g id="soilSurface" fill="#718A83" opacity=".6"><ellipse cx="-110" cy="8" rx="10" ry="3"/><ellipse cx="110" cy="0" rx="16" ry="3"/><ellipse cx="-190" cy="-4" rx="6" ry="2"/><ellipse cx="170" cy="15" rx="9" ry="2"/></g>
+   <g id="seed"><path id="seedLeft" d="M0 12C-44-1-37-42-11-48Q-1-24 0 12Z" fill="#C5B69A"/><path id="seedRight" d="M0 12C41 2 40-37 17-46Q4-24 0 12Z" fill="#718A83"/><path d="M-11-48Q4-34 17-46" fill="none" stroke="#EDEAE4" stroke-width="2"/></g>
+   <path id="stem" d="M0 9 C-12-55 13-92 0-150S11-218 0-268" fill="none" stroke="#718A83" stroke-width="13" stroke-linecap="round"/>
+   <g id="leafLeft"><path d="M0-150C-39-247-177-267-205-239C-190-153-70-103 0-150Z" fill="#718A83" stroke="#C5B69A" stroke-width="2"/><path d="M0-150Q-99-203-190-232M-75-188L-103-233M-120-209L-163-191" fill="none" stroke="#C5B69A" stroke-width="3"/></g>
+   <g id="leafRight"><path d="M0-220C27-313 161-335 191-307C167-222 62-179 0-220Z" fill="#718A83" stroke="#C5B69A" stroke-width="2"/><path d="M0-220Q88-280 177-302M61-259L78-302M113-283L153-256" fill="none" stroke="#C5B69A" stroke-width="3"/></g>
+   <g id="water" fill="#718A83" stroke="#C5B69A" stroke-width="2"></g>
+   <g id="splashes" fill="none" stroke="#718A83" stroke-width="4"></g>
+  </g>
+ </g></svg>
+ <div id="footage"><div id="subjectPosition" data-layout-allow-overflow><video id="talent" class="clip" src="assets/talent-roto.webm" muted playsinline preload="auto" data-start="0" data-duration="46.4365" data-track-index="0" data-layout-allow-overflow></video></div></div>
+ <div id="captionTrack">__CAPTIONS__</div>
+ <audio id="voice" src="assets/voice.m4a" data-start="0" data-duration="46.4365" data-track-index="3" data-volume="1"></audio>
+</div>
+<script src="assets/gsap.min.js"></script><script>
+// Continuous SVG world derived from the bang-motion action-world starter;
+// HyperFrames exclusively owns media clocks and seeking.
+const M=__MANIFEST__, P=__PLAN__, W=__WORDS__;
+const NS='http://www.w3.org/2000/svg';
+function svg(tag,attrs,parent){const el=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v);document.querySelector(parent).appendChild(el);return el;}
+for(let i=0;i<52;i++){const x=-215+((i*97)%430),y=82+((i*83)%425);svg('ellipse',{cx:x,cy:y,rx:2+(i%3),ry:1.5+(i%2)},'#soilGrains');}
+for(let i=0;i<P.motion.drops.length;i++){svg('path',{id:'drop'+i,d:'M0-20C-5-10-11-1-11 6A11 11 0 0 0 11 6C11-1 5-10 0-20Z'},'#water');svg('ellipse',{id:'splash'+i,cx:P.motion.drops[i].x,cy:9,rx:15,ry:3},'#splashes');}
+const tl=gsap.timeline({paused:true});window.__timelines=window.__timelines||{};window.__timelines.main=tl;
+function draw(id,s,d){const el=document.querySelector('#'+id),len=el.getTotalLength();el.style.strokeDasharray=len;el.style.strokeDashoffset=len;tl.to(el,{strokeDashoffset:0,duration:d,ease:'power2.inOut'},s);}
+for(const r of P.motion.roots)draw(r.id,r.s,r.d);
+draw('stem',P.motion.sprout.s,P.motion.sprout.d);
+for(const b of P.beats){
+ const l=P.layouts[b.layout],h=l.talent_width*766/478;
+ tl.set('#subjectPosition',{width:l.talent_width,height:h,left:l.talent_left,top:M.format.height-h,opacity:l.talent_opacity},b.s);
+ tl.set('#captionTrack',{top:l.caption_top,'--en':l.en+'px','--id':l.id+'px'},b.s);
+ tl.set('#plantOpacity',{opacity:l.world_opacity},b.s);
+ const v={attr:{transform:`translate(${l.world_x} ${l.world_y}) scale(${l.world_scale})`}};
+ if(b.s>0 && b.layout==='C')tl.to('#worldPos',{...v,duration:P.motion.camera_duration,ease:'power2.inOut'},b.s);
+ else tl.set('#worldPos',v,b.s);
+}
+for(let i=0;i<P.motion.drops.length;i++){
+ const d=P.motion.drops[i];tl.set('#drop'+i,{x:d.x,y:-320,opacity:0},0);tl.set('#splash'+i,{opacity:0},0);
+ tl.set('#drop'+i,{opacity:1},d.s);tl.to('#drop'+i,{y:-8,duration:d.d,ease:'power2.in'},d.s);
+ tl.set('#drop'+i,{opacity:0},d.s+d.d);
+ tl.fromTo('#splash'+i,{opacity:.8,scaleX:.4,scaleY:.4},{opacity:0,scaleX:2.8,scaleY:1.1,svgOrigin:`${d.x} 9`,duration:.48,ease:'power2.out',immediateRender:false},d.s+d.d);
+ tl.to('#seed',{y:3,duration:.1,ease:'power2.in'},d.s+d.d);tl.to('#seed',{y:0,duration:.25,ease:'power2.out'},d.s+d.d+.1);
+}
+tl.to('#cutWindow',{attr:{height:480},duration:P.motion.reveal.d,ease:'power2.inOut'},P.motion.reveal.s);
+for(const n of P.motion.nodes){tl.set('#'+n.id,{opacity:0,attr:{r:0}},0);tl.to('#'+n.id,{opacity:1,attr:{r:10},duration:.38,ease:'power2.out'},n.s);}
+for(const [id,origin,rotation] of [['leafLeft','0 -150',40],['leafRight','0 -220',-45]]){
+ tl.set('#'+id,{opacity:0,scale:.03,svgOrigin:origin},0);
+ tl.fromTo('#'+id,{opacity:0,scale:.03,rotation},{opacity:1,scale:1,rotation:0,svgOrigin:origin,duration:P.motion[id].d,ease:'power2.out',immediateRender:false},P.motion[id].s);
+}
+tl.to('#seedLeft',{rotation:-22,svgOrigin:'0 9',duration:.7,ease:'power2.inOut'},P.motion.sprout.s);
+tl.to('#seedRight',{rotation:25,svgOrigin:'0 9',duration:.8,ease:'power2.inOut'},P.motion.sprout.s+.12);
+for(let i=0;i<W.length;i++){const el=document.querySelector('#word-'+i);if(!el)continue;tl.set(el,{color:M.palette.sand},W[i].s);tl.set(el,{color:M.palette.ivory},W[i].e);}
+tl.to('#atmosphere',{backgroundPosition:'78% 64%',duration:M.source.duration,ease:'sine.inOut'},0);
+tl.to('#texture',{x:38,y:24,duration:M.source.duration,ease:'sine.inOut'},0);
+</script></body></html>

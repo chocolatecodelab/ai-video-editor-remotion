@@ -1,0 +1,16 @@
+{
+  "voice": "hyperframes/assets/voice.m4a",
+  "preserve_speech_and_pauses": true,
+  "music": {"use": false, "reason": "Keep the reflection intimate and leave space around the emotional cutback; no music bed needed."},
+  "sfx": [
+    {"time": 7.96, "type": "soft water/soil contact", "purpose": "First drop reaches soil; low under speech"},
+    {"time": 8.86, "type": "soft water/soil contact", "purpose": "Second discrete effort"},
+    {"time": 10.38, "type": "soft water/soil contact", "purpose": "Third discrete effort"},
+    {"time": 20.8, "type": "quiet ceramic brush", "purpose": "Brief support for the opening cutaway, no whoosh"},
+    {"time": 39.2, "type": "soft leaf brush", "purpose": "First leaf opening, not a digital success chime"},
+    {"time": 41.6, "type": "soft leaf brush", "purpose": "Second leaf opening; settle and quiet closing"}
+  ],
+  "quiet_sections": ["frustration cutback", "internal root growth and small nodes", "closing hold"],
+  "mix_target": {"integrated_lufs": -14, "tolerance_lu": 1, "true_peak_master_dbtp_max": -2},
+  "status": "Narrative and SFX plan for storyboard. Final mix and listening QA pending production approval; do not claim completed."
+}

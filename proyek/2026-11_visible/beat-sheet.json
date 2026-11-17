@@ -1,0 +1,57 @@
+{
+  "version": "storyboard-1",
+  "metaphor": "Before the Surface: unseen roots explain progress that is not yet visible",
+  "layouts": {
+    "A": {"talent_width": 1100, "talent_left": 0, "talent_opacity": 1, "world_x": 190, "world_y": 860, "world_scale": 0.46, "world_opacity": 1, "caption_top": 270, "en": 56, "id": 44},
+    "B": {"talent_width": 1300, "talent_left": -220, "talent_opacity": 1, "world_x": 870, "world_y": 860, "world_scale": 0.46, "world_opacity": 1, "caption_top": 270, "en": 56, "id": 44},
+    "C": {"talent_width": 1100, "talent_left": 0, "talent_opacity": 0, "world_x": 540, "world_y": 640, "world_scale": 1.02, "world_opacity": 1, "caption_top": 1340, "en": 62, "id": 46},
+    "D": {"talent_width": 1250, "talent_left": -85, "talent_opacity": 1, "world_x": 870, "world_y": 860, "world_scale": 0.46, "world_opacity": 0, "caption_top": 270, "en": 56, "id": 44}
+  },
+  "beats": [
+    {"id":"effort","s":0,"e":7.29,"layout":"A","message":"Working hard without visible change","action":"Seed sits on soil; no shoot yet. Speaker grounded on the right, planter at left.","shots":[2,4.5,6]},
+    {"id":"trying","s":7.29,"e":11.29,"layout":"B","message":"Trying, learning, pushing","action":"Three drops land and absorb; seed responds and a hidden root begins.","shots":[8.4,10.4]},
+    {"id":"unseen","s":11.29,"e":15.33,"layout":"C","message":"Results are nowhere to be seen","action":"Approach the same planter; the opaque ceramic still hides the roots. Voice remains continuous.","shots":[12.8,14.4]},
+    {"id":"frustration","s":15.33,"e":18.06,"layout":"D","message":"Acknowledge frustration","action":"Emotional cutback to the speaker; graphics pause.","shots":[16.7]},
+    {"id":"reveal","s":18.06,"e":24.35,"layout":"C","message":"Not all progress is visible","action":"Open a precise cutaway through the pot; reveal established roots below an unchanged surface.","shots":[19.2,21.5,23.4]},
+    {"id":"learning","s":24.35,"e":30.49,"layout":"C","message":"Mistakes teach; effort builds growth","action":"A root meets a stone, curves around it and branches. The whole plant stays on its shelf.","shots":[25,26.6,29.5]},
+    {"id":"nobody","s":30.49,"e":32.5,"layout":"B","message":"Even when nobody notices","action":"Return to speaker; the same revealed planter carries the state forward at the right.","shots":[31.5]},
+    {"id":"steps","s":32.5,"e":38.01,"layout":"C","message":"Do not underestimate small steps","action":"Three incremental root segments extend; each leaves a permanent growth node instead of an arbitrary pulse.","shots":[34.5,36,37.4]},
+    {"id":"emerge","s":38.01,"e":41.1,"layout":"C","message":"Visible signs arrive after hidden work","action":"Stem pushes above the soil and unfolds a first leaf; roots remain connected.","shots":[38.7,40.5]},
+    {"id":"forward","s":41.1,"e":46.4365,"layout":"A","message":"You are still moving forward","action":"Return to talent with rooted sprout at left. Second leaf unfolds and settles. No invented CTA.","shots":[42.5,44.4,46.1]}
+  ],
+  "motion": {
+    "camera_duration":0.62,
+    "drops":[{"s":7.32,"x":-30,"d":0.64},{"s":8.28,"x":40,"d":0.58},{"s":9.7,"x":5,"d":0.68}],
+    "roots":[{"id":"rootMain","s":7.98,"d":4.4},{"id":"rootLeft","s":9.02,"d":4.4},{"id":"rootRight","s":10.5,"d":4.0},{"id":"rootDetour","s":24.35,"d":2.1},{"id":"rootBranch1","s":27.51,"d":1.2},{"id":"rootBranch2","s":28.83,"d":1.1},{"id":"rootStep1","s":34.06,"d":0.8},{"id":"rootStep2","s":35.3,"d":0.75},{"id":"rootStep3","s":36.5,"d":0.9}],
+    "reveal":{"s":20.8,"d":2.1},
+    "nodes":[{"id":"node1","s":34.86,"x":-76,"y":419},{"id":"node2","s":36.05,"x":-52,"y":475},{"id":"node3","s":37.4,"x":-18,"y":533}],
+    "sprout":{"s":38.01,"d":2.25},
+    "leafLeft":{"s":39.2,"d":1.5},
+    "leafRight":{"s":41.6,"d":1.7}
+  },
+  "phrases": [
+    ["Have you ever felt like","Pernah merasa"],
+    ["you were working so hard,","sudah bekerja begitu keras,"],
+    ["but nothing seems to change?","tapi tak ada yang berubah?"],
+    ["You keep trying, learning","Kau terus mencoba, belajar"],
+    ["and pushing yourself,","dan mendorong diri,"],
+    ["yet the results","tapi hasilnya"],
+    ["are nowhere to be seen.","belum juga terlihat."],
+    ["And honestly,","Dan jujur,"],
+    ["it's frustrating.","itu membuat frustrasi."],
+    ["But here's something","Tapi ada hal"],
+    ["worth remembering.","yang perlu kau ingat."],
+    ["Not all progress is visible.","Tak semua progres terlihat."],
+    ["Every mistake teaches you","Tiap kesalahan mengajarimu"],
+    ["something,","sesuatu,"],
+    ["every small effort","tiap usaha kecil"],
+    ["helps you grow,","membantumu tumbuh,"],
+    ["even when nobody notices.","meski tak ada yang melihat."],
+    ["So, don't underestimate","Jadi, jangan remehkan"],
+    ["the little steps","langkah kecil"],
+    ["you're taking today,","yang kau ambil hari ini,"],
+    ["just because","hanya karena"],
+    ["you can't see the progress,","progresmu belum terlihat,"],
+    ["doesn't mean you're not moving forward.","bukan berarti kau tak melangkah maju."]
+  ]
+}
