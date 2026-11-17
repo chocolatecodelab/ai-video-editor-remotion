@@ -1,7 +1,7 @@
 {
   "proyek": "2026-11_visible",
   "judul": "Visible — Before the Surface",
-  "status": "storyboard",
+  "status": "selesai",
   "brand": "NazarVerse 1.0",
   "brand_source": "panduan/NAZARVERSE_BRAND.md",
   "engines": {
@@ -53,8 +53,16 @@
   "approval": {
     "creative_discretion": true,
     "source_message": "Editkan video ini dengan sebebas anda animasi motion grafis dan efeknya tetapi tetap sesuai dengan brand guidelines",
-    "storyboard": false,
-    "render": false
+    "storyboard": true,
+    "render": true,
+    "render_message": "lanjutkan ke render final",
+    "at": "2026-11-17T10:54:52.889656+07:00",
+    "storyboard_version": "storyboard-1",
+    "composition_sha256": "1bd7870fae04f6091eef0a32b9fefedf04b7eb6465236e507820612e26cee28b",
+    "beat_sheet_sha256": "375ab32b24630e2a972412ce4b6b4744be5ad40e917fa49169b28a8e47ab447a",
+    "subtitles_sha256": "c1ee07ccf30cb5cc6bba2102ac0472145462bd50bb69fa70830536d262f37399",
+    "mask_asset_sha256": "5e9f378d6e73d6553d1599a0859b0b84cafcff8472e5213adbe652af82cfa5fc",
+    "audio_plan_sha256": "916ac8f8022eed1f145280a22c1ea2a8422680ce9f1b52acc2ef4047731aaf10"
   },
   "subtitle": [
     "en",
@@ -74,5 +82,11 @@
     "whole_clip_processed": true,
     "frames": 1392,
     "asset_sha256": "5e9f378d6e73d6553d1599a0859b0b84cafcff8472e5213adbe652af82cfa5fc"
+  },
+  "final": {
+    "path": "out/2026-11_visible.mp4",
+    "sha256": "4554f5dc07dc7d91facc5c88cd8f255dfb44fff3904633c4bf9aec85fecd3755",
+    "qa_technical": "LULUS",
+    "duration": 46.466667
   }
 }

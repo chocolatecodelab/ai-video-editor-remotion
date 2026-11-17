@@ -20,4 +20,4 @@ One persistent plant world adapted from the bang-motion continuous SVG world/cam
 - No template book from the previous video; this episode uses its own plant/soil mechanism.
 - No Studio or preview MP4; produce real runtime stills for storyboard approval first.
 
-Full render approval has not been granted for this video. Three transcript corrections were confirmed separately and do not approve a storyboard.
+Storyboard and final render were approved by the user with “lanjutkan ke render final”. The three earlier transcript confirmations remain separate records; final approval hashes are in out/render-approval.json.

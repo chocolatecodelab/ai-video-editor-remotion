@@ -1,7 +1,7 @@
 {
   "version": "storyboard-1",
-  "storyboard_approved": false,
-  "render_approved": false,
+  "storyboard_approved": true,
+  "render_approved": true,
   "caption_phrases_confirmed": 3,
   "composition_sha256": "1bd7870fae04f6091eef0a32b9fefedf04b7eb6465236e507820612e26cee28b",
   "beat_sheet_sha256": "375ab32b24630e2a972412ce4b6b4744be5ad40e917fa49169b28a8e47ab447a",
@@ -50,9 +50,8 @@
   "max_cps": 15.384615384615397,
   "minimum_font_px": 44,
   "manual_unverified": [
-    "Normal-speed temporal mask stability",
-    "Motion rhythm/smoothness and sound listening",
-    "Final audio mix and export"
+    "Normal-speed playback: hair/shoulder matte stability, native motion rhythm and continuity.",
+    "Listen on phone: voice/SFX comfort and subtitle/lip timing."
   ],
   "modul": {
     "bang-motion": "1.19.0",
@@ -60,5 +59,14 @@
     "NazarVerse": "1.0",
     "K11-K14": "0.1"
   },
-  "sampled_visual_review": "Contact, encoded hair/shoulder edges, native action phases and final 46.42s frame inspected. Temporal/playback and listening remain unverified."
+  "sampled_visual_review": "Contact, encoded hair/shoulder edges, native action phases and final 46.42s frame inspected. Temporal/playback and listening remain unverified.",
+  "approval_message": "lanjutkan ke render final",
+  "final": {
+    "path": "out/2026-11_visible.mp4",
+    "sha256": "4554f5dc07dc7d91facc5c88cd8f255dfb44fff3904633c4bf9aec85fecd3755",
+    "qa_technical": "LULUS",
+    "duration": 46.466667
+  },
+  "audio_mix_prepared": true,
+  "encoded_technical_qa": "LULUS"
 }

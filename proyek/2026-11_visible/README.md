@@ -14,3 +14,8 @@ NazarVerse v1.0. bang-motion 1.19.0 (origin HEAD checked 17 November 2026); Hype
 Storyboard/render approval is required separately for this new video. The three transcript confirmations and permission to explore effects do not approve final export. Preserve current storyboard hashes on approval. Prepare/measure the complete audio mix before the single visual render; final delivery is one 1080×1920/30fps H.264/AAC bt709 MP4 with -14 LUFS ±1 and master peak ≤-2 dBTP. Put intermediates under D: .sementara/visible. Actual encoded-file QA and manual normal-speed playback/listening remain for production; stills and geometric metrics cannot prove mask stability or artistic motion quality.
 
 Private source, media and output folders stay local and are ignored by git. The local commit preserves source/data, not the large footage or matte.
+
+## Final delivery
+User approved the storyboard and final render with “lanjutkan ke render final”. render_final.py prepares six subtle contact/brush SFX with the uncut source voice, measures the complete AAC mix, runs the pinned HyperFrames CLI once, then remuxes video/AAC with bt709 metadata. No visual rerender is used for the delivery mux. Intermediate files: D: .sementara/visible-final. qa_final.py checks the actual encoded file; finish_delivery.py exposes the local result after technical QA passes. Do not rebuild historical storyboard output over this delivery without a new revision.
+
+Final: out/2026-11_visible.mp4, 46.467s, 1394 frames, 1080×1920/30fps; QA teknis LULUS. Audio -14.61 LUFS, -2.37 dBTP. Manual playback/listening remains pending. Evidence: out/qa-report.md, out/kontak-final.jpg, out/fase-final.jpg and delivery.json.
