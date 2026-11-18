@@ -49,6 +49,9 @@ export type SplitReelProps = {
     teks_pil?: string;
     /** [detik awal halaman, y] dari split.py: y per halaman, sudah digeser di atas puncak wajah/sosok (§10). */
     per_halaman?: [number, number][] };
+  /** "terang" = panggung kertas krem (brand dengan latar terang, mis. Info Jerman: 55 % krem): latar bertekstur titik,
+   *  hook/kilat tanpa blend screen, caption pil charcoal ber-teks krem. Bawaan "gelap" (perilaku lama). */
+  tema?: "gelap" | "terang";
   /** Cutout talent RGBA per frame (split.py potong_talent) untuk adegan `depan`: `dir` + NNNNNN.webp, `frame` = yang ada. */
   depan?: { dir: string; frame: number[]; skala: number };
 };
@@ -122,8 +125,11 @@ const TalentDepan: React.FC<{ pr: SplitReelProps }> = ({ pr }) => {
   const dp = pr.depan;
   const a = pr.adegan.find((x) => x.depan && t >= x.mulai - 0.2 && t < x.selesai + 0.2);
   if (!dp || !a || !dp.frame.includes(f)) return null;
-  const o = interpolate(t, [a.mulai - 0.15, a.mulai + 0.12, a.selesai - 0.12, a.selesai + 0.15], [0, 1, 1, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  // adegan pembuka (mulai 0): cutout penuh sejak frame 0 — tanpa fade-in, agar grafis hook tidak tembus di depan talent
+  const o = a.mulai <= 0
+    ? interpolate(t, [a.selesai - 0.12, a.selesai + 0.15], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })
+    : interpolate(t, [a.mulai - 0.15, a.mulai + 0.12, a.selesai - 0.12, a.selesai + 0.15], [0, 1, 1, 0],
+      { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const { s, geser, oy } = posisiFootage(pr, t);
   const grade = pr.tokens.grade as { kontras: number; saturasi: number };
   const m = `linear-gradient(180deg, black ${pr.tinggi_panggung + 260}px, transparent ${pr.tinggi_panggung + 480}px)`;
@@ -173,6 +179,25 @@ const LatarPanggung: React.FC<{ pr: SplitReelProps; wr: Warna }> = ({ pr, wr }) 
   const f = useCurrentFrame();
   const W = pr.W;
   const Hs = pr.tinggi_panggung;
+  if (pr.tema === "terang") {
+    // kertas krem: sorot putih lembut di tengah, grid titik charcoal tipis yang bergeser pelan (kedalaman, bukan dekorasi)
+    const geser = (f * 0.25) % 54;
+    return (
+      <svg width={W} height={Hs} style={{ position: "absolute", top: 0, left: 0, ...pudarBawah(pr.gradasi) }}>
+        <defs>
+          <radialGradient id="sr-latar" cx="0.5" cy="0.5" r="0.7">
+            <stop offset="0" stopColor="#FFFFFF" />
+            <stop offset="1" stopColor={wr.latar} />
+          </radialGradient>
+          <pattern id="sr-titik" width={54} height={54} patternUnits="userSpaceOnUse" patternTransform={`translate(0 ${-geser})`}>
+            <circle cx={27} cy={27} r={2.2} fill={wr.teks} opacity={0.11} />
+          </pattern>
+        </defs>
+        <rect width={W} height={Hs} fill="url(#sr-latar)" />
+        <rect width={W} height={Hs} fill="url(#sr-titik)" />
+      </svg>
+    );
+  }
   return (
     <svg width={W} height={Hs} style={{ position: "absolute", top: 0, left: 0, ...pudarBawah(pr.gradasi) }}>
       <defs>
@@ -220,6 +245,17 @@ const HookPembuka: React.FC<{ pr: SplitReelProps; wr: Warna; cx: number; cy: num
   const u = interpolate(t, [0, d], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
   const kilat = Math.exp(-t / 0.18) * 0.55 * kuat;
   const R = Math.hypot(pr.W, pr.tinggi_panggung);
+  if (pr.tema === "terang") {
+    // kertas: cincin kuning tebal + cincin charcoal tipis menyusul, kilat putih (screen tidak terlihat di latar krem)
+    return (
+      <svg width={pr.W} height={pr.tinggi_panggung} style={{ position: "absolute", top: 0, left: 0, pointerEvents: "none", ...pudarBawah(pr.gradasi * 0.6) }}>
+        <rect width={pr.W} height={pr.tinggi_panggung} fill="#FFFFFF" opacity={kilat * 0.8} />
+        <circle cx={cx} cy={cy} r={mix(60, R * 0.75, u)} fill="none" stroke={wr.aksen} strokeWidth={mix(36, 2, u)} opacity={(1 - u) * kuat} />
+        <circle cx={cx} cy={cy} r={mix(20, R * 0.55, Math.min(1, u * 1.2))} fill="none" stroke={wr.teks} strokeWidth={mix(6, 1, u)}
+          opacity={(1 - u) * 0.7 * kuat} />
+      </svg>
+    );
+  }
   return (
     <svg width={pr.W} height={pr.tinggi_panggung} style={{ position: "absolute", top: 0, left: 0, mixBlendMode: "screen",
       pointerEvents: "none", ...pudarBawah(pr.gradasi * 0.6) }}>
@@ -274,7 +310,8 @@ const LogoKlien: React.FC<{ pr: SplitReelProps; wr: Warna; cx: number }> = ({ pr
   const kilap = l.awal_besar === false ? 0 : Math.exp(-Math.abs(t - l.hook_s) / 0.25) * 0.5;
   return (
     <Img src={staticFile(l.src)} style={{ position: "absolute", left: cx - lebar / 2, top: y - (lebar * l.rasio) / 2, width: lebar,
-      filter: `drop-shadow(0 0 ${14 + 24 * kilap}px ${rgba(wr.aksen, 0.45 + kilap)})` }} />
+      filter: pr.tema === "terang" ? `drop-shadow(0 6px 14px ${rgba(wr.teks, 0.18)})`
+        : `drop-shadow(0 0 ${14 + 24 * kilap}px ${rgba(wr.aksen, 0.45 + kilap)})` }} />
   );
 };
 
@@ -427,12 +464,17 @@ const Caption: React.FC<{ pr: SplitReelProps; wr: Warna; tok: Tokens; hal: Kata[
   const cap = tok.caption as { stroke: number; redup: number };
   const masuk = prog(k, h[0].s - 0.08, 0.25);
   const pil = pr.caption.gaya === "pil";
+  // tema terang: pil charcoal (warna teks ilustrasi) ber-teks krem (warna latar) — kontras di atas kertas & rekaman
+  const terang = pr.tema === "terang";
+  const teksCap = terang ? wr.latar : wr.teks;
   const y = pr.caption.per_halaman?.find((x) => Math.abs(x[0] - h[0].s) < 1e-3)?.[1] ?? pr.caption.y;
   return (
     <div style={{ position: "absolute", top: y, left: 0, width: pr.W, display: "flex", justifyContent: "center",
       translate: `0px ${mix(14, 0, masuk)}px`, opacity: masuk }}>
-      <div style={{ translate: "0 -50%", padding: "14px 34px", borderRadius: 999, background: rgba(wr.panel, 0.72),
-        border: `2px solid ${wr.garis}`, boxShadow: `0 10px 30px ${rgba("#000000", 0.45)}, 0 0 40px ${rgba(wr.aksen, 0.18)}`,
+      <div style={{ translate: "0 -50%", padding: "14px 34px", borderRadius: 999,
+        background: terang ? rgba(wr.teks, 0.94) : rgba(wr.panel, 0.72),
+        border: terang ? `2px solid ${rgba(wr.aksen, 0.55)}` : `2px solid ${wr.garis}`,
+        boxShadow: terang ? `0 12px 28px ${rgba(wr.teks, 0.28)}` : `0 10px 30px ${rgba("#000000", 0.45)}, 0 0 40px ${rgba(wr.aksen, 0.18)}`,
         display: "flex", gap: "0 16px", maxWidth: pr.W - 200, flexWrap: "wrap", justifyContent: "center",
         fontFamily: tok.font.caption.family, fontWeight: tok.font.caption.weight, fontSize: tok.ukuran.caption, lineHeight: 1.15 }}>
         {h.map((w, i) => {
@@ -442,9 +484,9 @@ const Caption: React.FC<{ pr: SplitReelProps; wr: Warna; tok: Tokens; hal: Kata[
             // highlight brand: kata aktif putih di pil aksen; pil muncul dengan skala halus saat kata diucapkan
             const u = prog(k, w.s - 0.04, 0.14);
             return (
-              <span key={i} style={{ position: "relative", color: aktif && u > 0.5 ? (pr.caption.teks_pil ?? wr.teks) : wr.teks, opacity: sudah ? 1 : cap.redup, padding: "0 10px" }}>
+              <span key={i} style={{ position: "relative", color: aktif && u > 0.5 ? (pr.caption.teks_pil ?? teksCap) : teksCap, opacity: sudah ? 1 : cap.redup, padding: "0 10px" }}>
                 <span style={{ position: "absolute", inset: "-4px 0", borderRadius: 14, background: wr.aksen,
-                  opacity: aktif ? u : 0, scale: String(mix(0.8, 1, u)), boxShadow: `0 6px 18px ${rgba(wr.aksen, 0.45)}` }} />
+                  opacity: aktif ? u : 0, scale: String(mix(0.8, 1, u)), boxShadow: terang ? "none" : `0 6px 18px ${rgba(wr.aksen, 0.45)}` }} />
                 <span style={{ position: "relative" }}>{w.w}</span>
               </span>
             );

@@ -45,10 +45,20 @@ def _whisperx(audio: str, model: str, bahasa: str) -> list[dict]:
     return kata
 
 
+def _pcm16k(audio: str):
+    """Audio → float32 mono 16 kHz lewat ffmpeg (decode_audio faster-whisper memakai PyAV yang bisa tidak cocok versi)."""
+    import subprocess
+
+    import numpy as np
+    r = subprocess.run(["ffmpeg", "-nostdin", "-hide_banner", "-loglevel", "error", "-i", audio, "-f", "f32le", "-ac", "1",
+                        "-ar", "16000", "-"], capture_output=True, check=True)
+    return np.frombuffer(r.stdout, np.float32)
+
+
 def _faster(audio: str, model: str, bahasa: str) -> list[dict]:
     from faster_whisper import WhisperModel
     m = WhisperModel(model, compute_type="int8")
-    segs, _ = m.transcribe(audio, language=bahasa, word_timestamps=True, vad_filter=True)
+    segs, _ = m.transcribe(_pcm16k(audio), language=bahasa, word_timestamps=True, vad_filter=True)
     return [{"w": w.word.strip(), "s": round(w.start, 3), "e": round(w.end, 3), "p": round(w.probability, 3)}
             for s in segs for w in (s.words or [])]
 

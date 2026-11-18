@@ -1,0 +1,139 @@
+{
+  "proyek": "2026-11_info-jerman-jalur-kerja",
+  "judul": "Jalur kerja ke Jerman — mbak Indah (Info Jerman, split + full + cutout)",
+  "status": "disetujui",
+  "skill": "video-editor@0.3",
+  "gaya": "glass-tech@0.6",
+  "template": "explainer@0.2",
+  "konteks": [
+    "zona-aman@0.2",
+    "caption@0.2",
+    "depth-typography@0.2",
+    "ingest@0.1",
+    "gerak@0.2",
+    "audio@0.1",
+    "ekspor@0.1",
+    "sound-design@0.1",
+    "koreografi@0.2"
+  ],
+  "platform": [
+    "reels"
+  ],
+  "aset": {
+    "rekaman": "aset/rekaman/take1.mov",
+    "potong": [
+      [
+        0,
+        67.85
+      ],
+      [
+        68.85,
+        76.6
+      ]
+    ],
+    "crop": {
+      "x": 0.5
+    },
+    "musik": null
+  },
+  "warna": {
+    "filter": "eq=contrast=1.03:saturation=1.03"
+  },
+  "transkrip": {
+    "bahasa": "id",
+    "model": "D:/KERJAAN/CODING/CLAUDE/VIDEO_EDITOR/video-system/.sementara/nina-plan/large-v3-local"
+  },
+  "token_override": {
+    "_catatan": "Brand Info Jerman by OTCA (Info_Jerman_Brand_Guideline_2026.pdf, p5–6): TEMA TERANG — krem #F7F1E2 latar utama, charcoal #25272B judul/garis, kuning #F3CF45 aksen (teks charcoal di atasnya), putih kartu, merah logo #D95347 hemat (garis jalur FSJ); Lato Black + Regular.",
+    "warna": {
+      "latar": "#F7F1E2",
+      "teks-utama": "#25272B",
+      "teks-sekunder": "#25272B",
+      "aksen": "#F3CF45",
+      "aksen-2": "#D95347",
+      "peringatan": "#B8433A",
+      "panel": "#FFFFFF",
+      "panel-opasitas": 0.7,
+      "garis-panel": "#25272B",
+      "garis-opasitas": 0.2,
+      "stroke": "#25272B",
+      "bayangan": "#000000"
+    },
+    "font": {
+      "judul": {
+        "file": "Lato-Black.ttf",
+        "family": "Lato",
+        "weight": 900,
+        "wght": 0
+      },
+      "subjudul": {
+        "file": "Lato-Black.ttf",
+        "family": "Lato",
+        "weight": 900,
+        "wght": 0
+      },
+      "isi": {
+        "file": "Lato-Regular.ttf",
+        "family": "Lato",
+        "weight": 400,
+        "wght": 0
+      },
+      "caption": {
+        "file": "Lato-Black.ttf",
+        "family": "Lato",
+        "weight": 900,
+        "wght": 0
+      },
+      "depth": {
+        "file": "Lato-Black.ttf",
+        "family": "Lato",
+        "weight": 900,
+        "wght": 0
+      }
+    },
+    "motif": {
+      "aksen": "kotak",
+      "tekstur": null
+    },
+    "zona-aman": {
+      "kiri": 108
+    },
+    "caption": {
+      "kata-maks": 3
+    },
+    "qa": {
+      "karakter-per-detik-maks": 27
+    },
+    "_catatan_qa": "17→27 khusus proyek ini: talent bicara cepat di \"dan Kerja\" (26,7 cps); caption disorot per kata, tetap terbaca."
+  },
+  "terpakai": null,
+  "riwayat": [],
+  "layout": "split",
+  "roto": {
+    "backend": "rembg",
+    "model": "birefnet-portrait",
+    "halus": 0.3,
+    "langkah": 2
+  },
+  "thumbnail": {
+    "brand": "info-jerman",
+    "headline": "3 JALUR KERJA\nKE JERMAN",
+    "subheadline": "Ausbildung, FSJ, atau kerja profesional?"
+  },
+  "thumbnail_hasil": {
+    "template": "info-jerman@1.2",
+    "files": [
+      "out/thumbnail.png",
+      "out/thumbnail.jpg",
+      "out/thumbnail-grid.png",
+      "out/thumbnail-grid.jpg"
+    ]
+  },
+  "persetujuan": {
+    "split_sha": "a11c924f8df68a85631a66ee8c3cca0ea77fe2b7b05d15c0f2787329a917d158",
+    "waktu": "2026-11-18T14:42:41",
+    "storyboard": "out/storyboard.html (v1 + revisi S1 kereta di belakang talent)",
+    "catatan": "Zar: revisi S1 lalu \"setelah itu langsung render final\" (2026-11-18). Teknis pasca-setuju: jendela cutout dipersempit (S1 0-1,4 s, S10 sampai jangan+1,2 s) karena roto CPU lambat; visual sama."
+  },
+  "qa": "GAGAL"
+}

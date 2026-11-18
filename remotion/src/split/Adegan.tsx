@@ -22,6 +22,10 @@ import {
 import { LuKabut, LuKompas, LuLepas, LuMarionet, LuOrbitTanya, LuPeta, LuPuzzle, LuRencana, LuSungai, LuTangan } from "./AdeganLife";
 import { INOUT, Konteks, detik, drift, gambar, mix, prog, progE, tk } from "./alat";
 import {
+  IjfAusbildung, IjfBanding, IjfFsj, IjfKartu, IjfKomentar, IjfKontribusi, IjfPapan, IjfPapanTiga, IjfPeta, IjfProfesional, IjfRamai,
+  IjfTangga,
+} from "./AdeganIjFahrplan";
+import {
   Bendera, Bintang, Cahaya, Centang, G, IkonKecil, Kaca, KilauDef, Langit, Laptop, Mata, Menara, Orang, Perisai,
   Petir, Sorot, Tanya, Target, Timbangan, Warna, garis,
 } from "./Ikon";
@@ -631,4 +635,16 @@ export const PUSTAKA: Record<string, React.FC<PropsAdegan>> = {
   "lu-puzzle": LuPuzzle,
   "lu-kompas": LuKompas,
   "lu-kabut": LuKabut,
+  "ijf-papan": IjfPapan,
+  "ijf-papan-tiga": IjfPapanTiga,
+  "ijf-peta": IjfPeta,
+  "ijf-ausbildung": IjfAusbildung,
+  "ijf-tangga": IjfTangga,
+  "ijf-fsj": IjfFsj,
+  "ijf-kontribusi": IjfKontribusi,
+  "ijf-profesional": IjfProfesional,
+  "ijf-banding": IjfBanding,
+  "ijf-ramai": IjfRamai,
+  "ijf-komentar": IjfKomentar,
+  "ijf-kartu": IjfKartu,
 };

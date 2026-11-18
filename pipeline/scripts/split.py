@@ -141,6 +141,7 @@ def bangun_props(p: Proyek, siapkan: bool = True) -> dict:
         "zoom": zoom, "adegan": adegan, "ketukan": irama,
         "hook": {k: v for k, v in {**HOOK_BAWAAN, **(cfg.get("hook") or {})}.items() if k != "sfx"},
         **({"menyatu": cfg["menyatu"]} if "menyatu" in cfg else {}),
+        **({"tema": cfg["tema"]} if cfg.get("tema") else {}),
         **({"transisi_klip": cfg["transisi_klip"]} if cfg.get("transisi_klip") else {}),
         **({"logo": siapkan_logo(p, cfg["logo"])} if cfg.get("logo") else {}),
         "kata": [{"w": k["w"], "s": k["s"], "e": k["e"]} for k in kata],
@@ -289,11 +290,14 @@ def posisi_caption(p: Proyek, props: dict) -> list[dict]:
     c = props["caption"]
     tinggi = p.t("ukuran.caption") * 1.15 + 32  # pil: font × line-height + padding 14 px × 2 + garis
     hasil = []
-    for h in halaman_caption(props["kata"], c):
+    hal = halaman_caption(props["kata"], c)
+    for i, h in enumerate(hal):
         s, e = h[0]["s"], h[-1]["e"]
         a = next((x for x in props["adegan"] if x["mulai"] <= s < x["selesai"]), None)
         y0 = (a or {}).get("caption_y", c["y"])
-        pk = puncak_sosok(p, props, s - 0.1, e + 0.6)
+        # jendela tampil = sama dengan Caption di SplitReel.tsx: sampai halaman berikut mulai, maks e + 0,6 s
+        akhir = min(hal[i + 1][0]["s"], e + 0.6) if i + 1 < len(hal) else e + 0.8
+        pk = puncak_sosok(p, props, s - 0.1, akhir)
         y = y0 if pk is None else min(y0, pk - JARAK_SOSOK - tinggi / 2)
         y = max(y, props["zona"][1] + tinggi / 2)
         hasil.append({"s": s, "e": e, "y": round(y), "teks": " ".join(x["w"] for x in h), "puncak": pk,

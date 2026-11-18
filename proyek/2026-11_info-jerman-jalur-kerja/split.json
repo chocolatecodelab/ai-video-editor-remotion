@@ -1,0 +1,709 @@
+{
+ "_catatan": "Info Jerman — 3 jalur kerja ke Jerman (mbak Indah, take 76,6 s, jeda 67,85–68,85 dipotong). Tema terang (guideline 2026: 55 % krem, charcoal, kuning aksen). Metafora 'Fahrplan': papan keberangkatan split-flap → peta U-Bahn → tiap jalur dinaiki keretanya. Adegan ijf-* di remotion/src/split/AdeganIjFahrplan.tsx. Cutout (depan) di hook & 'jangan ikut ramai'; layar penuh di 'apa bedanya?' & kartu akhir.",
+ "tema": "terang",
+ "tinggi_panggung": 1000,
+ "caption_y": 905,
+ "caption_gaya": "pil",
+ "caption_teks_pil": "#25272B",
+ "footage": {
+  "geser_y": 590,
+  "titik_zoom_y": 860
+ },
+ "logo": {
+  "file": "aset/grafis/logo-info-jerman.png",
+  "lebar_atas": 200,
+  "lebar_besar": 560,
+  "y_atas": 300,
+  "y_besar": 640,
+  "hook_s": 0,
+  "awal_besar": false
+ },
+ "hook": {
+  "aktif": true,
+  "kuat": 1.2,
+  "durasi": 0.9,
+  "sfx": null
+ },
+ "ketukan": {
+  "aktif": true,
+  "toleransi_potong": 0.0,
+  "denyut": 0.5
+ },
+ "zoom": [
+  [
+   0,
+   1.0
+  ],
+  [
+   {
+    "kata": "eits",
+    "offset": -0.15
+   },
+   1.15
+  ],
+  [
+   {
+    "kata": "soalnya",
+    "offset": -0.1
+   },
+   1.05
+  ],
+  [
+   {
+    "kata": "yaitu",
+    "offset": -0.2
+   },
+   1.0
+  ],
+  [
+   {
+    "kata": "ausbildung",
+    "ke": 3,
+    "offset": 0.2
+   },
+   1.08
+  ],
+  [
+   {
+    "kata": "cocok",
+    "offset": -0.25
+   },
+   1.0
+  ],
+  [
+   {
+    "kata": "kedua",
+    "offset": -0.5
+   },
+   1.1
+  ],
+  [
+   {
+    "kata": "kalau",
+    "offset": -0.2
+   },
+   1.0
+  ],
+  [
+   {
+    "kata": "jadi",
+    "offset": -0.2
+   },
+   1.08
+  ],
+  [
+   {
+    "kata": "tapi",
+    "ke": 3,
+    "offset": -0.2
+   },
+   1.0
+  ],
+  [
+   {
+    "kata": "ketiga",
+    "offset": -0.5
+   },
+   1.1
+  ],
+  [
+   {
+    "kata": "ini",
+    "ke": 4,
+    "offset": -0.1
+   },
+   1.0
+  ],
+  [
+   {
+    "kata": "jadi",
+    "ke": 2,
+    "offset": -0.2
+   },
+   1.08
+  ],
+  [
+   {
+    "kata": "tapi",
+    "ke": 4,
+    "offset": -0.2
+   },
+   1.0
+  ],
+  [
+   {
+    "kata": "jangan",
+    "offset": -0.3
+   },
+   1.14
+  ],
+  [
+   {
+    "kata": "tapi",
+    "ke": 5,
+    "offset": -0.2
+   },
+   1.0
+  ],
+  [
+   {
+    "kata": "coba",
+    "offset": -0.2
+   },
+   1.08
+  ]
+ ],
+ "musik": {
+  "file": "bawaan:lofi",
+  "db": -23,
+  "fade_masuk": 0.3,
+  "fade_keluar": 1.5
+ },
+ "adegan": [
+  {
+   "modul": "ijf-papan",
+   "mulai": 0,
+   "selesai": 1.4,
+   "depan": true,
+   "t": {
+    "satu": {
+     "kata": "satusatunya"
+    },
+    "ausb": {
+     "kata": "ausbildung"
+    },
+    "awal": 0
+   }
+  },
+  {
+   "modul": "ijf-papan",
+   "mulai": 1.4,
+   "selesai": {
+    "kata": "eits",
+    "offset": -0.15
+   },
+   "t": {
+    "satu": {
+     "kata": "satusatunya"
+    },
+    "ausb": {
+     "kata": "ausbildung"
+    },
+    "awal": 0
+   },
+   "masuk": "match"
+  },
+  {
+   "modul": "ijf-papan-tiga",
+   "mulai": {
+    "kata": "eits",
+    "offset": -0.15
+   },
+   "selesai": {
+    "kata": "tapi",
+    "ke": 2,
+    "offset": -0.25
+   },
+   "masuk": "match",
+   "t": {
+    "tiga": {
+     "kata": "3"
+    },
+    "a1": {
+     "kata": "ausbildung",
+     "ke": 2
+    },
+    "a2": {
+     "kata": "fsj"
+    },
+    "a3": {
+     "kata": "kerja",
+     "ke": 2
+    }
+   }
+  },
+  {
+   "modul": "ijf-peta",
+   "mulai": {
+    "kata": "tapi",
+    "ke": 2,
+    "offset": -0.25
+   },
+   "selesai": {
+    "kata": "ausbildung",
+    "ke": 3,
+    "offset": 0.2
+   },
+   "penuh": true,
+   "caption_y": 1560,
+   "keluar": "iris",
+   "t": {
+    "beda": {
+     "kata": "bedanya"
+    },
+    "pilih": {
+     "kata": "pertama"
+    }
+   }
+  },
+  {
+   "modul": "ijf-ausbildung",
+   "mulai": {
+    "kata": "ausbildung",
+    "ke": 3,
+    "offset": 0.2
+   },
+   "selesai": {
+    "kata": "cocok",
+    "offset": -0.25
+   },
+   "masuk": "iris",
+   "titik": [
+    300,
+    640
+   ],
+   "t": {
+    "vokasi": {
+     "kata": "vokasi"
+    },
+    "teori": {
+     "kata": "teori"
+    },
+    "praktik": {
+     "kata": "praktik"
+    }
+   }
+  },
+  {
+   "modul": "ijf-tangga",
+   "mulai": {
+    "kata": "cocok",
+    "offset": -0.25
+   },
+   "selesai": {
+    "kata": "kedua",
+    "offset": -0.5
+   },
+   "masuk": "match",
+   "t": {
+    "profesi": {
+     "kata": "profesi"
+    },
+    "pengalaman": {
+     "kata": "pengalaman"
+    }
+   }
+  },
+  {
+   "modul": "ijf-fsj",
+   "mulai": {
+    "kata": "kedua",
+    "offset": -0.5
+   },
+   "selesai": {
+    "kata": "jadi",
+    "offset": -0.2
+   },
+   "t": {
+    "sukarela": {
+     "kata": "sukarela"
+    },
+    "kesehatan": {
+     "kata": "kesehatan"
+    },
+    "layanan": {
+     "kata": "layanan"
+    }
+   }
+  },
+  {
+   "modul": "ijf-kontribusi",
+   "mulai": {
+    "kata": "jadi",
+    "offset": -0.2
+   },
+   "selesai": {
+    "kata": "ketiga",
+    "offset": -0.5
+   },
+   "masuk": "match",
+   "t": {
+    "bukan": {
+     "kata": "bukan"
+    },
+    "kontribusi": {
+     "kata": "tapi",
+     "ke": 3,
+     "offset": 0.5
+    },
+    "label": {
+     "kata": "berkontribusi"
+    }
+   }
+  },
+  {
+   "modul": "ijf-profesional",
+   "mulai": {
+    "kata": "ketiga",
+    "offset": -0.5
+   },
+   "selesai": {
+    "kata": "tapi",
+    "ke": 4,
+    "offset": -0.2
+   },
+   "t": {
+    "kualifikasi": {
+     "kata": "kualifikasi"
+    },
+    "keahlian": {
+     "kata": "keahlian"
+    },
+    "sesuai": {
+     "kata": "sesuai"
+    }
+   }
+  },
+  {
+   "modul": "ijf-banding",
+   "mulai": {
+    "kata": "tapi",
+    "ke": 4,
+    "offset": -0.2
+   },
+   "selesai": {
+    "kata": "jangan",
+    "offset": -0.3
+   },
+   "t": {
+    "tujuan": {
+     "kata": "tujuan"
+    },
+    "syarat": {
+     "kata": "persyaratan"
+    },
+    "bahasa": {
+     "kata": "bahasa"
+    },
+    "beda": {
+     "kata": "berbedabeda"
+    }
+   }
+  },
+  {
+   "modul": "ijf-ramai",
+   "mulai": {
+    "kata": "jangan",
+    "offset": -0.3
+   },
+   "selesai": {
+    "kata": "jangan",
+    "offset": 1.2
+   },
+   "depan": true,
+   "t": {
+    "jangan": {
+     "kata": "jangan"
+    },
+    "rame": {
+     "kata": "ramai"
+    },
+    "awal": {
+     "kata": "jangan",
+     "offset": -0.3
+    }
+   }
+  },
+  {
+   "modul": "ijf-ramai",
+   "mulai": {
+    "kata": "jangan",
+    "offset": 1.2
+   },
+   "selesai": {
+    "kata": "tapi",
+    "ke": 5,
+    "offset": -0.2
+   },
+   "t": {
+    "jangan": {
+     "kata": "jangan"
+    },
+    "rame": {
+     "kata": "ramai"
+    },
+    "awal": {
+     "kata": "jangan",
+     "offset": -0.3
+    }
+   },
+   "masuk": "match"
+  },
+  {
+   "modul": "ijf-komentar",
+   "mulai": {
+    "kata": "tapi",
+    "ke": 5,
+    "offset": -0.2
+   },
+   "selesai": {
+    "kata": "komentar",
+    "offset": 0.55
+   },
+   "t": {
+    "a1": {
+     "kata": "ausbildung",
+     "ke": 4
+    },
+    "a2": {
+     "kata": "fsj",
+     "ke": 4
+    },
+    "a3": {
+     "kata": "langsung"
+    },
+    "komentar": {
+     "kata": "komentar"
+    }
+   }
+  },
+  {
+   "modul": "ijf-kartu",
+   "mulai": {
+    "kata": "komentar",
+    "offset": 0.55
+   },
+   "penuh": true
+  }
+ ],
+ "sfx": [
+  {
+   "jenis": "whoosh-panjang-1",
+   "t": 0.0,
+   "db": -19
+  },
+  {
+   "jenis": "pop-1",
+   "t": {
+    "kata": "satusatunya",
+    "offset": 0.05
+   },
+   "db": -22
+  },
+  {
+   "jenis": "klik-ketik-2",
+   "t": {
+    "kata": "ausbildung",
+    "offset": -0.25
+   },
+   "db": -24
+  },
+  {
+   "jenis": "hit-2",
+   "t": {
+    "kata": "eits"
+   },
+   "db": -20
+  },
+  {
+   "jenis": "hit-1",
+   "t": {
+    "kata": "3"
+   },
+   "db": -21
+  },
+  {
+   "jenis": "klik-ketik-1",
+   "t": {
+    "kata": "fsj",
+    "offset": -0.25
+   },
+   "db": -25
+  },
+  {
+   "jenis": "klik-ketik-3",
+   "t": {
+    "kata": "kerja",
+    "ke": 2,
+    "offset": -0.25
+   },
+   "db": -25
+  },
+  {
+   "jenis": "whoosh-pendek-1",
+   "t": {
+    "kata": "tapi",
+    "ke": 2,
+    "offset": -0.3
+   },
+   "db": -22
+  },
+  {
+   "jenis": "pop-2",
+   "t": {
+    "kata": "bedanya",
+    "offset": -0.1
+   },
+   "db": -22
+  },
+  {
+   "jenis": "swoosh-balik-1",
+   "t": {
+    "kata": "ausbildung",
+    "ke": 3,
+    "offset": -0.05
+   },
+   "db": -22
+  },
+  {
+   "jenis": "pop-3",
+   "t": {
+    "kata": "teori",
+    "offset": -0.05
+   },
+   "db": -24
+  },
+  {
+   "jenis": "ketuk-1",
+   "t": {
+    "kata": "praktik"
+   },
+   "db": -23
+  },
+  {
+   "jenis": "ding-benar-1",
+   "t": {
+    "kata": "profesi",
+    "offset": -0.1
+   },
+   "db": -25
+  },
+  {
+   "jenis": "whoosh-pendek-2",
+   "t": {
+    "kata": "kedua",
+    "offset": -0.5
+   },
+   "db": -22
+  },
+  {
+   "jenis": "ketuk-2",
+   "t": {
+    "kata": "sukarela",
+    "offset": -0.05
+   },
+   "db": -24
+  },
+  {
+   "jenis": "ketuk-2",
+   "t": {
+    "kata": "kesehatan",
+    "offset": -0.05
+   },
+   "db": -24
+  },
+  {
+   "jenis": "ketuk-2",
+   "t": {
+    "kata": "layanan",
+    "offset": -0.05
+   },
+   "db": -24
+  },
+  {
+   "jenis": "gores-1",
+   "t": {
+    "kata": "bukan",
+    "offset": 0.1
+   },
+   "db": -24
+  },
+  {
+   "jenis": "hit-2",
+   "t": {
+    "kata": "tapi",
+    "ke": 3,
+    "offset": 0.5
+   },
+   "db": -22
+  },
+  {
+   "jenis": "whoosh-pendek-3",
+   "t": {
+    "kata": "ketiga",
+    "offset": -0.5
+   },
+   "db": -22
+  },
+  {
+   "jenis": "ding-benar-1",
+   "t": {
+    "kata": "sesuai"
+   },
+   "db": -21
+  },
+  {
+   "jenis": "tick-2",
+   "t": {
+    "kata": "tujuan",
+    "offset": -0.1
+   },
+   "db": -25
+  },
+  {
+   "jenis": "tick-2",
+   "t": {
+    "kata": "persyaratan",
+    "offset": -0.1
+   },
+   "db": -25
+  },
+  {
+   "jenis": "tick-2",
+   "t": {
+    "kata": "bahasa",
+    "offset": -0.1
+   },
+   "db": -25
+  },
+  {
+   "jenis": "whoosh-pendek-1",
+   "t": {
+    "kata": "jangan",
+    "offset": -0.3
+   },
+   "db": -23
+  },
+  {
+   "jenis": "klik-ketik-4",
+   "t": {
+    "kata": "komentar",
+    "offset": 0.1
+   },
+   "db": -22
+  },
+  {
+   "jenis": "kilau-1",
+   "t": {
+    "kata": "komentar",
+    "offset": 0.55
+   },
+   "db": -22
+  },
+  {
+   "jenis": "kilau-2",
+   "t": {
+    "kata": "berkontribusi"
+   },
+   "db": -24
+  },
+  {
+   "jenis": "whoosh-pendek-2",
+   "t": {
+    "kata": "sesuai",
+    "offset": 1.6
+   },
+   "db": -25
+  }
+ ]
+}
